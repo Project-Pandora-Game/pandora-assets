@@ -16,6 +16,9 @@
 		"test:watch": "jest --watch",
 		"postinstall": "node scripts/postinstall.js"
 	},
+	"dependencies": {
+		"pandora-common": "github:Project-Pandora-Game/pandora-common#16226a6"
+	},
 	"devDependencies": {
 		"@babel/core": "^7.17.5",
 		"@babel/preset-env": "^7.16.11",
