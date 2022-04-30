@@ -4,8 +4,10 @@
 	"private": true,
 	"repository": "git@github.com:Project-Pandora-Game/tooling-template.git",
 	"license": "MIT",
+	"type": "module",
 	"scripts": {
 		"build": "tsc -p ./tsconfig.src.json",
+		"start": "node --enable-source-maps --experimental-specifier-resolution=node ./dist/index",
 		"lint": "eslint --max-warnings 0 .",
 		"lint:fix": "eslint --fix .",
 		"type-check": "tsc -p . --noEmit",
@@ -17,7 +19,8 @@
 		"postinstall": "node scripts/postinstall.cjs"
 	},
 	"dependencies": {
-		"pandora-common": "github:Project-Pandora-Game/pandora-common#16226a6"
+		"pandora-common": "github:Project-Pandora-Game/pandora-common#16226a6",
+		"rimraf": "^3.0.2"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.17.5",
@@ -25,6 +28,7 @@
 		"@babel/preset-typescript": "^7.16.7",
 		"@travellocal/babel-plugin-declare-const-enum": "^0.0.4",
 		"@types/jest": "^27.4.1",
+		"@types/rimraf": "^3.0.2",
 		"@typescript-eslint/eslint-plugin": "^5.14.0",
 		"@typescript-eslint/parser": "^5.14.0",
 		"babel-jest": "^27.5.1",
