@@ -4,10 +4,9 @@
 	"private": true,
 	"repository": "git@github.com:Project-Pandora-Game/tooling-template.git",
 	"license": "MIT",
-	"type": "module",
 	"scripts": {
 		"build": "tsc -p ./tsconfig.src.json",
-		"start": "node --enable-source-maps --experimental-specifier-resolution=node ./dist/index",
+		"start": "node --enable-source-maps ./dist/index",
 		"lint": "eslint --max-warnings 0 .",
 		"lint:fix": "eslint --fix .",
 		"type-check": "tsc -p . --noEmit",

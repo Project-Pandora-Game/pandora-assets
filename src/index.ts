@@ -1,6 +1,5 @@
 import * as fs from 'fs';
-import path, { join } from 'path';
-import { fileURLToPath } from 'url';
+import { join } from 'path';
 import { GetLogger, SetConsoleOutput, LogLevel, AssetsDefinitionFile } from 'pandora-common';
 import { SetCurrentContext } from './tools';
 import rimraf from 'rimraf';
@@ -9,11 +8,6 @@ import { DefineResourceInline, ExportAllResources } from './tools/resources';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.DEBUG);
-
-// eslint-disable-next-line @typescript-eslint/naming-convention
-const __filename = fileURLToPath(import.meta.url);
-// eslint-disable-next-line @typescript-eslint/naming-convention
-const __dirname = path.dirname(__filename);
 
 const ASSET_DEST_DIR = join(__dirname, 'assets');
 const ASSET_SRC_DIR = join(__dirname, '..', 'src', 'assets');
@@ -47,7 +41,7 @@ async function Run() {
 			logger.verbose(`Processing assets/${category}/${asset}...`);
 
 			try {
-				await import(assetDestPath);
+				await require(assetDestPath);
 			} catch (error) {
 				logger.fatal(`Error while importing assets/${category}/${asset}\n`, error);
 			}
