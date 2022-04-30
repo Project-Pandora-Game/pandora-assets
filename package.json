@@ -19,7 +19,7 @@
 		"postinstall": "node scripts/postinstall.cjs"
 	},
 	"dependencies": {
-		"pandora-common": "github:Project-Pandora-Game/pandora-common#16226a6",
+		"pandora-common": "github:Project-Pandora-Game/pandora-common#0dc28fc",
 		"rimraf": "^3.0.2"
 	},
 	"devDependencies": {
