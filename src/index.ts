@@ -35,13 +35,16 @@ async function Run() {
 			if (!fs.statSync(assetSrcPath).isDirectory()) {
 				throw new Error(`assets/${category}/${asset} missing in source path`);
 			}
+			if (!fs.statSync(join(assetSrcPath, `${asset}.asset.ts`)).isFile()) {
+				throw new Error(`assets/${category}/${asset} expected asset file '${asset}.asset.ts' not found`);
+			}
 
 			SetCurrentContext(category, asset, assetSrcPath);
 
 			logger.verbose(`Processing assets/${category}/${asset}...`);
 
 			try {
-				await require(assetDestPath);
+				await require(join(assetDestPath, `${asset}.asset`));
 			} catch (error) {
 				logger.fatal(`Error while importing assets/${category}/${asset}\n`, error);
 			}
