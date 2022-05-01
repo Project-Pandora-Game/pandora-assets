@@ -52,6 +52,7 @@ async function Run() {
 	}
 
 	logger.info('Exporting result...');
+	// Remove any existing output and make empty directory
 	if (fs.existsSync(DEST_DIR)) {
 		rimraf.sync(DEST_DIR);
 	}
