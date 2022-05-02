@@ -61,7 +61,7 @@ async function Run() {
 	const definitions: AssetsDefinitionFile = {
 		assets: AssetDatabase.export(),
 	};
-	const definitionsFile = DefineResourceInline('definitions.json', JSON.stringify(definitions));
+	const definitionsFile = DefineResourceInline('assets.json', JSON.stringify(definitions));
 
 	ExportAllResources(DEST_DIR);
 	fs.writeFileSync(join(DEST_DIR, 'current'), `${definitionsFile.hash}\n`);
