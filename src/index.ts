@@ -5,6 +5,7 @@ import { SetCurrentContext } from './tools';
 import rimraf from 'rimraf';
 import { AssetDatabase } from './tools/assetDatabase';
 import { DefineResourceInline, ExportAllResources } from './tools/resources';
+import { RunWithWatch } from './tools/watch';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.DEBUG);
@@ -65,8 +66,14 @@ async function Run() {
 
 	ExportAllResources(DEST_DIR);
 	fs.writeFileSync(join(DEST_DIR, 'current'), `${definitionsFile.hash}\n`);
+
+	logger.info('Done!');
 }
 
-Run().catch((error) => {
-	logger.fatal('Error:\n', error);
-});
+if (process.argv.includes('--watch')) {
+	RunWithWatch(Run);
+} else {
+	Run().catch((error) => {
+		logger.fatal('Error:\n', error);
+	});
+}

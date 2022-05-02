@@ -3,6 +3,7 @@ import { createHash } from 'crypto';
 import { readFileSync, writeFileSync, statSync, copyFileSync } from 'fs';
 import { join, basename } from 'path';
 import { AssetSourcePath } from './context';
+import { WatchFile } from './watch';
 
 const logger = GetLogger('Resources');
 
@@ -59,6 +60,8 @@ export function DefineResource(path: string): Resource {
 	if (!statSync(sourcePath).isFile()) {
 		throw new Error(`Resource ${path} not found (looking for '${sourcePath}')`);
 	}
+
+	WatchFile(sourcePath);
 
 	const hash = GetResourceFileHash(sourcePath);
 	const resultName = basename(sourcePath).replace(/(?=(?:\.[^.]*)?$)/, `_${hash}`);

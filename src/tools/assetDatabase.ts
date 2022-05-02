@@ -11,7 +11,7 @@ export const AssetDatabase = new class AssetDatabase {
 		}
 
 		this.assets.set(id, asset);
-		logger.info('Registered asset', id);
+		logger.debug('Registered asset', id);
 	}
 
 	export(): Record<AssetId, AssetDefinition> {
