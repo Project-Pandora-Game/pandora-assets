@@ -15,7 +15,7 @@ const ASSET_SRC_DIR = join(__dirname, '..', 'src', 'assets');
 const DEST_DIR = join(__dirname, '..', 'out');
 
 async function Run() {
-	for (const category of fs.readdirSync(ASSET_DEST_DIR)) {
+	for (const category of fs.readdirSync(ASSET_SRC_DIR)) {
 		const categoryDestPath = join(ASSET_DEST_DIR, category);
 		const categorySrcPath = join(ASSET_SRC_DIR, category);
 
@@ -26,7 +26,7 @@ async function Run() {
 			throw new Error(`assets/${category} missing in source path`);
 		}
 
-		for (const asset of fs.readdirSync(categoryDestPath)) {
+		for (const asset of fs.readdirSync(categorySrcPath)) {
 			const assetDestPath = join(categoryDestPath, asset);
 			const assetSrcPath = join(categorySrcPath, asset);
 
