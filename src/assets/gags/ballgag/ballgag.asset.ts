@@ -1,6 +1,5 @@
-import { DefaultId, DefineAsset } from '../../../tools';
+import { DefineAsset } from '../../../tools';
 
 DefineAsset({
-	id: DefaultId(),
 	name: 'Ball Gag',
 });
