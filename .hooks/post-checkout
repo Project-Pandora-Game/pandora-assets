@@ -1,8 +1,7 @@
 #!/bin/bash
 
 set -eou pipefail
-SCRIPT_DIR=$(dirname "$0")
-source "${SCRIPT_DIR}/include.sh"
+source "./.hooks/include.sh"
 
 PREV_COMMIT=$1
 POST_COMMIT=$2
