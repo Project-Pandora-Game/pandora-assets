@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 function yarn_helper() {
 	yarn install --prefer-offline --frozen-lockfile
