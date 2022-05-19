@@ -4,5 +4,4 @@ set -eou pipefail
 SCRIPT_DIR=$(dirname "$0")
 source "${SCRIPT_DIR}/include.sh"
 
-yarn_helper
-lfs_helper post-merge "$@"
+lfs_helper post-commit "$@"
