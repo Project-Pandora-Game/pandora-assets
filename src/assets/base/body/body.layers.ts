@@ -1,7 +1,7 @@
 import { LayerPriority, LayerMirror, CharacterSize } from 'pandora-common';
 import { DefinePngResource } from '../../../tools/resources';
 
-const points: PointDefinitionCompressed[] = [
+const points: IntermediatePointDefinition[] = [
 	// Head helpers
 	{ pos: [546, 365], mirror: true, pointType: 'body' },
 	{ pos: [583, 325], mirror: true, pointType: 'body' },
