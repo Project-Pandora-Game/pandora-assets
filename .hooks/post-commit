@@ -3,5 +3,4 @@
 set -eou pipefail
 source "./.hooks/include.sh"
 
-yarn_helper
-lfs_helper post-merge "$@"
+lfs_helper post-commit "$@"

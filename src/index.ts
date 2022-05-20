@@ -6,6 +6,7 @@ import rimraf from 'rimraf';
 import { AssetDatabase } from './tools/assetDatabase';
 import { DefineResourceInline, ExportAllResources } from './tools/resources';
 import { RunWithWatch } from './tools/watch';
+import { boneDefinition } from './bones';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.DEBUG);
@@ -61,11 +62,12 @@ async function Run() {
 
 	const definitions: AssetsDefinitionFile = {
 		assets: AssetDatabase.export(),
+		bones: boneDefinition,
 	};
 	const definitionsFile = DefineResourceInline('assets.json', JSON.stringify(definitions));
 
 	ExportAllResources(DEST_DIR);
-	fs.writeFileSync(join(DEST_DIR, '.current'), `${definitionsFile.hash}\n`);
+	fs.writeFileSync(join(DEST_DIR, 'current'), `${definitionsFile.hash}\n`);
 
 	logger.info('Done!');
 }

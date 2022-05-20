@@ -1,11 +1,11 @@
-import { GetLogger, AssetId, AssetDefinition } from 'pandora-common';
+import { GetLogger, AssetId, AssetDefinitionCompressed } from 'pandora-common';
 
 const logger = GetLogger('AssetDatabase');
 
 export const AssetDatabase = new class AssetDatabase {
-	public assets: Map<AssetId, AssetDefinition> = new Map();
+	public assets: Map<AssetId, AssetDefinitionCompressed> = new Map();
 
-	public registerAsset(id: AssetId, asset: AssetDefinition, allowOverride: boolean = false): void {
+	public registerAsset(id: AssetId, asset: AssetDefinitionCompressed, allowOverride: boolean = false): void {
 		if (this.assets.has(id) && !allowOverride) {
 			throw new Error(`Duplicate asset definition, asset '${id}' already exists`);
 		}
@@ -14,8 +14,8 @@ export const AssetDatabase = new class AssetDatabase {
 		logger.debug('Registered asset', id);
 	}
 
-	export(): Record<AssetId, AssetDefinition> {
-		const result: Record<AssetId, AssetDefinition> = {};
+	export(): Record<AssetId, AssetDefinitionCompressed> {
+		const result: Record<AssetId, AssetDefinitionCompressed> = {};
 		for (const [id, definition] of this.assets.entries()) {
 			result[id] = definition;
 		}
