@@ -67,7 +67,7 @@ async function Run() {
 	const definitionsFile = DefineResourceInline('assets.json', JSON.stringify(definitions));
 
 	ExportAllResources(DEST_DIR);
-	fs.writeFileSync(join(DEST_DIR, '.current'), `${definitionsFile.hash}\n`);
+	fs.writeFileSync(join(DEST_DIR, 'current'), `${definitionsFile.hash}\n`);
 
 	logger.info('Done!');
 }
