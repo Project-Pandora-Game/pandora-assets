@@ -19,9 +19,12 @@ function commandExists(commandName) {
 postinstall();
 
 async function postinstall() {
+	const isCI = process.env.CI === 'true';
 	await copyDotenv();
-	configureGitHooks();
-	configureGitLFS();
+	if (!isCI) {
+		configureGitHooks();
+		configureGitLFS();
+	}
 }
 
 async function copyDotenv() {
