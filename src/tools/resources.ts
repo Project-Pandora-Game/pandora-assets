@@ -88,12 +88,12 @@ export function DefineResourceInline(name: string, value: string | Buffer): Reso
 	return resource;
 }
 
-const images = new Map<string, Resource>();
 export function DefinePngResource(name: string): Resource {
-	const key = join(AssetSourcePath, `${name}.png`);
-	let image = images.get(key);
-	if (!image) images.set(key, image = DefineResource(`${name}.png`));
-	return image;
+	return DefineResource(`${name}.png`);
+}
+
+export function ClearAllResources(): void {
+	resources.clear();
 }
 
 export function ExportAllResources(destinationDirectory: string): void {

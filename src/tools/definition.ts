@@ -1,20 +1,19 @@
-import { AssetDefinitionCompressed, LayerDefinitionCompressed } from 'pandora-common';
+import { AssetDefinition, AssetId } from 'pandora-common';
 import { AssetDatabase } from './assetDatabase';
 import { DefaultId } from './context';
+import { GraphicsDatabase } from './graphicsDatabase';
 
 export function DefineAsset(def: IntermediateAssetDefinition): void {
-	const asset: AssetDefinitionCompressed = {
+	const id: AssetId = `a/${def.id ?? DefaultId()}`;
+
+	const asset: AssetDefinition = {
+		id,
 		name: def.name,
-		layers: def.layers?.map(LayerExtractRsource) ?? [],
+		hasGraphics: def.graphics !== undefined,
 	};
 
-	AssetDatabase.registerAsset(`a/${def.id ?? DefaultId()}`, asset);
-}
-
-function LayerExtractRsource(layer: IntermediateLayerDefinition): LayerDefinitionCompressed {
-	return {
-		...layer,
-		image: layer.image.resultName,
-		imageOverrides: layer.imageOverrides?.map(([image, overrides]) => [image.resultName, overrides]),
-	};
+	if (def.graphics) {
+		GraphicsDatabase.registerAsset(id, def.graphics);
+	}
+	AssetDatabase.registerAsset(id, asset);
 }

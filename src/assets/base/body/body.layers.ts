@@ -1,7 +1,6 @@
-import { LayerPriority, LayerMirror, CharacterSize } from 'pandora-common';
-import { DefinePngResource } from '../../../tools/resources';
+import { LayerPriority, LayerMirror, CharacterSize, LayerDefinitionCompressed } from 'pandora-common';
 
-const points: IntermediatePointDefinition[] = [
+const points: PointDefinitionCompressed[] = [
 	// Head helpers
 	{ pos: [546, 365], mirror: true, pointType: 'body' },
 	{ pos: [583, 325], mirror: true, pointType: 'body' },
@@ -420,10 +419,10 @@ const points: IntermediatePointDefinition[] = [
 	},
 ];
 
-export const layers: IntermediateLayerDefinition[] = [
+export const layers: LayerDefinitionCompressed[] = [
 	{
 		rect: [0, 0, CharacterSize.WIDTH, CharacterSize.HEIGHT],
-		image: DefinePngResource('body'),
+		image: 'body',
 		priority: LayerPriority.BODY,
 		points,
 		mirror: LayerMirror.NONE,
@@ -431,14 +430,14 @@ export const layers: IntermediateLayerDefinition[] = [
 	},
 	{
 		rect: [0, 0, CharacterSize.WIDTH, CharacterSize.HEIGHT],
-		image: DefinePngResource('body'),
+		image: 'body',
 		priority: LayerPriority.ARMS,
-		points: '0',
+		points: 0,
 		mirror: LayerMirror.SELECT,
 		pointType: ['bodyarm', 'arm'],
 		imageOverrides: [
-			[DefinePngResource('body_armsdown'), [[['elbow_r', '>=', 10]]]],
-			[DefinePngResource('body_armsup'), [[['elbow_r', '<=', -5]]]],
+			['body_armsdown', [[['elbow_r', '>=', 10]]]],
+			['body_armsup', [[['elbow_r', '<=', -5]]]],
 		],
 	},
 ];

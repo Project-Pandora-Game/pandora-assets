@@ -1,12 +1,13 @@
 import * as fs from 'fs';
 import { join } from 'path';
-import { GetLogger, SetConsoleOutput, LogLevel, AssetsDefinitionFile } from 'pandora-common';
+import { GetLogger, SetConsoleOutput, LogLevel, AssetsDefinitionFile, AssetsGraphicsDefinitionFile } from 'pandora-common';
 import { SetCurrentContext } from './tools';
 import rimraf from 'rimraf';
 import { AssetDatabase } from './tools/assetDatabase';
-import { DefineResourceInline, ExportAllResources } from './tools/resources';
+import { ClearAllResources, DefineResourceInline, ExportAllResources } from './tools/resources';
 import { RunWithWatch } from './tools/watch';
 import { boneDefinition } from './bones';
+import { GraphicsDatabase } from './tools/graphicsDatabase';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.DEBUG);
@@ -16,6 +17,10 @@ const ASSET_SRC_DIR = join(__dirname, '..', 'src', 'assets');
 const DEST_DIR = join(__dirname, '..', 'out');
 
 async function Run() {
+	GraphicsDatabase.clear();
+	AssetDatabase.clear();
+	ClearAllResources();
+
 	for (const category of fs.readdirSync(ASSET_SRC_DIR)) {
 		const categoryDestPath = join(ASSET_DEST_DIR, category);
 		const categorySrcPath = join(ASSET_SRC_DIR, category);
@@ -46,9 +51,12 @@ async function Run() {
 			logger.verbose(`Processing assets/${category}/${asset}...`);
 
 			try {
-				await require(join(assetDestPath, `${asset}.asset`));
+				const moduleName = join(assetDestPath, `${asset}.asset`);
+				delete require.cache[require.resolve(moduleName)];
+				await require(moduleName);
 			} catch (error) {
 				logger.fatal(`Error while importing assets/${category}/${asset}\n`, error);
+				process.exit(1);
 			}
 		}
 	}
@@ -60,9 +68,15 @@ async function Run() {
 	}
 	fs.mkdirSync(DEST_DIR);
 
+	const graphics: AssetsGraphicsDefinitionFile = {
+		assets: GraphicsDatabase.export(),
+	};
+	const graphicsFile = DefineResourceInline('graphics.json', JSON.stringify(graphics));
+
 	const definitions: AssetsDefinitionFile = {
 		assets: AssetDatabase.export(),
 		bones: boneDefinition,
+		graphicsId: graphicsFile.hash,
 	};
 	const definitionsFile = DefineResourceInline('assets.json', JSON.stringify(definitions));
 

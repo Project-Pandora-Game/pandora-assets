@@ -7,33 +7,18 @@ type LayerImageOverrideCompressed = import('pandora-common').LayerImageOverrideC
 type LayerMirror = import('pandora-common').LayerMirror;
 type AllBones = import('./bones').AllBones;
 
-type Resource = import('./tools/resources').Resource;
-
 interface IntermediateAssetDefinition {
 	id?: string;
 	name: string;
-	layers?: IntermediateLayerDefinition[];
+	graphics?: import('pandora-common').AssetGraphicsDefinition;
 }
-
-type IntermediateTransformDefinition =
-	['rotate', AllBones, number, ConditionCompressed?] |
-	['shift', AllBones, CoordinatesCompressed, ConditionCompressed?];
-
-interface IntermediatePointDefinition {
-	pos: CoordinatesCompressed;
-	transforms?: IntermediateTransformDefinition[];
-	mirror?: true;
-	pointType?: string;
-}
-
-type IntermediateLayerImageOverride = [Resource, LayerImageOverrideCompressed[1]];
 
 interface IntermediateLayerDefinition {
 	rect: RectangleCompressed;
-	image: Resource;
+	image: string;
 	priority: LayerPriority;
-	points: IntermediatePointDefinition[] | string;
-	imageOverrides?: IntermediateLayerImageOverride[];
+	points: PointDefinitionCompressed[] | number;
+	imageOverrides?: LayerImageOverrideCompressed[];
 	pointType?: string[];
 	mirror: LayerMirror;
 }
