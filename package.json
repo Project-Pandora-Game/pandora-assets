@@ -10,7 +10,7 @@
 		"predev": "rimraf dist out",
 		"dev": "tsc-watch -p ./tsconfig.src.json --onSuccess \"node --enable-source-maps ./dist/index --watch\"",
 		"start": "node --enable-source-maps ./dist/index",
-		"lint": "eslint --max-warnings 0 .",
+		"lint": "eslint --max-warnings 0 --report-unused-disable-directives .",
 		"lint:fix": "eslint --fix .",
 		"type-check": "tsc -p . --noEmit",
 		"type-check:test": "tsc -p ./tsconfig.test.json --noEmit",
@@ -21,6 +21,7 @@
 		"postinstall": "node scripts/postinstall.cjs"
 	},
 	"dependencies": {
+		"lodash": "^4.17.21",
 		"pandora-common": "github:Project-Pandora-Game/pandora-common#3062cbc",
 		"rimraf": "^3.0.2"
 	},
@@ -35,6 +36,7 @@
 		"eslint": "^8.14.0",
 		"jest": "^28.0.3",
 		"rimraf": "^3.0.2",
+		"ts-mockito": "^2.6.1",
 		"tsc-watch": "^5.0.3",
 		"tslib": "^2.4.0",
 		"typescript": "^4.6.4"
