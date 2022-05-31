@@ -12,13 +12,3 @@ interface IntermediateAssetDefinition {
 	name: string;
 	graphics?: import('pandora-common').AssetGraphicsDefinition;
 }
-
-interface IntermediateLayerDefinition {
-	rect: RectangleCompressed;
-	image: string;
-	priority: LayerPriority;
-	points: PointDefinitionCompressed[] | number;
-	imageOverrides?: LayerImageOverrideCompressed[];
-	pointType?: string[];
-	mirror: LayerMirror;
-}

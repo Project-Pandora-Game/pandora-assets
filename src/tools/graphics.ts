@@ -1,14 +1,14 @@
-import { AssetGraphicsDefinition, ExtractLayerImageOverride, ExtractPointDefinition, LayerDefinition, LayerImageOverride } from 'pandora-common';
+import { AssetGraphicsDefinition, ExtractLayerImageOverride, ExtractPointDefinition, LayerDefinition, LayerDefinitionCompressed, LayerImageOverride } from 'pandora-common';
 import { DefinePngResource } from './resources';
 
-export function LoadAssetsGraphics(layers: IntermediateLayerDefinition[]): AssetGraphicsDefinition {
+export function LoadAssetsGraphics(layers: LayerDefinitionCompressed[]): AssetGraphicsDefinition {
 	// TODO: Typecheck
 	return {
 		layers: layers.map(LoadAssetLayer),
 	};
 }
 
-function LoadAssetLayer(layer: IntermediateLayerDefinition): LayerDefinition {
+function LoadAssetLayer(layer: LayerDefinitionCompressed): LayerDefinition {
 	const [x, y, width, height] = layer.rect;
 	const rect = { x, y, width, height };
 	const imageOverrides: LayerImageOverride[] = (layer.imageOverrides?.map(ExtractLayerImageOverride) ?? [])
@@ -18,6 +18,7 @@ function LoadAssetLayer(layer: IntermediateLayerDefinition): LayerDefinition {
 		}));
 	return {
 		...rect,
+		name: layer.name,
 		mirror: layer.mirror,
 		priority: layer.priority,
 		points: typeof layer.points === 'number' ? layer.points : layer.points.map(ExtractPointDefinition),

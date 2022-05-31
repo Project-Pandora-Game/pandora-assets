@@ -421,6 +421,7 @@ const points: PointDefinitionCompressed[] = [
 
 export const layers: LayerDefinitionCompressed[] = [
 	{
+		name: 'Body',
 		rect: [0, 0, CharacterSize.WIDTH, CharacterSize.HEIGHT],
 		image: 'body',
 		priority: LayerPriority.BODY,
@@ -429,6 +430,7 @@ export const layers: LayerDefinitionCompressed[] = [
 		pointType: ['body', 'bodyarm'],
 	},
 	{
+		name: 'Arms',
 		rect: [0, 0, CharacterSize.WIDTH, CharacterSize.HEIGHT],
 		image: 'body',
 		priority: LayerPriority.ARMS,
