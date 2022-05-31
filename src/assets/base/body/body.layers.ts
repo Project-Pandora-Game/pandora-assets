@@ -1,6 +1,49 @@
 import { LayerPriority, LayerMirror, CharacterSize, LayerDefinitionCompressed } from 'pandora-common';
 
-const points: PointDefinitionCompressed[] = [
+export const BREAST_POINTS: PointDefinitionCompressed[] = [
+	{
+		pos: [501, 549],
+		transforms: [
+			['shift', 'breasts', [-13, 0], [[['breasts', '<', 18]]]],
+			['shift', 'breasts', [-5, 0], [[['breasts', '>=', 18]]]],
+			['shift', 'breasts', [0, 13]],
+			['shift', 'breasts', [0, 15], [[['breasts', '<=', -170]]]],
+		],
+		mirror: true,
+		pointType: 'breasts',
+	},
+	{
+		pos: [501, 449],
+		transforms: [
+			['shift', 'breasts', [-13, 0], [[['breasts', '<', 18]]]],
+			['shift', 'breasts', [-5, 0], [[['breasts', '>=', 18]]]],
+			['shift', 'breasts', [0, -13]],
+			['shift', 'breasts', [0, 15], [[['breasts', '<=', -170]]]],
+		],
+		mirror: true,
+		pointType: 'breasts',
+	},
+	{
+		pos: [585, 549],
+		transforms: [
+			['shift', 'breasts', [13, 13]],
+			['shift', 'breasts', [0, 15], [[['breasts', '<=', -170]]]],
+		],
+		mirror: true,
+		pointType: 'breasts',
+	},
+	{
+		pos: [585, 449],
+		transforms: [
+			['shift', 'breasts', [13, -13]],
+			['shift', 'breasts', [0, 15], [[['breasts', '<=', -170]]]],
+		],
+		mirror: true,
+		pointType: 'breasts',
+	},
+];
+
+const BODY_POINTS: PointDefinitionCompressed[] = [
 	// Head helpers
 	{ pos: [546, 365], mirror: true, pointType: 'body' },
 	{ pos: [583, 325], mirror: true, pointType: 'body' },
@@ -425,7 +468,7 @@ export const layers: LayerDefinitionCompressed[] = [
 		rect: [0, 0, CharacterSize.WIDTH, CharacterSize.HEIGHT],
 		image: 'body',
 		priority: LayerPriority.BODY,
-		points,
+		points: BODY_POINTS,
 		mirror: LayerMirror.NONE,
 		pointType: ['body', 'bodyarm'],
 	},
@@ -441,5 +484,27 @@ export const layers: LayerDefinitionCompressed[] = [
 			['body_armsdown', [[['elbow_r', '>=', 10]]]],
 			['body_armsup', [[['elbow_r', '<=', -5]]]],
 		],
+	},
+	{
+		name: 'Breasts',
+		rect: [0, 0, CharacterSize.WIDTH, CharacterSize.HEIGHT],
+		image: 'bust',
+		priority: LayerPriority.ABOVE_BODY,
+		points: BREAST_POINTS,
+		mirror: LayerMirror.NONE,
+		pointType: ['breasts'],
+		imageOverrides: [
+			['', [[['breasts', '<=',  -170]]]],
+			['bust_small', [[['breasts', '<=', -70]]]],
+		],
+	},
+	{
+		name: 'Nipples',
+		rect: [0, 0, CharacterSize.WIDTH, CharacterSize.HEIGHT],
+		image: 'bust_center',
+		priority: LayerPriority.ABOVE_BODY,
+		points: 2,
+		mirror: LayerMirror.NONE,
+		pointType: ['breasts'],
 	},
 ];
