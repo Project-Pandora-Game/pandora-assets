@@ -14,7 +14,7 @@ function LoadAssetLayer(layer: LayerDefinitionCompressed): LayerDefinition {
 	const imageOverrides: LayerImageOverride[] = (layer.imageOverrides?.map(ExtractLayerImageOverride) ?? [])
 		.map((override) => ({
 			...override,
-			image: DefinePngResource(override.image).resultName,
+			image: override.image && DefinePngResource(override.image).resultName,
 		}));
 	return {
 		...rect,
@@ -22,7 +22,7 @@ function LoadAssetLayer(layer: LayerDefinitionCompressed): LayerDefinition {
 		mirror: layer.mirror,
 		priority: layer.priority,
 		points: typeof layer.points === 'number' ? layer.points : layer.points.map(ExtractPointDefinition),
-		image: DefinePngResource(layer.image).resultName,
+		image: layer.image && DefinePngResource(layer.image).resultName,
 		imageOverrides,
 		pointType: layer.pointType,
 	};
