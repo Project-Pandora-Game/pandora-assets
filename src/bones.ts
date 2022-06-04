@@ -14,6 +14,7 @@ const boneDefinitionImpl = {
 	leg_r: {
 		pos: [533, 707],
 		mirror: 'leg_l',
+		baseRotation: 90,
 	},
 	arm_width: {},
 	leg_width: {},
@@ -33,6 +34,7 @@ type BoneDefinitionCompressedStrict = {
 	pos?: Readonly<CoordinatesCompressed>;
 	mirror?: Mirrored<Key>;
 	parent?: Key;
+	baseRotation?: number;
 };
 
 export const boneDefinition = boneDefinitionImpl as Record<Key, BoneDefinitionCompressedStrict> as Record<Key, BoneDefinitionCompressed>;
