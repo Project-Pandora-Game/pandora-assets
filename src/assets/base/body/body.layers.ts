@@ -471,6 +471,9 @@ export const layers: LayerDefinitionCompressed[] = [
 		points: BODY_POINTS,
 		mirror: LayerMirror.NONE,
 		pointType: ['body', 'bodyarm'],
+		imageOverrides: [
+			['body_back', [[['backView', '>', 0]]]],
+		],
 	},
 	{
 		name: 'Arms',
@@ -481,6 +484,8 @@ export const layers: LayerDefinitionCompressed[] = [
 		mirror: LayerMirror.SELECT,
 		pointType: ['bodyarm', 'arm'],
 		imageOverrides: [
+			['body_back_armsdown', [[['backView', '>', 0], ['elbow_r', '>=', 10]]]],
+			['body_back_armsup', [[['backView', '>', 0], ['elbow_r', '<=', -5]]]],
 			['body_armsdown', [[['elbow_r', '>=', 10]]]],
 			['body_armsup', [[['elbow_r', '<=', -5]]]],
 		],
@@ -494,7 +499,7 @@ export const layers: LayerDefinitionCompressed[] = [
 		mirror: LayerMirror.NONE,
 		pointType: ['breasts'],
 		imageOverrides: [
-			['', [[['breasts', '<=',  -170]]]],
+			['', [[['breasts', '<=', -170]]]],
 			['bust_small', [[['breasts', '<=', -70]]]],
 		],
 	},
