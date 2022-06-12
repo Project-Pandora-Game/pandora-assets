@@ -1,10 +1,10 @@
 import { DefineAsset } from '../../../tools';
 import { LoadAssetsGraphics } from '../../../tools/graphics';
-import { layers } from './body.layers';
+import { layers } from './base.layers';
 
 const graphics = LoadAssetsGraphics(layers);
 
 DefineAsset({
-	name: 'Body',
+	name: 'Base',
 	graphics,
 });
