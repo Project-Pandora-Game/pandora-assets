@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import { join } from 'path';
-import { GetLogger, SetConsoleOutput, LogLevel, AssetsDefinitionFile, AssetsGraphicsDefinitionFile } from 'pandora-common';
+import { GetLogger, SetConsoleOutput, LogLevel, AssetsDefinitionFile, AssetsGraphicsDefinitionFile, logConfig } from 'pandora-common';
 import { SetCurrentContext } from './tools';
 import rimraf from 'rimraf';
 import { AssetDatabase } from './tools/assetDatabase';
@@ -89,6 +89,11 @@ async function Run() {
 if (process.argv.includes('--watch')) {
 	RunWithWatch(Run);
 } else {
+	// On fatal error in non-watch environment set failure exit code
+	logConfig.onFatal.push(() => {
+		process.exitCode = 1;
+	});
+	// Run
 	Run().catch((error) => {
 		logger.fatal('Error:\n', error);
 	});
