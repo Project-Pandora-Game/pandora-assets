@@ -5,6 +5,6 @@ import { layers } from './base.layers';
 const graphics = LoadAssetsGraphics(layers);
 
 DefineAsset({
-	name: 'Base',
+	name: 'Base body',
 	graphics,
 });
