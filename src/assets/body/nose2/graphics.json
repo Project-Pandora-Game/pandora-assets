@@ -1,0 +1,32 @@
+{
+	"layers": [
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"image": "Nose2.png",
+			"priority": 2,
+			"points": [
+				{
+					"pos": [
+						0,
+						0
+					],
+					"mirror": true,
+					"transforms": []
+				},
+				{
+					"pos": [
+						0,
+						1500
+					],
+					"mirror": true,
+					"transforms": []
+				}
+			],
+			"mirror": 0,
+			"imageOverrides": []
+		}
+	]
+}
