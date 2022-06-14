@@ -10,5 +10,5 @@ type AllBones = import('./bones').AllBones;
 interface IntermediateAssetDefinition {
 	id?: string;
 	name: string;
-	graphics?: import('pandora-common').AssetGraphicsDefinition;
+	graphics?: string;
 }

@@ -1,27 +1,32 @@
-import { AssetGraphicsDefinition, ExtractLayerImageOverride, ExtractPointDefinition, LayerDefinition, LayerDefinitionCompressed, LayerImageOverride } from 'pandora-common';
+import { AssetGraphicsDefinition, LayerDefinition, LayerImageOverride } from 'pandora-common';
 import { DefinePngResource } from './resources';
+import { readFileSync } from 'fs';
 
-export function LoadAssetsGraphics(layers: LayerDefinitionCompressed[]): AssetGraphicsDefinition {
+export function LoadAssetsGraphics(path: string): AssetGraphicsDefinition {
 	// TODO: Typecheck
+	const definition = JSON.parse(readFileSync(path, { encoding: 'utf-8' })) as AssetGraphicsDefinition;
+
 	return {
-		layers: layers.map(LoadAssetLayer),
+		layers: definition.layers.map(LoadAssetLayer),
 	};
 }
 
-function LoadAssetLayer(layer: LayerDefinitionCompressed): LayerDefinition {
-	const [x, y, width, height] = layer.rect;
-	const rect = { x, y, width, height };
-	const imageOverrides: LayerImageOverride[] = (layer.imageOverrides?.map(ExtractLayerImageOverride) ?? [])
+function LoadAssetLayer(layer: LayerDefinition): LayerDefinition {
+	const { x, y, width, height } = layer;
+	const imageOverrides: LayerImageOverride[] = layer.imageOverrides
 		.map((override) => ({
 			...override,
 			image: override.image && DefinePngResource(override.image).resultName,
 		}));
 	return {
-		...rect,
+		x,
+		y,
+		width,
+		height,
 		name: layer.name,
 		mirror: layer.mirror,
 		priority: layer.priority,
-		points: typeof layer.points === 'number' ? layer.points : layer.points.map(ExtractPointDefinition),
+		points: layer.points,
 		image: layer.image && DefinePngResource(layer.image).resultName,
 		imageOverrides,
 		pointType: layer.pointType,

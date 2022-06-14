@@ -89,7 +89,7 @@ export function DefineResourceInline(name: string, value: string | Buffer): Reso
 }
 
 export function DefinePngResource(name: string): Resource {
-	return DefineResource(`${name}.png`);
+	return DefineResource(name);
 }
 
 export function ClearAllResources(): void {
