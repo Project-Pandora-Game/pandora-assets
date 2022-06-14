@@ -1,0 +1,144 @@
+{
+	"layers": [
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"image": "EyeBase1.png",
+			"priority": 2,
+			"points": [
+				{
+					"pos": [
+						0,
+						0
+					],
+					"mirror": true,
+					"transforms": []
+				},
+				{
+					"pos": [
+						0,
+						1500
+					],
+					"mirror": true,
+					"transforms": []
+				}
+			],
+			"mirror": 0,
+			"imageOverrides": []
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"image": "Cornea1.png",
+			"priority": 2,
+			"points": [
+				{
+					"pos": [
+						0,
+						0
+					],
+					"mirror": true,
+					"transforms": []
+				},
+				{
+					"pos": [
+						0,
+						1500
+					],
+					"mirror": true,
+					"transforms": []
+				}
+			],
+			"mirror": 0,
+			"imageOverrides": []
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"image": "EyeShadow1.png",
+			"priority": 2,
+			"points": [
+				{
+					"pos": [
+						0,
+						0
+					],
+					"mirror": true,
+					"transforms": []
+				},
+				{
+					"pos": [
+						0,
+						1500
+					],
+					"mirror": true,
+					"transforms": []
+				}
+			],
+			"mirror": 0,
+			"imageOverrides": []
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"image": "EyeLashes1.png",
+			"priority": 2,
+			"points": [
+				{
+					"pos": [
+						0,
+						0
+					],
+					"mirror": true,
+					"transforms": []
+				},
+				{
+					"pos": [
+						0,
+						1500
+					],
+					"mirror": true,
+					"transforms": []
+				}
+			],
+			"mirror": 0,
+			"imageOverrides": []
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"image": "Shine1.png",
+			"priority": 2,
+			"points": [
+				{
+					"pos": [
+						0,
+						0
+					],
+					"mirror": true,
+					"transforms": []
+				},
+				{
+					"pos": [
+						0,
+						1500
+					],
+					"mirror": true,
+					"transforms": []
+				}
+			],
+			"mirror": 0,
+			"imageOverrides": []
+		}
+	]
+}
