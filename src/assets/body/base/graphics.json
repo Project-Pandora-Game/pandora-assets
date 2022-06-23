@@ -7,7 +7,7 @@
 			"height": 1500,
 			"name": "Body",
 			"mirror": 0,
-			"priority": 2,
+			"priority": "BODY",
 			"points": [
 				{
 					"pos": [
@@ -1680,7 +1680,7 @@
 			"height": 1500,
 			"name": "Arms",
 			"mirror": 1,
-			"priority": 5,
+			"priority": "ARMS",
 			"points": 0,
 			"image": "body.png",
 			"imageOverrides": [
@@ -1755,7 +1755,7 @@
 			"height": 1500,
 			"name": "Breasts",
 			"mirror": 0,
-			"priority": 3,
+			"priority": "BODY",
 			"points": [
 				{
 					"pos": [
@@ -2004,7 +2004,7 @@
 			"height": 1500,
 			"name": "Nipples",
 			"mirror": 0,
-			"priority": 3,
+			"priority": "BODY",
 			"points": 2,
 			"image": "bust_center.png",
 			"imageOverrides": [],
