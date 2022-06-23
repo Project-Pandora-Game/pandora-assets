@@ -3,7 +3,12 @@ import { DefinePngResource } from './resources';
 import { readFileSync } from 'fs';
 
 export function LoadAssetsGraphics(path: string): AssetGraphicsDefinition {
-	const definition = JSON.parse(readFileSync(path, { encoding: 'utf-8' })) as AssetGraphicsDefinition;
+	const definition = JSON.parse(
+		readFileSync(path, { encoding: 'utf-8' })
+			.split('\n')
+			.filter((line) => !line.trimStart().startsWith('//'))
+			.join('\n'),
+	) as AssetGraphicsDefinition;
 	if (!IsAssetGraphicsDefinition(definition)) {
 		throw new Error(`Graphics in '${path}' are not AssetGraphicsDefinition`);
 	}
