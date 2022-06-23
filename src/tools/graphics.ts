@@ -1,10 +1,12 @@
-import { AssetGraphicsDefinition, LayerDefinition, LayerImageOverride } from 'pandora-common';
+import { AssetGraphicsDefinition, IsAssetGraphicsDefinition, LayerDefinition, LayerImageOverride } from 'pandora-common';
 import { DefinePngResource } from './resources';
 import { readFileSync } from 'fs';
 
 export function LoadAssetsGraphics(path: string): AssetGraphicsDefinition {
-	// TODO: Typecheck
 	const definition = JSON.parse(readFileSync(path, { encoding: 'utf-8' })) as AssetGraphicsDefinition;
+	if (!IsAssetGraphicsDefinition(definition)) {
+		throw new Error(`Graphics in '${path}' are not AssetGraphicsDefinition`);
+	}
 
 	return {
 		layers: definition.layers.map(LoadAssetLayer),
