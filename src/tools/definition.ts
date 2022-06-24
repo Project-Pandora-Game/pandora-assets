@@ -11,6 +11,7 @@ export function DefineAsset(def: IntermediateAssetDefinition): void {
 	const asset: AssetDefinition = {
 		id,
 		name: def.name,
+		bodypart: def.bodypart,
 		hasGraphics: def.graphics !== undefined,
 	};
 

@@ -10,5 +10,6 @@ type AllBones = import('./bones').AllBones;
 interface IntermediateAssetDefinition {
 	id?: string;
 	name: string;
+	bodypart?: import('./bodyparts').BodypartName
 	graphics?: string;
 }

@@ -8,6 +8,7 @@ import { ClearAllResources, DefineResourceInline, ExportAllResources } from './t
 import { RunWithWatch } from './tools/watch';
 import { boneDefinition } from './bones';
 import { GraphicsDatabase } from './tools/graphicsDatabase';
+import { BODYPARTS, ValidateBodyparts } from './bodyparts';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.DEBUG);
@@ -76,8 +77,12 @@ async function Run() {
 	const definitions: AssetsDefinitionFile = {
 		assets: AssetDatabase.export(),
 		bones: boneDefinition,
+		bodyparts: BODYPARTS,
 		graphicsId: graphicsFile.hash,
 	};
+	// Check bodyparts are valid
+	ValidateBodyparts(definitions);
+
 	const definitionsFile = DefineResourceInline('assets.json', JSON.stringify(definitions));
 
 	ExportAllResources(DEST_DIR);
