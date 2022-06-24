@@ -1,5 +1,5 @@
 import { DefineAsset } from '../../../tools';
 
 DefineAsset({
-	name: 'Jeans Shorts',
+	name: 'Jeans Shorts (tutorial asset)',
 });

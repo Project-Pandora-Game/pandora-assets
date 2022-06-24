@@ -1,5 +1,5 @@
 import { DefineAsset } from '../../../tools';
 
 DefineAsset({
-	name: 'Ball Gag',
+	name: 'Ball Gag (missing graphics)',
 });
