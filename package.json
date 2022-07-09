@@ -22,7 +22,7 @@
 	},
 	"dependencies": {
 		"lodash": "^4.17.21",
-		"pandora-common": "github:Project-Pandora-Game/pandora-common#c7c23d1",
+		"pandora-common": "github:Project-Pandora-Game/pandora-common#215b5ee",
 		"rimraf": "^3.0.2"
 	},
 	"devDependencies": {

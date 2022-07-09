@@ -1,29 +1,32 @@
 /* eslint-disable @typescript-eslint/naming-convention */ // _r _l
-import type { BoneDefinitionCompressed, CoordinatesCompressed } from 'pandora-common';
+import type { BoneDefinitionCompressed, BoneType, CoordinatesCompressed } from 'pandora-common';
 
 const boneDefinitionImpl = {
 	arm_r: {
 		pos: [578, 432],
 		mirror: 'arm_l',
+		type: 'pose',
 	},
 	elbow_r: {
 		pos: [728, 434],
 		mirror: 'elbow_l',
 		parent: 'arm_r',
+		type: 'pose',
 	},
 	leg_r: {
 		pos: [533, 707],
 		mirror: 'leg_l',
 		baseRotation: 90,
+		type: 'pose',
 	},
-	arm_width: {},
-	leg_width: {},
-	breasts: {},
-	waist: {},
-	hips: {},
-	kneeling: {},
-	sitting: {},
-	tiptoeing: {},
+	arm_width: { type: 'body' },
+	leg_width: { type: 'body' },
+	breasts: { type: 'body' },
+	waist: { type: 'body' },
+	hips: { type: 'body' },
+	kneeling: { type: 'pose' },
+	sitting: { type: 'pose' },
+	tiptoeing: { type: 'pose' },
 } as const;
 
 type Key = keyof typeof boneDefinitionImpl;
@@ -35,6 +38,7 @@ type BoneDefinitionCompressedStrict = {
 	mirror?: Mirrored<Key>;
 	parent?: Key;
 	baseRotation?: number;
+	type: BoneType;
 };
 
 export const boneDefinition = boneDefinitionImpl as Record<Key, BoneDefinitionCompressedStrict> as Record<Key, BoneDefinitionCompressed>;
