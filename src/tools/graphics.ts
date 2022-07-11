@@ -1,6 +1,8 @@
-import { AssetGraphicsDefinition, IsAssetGraphicsDefinition, LayerDefinition, LayerImageOverride } from 'pandora-common';
+import { AssetGraphicsDefinition, ZodMatcher, LayerDefinition, LayerImageOverride, AssetGraphicsDefinitionSchema } from 'pandora-common';
 import { DefinePngResource } from './resources';
 import { readFileSync } from 'fs';
+
+const IsAssetGraphicsDefinition = ZodMatcher(AssetGraphicsDefinitionSchema);
 
 export function LoadAssetsGraphics(path: string): AssetGraphicsDefinition {
 	const definition = JSON.parse(

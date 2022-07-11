@@ -6,7 +6,7 @@ import { GraphicsDatabase } from './graphicsDatabase';
 import { join } from 'path';
 
 export function DefineAsset(def: IntermediateAssetDefinition): void {
-	const id: AssetId = `a/${def.id ?? DefaultId()}`;
+	const id: AssetId = `a/${def.id ?? DefaultId()}` as const;
 
 	const asset: AssetDefinition = {
 		id,
