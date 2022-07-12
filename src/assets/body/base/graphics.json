@@ -7,7 +7,6 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "Body",
-			"mirror": 0,
 			"priority": "BODY",
 			"points": [
 				{
@@ -59,11 +58,6 @@
 								"x": 0,
 								"y": -4
 							}
-						},
-						{
-							"type": "rotate",
-							"bone": "arm_r",
-							"value": 0.1
 						}
 					],
 					"mirror": true,
@@ -833,14 +827,48 @@
 				},
 				{
 					"pos": [
-						597,
-						465
+						602,
+						470
 					],
 					"transforms": [
 						{
 							"type": "rotate",
 							"bone": "arm_r",
-							"value": 0.5
+							"value": 0.5,
+							"condition": [
+								[
+									{
+										"bone": "arm_r",
+										"operator": ">",
+										"value": 0
+									}
+								]
+							]
+						},
+						{
+							"type": "shift",
+							"bone": "arm_r",
+							"value": {
+								"x": -5,
+								"y": 25
+							},
+							"condition": [
+								[
+									{
+										"bone": "arm_r",
+										"operator": "<",
+										"value": 0
+									}
+								]
+							]
+						},
+						{
+							"type": "shift",
+							"bone": "arm_width",
+							"value": {
+								"x": 0,
+								"y": 5
+							}
 						}
 					],
 					"mirror": true,
@@ -848,16 +876,10 @@
 				},
 				{
 					"pos": [
-						587,
-						476
+						590,
+						479
 					],
-					"transforms": [
-						{
-							"type": "rotate",
-							"bone": "arm_r",
-							"value": 0.2
-						}
-					],
+					"transforms": [],
 					"mirror": true,
 					"pointType": "bodyarm"
 				},
@@ -887,16 +909,10 @@
 				},
 				{
 					"pos": [
-						581,
-						512
+						586,
+						513
 					],
-					"transforms": [
-						{
-							"type": "rotate",
-							"bone": "arm_r",
-							"value": 0.05
-						}
-					],
+					"transforms": [],
 					"mirror": true,
 					"pointType": "body"
 				},
@@ -920,7 +936,7 @@
 				},
 				{
 					"pos": [
-						602,
+						608,
 						676
 					],
 					"transforms": [
@@ -951,8 +967,8 @@
 				},
 				{
 					"pos": [
-						614,
-						714
+						618,
+						713
 					],
 					"transforms": [
 						{
@@ -999,8 +1015,8 @@
 				},
 				{
 					"pos": [
-						616,
-						762
+						620,
+						761
 					],
 					"transforms": [
 						{
@@ -1427,8 +1443,8 @@
 				},
 				{
 					"pos": [
-						563,
-						558
+						572,
+						555
 					],
 					"transforms": [
 						{
@@ -1445,8 +1461,8 @@
 				},
 				{
 					"pos": [
-						567,
-						581
+						573,
+						582
 					],
 					"transforms": [
 						{
@@ -1463,8 +1479,8 @@
 				},
 				{
 					"pos": [
-						577,
-						616
+						583,
+						614
 					],
 					"transforms": [
 						{
@@ -1481,7 +1497,7 @@
 				},
 				{
 					"pos": [
-						592,
+						597,
 						650
 					],
 					"transforms": [
@@ -1652,12 +1668,59 @@
 					],
 					"mirror": true,
 					"pointType": "body"
+				},
+				{
+					"pos": [
+						608,
+						466
+					],
+					"mirror": true,
+					"transforms": [
+						{
+							"type": "shift",
+							"bone": "arm_width",
+							"value": {
+								"x": 0,
+								"y": 4
+							}
+						},
+						{
+							"type": "rotate",
+							"bone": "arm_r",
+							"value": 1,
+							"condition": [
+								[
+									{
+										"bone": "arm_r",
+										"operator": "<",
+										"value": 0
+									}
+								]
+							]
+						},
+						{
+							"type": "rotate",
+							"bone": "arm_r",
+							"value": 0.6,
+							"condition": [
+								[
+									{
+										"bone": "arm_r",
+										"operator": ">",
+										"value": 0
+									}
+								]
+							]
+						}
+					],
+					"pointType": "arm"
 				}
 			],
 			"pointType": [
 				"body",
 				"bodyarm"
 			],
+			"mirror": 0,
 			"image": {
 				"image": "body.png",
 				"overrides": [
@@ -1682,13 +1745,13 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "Arms",
-			"mirror": 1,
 			"priority": "ARMS",
 			"points": 0,
 			"pointType": [
 				"bodyarm",
 				"arm"
 			],
+			"mirror": 1,
 			"image": {
 				"image": "body.png",
 				"overrides": [
@@ -1759,7 +1822,6 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "Breasts",
-			"mirror": 0,
 			"priority": "BODY",
 			"points": [
 				{
@@ -1974,6 +2036,7 @@
 			"pointType": [
 				"breasts"
 			],
+			"mirror": 0,
 			"image": {
 				"image": "bust.png",
 				"overrides": [
@@ -2010,12 +2073,12 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "Nipples",
-			"mirror": 0,
 			"priority": "BODY",
 			"points": 2,
 			"pointType": [
 				"breasts"
 			],
+			"mirror": 0,
 			"image": {
 				"image": "bust_center.png",
 				"overrides": []
