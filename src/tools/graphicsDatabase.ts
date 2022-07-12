@@ -1,9 +1,10 @@
-import { GetLogger, AssetId, AssetGraphicsDefinition } from 'pandora-common';
+import { GetLogger, AssetId, AssetGraphicsDefinition, PointTemplate, AssetsGraphicsDefinitionFile } from 'pandora-common';
 
 const logger = GetLogger('GraphicsDatabase');
 
 export const GraphicsDatabase = new class GraphicsDatabase {
 	private assets: Map<AssetId, AssetGraphicsDefinition> = new Map();
+	private templates: Map<string, PointTemplate> = new Map();
 
 	public registerAsset(id: AssetId, asset: AssetGraphicsDefinition, allowOverride: boolean = false): void {
 		if (this.assets.has(id) && !allowOverride) {
@@ -14,15 +15,36 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 		logger.debug('Registered asset graphics', id);
 	}
 
-	export(): Record<AssetId, AssetGraphicsDefinition> {
-		const result: Record<AssetId, AssetGraphicsDefinition> = {};
-		for (const [id, graphics] of this.assets.entries()) {
-			result[id] = graphics;
+	public registerPointTemplate(name: string, template: PointTemplate): void {
+		if (this.templates.has(name)) {
+			throw new Error(`Duplicate template definition, template '${name}' already exists`);
 		}
-		return result;
+
+		this.templates.set(name, template);
+		logger.debug('Registered point template', name);
+	}
+
+	public hasPointTemplate(name: string): boolean {
+		return this.templates.has(name);
+	}
+
+	export(): AssetsGraphicsDefinitionFile {
+		const pointTemplates: Record<string, PointTemplate> = {};
+		for (const [name, template] of this.templates.entries()) {
+			pointTemplates[name] = template;
+		}
+		const assets: Record<AssetId, AssetGraphicsDefinition> = {};
+		for (const [id, graphics] of this.assets.entries()) {
+			assets[id] = graphics;
+		}
+		return {
+			assets,
+			pointTemplates,
+		};
 	}
 
 	clear(): void {
 		this.assets.clear();
+		this.templates.clear();
 	}
 };

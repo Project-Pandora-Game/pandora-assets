@@ -1,0 +1,18 @@
+[
+	{
+		"pos": [
+			0,
+			0
+		],
+		"mirror": true,
+		"transforms": []
+	},
+	{
+		"pos": [
+			0,
+			1500
+		],
+		"mirror": true,
+		"transforms": []
+	}
+]

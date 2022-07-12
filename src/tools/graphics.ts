@@ -1,6 +1,7 @@
 import { AssetGraphicsDefinition, ZodMatcher, LayerDefinition, LayerImageOverride, AssetGraphicsDefinitionSchema, LayerImageSetting } from 'pandora-common';
 import { DefinePngResource } from './resources';
 import { readFileSync } from 'fs';
+import { GraphicsDatabase } from './graphicsDatabase';
 
 const IsAssetGraphicsDefinition = ZodMatcher(AssetGraphicsDefinitionSchema);
 
@@ -11,6 +12,7 @@ export function LoadAssetsGraphics(path: string): AssetGraphicsDefinition {
 			.filter((line) => !line.trimStart().startsWith('//'))
 			.join('\n'),
 	) as AssetGraphicsDefinition;
+
 	if (!IsAssetGraphicsDefinition(definition)) {
 		throw new Error(`Graphics in '${path}' are not AssetGraphicsDefinition`);
 	}
@@ -34,6 +36,9 @@ function LoadLayerImageSetting(setting: LayerImageSetting): LayerImageSetting {
 
 function LoadAssetLayer(layer: LayerDefinition): LayerDefinition {
 	const { x, y, width, height } = layer;
+	if (typeof layer.points === 'string' && !GraphicsDatabase.hasPointTemplate(layer.points)) {
+		throw new Error(`Layer ${layer.name ?? '[unnamed]'} refers to unknown template '${layer.points}'`);
+	}
 	return {
 		x,
 		y,

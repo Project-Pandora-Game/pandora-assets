@@ -9,18 +9,18 @@ import { RunWithWatch } from './tools/watch';
 import { boneDefinition } from './bones';
 import { GraphicsDatabase } from './tools/graphicsDatabase';
 import { BODYPARTS, ValidateBodyparts } from './bodyparts';
+import { ASSET_DEST_DIR, ASSET_SRC_DIR, DEST_DIR } from './constants';
+import { LoadTemplates } from './templates';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.DEBUG);
-
-const ASSET_DEST_DIR = join(__dirname, 'assets');
-const ASSET_SRC_DIR = join(__dirname, '..', 'src', 'assets');
-const DEST_DIR = join(__dirname, '..', 'out');
 
 async function Run() {
 	GraphicsDatabase.clear();
 	AssetDatabase.clear();
 	ClearAllResources();
+
+	LoadTemplates();
 
 	for (const category of fs.readdirSync(ASSET_SRC_DIR)) {
 		const categoryDestPath = join(ASSET_DEST_DIR, category);
@@ -69,9 +69,7 @@ async function Run() {
 	}
 	fs.mkdirSync(DEST_DIR);
 
-	const graphics: AssetsGraphicsDefinitionFile = {
-		assets: GraphicsDatabase.export(),
-	};
+	const graphics: AssetsGraphicsDefinitionFile = GraphicsDatabase.export();
 	const graphicsFile = DefineResourceInline('graphics.json', JSON.stringify(graphics));
 
 	const definitions: AssetsDefinitionFile = {
