@@ -7,24 +7,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "FRONT_HAIR",
-			"points": [
-				{
-					"pos": [
-						0,
-						0
-					],
-					"mirror": true,
-					"transforms": []
-				},
-				{
-					"pos": [
-						0,
-						1500
-					],
-					"mirror": true,
-					"transforms": []
-				}
-			],
+			"points": "static",
 			"mirror": 0,
 			"image": {
 				"image": "hair3.png",
@@ -37,24 +20,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "FRONT_HAIR",
-			"points": [
-				{
-					"pos": [
-						0,
-						0
-					],
-					"mirror": true,
-					"transforms": []
-				},
-				{
-					"pos": [
-						0,
-						1500
-					],
-					"mirror": true,
-					"transforms": []
-				}
-			],
+			"points": "static",
 			"mirror": 0,
 			"image": {
 				"image": "hair3_shine.png",

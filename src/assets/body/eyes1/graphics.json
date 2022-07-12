@@ -7,24 +7,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BODY",
-			"points": [
-				{
-					"pos": [
-						0,
-						0
-					],
-					"mirror": true,
-					"transforms": []
-				},
-				{
-					"pos": [
-						0,
-						1500
-					],
-					"mirror": true,
-					"transforms": []
-				}
-			],
+			"points": "static",
 			"mirror": 0,
 			"image": {
 				"image": "EyeBase1.png",
@@ -37,24 +20,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BODY",
-			"points": [
-				{
-					"pos": [
-						0,
-						0
-					],
-					"mirror": true,
-					"transforms": []
-				},
-				{
-					"pos": [
-						0,
-						1500
-					],
-					"mirror": true,
-					"transforms": []
-				}
-			],
+			"points": "static",
 			"mirror": 0,
 			"image": {
 				"image": "Cornea1.png",
@@ -67,24 +33,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BODY",
-			"points": [
-				{
-					"pos": [
-						0,
-						0
-					],
-					"mirror": true,
-					"transforms": []
-				},
-				{
-					"pos": [
-						0,
-						1500
-					],
-					"mirror": true,
-					"transforms": []
-				}
-			],
+			"points": "static",
 			"mirror": 0,
 			"image": {
 				"image": "EyeShadow1.png",
@@ -97,24 +46,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BODY",
-			"points": [
-				{
-					"pos": [
-						0,
-						0
-					],
-					"mirror": true,
-					"transforms": []
-				},
-				{
-					"pos": [
-						0,
-						1500
-					],
-					"mirror": true,
-					"transforms": []
-				}
-			],
+			"points": "static",
 			"mirror": 0,
 			"image": {
 				"image": "EyeLashes1.png",
@@ -127,24 +59,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BODY",
-			"points": [
-				{
-					"pos": [
-						0,
-						0
-					],
-					"mirror": true,
-					"transforms": []
-				},
-				{
-					"pos": [
-						0,
-						1500
-					],
-					"mirror": true,
-					"transforms": []
-				}
-			],
+			"points": "static",
 			"mirror": 0,
 			"image": {
 				"image": "Shine1.png",
