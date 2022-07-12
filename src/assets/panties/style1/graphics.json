@@ -6,7 +6,6 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"image": "style1.png",
 			"priority": "ABOVE_BODY",
 			"points": [
 				{
@@ -1653,11 +1652,14 @@
 					"pointType": "body"
 				}
 			],
-			"mirror": 0,
-			"imageOverrides": [],
 			"pointType": [
 				"body"
-			]
+			],
+			"mirror": 0,
+			"image": {
+				"image": "style1.png",
+				"overrides": []
+			}
 		}
 	]
 }

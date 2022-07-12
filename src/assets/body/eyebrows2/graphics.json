@@ -6,7 +6,6 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"image": "Eyebrows2.png",
 			"priority": "BODY",
 			"points": [
 				{
@@ -27,7 +26,10 @@
 				}
 			],
 			"mirror": 0,
-			"imageOverrides": []
+			"image": {
+				"image": "Eyebrows2.png",
+				"overrides": []
+			}
 		}
 	]
 }

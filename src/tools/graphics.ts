@@ -1,4 +1,4 @@
-import { AssetGraphicsDefinition, ZodMatcher, LayerDefinition, LayerImageOverride, AssetGraphicsDefinitionSchema } from 'pandora-common';
+import { AssetGraphicsDefinition, ZodMatcher, LayerDefinition, LayerImageOverride, AssetGraphicsDefinitionSchema, LayerImageSetting } from 'pandora-common';
 import { DefinePngResource } from './resources';
 import { readFileSync } from 'fs';
 
@@ -20,24 +20,34 @@ export function LoadAssetsGraphics(path: string): AssetGraphicsDefinition {
 	};
 }
 
-function LoadAssetLayer(layer: LayerDefinition): LayerDefinition {
-	const { x, y, width, height } = layer;
-	const imageOverrides: LayerImageOverride[] = layer.imageOverrides
+function LoadLayerImageSetting(setting: LayerImageSetting): LayerImageSetting {
+	const overrides: LayerImageOverride[] = setting.overrides
 		.map((override) => ({
 			...override,
 			image: override.image && DefinePngResource(override.image).resultName,
 		}));
+	return {
+		image: setting.image && DefinePngResource(setting.image).resultName,
+		overrides,
+	};
+}
+
+function LoadAssetLayer(layer: LayerDefinition): LayerDefinition {
+	const { x, y, width, height } = layer;
 	return {
 		x,
 		y,
 		width,
 		height,
 		name: layer.name,
-		mirror: layer.mirror,
 		priority: layer.priority,
 		points: layer.points,
-		image: layer.image && DefinePngResource(layer.image).resultName,
-		imageOverrides,
 		pointType: layer.pointType,
+		mirror: layer.mirror,
+		image: LoadLayerImageSetting(layer.image),
+		scaling: layer.scaling && {
+			scaleBone: layer.scaling.scaleBone,
+			stops: layer.scaling.stops.map((stop) => [stop[0], LoadLayerImageSetting(stop[1])]),
+		},
 	};
 }

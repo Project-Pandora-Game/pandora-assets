@@ -6,7 +6,6 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"image": "hair2.png",
 			"priority": "FRONT_HAIR",
 			"points": [
 				{
@@ -27,14 +26,16 @@
 				}
 			],
 			"mirror": 0,
-			"imageOverrides": []
+			"image": {
+				"image": "hair2.png",
+				"overrides": []
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"image": "hair2_shine.png",
 			"priority": "FRONT_HAIR",
 			"points": [
 				{
@@ -55,7 +56,10 @@
 				}
 			],
 			"mirror": 0,
-			"imageOverrides": []
+			"image": {
+				"image": "hair2_shine.png",
+				"overrides": []
+			}
 		}
 	]
 }
