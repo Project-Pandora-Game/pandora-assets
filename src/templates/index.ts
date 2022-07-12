@@ -6,6 +6,8 @@ import { GraphicsDatabase } from '../tools/graphicsDatabase';
 
 const templateList: string[] = [
 	'static',
+	'body',
+	'breasts',
 ];
 
 const IsPointTemplate = ZodMatcher(PointTemplateSchema);
