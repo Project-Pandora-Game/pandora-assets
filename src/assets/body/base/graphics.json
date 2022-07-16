@@ -115,7 +115,7 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "Breasts",
-			"priority": "BODY",
+			"priority": "BREASTS",
 			"points": "breasts",
 			"pointType": [
 				"breasts"
@@ -157,7 +157,7 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "Nipples",
-			"priority": "BODY",
+			"priority": "BREASTS",
 			"points": "breasts",
 			"pointType": [
 				"breasts"
