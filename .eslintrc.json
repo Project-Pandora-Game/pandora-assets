@@ -7,7 +7,7 @@
 		"es6": true,
 		"node": true
 	},
-	"ignorePatterns": [".git", "node_modules", "dist"],
+	"ignorePatterns": ["/.git", "/node_modules", "/dist", "/pandora"],
 	"parserOptions": {
 		"ecmaVersion": 2021
 	},
