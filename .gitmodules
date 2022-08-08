@@ -1,0 +1,3 @@
+[submodule "pandora"]
+	path = pandora
+	url = git@github.com:Project-Pandora-Game/pandora.git
