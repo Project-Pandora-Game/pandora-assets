@@ -18,6 +18,7 @@
 		"test": "jest",
 		"test:coverage": "jest --coverage",
 		"test:watch": "jest --watch",
+		"ci": "yarn run build && yarn run lint && yarn run type-check:test && yarn run test",
 		"postinstall": "node scripts/postinstall.cjs"
 	},
 	"dependencies": {
