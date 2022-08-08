@@ -3,4 +3,6 @@
 set -eou pipefail
 source "./.hooks/include.sh"
 
+git submodule update --init --recursive
+
 yarn_helper
