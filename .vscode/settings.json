@@ -6,6 +6,9 @@
 	"files.trimTrailingWhitespace": true,
 	"files.eol": "\n",
 	"files.encoding": "utf8",
+	"files.exclude": {
+		"pandora": true
+	},
 	"git.rebaseWhenSync": true,
 	"[typescript]": {
 		"editor.defaultFormatter": "vscode.typescript-language-features",
