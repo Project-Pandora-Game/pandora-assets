@@ -12,6 +12,7 @@
 				"body"
 			],
 			"mirror": 0,
+			"colorizationIndex": 0,
 			"image": {
 				"image": "style1.png",
 				"overrides": []
@@ -29,6 +30,7 @@
 				"body"
 			],
 			"mirror": 0,
+			"colorizationIndex": 0,
 			"image": {
 				"image": "style1_back.png",
 				"overrides": []

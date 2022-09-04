@@ -9,6 +9,7 @@
 			"priority": "BACK_HAIR",
 			"points": "static",
 			"mirror": 0,
+			"colorizationIndex": 1,
 			"image": {
 				"image": "bhair1_shine.png",
 				"overrides": []
@@ -22,6 +23,7 @@
 			"priority": "BACK_HAIR",
 			"points": "static",
 			"mirror": 0,
+			"colorizationIndex": 0,
 			"image": {
 				"image": "bhair1.png",
 				"overrides": []

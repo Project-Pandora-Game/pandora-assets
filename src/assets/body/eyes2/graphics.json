@@ -9,6 +9,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 0,
+			"colorizationIndex": 3,
 			"image": {
 				"image": "EyeBase2.png",
 				"overrides": []
@@ -22,6 +23,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 0,
+			"colorizationIndex": 0,
 			"image": {
 				"image": "Cornea2.png",
 				"overrides": []
@@ -35,6 +37,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 0,
+			"colorizationIndex": 4,
 			"image": {
 				"image": "EyeShadow2.png",
 				"overrides": []
@@ -48,6 +51,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 0,
+			"colorizationIndex": 2,
 			"image": {
 				"image": "EyeLashes2.png",
 				"overrides": []
@@ -61,6 +65,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 0,
+			"colorizationIndex": 1,
 			"image": {
 				"image": "Shine2.png",
 				"overrides": []

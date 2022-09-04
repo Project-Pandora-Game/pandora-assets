@@ -9,6 +9,7 @@
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
+			"colorizationIndex": 1,
 			"image": {
 				"image": "bhair2_shine.png",
 				"overrides": []
@@ -22,6 +23,7 @@
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
+			"colorizationIndex": 0,
 			"image": {
 				"image": "bhair2.png",
 				"overrides": []

@@ -14,6 +14,7 @@
 				"bodyarm"
 			],
 			"mirror": 0,
+			"colorizationIndex": 0,
 			"image": {
 				"image": "body.png",
 				"overrides": [
@@ -45,6 +46,7 @@
 				"arm"
 			],
 			"mirror": 1,
+			"colorizationIndex": 0,
 			"image": {
 				"image": "body.png",
 				"overrides": [
@@ -121,6 +123,7 @@
 				"breasts"
 			],
 			"mirror": 0,
+			"colorizationIndex": 0,
 			"image": {
 				"image": "bust.png",
 				"overrides": [
@@ -163,6 +166,7 @@
 				"breasts"
 			],
 			"mirror": 0,
+			"colorizationIndex": 1,
 			"image": {
 				"image": "bust_center.png",
 				"overrides": []

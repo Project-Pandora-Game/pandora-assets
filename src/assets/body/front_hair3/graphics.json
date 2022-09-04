@@ -9,6 +9,7 @@
 			"priority": "FRONT_HAIR",
 			"points": "static",
 			"mirror": 0,
+			"colorizationIndex": 0,
 			"image": {
 				"image": "hair3.png",
 				"overrides": []
@@ -22,6 +23,7 @@
 			"priority": "FRONT_HAIR",
 			"points": "static",
 			"mirror": 0,
+			"colorizationIndex": 1,
 			"image": {
 				"image": "hair3_shine.png",
 				"overrides": []
