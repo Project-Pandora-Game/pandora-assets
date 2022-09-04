@@ -20,7 +20,7 @@ export function DefineAsset(def: IntermediateAssetDefinition): void {
 			}
 		}
 		if (!colorValid) {
-			throw new Error("Invalid color");
+			throw new Error('Invalid color');
 		}
 	}
 
