@@ -14,7 +14,7 @@ import { LoadTemplates } from './templates';
 import { POSE_PRESETS } from './posePresets';
 
 const logger = GetLogger('Main');
-SetConsoleOutput(LogLevel.DEBUG);
+SetConsoleOutput(LogLevel.VERBOSE);
 
 async function Run() {
 	GraphicsDatabase.clear();
