@@ -19,6 +19,9 @@ export function DefineAsset(def: IntermediateAssetDefinition): void {
 				logger.error(`Asset ${id} invalid default in colorization[${i}]: '${def.colorization[i].default}' is not a valid color, use full hex format, like '#ffffff'`);
 			}
 		}
+		if (!colorValid) {
+			throw new Error("Invalid color");
+		}
 	}
 
 	const asset: AssetDefinition = {
