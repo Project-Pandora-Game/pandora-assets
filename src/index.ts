@@ -11,6 +11,7 @@ import { GraphicsDatabase } from './tools/graphicsDatabase';
 import { BODYPARTS, ValidateBodyparts } from './bodyparts';
 import { ASSET_DEST_DIR, ASSET_SRC_DIR, DEST_DIR } from './constants';
 import { LoadTemplates } from './templates';
+import { POSE_PRESETS } from './posePresets';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.DEBUG);
@@ -75,6 +76,7 @@ async function Run() {
 	const definitions: AssetsDefinitionFile = {
 		assets: AssetDatabase.export(),
 		bones: boneDefinition,
+		posePresets: POSE_PRESETS,
 		bodyparts: BODYPARTS,
 		graphicsId: graphicsFile.hash,
 	};
