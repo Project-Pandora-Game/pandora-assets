@@ -9,7 +9,7 @@ type AllBones = import('./bones').AllBones;
 
 interface IntermediateAssetDefinition extends Pick<
 	import('pandora-common').AssetDefinition<AllBones>,
-	'name' | 'actionMessages' | 'colorization' | 'poseLimits'
+	'name' | 'actionMessages' | 'colorization' | 'poseLimits' | 'effects'
 > {
 	id?: string;
 	bodypart?: import('./bodyparts').BodypartName;
