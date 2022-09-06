@@ -57,6 +57,7 @@ export function DefineAsset(def: IntermediateAssetDefinition): void {
 		colorization: def.colorization,
 		poseLimits: def.poseLimits,
 		effects: def.effects,
+		allowSelfEquip: def.allowSelfEquip,
 		hasGraphics: def.graphics !== undefined,
 	};
 

@@ -38,6 +38,7 @@ DefineAsset({
 	effects: {
 		blockHands: true,
 	},
+	allowSelfEquip: false,
 	actionMessages: {
 		itemAdd: 'SOURCE_CHARACTER slipped an armbinder over TARGET_CHARACTER_DYNAMIC arms, lacing it tightly.',
 		itemRemove: 'SOURCE_CHARACTER loosened and then slipped off the armbinder from TARGET_CHARACTER_DYNAMIC arms.',
