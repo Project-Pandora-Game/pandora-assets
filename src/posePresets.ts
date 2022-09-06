@@ -2,7 +2,6 @@ import { ArmsPose, AssetsPosePresets } from 'pandora-common';
 import { AllBones } from './bones';
 
 export const POSE_PRESETS: AssetsPosePresets<AllBones> =
-	/* eslint-disable @typescript-eslint/naming-convention */
 	[
 		{
 			category: 'Arms (front)',
@@ -469,4 +468,3 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 			],
 		},
 	];
-/* eslint-enable @typescript-eslint/naming-convention */

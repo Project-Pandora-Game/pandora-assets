@@ -33,7 +33,7 @@ DefineAsset({
 			arm_l: 104,
 			elbow_r: -4,
 			elbow_l: -4,
-		}
+		},
 	},
 	effects: {
 		blockHands: true,

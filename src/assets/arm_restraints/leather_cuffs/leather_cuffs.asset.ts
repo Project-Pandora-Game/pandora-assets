@@ -27,7 +27,7 @@ DefineAsset({
 			arm_l: 74,
 			elbow_r: 43,
 			elbow_l: 43,
-		}
+		},
 	},
 	actionMessages: {
 		itemAdd: 'SOURCE_CHARACTER fastened the leather cuffs around TARGET_CHARACTER_DYNAMIC wrists.',

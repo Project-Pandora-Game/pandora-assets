@@ -27,7 +27,7 @@ export function DefineAsset(def: IntermediateAssetDefinition): void {
 			for (const [bone, value] of Object.entries(def.poseLimits.forcePose)) {
 				if (value == null)
 					continue;
-				let limit = typeof value === "number" ? [value, value] : value;
+				const limit = typeof value === 'number' ? [value, value] : value;
 
 				if (!Number.isInteger(limit[0]) || limit[0] < BONE_MIN || limit[1] > BONE_MAX) {
 					logger.error(`Invalid min limit for poseLimits.forcePose.${bone}, must be a whole number in range [${BONE_MIN}, ${BONE_MAX}]`);

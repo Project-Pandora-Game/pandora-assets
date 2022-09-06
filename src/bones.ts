@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */ // _r _l
 import type { BoneDefinitionCompressed, BoneType, CoordinatesCompressed } from 'pandora-common';
 
 const boneDefinitionImpl = {
