@@ -77,6 +77,10 @@
 						"leadingUnderscore": "require"
 					},
 					{
+						"selector": "objectLiteralProperty",
+						"format": null
+					},
+					{
 						"selector": "typeLike",
 						"format": ["PascalCase"]
 					},
@@ -141,7 +145,11 @@
 			"tab",
 			{
 				"SwitchCase": 1,
-				"ignoredNodes": ["ConditionalExpression"]
+				"ignoredNodes": [
+					"ConditionalExpression",
+					"PropertyDefinition[decorators]",
+					"TSUnionType"
+				]
 			}
 		],
 		"comma-dangle": "off",
