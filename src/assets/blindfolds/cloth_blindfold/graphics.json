@@ -11,7 +11,7 @@
 			"mirror": 0,
 			"colorizationIndex": 0,
 			"image": {
-				"image": "thick_cloth_blindfold.png",
+				"image": "cloth_blindfold.png",
 				"overrides": []
 			},
 			"name": "cloth"
