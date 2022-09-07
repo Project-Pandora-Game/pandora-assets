@@ -1,7 +1,7 @@
 import { DefineAsset } from '../../../tools';
 
 DefineAsset({
-	name: 'Leather cuffs',
+	name: 'Leather Ankle Cuffs',
 	graphics: 'graphics.json',
 	colorization: [
 		{
@@ -23,14 +23,14 @@ DefineAsset({
 	],
 	poseLimits: {
 		forcePose: {
-			arm_r: 74,
-			arm_l: 74,
-			elbow_r: 43,
-			elbow_l: 43,
+			leg_r: 0,
+			leg_l: 0,
+			sitting: 0,
+			kneeling: 0,
 		},
 	},
 	actionMessages: {
-		itemAdd: 'SOURCE_CHARACTER fastened the leather cuffs around TARGET_CHARACTER_DYNAMIC wrists.',
-		itemRemove: 'SOURCE_CHARACTER loosened and slipped off the leather cuffs from TARGET_CHARACTER_DYNAMIC wrists.',
+		itemAdd: 'SOURCE_CHARACTER fastened the leather cuffs around TARGET_CHARACTER_DYNAMIC ankles.',
+		itemRemove: 'SOURCE_CHARACTER loosened and slipped off the leather cuffs from TARGET_CHARACTER_DYNAMIC ankles.',
 	},
 });
