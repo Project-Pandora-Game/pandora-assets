@@ -22,26 +22,22 @@ export function DefineAsset(def: IntermediateAssetDefinition): void {
 		}
 	}
 
-	if (def.poseLimits) {
-		if (def.poseLimits.forcePose) {
-			for (const [bone, value] of Object.entries(def.poseLimits.forcePose)) {
-				if (value == null)
-					continue;
-				const limit = typeof value === 'number' ? [value, value] : value;
+	for (const [bone, value] of Object.entries(def.poseLimits?.forcePose ?? {})) {
+		if (value == null)
+			continue;
+		const [min, max] = typeof value === 'number' ? [value, value] : value;
 
-				if (!Number.isInteger(limit[0]) || limit[0] < BONE_MIN || limit[1] > BONE_MAX) {
-					logger.error(`Invalid min limit for poseLimits.forcePose.${bone}, must be a whole number in range [${BONE_MIN}, ${BONE_MAX}]`);
-					definitionValid = false;
-				}
-				if (!Number.isInteger(limit[1]) || limit[1] < BONE_MIN || limit[1] > BONE_MAX) {
-					logger.error(`Invalid max limit for poseLimits.forcePose.${bone}, must be a whole number in range [${BONE_MIN}, ${BONE_MAX}]`);
-					definitionValid = false;
-				}
-				if (limit[0] > limit[1]) {
-					logger.error(`Invalid range for poseLimits.forcePose.${bone}, min must not be greater than max`);
-					definitionValid = false;
-				}
-			}
+		if (!Number.isInteger(min) || min < BONE_MIN || min > BONE_MAX) {
+			logger.error(`Invalid min limit for poseLimits.forcePose.${bone}, must be a whole number in range [${BONE_MIN}, ${BONE_MAX}]`);
+			definitionValid = false;
+		}
+		if (!Number.isInteger(max) || max < BONE_MIN || max > BONE_MAX) {
+			logger.error(`Invalid max limit for poseLimits.forcePose.${bone}, must be a whole number in range [${BONE_MIN}, ${BONE_MAX}]`);
+			definitionValid = false;
+		}
+		if (min > max) {
+			logger.error(`Invalid range for poseLimits.forcePose.${bone}, min must not be greater than max`);
+			definitionValid = false;
 		}
 	}
 
