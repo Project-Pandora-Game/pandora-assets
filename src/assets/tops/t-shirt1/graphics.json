@@ -14,6 +14,7 @@
 				"bodyarm"
 			],
 			"mirror": 0,
+			"colorizationIndex": 0,
 			"image": {
 				"image": "t-shirt_combined.png",
 				"overrides": []
@@ -32,6 +33,7 @@
 				"arm"
 			],
 			"mirror": 0,
+			"colorizationIndex": 0,
 			"image": {
 				"image": "t-shirt_combined.png",
 				"overrides": []
@@ -45,6 +47,7 @@
 			"priority": "BELOW_BODY",
 			"points": "shirt",
 			"mirror": 0,
+			"colorizationIndex": 0,
 			"image": {
 				"image": "t-shirt.png",
 				"overrides": []
@@ -63,6 +66,7 @@
 			"priority": "BELOW_ARMS",
 			"points": "shirt",
 			"mirror": 0,
+			"colorizationIndex": 0,
 			"image": {
 				"image": "t-shirt.png",
 				"overrides": []
@@ -81,8 +85,9 @@
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
+			"colorizationIndex": 1,
 			"image": {
-				"image": "t-shirt_print_smilie.png",
+				"image": "t-shirt_print_smile.png",
 				"overrides": []
 			},
 			"name": "smile",
