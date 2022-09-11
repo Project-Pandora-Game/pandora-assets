@@ -12,7 +12,20 @@
 			"colorizationIndex": 2,
 			"image": {
 				"image": "eyebase.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "eyeState",
+									"operator": "=",
+									"value": "closed"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
@@ -26,7 +39,20 @@
 			"colorizationIndex": 0,
 			"image": {
 				"image": "cornea.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "eyeState",
+									"operator": "=",
+									"value": "closed"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
@@ -40,7 +66,20 @@
 			"colorizationIndex": 1,
 			"image": {
 				"image": "eyelashes.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "eyes_closed.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState",
+									"operator": "=",
+									"value": "closed"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
@@ -54,7 +93,20 @@
 			"colorizationIndex": 3,
 			"image": {
 				"image": "shine.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "eyeState",
+									"operator": "=",
+									"value": "closed"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
@@ -66,8 +118,69 @@
 			"points": "static",
 			"mirror": 0,
 			"image": {
-				"image": "pupils.png",
-				"overrides": []
+				"image": "pupils2.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "eyeState",
+									"operator": "=",
+									"value": "closed"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupils.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "smallPupils"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupils3.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "starPupils"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupils4.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "crossPupils"
+								}
+							]
+						]
+					},
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "noPupils"
+								}
+							]
+						]
+					}
+				]
 			}
 		}
 	]

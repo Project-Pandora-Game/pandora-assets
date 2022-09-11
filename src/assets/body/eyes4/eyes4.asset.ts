@@ -1,3 +1,4 @@
+import { ItemInteractionType } from 'pandora-common';
 import { DefineAsset } from '../../../tools';
 
 DefineAsset({
@@ -27,6 +28,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Pupil Type',
 			expression: 'Eye pupil',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'largePupils',
@@ -55,6 +57,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Eye State',
 			expression: 'Eyes',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'normal',
