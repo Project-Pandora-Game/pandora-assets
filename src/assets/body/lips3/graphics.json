@@ -11,8 +11,21 @@
 			"mirror": 0,
 			"colorizationIndex": 0,
 			"image": {
-				"image": "lips3.png",
-				"overrides": []
+				"image": "lips_neutral.png",
+				"overrides": [
+					{
+						"image": "lips_faint_smile.png",
+						"condition": [
+							[
+								{
+									"module": "mouth",
+									"operator": "=",
+									"value": "faint"
+								}
+							]
+						]
+					}
+				]
 			}
 		}
 	]
