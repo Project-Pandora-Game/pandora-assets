@@ -26,6 +26,25 @@ DefineAsset({
 			default: '#FF0000',
 		},
 	],
+	modules: {
+		gloveRing: {
+			type: 'typed',
+			name: 'Glove Ring',
+			variants: [
+				{
+					id: 'noRing',
+					name: 'No Ring',
+					default: true,
+				},
+				{
+					id: 'ring',
+					name: 'Ring At Glove End',
+
+				},
+
+			],
+		},
+	},
 	poseLimits: {
 		forceArms: ArmsPose.BACK,
 		forcePose: {

@@ -9,12 +9,81 @@
 			"priority": "BELOW_ARMS",
 			"points": "static",
 			"mirror": 0,
+			"colorizationIndex": 1,
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "armbinder_small_ring_strap.png",
+						"condition": [
+							[
+								{
+									"module": "gloveRing",
+									"operator": "=",
+									"value": "ring"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "small ring strap"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "BELOW_ARMS",
+			"points": "static",
+			"mirror": 0,
 			"colorizationIndex": 3,
 			"image": {
-				"image": "armbinder_small_ring.png",
-				"overrides": []
+				"image": "",
+				"overrides": [
+					{
+						"image": "armbinder_small_ring.png",
+						"condition": [
+							[
+								{
+									"module": "gloveRing",
+									"operator": "=",
+									"value": "ring"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "small ring"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "BELOW_ARMS",
+			"points": "static",
+			"mirror": 0,
+			"colorizationIndex": 1,
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "armbinder_small_ring_strap.png",
+						"condition": [
+							[
+								{
+									"module": "gloveRing",
+									"operator": "=",
+									"value": "ring"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "small ring strap"
 		},
 		{
 			"x": 0,
@@ -27,7 +96,20 @@
 			"colorizationIndex": 0,
 			"image": {
 				"image": "armbinder_glove.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "armbinder_glove_bigarms.png",
+						"condition": [
+							[
+								{
+									"bone": "arm_width",
+									"operator": ">",
+									"value": 0
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "glove"
 		},
@@ -172,7 +254,20 @@
 			"colorizationIndex": 0,
 			"image": {
 				"image": "armbinder_glove.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "armbinder_glove_bigarms.png",
+						"condition": [
+							[
+								{
+									"bone": "arm_width",
+									"operator": ">",
+									"value": 0
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "glove front"
 		}
