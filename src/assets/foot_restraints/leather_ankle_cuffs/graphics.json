@@ -29,8 +29,45 @@
 			"mirror": 0,
 			"colorizationIndex": 3,
 			"image": {
-				"image": "leatheranklecuffs_chain.png",
-				"overrides": []
+				"image": "",
+				"overrides": [
+					{
+						"image": "leatheranklecuffs_chain.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "normal"
+								}
+							]
+						]
+					},
+					{
+						"image": "leatheranklecuffs_chain_spread.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "spread"
+								}
+							]
+						]
+					},
+					{
+						"image": "leatheranklecuffs_chain_closed.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "closed"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "chain"
 		},
