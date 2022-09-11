@@ -14,6 +14,7 @@ interface IntermediateAssetDefinition extends Pick<import('pandora-common').Asse
 	| 'poseLimits'
 	| 'effects'
 	| 'allowSelfEquip'
+	| 'modules'
 > {
 	id?: string;
 	bodypart?: import('./bodyparts').BodypartName;

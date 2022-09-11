@@ -1,9 +1,7 @@
-import { AssetGraphicsDefinition, ZodMatcher, LayerDefinition, LayerImageOverride, AssetGraphicsDefinitionSchema, LayerImageSetting } from 'pandora-common';
+import { AssetGraphicsDefinition, ZodMatcher, LayerDefinition, LayerImageOverride, AssetGraphicsDefinitionSchema, LayerImageSetting, GetLogger } from 'pandora-common';
 import { DefinePngResource } from './resources';
 import { readFileSync } from 'fs';
 import { GraphicsDatabase } from './graphicsDatabase';
-
-const IsAssetGraphicsDefinition = ZodMatcher(AssetGraphicsDefinitionSchema);
 
 export function LoadAssetsGraphics(path: string): AssetGraphicsDefinition {
 	const definition = JSON.parse(
@@ -13,7 +11,13 @@ export function LoadAssetsGraphics(path: string): AssetGraphicsDefinition {
 			.join('\n'),
 	) as AssetGraphicsDefinition;
 
-	if (!IsAssetGraphicsDefinition(definition)) {
+	const parseResult = AssetGraphicsDefinitionSchema.safeParse(definition);
+
+	if (!parseResult.success) {
+		GetLogger('GraphicsValidation').error(
+			`Graphics in '${path}' are not AssetGraphicsDefinition:\n`,
+			parseResult.error.toString(),
+		);
 		throw new Error(`Graphics in '${path}' are not AssetGraphicsDefinition`);
 	}
 
