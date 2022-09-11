@@ -1,3 +1,4 @@
+import { ItemInteractionType } from 'pandora-common';
 import { DefineAsset } from '../../../tools';
 
 DefineAsset({
@@ -21,12 +22,42 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	],
-	poseLimits: {
-		forcePose: {
-			arm_r: 74,
-			arm_l: 74,
-			elbow_r: 43,
-			elbow_l: 43,
+	modules: {
+		cuffState: {
+			type: 'typed',
+			name: 'Cuff states',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
+			variants: [
+				{
+					id: 'unchained',
+					name: 'No Chain',
+					default: true,
+				},
+				{
+					id: 'front',
+					name: 'Chained In Front',
+					poseLimits: {
+						forcePose: {
+							arm_r: 74,
+							arm_l: 74,
+							elbow_r: 43,
+							elbow_l: 43,
+						},
+					},
+				},
+				{
+					id: 'overhead',
+					name: 'Chained Overhead',
+					poseLimits: {
+						forcePose: {
+							arm_r: -74,
+							arm_l: -74,
+							elbow_r: -43,
+							elbow_l: -43,
+						},
+					},
+				},
+			],
 		},
 	},
 	actionMessages: {

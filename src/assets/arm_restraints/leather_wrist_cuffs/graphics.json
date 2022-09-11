@@ -29,8 +29,33 @@
 			"mirror": 0,
 			"colorizationIndex": 3,
 			"image": {
-				"image": "leathercuffs_chain.png",
-				"overrides": []
+				"image": "",
+				"overrides": [
+					{
+						"image": "leathercuffs_chain.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "leathercuffs_chain_up.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "overhead"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "chain"
 		},
