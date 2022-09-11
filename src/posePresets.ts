@@ -147,6 +147,26 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					armsPose: ArmsPose.FRONT,
 				},
 				{
+					name: 'Touching sex 1',
+					pose: {
+						arm_r: 66,
+						arm_l: 53,
+						elbow_r: 42,
+						elbow_l: 75,
+					},
+					armsPose: ArmsPose.FRONT,
+				},
+				{
+					name: 'Touching sex 2',
+					pose: {
+						arm_r: 50,
+						arm_l: 50,
+						elbow_r: 78,
+						elbow_l: 78,
+					},
+					armsPose: ArmsPose.FRONT,
+				},
+				{
 					name: 'Covering sex 1',
 					pose: {
 						arm_r: 64,
@@ -258,6 +278,16 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					armsPose: ArmsPose.FRONT,
 				},
 				{
+					name: 'Up/touching',
+					pose: {
+						arm_r: -74,
+						arm_l: -74,
+						elbow_r: -43,
+						elbow_l: -43,
+					},
+					armsPose: ArmsPose.FRONT,
+				},
+				{
 					name: 'Raised',
 					pose: {
 						arm_r: -25,
@@ -339,10 +369,19 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					},
 				},
 				{
+					name: 'Spread minimally',
+					pose: {
+						leg_r: -3,
+						leg_l: -3,
+						sitting: 0,
+						kneeling: 0,
+					},
+				},
+				{
 					name: 'Spread slightly',
 					pose: {
-						leg_r: -8,
-						leg_l: -8,
+						leg_r: -10,
+						leg_l: -10,
 						sitting: 0,
 						kneeling: 0,
 					},
