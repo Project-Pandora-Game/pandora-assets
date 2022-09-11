@@ -22,4 +22,50 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	],
+	modules: {
+		pupilType: {
+			type: 'typed',
+			name: 'Pupil Type',
+			expression: 'Eye pupil',
+			variants: [
+				{
+					id: 'largePupils',
+					name: 'Large Pupils',
+					default: true,
+				},
+				{
+					id: 'smallPupils',
+					name: 'Small Pupils',
+				},
+				{
+					id: 'starPupils',
+					name: 'Star-shaped Pupils',
+				},
+				{
+					id: 'crossPupils',
+					name: 'Cross-shaped Pupils',
+				},
+				{
+					id: 'noPupils',
+					name: 'No Pupils',
+				},
+			],
+		},
+		eyeState: {
+			type: 'typed',
+			name: 'Eye State',
+			expression: 'Eyes',
+			variants: [
+				{
+					id: 'normal',
+					name: 'Normal',
+					default: true,
+				},
+				{
+					id: 'closed',
+					name: 'Closed',
+				},
+			],
+		},
+	},
 });
