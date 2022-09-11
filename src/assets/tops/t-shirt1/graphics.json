@@ -87,8 +87,45 @@
 			"mirror": 0,
 			"colorizationIndex": 1,
 			"image": {
-				"image": "t-shirt_print_smile.png",
-				"overrides": []
+				"image": "t-shirt_print_kissing_smilie.png",
+				"overrides": [
+					{
+						"image": "t-shirt_print_smile.png",
+						"condition": [
+							[
+								{
+									"module": "prints",
+									"operator": "=",
+									"value": "smilie"
+								}
+							]
+						]
+					},
+					{
+						"image": "t-shirt_print_crown.png",
+						"condition": [
+							[
+								{
+									"module": "prints",
+									"operator": "=",
+									"value": "crown"
+								}
+							]
+						]
+					},
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "prints",
+									"operator": "=",
+									"value": "noPrint"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "smile",
 			"pointType": [
