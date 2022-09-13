@@ -27,12 +27,22 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					armsPose: ArmsPose.FRONT,
 				},
 				{
-					name: 'Touching hips',
+					name: 'Touching hips 1',
 					pose: {
 						arm_r: 19,
 						arm_l: 19,
 						elbow_r: 112,
 						elbow_l: 112,
+					},
+					armsPose: ArmsPose.FRONT,
+				},
+				{
+					name: 'Touching hips 2',
+					pose: {
+						arm_r: 26,
+						arm_l: 26,
+						elbow_r: 97,
+						elbow_l: 97,
 					},
 					armsPose: ArmsPose.FRONT,
 				},
