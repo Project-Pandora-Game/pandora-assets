@@ -18,9 +18,6 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	],
-	effects: {
-		// TODO
-	},
 	modules: {
 		collarConfig: {
 			type: 'typed',
@@ -47,6 +44,9 @@ DefineAsset({
 				{
 					id: 'fixed',
 					name: 'Chained To Floor',
+					effects: {
+						blockRoomMovement: true,
+					},
 				},
 			],
 		},
