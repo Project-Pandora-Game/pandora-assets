@@ -22,7 +22,6 @@ DefineAsset({
 		collarConfig: {
 			type: 'typed',
 			name: 'Collar Configuration',
-			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'collar',
