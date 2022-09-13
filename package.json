@@ -18,10 +18,12 @@
 		"test": "jest",
 		"test:coverage": "jest --coverage",
 		"test:watch": "jest --watch",
+		"normalize": "node --enable-source-maps ./dist/tools/normalize",
 		"ci": "yarn run build && yarn run lint && yarn run type-check:test && yarn run test",
 		"postinstall": "node scripts/postinstall.cjs"
 	},
 	"dependencies": {
+		"jimp": "^0.16.1",
 		"lodash": "^4.17.21",
 		"pandora-common": "file:pandora/pandora-common",
 		"rimraf": "^3.0.2"
