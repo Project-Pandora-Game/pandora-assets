@@ -1,11 +1,12 @@
 import { DefineAsset } from '../../../tools';
 
 DefineAsset({
-	name: 'Jeans Shorts (tutorial asset)',
+	name: 'Jeans Shorts',
+	graphics: 'graphics.json',
 	colorization: [
 		{
 			name: 'Pants',
-			default: '#ffffff',
+			default: '#7396B3',
 		},
 		{
 			name: 'Button',
