@@ -1,4 +1,4 @@
-import { AssetGraphicsDefinition, ZodMatcher, LayerDefinition, LayerImageOverride, AssetGraphicsDefinitionSchema, LayerImageSetting, GetLogger } from 'pandora-common';
+import { AssetGraphicsDefinition, LayerDefinition, LayerImageOverride, AssetGraphicsDefinitionSchema, LayerImageSetting, GetLogger } from 'pandora-common';
 import { DefinePngResource } from './resources';
 import { readFileSync } from 'fs';
 import { GraphicsDatabase } from './graphicsDatabase';

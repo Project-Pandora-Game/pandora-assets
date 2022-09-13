@@ -5,12 +5,12 @@ import Jimp from 'jimp';
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.DEBUG);
 
-function calculateMaxColors(image: Jimp): [number, number, number] {
+function CalculateMaxColors(image: Jimp): [number, number, number] {
 	let maxR = 1;
 	let maxG = 1;
 	let maxB = 1;
 
-	image.scanQuiet(0, 0, image.bitmap.width, image.bitmap.height, (x, y, index) => {
+	image.scanQuiet(0, 0, image.bitmap.width, image.bitmap.height, (_x, _y, index) => {
 		// Ignore pixels under certain opacity
 		if (image.bitmap.data[index + 3] < 64)
 			return;
@@ -22,17 +22,17 @@ function calculateMaxColors(image: Jimp): [number, number, number] {
 	return [maxR, maxG, maxB];
 }
 
-function colorsToTint(r: number, g: number, b: number): string {
+function ColorsToTint(r: number, g: number, b: number): string {
 	return `#${(0x10000 * r + 0x100 * g + b).toString(16).padStart(6, '0').toUpperCase()}`;
 }
 
-function normalize(image: Jimp, maxR: number, maxG: number, maxB: number): void {
+function Normalize(image: Jimp, maxR: number, maxG: number, maxB: number): void {
 	const multiplierR = 0xFF / maxR;
 	const multiplierG = 0xFF / maxG;
 	const multiplierB = 0xFF / maxB;
 
 	// apply value transformations
-	image.scanQuiet(0, 0, image.bitmap.width, image.bitmap.height, (x, y, index) => {
+	image.scanQuiet(0, 0, image.bitmap.width, image.bitmap.height, (_x, _y, index) => {
 		// Just skip completely transparent pixels
 		if (image.bitmap.data[index + 3] < 1)
 			return;
@@ -87,8 +87,8 @@ async function Run() {
 				resultPath,
 			});
 
-			const [r, g, b] = calculateMaxColors(image);
-			logger.debug(`\tMaxcolor: ${colorsToTint(r, g, b)}`);
+			const [r, g, b] = CalculateMaxColors(image);
+			logger.debug(`\tMaxcolor: ${ColorsToTint(r, g, b)}`);
 
 			if (!isForced) {
 				maxR = Math.max(maxR, r);
@@ -101,7 +101,7 @@ async function Run() {
 	}
 
 	logger.alert('');
-	logger.alert(`Tint: ${colorsToTint(maxR, maxG, maxB)}`);
+	logger.alert(`Tint: ${ColorsToTint(maxR, maxG, maxB)}`);
 	logger.alert('');
 
 	for (const { image, originalSize, resultPath } of images) {
@@ -109,7 +109,7 @@ async function Run() {
 
 			logger.info('Processing:', resultPath);
 
-			normalize(image, maxR, maxG, maxB);
+			Normalize(image, maxR, maxG, maxB);
 
 			await image.writeAsync(resultPath);
 			const resultSize = fs.statSync(resultPath).size;
@@ -122,7 +122,6 @@ async function Run() {
 
 	logger.info('Done!');
 }
-
 
 // On fatal error in non-watch environment set failure exit code
 logConfig.onFatal.push(() => {
