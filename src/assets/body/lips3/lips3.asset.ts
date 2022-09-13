@@ -8,7 +8,7 @@ DefineAsset({
 	colorization: [
 		{
 			name: 'Lips',
-			default: '#F39989',
+			default: '#FCB6B4',
 		},
 	],
 	modules: {
@@ -24,8 +24,44 @@ DefineAsset({
 					default: true,
 				},
 				{
-					id: 'faint',
+					id: 'serious',
+					name: 'Serious',
+				},
+				{
+					id: 'smile',
 					name: 'Faint Smile',
+				},
+				{
+					id: 'big',
+					name: 'Big Smile',
+				},
+				{
+					id: 'grin',
+					name: 'Grinning',
+				},
+				{
+					id: 'happy',
+					name: 'Happy',
+				},
+				{
+					id: 'laugh',
+					name: 'Open',
+				},
+				{
+					id: 'open',
+					name: 'Open Wide',
+				},
+				{
+					id: 'tongue',
+					name: 'Tongue Out',
+				},
+				{
+					id: 'tongueLong',
+					name: 'Tongue Out Fully',
+				},
+				{
+					id: 'pout',
+					name: 'Pouting',
 				},
 			],
 		},
