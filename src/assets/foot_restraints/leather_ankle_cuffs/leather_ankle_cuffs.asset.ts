@@ -18,7 +18,11 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 		{
-			name: 'Chain',
+			name: 'Chains',
+			default: '#FFFFFF',
+		},
+		{
+			name: 'Sockets',
 			default: '#FFFFFF',
 		},
 	],
@@ -26,6 +30,7 @@ DefineAsset({
 		cuffState: {
 			type: 'typed',
 			name: 'Cuff states',
+			// TODO: needs 'modify' later on when a part of these can be selected via pose buttons
 			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
@@ -67,6 +72,21 @@ DefineAsset({
 							sitting: 0,
 							kneeling: 0,
 						},
+					},
+				},
+				{
+					id: 'floor',
+					name: 'Spread Floor Chains',
+					poseLimits: {
+						forcePose: {
+							leg_r: -18,
+							leg_l: -18,
+							sitting: 0,
+							kneeling: 0,
+						},
+					},
+					effects: {
+						blockRoomMovement: true,
 					},
 				},
 			],
