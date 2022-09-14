@@ -56,6 +56,16 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					armsPose: ArmsPose.FRONT,
 				},
 				{
+					name: 'Touching neck',
+					pose: {
+						arm_r: 70,
+						arm_l: 56,
+						elbow_r: 157,
+						elbow_l: 162,
+					},
+					armsPose: ArmsPose.FRONT,
+				},
+				{
 					name: 'Casual',
 					pose: {
 						arm_r: 82,
