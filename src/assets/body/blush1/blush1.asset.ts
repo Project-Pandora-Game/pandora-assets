@@ -5,6 +5,12 @@ DefineAsset({
 	name: 'Blush 1',
 	bodypart: 'blush',
 	graphics: 'graphics.json',
+	colorization: [
+		{
+			name: 'Blush',
+			default: '#FFFFFF',
+		},
+	],
 	modules: {
 		blush: {
 			type: 'typed',
