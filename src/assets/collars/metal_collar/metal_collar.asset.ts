@@ -1,3 +1,4 @@
+import { ItemInteractionType } from 'pandora-common';
 import { DefineAsset } from '../../../tools';
 
 DefineAsset({
@@ -14,6 +15,10 @@ DefineAsset({
 		},
 		{
 			name: 'Chains',
+			default: '#FFFFFF',
+		},
+		{
+			name: 'Socket',
 			default: '#FFFFFF',
 		},
 	],
@@ -42,9 +47,44 @@ DefineAsset({
 				{
 					id: 'fixed',
 					name: 'Chained To Floor',
+					poseLimits: {
+						forcePose: {
+							sitting: 0,
+							kneeling: 0,
+						},
+					},
 					effects: {
 						blockRoomMovement: true,
 					},
+				},
+				{
+					id: 'fixedKneeling',
+					name: 'Chained To Floor Kneeling',
+					poseLimits: {
+						forcePose: {
+							sitting: 0,
+							kneeling: 180,
+						},
+					},
+					effects: {
+						blockRoomMovement: true,
+					},
+				},
+			],
+		},
+		collarType: {
+			type: 'typed',
+			name: 'Collar Type',
+			interactionType: ItemInteractionType.ADD_REMOVE,
+			variants: [
+				{
+					id: 'normal',
+					name: 'Normal Collar',
+					default: true,
+				},
+				{
+					id: 'thick',
+					name: 'Thick Collar',
 				},
 			],
 		},
