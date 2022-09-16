@@ -16,7 +16,7 @@ Authors can choose from multiple policies on how they prefer their assets to be 
 
 Authors can choose from the following policies for their assets:
 - `Free to change`
-  - The author allows for any and all changes to their asset without any more consent needed from them.
+  - The author allows for any and all changes to their asset without further consent needed from them.
 - `Fixes and New uses, otherwise ask`
   - The author allows anyone to make fixes to the current behaviour of the asset.
   - The author allows anyone to make this asset compatible with new features by modifying it or creating new variants.
@@ -42,7 +42,7 @@ Authors can choose from multiple policies on how they prefer their assets to be 
 
 Authors can choose from the following policies for their assets:
 - `Free to use`
-  - The author allows anyone to reuse any part of this asset without any more consent needed from them.
+  - The author allows anyone to reuse any part of this asset without further consent needed from them.
   - Note that licensing restrictions (for example, the requirement not to modify the images themselves) may still restrict usage.
 - `Ask first`
   - The author requests to be asked before any part of this asset is reused for other assets.
