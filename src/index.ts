@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import { join } from 'path';
 import { GetLogger, SetConsoleOutput, LogLevel, AssetsDefinitionFile, AssetsGraphicsDefinitionFile, logConfig } from 'pandora-common';
-import { SetCurrentContext } from './tools';
+import { GlobalDefineAsset, SetCurrentContext } from './tools';
 import rimraf from 'rimraf';
 import { AssetDatabase } from './tools/assetDatabase';
 import { ClearAllResources, DefineResourceInline, ExportAllResources } from './tools/resources';
@@ -17,6 +17,10 @@ const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.VERBOSE);
 
 async function Run() {
+	// Setup environment
+	globalThis.DefineAsset = GlobalDefineAsset;
+
+	// Clear old data
 	GraphicsDatabase.clear();
 	AssetDatabase.clear();
 	ClearAllResources();

@@ -1,5 +1,3 @@
-import { DefineAsset } from '../tools';
-
 // The comments provide info about what is REQUIRED before submitting an asset.
 // After filling the info in, please remove the helper comments before creating a PR.
 

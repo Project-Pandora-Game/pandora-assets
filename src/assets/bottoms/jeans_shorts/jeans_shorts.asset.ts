@@ -1,5 +1,3 @@
-import { DefineAsset } from '../../../tools';
-
 DefineAsset({
 	name: 'Jeans Shorts',
 	graphics: 'graphics.json',

@@ -1,5 +1,3 @@
-import { DefineAsset } from '../../../tools';
-
 DefineAsset({
 	name: 'Ball Gag',
 	graphics: 'graphics.json',

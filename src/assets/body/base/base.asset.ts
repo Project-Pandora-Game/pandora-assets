@@ -1,5 +1,3 @@
-import { DefineAsset } from '../../../tools';
-
 DefineAsset({
 	name: 'Base body',
 	bodypart: 'base',

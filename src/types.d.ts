@@ -7,6 +7,9 @@ type LayerImageOverrideCompressed = import('pandora-common').LayerImageOverrideC
 type LayerMirror = import('pandora-common').LayerMirror;
 type AllBones = import('./bones').AllBones;
 
+// Globals available to all assets
+declare function DefineAsset(def: IntermediateAssetDefinition): void;
+
 interface IntermediateAssetDefinition extends Pick<import('pandora-common').AssetDefinition<AllBones>,
 	| 'name'
 	| 'actionMessages'

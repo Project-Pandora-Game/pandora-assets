@@ -5,7 +5,7 @@ import { LoadAssetsGraphics } from './graphics';
 import { GraphicsDatabase } from './graphicsDatabase';
 import { join } from 'path';
 
-export function DefineAsset(def: IntermediateAssetDefinition): void {
+export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 	const id: AssetId = `a/${def.id ?? DefaultId()}` as const;
 
 	const logger = GetLogger('DefineAsset', `[Asset ${id}]`);

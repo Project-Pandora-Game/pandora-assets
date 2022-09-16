@@ -1,5 +1,4 @@
 import { ArmsPose } from 'pandora-common';
-import { DefineAsset } from '../../../tools';
 
 DefineAsset({
 	name: 'Armbinder',

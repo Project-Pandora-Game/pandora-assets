@@ -1,5 +1,4 @@
 import { ItemInteractionType } from 'pandora-common';
-import { DefineAsset } from '../../../tools';
 
 DefineAsset({
 	name: 'Eyes 4',
