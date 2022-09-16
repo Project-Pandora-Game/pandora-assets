@@ -24,8 +24,12 @@ async function Run() {
 	LoadTemplates();
 
 	for (const category of fs.readdirSync(ASSET_SRC_DIR)) {
-		const categoryDestPath = join(ASSET_DEST_DIR, category);
 		const categorySrcPath = join(ASSET_SRC_DIR, category);
+		const categoryDestPath = join(ASSET_DEST_DIR, category);
+
+		// Ignore non-directories in assets
+		if (!fs.statSync(categorySrcPath).isDirectory())
+			continue;
 
 		if (!fs.statSync(categoryDestPath).isDirectory()) {
 			throw new Error(`assets/${category} is not directory`);
