@@ -25,7 +25,7 @@ DefineAsset({
 		credits: ['MyNameInTheCredits'],
 		// Write your preference how you want to allow others to modify this asset.
 		// See more details in CONTRIBUTING.md
-		modificationPolicy: 'Fixes only, otherwise ask',
+		modificationPolicy: 'Fixes and New uses, otherwise ask',
 		// Write your preference how you want to allow others to reuse parts of your assets for their assets,
 		// See more details in CONTRIBUTING.md
 		reusePolicy: 'Ask first',
