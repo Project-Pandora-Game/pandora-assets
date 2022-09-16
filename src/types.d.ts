@@ -19,4 +19,75 @@ interface IntermediateAssetDefinition extends Pick<import('pandora-common').Asse
 	id?: string;
 	bodypart?: import('./bodyparts').BodypartName;
 	graphics?: string;
+	// TODO: Make this required
+	/** Info about who owns the asset(s) */
+	ownership?: {
+		/** Same as author of git commits present in PR, has responsibility for this asset */
+		responsibleContributor: string;
+		/** Who is shown in credits for this asset and at the same time people to ask when Asset should be changed */
+		credits: string[];
+		/** Defines author's preferences about how their asset can be modified */
+		modificationPolicy: PandoraAssetModificationPolicy;
+		/** Defines author's preferences about how their asset can be reused for other assets */
+		reusePolicy: PandoraAssetReusePolicy;
+		/**
+		 * Legal info about the images
+		 * If there are multiple sources used, specify this multiple times.
+		 * If author gave you express permission to use images, but wishes to remain Anonymous, write "Anonymous" into relevant fields.
+		 */
+		licensing: {
+			/**
+			 * Which part of the asset this part of licensing applies to?
+			 * @optional
+			 * @example 'The chains', 'The main body of the asset without decorations', 'The decorations'
+			 */
+			part?: string;
+			/**
+			 * Where do the images come from? A HTTP link to source.
+			 * Can be 'Self-Made' for assets you created yourself or 'Private' for images acquired by directly communicating with creator.
+			 */
+			source: 'Self-Made' | 'Private' | `http://${string}` | `https://${string}` | `ftp://${string}`;
+			/** Who is copyright holder of the original images? The name they go by. */
+			copyrightHolder: string;
+			/** Who edited the images to work for Pandora? Can be same as `copyrightHolder`. */
+			editedBy: string;
+			/**
+			 * License; see possible licenses in ASSET_LICENSING.md file.
+			 * Alternatively write name of the file with license prefixed by `./`
+			 */
+			license: PandoraAssetLicense;
+		}[];
+	};
 }
+
+type PandoraAssetModificationPolicy =
+	| `Free to change`
+	| `Fixes and New uses, otherwise ask`
+	| `Fixes and New uses`
+	| `Fixes only, otherwise ask`
+	| `Fixes only`
+	| `Ask first`
+	| `No Changes`;
+
+type PandoraAssetReusePolicy =
+	| `Free to use`
+	| `Ask first`
+	| `No reuse`;
+
+type PandoraAssetLicense =
+	// Pandora licenses
+	| `Pandora-Use-Only`
+	| `Pandora-Use-Only-NoModify`
+	| `Pandora-Use-Only-Reserved`
+	// Compatible licenses
+	| `CC0`
+	| `CC BY`
+	| `CC BY-NC`
+	| `CC BY-SA`
+	| `GPL-3.0`
+	| `LGPL-3.0`
+	| `MIT`
+	// Custom license
+	| `./${string}`
+	// Public Domain
+	| `Public Domain`;
