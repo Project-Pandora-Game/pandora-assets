@@ -46,17 +46,17 @@ interface IntermediateAssetDefinition extends Pick<import('pandora-common').Asse
 			 */
 			part?: string;
 			/**
-			 * Where do the images come from? A HTTP link to source.
-			 * Can be 'Self-Made' for assets you created yourself or 'Private' for images acquired by directly communicating with creator.
+			 * From where does the images come? An HTTP link to the source.
+			 * Can be 'Self-Made' for assets you created yourself or 'Private' for images acquired by directly communicating with the creator.
 			 */
 			source: 'Self-Made' | 'Private' | `http://${string}` | `https://${string}` | `ftp://${string}`;
-			/** Who is copyright holder of the original images? The name they go by. */
+			/** Who is the copyright holder of the original images? The name they go by.*/
 			copyrightHolder: string;
-			/** Who edited the images to work for Pandora? Can be same as `copyrightHolder`. */
+			/** Who edited the images to work for Pandora? It can be the same as `copyrightHolder`. */
 			editedBy: string;
 			/**
 			 * License; see possible licenses in ASSET_LICENSING.md file.
-			 * Alternatively write name of the file with license prefixed by `./`
+			 * Alternatively, write the name of the file with the license prefixed by `./` (e.g. `./LICENSE.md`)
 			 */
 			license: PandoraAssetLicense;
 		}[];

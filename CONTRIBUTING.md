@@ -38,14 +38,14 @@ Authors can choose from the following policies for their assets:
 
 # Reuse policy
 
-Authors can choose from multiple policies on how they prefer their assets to be reusable by other asset creators for their assets. Note, that if the author allows their asset to be reused, the reused parts are considered part of the new asset and are under the discretion of its author.
+Authors can choose from multiple policies on how they prefer their assets to be reusable by other asset creators for their assets. Note that if the author allows their asset to be reused, the reused parts are considered part of the new asset and are under the discretion of its author.
 
 Authors can choose from the following policies for their assets:
 - `Free to use`
   - The author allows anyone to reuse any part of this asset without any more consent needed from them.
-  - Note, that licensing restrictions (for example, the requirement not to modify the images themselves) may still restrict usage.
+  - Note that licensing restrictions (for example, the requirement not to modify the images themselves) may still restrict usage.
 - `Ask first`
   - The author requests to be asked before any part of this asset is reused for other assets.
-  - Note, that licensing restrictions (for example, the requirement not to modify the images themselves) may still restrict usage.
+  - Note that licensing restrictions (for example, the requirement not to modify the images themselves) may still restrict usage.
 - `No reuse`
   - The author requests that no part of this asset is reused in any way for other assets.

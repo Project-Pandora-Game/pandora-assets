@@ -38,7 +38,7 @@ DefineAsset({
 				// This property is optional, if this applies to the whole asset, simply remove the line with `part`.
 				// Examples: The chains; The main body of the asset without decorations; The decorations
 				part: 'CHANGE_ME',
-				// From where does the images come? A HTTP link to the source.
+				// From where does the images come? An HTTP link to the source.
 				// Can be 'Self-Made' for assets you created yourself or 'Private' for images acquired by directly communicating with the creator.
 				source: 'Private',
 				// Who is the copyright holder of the original images? The name they go by.
