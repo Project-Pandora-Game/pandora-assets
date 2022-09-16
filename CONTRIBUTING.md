@@ -5,7 +5,7 @@ There are certain contribution guidelines established for adding new assets or m
 When new asset is contributed to Pandora, the contributors are required to fill in the following details:
  - Who is the contributor responsible for this asset, meaning who is to be contacted with questions or comments.
  - Their preferred policy on which changes they allow to their asset and which not.
- - Their preferred policy on how they allow their asset to be reused and which not.
+ - Their preferred policy on how they allow their asset to be reused and how not.
  - The legal licensing for the images the asset uses.
 
 For details about licensing please check `ASSET_LICENSING.md` and `LICENSE`.
@@ -32,13 +32,13 @@ Authors can choose from the following policies for their asset:
   - Author allows anyone to make fixes to the current behaviour of the asset.
   - Author requests that no other changes are done to this asset by others.
 - `Ask first`
-  - Author requests to be asked before any changes are done to this asset at all.
+  - Author requests to be asked before any changes are done to this asset.
 - `No Changes`
   - Author requests that no changes are done to this asset at all.
 
 # Reuse policy
 
-Authors can choose from multiple policies how they prefer their asset to be reusable by other asset creators for their assets. Note, that author allows their asset to be reused, the reused parts are considered part of the new asset and under control of its author.
+Authors can choose from multiple policies how they prefer their asset to be reusable by other asset creators for their assets. Note, that if the author allows their asset to be reused, the reused parts are considered part of the new asset and under discretion of its author.
 
 Authors can choose from the following policies for their asset:
 - `Free to use`

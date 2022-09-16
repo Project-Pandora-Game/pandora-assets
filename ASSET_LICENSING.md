@@ -2,15 +2,15 @@ All assets must provide license information that allows them to be used in Proje
 
 To do that, they must provide a lincense they are contributed under. This lincense must be either:
 - `Pandora-Use-Only`
-  - Author gave explicit permission for this asset to be modified and/or used for any purpose within Project Pandora.
+  - Author gives explicit permission for this asset to be modified and/or used for any purpose within Project Pandora.
   - Reusing asset or its parts is allowed for other assets, even without explicit permission of the author.
   - This permission is irrevocable.
 - `Pandora-Use-Only-NoModify`
-  - Author gave explicit permission for this asset to be used for any purpose within Project Pandora.
+  - Author gives explicit permission for this asset to be used for any purpose within Project Pandora.
   - Modifying the asset or reusing it requires gaining explicit permission from the author.
   - This permission is irrevocable.
 - `Pandora-Use-Only-Reserved`
-  - Author gave explicit permission for this asset to be used for any purpose within Project Pandora.
+  - Author gives explicit permission for this asset to be used for any purpose within Project Pandora.
   - Modifying the asset or reusing it requires gaining explicit permission from the author.
   - Author retains rights to revoke this license at any time.
 - Custom license provided together with the asset. Write name of the file with license prefixed by `./`, (e.g. `./LICENSE.md`)

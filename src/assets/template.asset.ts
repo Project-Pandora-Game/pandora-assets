@@ -9,7 +9,7 @@ DefineAsset({
 	graphics: 'graphics.json',
 	*/
 	// Definitions how your asset should be colorable.
-	// Rename the example group and copy it to add more
+	// Rename the example group or copy it to add more idependant ones.
 	colorization: [
 		{
 			name: 'Color group',
