@@ -1436,13 +1436,139 @@
 						{
 							"type": "rotate",
 							"bone": "leg_r",
-							"value": 0.8,
+							"value": 0.02,
 							"condition": [
 								[
 									{
 										"bone": "leg_r",
 										"operator": "<",
 										"value": 0
+									}
+								]
+							]
+						},
+						{
+							"type": "rotate",
+							"bone": "leg_r",
+							"value": 0.18,
+							"condition": [
+								[
+									{
+										"bone": "leg_r",
+										"operator": "<",
+										"value": -20
+									}
+								]
+							]
+						},
+						{
+							"type": "rotate",
+							"bone": "leg_r",
+							"value": 0.12,
+							"condition": [
+								[
+									{
+										"bone": "leg_r",
+										"operator": "<",
+										"value": -25
+									}
+								]
+							]
+						},
+						{
+							"type": "rotate",
+							"bone": "leg_r",
+							"value": 0.14,
+							"condition": [
+								[
+									{
+										"bone": "leg_r",
+										"operator": "<",
+										"value": -30
+									}
+								]
+							]
+						},
+						{
+							"type": "rotate",
+							"bone": "leg_r",
+							"value": 0.08,
+							"condition": [
+								[
+									{
+										"bone": "leg_r",
+										"operator": "<",
+										"value": -40
+									}
+								]
+							]
+						},
+						{
+							"type": "rotate",
+							"bone": "leg_r",
+							"value": 0.03,
+							"condition": [
+								[
+									{
+										"bone": "leg_r",
+										"operator": "<",
+										"value": -45
+									}
+								]
+							]
+						},
+						{
+							"type": "rotate",
+							"bone": "leg_r",
+							"value": 0.03,
+							"condition": [
+								[
+									{
+										"bone": "leg_r",
+										"operator": "<",
+										"value": -50
+									}
+								]
+							]
+						},
+						{
+							"type": "rotate",
+							"bone": "leg_r",
+							"value": 0.04,
+							"condition": [
+								[
+									{
+										"bone": "leg_r",
+										"operator": "<",
+										"value": -65
+									}
+								]
+							]
+						},
+						{
+							"type": "rotate",
+							"bone": "leg_r",
+							"value": 0.02,
+							"condition": [
+								[
+									{
+										"bone": "leg_r",
+										"operator": "<",
+										"value": -90
+									}
+								]
+							]
+						},
+						{
+							"type": "rotate",
+							"bone": "leg_r",
+							"value": 0.04,
+							"condition": [
+								[
+									{
+										"bone": "leg_r",
+										"operator": "<",
+										"value": -100
 									}
 								]
 							]
@@ -1459,10 +1585,52 @@
 									{
 										"bone": "leg_r",
 										"operator": "<",
-										"value": 0
+										"value": -10
 									}
 								]
 							]
+						},
+						{
+							"type": "shift",
+							"bone": "leg_r",
+							"value": {
+								"x": 0,
+								"y": 300
+							},
+							"condition": [
+								[
+									{
+										"bone": "leg_r",
+										"operator": "<",
+										"value": -35
+									}
+								]
+							]
+						},
+						{
+							"type": "shift",
+							"bone": "leg_r",
+							"value": {
+								"x": 0,
+								"y": 100
+							},
+							"condition": [
+								[
+									{
+										"bone": "leg_r",
+										"operator": "<",
+										"value": -60
+									}
+								]
+							]
+						},
+						{
+							"type": "shift",
+							"bone": "kneeling",
+							"value": {
+								"x": -20,
+								"y": -440
+							}
 						}
 					]
 				},
@@ -1506,6 +1674,14 @@
 									}
 								]
 							]
+						},
+						{
+							"type": "shift",
+							"bone": "kneeling",
+							"value": {
+								"x": 0,
+								"y": -290
+							}
 						}
 					]
 				},
@@ -1535,7 +1711,7 @@
 							"bone": "leg_r",
 							"value": {
 								"x": 0,
-								"y": 400
+								"y": 600
 							},
 							"condition": [
 								[
@@ -1552,7 +1728,7 @@
 							"bone": "leg_l",
 							"value": {
 								"x": 0,
-								"y": 100
+								"y": 10
 							},
 							"condition": [
 								[
@@ -1563,6 +1739,14 @@
 									}
 								]
 							]
+						},
+						{
+							"type": "shift",
+							"bone": "kneeling",
+							"value": {
+								"x": -50,
+								"y": -300
+							}
 						}
 					]
 				}
