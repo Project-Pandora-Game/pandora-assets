@@ -61,4 +61,18 @@ DefineAsset({
 		itemAdd: 'SOURCE_CHARACTER slipped an armbinder over TARGET_CHARACTER_DYNAMIC arms, lacing it tightly.',
 		itemRemove: 'SOURCE_CHARACTER loosened and then slipped off the armbinder from TARGET_CHARACTER_DYNAMIC arms.',
 	},
+	ownership: {
+		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+		credits: ['ClaudiaMia', 'Jomshir'],
+		modificationPolicy: `Fixes and New uses, otherwise ask`,
+		reusePolicy: 'Ask first',
+		licensing: [
+			{
+				source: 'Self-Made',
+				copyrightHolder: 'ClaudiaMia',
+				editedBy: 'ClaudiaMia',
+				license: 'Pandora-Use-Only',
+			},
+		],
+	},
 });

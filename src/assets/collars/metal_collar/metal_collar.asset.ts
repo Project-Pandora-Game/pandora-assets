@@ -92,4 +92,18 @@ DefineAsset({
 		itemAdd: 'SOURCE_CHARACTER fitted and closed a Metal Collar securely around TARGET_CHARACTER_DYNAMIC neck.',
 		itemRemove: 'SOURCE_CHARACTER opened and then removed the Metal Collar from TARGET_CHARACTER_DYNAMIC neck.',
 	},
+	ownership: {
+		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+		credits: ['ClaudiaMia'],
+		modificationPolicy: `Fixes and New uses, otherwise ask`,
+		reusePolicy: 'Ask first',
+		licensing: [
+			{
+				source: 'Self-Made',
+				copyrightHolder: 'ClaudiaMia',
+				editedBy: 'ClaudiaMia',
+				license: 'Pandora-Use-Only',
+			},
+		],
+	},
 });
