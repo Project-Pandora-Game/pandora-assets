@@ -45,11 +45,10 @@ DefineAsset({
 				},
 				{
 					id: 'fixed',
-					name: 'Chained To Floor',
+					name: 'Long Floor Chain',
 					poseLimits: {
 						forcePose: {
 							sitting: 0,
-							kneeling: 0,
 						},
 					},
 					effects: {
@@ -57,8 +56,8 @@ DefineAsset({
 					},
 				},
 				{
-					id: 'fixedKneeling',
-					name: 'Chained To Floor Kneeling',
+					id: 'fixedShort',
+					name: 'Short Floor Chain',
 					poseLimits: {
 						forcePose: {
 							sitting: 0,
@@ -89,7 +88,7 @@ DefineAsset({
 		},
 	},
 	actionMessages: {
-		itemAdd: 'SOURCE_CHARACTER fitted and closed a Metal Collar securely around TARGET_CHARACTER_DYNAMIC neck.',
+		itemAdd: 'SOURCE_CHARACTER fitted and closed a Metal Collar around TARGET_CHARACTER_DYNAMIC neck.',
 		itemRemove: 'SOURCE_CHARACTER opened and then removed the Metal Collar from TARGET_CHARACTER_DYNAMIC neck.',
 	},
 	ownership: {

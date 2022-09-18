@@ -36,7 +36,7 @@
 			"height": 1500,
 			"priority": "ABOVE_BODY",
 			"points": "static",
-			"mirror": 1,
+			"mirror": 0,
 			"colorizationIndex": 1,
 			"image": {
 				"image": "metal_collar_ring.png",
@@ -65,7 +65,6 @@
 							]
 						]
 					}
-
 				]
 			},
 			"name": "ring"
@@ -90,6 +89,11 @@
 									"module": "collarConfig",
 									"operator": "=",
 									"value": "fixed"
+								},
+								{
+									"bone": "kneeling",
+									"operator": "=",
+									"value": 0
 								}
 							]
 						]
@@ -101,7 +105,19 @@
 								{
 									"module": "collarConfig",
 									"operator": "=",
-									"value": "fixedKneeling"
+									"value": "fixedShort"
+								}
+							],
+							[
+								{
+									"module": "collarConfig",
+									"operator": "=",
+									"value": "fixed"
+								},
+								{
+									"bone": "kneeling",
+									"operator": "!=",
+									"value": 0
 								}
 							]
 						]
@@ -130,6 +146,28 @@
 									"module": "collarConfig",
 									"operator": "=",
 									"value": "fixed"
+								},
+								{
+									"bone": "kneeling",
+									"operator": "=",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "chain_hanging_kneeling.png",
+						"condition": [
+							[
+								{
+									"module": "collarConfig",
+									"operator": "=",
+									"value": "fixed"
+								},
+								{
+									"bone": "kneeling",
+									"operator": "!=",
+									"value": 0
 								}
 							]
 						]
@@ -141,7 +179,7 @@
 								{
 									"module": "collarConfig",
 									"operator": "=",
-									"value": "fixedKneeling"
+									"value": "fixedShort"
 								}
 							]
 						]
