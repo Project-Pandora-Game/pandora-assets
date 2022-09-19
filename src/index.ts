@@ -9,9 +9,10 @@ import { RunWithWatch } from './tools/watch';
 import { boneDefinition } from './bones';
 import { GraphicsDatabase } from './tools/graphicsDatabase';
 import { BODYPARTS, ValidateBodyparts } from './bodyparts';
-import { ASSET_DEST_DIR, ASSET_SRC_DIR, DEST_DIR, IS_PRODUCTION_BUILD } from './constants';
+import { ASSET_DEST_DIR, ASSET_SRC_DIR, OUT_DIR, IS_PRODUCTION_BUILD } from './constants';
 import { LoadTemplates } from './templates';
 import { POSE_PRESETS } from './posePresets';
+import { LoadGitData } from './tools/git';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.VERBOSE);
@@ -42,6 +43,8 @@ async function Run() {
 	AssetDatabase.clear();
 	ClearAllResources();
 
+	// Load common data
+	await LoadGitData();
 	LoadTemplates();
 
 	for (const category of fs.readdirSync(ASSET_SRC_DIR)) {
@@ -105,10 +108,10 @@ async function Run() {
 
 	logger.info('Exporting result...');
 	// Remove any existing output and make empty directory
-	if (fs.existsSync(DEST_DIR)) {
-		rimraf.sync(DEST_DIR);
+	if (fs.existsSync(OUT_DIR)) {
+		rimraf.sync(OUT_DIR);
 	}
-	fs.mkdirSync(DEST_DIR);
+	fs.mkdirSync(OUT_DIR);
 
 	const graphics: AssetsGraphicsDefinitionFile = GraphicsDatabase.export();
 	const graphicsFile = DefineResourceInline('graphics.json', JSON.stringify(graphics));
@@ -125,8 +128,8 @@ async function Run() {
 
 	const definitionsFile = DefineResourceInline('assets.json', JSON.stringify(definitions));
 
-	ExportAllResources(DEST_DIR);
-	fs.writeFileSync(join(DEST_DIR, 'current'), `${definitionsFile.hash}\n`);
+	ExportAllResources(OUT_DIR);
+	fs.writeFileSync(join(OUT_DIR, 'current'), `${definitionsFile.hash}\n`);
 
 	logger.info('Done!');
 }

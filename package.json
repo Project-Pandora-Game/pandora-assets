@@ -26,7 +26,8 @@
 		"jimp": "^0.16.1",
 		"lodash": "^4.17.21",
 		"pandora-common": "file:pandora/pandora-common",
-		"rimraf": "^3.0.2"
+		"rimraf": "^3.0.2",
+		"simple-git": "^3.14.1"
 	},
 	"devDependencies": {
 		"@swc/cli": "^0.1.57",
