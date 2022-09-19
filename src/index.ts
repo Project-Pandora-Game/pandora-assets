@@ -9,18 +9,35 @@ import { RunWithWatch } from './tools/watch';
 import { boneDefinition } from './bones';
 import { GraphicsDatabase } from './tools/graphicsDatabase';
 import { BODYPARTS, ValidateBodyparts } from './bodyparts';
-import { ASSET_DEST_DIR, ASSET_SRC_DIR, DEST_DIR } from './constants';
+import { ASSET_DEST_DIR, ASSET_SRC_DIR, DEST_DIR, IS_PRODUCTION_BUILD } from './constants';
 import { LoadTemplates } from './templates';
 import { POSE_PRESETS } from './posePresets';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.VERBOSE);
 
+let hadErrors = false;
+let hadWarnings = false;
+logConfig.logOutputs.push({
+	logLevel: LogLevel.DEBUG,
+	logLevelOverrides: {},
+	supportsColor: false,
+	onMessage(_prefix, _message, level) {
+		if (level === LogLevel.FATAL || level === LogLevel.ERROR) {
+			hadErrors = true;
+		} else if (level === LogLevel.WARNING) {
+			hadWarnings = true;
+		}
+	},
+});
+
 async function Run() {
 	// Setup environment
 	globalThis.DefineAsset = GlobalDefineAsset;
 
 	// Clear old data
+	hadErrors = false;
+	hadWarnings = false;
 	GraphicsDatabase.clear();
 	AssetDatabase.clear();
 	ClearAllResources();
@@ -68,6 +85,21 @@ async function Run() {
 				logger.fatal(`Error while importing assets/${category}/${asset}\n`, error);
 				process.exit(1);
 			}
+		}
+	}
+
+	if (hadErrors) {
+		logger.fatal(`Some assets had errors while building, build failed.`);
+		return;
+	}
+	if (hadWarnings) {
+		if (IS_PRODUCTION_BUILD) {
+			logger.fatal(`Some assets had warnings while building, build failed.`);
+			return;
+		} else {
+			logger.warning();
+			logger.warning(`Some assets had warnings while building, these need to be fixed before PR.`);
+			logger.warning();
 		}
 	}
 

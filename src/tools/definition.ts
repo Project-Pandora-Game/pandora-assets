@@ -42,7 +42,8 @@ export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 	}
 
 	if (!definitionValid) {
-		throw new Error('Invalid definition');
+		logger.error('Invalid asset definition, asset skipped');
+		return;
 	}
 
 	const asset: AssetDefinition = {
