@@ -127,11 +127,7 @@
 					}
 				]
 			},
-			"name": "smile",
-			"pointType": [
-				"body",
-				"bodyarm"
-			]
+			"name": "print"
 		}
 	]
 }
