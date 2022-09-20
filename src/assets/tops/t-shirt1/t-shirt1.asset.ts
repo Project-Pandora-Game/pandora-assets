@@ -22,16 +22,27 @@ DefineAsset({
 					default: true,
 				},
 				{
-					id: 'smilie',
-					name: 'Smilie',
-				},
-				{
 					id: 'crown',
 					name: 'Crown',
 				},
 				{
 					id: 'noPrint',
 					name: 'No Print',
+				},
+			],
+		},
+		sleeves: {
+			type: 'typed',
+			name: 'T-Shirt Type',
+			variants: [
+				{
+					id: 'short',
+					name: 'Shirt Sleeves',
+					default: true,
+				},
+				{
+					id: 'long',
+					name: 'Long Sleeves',
 				},
 			],
 		},
