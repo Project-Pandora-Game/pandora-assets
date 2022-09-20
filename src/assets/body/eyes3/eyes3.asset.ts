@@ -25,8 +25,8 @@ DefineAsset({
 	modules: {
 		pupilType: {
 			type: 'typed',
-			name: 'Pupil Type',
-			expression: 'Eye pupil',
+			name: 'Pupil Types',
+			expression: 'Eye Pupil Types',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
@@ -52,15 +52,32 @@ DefineAsset({
 				},
 			],
 		},
-		eyeState: {
+		eyeState_l: {
 			type: 'typed',
-			name: 'Eye State',
-			expression: 'Eyes',
+			name: 'Left Eye Open/Close',
+			expression: 'Left Eye Open/Close',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'normal',
-					name: 'Normal',
+					name: 'Open',
+					default: true,
+				},
+				{
+					id: 'closed',
+					name: 'Closed',
+				},
+			],
+		},
+		eyeState_r: {
+			type: 'typed',
+			name: 'Right Eye Open/Close',
+			expression: 'Right Eye Open/Close',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
+			variants: [
+				{
+					id: 'normal',
+					name: 'Open',
 					default: true,
 				},
 				{

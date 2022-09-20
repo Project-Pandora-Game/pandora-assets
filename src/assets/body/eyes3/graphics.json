@@ -8,7 +8,7 @@
 			"height": 1500,
 			"priority": "BODY",
 			"points": "static",
-			"mirror": 0,
+			"mirror": 1,
 			"colorizationIndex": 2,
 			"image": {
 				"image": "eyebase.png",
@@ -18,7 +18,7 @@
 						"condition": [
 							[
 								{
-									"module": "eyeState",
+									"module": "eyeState_r",
 									"operator": "=",
 									"value": "closed"
 								}
@@ -26,7 +26,10 @@
 						]
 					}
 				]
-			}
+			},
+			"pointType": [
+				"static_r"
+			]
 		},
 		{
 			"x": 0,
@@ -35,7 +38,7 @@
 			"height": 1500,
 			"priority": "BODY",
 			"points": "static",
-			"mirror": 0,
+			"mirror": 1,
 			"colorizationIndex": 0,
 			"image": {
 				"image": "cornea.png",
@@ -45,7 +48,7 @@
 						"condition": [
 							[
 								{
-									"module": "eyeState",
+									"module": "eyeState_r",
 									"operator": "=",
 									"value": "closed"
 								}
@@ -53,7 +56,10 @@
 						]
 					}
 				]
-			}
+			},
+			"pointType": [
+				"static_r"
+			]
 		},
 		{
 			"x": 0,
@@ -62,7 +68,7 @@
 			"height": 1500,
 			"priority": "BODY",
 			"points": "static",
-			"mirror": 0,
+			"mirror": 1,
 			"colorizationIndex": 1,
 			"image": {
 				"image": "eyelashes.png",
@@ -72,7 +78,7 @@
 						"condition": [
 							[
 								{
-									"module": "eyeState",
+									"module": "eyeState_r",
 									"operator": "=",
 									"value": "closed"
 								}
@@ -80,7 +86,10 @@
 						]
 					}
 				]
-			}
+			},
+			"pointType": [
+				"static_r"
+			]
 		},
 		{
 			"x": 0,
@@ -89,7 +98,7 @@
 			"height": 1500,
 			"priority": "BODY",
 			"points": "static",
-			"mirror": 0,
+			"mirror": 1,
 			"colorizationIndex": 3,
 			"image": {
 				"image": "shine.png",
@@ -99,7 +108,7 @@
 						"condition": [
 							[
 								{
-									"module": "eyeState",
+									"module": "eyeState_r",
 									"operator": "=",
 									"value": "closed"
 								}
@@ -107,7 +116,10 @@
 						]
 					}
 				]
-			}
+			},
+			"pointType": [
+				"static_r"
+			]
 		},
 		{
 			"x": 0,
@@ -116,7 +128,7 @@
 			"height": 1500,
 			"priority": "BODY",
 			"points": "static",
-			"mirror": 0,
+			"mirror": 1,
 			"image": {
 				"image": "pupils2.png",
 				"overrides": [
@@ -125,7 +137,7 @@
 						"condition": [
 							[
 								{
-									"module": "eyeState",
+									"module": "eyeState_r",
 									"operator": "=",
 									"value": "closed"
 								}
@@ -181,7 +193,10 @@
 						]
 					}
 				]
-			}
+			},
+			"pointType": [
+				"static_r"
+			]
 		}
 	]
 }
