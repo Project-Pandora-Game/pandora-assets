@@ -1755,7 +1755,8 @@
 			"colorizationIndex": 0,
 			"image": {
 				"image": "long_flowy_skirt_front.png",
-				"overrides": []
+				"overrides": [],
+				"alphaImage": "alpha_long_flowy_skirt.png"
 			},
 			"name": "Front"
 		},
@@ -1770,7 +1771,8 @@
 			"colorizationIndex": 0,
 			"image": {
 				"image": "long_flowy_skirt_back.png",
-				"overrides": []
+				"overrides": [],
+				"alphaImage": "alpha_long_flowy_skirt.png"
 			},
 			"name": "Back"
 		}
