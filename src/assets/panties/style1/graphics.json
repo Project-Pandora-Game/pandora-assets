@@ -15,7 +15,8 @@
 			"colorizationIndex": 0,
 			"image": {
 				"image": "style1.png",
-				"overrides": []
+				"overrides": [],
+				"alphaImage": "alpha.png"
 			},
 			"name": "front"
 		},
@@ -33,7 +34,8 @@
 			"colorizationIndex": 0,
 			"image": {
 				"image": "style1_back.png",
-				"overrides": []
+				"overrides": [],
+				"alphaImage": "alpha.png"
 			},
 			"name": "back"
 		}
