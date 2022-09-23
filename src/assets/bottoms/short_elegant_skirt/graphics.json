@@ -1731,7 +1731,8 @@
 			"colorizationIndex": 0,
 			"image": {
 				"image": "short_elegant_skirt.png",
-				"overrides": []
+				"overrides": [],
+				"alphaImage": "alpha_short_elegant_skirt.png"
 			},
 			"name": "Front"
 		},
@@ -1746,7 +1747,8 @@
 			"colorizationIndex": 0,
 			"image": {
 				"image": "short_elegant_skirt.png",
-				"overrides": []
+				"overrides": [],
+				"alphaImage": "alpha_short_elegant_skirt.png"
 			},
 			"name": "Back"
 		}
