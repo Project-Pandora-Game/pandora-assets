@@ -15,7 +15,8 @@
 			"colorizationIndex": 0,
 			"image": {
 				"image": "Jeans_Shorts_Back.png",
-				"overrides": []
+				"overrides": [],
+				"alphaImage": "Alpha_jeans_shorts.png"
 			},
 			"name": "jeans back"
 		},
@@ -33,7 +34,8 @@
 			"colorizationIndex": 0,
 			"image": {
 				"image": "Jeans_Shorts.png",
-				"overrides": []
+				"overrides": [],
+				"alphaImage": "Alpha_jeans_shorts.png"
 			},
 			"name": "jeans front"
 		},
