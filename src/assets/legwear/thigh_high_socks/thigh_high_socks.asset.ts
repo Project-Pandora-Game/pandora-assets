@@ -1,0 +1,62 @@
+DefineAsset({
+	name: 'Thigh High Socks',
+	graphics: 'graphics.json',
+	colorization: [
+		{
+			name: 'Socks',
+			default: '#FFFFFF',
+		},
+		{
+			name: 'Stripe Top (1)',
+			default: '#83a3cc',
+		},
+		{
+			name: 'Stripe Middle (2)',
+			default: '#e49bb8',
+		},
+		{
+			name: 'Stripe Bottom (3)',
+			default: '#83a3cc',
+		},
+	],
+	modules: {
+		stripes: {
+			type: 'typed',
+			name: 'Sock Stripes',
+			variants: [
+				{
+					id: 'three',
+					name: '3 Stripes',
+					default: true,
+				},
+				{
+					id: 'two',
+					name: '2 Stripes',
+				},
+				{
+					id: 'one',
+					name: '1 Stripe',
+				},
+				{
+					id: 'none',
+					name: 'No Stripes',
+				},
+			],
+		},
+	},
+	ownership: {
+		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+		credits: ['ClaudiaMia'],
+		modificationPolicy: `Fixes and New uses, otherwise ask`,
+		reusePolicy: 'Ask first',
+		licensing: [
+			{
+				part: 'textures',
+				source: 'https://www.flickr.com/photos/48385543@N02/25662412406',
+				copyrightHolder: 'Izzie Button',
+				editedBy: 'ClaudiaMia',
+				license: 'CC BY-SA',
+			},
+		],
+	},
+});
