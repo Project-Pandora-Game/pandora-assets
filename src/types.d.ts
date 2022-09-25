@@ -22,9 +22,8 @@ interface IntermediateAssetDefinition extends Pick<import('pandora-common').Asse
 	id?: string;
 	bodypart?: import('./bodyparts').BodypartName;
 	graphics?: string;
-	// TODO: Make this required
 	/** Info about who owns the asset(s) */
-	ownership?: {
+	ownership: {
 		/** Same as author of git commits present in PR, has responsibility for this asset */
 		responsibleContributor: string;
 		/** Who is shown in credits for this asset and at the same time people to ask when Asset should be changed */
