@@ -7,6 +7,9 @@ DefineAsset({
 			default: '#FDF3EA',
 		},
 	],
+	effects: {
+		blindLevel: 4,
+	},
 	actionMessages: {
 		itemAdd: 'SOURCE_CHARACTER wrapped a layer of cloth around TARGET_CHARACTER_DYNAMIC head, covering the eyes.',
 		itemRemove: 'SOURCE_CHARACTER unwrapped the cloth blindfold from around TARGET_CHARACTER_DYNAMIC head.',
