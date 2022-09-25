@@ -9,9 +9,9 @@
 			"priority": "BACK_HAIR",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationIndex": 0,
 			"image": {
-				"image": "bhair3_shine.png",
+				"image": "bhair3.png",
 				"overrides": []
 			}
 		},
@@ -23,10 +23,23 @@
 			"priority": "BACK_HAIR",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationIndex": 1,
 			"image": {
-				"image": "bhair3.png",
-				"overrides": []
+				"image": "bhair3_shine.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "shine",
+									"operator": "=",
+									"value": "hide"
+								}
+							]
+						]
+					}
+				]
 			}
 		}
 	]

@@ -9,9 +9,9 @@
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationIndex": 0,
 			"image": {
-				"image": "bhair2_shine.png",
+				"image": "bhair2.png",
 				"overrides": []
 			}
 		},
@@ -23,10 +23,23 @@
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationIndex": 1,
 			"image": {
-				"image": "bhair2.png",
-				"overrides": []
+				"image": "bhair2_shine.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "shine",
+									"operator": "=",
+									"value": "hide"
+								}
+							]
+						]
+					}
+				]
 			}
 		}
 	]

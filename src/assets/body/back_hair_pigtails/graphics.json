@@ -11,8 +11,21 @@
 			"mirror": 0,
 			"colorizationIndex": 0,
 			"image": {
-				"image": "bhair1.png",
-				"overrides": []
+				"image": "pigtail_left.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "config",
+									"operator": "=",
+									"value": "right"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
@@ -23,18 +36,18 @@
 			"priority": "BACK_HAIR",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationIndex": 0,
 			"image": {
-				"image": "bhair1_shine.png",
+				"image": "pigtail_right.png",
 				"overrides": [
 					{
 						"image": "",
 						"condition": [
 							[
 								{
-									"module": "shine",
+									"module": "config",
 									"operator": "=",
-									"value": "hide"
+									"value": "left"
 								}
 							]
 						]

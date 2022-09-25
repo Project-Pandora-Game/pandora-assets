@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Back hair 3',
+	name: 'Back hair: Twintails',
 	bodypart: 'backhair',
 	graphics: 'graphics.json',
 	colorization: [
@@ -7,39 +7,39 @@ DefineAsset({
 			name: 'Hair',
 			default: '#555555',
 		},
-		{
-			name: 'Hair shine',
-			default: '#AAAAAA',
-		},
 	],
 	modules: {
-		shine: {
+		config: {
 			type: 'typed',
-			name: 'Shine',
+			name: 'Sides',
 			variants: [
 				{
-					id: 'show',
-					name: 'Show Shine',
+					id: 'both',
+					name: 'Both',
 					default: true,
 				},
 				{
-					id: 'hide',
-					name: 'Hide Shine',
+					id: 'left',
+					name: 'Left Only',
+				},
+				{
+					id: 'right',
+					name: 'Right Only',
 				},
 			],
 		},
 	},
 	ownership: {
-		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',
-		credits: ['Titania', 'Jomshir', 'ClaudiaMia'],
+		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+		credits: ['ClaudiaMia'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
-				source: 'Private',
-				copyrightHolder: 'QueenTita',
+				source: 'Self-Made',
+				copyrightHolder: 'ClaudiaMia',
 				editedBy: 'ClaudiaMia',
-				license: './TODO', //TODO
+				license: 'Pandora-Use-Only',
 			},
 		],
 	},

@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Back hair 3',
+	name: 'Back hair 4 Long',
 	bodypart: 'backhair',
 	graphics: 'graphics.json',
 	colorization: [
@@ -9,7 +9,7 @@ DefineAsset({
 		},
 		{
 			name: 'Hair shine',
-			default: '#AAAAAA',
+			default: '#888888',
 		},
 	],
 	modules: {
@@ -30,16 +30,16 @@ DefineAsset({
 		},
 	},
 	ownership: {
-		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',
-		credits: ['Titania', 'Jomshir', 'ClaudiaMia'],
+		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+		credits: ['ClaudiaMia'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
-				source: 'Private',
-				copyrightHolder: 'QueenTita',
+				source: 'Self-Made',
+				copyrightHolder: 'ClaudiaMia',
 				editedBy: 'ClaudiaMia',
-				license: './TODO', //TODO
+				license: 'Pandora-Use-Only',
 			},
 		],
 	},
