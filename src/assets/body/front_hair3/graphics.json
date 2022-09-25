@@ -26,7 +26,20 @@
 			"colorizationIndex": 1,
 			"image": {
 				"image": "hair3_shine.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "shine",
+									"operator": "=",
+									"value": "hide"
+								}
+							]
+						]
+					}
+				]
 			}
 		}
 	]

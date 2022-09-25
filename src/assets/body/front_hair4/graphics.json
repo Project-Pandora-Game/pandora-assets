@@ -11,7 +11,7 @@
 			"mirror": 0,
 			"colorizationIndex": 0,
 			"image": {
-				"image": "hair2.png",
+				"image": "hair4.png",
 				"overrides": []
 			}
 		},
@@ -25,7 +25,7 @@
 			"mirror": 0,
 			"colorizationIndex": 1,
 			"image": {
-				"image": "hair2_shine.png",
+				"image": "hair4_shine.png",
 				"overrides": [
 					{
 						"image": "",
