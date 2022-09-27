@@ -8,7 +8,7 @@ DefineAsset({
 		},
 	],
 	effects: {
-		blindLevel: 6,
+		blind: 6,
 	},
 	actionMessages: {
 		itemAdd: 'SOURCE_CHARACTER wrapped a layer of cloth around TARGET_CHARACTER_DYNAMIC head, covering the eyes.',
