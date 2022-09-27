@@ -73,7 +73,8 @@ export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 		if (license.license.startsWith('./')) {
 			const path = join(AssetSourcePath, license.license);
 			if (!fs.existsSync(path) || !fs.statSync(path).isFile()) {
-				logger.warning(`Custom license '${license.license}' doesn't exist or is not a file.`);
+				// TODO: Change from `alert` to `warning` once ready
+				logger.alert(`Custom license '${license.license}' doesn't exist or is not a file.`);
 			}
 		}
 	}
