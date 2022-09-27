@@ -24,6 +24,7 @@ export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 			}
 		}
 	}
+	const colorizationMaxIndex = def.colorization ? def.colorization.length - 1 : -1;
 
 	for (const [bone, value] of Object.entries(def.poseLimits?.forcePose ?? {})) {
 		if (value == null)
@@ -104,8 +105,21 @@ export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 		hasGraphics: def.graphics !== undefined,
 	};
 
+	// Load and verify graphics
 	if (def.graphics) {
-		GraphicsDatabase.registerAsset(id, LoadAssetsGraphics(join(AssetSourcePath, def.graphics)));
+		const graphics = LoadAssetsGraphics(join(AssetSourcePath, def.graphics));
+
+		const loggerGraphics = logger.prefixMessages('[Graphics]');
+
+		for (let i = 0; i < graphics.layers.length; i++) {
+			const layer = graphics.layers[i];
+
+			if (layer.colorizationIndex != null && layer.colorizationIndex > colorizationMaxIndex) {
+				loggerGraphics.warning(`Layer #${i} has colorizationIndex ${layer.colorizationIndex} outside of defined colorization (0-${colorizationMaxIndex})`);
+			}
+		}
+
+		GraphicsDatabase.registerAsset(id, graphics);
 	}
 	AssetDatabase.registerAsset(id, asset);
 }
