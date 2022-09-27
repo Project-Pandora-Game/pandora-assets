@@ -19,7 +19,7 @@
 		"test:coverage": "jest --coverage",
 		"test:watch": "jest --watch",
 		"normalize": "node --enable-source-maps ./dist/tools/normalize",
-		"ci": "yarn run build && yarn run lint && yarn run type-check:test && yarn run test",
+		"ci": "yarn run build --prod && yarn run lint && yarn run type-check:test && yarn run test",
 		"postinstall": "node scripts/postinstall.cjs"
 	},
 	"dependencies": {
