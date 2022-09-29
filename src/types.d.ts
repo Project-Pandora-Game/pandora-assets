@@ -37,29 +37,53 @@ interface IntermediateAssetDefinition extends Pick<import('pandora-common').Asse
 		 * If there are multiple sources used, specify this multiple times.
 		 * If author gave you express permission to use images, but wishes to remain Anonymous, write "Anonymous" into relevant fields.
 		 */
-		licensing: {
-			/**
-			 * Which part of the asset this part of licensing applies to?
-			 * @optional
-			 * @example 'The chains', 'The main body of the asset without decorations', 'The decorations'
-			 */
-			part?: string;
-			/**
-			 * From where does the images come? An HTTP link to the source.
-			 * Can be 'Self-Made' for assets you created yourself or 'Private' for images acquired by directly communicating with the creator.
-			 */
-			source: 'Self-Made' | 'Private' | `http://${string}` | `https://${string}` | `ftp://${string}`;
-			/** Who is the copyright holder of the original images? The name they go by.*/
-			copyrightHolder: string;
-			/** Who edited the images to work for Pandora? It can be the same as `copyrightHolder`. */
-			editedBy: string;
-			/**
-			 * License; see possible licenses in ASSET_LICENSING.md file.
-			 * Alternatively, write the name of the file with the license prefixed by `./` (e.g. `./LICENSE.md`)
-			 */
-			license: PandoraAssetLicense;
-		}[];
+		licensing: LicensingInfo[];
 	};
+}
+
+interface IntermediateRoomBackgroundDefinition extends Pick<import('pandora-common').IChatroomBackgroundInfo,
+	| 'id'
+	| 'name'
+	| 'size'
+	| 'maxY'
+	| 'scaling'
+> {
+	/** The background image of the chat room; must be in `jpg` format */
+	image: `${string}.jpg`;
+	/** Info about who owns the asset(s) */
+	ownership: {
+		/** Same as author of git commits present in PR, has responsibility for this asset */
+		responsibleContributor: string;
+		/**
+		 * Legal info about the images
+		 * If there are multiple sources used, specify this multiple times.
+		 * If author gave you express permission to use images, but wishes to remain Anonymous, write "Anonymous" into relevant fields.
+		 */
+		licensing: LicensingInfo[];
+	};
+}
+
+interface LicensingInfo {
+	/**
+	 * Which part of the asset this part of licensing applies to?
+	 * @optional
+	 * @example 'The chains', 'The main body of the asset without decorations', 'The decorations'
+	 */
+	part?: string;
+	/**
+	 * From where does the images come? An HTTP link to the source.
+	 * Can be 'Self-Made' for assets you created yourself or 'Private' for images acquired by directly communicating with the creator.
+	 */
+	source: 'Self-Made' | 'Private' | `http://${string}` | `https://${string}` | `ftp://${string}`;
+	/** Who is the copyright holder of the original images? The name they go by.*/
+	copyrightHolder: string;
+	/** Who edited the images to work for Pandora? It can be the same as `copyrightHolder`. */
+	editedBy?: string;
+	/**
+	 * License; see possible licenses in ASSET_LICENSING.md file.
+	 * Alternatively, write the name of the file with the license prefixed by `./` (e.g. `./LICENSE.md`)
+	 */
+	license: PandoraAssetLicense;
 }
 
 type PandoraAssetModificationPolicy =

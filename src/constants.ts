@@ -4,6 +4,7 @@ export const BASE_DIR = join(__dirname, '..');
 
 export const SRC_DIR = join(BASE_DIR, 'src');
 export const ASSET_SRC_DIR = join(SRC_DIR, 'assets');
+export const BACKGROUNDS_SRC_DIR = join(SRC_DIR, 'backgrounds');
 
 export const DEST_DIR = join(BASE_DIR, 'dist');
 export const ASSET_DEST_DIR = join(DEST_DIR, 'assets');

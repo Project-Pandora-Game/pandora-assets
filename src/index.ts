@@ -13,6 +13,8 @@ import { ASSET_DEST_DIR, ASSET_SRC_DIR, OUT_DIR, IS_PRODUCTION_BUILD } from './c
 import { LoadTemplates } from './templates';
 import { POSE_PRESETS } from './posePresets';
 import { LoadGitData } from './tools/git';
+import { RoomDatabase } from './tools/roomDatabase';
+import { LoadBackgrounds } from './backgrounds/backgrounds';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.VERBOSE);
@@ -33,6 +35,8 @@ logConfig.logOutputs.push({
 });
 
 async function Run() {
+	logger.info('Building...');
+
 	// Setup environment
 	globalThis.DefineAsset = GlobalDefineAsset;
 
@@ -41,12 +45,18 @@ async function Run() {
 	hadWarnings = false;
 	GraphicsDatabase.clear();
 	AssetDatabase.clear();
+	RoomDatabase.clear();
 	ClearAllResources();
 
 	// Load common data
 	await LoadGitData();
 	LoadTemplates();
 
+	// Load backgrounds
+	logger.info('Loading backgrounds...');
+	LoadBackgrounds();
+
+	logger.info('Loading assets...');
 	for (const category of fs.readdirSync(ASSET_SRC_DIR)) {
 		const categorySrcPath = join(ASSET_SRC_DIR, category);
 		const categoryDestPath = join(ASSET_DEST_DIR, category);
@@ -121,6 +131,7 @@ async function Run() {
 		bones: boneDefinition,
 		posePresets: POSE_PRESETS,
 		bodyparts: BODYPARTS,
+		backgrounds: RoomDatabase.export(),
 		graphicsId: graphicsFile.hash,
 	};
 	// Check bodyparts are valid

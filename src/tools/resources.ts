@@ -92,6 +92,10 @@ export function DefinePngResource(name: string): Resource {
 	return DefineResource(name);
 }
 
+export function DefineJpgResource(name: string): Resource {
+	return DefineResource(name);
+}
+
 export function ClearAllResources(): void {
 	resources.clear();
 }
