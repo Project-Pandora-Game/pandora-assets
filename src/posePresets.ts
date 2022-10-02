@@ -526,4 +526,34 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 				},
 			],
 		},
+		{
+			category: 'Toes [experimental]',
+			poses: [
+				{
+					name: 'No tiptoeing',
+					pose: {
+						tiptoeing: 0,
+					},
+				},
+				{
+					name: 'Slight tiptoeing',
+					pose: {
+						tiptoeing: 60,
+					},
+				},
+				{
+					name: 'Tiptoeing',
+					pose: {
+						tiptoeing: 110,
+					},
+				},
+				{
+					name: 'Extreme tiptoeing',
+					pose: {
+						tiptoeing: 180,
+					},
+				},
+
+			],
+		},
 	];
