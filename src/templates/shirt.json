@@ -1158,7 +1158,7 @@
 	{
 		"pos": [
 			584,
-			1348
+			1377
 		],
 		"transforms": [
 			{
@@ -1173,8 +1173,8 @@
 				"type": "shift",
 				"bone": "kneeling",
 				"value": {
-					"x": -38,
-					"y": -350
+					"x": -19,
+					"y": -375
 				}
 			},
 			{
@@ -1191,7 +1191,16 @@
 				"value": {
 					"x": -5,
 					"y": 30
-				}
+				},
+				"condition": [
+					[
+						{
+							"bone": "kneeling",
+							"operator": "=",
+							"value": 0
+						}
+					]
+				]
 			},
 			{
 				"type": "rotate",
@@ -1205,7 +1214,7 @@
 	{
 		"pos": [
 			507,
-			1350
+			1379
 		],
 		"transforms": [
 			{
@@ -1220,8 +1229,8 @@
 				"type": "shift",
 				"bone": "kneeling",
 				"value": {
-					"x": 20,
-					"y": -360
+					"x": 32,
+					"y": -377
 				}
 			},
 			{
@@ -1236,9 +1245,18 @@
 				"type": "shift",
 				"bone": "tiptoeing",
 				"value": {
-					"x": -5,
+					"x": 5,
 					"y": 30
-				}
+				},
+				"condition": [
+					[
+						{
+							"bone": "kneeling",
+							"operator": "=",
+							"value": 0
+						}
+					]
+				]
 			},
 			{
 				"type": "rotate",
@@ -1564,8 +1582,8 @@
 				"type": "shift",
 				"bone": "kneeling",
 				"value": {
-					"x": 30,
-					"y": -252
+					"x": 38,
+					"y": -256
 				}
 			},
 			{
@@ -1626,8 +1644,8 @@
 				"type": "shift",
 				"bone": "kneeling",
 				"value": {
-					"x": -38,
-					"y": -263
+					"x": -35,
+					"y": -262
 				}
 			},
 			{
@@ -1665,8 +1683,8 @@
 				"type": "shift",
 				"bone": "kneeling",
 				"value": {
-					"x": 20,
-					"y": -323
+					"x": 32,
+					"y": -322
 				}
 			},
 			{
@@ -1681,9 +1699,18 @@
 				"type": "shift",
 				"bone": "tiptoeing",
 				"value": {
-					"x": -5,
+					"x": 5,
 					"y": 30
-				}
+				},
+				"condition": [
+					[
+						{
+							"bone": "kneeling",
+							"operator": "=",
+							"value": 0
+						}
+					]
+				]
 			},
 			{
 				"type": "rotate",
