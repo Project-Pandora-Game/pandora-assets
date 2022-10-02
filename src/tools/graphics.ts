@@ -30,16 +30,16 @@ function LoadLayerImageSetting(setting: LayerImageSetting): LayerImageSetting {
 	const overrides: LayerImageOverride[] = setting.overrides
 		.map((override) => ({
 			...override,
-			image: override.image && DefinePngResource(override.image).resultName,
+			image: override.image && DefinePngResource(override.image, 'asset').resultName,
 		}));
 	const alphaOverrides: LayerImageOverride[] | undefined = setting.alphaOverrides
 		?.map((override) => ({
 			...override,
-			image: override.image && DefinePngResource(override.image).resultName,
+			image: override.image && DefinePngResource(override.image, 'asset').resultName,
 		}));
 	return {
-		image: setting.image && DefinePngResource(setting.image).resultName,
-		alphaImage: setting.alphaImage && DefinePngResource(setting.alphaImage).resultName,
+		image: setting.image && DefinePngResource(setting.image, 'asset').resultName,
+		alphaImage: setting.alphaImage && DefinePngResource(setting.alphaImage, 'asset').resultName,
 		overrides,
 		alphaOverrides,
 	};

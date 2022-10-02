@@ -5,10 +5,18 @@ import { join, basename } from 'path';
 import { AssetSourcePath } from './context';
 import { WatchFile } from './watch';
 
-export const JPG_MAX_SIZE = 4 * 1024 * 1024; // 4MiB
-export const JPG_MAX_SIZE_TEXT = '4MiB';
-export const PNG_MAX_SIZE = 1 * 1024 * 1024; // 1MiB
-export const PNG_MAX_SIZE_TEXT = '1MiB';
+export type ImageCategory = 'asset' | 'background';
+
+const MAX_SIZES: Record<ImageCategory, { bytes: number; text: string; }> = {
+	asset: {
+		bytes: 1 * 1024 * 1024,
+		text: '1MiB',
+	},
+	background: {
+		bytes: 4 * 1024 * 1024,
+		text: '4MiB',
+	},
+};
 
 const logger = GetLogger('Resources');
 
@@ -100,22 +108,25 @@ export function DefineResourceInline(name: string, value: string | Buffer): Reso
 	return resource;
 }
 
-export function DefinePngResource(name: string): Resource {
+function CheckMaxSize(resource: Resource, name: string, category: ImageCategory) {
+	const maxSize = MAX_SIZES[category];
+	if (resource.size > maxSize.bytes) {
+		logger.warning(`Image '${name}' is larger than maximum allowed size of ${maxSize.text}.`);
+	}
+}
+
+export function DefinePngResource(name: string, category: ImageCategory): Resource {
 	const resource = DefineResource(name);
 
-	if (resource.size > PNG_MAX_SIZE) {
-		logger.warning(`Image '${name}' is larger than maximum allowed size of ${PNG_MAX_SIZE_TEXT}.`);
-	}
+	CheckMaxSize(resource, name, category);
 
 	return resource;
 }
 
-export function DefineJpgResource(name: string): Resource {
+export function DefineJpgResource(name: string, category: ImageCategory): Resource {
 	const resource = DefineResource(name);
 
-	if (resource.size > JPG_MAX_SIZE) {
-		logger.warning(`Image '${name}' is larger than maximum allowed size of ${JPG_MAX_SIZE_TEXT}.`);
-	}
+	CheckMaxSize(resource, name, category);
 
 	return resource;
 }
