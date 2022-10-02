@@ -5,16 +5,23 @@ import { join, basename } from 'path';
 import { AssetSourcePath } from './context';
 import { WatchFile } from './watch';
 
+export const JPG_MAX_SIZE = 4 * 1024 * 1024; // 4MiB
+export const JPG_MAX_SIZE_TEXT = '4MiB';
+export const PNG_MAX_SIZE = 1 * 1024 * 1024; // 1MiB
+export const PNG_MAX_SIZE_TEXT = '1MiB';
+
 const logger = GetLogger('Resources');
 
 const resources: Map<string, Resource> = new Map();
 
 export abstract class Resource {
 	readonly resultName: string;
+	readonly size: number;
 	readonly hash: string;
 
-	constructor(resultName: string, hash: string) {
+	constructor(resultName: string, size: number, hash: string) {
 		this.resultName = resultName;
+		this.size = size;
 		this.hash = hash;
 	}
 
@@ -24,8 +31,8 @@ export abstract class Resource {
 class FileResource extends Resource {
 	readonly sourcePath: string;
 
-	constructor(resultName: string, hash: string, sourcePath: string) {
-		super(resultName, hash);
+	constructor(resultName: string, size: number, hash: string, sourcePath: string) {
+		super(resultName, size, hash);
 		this.sourcePath = sourcePath;
 	}
 
@@ -38,7 +45,7 @@ class InlineResource extends Resource {
 	readonly value: Buffer;
 
 	constructor(resultName: string, hash: string, value: Buffer) {
-		super(resultName, hash);
+		super(resultName, value.byteLength, hash);
 		this.value = value;
 	}
 
@@ -55,6 +62,10 @@ export function GetResourceFileHash(path: string): string {
 	return createHash('sha256').update(readFileSync(path)).digest('base64url');
 }
 
+export function GetResourceFileSize(path: string): number {
+	return statSync(path).size;
+}
+
 export function DefineResource(path: string): Resource {
 	const sourcePath = join(AssetSourcePath, path);
 	if (!statSync(sourcePath).isFile()) {
@@ -64,9 +75,10 @@ export function DefineResource(path: string): Resource {
 	WatchFile(sourcePath);
 
 	const hash = GetResourceFileHash(sourcePath);
+	const size = GetResourceFileSize(sourcePath);
 	const resultName = basename(sourcePath).replace(/(?=(?:\.[^.]*)?$)/, `_${hash}`);
 
-	const resource = new FileResource(resultName, hash, sourcePath);
+	const resource = new FileResource(resultName, size, hash, sourcePath);
 	resources.set(resultName, resource);
 
 	logger.debug(`Registered resource ${resultName}`);
@@ -89,11 +101,23 @@ export function DefineResourceInline(name: string, value: string | Buffer): Reso
 }
 
 export function DefinePngResource(name: string): Resource {
-	return DefineResource(name);
+	const resource = DefineResource(name);
+
+	if (resource.size > PNG_MAX_SIZE) {
+		logger.warning(`Image '${name}' is larger than maximum allowed size of ${PNG_MAX_SIZE_TEXT}.`);
+	}
+
+	return resource;
 }
 
 export function DefineJpgResource(name: string): Resource {
-	return DefineResource(name);
+	const resource = DefineResource(name);
+
+	if (resource.size > JPG_MAX_SIZE) {
+		logger.warning(`Image '${name}' is larger than maximum allowed size of ${JPG_MAX_SIZE_TEXT}.`);
+	}
+
+	return resource;
 }
 
 export function ClearAllResources(): void {
