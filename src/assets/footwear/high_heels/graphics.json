@@ -85,6 +85,42 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"priority": "ABOVE_BODY",
+			"points": "body",
+			"pointType": [
+				"body"
+			],
+			"mirror": 0,
+			"colorizationIndex": 0,
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "heels_straps.png",
+						"condition": [
+							[
+								{
+									"module": "heelType",
+									"operator": "=",
+									"value": "strap"
+								},
+								{
+									"bone": "backView",
+									"operator": "=",
+									"value": 0
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "front strap"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"pointType": [
@@ -125,6 +161,42 @@
 				]
 			},
 			"name": "back"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "BELOW_BODY",
+			"points": "body",
+			"pointType": [
+				"body"
+			],
+			"mirror": 0,
+			"colorizationIndex": 0,
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "heels_back_straps.png",
+						"condition": [
+							[
+								{
+									"module": "heelType",
+									"operator": "=",
+									"value": "strap"
+								},
+								{
+									"bone": "backView",
+									"operator": ">",
+									"value": 0
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "front strap"
 		},
 		{
 			"x": 0,

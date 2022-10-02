@@ -49,6 +49,22 @@ DefineAsset({
 				},
 			],
 		},
+		heelType: {
+			type: 'typed',
+			name: 'Heel Type',
+			interactionType: ItemInteractionType.ADD_REMOVE,
+			variants: [
+				{
+					id: 'noStrap',
+					name: 'No Strap',
+					default: true,
+				},
+				{
+					id: 'strap',
+					name: 'With Strap',
+				},
+			],
+		},
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
