@@ -35,7 +35,7 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "bra breasts behind",
-			"priority": "BODY",
+			"priority": "BELOW_BREASTS",
 			"points": "bra",
 			"mirror": 0,
 			"colorizationIndex": 0,

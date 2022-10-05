@@ -1,3 +1,5 @@
+import { ItemInteractionType } from 'pandora-common';
+
 DefineAsset({
 	name: 'Panties (style 1)',
 	graphics: 'graphics.json',
@@ -7,6 +9,32 @@ DefineAsset({
 			default: '#FA5F55',
 		},
 	],
+	modules: {
+		pantiesState: {
+			type: 'typed',
+			name: 'Panties State',
+			interactionType: ItemInteractionType.ADD_REMOVE,
+			variants: [
+				{
+					id: 'normal',
+					name: 'Normal',
+					default: true,
+				},
+				{
+					id: 'aside',
+					name: 'Pulled Aside',
+				},
+				{
+					id: 'wedged',
+					name: 'Wedged Up',
+				},
+				{
+					id: 'fully',
+					name: 'Pulled Down Fully',
+				},
+			],
+		},
+	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia', 'Jomshir'],

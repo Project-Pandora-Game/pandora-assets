@@ -15,7 +15,44 @@
 			"colorizationIndex": 0,
 			"image": {
 				"image": "style1.png",
-				"overrides": [],
+				"overrides": [
+					{
+						"image": "style1_aside.png",
+						"condition": [
+							[
+								{
+									"module": "pantiesState",
+									"operator": "=",
+									"value": "aside"
+								}
+							]
+						]
+					},
+					{
+						"image": "style1_floor.png",
+						"condition": [
+							[
+								{
+									"module": "pantiesState",
+									"operator": "=",
+									"value": "fully"
+								}
+							]
+						]
+					},
+					{
+						"image": "style1_wedged.png",
+						"condition": [
+							[
+								{
+									"module": "pantiesState",
+									"operator": "=",
+									"value": "wedged"
+								}
+							]
+						]
+					}
+				],
 				"alphaImage": "alpha.png"
 			},
 			"name": "front"
@@ -34,7 +71,32 @@
 			"colorizationIndex": 0,
 			"image": {
 				"image": "style1_back.png",
-				"overrides": [],
+				"overrides": [
+					{
+						"image": "style1_floor.png",
+						"condition": [
+							[
+								{
+									"module": "pantiesState",
+									"operator": "=",
+									"value": "fully"
+								}
+							]
+						]
+					},
+					{
+						"image": "style1_wedged.png",
+						"condition": [
+							[
+								{
+									"module": "pantiesState",
+									"operator": "=",
+									"value": "wedged"
+								}
+							]
+						]
+					}
+				],
 				"alphaImage": "alpha.png"
 			},
 			"name": "back"
