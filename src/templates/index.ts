@@ -10,6 +10,8 @@ const templateList: string[] = [
 	'body',
 	'breasts',
 	'shirt',
+	'skirt_short',
+	'skirt_long',
 ];
 
 const IsPointTemplate = ZodMatcher(PointTemplateSchema);

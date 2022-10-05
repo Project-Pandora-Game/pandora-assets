@@ -354,7 +354,7 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 		// inside
 		// dungeon
 		// day
-		// space: medium
+		// space: large
 		id: 'sandy_dungeon',
 		name: 'Sandy dungeon',
 		image: 'sandy_dungeon.jpg',
