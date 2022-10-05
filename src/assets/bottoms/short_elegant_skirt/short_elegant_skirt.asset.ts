@@ -7,6 +7,23 @@ DefineAsset({
 			default: '#222222',
 		},
 	],
+	modules: {
+		skirtState: {
+			type: 'typed',
+			name: 'Skirt State',
+			variants: [
+				{
+					id: 'normal',
+					name: 'Normal',
+					default: true,
+				},
+				{
+					id: 'up',
+					name: 'Pulled Up',
+				},
+			],
+		},
+	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],
