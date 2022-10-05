@@ -1,4 +1,3 @@
-
 DefineAsset({
 	name: 'Frilly Bracelets',
 	graphics: 'graphics.json',

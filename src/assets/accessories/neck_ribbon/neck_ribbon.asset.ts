@@ -1,4 +1,3 @@
-
 DefineAsset({
 	name: 'Neck Ribbon',
 	graphics: 'graphics.json',

@@ -10,7 +10,7 @@ DefineAsset({
 		},
 	],
 	modules: {
-				collarType: {
+		collarType: {
 			type: 'typed',
 			name: 'Collar Type',
 			interactionType: ItemInteractionType.ADD_REMOVE,

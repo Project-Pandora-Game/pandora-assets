@@ -1,4 +1,3 @@
-
 DefineAsset({
 	name: 'Maid Dress',
 	graphics: 'graphics.json',
