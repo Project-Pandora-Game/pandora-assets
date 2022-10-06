@@ -11,10 +11,40 @@
 			"mirror": 0,
 			"colorizationIndex": 0,
 			"image": {
+				"image": "neck_ribbon_l2.png",
+				"overrides": []
+			},
+			"name": "front frills front view"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "ABOVE_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationIndex": 1,
+			"image": {
 				"image": "neck_ribbon.png",
 				"overrides": []
 			},
 			"name": "front"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "ABOVE_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationIndex": 0,
+			"image": {
+				"image": "neck_ribbon_l2.png",
+				"overrides": []
+			},
+			"name": "front frills"
 		}
 	]
 }

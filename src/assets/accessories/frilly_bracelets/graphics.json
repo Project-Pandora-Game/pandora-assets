@@ -13,7 +13,7 @@
 				"arm"
 			],
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationIndex": 1,
 			"image": {
 				"image": "frilly_bracelets.png",
 				"overrides": [
@@ -38,7 +38,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"priority": "BELOW_ARMS",
+			"priority": "ABOVE_ARMS",
 			"points": "body",
 			"pointType": [
 				"bodyarm",
@@ -46,6 +46,38 @@
 			],
 			"mirror": 0,
 			"colorizationIndex": 0,
+			"image": {
+				"image": "frilly_bracelets_l2.png",
+				"overrides": [
+					{
+						"image": "frilly_bracelets_up_l2.png",
+						"condition": [
+							[
+								{
+									"module": "braceState",
+									"operator": "=",
+									"value": "up"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "front frills"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "BELOW_ARMS",
+			"points": "body",
+			"pointType": [
+				"bodyarm",
+				"arm"
+			],
+			"mirror": 0,
+			"colorizationIndex": 1,
 			"image": {
 				"image": "frilly_bracelets.png",
 				"overrides": [
@@ -64,6 +96,38 @@
 				]
 			},
 			"name": "back"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "BELOW_ARMS",
+			"points": "body",
+			"pointType": [
+				"bodyarm",
+				"arm"
+			],
+			"mirror": 0,
+			"colorizationIndex": 0,
+			"image": {
+				"image": "frilly_bracelets_l2.png",
+				"overrides": [
+					{
+						"image": "frilly_bracelets_up_l2.png",
+						"condition": [
+							[
+								{
+									"module": "braceState",
+									"operator": "=",
+									"value": "up"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "back frills"
 		}
 	]
 }

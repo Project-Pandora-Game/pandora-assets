@@ -6,6 +6,10 @@ DefineAsset({
 			name: 'Bracelets',
 			default: '#FFFFFF',
 		},
+		{
+			name: 'Frills',
+			default: '#333333',
+		},
 	],
 	modules: {
 		braceState: {

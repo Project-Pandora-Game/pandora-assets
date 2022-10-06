@@ -6,6 +6,10 @@ DefineAsset({
 			name: 'Ribbon',
 			default: '#FFFFFF',
 		},
+		{
+			name: 'Frills',
+			default: '#333333',
+		},
 	],
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

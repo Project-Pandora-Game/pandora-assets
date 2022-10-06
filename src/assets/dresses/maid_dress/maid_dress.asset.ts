@@ -7,11 +7,19 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 		{
+			name: 'Frills',
+			default: '#333333',
+		},
+		{
 			name: 'Buttons',
 			default: '#333333',
 		},
 		{
 			name: 'Ribbons',
+			default: '#333333',
+		},
+		{
+			name: 'Ribbon Lace',
 			default: '#FFFFFF',
 		},
 	],

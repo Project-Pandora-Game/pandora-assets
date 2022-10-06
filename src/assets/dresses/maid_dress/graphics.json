@@ -9,7 +9,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "shirt",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationIndex": 1,
 			"image": {
 				"image": "maid_f_large.png",
 				"overrides": []
@@ -45,9 +45,47 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "ABOVE_BODY",
-			"points": "skirt_short",
+			"points": "shirt",
 			"mirror": 0,
 			"colorizationIndex": 0,
+			"image": {
+				"image": "maid_f_large_l2.png",
+				"overrides": []
+			},
+			"name": "front frills",
+			"pointType": [
+				"body",
+				"bodyarm"
+			],
+			"scaling": {
+				"scaleBone": "breasts",
+				"stops": [
+					[
+						-150,
+						{
+							"image": "maid_f_small_l2.png",
+							"overrides": []
+						}
+					],
+					[
+						180,
+						{
+							"image": "maid_f_extreme_l2.png",
+							"overrides": []
+						}
+					]
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "ABOVE_BODY",
+			"points": "skirt_short",
+			"mirror": 0,
+			"colorizationIndex": 1,
 			"image": {
 				"image": "maid_f_skirt.png",
 				"overrides": [
@@ -81,9 +119,45 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "ABOVE_BODY",
+			"points": "skirt_short",
+			"mirror": 0,
+			"colorizationIndex": 0,
+			"image": {
+				"image": "maid_f_skirt_l2.png",
+				"overrides": [
+					{
+						"image": "maid_f_skirt_up_l2.png",
+						"condition": [
+							[
+								{
+									"module": "skirtState",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"bone": "backView",
+									"operator": "=",
+									"value": 0
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "front skirt frills",
+			"pointType": [
+				"body"
+			]
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "ABOVE_BODY",
 			"points": "shirt",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationIndex": 2,
 			"image": {
 				"image": "maid_f_buttons.png",
 				"overrides": [
@@ -115,7 +189,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationIndex": 1,
 			"image": {
 				"image": "maid_b.png",
 				"overrides": []
@@ -132,9 +206,28 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BELOW_BODY",
-			"points": "skirt_short",
+			"points": "body",
 			"mirror": 0,
 			"colorizationIndex": 0,
+			"image": {
+				"image": "maid_b_l2.png",
+				"overrides": []
+			},
+			"name": "back frills",
+			"pointType": [
+				"body",
+				"bodyarm"
+			]
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "BELOW_BODY",
+			"points": "skirt_short",
+			"mirror": 0,
+			"colorizationIndex": 1,
 			"image": {
 				"image": "maid_b_skirt.png",
 				"overrides": [
@@ -168,9 +261,73 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BELOW_BODY",
+			"points": "skirt_short",
+			"mirror": 0,
+			"colorizationIndex": 0,
+			"image": {
+				"image": "maid_b_skirt_l2.png",
+				"overrides": [
+					{
+						"image": "maid_b_skirt_up_l2.png",
+						"condition": [
+							[
+								{
+									"module": "skirtState",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"bone": "backView",
+									"operator": ">",
+									"value": 0
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "back skirt frills",
+			"pointType": [
+				"body"
+			]
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 2,
+			"colorizationIndex": 3,
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "maid_b_ribbon_l2.png",
+						"condition": [
+							[
+								{
+									"module": "ribbons",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "ribbon back frills front cover"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationIndex": 4,
 			"image": {
 				"image": "",
 				"overrides": [
@@ -195,10 +352,38 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationIndex": 3,
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "maid_b_ribbon_l2.png",
+						"condition": [
+							[
+								{
+									"module": "ribbons",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "ribbon back frills"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"priority": "BELOW_BREASTS",
 			"points": "shirt",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationIndex": 1,
 			"image": {
 				"image": "maid_f_large.png",
 				"overrides": []
@@ -222,6 +407,44 @@
 						180,
 						{
 							"image": "maid_f_extreme.png",
+							"overrides": []
+						}
+					]
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "BELOW_BREASTS",
+			"points": "shirt",
+			"mirror": 0,
+			"colorizationIndex": 0,
+			"image": {
+				"image": "maid_f_large_l2.png",
+				"overrides": []
+			},
+			"name": "back 2 frills",
+			"pointType": [
+				"body",
+				"bodyarm"
+			],
+			"scaling": {
+				"scaleBone": "breasts",
+				"stops": [
+					[
+						-150,
+						{
+							"image": "maid_f_small_l2.png",
+							"overrides": []
+						}
+					],
+					[
+						180,
+						{
+							"image": "maid_f_extreme_l2.png",
 							"overrides": []
 						}
 					]
