@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Lace Crown',
+	name: 'Lace Headband',
 	graphics: 'graphics.json',
 	colorization: [
 		{
@@ -7,6 +7,23 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	],
+	modules: {
+		headbandSize: {
+			type: 'typed',
+			name: 'Headband Size',
+			variants: [
+				{
+					id: 'normal',
+					name: 'Normal',
+					default: true,
+				},
+				{
+					id: 'small',
+					name: 'Smaller',
+				},
+			],
+		},
+	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],
@@ -14,10 +31,10 @@ DefineAsset({
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
-				source: 'https://www.flickr.com/photos/calliope/3389162339/',
-				copyrightHolder: 'Liz West',
+				source: 'https://www.flickr.com/photos/koung/205286646/',
+				copyrightHolder: 'Ryan Ho',
 				editedBy: 'ClaudiaMia',
-				license: 'CC BY',
+				license: 'CC BY-SA',
 			},
 		],
 	},
