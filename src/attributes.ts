@@ -1,3 +1,5 @@
+/* eslint-disable semi-style */
+
 export type AttributeNames =
 	// Bodypart attributes
 	| 'Body' // The body itself

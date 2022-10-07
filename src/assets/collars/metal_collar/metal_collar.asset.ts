@@ -22,7 +22,7 @@ DefineAsset({
 		},
 	],
 	attributes: [
-		'Collar'
+		'Collar',
 	],
 	modules: {
 		collarConfig: {
