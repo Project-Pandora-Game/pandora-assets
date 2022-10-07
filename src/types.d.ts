@@ -10,9 +10,13 @@ type AllBones = import('./bones').AllBones;
 // Globals available to all assets
 declare function DefineAsset(def: IntermediateAssetDefinition): void;
 
-interface IntermediateAssetDefinition extends Pick<import('pandora-common').AssetDefinition<AllBones>,
+interface IntermediateAssetDefinition extends Pick<import('pandora-common').AssetDefinition<{
+	bones: AllBones;
+	bodyparts: import('./bodyparts').BodypartName;
+}>,
 	| 'name'
 	| 'actionMessages'
+	| 'bodypart'
 	| 'colorization'
 	| 'poseLimits'
 	| 'effects'
@@ -20,7 +24,6 @@ interface IntermediateAssetDefinition extends Pick<import('pandora-common').Asse
 	| 'modules'
 > {
 	id?: string;
-	bodypart?: import('./bodyparts').BodypartName;
 	graphics?: string;
 	/** Info about who owns the asset(s) */
 	ownership: {
