@@ -21,6 +21,9 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	],
+	attributes: [
+		'Collar'
+	],
 	modules: {
 		collarConfig: {
 			type: 'typed',
@@ -34,14 +37,23 @@ DefineAsset({
 				{
 					id: 'ring',
 					name: 'Collar + Ring',
+					attributes: [
+						'Collar_front_ring',
+					],
 				},
 				{
 					id: 'left',
 					name: 'Chain Leash Left',
+					attributes: [
+						'Collar_front_ring',
+					],
 				},
 				{
 					id: 'right',
 					name: 'Chain Leash Right',
+					attributes: [
+						'Collar_front_ring',
+					],
 				},
 				{
 					id: 'fixed',
@@ -54,6 +66,9 @@ DefineAsset({
 					effects: {
 						blockRoomMovement: true,
 					},
+					attributes: [
+						'Collar_front_ring',
+					],
 				},
 				{
 					id: 'fixedShort',
@@ -67,6 +82,9 @@ DefineAsset({
 					effects: {
 						blockRoomMovement: true,
 					},
+					attributes: [
+						'Collar_front_ring',
+					],
 				},
 			],
 		},

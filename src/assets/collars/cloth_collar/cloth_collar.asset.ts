@@ -27,6 +27,9 @@ DefineAsset({
 			],
 		},
 	},
+	attributes: [
+		'Collar'
+	],
 	actionMessages: {
 		itemAdd: 'SOURCE_CHARACTER fitted and closed a Cloth Collar around TARGET_CHARACTER_DYNAMIC neck.',
 		itemRemove: 'SOURCE_CHARACTER opened and then removed the Cloth Collar from TARGET_CHARACTER_DYNAMIC neck.',
