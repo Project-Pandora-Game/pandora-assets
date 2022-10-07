@@ -7,6 +7,25 @@ import { join } from 'path';
 import { Contributors, CurrentCommitter, GitDataAvailable } from './git';
 import { IS_PRODUCTION_BUILD } from '../constants';
 import * as fs from 'fs';
+import { pick } from 'lodash';
+
+const DEFINITION_FALLTHOUGH_PROPERTIES = [
+	// Properties
+	'poseLimits',
+	'effects',
+	'attributes',
+	'requirements',
+	'hides',
+	'allowSelfEquip',
+	// Asset definition
+	'name',
+	'actionMessages',
+	'bodypart',
+	'colorization',
+	'modules',
+] as const;
+
+export type AssetDefinitionFallthoughProperties = (typeof DEFINITION_FALLTHOUGH_PROPERTIES)[number] & string;
 
 export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 	const id: AssetId = `a/${def.id ?? DefaultId()}` as const;
@@ -94,15 +113,8 @@ export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 	}
 
 	const asset: AssetDefinition = {
+		...pick(def, DEFINITION_FALLTHOUGH_PROPERTIES),
 		id,
-		name: def.name,
-		actionMessages: def.actionMessages,
-		bodypart: def.bodypart,
-		colorization: def.colorization,
-		poseLimits: def.poseLimits,
-		effects: def.effects,
-		allowSelfEquip: def.allowSelfEquip,
-		modules: def.modules,
 		hasGraphics: def.graphics !== undefined,
 	};
 

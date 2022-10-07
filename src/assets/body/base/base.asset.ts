@@ -1,6 +1,7 @@
 DefineAsset({
 	name: 'Base body',
 	bodypart: 'base',
+	attributes: ['Body'],
 	graphics: 'graphics.json',
 	colorization: [
 		{

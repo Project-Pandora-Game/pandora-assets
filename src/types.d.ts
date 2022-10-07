@@ -13,16 +13,8 @@ declare function DefineAsset(def: IntermediateAssetDefinition): void;
 interface IntermediateAssetDefinition extends Pick<import('pandora-common').AssetDefinition<{
 	bones: AllBones;
 	bodyparts: import('./bodyparts').BodypartName;
-}>,
-	| 'name'
-	| 'actionMessages'
-	| 'bodypart'
-	| 'colorization'
-	| 'poseLimits'
-	| 'effects'
-	| 'allowSelfEquip'
-	| 'modules'
-> {
+	attributes: import('./attributes').AttributeNames;
+}>, import('./tools/definition').AssetDefinitionFallthoughProperties> {
 	id?: string;
 	graphics?: string;
 	/** Info about who owns the asset(s) */
