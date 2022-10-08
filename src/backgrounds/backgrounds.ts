@@ -912,7 +912,7 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 		},
 	},
 	{
-		// outsisw
+		// outside
 		// entrance
 		// urban
 		// home
@@ -931,6 +931,30 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 					source: 'https://www.flickr.com/photos/okchomeseller/52380414991/',
 					copyrightHolder: 'Bill Wilson',
 					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		// inside
+		// cell
+		// padded
+		// asylum
+		// space: medium
+		id: 'padded_cell',
+		name: 'Padded Cell',
+		image: 'padded_cell.jpg',
+		size: [2750, 1947],
+		maxY: 420,
+		scaling: 1.3,
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'Self-Made',
+					copyrightHolder: 'ClaudiaMia',
+					editedBy: 'ClaudiaMia',
+					license: 'Pandora-Use-Only',
 				},
 			],
 		},
