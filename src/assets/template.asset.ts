@@ -22,7 +22,7 @@ DefineAsset({
 		responsibleContributor: 'gitName <gitEmail@example.com>',
 		// Who is shown in the credits for this asset and at the same time the people to ask when this asset should be changed
 		// Note: It does not have to be the gitName, but it may make it easier to get in contact
-		credits: ['MyNameInTheCredits'],
+		credits: ['CHANGE_ME'],
 		// Write your preference on how you want to allow others to modify this asset.
 		// See more details in CONTRIBUTING.md
 		modificationPolicy: 'Fixes and New uses, otherwise ask',
