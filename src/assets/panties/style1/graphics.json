@@ -53,7 +53,21 @@
 						]
 					}
 				],
-				"alphaImage": "alpha.png"
+				"alphaImage": "alpha.png",
+				"alphaOverrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "pantiesState",
+									"operator": "=",
+									"value": "fully"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "front"
 		},
@@ -97,7 +111,21 @@
 						]
 					}
 				],
-				"alphaImage": "alpha.png"
+				"alphaImage": "alpha.png",
+				"alphaOverrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "pantiesState",
+									"operator": "=",
+									"value": "fully"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "back"
 		}
