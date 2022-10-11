@@ -12,7 +12,13 @@ DefineAsset({
 		},
 	],
 	effects: {
-		muffleMouth: 4,
+		lipsTouch: 7,
+		jawMove: 10,
+		tongueRoof: 6,
+		mouthBreath: 3,
+		throatBreath: 2,
+		coherency: 4,
+		stimulus: 2,
 	},
 	actionMessages: {
 		itemAdd: 'SOURCE_CHARACTER strapped a Ball Gag tightly over TARGET_CHARACTER_DYNAMIC lips.',
