@@ -9,10 +9,6 @@
 			"name": "base",
 			"priority": "ABOVE_BODY",
 			"points": "shirt",
-			"pointType": [
-				"body",
-				"bodyarm"
-			],
 			"mirror": 0,
 			"colorizationIndex": 0,
 			"image": {
@@ -41,10 +37,6 @@
 			"name": "arms",
 			"priority": "ABOVE_ARMS",
 			"points": "shirt",
-			"pointType": [
-				"bodyarm",
-				"arm"
-			],
 			"mirror": 0,
 			"colorizationIndex": 0,
 			"image": {
@@ -91,11 +83,7 @@
 					}
 				]
 			},
-			"name": "back",
-			"pointType": [
-				"body",
-				"bodyarm"
-			]
+			"name": "back"
 		},
 		{
 			"x": 0,
@@ -123,11 +111,7 @@
 					}
 				]
 			},
-			"name": "back_arms",
-			"pointType": [
-				"bodyarm",
-				"arm"
-			]
+			"name": "back_arms"
 		},
 		{
 			"x": 0,

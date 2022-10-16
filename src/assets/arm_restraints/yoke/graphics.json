@@ -57,10 +57,7 @@
 				"image": "yoke_metal_cuffs.png",
 				"overrides": []
 			},
-			"name": "cuffs front",
-			"pointType": [
-				"arm"
-			]
+			"name": "cuffs front"
 		},
 		{
 			"x": 0,
@@ -258,10 +255,7 @@
 				"image": "yoke_metal_cuffs.png",
 				"overrides": []
 			},
-			"name": "cuffs back",
-			"pointType": [
-				"arm"
-			]
+			"name": "cuffs back"
 		}
 	]
 }

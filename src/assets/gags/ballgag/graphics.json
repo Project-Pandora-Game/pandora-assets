@@ -14,9 +14,6 @@
 				"overrides": []
 			},
 			"name": "rings",
-			"pointType": [
-				"body"
-			]
 		},
 		{
 			"x": 0,
@@ -31,9 +28,6 @@
 				"image": "ballgag_straps.png",
 				"overrides": []
 			},
-			"pointType": [
-				"body"
-			],
 			"name": "straps"
 		},
 		{
@@ -49,10 +43,7 @@
 				"image": "ballgag_ball.png",
 				"overrides": []
 			},
-			"name": "ball",
-			"pointType": [
-				"body"
-			]
+			"name": "ball"
 		},
 		{
 			"x": 0,
@@ -67,10 +58,7 @@
 				"image": "ballgag_straps_back.png",
 				"overrides": []
 			},
-			"name": "straps back",
-			"pointType": [
-				"body"
-			]
+			"name": "straps back"
 		},
 		{
 			"x": 0,
@@ -84,10 +72,7 @@
 				"image": "ballgag_buckle_back.png",
 				"overrides": []
 			},
-			"name": "buckle",
-			"pointType": [
-				"body"
-			]
+			"name": "buckle"
 		}
 	]
 }

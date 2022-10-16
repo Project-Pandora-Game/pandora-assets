@@ -65,10 +65,6 @@
 			"name": "bra base back view",
 			"priority": "BELOW_BODY",
 			"points": "body",
-			"pointType": [
-				"body",
-				"bodyarm"
-			],
 			"mirror": 0,
 			"colorizationIndex": 0,
 			"image": {

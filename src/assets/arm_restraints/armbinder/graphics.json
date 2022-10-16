@@ -171,12 +171,7 @@
 				"image": "armbinder_shoulder_straps.png",
 				"overrides": []
 			},
-			"name": "shoulder straps",
-			"pointType": [
-				"body",
-				"bodyarm",
-				"arms"
-			]
+			"name": "shoulder straps"
 		},
 		{
 			"x": 0,
@@ -236,12 +231,7 @@
 				"image": "armbinder_straps_front.png",
 				"overrides": []
 			},
-			"name": "shoulder straps front",
-			"pointType": [
-				"body",
-				"arm",
-				"bodyarm"
-			]
+			"name": "shoulder straps front"
 		},
 		{
 			"x": 0,

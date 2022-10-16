@@ -15,10 +15,6 @@
 				"overrides": []
 			},
 			"name": "front",
-			"pointType": [
-				"body",
-				"bodyarm"
-			],
 			"scaling": {
 				"scaleBone": "breasts",
 				"stops": [
@@ -53,10 +49,6 @@
 				"overrides": []
 			},
 			"name": "front frills",
-			"pointType": [
-				"body",
-				"bodyarm"
-			],
 			"scaling": {
 				"scaleBone": "breasts",
 				"stops": [
@@ -108,10 +100,7 @@
 					}
 				]
 			},
-			"name": "front skirt",
-			"pointType": [
-				"body"
-			]
+			"name": "front skirt"
 		},
 		{
 			"x": 0,
@@ -144,10 +133,7 @@
 					}
 				]
 			},
-			"name": "front skirt frills",
-			"pointType": [
-				"body"
-			]
+			"name": "front skirt frills"
 		},
 		{
 			"x": 0,
@@ -175,11 +161,7 @@
 					}
 				]
 			},
-			"name": "buttons",
-			"pointType": [
-				"body",
-				"bodyarm"
-			]
+			"name": "buttons"
 		},
 		{
 			"x": 0,
@@ -194,11 +176,7 @@
 				"image": "maid_b.png",
 				"overrides": []
 			},
-			"name": "back",
-			"pointType": [
-				"body",
-				"bodyarm"
-			]
+			"name": "back"
 		},
 		{
 			"x": 0,
@@ -213,11 +191,7 @@
 				"image": "maid_b_l2.png",
 				"overrides": []
 			},
-			"name": "back frills",
-			"pointType": [
-				"body",
-				"bodyarm"
-			]
+			"name": "back frills"
 		},
 		{
 			"x": 0,
@@ -250,10 +224,7 @@
 					}
 				]
 			},
-			"name": "back skirt",
-			"pointType": [
-				"body"
-			]
+			"name": "back skirt"
 		},
 		{
 			"x": 0,
@@ -286,10 +257,7 @@
 					}
 				]
 			},
-			"name": "back skirt frills",
-			"pointType": [
-				"body"
-			]
+			"name": "back skirt frills"
 		},
 		{
 			"x": 0,
@@ -389,10 +357,6 @@
 				"overrides": []
 			},
 			"name": "back 2",
-			"pointType": [
-				"body",
-				"bodyarm"
-			],
 			"scaling": {
 				"scaleBone": "breasts",
 				"stops": [
@@ -427,10 +391,6 @@
 				"overrides": []
 			},
 			"name": "back 2 frills",
-			"pointType": [
-				"body",
-				"bodyarm"
-			],
 			"scaling": {
 				"scaleBone": "breasts",
 				"stops": [

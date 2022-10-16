@@ -55,10 +55,7 @@
 					}
 				]
 			},
-			"name": "large ring",
-			"pointType": [
-				"body"
-			]
+			"name": "large ring"
 		},
 		{
 			"x": 0,
@@ -137,10 +134,7 @@
 				"image": "leatheranklecuffs_cuff.png",
 				"overrides": []
 			},
-			"name": "cuffs",
-			"pointType": [
-				"body"
-			]
+			"name": "cuffs"
 		},
 		{
 			"x": 0,
@@ -155,10 +149,7 @@
 				"image": "leatheranklecuffs_belt.png",
 				"overrides": []
 			},
-			"name": "belts",
-			"pointType": [
-				"body"
-			]
+			"name": "belts"
 		},
 		{
 			"x": 0,
@@ -173,10 +164,7 @@
 				"image": "leatheranklecuffs_rings.png",
 				"overrides": []
 			},
-			"name": "rings",
-			"pointType": [
-				"body"
-			]
+			"name": "rings"
 		},
 		{
 			"x": 0,
@@ -191,10 +179,7 @@
 				"image": "leatheranklecuffs_cuff.png",
 				"overrides": []
 			},
-			"name": "cuff back",
-			"pointType": [
-				"body"
-			]
+			"name": "cuff back"
 		},
 		{
 			"x": 0,
@@ -209,10 +194,7 @@
 				"image": "leatheranklecuffs_belt.png",
 				"overrides": []
 			},
-			"name": "belt back",
-			"pointType": [
-				"body"
-			]
+			"name": "belt back"
 		},
 		{
 			"x": 0,
@@ -227,10 +209,7 @@
 				"image": "leatheranklecuffs_rings.png",
 				"overrides": []
 			},
-			"name": "ring back",
-			"pointType": [
-				"body"
-			]
+			"name": "ring back"
 		}
 	]
 }
