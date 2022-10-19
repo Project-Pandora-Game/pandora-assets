@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: '16'
       - run: yarn install --frozen-lockfile
-      - run: yarn build --prod
+      - run: yarn run build --prod
 
   lint:
     name: Lint
@@ -38,7 +38,7 @@ jobs:
         with:
           node-version: '16'
       - run: yarn install --frozen-lockfile
-      - run: yarn lint
+      - run: yarn run lint
 
   test:
     name: Test
@@ -52,5 +52,5 @@ jobs:
         with:
           node-version: '16'
       - run: yarn install --frozen-lockfile
-      - run: yarn type-check:test
-      - run: yarn test
+      - run: yarn run type-check:test
+      - run: yarn run test
