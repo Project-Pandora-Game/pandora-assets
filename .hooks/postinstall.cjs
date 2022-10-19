@@ -9,20 +9,20 @@ postinstall();
 
 async function postinstall() {
 	const isCI = process.env.CI === 'true';
-	await copyDotenv();
+	await copyDotenv('.');
 	if (!isCI) {
 		configureGitHooks();
 	}
 }
 
-async function copyDotenv() {
+async function copyDotenv(basePath) {
 	try {
 		await copyFile(
-			resolve(__dirname, '..', '.env.template'),
-			resolve(__dirname, '..', '.env'),
+			resolve(basePath, '.env.template'),
+			resolve(basePath, '.env'),
 			constants.COPYFILE_EXCL,
 		);
-		console.log('No .env file found - template copied');
+		console.log(`${basePath}: No .env file found - template copied`);
 	} catch (error) {
 		if (error.code !== 'EEXIST' && error.code !== 'ENOENT') {
 			throw error;
@@ -31,7 +31,7 @@ async function copyDotenv() {
 }
 
 function configureGitHooks() {
-	const requiredPath = resolve(__dirname, '..', '.hooks');
+	const requiredPath = './.hooks';
 	const { stdout } = spawnSync('git', ['config', 'core.hooksPath']);
 	const hooksPath = stdout.toString().trim();
 	if (hooksPath === requiredPath)

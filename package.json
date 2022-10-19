@@ -5,10 +5,12 @@
 	"repository": "git@github.com:Project-Pandora-Game/tooling-template.git",
 	"license": "MIT",
 	"scripts": {
+		"postinstall": "node .hooks/postinstall.cjs",
+		"ci": "yarn run build --prod && yarn run lint && yarn run type-check:test && yarn run test",
 		"prebuild": "rimraf dist",
 		"build": "tsc -p ./tsconfig.src.json && node --enable-source-maps -r dotenv/config ./dist/index",
 		"build:swc": "swc src -d dist && node --enable-source-maps -r dotenv/config ./dist/index",
-		"predev": "rimraf dist out",
+		"predev": "rimraf dist",
 		"dev": "tsc-watch -p ./tsconfig.src.json --onSuccess \"node --enable-source-maps -r dotenv/config ./dist/index --watch\"",
 		"lint": "eslint --max-warnings 0 --report-unused-disable-directives .",
 		"lint:fix": "eslint --fix .",
@@ -18,9 +20,7 @@
 		"test": "jest",
 		"test:coverage": "jest --coverage",
 		"test:watch": "jest --watch",
-		"normalize": "node --enable-source-maps ./dist/tools/normalize",
-		"ci": "yarn run build --prod && yarn run lint && yarn run type-check:test && yarn run test",
-		"postinstall": "node scripts/postinstall.cjs"
+		"normalize": "node --enable-source-maps ./dist/tools/normalize"
 	},
 	"dependencies": {
 		"dotenv": "^16.0.3",
