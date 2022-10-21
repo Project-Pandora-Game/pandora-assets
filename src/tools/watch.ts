@@ -15,8 +15,6 @@ function WatchRun() {
 	running = true;
 	hadChanges = false;
 	runner()
-		.finally(() => {
-		})
 		.then(() => {
 			logger.info('Waiting for changes...');
 		}, (error) => {

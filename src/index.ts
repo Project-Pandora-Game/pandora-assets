@@ -149,7 +149,7 @@ if (process.argv.includes('--watch')) {
 	RunDev(Run).catch((error) => {
 		logger.fatal('Error starting dev server:\n', error);
 		process.exit(2);
-	});;
+	});
 } else {
 	// On fatal error in non-watch environment set failure exit code
 	logConfig.onFatal.push(() => {
