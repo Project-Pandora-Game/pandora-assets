@@ -3,17 +3,32 @@ import { GetLogger } from 'pandora-common';
 import { StartHttpServer } from './devServer';
 
 let runner: (() => Promise<void>) | undefined;
+let hadChanges = false;
+let running = false;
 
 const logger = GetLogger('Watch');
 
 function WatchRun() {
-	if (!runner)
+	hadChanges = true;
+	if (!runner || running)
 		return;
-	runner().then(() => {
-		logger.info('Waiting for changes...');
-	}, (error) => {
-		logger.error('Error during run, waiting for changes:\n', error);
-	});
+	running = true;
+	hadChanges = false;
+	runner()
+		.finally(() => {
+		})
+		.then(() => {
+			logger.info('Waiting for changes...');
+		}, (error) => {
+			logger.error('Error during run, waiting for changes:\n', error);
+		})
+		.finally(() => {
+			running = false;
+			// If something changed while we were running, rerun
+			if (hadChanges) {
+				WatchRun();
+			}
+		});
 }
 
 export async function RunDev(runFn: () => Promise<void>): Promise<void> {
