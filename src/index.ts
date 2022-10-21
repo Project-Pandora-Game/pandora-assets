@@ -5,7 +5,7 @@ import { GlobalDefineAsset, SetCurrentContext } from './tools';
 import rimraf from 'rimraf';
 import { AssetDatabase } from './tools/assetDatabase';
 import { ClearAllResources, DefineResourceInline, ExportAllResources } from './tools/resources';
-import { RunWithWatch } from './tools/watch';
+import { RunDev } from './tools/watch';
 import { boneDefinition } from './bones';
 import { GraphicsDatabase } from './tools/graphicsDatabase';
 import { BODYPARTS, ValidateBodyparts } from './bodyparts';
@@ -146,7 +146,10 @@ async function Run() {
 }
 
 if (process.argv.includes('--watch')) {
-	RunWithWatch(Run);
+	RunDev(Run).catch((error) => {
+		logger.fatal('Error starting dev server:\n', error);
+		process.exit(2);
+	});;
 } else {
 	// On fatal error in non-watch environment set failure exit code
 	logConfig.onFatal.push(() => {

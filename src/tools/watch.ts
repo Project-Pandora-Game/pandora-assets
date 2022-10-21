@@ -1,5 +1,6 @@
 import { watchFile } from 'fs';
 import { GetLogger } from 'pandora-common';
+import { StartHttpServer } from './devServer';
 
 let runner: (() => Promise<void>) | undefined;
 
@@ -15,7 +16,8 @@ function WatchRun() {
 	});
 }
 
-export function RunWithWatch(runFn: () => Promise<void>): void {
+export async function RunDev(runFn: () => Promise<void>): Promise<void> {
+	await StartHttpServer();
 	runner = runFn;
 	WatchRun();
 }

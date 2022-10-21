@@ -1,5 +1,16 @@
 import { join } from 'path';
 
+//#region Networking
+/** Port on which will HTTP server listen */
+export const SERVER_PORT = process.env.SERVER_PORT ?? '26969';
+/** Address the HTTP server will bind to */
+export const SERVER_BIND = process.env.SERVER_BIND ?? '127.0.0.1';
+/** Path to HTTPS certificate file */
+export const SERVER_HTTPS_CERT = process.env.SERVER_HTTPS_CERT ?? '';
+/** Path to HTTPS key file */
+export const SERVER_HTTPS_KEY = process.env.SERVER_HTTPS_KEY ?? '';
+//#endregion
+
 export const BASE_DIR = join(__dirname, '..');
 
 export const SRC_DIR = join(BASE_DIR, 'src');
