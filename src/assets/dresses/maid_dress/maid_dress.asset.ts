@@ -69,6 +69,21 @@ DefineAsset({
 				},
 			],
 		},
+		bossomState: {
+			type: 'typed',
+			name: 'Bossom State',
+			variants: [
+				{
+					id: 'normal',
+					name: 'Normal',
+					default: true,
+				},
+				{
+					id: 'down',
+					name: 'Pulled Down',
+				},
+			],
+		},
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
