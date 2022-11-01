@@ -7,12 +7,81 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "ABOVE_BODY",
+			"points": "body",
+			"mirror": 0,
+			"colorizationIndex": 1,
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "maid_f_down.png",
+						"condition": [
+							[
+								{
+									"module": "bossomState",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "front pulled down"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "ABOVE_BODY",
+			"points": "body",
+			"mirror": 0,
+			"colorizationIndex": 0,
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "maid_f_down_l2.png",
+						"condition": [
+							[
+								{
+									"module": "bossomState",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "front pulled down frills"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "ABOVE_BODY",
 			"points": "shirt",
 			"mirror": 0,
 			"colorizationIndex": 1,
 			"image": {
 				"image": "maid_f_large.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "bossomState",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "front",
 			"scaling": {
@@ -22,14 +91,40 @@
 						-150,
 						{
 							"image": "maid_f_small.png",
-							"overrides": []
+							"overrides": [
+								{
+									"image": "",
+									"condition": [
+										[
+											{
+												"module": "bossomState",
+												"operator": "=",
+												"value": "down"
+											}
+										]
+									]
+								}
+							]
 						}
 					],
 					[
 						180,
 						{
 							"image": "maid_f_extreme.png",
-							"overrides": []
+							"overrides": [
+								{
+									"image": "",
+									"condition": [
+										[
+											{
+												"module": "bossomState",
+												"operator": "=",
+												"value": "down"
+											}
+										]
+									]
+								}
+							]
 						}
 					]
 				]
@@ -46,7 +141,20 @@
 			"colorizationIndex": 0,
 			"image": {
 				"image": "maid_f_large_l2.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "bossomState",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "front frills",
 			"scaling": {
@@ -56,14 +164,40 @@
 						-150,
 						{
 							"image": "maid_f_small_l2.png",
-							"overrides": []
+							"overrides": [
+								{
+									"image": "",
+									"condition": [
+										[
+											{
+												"module": "bossomState",
+												"operator": "=",
+												"value": "down"
+											}
+										]
+									]
+								}
+							]
 						}
 					],
 					[
 						180,
 						{
 							"image": "maid_f_extreme_l2.png",
-							"overrides": []
+							"overrides": [
+								{
+									"image": "",
+									"condition": [
+										[
+											{
+												"module": "bossomState",
+												"operator": "=",
+												"value": "down"
+											}
+										]
+									]
+								}
+							]
 						}
 					]
 				]
@@ -156,6 +290,13 @@
 									"operator": "=",
 									"value": "no"
 								}
+							],
+							[
+								{
+									"module": "bossomState",
+									"operator": "=",
+									"value": "down"
+								}
 							]
 						]
 					}
@@ -174,7 +315,20 @@
 			"colorizationIndex": 1,
 			"image": {
 				"image": "maid_b.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "maid_f_down.png",
+						"condition": [
+							[
+								{
+									"module": "bossomState",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "back"
 		},
@@ -189,7 +343,20 @@
 			"colorizationIndex": 0,
 			"image": {
 				"image": "maid_b_l2.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "maid_f_down_l2.png",
+						"condition": [
+							[
+								{
+									"module": "bossomState",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "back frills"
 		},
@@ -354,7 +521,20 @@
 			"colorizationIndex": 1,
 			"image": {
 				"image": "maid_f_large.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "bossomState",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "back 2",
 			"scaling": {
@@ -364,14 +544,40 @@
 						-150,
 						{
 							"image": "maid_f_small.png",
-							"overrides": []
+							"overrides": [
+								{
+									"image": "",
+									"condition": [
+										[
+											{
+												"module": "bossomState",
+												"operator": "=",
+												"value": "down"
+											}
+										]
+									]
+								}
+							]
 						}
 					],
 					[
 						180,
 						{
 							"image": "maid_f_extreme.png",
-							"overrides": []
+							"overrides": [
+								{
+									"image": "",
+									"condition": [
+										[
+											{
+												"module": "bossomState",
+												"operator": "=",
+												"value": "down"
+											}
+										]
+									]
+								}
+							]
 						}
 					]
 				]
@@ -388,7 +594,20 @@
 			"colorizationIndex": 0,
 			"image": {
 				"image": "maid_f_large_l2.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "bossomState",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "back 2 frills",
 			"scaling": {
@@ -398,14 +617,40 @@
 						-150,
 						{
 							"image": "maid_f_small_l2.png",
-							"overrides": []
+							"overrides": [
+								{
+									"image": "",
+									"condition": [
+										[
+											{
+												"module": "bossomState",
+												"operator": "=",
+												"value": "down"
+											}
+										]
+									]
+								}
+							]
 						}
 					],
 					[
 						180,
 						{
 							"image": "maid_f_extreme_l2.png",
-							"overrides": []
+							"overrides": [
+								{
+									"image": "",
+									"condition": [
+										[
+											{
+												"module": "bossomState",
+												"operator": "=",
+												"value": "down"
+											}
+										]
+									]
+								}
+							]
 						}
 					]
 				]
