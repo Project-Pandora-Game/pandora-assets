@@ -39,7 +39,7 @@ export function StartHttpServer(): Promise<void> {
 		res.header('Access-Control-Expose-Headers', 'Content-Length');
 		res.header('Access-Control-Allow-Headers', 'Accept, Authorization, Content-Type, X-Requested-With, Range');
 		if (req.method === 'OPTIONS') {
-			return res.send(200);
+			return res.sendStatus(200);
 		} else {
 			return next();
 		}
