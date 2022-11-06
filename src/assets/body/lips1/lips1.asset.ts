@@ -1,5 +1,6 @@
 DefineAsset({
 	name: 'Lips 1',
+	size: 'bodypart',
 	bodypart: 'lips',
 	graphics: 'graphics.json',
 	colorization: [

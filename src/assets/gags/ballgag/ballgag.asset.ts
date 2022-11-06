@@ -1,5 +1,6 @@
 DefineAsset({
 	name: 'Ball Gag',
+	size: 'small',
 	graphics: 'graphics.json',
 	colorization: [
 		{

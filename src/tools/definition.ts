@@ -16,9 +16,14 @@ const DEFINITION_FALLTHOUGH_PROPERTIES = [
 	'attributes',
 	'requirements',
 	'hides',
-	'allowSelfEquip',
+	'blockAddRemove',
+	'blockSelfAddRemove',
+	'blockModules',
+	'blockSelfModules',
 	// Asset definition
 	'name',
+	'wearable',
+	'size',
 	'actionMessages',
 	'bodypart',
 	'colorization',
@@ -33,6 +38,14 @@ export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 	const logger = GetLogger('DefineAsset', `[Asset ${id}]`);
 
 	let definitionValid = true;
+
+	if (def.bodypart != null && def.size !== 'bodypart') {
+		definitionValid = false;
+		logger.error(`Invalid size: Bodyparts must use the 'bodypart' size`);
+	} else if (def.size === 'bodypart' && def.bodypart == null) {
+		definitionValid = false;
+		logger.error(`Invalid size: Only bodyparts can use the 'bodypart' size`);
+	}
 
 	if (def.colorization) {
 		for (let i = 0; i < def.colorization.length; i++) {

@@ -1,5 +1,6 @@
 DefineAsset({
 	name: 'Cloth Blindfold',
+	size: 'small',
 	graphics: 'graphics.json',
 	colorization: [
 		{

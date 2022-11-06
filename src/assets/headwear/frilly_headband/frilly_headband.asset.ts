@@ -1,5 +1,6 @@
 DefineAsset({
 	name: 'Frilly Headband',
+	size: 'small',
 	graphics: 'graphics.json',
 	colorization: [
 		{

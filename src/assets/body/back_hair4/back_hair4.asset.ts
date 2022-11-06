@@ -1,5 +1,6 @@
 DefineAsset({
 	name: 'Back hair 4',
+	size: 'bodypart',
 	bodypart: 'backhair',
 	graphics: 'graphics.json',
 	colorization: [

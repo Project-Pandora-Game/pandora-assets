@@ -1,5 +1,6 @@
 DefineAsset({
 	name: 'Thigh High Socks',
+	size: 'small',
 	graphics: 'graphics.json',
 	colorization: [
 		{

@@ -1,5 +1,6 @@
 DefineAsset({
 	name: 'Frilly Bracelets',
+	size: 'small',
 	graphics: 'graphics.json',
 	colorization: [
 		{

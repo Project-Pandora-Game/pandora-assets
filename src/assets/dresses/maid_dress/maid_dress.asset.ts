@@ -1,5 +1,6 @@
 DefineAsset({
 	name: 'Maid Dress',
+	size: 'medium',
 	graphics: 'graphics.json',
 	colorization: [
 		{

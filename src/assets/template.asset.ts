@@ -4,6 +4,8 @@
 DefineAsset({
 	// Name of your asset, this is what users see
 	name: 'My new asset',
+	// Size of the asset (TODO)
+	size: 'medium',
 	// Name of the file with graphics, uncomment this once you created graphics using Editor.
 	/*
 	graphics: 'graphics.json',

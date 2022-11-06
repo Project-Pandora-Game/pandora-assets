@@ -2,6 +2,7 @@ import { ItemInteractionType } from 'pandora-common';
 
 DefineAsset({
 	name: 'Eyes 4',
+	size: 'bodypart',
 	bodypart: 'eyes',
 	graphics: 'graphics.json',
 	colorization: [

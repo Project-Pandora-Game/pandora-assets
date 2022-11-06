@@ -2,6 +2,7 @@ import { ItemInteractionType } from 'pandora-common';
 
 DefineAsset({
 	name: 'Boots',
+	size: 'medium',
 	graphics: 'graphics.json',
 	colorization: [
 		{

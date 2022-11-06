@@ -1,5 +1,6 @@
 DefineAsset({
 	name: 'Neck Ribbon',
+	size: 'small',
 	graphics: 'graphics.json',
 	colorization: [
 		{

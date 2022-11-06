@@ -1,5 +1,6 @@
 DefineAsset({
 	name: 'Eyebrows 1',
+	size: 'bodypart',
 	bodypart: 'eyebrows',
 	graphics: 'graphics.json',
 	colorization: [

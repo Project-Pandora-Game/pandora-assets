@@ -2,6 +2,7 @@ import { ItemInteractionType } from 'pandora-common';
 
 DefineAsset({
 	name: 'Female Sex 1',
+	size: 'bodypart',
 	bodypart: 'sex',
 	graphics: 'graphics.json',
 	colorization: [

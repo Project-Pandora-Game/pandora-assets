@@ -2,6 +2,7 @@ import { ItemInteractionType } from 'pandora-common';
 
 DefineAsset({
 	name: 'High Heels',
+	size: 'medium',
 	graphics: 'graphics.json',
 	colorization: [
 		{

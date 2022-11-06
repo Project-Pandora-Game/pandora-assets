@@ -1,5 +1,6 @@
 DefineAsset({
 	name: 'Jeans Shorts',
+	size: 'medium',
 	graphics: 'graphics.json',
 	colorization: [
 		{

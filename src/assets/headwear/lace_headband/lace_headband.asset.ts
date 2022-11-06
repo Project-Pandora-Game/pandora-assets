@@ -1,5 +1,6 @@
 DefineAsset({
 	name: 'Lace Crown',
+	size: 'small',
 	graphics: 'graphics.json',
 	colorization: [
 		{

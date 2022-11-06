@@ -2,6 +2,7 @@ import { ItemInteractionType } from 'pandora-common';
 
 DefineAsset({
 	name: 'Leather Wrist Cuffs',
+	size: 'small',
 	graphics: 'graphics.json',
 	colorization: [
 		{

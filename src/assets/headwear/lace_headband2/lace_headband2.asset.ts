@@ -1,5 +1,6 @@
 DefineAsset({
 	name: 'Lace Headband',
+	size: 'small',
 	graphics: 'graphics.json',
 	colorization: [
 		{

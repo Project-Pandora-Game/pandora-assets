@@ -1,5 +1,6 @@
 DefineAsset({
 	name: 'Nose 1',
+	size: 'bodypart',
 	bodypart: 'nose',
 	graphics: 'graphics.json',
 	ownership: {

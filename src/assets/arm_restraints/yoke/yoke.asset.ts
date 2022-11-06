@@ -2,6 +2,7 @@ import { ArmsPose, ItemInteractionType } from 'pandora-common';
 
 DefineAsset({
 	name: 'Yoke',
+	size: 'medium',
 	graphics: 'graphics.json',
 	colorization: [
 		{
