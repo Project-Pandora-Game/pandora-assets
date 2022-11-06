@@ -16,7 +16,7 @@ function WatchRun() {
 	hadChanges = false;
 	runner()
 		.then(() => {
-			logger.info('Waiting for changes...');
+			logger.info('Watching for changes...');
 		}, (error) => {
 			logger.error('Error during run, waiting for changes:\n', error);
 		})
