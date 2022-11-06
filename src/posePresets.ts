@@ -275,10 +275,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 				/* {
 					name: 'Hands behind head',
 					pose: {
-						arm_r: -46,
-						arm_l: -46,
-						elbow_r: -124,
-						elbow_l: -124,
+						arm_r: -45,
+						arm_l: -45,
+						elbow_r: -119,
+						elbow_l: -119,
 					},
 					armsPose: ArmsPose.BACK,
 				}, */
