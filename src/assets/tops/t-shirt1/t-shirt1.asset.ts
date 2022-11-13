@@ -37,7 +37,7 @@ DefineAsset({
 			variants: [
 				{
 					id: 'short',
-					name: 'Shirt Sleeves',
+					name: 'Short Sleeves',
 					default: true,
 				},
 				{
