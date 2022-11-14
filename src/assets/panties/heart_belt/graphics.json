@@ -37,7 +37,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "ABOVE_BODY",
-			"points": "body",
+			"points": "static",
 			"mirror": 0,
 			"colorizationIndex": 2,
 			"image": {
@@ -65,7 +65,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BELOW_BODY",
-			"points": "body",
+			"points": "static",
 			"mirror": 0,
 			"colorizationIndex": 2,
 			"image": {
@@ -93,7 +93,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BELOW_BODY",
-			"points": "body",
+			"points": "static",
 			"mirror": 0,
 			"colorizationIndex": 2,
 			"image": {
