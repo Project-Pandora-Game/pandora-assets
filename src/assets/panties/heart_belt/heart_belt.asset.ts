@@ -2,7 +2,7 @@ import { ItemInteractionType } from 'pandora-common';
 
 DefineAsset({
 	name: 'Heart Belt',
-	size: 'medium',
+	// size: 'medium',
 	graphics: 'graphics.json',
 	colorization: [
 		{
