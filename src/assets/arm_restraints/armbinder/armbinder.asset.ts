@@ -27,6 +27,14 @@ DefineAsset({
 		},
 	],
 	modules: {
+		lock: {
+			type: 'lockSlot',
+			name: 'Lock',
+			lockRequirements: ['Lock'],
+			occupiedEffects: {
+				blockAddRemove: true,
+			},
+		},
 		gloveRing: {
 			type: 'typed',
 			name: 'Glove Ring',

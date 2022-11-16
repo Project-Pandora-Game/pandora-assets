@@ -23,6 +23,22 @@ DefineAsset({
 		},
 	],
 	modules: {
+		lock: {
+			type: 'lockSlot',
+			name: 'Lock',
+			lockRequirements: ['Lock'],
+			occupiedEffects: {
+				blockAddRemove: true,
+			},
+		},
+		lockChain: {
+			type: 'lockSlot',
+			name: 'Lock for cuff chains',
+			lockRequirements: ['Lock'],
+			occupiedEffects: {
+				requirements: ['Wrist_cuffs_chain'],
+			},
+		},
 		cuffState: {
 			type: 'typed',
 			name: 'Cuff states',
@@ -35,7 +51,7 @@ DefineAsset({
 				},
 				{
 					id: 'front',
-					name: 'Chained In Front',
+					name: 'Chained',
 					poseLimits: {
 						forcePose: {
 							arm_r: 74,
@@ -44,6 +60,9 @@ DefineAsset({
 							elbow_l: 43,
 						},
 					},
+					attributes: [
+						'Wrist_cuffs_chain',
+					],
 				},
 				{
 					id: 'overhead',
@@ -56,6 +75,9 @@ DefineAsset({
 							elbow_l: -43,
 						},
 					},
+					attributes: [
+						'Wrist_cuffs_chain',
+					],
 				},
 			],
 		},

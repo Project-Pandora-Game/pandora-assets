@@ -25,6 +25,14 @@ DefineAsset({
 		},
 	],
 	modules: {
+		lock: {
+			type: 'lockSlot',
+			name: 'Lock',
+			lockRequirements: ['Lock'],
+			occupiedEffects: {
+				blockAddRemove: true,
+			},
+		},
 		buttons: {
 			type: 'typed',
 			name: 'Buttons',

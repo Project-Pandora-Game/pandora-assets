@@ -31,6 +31,22 @@ DefineAsset({
 		},
 	],
 	modules: {
+		lock: {
+			type: 'lockSlot',
+			name: 'Lock',
+			lockRequirements: ['Lock'],
+			occupiedEffects: {
+				blockAddRemove: true,
+			},
+		},
+		lockCollar: {
+			type: 'lockSlot',
+			name: 'Lock for collar leash',
+			lockRequirements: ['Lock'],
+			occupiedEffects: {
+				blockModules: ['collarConfig'],
+			},
+		},
 		collarConfig: {
 			type: 'typed',
 			name: 'Collar Configuration',
@@ -96,7 +112,6 @@ DefineAsset({
 		yokeWidth: {
 			type: 'typed',
 			name: 'Yoke Width',
-			interactionType: ItemInteractionType.ADD_REMOVE,
 			variants: [
 				{
 					id: 'normal',
@@ -111,9 +126,6 @@ DefineAsset({
 							elbow_l: -119,
 						},
 					},
-					effects: {
-						blockHands: true,
-					},
 				},
 				{
 					id: 'narrow',
@@ -126,9 +138,6 @@ DefineAsset({
 							elbow_r: -153,
 							elbow_l: -153,
 						},
-					},
-					effects: {
-						blockHands: true,
 					},
 				},
 				{
@@ -143,12 +152,12 @@ DefineAsset({
 							elbow_l: -67,
 						},
 					},
-					effects: {
-						blockHands: true,
-					},
 				},
 			],
 		},
+	},
+	effects: {
+		blockHands: true,
 	},
 	actionMessages: {
 		itemAdd: 'SOURCE_CHARACTER fitted and closed a Yoke around TARGET_CHARACTER_DYNAMIC neck and closed the cuffs around both wrists.',

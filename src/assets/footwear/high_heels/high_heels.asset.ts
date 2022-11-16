@@ -15,6 +15,16 @@ DefineAsset({
 		},
 	],
 	modules: {
+		lock: {
+			type: 'lockSlot',
+			name: 'Lock',
+			lockRequirements: ['Lock'],
+			occupiedEffects: {
+				blockAddRemove: true,
+				requirements: ['Shoe_top_strap'],
+			},
+
+		},
 		heelLength: {
 			type: 'typed',
 			name: 'Heel Length',
@@ -53,7 +63,6 @@ DefineAsset({
 		heelType: {
 			type: 'typed',
 			name: 'Heel Type',
-			interactionType: ItemInteractionType.ADD_REMOVE,
 			variants: [
 				{
 					id: 'noStrap',
@@ -63,6 +72,9 @@ DefineAsset({
 				{
 					id: 'strap',
 					name: 'With Strap',
+					attributes: [
+						'Shoe_top_strap',
+					],
 				},
 			],
 		},

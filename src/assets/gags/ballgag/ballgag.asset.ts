@@ -12,6 +12,16 @@ DefineAsset({
 			default: '#444444',
 		},
 	],
+	modules: {
+		lock: {
+			type: 'lockSlot',
+			name: 'Lock',
+			lockRequirements: ['Lock'],
+			occupiedEffects: {
+				blockAddRemove: true,
+			},
+		},
+	},
 	effects: {
 		lipsTouch: 7,
 		jawMove: 10,

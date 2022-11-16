@@ -23,10 +23,25 @@ DefineAsset({
 		},
 	],
 	modules: {
+		lock: {
+			type: 'lockSlot',
+			name: 'Lock',
+			lockRequirements: ['Lock'],
+			occupiedEffects: {
+				blockAddRemove: true,
+			},
+		},
+		lockPlate: {
+			type: 'lockSlot',
+			name: 'Lock for crotch plate',
+			lockRequirements: ['Lock'],
+			occupiedEffects: {
+				blockModules: ['crotchPlate'],
+			},
+		},
 		crotchPlate: {
 			type: 'typed',
 			name: 'Crotch Plate',
-			interactionType: ItemInteractionType.ADD_REMOVE,
 			variants: [
 				{
 					id: 'open',

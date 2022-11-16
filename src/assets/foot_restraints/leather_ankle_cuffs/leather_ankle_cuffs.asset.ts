@@ -27,6 +27,22 @@ DefineAsset({
 		},
 	],
 	modules: {
+		lock: {
+			type: 'lockSlot',
+			name: 'Lock',
+			lockRequirements: ['Lock'],
+			occupiedEffects: {
+				blockAddRemove: true,
+			},
+		},
+		lockChain: {
+			type: 'lockSlot',
+			name: 'Lock for cuff chains',
+			lockRequirements: ['Lock'],
+			occupiedEffects: {
+				requirements: ['Ankle_cuffs_chain'],
+			},
+		},
 		cuffState: {
 			type: 'typed',
 			name: 'Cuff states',
@@ -49,6 +65,9 @@ DefineAsset({
 							kneeling: 0,
 						},
 					},
+					attributes: [
+						'Ankle_cuffs_chain',
+					],
 				},
 				{
 					id: 'spread',
@@ -61,6 +80,9 @@ DefineAsset({
 							kneeling: 0,
 						},
 					},
+					attributes: [
+						'Ankle_cuffs_chain',
+					],
 				},
 				{
 					id: 'closed',
@@ -73,6 +95,9 @@ DefineAsset({
 							kneeling: 0,
 						},
 					},
+					attributes: [
+						'Ankle_cuffs_chain',
+					],
 				},
 				{
 					id: 'floor',
@@ -85,6 +110,9 @@ DefineAsset({
 							kneeling: 0,
 						},
 					},
+					attributes: [
+						'Ankle_cuffs_chain',
+					],
 					effects: {
 						blockRoomMovement: true,
 					},

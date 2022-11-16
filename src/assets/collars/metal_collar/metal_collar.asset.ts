@@ -26,6 +26,22 @@ DefineAsset({
 		'Collar',
 	],
 	modules: {
+		lock: {
+			type: 'lockSlot',
+			name: 'Lock',
+			lockRequirements: ['Lock'],
+			occupiedEffects: {
+				blockAddRemove: true,
+			},
+		},
+		lockCollar: {
+			type: 'lockSlot',
+			name: 'Lock for collar configuration',
+			lockRequirements: ['Lock'],
+			occupiedEffects: {
+				blockModules: ['collarConfig'],
+			},
+		},
 		collarConfig: {
 			type: 'typed',
 			name: 'Collar Configuration',
