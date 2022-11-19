@@ -1,6 +1,8 @@
 DefineAsset({
 	name: 'Ball Gag',
 	graphics: 'graphics.json',
+	kind: 'restraint',
+	occupies: 'mouth',
 	colorization: [
 		{
 			name: 'Ball',

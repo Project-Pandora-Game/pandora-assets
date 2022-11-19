@@ -1,6 +1,8 @@
 DefineAsset({
 	name: 'Flat Shoes',
 	graphics: 'graphics.json',
+	kind: 'clothing',
+	occupies: 'feet',
 	colorization: [
 		{
 			name: 'Shoes',

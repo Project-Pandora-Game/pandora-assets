@@ -3,6 +3,8 @@ import { ArmsPose } from 'pandora-common';
 DefineAsset({
 	name: 'Armbinder',
 	graphics: 'graphics.json',
+	kind: 'restraint',
+	occupies: ['arms', 'hands'],
 	colorization: [
 		{
 			name: 'Glove',

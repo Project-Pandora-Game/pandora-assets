@@ -1,6 +1,8 @@
 DefineAsset({
 	name: 'Frilly Headband',
 	graphics: 'graphics.json',
+	kind: 'clothing',
+	occupies: 'head',
 	colorization: [
 		{
 			name: 'Headband',

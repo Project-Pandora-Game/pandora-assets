@@ -1,6 +1,8 @@
 DefineAsset({
 	name: 'Lace Crown',
 	graphics: 'graphics.json',
+	kind: 'clothing',
+	occupies: 'head',
 	colorization: [
 		{
 			name: 'Headband',

@@ -3,6 +3,8 @@ import { ArmsPose, ItemInteractionType } from 'pandora-common';
 DefineAsset({
 	name: 'Yoke',
 	graphics: 'graphics.json',
+	kind: 'restraint',
+	occupies: 'wrists',
 	colorization: [
 		{
 			name: 'Collar',

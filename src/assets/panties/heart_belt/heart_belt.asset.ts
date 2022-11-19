@@ -4,6 +4,8 @@ DefineAsset({
 	name: 'Heart Belt',
 	// size: 'medium',
 	graphics: 'graphics.json',
+	kind: 'restraint',
+	occupies: 'crotch',
 	colorization: [
 		{
 			name: 'Belt',

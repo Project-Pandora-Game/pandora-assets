@@ -3,6 +3,8 @@ import { ItemInteractionType } from 'pandora-common';
 DefineAsset({
 	name: 'Boots',
 	graphics: 'graphics.json',
+	kind: 'clothing',
+	occupies: 'feet',
 	colorization: [
 		{
 			name: 'Shoe',
