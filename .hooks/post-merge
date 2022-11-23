@@ -5,4 +5,4 @@ source "./.hooks/include.sh"
 
 git submodule update --init --recursive
 
-yarn_helper
+pnpm_helper
