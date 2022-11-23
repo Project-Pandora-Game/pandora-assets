@@ -24,6 +24,7 @@ jobs:
         with:
           node-version: '16'
       - run: pnpm install --frozen-lockfile
+      - run: pnpm link ./pandora/pandora-common
       - run: pnpm run build --prod
 
   lint:
@@ -38,6 +39,7 @@ jobs:
         with:
           node-version: '16'
       - run: pnpm install --frozen-lockfile
+      - run: pnpm link ./pandora/pandora-common
       - run: pnpm run lint
 
   test:
@@ -52,5 +54,6 @@ jobs:
         with:
           node-version: '16'
       - run: pnpm install --frozen-lockfile
+      - run: pnpm link ./pandora/pandora-common
       - run: pnpm run type-check:test
       - run: pnpm run test
