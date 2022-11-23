@@ -1,4 +1,5 @@
-import type { BoneDefinitionCompressed, BoneType, CoordinatesCompressed } from 'pandora-common';
+// TODO: Re-add `import type` after ESLint gets fixed
+import { BoneDefinitionCompressed, BoneType, CoordinatesCompressed } from 'pandora-common';
 
 const boneDefinitionImpl = {
 	arm_r: {
