@@ -1,4 +1,4 @@
-import { ArmsPose, ItemInteractionType } from 'pandora-common';
+import { ArmsPose } from 'pandora-common';
 
 DefineAsset({
 	name: 'Yoke',

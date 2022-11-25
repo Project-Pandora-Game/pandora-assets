@@ -23,9 +23,9 @@ const logger = GetLogger('Resources');
 const resources: Map<string, Resource> = new Map();
 
 export abstract class Resource {
-	readonly resultName: string;
-	readonly size: number;
-	readonly hash: string;
+	public readonly resultName: string;
+	public readonly size: number;
+	public readonly hash: string;
 
 	constructor(resultName: string, size: number, hash: string) {
 		this.resultName = resultName;
@@ -33,31 +33,31 @@ export abstract class Resource {
 		this.hash = hash;
 	}
 
-	abstract export(destinationDirectory: string): void;
+	public abstract export(destinationDirectory: string): void;
 }
 
 class FileResource extends Resource {
-	readonly sourcePath: string;
+	public readonly sourcePath: string;
 
 	constructor(resultName: string, size: number, hash: string, sourcePath: string) {
 		super(resultName, size, hash);
 		this.sourcePath = sourcePath;
 	}
 
-	override export(destinationDirectory: string): void {
+	public override export(destinationDirectory: string): void {
 		copyFileSync(this.sourcePath, join(destinationDirectory, this.resultName));
 	}
 }
 
 class InlineResource extends Resource {
-	readonly value: Buffer;
+	public readonly value: Buffer;
 
 	constructor(resultName: string, hash: string, value: Buffer) {
 		super(resultName, value.byteLength, hash);
 		this.value = value;
 	}
 
-	override export(destinationDirectory: string): void {
+	public override export(destinationDirectory: string): void {
 		writeFileSync(join(destinationDirectory, this.resultName), this.value);
 	}
 }

@@ -14,7 +14,7 @@ export const AssetDatabase = new class AssetDatabase {
 		logger.debug('Registered asset', id);
 	}
 
-	export(): Record<AssetId, AssetDefinition> {
+	public export(): Record<AssetId, AssetDefinition> {
 		const result: Record<AssetId, AssetDefinition> = {};
 		for (const [id, definition] of this.assets.entries()) {
 			result[id] = definition;
@@ -22,7 +22,7 @@ export const AssetDatabase = new class AssetDatabase {
 		return result;
 	}
 
-	clear(): void {
+	public clear(): void {
 		this.assets.clear();
 	}
 };

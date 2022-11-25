@@ -28,7 +28,7 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 		return this.templates.has(name);
 	}
 
-	export(): AssetsGraphicsDefinitionFile {
+	public export(): AssetsGraphicsDefinitionFile {
 		const pointTemplates: Record<string, PointTemplate> = {};
 		for (const [name, template] of this.templates.entries()) {
 			pointTemplates[name] = template;
@@ -43,7 +43,7 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 		};
 	}
 
-	clear(): void {
+	public clear(): void {
 		this.assets.clear();
 		this.templates.clear();
 	}

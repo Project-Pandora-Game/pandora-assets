@@ -14,14 +14,14 @@ export const RoomDatabase = new class RoomDatabase {
 		logger.debug('Registered background', background.id);
 	}
 
-	export(): IChatroomBackgroundInfo[] {
+	public export(): IChatroomBackgroundInfo[] {
 		const result = Array.from(this.backgrounds.values());
 		result.sort((a, b) => a.name.localeCompare(b.name));
 
 		return result;
 	}
 
-	clear(): void {
+	public clear(): void {
 		this.backgrounds.clear();
 	}
 };
