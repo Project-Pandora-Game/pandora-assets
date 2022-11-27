@@ -31,9 +31,9 @@ DefineAsset({
 	attributes: [
 		'Collar',
 	],
-	actionMessages: {
-		itemAdd: 'SOURCE_CHARACTER fitted and closed a Cloth Collar around TARGET_CHARACTER_DYNAMIC neck.',
-		itemRemove: 'SOURCE_CHARACTER opened and then removed the Cloth Collar from TARGET_CHARACTER_DYNAMIC neck.',
+	chat: {
+		actionAdd: 'SOURCE_CHARACTER fitted and closed a Cloth Collar around TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',
+		actionRemove: 'SOURCE_CHARACTER opened and then removed the Cloth Collar from TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

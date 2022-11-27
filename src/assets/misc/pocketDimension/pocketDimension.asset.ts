@@ -9,9 +9,10 @@ DefineAsset({
 			maxAcceptedSize: 'medium',
 		},
 	},
-	actionMessages: {
-		itemAdd: 'SOURCE_CHARACTER summoned a pocket dimension for TARGET_CHARACTER_DYNAMIC_SELF.',
-		itemRemove: 'SOURCE_CHARACTER dispelled TARGET_CHARACTER_DYNAMIC pocket dimension.',
+	chat: {
+		chatDescriptor: 'pocket dimension',
+		actionAdd: 'SOURCE_CHARACTER summoned a pocket dimension for TARGET_CHARACTER_DYNAMIC.',
+		actionRemove: 'SOURCE_CHARACTER dispelled TARGET_CHARACTER_DYNAMIC_POSSESSIVE pocket dimension.',
 	},
 	ownership: {
 		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',

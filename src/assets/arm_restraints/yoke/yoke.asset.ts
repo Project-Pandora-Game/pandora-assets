@@ -159,9 +159,9 @@ DefineAsset({
 	effects: {
 		blockHands: true,
 	},
-	actionMessages: {
-		itemAdd: 'SOURCE_CHARACTER fitted and closed a Yoke around TARGET_CHARACTER_DYNAMIC neck and closed the cuffs around both wrists.',
-		itemRemove: 'SOURCE_CHARACTER opened and then removed the Yoke from TARGET_CHARACTER_DYNAMIC neck and wrists.',
+	chat: {
+		actionAdd: 'SOURCE_CHARACTER fitted and closed a Yoke around TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck and closed the cuffs around both wrists.',
+		actionRemove: 'SOURCE_CHARACTER opened and then removed the Yoke from TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck and wrists.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

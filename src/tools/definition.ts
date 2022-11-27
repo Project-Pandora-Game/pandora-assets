@@ -24,7 +24,7 @@ const DEFINITION_FALLTHOUGH_PROPERTIES = [
 	'name',
 	'wearable',
 	'size',
-	'actionMessages',
+	'chat',
 	'bodypart',
 	'colorization',
 	'modules',
