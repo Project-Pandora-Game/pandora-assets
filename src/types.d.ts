@@ -14,6 +14,7 @@ interface AssetRepoExtraArgs {
 	bones: AllBones;
 	bodyparts: import('./bodyparts').BodypartName;
 	attributes: import('./attributes').AttributeNames;
+	slots: import('./slots').AssetSlotNames;
 }
 
 interface IntermediateAssetDefinition extends Pick<import('pandora-common').AssetDefinition<AssetRepoExtraArgs>, import('./tools/definition').AssetDefinitionFallthoughProperties> {

@@ -20,6 +20,8 @@ const DEFINITION_FALLTHOUGH_PROPERTIES = [
 	'blockSelfAddRemove',
 	'blockModules',
 	'blockSelfModules',
+	'blockSlots',
+	'occupies',
 	// Asset definition
 	'name',
 	'wearable',

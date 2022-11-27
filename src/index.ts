@@ -17,6 +17,7 @@ import { RoomDatabase } from './tools/roomDatabase';
 import { LoadBackgrounds } from './backgrounds/backgrounds';
 import { LoadAttributes } from './attributes';
 import { APPEARANCE_RANDOMIZATION_CONFIG } from './presets';
+import { ASSET_SLOTS } from './slots';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.VERBOSE);
@@ -131,6 +132,7 @@ async function Run() {
 
 	const definitions: AssetsDefinitionFile = {
 		assets: AssetDatabase.export(),
+		assetSlots: ASSET_SLOTS,
 		bones: boneDefinition,
 		posePresets: POSE_PRESETS,
 		bodyparts: BODYPARTS,
