@@ -1,5 +1,3 @@
-import { ItemInteractionType } from 'pandora-common';
-
 DefineAsset({
 	name: 'Panties (style 1)',
 	size: 'small',
@@ -14,7 +12,6 @@ DefineAsset({
 		pantiesState: {
 			type: 'typed',
 			name: 'Panties State',
-			interactionType: ItemInteractionType.ADD_REMOVE,
 			variants: [
 				{
 					id: 'normal',
