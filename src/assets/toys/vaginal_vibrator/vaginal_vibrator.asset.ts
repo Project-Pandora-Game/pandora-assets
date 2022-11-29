@@ -30,6 +30,30 @@ DefineAsset({
 			],
 		},
 	},
+	automation: {
+		beforeAdd: [
+			{
+				type: 'setExpression',
+				mode: 'required',
+				expression: 'Vagina',
+				action: {
+					moduleType: 'typed',
+					setVariant: 'spread',
+				},
+			},
+		],
+		afterRemove: [
+			{
+				type: 'setExpression',
+				mode: 'ignorable',
+				expression: 'Vagina',
+				action: {
+					moduleType: 'typed',
+					setVariant: 'normal',
+				},
+			},
+		],
+	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],
