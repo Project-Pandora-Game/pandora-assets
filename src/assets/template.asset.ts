@@ -4,7 +4,7 @@
 DefineAsset({
 	// Name of your asset, this is what users see
 	name: 'My new asset',
-	// Size of the asset (TODO)
+	// Size of this item. Affects mainly which things it can fit into. For more details check pandora-common/src/assets/definitions.ts
 	size: 'medium',
 	// Name of the file with graphics, uncomment this once you created graphics using Editor.
 	/*
