@@ -3,6 +3,7 @@
 export type AttributeNames =
 	// Bodypart attributes
 	| 'Body' // The body itself
+	| 'Vagina_spread' // The female sex being spread open
 	// Attachment points from items
 	| 'Collar' // Any collar
 	| 'Collar_front_ring' // Presence of front ring on a collar

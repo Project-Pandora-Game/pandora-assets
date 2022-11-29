@@ -53,6 +53,7 @@ DefineAsset({
 				{
 					id: 'spread',
 					name: 'Spread',
+					attributes: ['Vagina_spread'],
 				},
 			],
 		},
