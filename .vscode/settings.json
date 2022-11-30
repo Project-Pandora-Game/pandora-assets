@@ -19,10 +19,8 @@
 	"git.rebaseWhenSync": true,
 	"git.detectSubmodules": false,
 	"git.ignoreSubmodules": true,
-	"git.repositoryScanIgnoredFolders": [
-		"pandora",
-		"node_modules"
-	],
+	"git.autoRepositoryDetection": false,
+	"git.repositoryScanMaxDepth": 0,
 	"git.branchProtection": ["master"],
 	"git.branchProtectionPrompt": "alwaysCommitToNewBranch",
 	"git.branchPrefix": "add/",
