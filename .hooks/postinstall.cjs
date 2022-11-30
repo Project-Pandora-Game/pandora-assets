@@ -22,7 +22,7 @@ async function copyDotenv(basePath) {
 			resolve(basePath, '.env'),
 			constants.COPYFILE_EXCL,
 		);
-		console.log(`${basePath != '.' ? `${basePath}: ` : ''}No .env file found - template copied`);
+		console.log(`${basePath !== '.' ? `${basePath}: ` : ''}No .env file found - template copied`);
 	} catch (error) {
 		if (error.code !== 'EEXIST' && error.code !== 'ENOENT') {
 			throw error;
