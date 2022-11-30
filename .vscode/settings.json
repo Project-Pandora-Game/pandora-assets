@@ -6,7 +6,7 @@
 	"debug.confirmOnExit": "never",
 	"debug.toolBarLocation": "floating",
 	"debug.showInStatusBar": "never",
-	"debug.openDebug": "openOnDebugBreak",
+	"debug.openDebug": "neverOpen",
 	"eslint.packageManager": "pnpm",
 	"editor.insertSpaces": false,
 	"files.insertFinalNewline": true,
