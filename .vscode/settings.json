@@ -17,6 +17,12 @@
 		"pandora": true
 	},
 	"git.rebaseWhenSync": true,
+	"git.detectSubmodules": false,
+	"git.ignoreSubmodules": true,
+	"git.repositoryScanIgnoredFolders": [
+		"pandora",
+		"node_modules"
+	],
 	"[typescript]": {
 		"editor.defaultFormatter": "vscode.typescript-language-features",
 		"editor.formatOnSave": true
