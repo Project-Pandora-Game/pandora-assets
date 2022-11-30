@@ -1,4 +1,4 @@
 [submodule "pandora"]
 	path = pandora
-	url = git@github.com:Project-Pandora-Game/pandora.git
+	url = ../../Project-Pandora-Game/pandora.git
 	branch = master
