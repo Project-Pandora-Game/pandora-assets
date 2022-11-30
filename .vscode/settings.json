@@ -23,6 +23,11 @@
 		"pandora",
 		"node_modules"
 	],
+	"git.branchProtection": ["master"],
+	"git.branchProtectionPrompt": "alwaysCommitToNewBranch",
+	"git.branchPrefix": "add/",
+	"git.branchRandomName.enable": true,
+	"git.pullBeforeCheckout": true,
 	"[typescript]": {
 		"editor.defaultFormatter": "vscode.typescript-language-features",
 		"editor.formatOnSave": true
