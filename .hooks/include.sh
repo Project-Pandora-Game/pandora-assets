@@ -5,4 +5,5 @@ function pnpm_helper() {
 		return
 	fi
 	pnpm install --prefer-offline --frozen-lockfile
+	pnpm rebuild
 }
