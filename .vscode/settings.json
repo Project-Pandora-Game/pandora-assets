@@ -1,6 +1,8 @@
 {
 	"debug.onTaskErrors": "showErrors",
 	"npm.packageManager": "pnpm",
+	"task.allowAutomaticTasks": "on",
+	"task.autoDetect": "off",
 	"eslint.packageManager": "pnpm",
 	"editor.insertSpaces": false,
 	"files.insertFinalNewline": true,
