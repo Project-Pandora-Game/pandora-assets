@@ -34,7 +34,7 @@
 				"reveal": "always",
 				"focus": false,
 				"panel": "shared",
-				"showReuseMessage": true,
+				"showReuseMessage": false,
 				"clear": false
 			},
 			"group": "none",
@@ -60,13 +60,24 @@
 		},
 		{
 			"label": "Setup",
+			"runOptions": {
+				"runOn": "folderOpen"
+			},
 			"dependsOn": [
 				"git: init submodules",
 				"pnpm: install"
 			],
 			"dependsOrder": "sequence",
-			"runOptions": {
-				"runOn": "folderOpen"
+			"type": "shell",
+			"command": "echo Done!",
+			"presentation": {
+				"echo": false,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": true,
+				"close": true,
+				"clear": false
 			},
 			"group": "none",
 			"problemMatcher": []
