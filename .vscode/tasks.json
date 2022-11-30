@@ -27,6 +27,9 @@
 			"label": "pnpm: install",
 			"type": "process",
 			"command": "pnpm",
+			"windows": {
+				"command": "pnpm.cmd"
+			},
 			"args": [
 				"install"
 			],
@@ -45,6 +48,9 @@
 			"label": "pnpm: rebuild",
 			"type": "process",
 			"command": "pnpm",
+			"windows": {
+				"command": "pnpm.cmd"
+			},
 			"args": [
 				"rebuild"
 			],
