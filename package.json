@@ -11,6 +11,7 @@
 		"build": "pnpm run clean && tsc -p ./tsconfig.src.json && node --enable-source-maps -r dotenv/config ./dist/index",
 		"build:swc": "pnpm run clean && swc src -d dist && node --enable-source-maps -r dotenv/config ./dist/index",
 		"dev": "pnpm run clean && tsc-watch -p ./tsconfig.src.json --onSuccess \"node --enable-source-maps -r dotenv/config ./dist/index --watch\"",
+		"dev:inspect": "pnpm run clean && tsc-watch -p ./tsconfig.src.json --onSuccess \"node --inspect=26958 --inspect-brk --enable-source-maps -r dotenv/config ./dist/index --watch\"",
 		"lint": "eslint --max-warnings 0 --report-unused-disable-directives .",
 		"lint:fix": "eslint --fix .",
 		"type-check": "tsc -p . --noEmit",

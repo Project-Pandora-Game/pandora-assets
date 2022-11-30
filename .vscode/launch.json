@@ -1,0 +1,19 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Run",
+			"type": "node",
+			"request": "attach",
+			"restart": {
+				"delay": 200,
+			},
+			"continueOnAttach": true,
+			"port": 26958,
+			"sourceMaps": true,
+			"internalConsoleOptions": "neverOpen",
+			"preLaunchTask": "Run development server",
+			"postDebugTask": "Terminate All Tasks"
+		},
+	]
+}
