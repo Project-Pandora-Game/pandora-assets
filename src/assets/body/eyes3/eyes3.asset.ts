@@ -1,5 +1,3 @@
-import { ItemInteractionType } from 'pandora-common';
-
 DefineAsset({
 	name: 'Eyes 3',
 	size: 'bodypart',
@@ -28,7 +26,6 @@ DefineAsset({
 			type: 'typed',
 			name: 'Pupil Types',
 			expression: 'Eye Pupil Types',
-			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'largePupils',
@@ -57,7 +54,6 @@ DefineAsset({
 			type: 'typed',
 			name: 'Left Eye Open/Close',
 			expression: 'Left Eye Open/Close',
-			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'normal',
@@ -74,7 +70,6 @@ DefineAsset({
 			type: 'typed',
 			name: 'Right Eye Open/Close',
 			expression: 'Right Eye Open/Close',
-			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'normal',

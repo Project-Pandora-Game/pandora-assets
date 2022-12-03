@@ -28,7 +28,6 @@ const DEFINITION_FALLTHOUGH_PROPERTIES = [
 	'bodypart',
 	'colorization',
 	'modules',
-	'automation',
 ] as const;
 
 export type AssetDefinitionFallthoughProperties = (typeof DEFINITION_FALLTHOUGH_PROPERTIES)[number] & string;

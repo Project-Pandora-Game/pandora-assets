@@ -1,5 +1,3 @@
-import { ItemInteractionType } from 'pandora-common';
-
 DefineAsset({
 	name: 'Lips 3',
 	size: 'bodypart',
@@ -16,7 +14,6 @@ DefineAsset({
 			type: 'typed',
 			name: 'Mouth expressions',
 			expression: 'Mouth',
-			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'neutral',

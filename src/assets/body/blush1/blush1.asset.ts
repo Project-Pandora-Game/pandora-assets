@@ -1,5 +1,3 @@
-import { ItemInteractionType } from 'pandora-common';
-
 DefineAsset({
 	name: 'Blush 1',
 	size: 'bodypart',
@@ -16,7 +14,6 @@ DefineAsset({
 			type: 'typed',
 			name: 'Blush Strength',
 			expression: 'Blush',
-			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'noBlush',

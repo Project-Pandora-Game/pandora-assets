@@ -15,6 +15,7 @@ import { POSE_PRESETS } from './posePresets';
 import { LoadGitData } from './tools/git';
 import { RoomDatabase } from './tools/roomDatabase';
 import { LoadBackgrounds } from './backgrounds/backgrounds';
+import { ATTRIBUTES_DEFINITION } from './attributes';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.VERBOSE);
@@ -133,6 +134,7 @@ async function Run() {
 		bodyparts: BODYPARTS,
 		backgrounds: RoomDatabase.export(),
 		graphicsId: graphicsFile.hash,
+		attributes: ATTRIBUTES_DEFINITION,
 	};
 	// Check bodyparts are valid
 	ValidateBodyparts(definitions);
