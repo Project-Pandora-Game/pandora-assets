@@ -11,7 +11,7 @@ DefineAsset({
 	},
 	chat: {
 		chatDescriptor: 'pocket dimension',
-		actionAdd: 'SOURCE_CHARACTER summoned a pocket dimension for TARGET_CHARACTER_DYNAMIC.',
+		actionAdd: 'SOURCE_CHARACTER summoned a pocket dimension for TARGET_CHARACTER_DYNAMIC_REFLEXIVE.',
 		actionRemove: 'SOURCE_CHARACTER dispelled TARGET_CHARACTER_DYNAMIC_POSSESSIVE pocket dimension.',
 	},
 	ownership: {
