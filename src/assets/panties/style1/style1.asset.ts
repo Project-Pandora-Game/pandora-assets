@@ -1,12 +1,17 @@
 DefineAsset({
 	name: 'Panties (style 1)',
 	size: 'small',
+	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: [
 		{
 			name: 'Panties',
 			default: '#FA5F55',
 		},
+	],
+	attributes: [
+		'Underwear',
+		'Panties',
 	],
 	modules: {
 		pantiesState: {

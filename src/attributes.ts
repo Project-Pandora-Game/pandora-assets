@@ -52,8 +52,19 @@ export const ATTRIBUTES_DEFINITION = {
 	Nose: {
 		description: 'A nose',
 	},
-
-	// Attachment points from items
+	// Items or attachment points from items
+	Underwear: {
+		description: 'An underwear',
+	},
+	Bra: {
+		description: 'A bra',
+	},
+	Panties: {
+		description: 'A pair of panties',
+	},
+	Underpants: {
+		description: 'A pair of underpants',
+	},
 	Collar: {
 		description: 'A Collar',
 	},

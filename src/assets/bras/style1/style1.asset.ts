@@ -1,12 +1,17 @@
 DefineAsset({
 	name: 'Bra (style 1)',
 	size: 'small',
+	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: [
 		{
 			name: 'Bra',
 			default: '#FA5F55',
 		},
+	],
+	attributes: [
+		'Underwear',
+		'Bra',
 	],
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
