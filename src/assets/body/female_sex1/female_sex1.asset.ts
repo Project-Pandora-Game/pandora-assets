@@ -16,6 +16,10 @@ DefineAsset({
 			default: '#A96B61',
 		},
 	],
+	attributes: [
+		'Sex',
+		'Vagina',
+	],
 	modules: {
 		hair: {
 			type: 'typed',

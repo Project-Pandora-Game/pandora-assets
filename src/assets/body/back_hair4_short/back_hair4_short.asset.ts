@@ -13,6 +13,10 @@ DefineAsset({
 			default: '#888888',
 		},
 	],
+	attributes: [
+		'Hair',
+		'Hair_back',
+	],
 	modules: {
 		shine: {
 			type: 'typed',

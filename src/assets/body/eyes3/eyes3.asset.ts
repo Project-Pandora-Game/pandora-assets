@@ -22,6 +22,9 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	],
+	attributes: [
+		'Eyes',
+	],
 	modules: {
 		pupilType: {
 			type: 'typed',

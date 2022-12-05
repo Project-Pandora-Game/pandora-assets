@@ -10,6 +10,9 @@ DefineAsset({
 			default: '#555555',
 		},
 	],
+	attributes: [
+		'Eyebrows',
+	],
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

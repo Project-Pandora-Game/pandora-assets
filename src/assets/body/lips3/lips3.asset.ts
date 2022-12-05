@@ -10,6 +10,9 @@ DefineAsset({
 			default: '#FCB6B4',
 		},
 	],
+	attributes: [
+		'Mouth',
+	],
 	modules: {
 		mouth: {
 			type: 'typed',

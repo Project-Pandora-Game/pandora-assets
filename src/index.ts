@@ -16,6 +16,7 @@ import { LoadGitData } from './tools/git';
 import { RoomDatabase } from './tools/roomDatabase';
 import { LoadBackgrounds } from './backgrounds/backgrounds';
 import { ATTRIBUTES_DEFINITION } from './attributes';
+import { APPEARANCE_RANDOMIZATION_CONFIG } from './presets';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.VERBOSE);
@@ -135,6 +136,7 @@ async function Run() {
 		backgrounds: RoomDatabase.export(),
 		graphicsId: graphicsFile.hash,
 		attributes: ATTRIBUTES_DEFINITION,
+		randomization: APPEARANCE_RANDOMIZATION_CONFIG,
 	};
 	// Check bodyparts are valid
 	ValidateBodyparts(definitions);

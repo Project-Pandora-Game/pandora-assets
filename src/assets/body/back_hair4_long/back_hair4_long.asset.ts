@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Back hair 4 Long',
 	size: 'bodypart',
 	bodypart: 'backhair',
+	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: [
 		{
@@ -12,6 +13,10 @@ DefineAsset({
 			name: 'Hair shine',
 			default: '#888888',
 		},
+	],
+	attributes: [
+		'Hair',
+		'Hair_back',
 	],
 	modules: {
 		shine: {

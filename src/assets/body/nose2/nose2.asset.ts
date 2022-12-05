@@ -4,6 +4,9 @@ DefineAsset({
 	bodypart: 'nose',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
+	attributes: [
+		'Nose',
+	],
 	ownership: {
 		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',
 		credits: ['Titania', 'Jomshir', 'ClaudiaMia'],

@@ -9,6 +9,9 @@ DefineAsset({
 			default: '#F36870',
 		},
 	],
+	attributes: [
+		'Mouth',
+	],
 	ownership: {
 		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',
 		credits: ['Titania', 'Jomshir', 'ClaudiaMia'],

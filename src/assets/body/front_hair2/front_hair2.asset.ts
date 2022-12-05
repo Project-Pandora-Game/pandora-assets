@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Front hair 2',
 	size: 'bodypart',
 	bodypart: 'fronthair',
+	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: [
 		{
@@ -12,6 +13,10 @@ DefineAsset({
 			name: 'Hair shine',
 			default: '#AAAAAA',
 		},
+	],
+	attributes: [
+		'Hair',
+		'Hair_front',
 	],
 	modules: {
 		shine: {
