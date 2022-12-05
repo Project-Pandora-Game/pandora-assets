@@ -18,7 +18,6 @@
 	},
 	"git.rebaseWhenSync": true,
 	"git.detectSubmodules": false,
-	"git.ignoreSubmodules": true,
 	"git.autoRepositoryDetection": false,
 	"git.repositoryScanMaxDepth": 0,
 	"git.branchProtection": ["master"],
