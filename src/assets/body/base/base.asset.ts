@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Base body',
 	size: 'bodypart',
 	bodypart: 'base',
+	allowRandomizerUsage: true,
 	attributes: ['Body'],
 	graphics: 'graphics.json',
 	colorization: [

@@ -4,6 +4,7 @@ DefineAsset({
 	name: 'Female Sex 1',
 	size: 'bodypart',
 	bodypart: 'sex',
+	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: [
 		{

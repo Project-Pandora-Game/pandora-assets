@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Eyebrows 2',
 	size: 'bodypart',
 	bodypart: 'eyebrows',
+	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: [
 		{

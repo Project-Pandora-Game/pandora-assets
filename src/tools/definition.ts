@@ -23,6 +23,7 @@ const DEFINITION_FALLTHOUGH_PROPERTIES = [
 	// Asset definition
 	'name',
 	'wearable',
+	'allowRandomizerUsage',
 	'size',
 	'chat',
 	'bodypart',

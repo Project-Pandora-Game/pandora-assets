@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Nose 2',
 	size: 'bodypart',
 	bodypart: 'nose',
+	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	ownership: {
 		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',
