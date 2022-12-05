@@ -17,6 +17,9 @@ DefineAsset({
 		'Hair',
 		'Hair_extension',
 	],
+	requirements: [
+		'Hair_back',
+	],
 	modules: {
 		shine: {
 			type: 'typed',
