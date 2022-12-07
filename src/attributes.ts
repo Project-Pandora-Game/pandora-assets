@@ -1,6 +1,6 @@
 import { AssetAttributeDefinition, Satisfies } from 'pandora-common';
 
-//#region Attribute definitions
+//#region Attribute definitions - an attribute defines a role
 
 export const ATTRIBUTES_DEFINITION = {
 	// Bodypart attributes
@@ -53,17 +53,98 @@ export const ATTRIBUTES_DEFINITION = {
 		description: 'A nose',
 	},
 	// Items or attachment points from items
-	Underwear: {
-		description: 'An underwear',
+	Clothing: {
+		description: 'An article of clothing'
 	},
-	Bra: {
+	Clothing_upper: {
+		description: 'A top, shirt, dress, or similar item worn over the upper body'
+	},
+	Clothing_lower: {
+		description: 'A skirt, pants, dress, or similar item worn on the hips'
+	},
+	Clothing_outer: {
+		description: 'A jacket, coat, or similar item worn as outer clothing layer'
+	},
+	Underwear: {
+		description: 'A bra, panties, underpants, or similar item worn as lowest clothing layer',
+	},
+	Underwear_bra: {
 		description: 'A bra',
 	},
-	Panties: {
+	Underwear_panties: {
 		description: 'A pair of panties',
 	},
-	Underpants: {
-		description: 'A pair of underpants',
+	Underwear_corset: {
+		description: 'A corset'
+	},
+	Underwear_pants: {
+		description: 'A pair of underpants, briefs, or shorts',
+	},
+	Fantasy: {
+		description: 'A tail, pair of ears, or similar cosplay/fantasy item'
+	},
+	Fantasy_ears: {
+		description: 'A pair of animal or fantasy ears'
+	},
+	Fantasy_tail: {
+		description: 'An animal or fantasy tail'
+	},
+	Facewear: {
+		description: 'A mask, glasses, or similar item worn over the face'
+	},
+	Facewear_mask: {
+		description: 'A mask'
+	},
+	Facewear_glasses: {
+		description: 'A pair of glasses'
+	},
+	Accessory: {
+		description: 'A necklace, bracelet, ring, hair accessory, or similar body or clothing addon'
+	},
+	Legwear: {
+		description: 'A pair of socks, stockings, tights, or similar leg covering clothing'
+	},
+	Footwear: {
+		description: 'A pair of shoes, boots, sandals, or similar item'
+	},
+	Shoe_top_strap: {
+		description: 'A pair of shoes with straps that keep the shoes in place',
+	},
+	Headgear: {
+		description: 'A hat, cap, hood, helmet, or similar head gear'
+	},
+	Headgear_hood: {
+		description: 'A hood'
+	},
+	Gloves: {
+		description: 'A pair of gloves'
+	},
+	Restraint: {
+		description: 'An item that restricts or restraints the character in some form'
+	},
+	Restraint_arms: {
+		description: 'An item that restricts or restraints arms or hands'
+	},
+	Wrist_cuffs_chain: {
+		description: 'A chain between a pair of wrist cuffs',
+	},
+	Restraint_legs: {
+		description: 'An item that restricts or restraints legs or feet'
+	},
+	Ankle_cuffs_chain: {
+		description: 'A chain between a pair of ankle cuffs',
+	},
+	Restraint_eyes: {
+		description: 'An item that decreases the ability to see'
+	},
+	Restraint_mouth: {
+		description: 'An item that decreases the ability to speak'
+	},
+	Toy: {
+		description: 'A sexual toy',
+	},
+	Piercing: {
+		description: 'A body piercing',
 	},
 	Collar: {
 		description: 'A Collar',
@@ -71,14 +152,8 @@ export const ATTRIBUTES_DEFINITION = {
 	Collar_front_ring: {
 		description: 'A front ring on a collar',
 	},
-	Shoe_top_strap: {
-		description: 'A pair of shoes with straps that keep the shoes in place',
-	},
-	Wrist_cuffs_chain: {
-		description: 'A chain between a pair of wrist cuffs',
-	},
-	Ankle_cuffs_chain: {
-		description: 'A chain between a pair of ankle cuffs',
+	Chastity: {
+		description: 'An item, typically a bra or belt, used for chastity play'
 	},
 	// Locks
 	Lock: {
