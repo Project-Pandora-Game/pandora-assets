@@ -152,7 +152,7 @@ const ATTRIBUTES_DEFINITION = {
 	},
 	Underwear_corset: {
 		name: 'Corset',
-		description: 'A corset'
+		description: 'A corset',
 	},
 	Underwear_pants: {
 		name: 'Underpants',
@@ -351,4 +351,4 @@ export function LoadAttributes(): Record<AttributeNames, AssetAttributeDefinitio
 	}
 
 	return result;
-};
+}
