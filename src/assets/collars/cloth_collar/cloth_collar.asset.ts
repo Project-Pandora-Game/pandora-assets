@@ -29,6 +29,8 @@ DefineAsset({
 		},
 	},
 	attributes: [
+		'Clothing',
+		'Accessory',
 		'Collar',
 	],
 	chat: {

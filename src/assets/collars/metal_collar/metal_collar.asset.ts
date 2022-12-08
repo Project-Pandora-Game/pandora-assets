@@ -23,6 +23,7 @@ DefineAsset({
 		},
 	],
 	attributes: [
+		'Restraint',
 		'Collar',
 	],
 	modules: {

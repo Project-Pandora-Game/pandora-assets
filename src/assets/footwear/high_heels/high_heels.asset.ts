@@ -14,6 +14,12 @@ DefineAsset({
 			default: '#393939',
 		},
 	],
+	attributes: [
+		'Clothing',
+		'Footwear',
+		'Restraint',
+		'Restraint_legs',
+	],
 	modules: {
 		lock: {
 			type: 'lockSlot',

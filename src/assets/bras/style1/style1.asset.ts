@@ -11,7 +11,7 @@ DefineAsset({
 	],
 	attributes: [
 		'Underwear',
-		'Bra',
+		'Underwear_bra',
 	],
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

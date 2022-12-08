@@ -8,6 +8,10 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	],
+	attributes: [
+		'Clothing',
+		'Headgear',
+	],
 	modules: {
 		headbandSize: {
 			type: 'typed',

@@ -26,6 +26,10 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	],
+	attributes: [
+		'Restraint',
+		'Restraint_legs',
+	],
 	modules: {
 		lock: {
 			type: 'lockSlot',

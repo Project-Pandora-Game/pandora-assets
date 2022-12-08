@@ -8,6 +8,7 @@ DefineAsset({
 			default: '#FFC1EB',
 		},
 	],
+	attributes: ['Toy'],
 	requirements: ['Vagina_spread'],
 	modules: {
 		insertedVibrator: {

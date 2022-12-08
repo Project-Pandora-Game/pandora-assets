@@ -15,7 +15,7 @@ import { POSE_PRESETS } from './posePresets';
 import { LoadGitData } from './tools/git';
 import { RoomDatabase } from './tools/roomDatabase';
 import { LoadBackgrounds } from './backgrounds/backgrounds';
-import { ATTRIBUTES_DEFINITION } from './attributes';
+import { LoadAttributes } from './attributes';
 import { APPEARANCE_RANDOMIZATION_CONFIG } from './presets';
 
 const logger = GetLogger('Main');
@@ -53,6 +53,7 @@ async function Run() {
 	// Load common data
 	await LoadGitData();
 	LoadTemplates();
+	const attributes = LoadAttributes();
 
 	// Load backgrounds
 	logger.info('Loading backgrounds...');
@@ -135,7 +136,7 @@ async function Run() {
 		bodyparts: BODYPARTS,
 		backgrounds: RoomDatabase.export(),
 		graphicsId: graphicsFile.hash,
-		attributes: ATTRIBUTES_DEFINITION,
+		attributes,
 		randomization: APPEARANCE_RANDOMIZATION_CONFIG,
 	};
 	// Check bodyparts are valid

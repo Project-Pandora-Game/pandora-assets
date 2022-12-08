@@ -8,6 +8,7 @@ DefineAsset({
 			default: '#C4E1FF',
 		},
 	],
+	attributes: ['Toy'],
 	modules: {
 		insertedPlug: {
 			type: 'typed',

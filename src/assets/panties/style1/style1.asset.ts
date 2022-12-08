@@ -11,7 +11,7 @@ DefineAsset({
 	],
 	attributes: [
 		'Underwear',
-		'Panties',
+		'Underwear_panties',
 	],
 	modules: {
 		pantiesState: {

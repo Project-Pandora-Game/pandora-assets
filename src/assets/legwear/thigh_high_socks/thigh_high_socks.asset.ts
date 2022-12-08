@@ -20,6 +20,10 @@ DefineAsset({
 			default: '#83a3cc',
 		},
 	],
+	attributes: [
+		'Clothing',
+		'Legwear',
+	],
 	modules: {
 		stripes: {
 			type: 'typed',

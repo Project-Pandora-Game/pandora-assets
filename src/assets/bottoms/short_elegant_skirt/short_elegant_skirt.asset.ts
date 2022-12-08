@@ -8,6 +8,10 @@ DefineAsset({
 			default: '#222222',
 		},
 	],
+	attributes: [
+		'Clothing',
+		'Clothing_lower',
+	],
 	modules: {
 		skirtState: {
 			type: 'typed',

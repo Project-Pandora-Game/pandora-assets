@@ -20,6 +20,10 @@ DefineAsset({
 			default: '#D5D5D5',
 		},
 	],
+	attributes: [
+		'Restraint',
+		'Chastity',
+	],
 	modules: {
 		lock: {
 			type: 'lockSlot',

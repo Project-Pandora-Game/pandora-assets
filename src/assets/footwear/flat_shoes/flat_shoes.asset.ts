@@ -8,6 +8,10 @@ DefineAsset({
 			default: '#D2042D',
 		},
 	],
+	attributes: [
+		'Clothing',
+		'Footwear',
+	],
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

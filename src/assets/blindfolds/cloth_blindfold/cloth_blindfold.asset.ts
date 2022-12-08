@@ -8,6 +8,10 @@ DefineAsset({
 			default: '#FDF3EA',
 		},
 	],
+	attributes: [
+		'Restraint',
+		'Restraint_eyes',
+	],
 	effects: {
 		blind: 6,
 	},
