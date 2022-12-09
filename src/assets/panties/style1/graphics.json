@@ -81,6 +81,18 @@
 				"image": "style1_back.png",
 				"overrides": [
 					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"bone": "backView",
+									"operator": "=",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
 						"image": "style1_floor.png",
 						"condition": [
 							[
