@@ -1,6 +1,7 @@
 DefineAsset({
 	name: 'Medium Socks',
 	size: 'small',
+	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: [
 		{

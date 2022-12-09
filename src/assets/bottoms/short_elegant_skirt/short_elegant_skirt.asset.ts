@@ -1,6 +1,7 @@
 DefineAsset({
 	name: 'Short Elegant Skirt',
 	size: 'medium',
+	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: [
 		{
