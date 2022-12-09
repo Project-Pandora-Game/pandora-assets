@@ -16,5 +16,10 @@ export const APPEARANCE_RANDOMIZATION_CONFIG: AppearanceRandomizationData<AssetR
 	clothes: [
 		'Underwear_panties',
 		'Underwear_bra',
+		'Legwear',
+		'Footwear',
+		'Clothing_upper',
+		'Clothing_lower',
+
 	],
 };
