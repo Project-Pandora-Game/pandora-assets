@@ -13,7 +13,7 @@ DefineAsset({
 		'Restraint_eyes',
 	],
 	effects: {
-		blind: 6,
+		blind: 7,
 	},
 	chat: {
 		actionAdd: 'SOURCE_CHARACTER wrapped a layer of cloth around TARGET_CHARACTER_DYNAMIC_POSSESSIVE head, covering the eyes.',
