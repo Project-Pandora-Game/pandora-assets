@@ -4,6 +4,8 @@ export const APPEARANCE_RANDOMIZATION_CONFIG: AppearanceRandomizationData<AssetR
 	// Make sure the order matches BODYPART_ORDER from src/bodyparts.ts!
 	body: [
 		'Body_base',
+		'Head_base',
+		'Ears',
 		'Nose',
 		'Blush',
 		'Eyes',

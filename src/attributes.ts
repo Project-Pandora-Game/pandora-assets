@@ -13,6 +13,14 @@ const ATTRIBUTES_DEFINITION = {
 		name: 'Base body',
 		description: 'A body',
 	},
+	Head_base: {
+		name: 'Base head',
+		description: 'A head',
+	},
+	Ears: {
+		name: 'Ears',
+		description: 'A pair of ears for the body',
+	},
 	Body_texture: {
 		name: 'Body texture',
 		description: 'A texture for the body',
