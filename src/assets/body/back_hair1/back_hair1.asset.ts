@@ -47,7 +47,7 @@ DefineAsset({
 				source: 'Private',
 				copyrightHolder: 'QueenTita',
 				editedBy: 'ClaudiaMia',
-				license: './TODO', //TODO
+				license: 'Pandora-Use-Only',
 			},
 		],
 	},
