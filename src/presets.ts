@@ -20,6 +20,5 @@ export const APPEARANCE_RANDOMIZATION_CONFIG: AppearanceRandomizationData<AssetR
 		'Footwear',
 		'Clothing_upper',
 		'Clothing_lower',
-
 	],
 };
