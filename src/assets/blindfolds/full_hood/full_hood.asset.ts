@@ -45,7 +45,7 @@ DefineAsset({
 			occupiedEffects: {
 				blockModules: [
 					'hoodEyeCover',
-					'hoodMouthCover'
+					'hoodMouthCover',
 				],
 			},
 		},

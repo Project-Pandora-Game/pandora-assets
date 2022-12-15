@@ -30,7 +30,7 @@ DefineAsset({
 				copyrightHolder: 'Maria',
 				editedBy: 'ClaudiaMia',
 				license: 'CC BY-SA',
-			}
+			},
 		],
 	},
 });
