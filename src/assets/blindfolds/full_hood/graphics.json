@@ -54,16 +54,16 @@
 			"mirror": 0,
 			"colorizationIndex": 2,
 			"image": {
-				"image": "",
+				"image": "hood_mouth.png",
 				"overrides": [
 					{
-						"image": "hood_mouth.png",
+						"image": "",
 						"condition": [
 							[
 								{
 									"module": "hoodMouthCover",
 									"operator": "=",
-									"value": "mouth"
+									"value": "mouth_free"
 								}
 							]
 						]
