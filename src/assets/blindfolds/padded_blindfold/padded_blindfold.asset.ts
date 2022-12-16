@@ -1,3 +1,5 @@
+import { ItemInteractionType } from 'pandora-common';
+
 DefineAsset({
 	name: 'Padded Blindfold',
 	size: 'small',
@@ -16,9 +18,6 @@ DefineAsset({
 		'Restraint',
 		'Restraint_eyes',
 	],
-	effects: {
-		blind: 9.4,
-	},
 	modules: {
 		lock: {
 			type: 'lockSlot',
@@ -27,6 +26,28 @@ DefineAsset({
 			occupiedEffects: {
 				blockAddRemove: true,
 			},
+		},
+		blinding: {
+			type: 'typed',
+			name: 'Blinding Strictness',
+			interactionType: ItemInteractionType.ADD_REMOVE,
+			variants: [
+				{
+					id: 'light',
+					name: 'Thin Padding',
+					effects: {
+						blind: 9.4,
+					},
+					default: true,
+				},
+				{
+					id: 'full',
+					name: 'Thick Padding',
+					effects: {
+						blind: 10,
+					},
+				},
+			],
 		},
 	},
 	chat: {
