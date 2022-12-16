@@ -82,15 +82,6 @@ DefineAsset({
 				{
 					id: 'mouth',
 					name: 'Mouth Cover',
-					effects: {
-						lipsTouch: 0.8,
-						jawMove: 0,
-						tongueRoof: 0,
-						mouthBreath: 0.5,
-						throatBreath: 0.1,
-						coherency: 0.2,
-						stimulus: 0.2,
-					},
 				},
 				{
 					id: 'mouth_plug',
