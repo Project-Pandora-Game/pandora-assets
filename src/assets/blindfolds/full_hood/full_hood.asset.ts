@@ -83,6 +83,7 @@ DefineAsset({
 					id: 'mouth',
 					name: 'Mouth Cover',
 					requirements: ['!Mouth_tongue_out'],
+					blockSlots: ['mouth'],
 				},
 				{
 					id: 'mouth_plug',
@@ -103,6 +104,7 @@ DefineAsset({
 						'Mouth_open_wide',
 						'!Mouth_tongue_out',
 					],
+					occupies: ['mouth'],
 				},
 			],
 		},
