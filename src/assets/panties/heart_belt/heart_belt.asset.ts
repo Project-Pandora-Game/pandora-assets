@@ -53,6 +53,8 @@ DefineAsset({
 				{
 					id: 'closed',
 					name: 'Closed',
+					blockSlots: ['vagina'],
+					occupies: ['outsideVaginaArea_1'],
 				},
 			],
 		},
