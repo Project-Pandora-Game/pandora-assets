@@ -16,6 +16,10 @@ DefineAsset({
 		'Restraint',
 		'Restraint_mouth',
 	],
+	requirements: [
+		'Mouth_open_wide',
+		'!Mouth_tongue_out',
+	],
 	modules: {
 		lock: {
 			type: 'lockSlot',
@@ -36,8 +40,8 @@ DefineAsset({
 		stimulus: 2,
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER strapped a Ball Gag tightly over TARGET_CHARACTER_DYNAMIC_POSSESSIVE lips.',
-		actionRemove: 'SOURCE_CHARACTER loosened and then removed the Ball Gag from TARGET_CHARACTER_DYNAMIC_POSSESSIVE lips.',
+		actionAdd: 'SOURCE_CHARACTER strapped a Ball Gag tightly into TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',
+		actionRemove: 'SOURCE_CHARACTER loosened and then removed the Ball Gag from TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

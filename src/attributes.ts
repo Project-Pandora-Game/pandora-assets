@@ -102,6 +102,14 @@ const ATTRIBUTES_DEFINITION = {
 			tab: 'body',
 		},
 	},
+	Mouth_open_wide: {
+		name: 'Wide open mouth',
+		description: 'A wide open mouth',
+	},
+	Mouth_tongue_out: {
+		name: 'Tongue out',
+		description: 'A wide open mouth with its tongue out',
+	},
 	// Items or attachment points from items
 	Clothing: {
 		name: 'Clothing',

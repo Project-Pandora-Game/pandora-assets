@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Lips 3',
+	name: 'Lips 1 (thin)',
 	size: 'bodypart',
 	bodypart: 'lips',
 	allowRandomizerUsage: true,
@@ -51,14 +51,23 @@ DefineAsset({
 				{
 					id: 'open',
 					name: 'Open Wide',
+					attributes: ['Mouth_open_wide'],
 				},
 				{
 					id: 'tongue',
 					name: 'Tongue Out',
+					attributes: [
+						'Mouth_tongue_out',
+						'Mouth_open_wide',
+					],
 				},
 				{
 					id: 'tongueLong',
 					name: 'Tongue Out Fully',
+					attributes: [
+						'Mouth_tongue_out',
+						'Mouth_open_wide',
+					],
 				},
 				{
 					id: 'pout',
