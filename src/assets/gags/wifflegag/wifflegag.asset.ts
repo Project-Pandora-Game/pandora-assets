@@ -1,11 +1,11 @@
 DefineAsset({
-	name: 'Ball Gag',
+	name: 'Wiffle Gag',
 	size: 'small',
 	graphics: 'graphics.json',
 	colorization: [
 		{
 			name: 'Ball',
-			default: '#FA5F55',
+			default: '#FF80C0',
 		},
 		{
 			name: 'Straps',
@@ -34,14 +34,14 @@ DefineAsset({
 		lipsTouch: 7,
 		jawMove: 10,
 		tongueRoof: 6,
-		mouthBreath: 3,
+		mouthBreath: 2,
 		throatBreath: 2,
 		coherency: 4,
 		stimulus: 2,
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER strapped a Ball Gag tightly between TARGET_CHARACTER_DYNAMIC_POSSESSIVE lips.',
-		actionRemove: 'SOURCE_CHARACTER loosened and then removed the Ball Gag from TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',
+		actionAdd: 'SOURCE_CHARACTER strapped a Wiffle Gag tightly between TARGET_CHARACTER_DYNAMIC_POSSESSIVE lips.',
+		actionRemove: 'SOURCE_CHARACTER loosened and then removed the Wiffle Gag from TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
