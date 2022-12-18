@@ -1278,6 +1278,10 @@ packages:
       jsonc-parser: 3.2.0
     dev: true
 
+  /@types/async-lock/1.4.0:
+    resolution: {integrity: sha512-2+rYSaWrpdbQG3SA0LmMT6YxWLrI81AqpMlSkw3QtFc2HGDufkweQSn30Eiev7x9LL0oyFrBqk1PXOnB9IEgKg==}
+    dev: false
+
   /@types/babel__core/7.1.20:
     resolution: {integrity: sha512-PVb6Bg2QuscZ30FvOU7z4guG6c926D9YRvOxEaelzndpMsvP+YM74Q/dAFASpg2l6+XLalxSGxcq/lrgYWZtyQ==}
     dependencies:
@@ -1379,6 +1383,11 @@ packages:
 
   /@types/lodash/4.14.190:
     resolution: {integrity: sha512-5iJ3FBJBvQHQ8sFhEhJfjUP+G+LalhavTkYyrAYqz5MEJG+erSv0k9KJLb6q7++17Lafk1scaTIFXcMJlwK8Mw==}
+    dev: true
+
+  /@types/lodash/4.14.191:
+    resolution: {integrity: sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==}
+    dev: false
 
   /@types/mime/3.0.1:
     resolution: {integrity: sha512-Y4XFY5VJAuw0FgAqPNd6NNoV44jbq9Bz2L7Rh/J6jLTiHBSBJa9fxqQIvkIld4GsoDOcCbvzOUAbLPsSKKg+uA==}
@@ -1398,6 +1407,11 @@ packages:
 
   /@types/node/18.11.9:
     resolution: {integrity: sha512-CRpX21/kGdzjOpFsZSkcrXMGIBWMGNIHXXBVFSH+ggkftxg+XYP20TESbh+zFvFj3EQOl5byk0HTRn1IL6hbqg==}
+    dev: true
+
+  /@types/node/18.14.6:
+    resolution: {integrity: sha512-93+VvleD3mXwlLI/xASjw0FzKcwzl3OdTCzm1LaRfqgS21gfFtK3zDXM5Op9TeeMsJVOaJ2VRDpT9q4Y3d0AvA==}
+    dev: false
 
   /@types/prettier/2.7.1:
     resolution: {integrity: sha512-ri0UmynRRvZiiUJdiz38MmIblKK+oH30MztdBVR95dv/Ubw6neWSb8u1XpRb72L4qsZOhz+L+z9JD40SJmfWow==}
@@ -1676,6 +1690,10 @@ packages:
     resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
     engines: {node: '>=8'}
     dev: true
+
+  /async-lock/1.4.0:
+    resolution: {integrity: sha512-coglx5yIWuetakm3/1dsX9hxCNox22h7+V80RQOu2XUUMidtArxKoZoOtHUPuR84SycKTXzgGzAUR5hJxujyJQ==}
+    dev: false
 
   /babel-jest/28.1.3_@babel+core@7.20.2:
     resolution: {integrity: sha512-epUaPOEWMk3cWX0M/sPvCHHCe9fMFAa/9hXEgKP8nFfNl/jlGkE9ucq9NqkZGXLDduCJYS0UvSlPUwC0S+rH6Q==}
@@ -4345,6 +4363,11 @@ packages:
 
   /tslib/2.4.1:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
+    dev: true
+
+  /tslib/2.5.0:
+    resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
+    dev: false
 
   /tsutils/3.21.0_typescript@4.9.3:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
@@ -4560,12 +4583,14 @@ packages:
     engines: {node: '>=16.x'}
     requiresBuild: true
     dependencies:
-      '@types/lodash': 4.14.190
-      '@types/node': 18.11.9
+      '@types/async-lock': 1.4.0
+      '@types/lodash': 4.14.191
+      '@types/node': 18.14.6
+      async-lock: 1.4.0
       lodash: 4.17.21
       nanoid: 3.3.4
       rimraf: 3.0.2
-      tslib: 2.4.1
+      tslib: 2.5.0
       typescript: 4.9.3
       zod: 3.20.6
     dev: false

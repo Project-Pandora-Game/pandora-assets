@@ -22,6 +22,11 @@ DefineAsset({
 					name: 'Locked',
 					blockAddRemove: true,
 					switchMessage: 'SOURCE_CHARACTER clicked the dummy lock on ITEM_CONTAINER_SIMPLE_DYNAMIC shut.',
+					storeTime: true,
+					storeCharacter: true,
+					customText: [
+						'Locked by CHARACTER at TIME',
+					],
 				},
 			],
 		},

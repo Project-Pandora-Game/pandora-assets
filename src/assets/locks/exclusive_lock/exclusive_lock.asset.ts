@@ -23,6 +23,11 @@ DefineAsset({
 					blockAddRemove: true,
 					blockSelfModules: ['state'],
 					switchMessage: 'SOURCE_CHARACTER clicked the exclusive lock on ITEM_CONTAINER_SIMPLE_DYNAMIC shut.',
+					storeTime: true,
+					storeCharacter: true,
+					customText: [
+						'Locked by CHARACTER at TIME',
+					],
 				},
 			],
 		},
