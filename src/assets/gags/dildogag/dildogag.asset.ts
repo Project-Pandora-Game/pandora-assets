@@ -7,7 +7,7 @@ DefineAsset({
 	colorization: [
 		{
 			name: 'Gag',
-			default: '#6D6D6D',
+			default: '#484F5B',
 		},
 		{
 			name: 'Straps',

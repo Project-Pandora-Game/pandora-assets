@@ -9,6 +9,21 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
+			"colorizationIndex": 0,
+			"image": {
+				"image": "dildogag_dildo.png",
+				"overrides": []
+			},
+			"name": "dildo"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "ABOVE_BODY",
+			"points": "body",
+			"mirror": 0,
 			"image": {
 				"image": "dildogag_rings.png",
 				"overrides": []
@@ -57,21 +72,6 @@
 				]
 			},
 			"name": "harness straps"
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationIndex": 0,
-			"image": {
-				"image": "dildogag_dildo.png",
-				"overrides": []
-			},
-			"name": "dildo"
 		},
 		{
 			"x": 0,
