@@ -1,5 +1,3 @@
-import { FormatTimeInterval } from 'pandora-common';
-
 DefineAsset({
 	name: 'Flower Crown',
 	size: 'medium',
