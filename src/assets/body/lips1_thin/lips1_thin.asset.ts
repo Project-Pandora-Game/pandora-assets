@@ -47,6 +47,10 @@ DefineAsset({
 				{
 					id: 'laugh',
 					name: 'Open',
+					attributes: [
+						'Mouth_open_wide',
+						'Mouth_open_teeth',
+					],
 				},
 				{
 					id: 'open',

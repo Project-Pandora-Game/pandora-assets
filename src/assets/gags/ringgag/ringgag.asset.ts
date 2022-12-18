@@ -16,7 +16,10 @@ DefineAsset({
 		'Restraint',
 		'Restraint_mouth',
 	],
-	requirements: ['Mouth_open_wide'],
+	requirements: [
+		'Mouth_open_wide',
+		'!Mouth_open_teeth',
+	],
 	modules: {
 		lock: {
 			type: 'lockSlot',
