@@ -1,3 +1,5 @@
+import { ItemInteractionType } from 'pandora-common';
+
 DefineAsset({
 	name: 'Large Ball Gag',
 	size: 'medium',
@@ -28,6 +30,22 @@ DefineAsset({
 			occupiedEffects: {
 				blockAddRemove: true,
 			},
+		},
+		gagType: {
+			type: 'typed',
+			name: 'Gag Type',
+			interactionType: ItemInteractionType.ADD_REMOVE,
+			variants: [
+				{
+					id: 'standard',
+					name: 'Standard',
+					default: true,
+				},
+				{
+					id: 'thigh',
+					name: 'Harness',
+				},
+			],
 		},
 	},
 	effects: {

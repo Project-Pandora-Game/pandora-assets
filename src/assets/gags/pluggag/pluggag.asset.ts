@@ -1,3 +1,5 @@
+import { ItemInteractionType } from 'pandora-common';
+
 DefineAsset({
 	name: 'Plug Gag',
 	size: 'medium',
@@ -5,7 +7,7 @@ DefineAsset({
 	colorization: [
 		{
 			name: 'Gag',
-			default: '#65707C',
+			default: '#3C3E42',
 		},
 		{
 			name: 'Straps',
@@ -40,6 +42,22 @@ DefineAsset({
 			occupiedEffects: {
 				blockModules: ['plugState'],
 			},
+		},
+		gagType: {
+			type: 'typed',
+			name: 'Gag Type',
+			interactionType: ItemInteractionType.ADD_REMOVE,
+			variants: [
+				{
+					id: 'standard',
+					name: 'Standard',
+					default: true,
+				},
+				{
+					id: 'thigh',
+					name: 'Harness',
+				},
+			],
 		},
 		plugState: {
 			type: 'typed',

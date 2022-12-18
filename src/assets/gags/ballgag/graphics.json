@@ -38,6 +38,34 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
+			"colorizationIndex": 1,
+			"image": {
+				"image": "front_harness_straps.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "gagType",
+									"operator": "=",
+									"value": "standard"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "harness straps"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "ABOVE_BODY",
+			"points": "body",
+			"mirror": 0,
 			"colorizationIndex": 0,
 			"image": {
 				"image": "ballgag_ball.png",
