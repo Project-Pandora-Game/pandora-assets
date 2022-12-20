@@ -82,6 +82,7 @@ DefineAsset({
 				{
 					id: 'mouth',
 					name: 'Mouth Cover',
+					requirements: ['!Mouth_tongue_out'],
 				},
 				{
 					id: 'mouth_plug',
@@ -97,6 +98,10 @@ DefineAsset({
 					},
 					attributes: [
 						'Restraint_mouth',
+					],
+					requirements: [
+						'Mouth_open_wide',
+						'!Mouth_tongue_out',
 					],
 				},
 			],

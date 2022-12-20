@@ -227,7 +227,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"priority": "BODY",
+			"priority": "ABOVE_FRONT_HAIR",
 			"points": "static",
 			"mirror": 0,
 			"image": {

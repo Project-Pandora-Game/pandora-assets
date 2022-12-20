@@ -24,7 +24,6 @@ DefineAsset({
 	],
 	requirements: [
 		'Mouth_open_wide',
-		'!Mouth_tongue_out',
 	],
 	modules: {
 		lock: {
@@ -89,6 +88,7 @@ DefineAsset({
 						coherency: 5,
 						stimulus: 3,
 					},
+					requirements: ['!Mouth_tongue_out'],
 
 				},
 				{
@@ -103,6 +103,7 @@ DefineAsset({
 						coherency: 7,
 						stimulus: 6,
 					},
+					requirements: ['!Mouth_tongue_out'],
 				},
 			],
 		},
