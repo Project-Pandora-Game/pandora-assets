@@ -17,12 +17,22 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					armsPose: ArmsPose.FRONT,
 				},
 				{
-					name: 'Hanging front',
+					name: 'Hanging front 1',
 					pose: {
 						arm_r: 74,
 						arm_l: 74,
 						elbow_r: 22,
 						elbow_l: 22,
+					},
+					armsPose: ArmsPose.FRONT,
+				},
+				{
+					name: 'Hanging front 2',
+					pose: {
+						arm_r: 62,
+						arm_l: 62,
+						elbow_r: 37,
+						elbow_l: 37,
 					},
 					armsPose: ArmsPose.FRONT,
 				},
@@ -244,8 +254,8 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 				{
 					name: 'Arms folded behind',
 					pose: {
-						arm_r: 75,
-						arm_l: 75,
+						arm_r: 79,
+						arm_l: 79,
 						elbow_r: 98,
 						elbow_l: 98,
 					},
