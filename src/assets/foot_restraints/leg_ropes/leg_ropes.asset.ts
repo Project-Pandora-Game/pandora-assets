@@ -1,5 +1,3 @@
-import { ArmsPose } from 'pandora-common';
-
 DefineAsset({
 	name: 'Leg Ropes',
 	size: 'small',
