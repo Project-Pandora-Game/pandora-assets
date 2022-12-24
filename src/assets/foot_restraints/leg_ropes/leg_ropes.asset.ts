@@ -44,6 +44,18 @@ DefineAsset({
 						},
 					},
 				},
+				{
+					id: 'toes',
+					name: 'Complex with Toe Tie',
+					poseLimits: {
+						forcePose: {
+							leg_r: 2,
+							leg_l: 2,
+							sitting: 0,
+							kneeling: 0,
+						},
+					},
+				},
 			],
 		},
 	},

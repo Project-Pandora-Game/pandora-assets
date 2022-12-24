@@ -14,6 +14,18 @@
 				"image": "legs_basic.png",
 				"overrides": [
 					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"bone": "backView",
+									"operator": ">",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
 						"image": "legs_complex.png",
 						"condition": [
 							[
@@ -21,6 +33,18 @@
 									"module": "legTies",
 									"operator": "=",
 									"value": "complex"
+								}
+							]
+						]
+					},
+					{
+						"image": "legs_toes.png",
+						"condition": [
+							[
+								{
+									"module": "legTies",
+									"operator": "=",
+									"value": "toes"
 								}
 							]
 						]
@@ -43,6 +67,18 @@
 				"image": "legs_basic.png",
 				"overrides": [
 					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"bone": "backView",
+									"operator": "=",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
 						"image": "legs_complex.png",
 						"condition": [
 							[
@@ -50,6 +86,18 @@
 									"module": "legTies",
 									"operator": "=",
 									"value": "complex"
+								}
+							]
+						]
+					},
+					{
+						"image": "legs_toes_back.png",
+						"condition": [
+							[
+								{
+									"module": "legTies",
+									"operator": "=",
+									"value": "toes"
 								}
 							]
 						]
