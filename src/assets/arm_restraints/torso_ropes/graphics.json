@@ -11,23 +11,63 @@
 			"mirror": 0,
 			"colorizationIndex": 0,
 			"image": {
-				"image": "harness.png",
+				"image": "",
 				"overrides": [
 					{
-						"image": "",
+						"image": "harness.png",
 						"condition": [
 							[
 								{
 									"module": "harness",
 									"operator": "=",
-									"value": "no"
+									"value": "under"
 								}
 							]
 						]
 					}
 				]
 			},
-			"name": "harness front"
+			"name": "harness front under"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "ABOVE_BODY",
+			"points": "body",
+			"mirror": 0,
+			"colorizationIndex": 0,
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"bone": "backView",
+									"operator": ">",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "harness_over.png",
+						"condition": [
+							[
+								{
+									"module": "harness",
+									"operator": "=",
+									"value": "over"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "harness front over"
 		},
 		{
 			"x": 0,

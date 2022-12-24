@@ -25,8 +25,12 @@ DefineAsset({
 					default: true,
 				},
 				{
-					id: 'yes',
-					name: 'Yes',
+					id: 'under',
+					name: 'Front Side Under Clothes',
+				},
+				{
+					id: 'over',
+					name: 'Front Side Over Clothes',
 				},
 			],
 		},
