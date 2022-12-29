@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import { join } from 'path';
-import { GetLogger, SetConsoleOutput, LogLevel, AssetsDefinitionFile, AssetsGraphicsDefinitionFile, logConfig } from 'pandora-common';
+import { GetLogger, SetConsoleOutput, LogLevel, AssetsDefinitionFile, AssetsGraphicsDefinitionFile, logConfig, AssetDefinitionFileFeatures } from 'pandora-common';
 import { GlobalDefineAsset, SetCurrentContext } from './tools';
 import { AssetDatabase } from './tools/assetDatabase';
 import { CleanOldResources, ClearAllResources, DefineResourceInline, ExportAllResources, SetResourceDestinationDirectory } from './tools/resources';
@@ -38,8 +38,7 @@ logConfig.logOutputs.push({
 	},
 });
 
-// TODO: define this in pandora-common RESIZE, WEBP, AVIF, ...
-const features: string[] = [];
+const features: AssetDefinitionFileFeatures[] = [];
 
 if (IS_RESIZE_ENABLED) {
 	const convertPath = execSync('which convert').toString().trim();
@@ -151,7 +150,7 @@ async function Run() {
 		graphicsId: graphicsFile.hash,
 		attributes,
 		randomization: APPEARANCE_RANDOMIZATION_CONFIG,
-		// TODO: features,
+		features,
 	};
 	// Check bodyparts are valid
 	ValidateBodyparts(definitions);

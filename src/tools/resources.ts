@@ -228,6 +228,6 @@ export async function CleanOldResources(): Promise<void> {
 
 	await Promise.all(cleanup
 		.map((file) => join(destinationDirectory, file))
-		.map((file) => unlink(join(destinationDirectory, file))),
+		.map((file) => unlink(join(destinationDirectory, file)).catch(() => { /** ignore */ })),
 	);
 }
