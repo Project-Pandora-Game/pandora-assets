@@ -1,7 +1,7 @@
 import { GetLogger } from 'pandora-common';
 import { createHash } from 'crypto';
 import { readFileSync, statSync } from 'fs';
-import { writeFile, copyFile } from 'fs/promises';
+import { writeFile, copyFile, unlink, readdir, stat } from 'fs/promises';
 import { join, basename } from 'path';
 import { AssetSourcePath } from './context';
 import { WatchFile } from './watch';
@@ -23,43 +23,58 @@ const logger = GetLogger('Resources');
 
 const resources: Map<string, Resource> = new Map();
 
+let destinationDirectory = '';
+
+async function IsFile(path: string): Promise<boolean> {
+	try {
+		const result = await stat(path);
+		return result.isFile();
+	}
+	catch
+	{
+		return false;
+	}
+}
+
+export function SetResourceDestinationDirectory(path: string): void {
+	destinationDirectory = path;
+}
+
 export abstract class Resource {
 	public readonly resultName: string;
 	public readonly size: number;
 	public readonly hash: string;
+	public abstract readonly finished: Promise<void>;
 
 	constructor(resultName: string, size: number, hash: string) {
 		this.resultName = resultName;
 		this.size = size;
 		this.hash = hash;
+		resources.set(resultName, this);
 	}
-
-	public abstract export(destinationDirectory: string): Promise<void>;
 }
 
 class FileResource extends Resource {
-	public readonly sourcePath: string;
+	public readonly finished: Promise<void>;
 
 	constructor(resultName: string, size: number, hash: string, sourcePath: string) {
 		super(resultName, size, hash);
-		this.sourcePath = sourcePath;
-	}
-
-	public override export(destinationDirectory: string): Promise<void> {
-		return copyFile(this.sourcePath, join(destinationDirectory, this.resultName));
+		const dest = join(destinationDirectory, this.resultName);
+		this.finished = IsFile(dest)
+			.then(async (isFile) => {
+				if (!isFile) {
+					await copyFile(sourcePath, join(destinationDirectory, this.resultName));
+				}
+			});
 	}
 }
 
 class InlineResource extends Resource {
-	public readonly value: Buffer;
+	public readonly finished: Promise<void>;
 
 	constructor(resultName: string, hash: string, value: Buffer) {
 		super(resultName, value.byteLength, hash);
-		this.value = value;
-	}
-
-	public override export(destinationDirectory: string): Promise<void> {
-		return writeFile(join(destinationDirectory, this.resultName), this.value);
+		this.finished = writeFile(join(destinationDirectory, this.resultName), value);
 	}
 }
 
@@ -88,7 +103,6 @@ export function DefineResource(path: string): Resource {
 	const resultName = basename(sourcePath).replace(/(?=(?:\.[^.]*)?$)/, `_${hash}`);
 
 	const resource = new FileResource(resultName, size, hash, sourcePath);
-	resources.set(resultName, resource);
 
 	logger.debug(`Registered resource ${resultName}`);
 	return resource;
@@ -103,7 +117,6 @@ export function DefineResourceInline(name: string, value: string | Buffer): Reso
 	const resultName = name.replace(/(?=(?:\.[^.]*)?$)/, `_${hash}`);
 
 	const resource = new InlineResource(resultName, hash, value);
-	resources.set(resultName, resource);
 
 	logger.debug(`Registered resource ${resultName}`);
 	return resource;
@@ -136,7 +149,20 @@ export function ClearAllResources(): void {
 	resources.clear();
 }
 
-export async function ExportAllResources(destinationDirectory: string): Promise<void> {
+export async function ExportAllResources(): Promise<void> {
 	await Promise.all([...resources.values()]
-		.map((resource) => resource.export(destinationDirectory)));
+		.map((resource) => resource.finished));
+}
+
+export async function CleanOldResources(): Promise<void> {
+	const files = await readdir(destinationDirectory);
+	const cleanup = files
+		.filter((file) => !resources.has(file));
+
+	logger.debug(`Cleaning old resources: [\n\t${cleanup.join('\n\t')}\n]`);
+
+	await Promise.all(cleanup
+		.map((file) => join(destinationDirectory, file))
+		.map((file) => unlink(join(destinationDirectory, file)))
+	);
 }
