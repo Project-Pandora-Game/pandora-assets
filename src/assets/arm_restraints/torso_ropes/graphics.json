@@ -14,13 +14,25 @@
 				"image": "",
 				"overrides": [
 					{
+						"image": "harness_half.png",
+						"condition": [
+							[
+								{
+									"module": "harness",
+									"operator": "=",
+									"value": "underHalf"
+								}
+							]
+						]
+					},
+					{
 						"image": "harness.png",
 						"condition": [
 							[
 								{
 									"module": "harness",
 									"operator": "=",
-									"value": "under"
+									"value": "underFull"
 								}
 							]
 						]
@@ -54,13 +66,25 @@
 						]
 					},
 					{
+						"image": "harness_over_half.png",
+						"condition": [
+							[
+								{
+									"module": "harness",
+									"operator": "=",
+									"value": "overHalf"
+								}
+							]
+						]
+					},
+					{
 						"image": "harness_over.png",
 						"condition": [
 							[
 								{
 									"module": "harness",
 									"operator": "=",
-									"value": "over"
+									"value": "overFull"
 								}
 							]
 						]
@@ -131,16 +155,52 @@
 			"mirror": 0,
 			"colorizationIndex": 0,
 			"image": {
-				"image": "harness.png",
+				"image": "",
 				"overrides": [
 					{
-						"image": "",
+						"image": "harness_half.png",
 						"condition": [
 							[
 								{
 									"module": "harness",
 									"operator": "=",
-									"value": "no"
+									"value": "underHalf"
+								}
+							]
+						]
+					},
+					{
+						"image": "harness_half.png",
+						"condition": [
+							[
+								{
+									"module": "harness",
+									"operator": "=",
+									"value": "overHalf"
+								}
+							]
+						]
+					},
+					{
+						"image": "harness.png",
+						"condition": [
+							[
+								{
+									"module": "harness",
+									"operator": "=",
+									"value": "underFull"
+								}
+							]
+						]
+					},
+					{
+						"image": "harness.png",
+						"condition": [
+							[
+								{
+									"module": "harness",
+									"operator": "=",
+									"value": "overFull"
 								}
 							]
 						]

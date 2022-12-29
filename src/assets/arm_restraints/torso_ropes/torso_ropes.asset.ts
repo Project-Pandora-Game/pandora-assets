@@ -25,12 +25,20 @@ DefineAsset({
 					default: true,
 				},
 				{
-					id: 'under',
+					id: 'underHalf',
 					name: 'Front Side Under Clothes',
 				},
 				{
-					id: 'over',
+					id: 'overHalf',
 					name: 'Front Side Over Clothes',
+				},
+				{
+					id: 'underFull',
+					name: 'With Crotch Rope Under Clothes',
+				},
+				{
+					id: 'overFull',
+					name: 'With Crotch Rope Over Clothes',
 				},
 			],
 		},
