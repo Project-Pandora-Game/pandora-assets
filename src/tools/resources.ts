@@ -1,6 +1,7 @@
 import { GetLogger } from 'pandora-common';
 import { createHash } from 'crypto';
-import { readFileSync, writeFileSync, statSync, copyFileSync } from 'fs';
+import { readFileSync, statSync } from 'fs';
+import { writeFile, copyFile } from 'fs/promises';
 import { join, basename } from 'path';
 import { AssetSourcePath } from './context';
 import { WatchFile } from './watch';
@@ -33,7 +34,7 @@ export abstract class Resource {
 		this.hash = hash;
 	}
 
-	public abstract export(destinationDirectory: string): void;
+	public abstract export(destinationDirectory: string): Promise<void>;
 }
 
 class FileResource extends Resource {
@@ -44,8 +45,8 @@ class FileResource extends Resource {
 		this.sourcePath = sourcePath;
 	}
 
-	public override export(destinationDirectory: string): void {
-		copyFileSync(this.sourcePath, join(destinationDirectory, this.resultName));
+	public override export(destinationDirectory: string): Promise<void> {
+		return copyFile(this.sourcePath, join(destinationDirectory, this.resultName));
 	}
 }
 
@@ -57,8 +58,8 @@ class InlineResource extends Resource {
 		this.value = value;
 	}
 
-	public override export(destinationDirectory: string): void {
-		writeFileSync(join(destinationDirectory, this.resultName), this.value);
+	public override export(destinationDirectory: string): Promise<void> {
+		return writeFile(join(destinationDirectory, this.resultName), this.value);
 	}
 }
 
@@ -135,8 +136,7 @@ export function ClearAllResources(): void {
 	resources.clear();
 }
 
-export function ExportAllResources(destinationDirectory: string): void {
-	for (const resource of resources.values()) {
-		resource.export(destinationDirectory);
-	}
+export async function ExportAllResources(destinationDirectory: string): Promise<void> {
+	await Promise.all([...resources.values()]
+		.map((resource) => resource.export(destinationDirectory)));
 }

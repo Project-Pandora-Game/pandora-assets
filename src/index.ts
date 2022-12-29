@@ -1,4 +1,5 @@
 import * as fs from 'fs';
+import { writeFile } from 'fs/promises';
 import { join } from 'path';
 import { GetLogger, SetConsoleOutput, LogLevel, AssetsDefinitionFile, AssetsGraphicsDefinitionFile, logConfig } from 'pandora-common';
 import { GlobalDefineAsset, SetCurrentContext } from './tools';
@@ -146,8 +147,10 @@ async function Run() {
 
 	const definitionsFile = DefineResourceInline('assets.json', JSON.stringify(definitions));
 
-	ExportAllResources(OUT_DIR);
-	fs.writeFileSync(join(OUT_DIR, 'current'), `${definitionsFile.hash}\n`);
+	await Promise.all([
+		ExportAllResources(DEST_DIR),
+		writeFile(join(OUT_DIR, 'current'), `${definitionsFile.hash}\n`),
+	]);
 
 	logger.info('Done!');
 }
