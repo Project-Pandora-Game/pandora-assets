@@ -8,7 +8,7 @@ import { RunDev } from './tools/watch';
 import { boneDefinition } from './bones';
 import { GraphicsDatabase } from './tools/graphicsDatabase';
 import { BODYPARTS, ValidateBodyparts } from './bodyparts';
-import { ASSET_DEST_DIR, ASSET_SRC_DIR, OUT_DIR, IS_PRODUCTION_BUILD } from './constants';
+import { ASSET_DEST_DIR, ASSET_SRC_DIR, OUT_DIR, IS_PRODUCTION_BUILD, IS_RESIZE_ENABLED } from './constants';
 import { LoadTemplates } from './templates';
 import { POSE_PRESETS } from './posePresets';
 import { LoadGitData } from './tools/git';
@@ -17,6 +17,7 @@ import { LoadBackgrounds } from './backgrounds/backgrounds';
 import { LoadAttributes } from './attributes';
 import { APPEARANCE_RANDOMIZATION_CONFIG } from './presets';
 import { ASSET_SLOTS } from './slots';
+import { execSync } from 'node:child_process';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.VERBOSE);
@@ -36,6 +37,18 @@ logConfig.logOutputs.push({
 		}
 	},
 });
+
+// TODO: define this in pandora-common RESIZE, WEBP, AVIF, ...
+const features: string[] = [];
+
+if (IS_RESIZE_ENABLED) {
+	const convertPath = execSync('which convert').toString().trim();
+	if (!convertPath) {
+		logger.fatal('ImageMagick is not installed. Either install it or disable this feature');
+		process.exit(1);
+	}
+	features.push('RESIZE');
+}
 
 async function Run() {
 	logger.info('Building...');
@@ -139,6 +152,7 @@ async function Run() {
 		graphicsId: graphicsFile.hash,
 		attributes,
 		randomization: APPEARANCE_RANDOMIZATION_CONFIG,
+		// TODO: features,
 	};
 	// Check bodyparts are valid
 	ValidateBodyparts(definitions);

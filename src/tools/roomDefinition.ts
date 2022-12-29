@@ -7,6 +7,9 @@ import * as fs from 'fs';
 import { RoomDatabase } from './roomDatabase';
 import { DefineJpgResource } from './resources';
 
+const PREVIEW_WIDTH = 200;
+const PREVIEW_HEIGHT = 100;
+
 export function DefineRoomBackground(def: IntermediateRoomBackgroundDefinition): void {
 	const id = def.id;
 
@@ -82,10 +85,13 @@ export function DefineRoomBackground(def: IntermediateRoomBackgroundDefinition):
 		return;
 	}
 
+	const image = DefineJpgResource(def.image, 'background');
+	image.AddResizedImage(PREVIEW_WIDTH, PREVIEW_HEIGHT, 'prv');
+
 	const background: IChatroomBackgroundInfo = {
 		id,
 		name: def.name,
-		image: DefineJpgResource(def.image, 'background').resultName,
+		image: image.resultName,
 		size: def.size,
 		scaling: def.scaling,
 		maxY: def.maxY,

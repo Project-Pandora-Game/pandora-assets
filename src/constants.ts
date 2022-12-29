@@ -23,3 +23,5 @@ export const ASSET_DEST_DIR = join(DEST_DIR, 'assets');
 export const OUT_DIR = join(BASE_DIR, 'out');
 
 export const IS_PRODUCTION_BUILD = process.env.NODE_ENV === 'production' || process.argv.includes('--prod');
+
+export const IS_RESIZE_ENABLED = process.env.RESIZE_ENABLED === 'true' || process.argv.includes('--resize');

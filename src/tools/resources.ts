@@ -5,6 +5,8 @@ import { writeFile, copyFile, unlink, readdir, stat } from 'fs/promises';
 import { join, basename } from 'path';
 import { AssetSourcePath } from './context';
 import { WatchFile } from './watch';
+import { spawn } from 'node:child_process';
+import { IS_RESIZE_ENABLED } from '../constants';
 
 export type ImageCategory = 'asset' | 'background';
 
@@ -64,6 +66,7 @@ class FileResource extends Resource {
 	private process: Promise<void>[] = [];
 	protected readonly baseName: string;
 	protected readonly extension: string;
+	protected readonly sourcePath: string;
 
 	public get finished(): Promise<void> {
 		return Promise.all(this.process).then(() => { });
@@ -84,6 +87,7 @@ class FileResource extends Resource {
 
 		super(resultName, size, hash);
 
+		this.sourcePath = sourcePath;
 		this.baseName = resultName.replace(/(?=(?:\.[^.]*)?$)/, '');
 		this.extension = resultName.replace(/^[^.]*\./, '');
 
@@ -118,12 +122,25 @@ class ImageResource extends FileResource implements IImageResource {
 	}
 
 	public AddResizedImage(_maxWidth: number, _maxHeight: number, suffix: string) {
+		if (!IS_RESIZE_ENABLED) {
+			return;
+		}
 		const name = `${this.baseName}_${suffix}.${this.extension}`;
 		resourceFiles.add(name);
 		this.AddProcess(async () => {
 			const dest = join(destinationDirectory, name);
 			if (await IsFile(dest)) return;
-			// TODO: Resize image
+			await new Promise<void>((resolve, reject) => {
+				const convert = spawn('convert', [this.sourcePath, '-resize', `${_maxWidth}x${_maxHeight}`, dest]);
+				convert.on('exit', (code) => {
+					if (code === 0) {
+						resolve();
+					}
+					else {
+						reject(new Error(`Failed to resize image ${this.resultName}, exit code ${code}`));
+					}
+				});
+			});
 		});
 	}
 }
