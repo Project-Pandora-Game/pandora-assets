@@ -32,9 +32,7 @@ async function IsFile(path: string): Promise<boolean> {
 	try {
 		const result = await stat(path);
 		return result.isFile();
-	}
-	catch
-	{
+	} catch {
 		return false;
 	}
 }
@@ -47,7 +45,6 @@ export abstract class Resource {
 	public readonly resultName: string;
 	public readonly size: number;
 	public readonly hash: string;
-	public abstract readonly finished: Promise<void>;
 
 	constructor(resultName: string, size: number, hash: string) {
 		this.resultName = resultName;
@@ -56,10 +53,12 @@ export abstract class Resource {
 		resources.set(resultName, this);
 		resourceFiles.add(resultName);
 	}
+
+	public abstract finalize(): Promise<void>;
 }
 
 export interface IImageResource extends Resource {
-	AddResizedImage(maxWidth: number, maxHeight: number, suffix: string): void;
+	addResizedImage(maxWidth: number, maxHeight: number, suffix: string): void;
 }
 
 class FileResource extends Resource {
@@ -67,10 +66,6 @@ class FileResource extends Resource {
 	protected readonly baseName: string;
 	protected readonly extension: string;
 	protected readonly sourcePath: string;
-
-	public get finished(): Promise<void> {
-		return Promise.all(this.process).then(() => { });
-	}
 
 	constructor(path: string) {
 		const sourcePath = join(AssetSourcePath, path);
@@ -88,7 +83,7 @@ class FileResource extends Resource {
 		super(resultName, size, hash);
 
 		this.sourcePath = sourcePath;
-		this.baseName = resultName.replace(/(?=(?:\.[^.]*)?$)/, '');
+		this.baseName = resultName.replace(/\.[^.]*$/, '');
 		this.extension = resultName.replace(/^[^.]*\./, '');
 
 		const dest = join(destinationDirectory, this.resultName);
@@ -101,17 +96,25 @@ class FileResource extends Resource {
 			}));
 	}
 
-	protected AddProcess(process: () => Promise<void>): void {
+	public async finalize(): Promise<void> {
+		await Promise.all(this.process) as unknown as Promise<void>;
+	}
+
+	protected addProcess(process: () => Promise<void>): void {
 		this.process.push(process());
 	}
 }
 
 class InlineResource extends Resource {
-	public readonly finished: Promise<void>;
+	private readonly finished: Promise<void>;
 
 	constructor(resultName: string, hash: string, value: Buffer) {
 		super(resultName, value.byteLength, hash);
 		this.finished = writeFile(join(destinationDirectory, this.resultName), value);
+	}
+
+	public async finalize(): Promise<void> {
+		await this.finished;
 	}
 }
 
@@ -121,13 +124,13 @@ class ImageResource extends FileResource implements IImageResource {
 		CheckMaxSize(this, path, category);
 	}
 
-	public AddResizedImage(_maxWidth: number, _maxHeight: number, suffix: string) {
+	public addResizedImage(_maxWidth: number, _maxHeight: number, suffix: string) {
+		const name = `${this.baseName}_${suffix}.${this.extension}`;
+		resourceFiles.add(name);
 		if (!IS_RESIZE_ENABLED) {
 			return;
 		}
-		const name = `${this.baseName}_${suffix}.${this.extension}`;
-		resourceFiles.add(name);
-		this.AddProcess(async () => {
+		this.addProcess(async () => {
 			const dest = join(destinationDirectory, name);
 			if (await IsFile(dest)) return;
 			await new Promise<void>((resolve, reject) => {
@@ -135,9 +138,8 @@ class ImageResource extends FileResource implements IImageResource {
 				convert.on('exit', (code) => {
 					if (code === 0) {
 						resolve();
-					}
-					else {
-						reject(new Error(`Failed to resize image ${this.resultName}, exit code ${code}`));
+					} else {
+						reject(new Error(`Failed to resize image ${this.resultName}, exit code ${code?.toString() ?? 'unknown'}`));
 					}
 				});
 			});
@@ -209,22 +211,23 @@ export function DefineJpgResource(name: string, category: ImageCategory): IImage
 
 export function ClearAllResources(): void {
 	resources.clear();
+	resourceFiles.clear();
 }
 
 export async function ExportAllResources(): Promise<void> {
 	await Promise.all([...resources.values()]
-		.map((resource) => resource.finished));
+		.map((resource) => resource.finalize()));
 }
 
 export async function CleanOldResources(): Promise<void> {
 	const files = await readdir(destinationDirectory);
 	const cleanup = files
-		.filter((file) => !resources.has(file));
+		.filter((file) => !resourceFiles.has(file));
 
 	logger.debug(`Cleaning old resources: [\n\t${cleanup.join('\n\t')}\n]`);
 
 	await Promise.all(cleanup
 		.map((file) => join(destinationDirectory, file))
-		.map((file) => unlink(join(destinationDirectory, file)))
+		.map((file) => unlink(join(destinationDirectory, file))),
 	);
 }

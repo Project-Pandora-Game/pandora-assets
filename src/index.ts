@@ -138,7 +138,6 @@ async function Run() {
 
 	logger.info('Exporting result...');
 
-
 	const graphics: AssetsGraphicsDefinitionFile = GraphicsDatabase.export();
 	const graphicsFile = DefineResourceInline('graphics.json', JSON.stringify(graphics));
 
