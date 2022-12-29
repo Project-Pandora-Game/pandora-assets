@@ -22,6 +22,7 @@ const MAX_SIZES: Record<ImageCategory, { bytes: number; text: string; }> = {
 const logger = GetLogger('Resources');
 
 const resources: Map<string, Resource> = new Map();
+const resourceFiles: Set<string> = new Set();
 
 let destinationDirectory = '';
 
@@ -51,21 +52,53 @@ export abstract class Resource {
 		this.size = size;
 		this.hash = hash;
 		resources.set(resultName, this);
+		resourceFiles.add(resultName);
 	}
 }
 
-class FileResource extends Resource {
-	public readonly finished: Promise<void>;
+export interface IImageResource extends Resource {
+	AddResizedImage(maxWidth: number, maxHeight: number, suffix: string): void;
+}
 
-	constructor(resultName: string, size: number, hash: string, sourcePath: string) {
+class FileResource extends Resource {
+	private process: Promise<void>[] = [];
+	protected readonly baseName: string;
+	protected readonly extension: string;
+
+	public get finished(): Promise<void> {
+		return Promise.all(this.process).then(() => { });
+	}
+
+	constructor(path: string) {
+		const sourcePath = join(AssetSourcePath, path);
+
+		if (!statSync(sourcePath).isFile()) {
+			throw new Error(`Resource ${path} not found (looking for '${sourcePath}')`);
+		}
+
+		WatchFile(sourcePath);
+
+		const hash = GetResourceFileHash(sourcePath);
+		const size = GetResourceFileSize(sourcePath);
+		const resultName = basename(sourcePath).replace(/(?=(?:\.[^.]*)?$)/, `_${hash}`);
+
 		super(resultName, size, hash);
+
+		this.baseName = resultName.replace(/(?=(?:\.[^.]*)?$)/, '');
+		this.extension = resultName.replace(/^[^.]*\./, '');
+
 		const dest = join(destinationDirectory, this.resultName);
-		this.finished = IsFile(dest)
+
+		this.process.push(IsFile(dest)
 			.then(async (isFile) => {
 				if (!isFile) {
 					await copyFile(sourcePath, join(destinationDirectory, this.resultName));
 				}
-			});
+			}));
+	}
+
+	protected AddProcess(process: () => Promise<void>): void {
+		this.process.push(process());
 	}
 }
 
@@ -75,6 +108,23 @@ class InlineResource extends Resource {
 	constructor(resultName: string, hash: string, value: Buffer) {
 		super(resultName, value.byteLength, hash);
 		this.finished = writeFile(join(destinationDirectory, this.resultName), value);
+	}
+}
+
+class ImageResource extends FileResource implements IImageResource {
+	constructor(path: string, category: ImageCategory) {
+		super(path);
+		CheckMaxSize(this, path, category);
+	}
+
+	public AddResizedImage(_maxWidth: number, _maxHeight: number, suffix: string) {
+		const name = `${this.baseName}_${suffix}.${this.extension}`;
+		resourceFiles.add(name);
+		this.AddProcess(async () => {
+			const dest = join(destinationDirectory, name);
+			if (await IsFile(dest)) return;
+			// TODO: Resize image
+		});
 	}
 }
 
@@ -91,20 +141,8 @@ export function GetResourceFileSize(path: string): number {
 }
 
 export function DefineResource(path: string): Resource {
-	const sourcePath = join(AssetSourcePath, path);
-	if (!statSync(sourcePath).isFile()) {
-		throw new Error(`Resource ${path} not found (looking for '${sourcePath}')`);
-	}
-
-	WatchFile(sourcePath);
-
-	const hash = GetResourceFileHash(sourcePath);
-	const size = GetResourceFileSize(sourcePath);
-	const resultName = basename(sourcePath).replace(/(?=(?:\.[^.]*)?$)/, `_${hash}`);
-
-	const resource = new FileResource(resultName, size, hash, sourcePath);
-
-	logger.debug(`Registered resource ${resultName}`);
+	const resource = new FileResource(path);
+	logger.debug(`Registered resource ${resource.resultName}`);
 	return resource;
 }
 
@@ -129,18 +167,25 @@ function CheckMaxSize(resource: Resource, name: string, category: ImageCategory)
 	}
 }
 
-export function DefinePngResource(name: string, category: ImageCategory): Resource {
-	const resource = DefineResource(name);
+export function DefinePngResource(name: string, category: ImageCategory): IImageResource {
+	if (!name.endsWith('.png')) {
+		throw new Error(`Resource ${name} is not a PNG file.`);
+	}
 
-	CheckMaxSize(resource, name, category);
+	const resource = new ImageResource(name, category);
+
+	logger.debug(`Registered resource ${resource.resultName}`);
 
 	return resource;
 }
 
-export function DefineJpgResource(name: string, category: ImageCategory): Resource {
-	const resource = DefineResource(name);
+export function DefineJpgResource(name: string, category: ImageCategory): IImageResource {
+	if (!name.endsWith('.jpg')) {
+		throw new Error(`Resource ${name} is not a JPG file.`);
+	}
+	const resource = new ImageResource(name, category);
 
-	CheckMaxSize(resource, name, category);
+	logger.debug(`Registered resource ${resource.resultName}`);
 
 	return resource;
 }
