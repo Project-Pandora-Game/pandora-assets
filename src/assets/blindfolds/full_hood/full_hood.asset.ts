@@ -105,6 +105,7 @@ DefineAsset({
 						'!Mouth_tongue_out',
 					],
 					occupies: ['mouth'],
+					occupySlots: ['mouth_10'],
 				},
 			],
 		},
