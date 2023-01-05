@@ -53,4 +53,4 @@ jobs:
           node-version: '16'
       - run: pnpm install --frozen-lockfile
       - run: pnpm run type-check:test
-      - run: pnpm run test
+      - run: pnpm run test --ci
