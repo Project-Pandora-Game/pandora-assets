@@ -31,7 +31,9 @@
 				"command": "pnpm.cmd"
 			},
 			"args": [
-				"install"
+				"install",
+				"--frozen-lockfile",
+				"--prefer-offline"
 			],
 			"presentation": {
 				"echo": true,
@@ -45,14 +47,17 @@
 			"problemMatcher": []
 		},
 		{
-			"label": "pnpm: rebuild",
+			"label": "pnpm: reinstall",
 			"type": "process",
 			"command": "pnpm",
 			"windows": {
 				"command": "pnpm.cmd"
 			},
 			"args": [
-				"rebuild"
+				"install",
+				"--force",
+				"--frozen-lockfile",
+				"--prefer-offline"
 			],
 			"presentation": {
 				"echo": true,
