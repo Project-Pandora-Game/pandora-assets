@@ -124,7 +124,7 @@ class ImageResource extends FileResource implements IImageResource {
 		CheckMaxSize(this, path, category);
 	}
 
-	public addResizedImage(_maxWidth: number, _maxHeight: number, suffix: string): string {
+	public addResizedImage(maxWidth: number, maxHeight: number, suffix: string): string {
 		const name = `${this.baseName}_${suffix}.${this.extension}`;
 		resourceFiles.add(name);
 		if (!IS_PRODUCTION_BUILD) {
@@ -136,7 +136,7 @@ class ImageResource extends FileResource implements IImageResource {
 				return;
 
 			await sharp(this.sourcePath)
-				.resize(_maxWidth, _maxHeight)
+				.resize(maxWidth, maxHeight)
 				.toFile(dest);
 		});
 		return name;
