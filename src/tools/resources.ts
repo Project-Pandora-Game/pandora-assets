@@ -7,6 +7,7 @@ import { AssetSourcePath } from './context';
 import { WatchFile } from './watch';
 import { spawn } from 'node:child_process';
 import { IS_RESIZE_ENABLED } from '../constants';
+import sharp from 'sharp';
 
 export type ImageCategory = 'asset' | 'background';
 
@@ -132,17 +133,12 @@ class ImageResource extends FileResource implements IImageResource {
 		}
 		this.addProcess(async () => {
 			const dest = join(destinationDirectory, name);
-			if (await IsFile(dest)) return;
-			await new Promise<void>((resolve, reject) => {
-				const convert = spawn('convert', [this.sourcePath, '-resize', `${_maxWidth}x${_maxHeight}`, dest]);
-				convert.on('exit', (code) => {
-					if (code === 0) {
-						resolve();
-					} else {
-						reject(new Error(`Failed to resize image ${this.resultName}, exit code ${code?.toString() ?? 'unknown'}`));
-					}
-				});
-			});
+			if (await IsFile(dest))
+				return;
+
+			await sharp(this.sourcePath)
+				.resize(_maxWidth, _maxHeight)
+				.toFile(dest);
 		});
 		return name;
 	}

@@ -17,7 +17,6 @@ import { LoadBackgrounds } from './backgrounds/backgrounds';
 import { LoadAttributes } from './attributes';
 import { APPEARANCE_RANDOMIZATION_CONFIG } from './presets';
 import { ASSET_SLOTS } from './slots';
-import { execSync } from 'node:child_process';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.VERBOSE);
@@ -37,14 +36,6 @@ logConfig.logOutputs.push({
 		}
 	},
 });
-
-if (IS_RESIZE_ENABLED) {
-	const convertPath = execSync('which convert').toString().trim();
-	if (!convertPath) {
-		logger.fatal('ImageMagick is not installed. Either install it or disable this feature');
-		process.exit(1);
-	}
-}
 
 async function Run() {
 	logger.info('Building...');
