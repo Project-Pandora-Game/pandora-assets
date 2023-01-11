@@ -5,8 +5,7 @@ import { writeFile, copyFile, unlink, readdir, stat } from 'fs/promises';
 import { join, basename } from 'path';
 import { AssetSourcePath } from './context';
 import { WatchFile } from './watch';
-import { spawn } from 'node:child_process';
-import { IS_RESIZE_ENABLED } from '../constants';
+import { IS_PRODUCTION_BUILD } from '../constants';
 import sharp from 'sharp';
 
 export type ImageCategory = 'asset' | 'background';
@@ -128,7 +127,7 @@ class ImageResource extends FileResource implements IImageResource {
 	public addResizedImage(_maxWidth: number, _maxHeight: number, suffix: string): string {
 		const name = `${this.baseName}_${suffix}.${this.extension}`;
 		resourceFiles.add(name);
-		if (!IS_RESIZE_ENABLED) {
+		if (!IS_PRODUCTION_BUILD) {
 			return this.resultName;
 		}
 		this.addProcess(async () => {
