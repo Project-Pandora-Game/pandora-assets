@@ -86,12 +86,13 @@ export function DefineRoomBackground(def: IntermediateRoomBackgroundDefinition):
 	}
 
 	const image = DefineJpgResource(def.image, 'background');
-	image.addResizedImage(PREVIEW_WIDTH, PREVIEW_HEIGHT, 'prv');
+	const preview = image.addResizedImage(PREVIEW_WIDTH, PREVIEW_HEIGHT, `_${PREVIEW_WIDTH}x${PREVIEW_HEIGHT}_prv`);
 
 	const background: IChatroomBackgroundInfo = {
 		id,
 		name: def.name,
 		image: image.resultName,
+		preview,
 		size: def.size,
 		scaling: def.scaling,
 		maxY: def.maxY,

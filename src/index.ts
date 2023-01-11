@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import { join } from 'path';
-import { GetLogger, SetConsoleOutput, LogLevel, AssetsDefinitionFile, AssetsGraphicsDefinitionFile, logConfig, AssetDefinitionFileFeatures } from 'pandora-common';
+import { GetLogger, SetConsoleOutput, LogLevel, AssetsDefinitionFile, AssetsGraphicsDefinitionFile, logConfig } from 'pandora-common';
 import { GlobalDefineAsset, SetCurrentContext } from './tools';
 import { AssetDatabase } from './tools/assetDatabase';
 import { CleanOldResources, ClearAllResources, DefineResourceInline, ExportAllResources, SetResourceDestinationDirectory } from './tools/resources';
@@ -38,15 +38,12 @@ logConfig.logOutputs.push({
 	},
 });
 
-const features: AssetDefinitionFileFeatures[] = [];
-
 if (IS_RESIZE_ENABLED) {
 	const convertPath = execSync('which convert').toString().trim();
 	if (!convertPath) {
 		logger.fatal('ImageMagick is not installed. Either install it or disable this feature');
 		process.exit(1);
 	}
-	features.push('RESIZE');
 }
 
 async function Run() {
@@ -150,7 +147,6 @@ async function Run() {
 		graphicsId: graphicsFile.hash,
 		attributes,
 		randomization: APPEARANCE_RANDOMIZATION_CONFIG,
-		features,
 	};
 	// Check bodyparts are valid
 	ValidateBodyparts(definitions);

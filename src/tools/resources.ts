@@ -58,7 +58,7 @@ export abstract class Resource {
 }
 
 export interface IImageResource extends Resource {
-	addResizedImage(maxWidth: number, maxHeight: number, suffix: string): void;
+	addResizedImage(maxWidth: number, maxHeight: number, suffix: string): string;
 }
 
 class FileResource extends Resource {
@@ -124,11 +124,11 @@ class ImageResource extends FileResource implements IImageResource {
 		CheckMaxSize(this, path, category);
 	}
 
-	public addResizedImage(_maxWidth: number, _maxHeight: number, suffix: string) {
+	public addResizedImage(_maxWidth: number, _maxHeight: number, suffix: string): string {
 		const name = `${this.baseName}_${suffix}.${this.extension}`;
 		resourceFiles.add(name);
 		if (!IS_RESIZE_ENABLED) {
-			return;
+			return this.resultName;
 		}
 		this.addProcess(async () => {
 			const dest = join(destinationDirectory, name);
@@ -144,6 +144,7 @@ class ImageResource extends FileResource implements IImageResource {
 				});
 			});
 		});
+		return name;
 	}
 }
 
