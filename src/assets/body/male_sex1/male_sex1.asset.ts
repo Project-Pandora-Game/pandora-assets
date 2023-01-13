@@ -33,18 +33,18 @@ DefineAsset({
 					id: 'flaccid',
 					name: "Flaccid",
 					default: true,
-					attributes: ['Flaccid_Penis']
+					attributes: ['Flaccid_Penis'],
 				},
 				{
 					id: 'erect',
 					name: "Erect",
-					attributes: ['Erect_Penis']
-				}
+					attributes: ['Erect_Penis'],
+				},
 			]
 		}
 	},
 	ownership: {
-		responsibleContributor: 'Ayesha-678 <ayeshafox44@gmail.com>',
+		responsibleContributor: 'Ayesha <ayeshafox44@gmail.com>',
 		credits: ['Ayesha'],
 		modificationPolicy: 'Ask first',
 		reusePolicy: 'Ask first',
