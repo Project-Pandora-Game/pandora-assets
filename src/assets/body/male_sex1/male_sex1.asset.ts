@@ -29,13 +29,13 @@ DefineAsset({
 			variants: [
 				{
 					id: 'flaccid',
-					name: "Flaccid",
+					name: 'Flaccid',
 					default: true,
 					attributes: ['Flaccid_Penis'],
 				},
 				{
 					id: 'erect',
-					name: "Erect",
+					name: 'Erect',
 					attributes: ['Erect_Penis'],
 				},
 			],
