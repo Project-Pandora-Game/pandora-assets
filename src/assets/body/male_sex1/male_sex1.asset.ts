@@ -1,4 +1,3 @@
-
 import { ItemInteractionType } from 'pandora-common';
 
 DefineAsset({
