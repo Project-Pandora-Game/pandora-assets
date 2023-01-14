@@ -11,7 +11,7 @@
 			"mirror": 0,
 			"colorizationIndex": 0,
 			"image": {
-				"image": "Balls.png",
+				"image": "balls.png",
 				"overrides": []
 			},
 			"name": "Balls"
@@ -26,14 +26,14 @@
 			"mirror": 0,
 			"colorizationIndex": 1,
 			"image": {
-				"image": "Glans_Flaccid.png",
+				"image": "glans_flaccid.png",
 				"overrides": [
 					{
-						"image": "Glans_Erect.png",
+						"image": "glans_erect.png",
 						"condition": [
 							[
 								{
-									"module": "Penis",
+									"module": "penis",
 									"operator": "=",
 									"value": "erect"
 								}
@@ -54,14 +54,14 @@
 			"mirror": 0,
 			"colorizationIndex": 0,
 			"image": {
-				"image": "Shaft_Flaccid.png",
+				"image": "shaft_flaccid.png",
 				"overrides": [
 					{
-						"image": "Shaft_Erect.png",
+						"image": "shaft_erect.png",
 						"condition": [
 							[
 								{
-									"module": "Penis",
+									"module": "penis",
 									"operator": "=",
 									"value": "erect"
 								}
