@@ -8,11 +8,11 @@ DefineAsset({
 	colorization: [
 		{
 			name: 'Penis',
-			default: '#FFFFFF',
+			default: '#FDDFD0',
 		},
 		{
 			name: 'Glans',
-			default: '#FFFFFF',
+			default: '#E2B4B0',
 		},
 	],
 	attributes: [
