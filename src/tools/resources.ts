@@ -143,6 +143,7 @@ class ImageResource extends FileResource implements IImageResource {
 	public addResizedImage(maxWidth: number, maxHeight: number, suffix: string): string {
 		// TODO: incase this is a duplicate and we using a different size, we should call addProcess on the original
 		const name = `${this.baseName}_${suffix}.${this.extension}`;
+		// Prevent the generated source from being deleted, even if we are not doing a production build
 		resourceFiles.add(name);
 		if (!IS_PRODUCTION_BUILD) {
 			return this.resultName;
