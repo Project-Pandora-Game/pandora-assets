@@ -20,7 +20,6 @@ import { ASSET_SLOTS } from './slots';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.VERBOSE);
-SetResourceDestinationDirectory(OUT_DIR);
 
 let hadErrors = false;
 let hadWarnings = false;
@@ -42,6 +41,7 @@ async function Run() {
 
 	// Setup environment
 	globalThis.DefineAsset = GlobalDefineAsset;
+	SetResourceDestinationDirectory(OUT_DIR);
 
 	// Clear old data
 	hadErrors = false;

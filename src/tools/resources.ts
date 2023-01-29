@@ -45,13 +45,18 @@ export abstract class Resource {
 	public readonly resultName: string;
 	public readonly size: number;
 	public readonly hash: string;
+	protected readonly duplicate: boolean;
 
 	constructor(resultName: string, size: number, hash: string) {
 		this.resultName = resultName;
 		this.size = size;
 		this.hash = hash;
-		resources.set(resultName, this);
-		resourceFiles.add(resultName);
+
+		this.duplicate = resources.has(resultName);
+		if (!this.duplicate) {
+			resources.set(resultName, this);
+			resourceFiles.add(resultName);
+		}
 	}
 
 	public abstract finalize(): Promise<void>;
@@ -74,34 +79,41 @@ class FileResource extends Resource {
 			throw new Error(`Resource ${path} not found (looking for '${sourcePath}')`);
 		}
 
-		WatchFile(sourcePath);
-
 		const hash = GetResourceFileHash(sourcePath);
 		const size = GetResourceFileSize(sourcePath);
 		const resultName = basename(sourcePath).replace(/(?=(?:\.[^.]*)?$)/, `_${hash}`);
 
 		super(resultName, size, hash);
 
+		if (!this.duplicate) {
+			WatchFile(sourcePath);
+		}
+
 		this.sourcePath = sourcePath;
 		this.baseName = resultName.replace(/\.[^.]*$/, '');
-		this.extension = resultName.replace(/^[^.]*\./, '');
+		this.extension = resultName.replace(/^.*\.([^.]+)$/, '$1');
 
 		const dest = join(destinationDirectory, this.resultName);
-
-		this.process.push(IsFile(dest)
+		this.addProcess(IsFile(dest)
 			.then(async (isFile) => {
 				if (!isFile) {
-					await copyFile(sourcePath, join(destinationDirectory, this.resultName));
+					await copyFile(sourcePath, dest);
 				}
 			}));
 	}
 
 	public async finalize(): Promise<void> {
-		await Promise.all(this.process) as unknown as Promise<void>;
+		await Promise.all(this.process);
 	}
 
-	protected addProcess(process: () => Promise<void>): void {
-		this.process.push(process());
+	protected addProcess(process: Promise<void> | (() => Promise<void>)): void {
+		if (this.duplicate) {
+			return;
+		}
+		if (typeof process === 'function') {
+			process = process();
+		}
+		this.process.push(process);
 	}
 }
 
@@ -110,7 +122,11 @@ class InlineResource extends Resource {
 
 	constructor(resultName: string, hash: string, value: Buffer) {
 		super(resultName, value.byteLength, hash);
-		this.finished = writeFile(join(destinationDirectory, this.resultName), value);
+		if (this.duplicate) {
+			this.finished = Promise.resolve();
+		} else {
+			this.finished = writeFile(join(destinationDirectory, this.resultName), value);
+		}
 	}
 
 	public async finalize(): Promise<void> {
@@ -125,6 +141,7 @@ class ImageResource extends FileResource implements IImageResource {
 	}
 
 	public addResizedImage(maxWidth: number, maxHeight: number, suffix: string): string {
+		// TODO: incase this is a duplicate and we using a different size, we should call addProcess on the original
 		const name = `${this.baseName}_${suffix}.${this.extension}`;
 		resourceFiles.add(name);
 		if (!IS_PRODUCTION_BUILD) {
@@ -220,10 +237,10 @@ export async function CleanOldResources(): Promise<void> {
 	const cleanup = files
 		.filter((file) => !resourceFiles.has(file));
 
-	logger.debug(`Cleaning old resources: [\n\t${cleanup.join('\n\t')}\n]`);
+	logger.debug(`Cleaning old resources: ${cleanup.map((r) => '\n - ' + r).join('')}`);
 
-	await Promise.all(cleanup
+	await Promise.allSettled(cleanup
 		.map((file) => join(destinationDirectory, file))
-		.map((file) => unlink(join(destinationDirectory, file)).catch(() => { /** ignore */ })),
+		.map((path) => unlink(path)),
 	);
 }
