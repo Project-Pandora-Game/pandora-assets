@@ -45,18 +45,12 @@ export abstract class Resource {
 	public readonly resultName: string;
 	public readonly size: number;
 	public readonly hash: string;
-	protected readonly duplicate: boolean;
 
 	constructor(resultName: string, size: number, hash: string) {
 		this.resultName = resultName;
 		this.size = size;
 		this.hash = hash;
-
-		this.duplicate = resources.has(resultName);
-		if (!this.duplicate) {
-			resources.set(resultName, this);
-			resourceFiles.add(resultName);
-		}
+		resources.set(resultName, this);
 	}
 
 	public abstract finalize(): Promise<void>;
@@ -85,15 +79,18 @@ class FileResource extends Resource {
 
 		super(resultName, size, hash);
 
-		if (!this.duplicate) {
-			WatchFile(sourcePath);
-		}
-
 		this.sourcePath = sourcePath;
 		this.baseName = resultName.replace(/\.[^.]*$/, '');
 		this.extension = resultName.replace(/^.*\.([^.]+)$/, '$1');
 
-		const dest = join(destinationDirectory, this.resultName);
+		if (resourceFiles.has(resultName)) {
+			return;
+		}
+
+		resourceFiles.add(resultName);
+		WatchFile(sourcePath);
+
+		const dest = join(destinationDirectory, resultName);
 		this.addProcess(IsFile(dest)
 			.then(async (isFile) => {
 				if (!isFile) {
@@ -107,9 +104,6 @@ class FileResource extends Resource {
 	}
 
 	protected addProcess(process: Promise<void> | (() => Promise<void>)): void {
-		if (this.duplicate) {
-			return;
-		}
 		if (typeof process === 'function') {
 			process = process();
 		}
@@ -122,9 +116,10 @@ class InlineResource extends Resource {
 
 	constructor(resultName: string, hash: string, value: Buffer) {
 		super(resultName, value.byteLength, hash);
-		if (this.duplicate) {
+		if (resourceFiles.has(this.resultName)) {
 			this.finished = Promise.resolve();
 		} else {
+			resourceFiles.add(this.resultName);
 			this.finished = writeFile(join(destinationDirectory, this.resultName), value);
 		}
 	}
@@ -141,13 +136,17 @@ class ImageResource extends FileResource implements IImageResource {
 	}
 
 	public addResizedImage(maxWidth: number, maxHeight: number, suffix: string): string {
-		// TODO: incase this is a duplicate and we using a different size, we should call addProcess on the original
 		const name = `${this.baseName}_${suffix}.${this.extension}`;
+		if (resourceFiles.has(name))
+			return IS_PRODUCTION_BUILD ? name : this.resultName;
+
 		// Prevent the generated source from being deleted, even if we are not doing a production build
 		resourceFiles.add(name);
+
 		if (!IS_PRODUCTION_BUILD) {
 			return this.resultName;
 		}
+
 		this.addProcess(async () => {
 			const dest = join(destinationDirectory, name);
 			if (await IsFile(dest))
