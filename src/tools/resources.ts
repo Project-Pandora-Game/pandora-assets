@@ -178,13 +178,13 @@ export function DefineResource(path: string): Resource {
 	return resource;
 }
 
-export function DefineResourceInline(name: string, value: string | Buffer): Resource {
+export function DefineResourceInline(name: string, value: string | Buffer, resultName?: string): Resource {
 	if (typeof value === 'string') {
 		value = Buffer.from(value, 'utf8');
 	}
 
 	const hash = GetResourceBufferHash(value);
-	const resultName = name.replace(/(?=(?:\.[^.]*)?$)/, `_${hash}`);
+	resultName ??= name.replace(/(?=(?:\.[^.]*)?$)/, `_${hash}`);
 
 	const resource = new InlineResource(resultName, hash, value);
 

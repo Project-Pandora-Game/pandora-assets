@@ -143,7 +143,7 @@ async function Run() {
 	ValidateBodyparts(definitions);
 
 	const definitionsFile = DefineResourceInline('assets.json', JSON.stringify(definitions));
-	DefineResourceInline('current', `${definitionsFile.hash}\n`);
+	DefineResourceInline('current', `${definitionsFile.hash}\n`, 'current');
 
 	await Promise.all([
 		ExportAllResources(),
