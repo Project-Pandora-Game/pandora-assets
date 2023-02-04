@@ -97,6 +97,15 @@ class FileResource extends Resource {
 					await copyFile(sourcePath, dest);
 				}
 			}));
+
+		if (IS_PRODUCTION_BUILD) {
+			this.addProcess(async () => {
+				const { exif } = await sharp(sourcePath).metadata();
+				if (exif) {
+					logger.fatal(`Image '${sourcePath}' contains EXIF data, which is not allowed.`);
+				}
+			});
+		}
 	}
 
 	public async finalize(): Promise<void> {
