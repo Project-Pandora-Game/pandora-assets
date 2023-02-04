@@ -101,8 +101,7 @@ class FileResource extends Resource {
 		this.addProcess(async () => {
 			const { exif, icc, xmp } = await sharp(sourcePath).metadata();
 			if (exif || icc || xmp) {
-				const level = IS_PRODUCTION_BUILD ? LogLevel.ERROR : LogLevel.WARNING;
-				logger.logMessage(level, [`Image '${sourcePath}' contains metadata, which is not allowed.`]);
+				logger.warning(`Image '${sourcePath}' contains metadata, which is not allowed.`);
 			}
 		});
 	}

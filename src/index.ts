@@ -36,6 +36,24 @@ logConfig.logOutputs.push({
 	},
 });
 
+function CheckErrors() {
+	if (hadErrors) {
+		logger.fatal(`Some assets had errors while building, build failed.`);
+		return false;
+	}
+	if (hadWarnings) {
+		if (IS_PRODUCTION_BUILD) {
+			logger.fatal(`Some assets had warnings while building, build failed.`);
+			return false;
+		} else {
+			logger.warning();
+			logger.warning(`Some assets had warnings while building, these need to be fixed before PR.`);
+			logger.warning();
+		}
+	}
+	return true;
+}
+
 async function Run() {
 	logger.info('Building...');
 
@@ -108,20 +126,8 @@ async function Run() {
 		}
 	}
 
-	if (hadErrors) {
-		logger.fatal(`Some assets had errors while building, build failed.`);
+	if (!CheckErrors())
 		return;
-	}
-	if (hadWarnings) {
-		if (IS_PRODUCTION_BUILD) {
-			logger.fatal(`Some assets had warnings while building, build failed.`);
-			return;
-		} else {
-			logger.warning();
-			logger.warning(`Some assets had warnings while building, these need to be fixed before PR.`);
-			logger.warning();
-		}
-	}
 
 	logger.info('Exporting result...');
 
@@ -149,6 +155,9 @@ async function Run() {
 		ExportAllResources(),
 		CleanOldResources(),
 	]);
+
+	if (!CheckErrors())
+		return;
 
 	logger.info('Done!');
 }
