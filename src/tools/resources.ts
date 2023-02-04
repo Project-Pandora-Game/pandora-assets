@@ -1,4 +1,4 @@
-import { GetLogger } from 'pandora-common';
+import { GetLogger, LogLevel } from 'pandora-common';
 import { createHash } from 'crypto';
 import { readFileSync, statSync } from 'fs';
 import { writeFile, copyFile, unlink, readdir, stat } from 'fs/promises';
@@ -98,14 +98,13 @@ class FileResource extends Resource {
 				}
 			}));
 
-		if (IS_PRODUCTION_BUILD) {
-			this.addProcess(async () => {
-				const { exif, icc, xmp } = await sharp(sourcePath).metadata();
-				if (exif || icc || xmp) {
-					logger.fatal(`Image '${sourcePath}' contains metadata, which is not allowed.`);
-				}
-			});
-		}
+		this.addProcess(async () => {
+			const { exif, icc, xmp } = await sharp(sourcePath).metadata();
+			if (exif || icc || xmp) {
+				const level = IS_PRODUCTION_BUILD ? LogLevel.ERROR : LogLevel.WARNING;
+				logger.logMessage(level, [`Image '${sourcePath}' contains metadata, which is not allowed.`]);
+			}
+		});
 	}
 
 	public async finalize(): Promise<void> {
