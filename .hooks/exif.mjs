@@ -1,6 +1,7 @@
 import sharp from 'sharp';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import { rename } from 'fs/promises';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -15,9 +16,9 @@ const path = join(BASE_DIR, input);
  * @param {sharp.Sharp} image
  * @returns {Promise<boolean>}
  */
-async function HasExif(image) {
-	const { exif } = await image.metadata();
-	return exif != null;
+async function HasMeta(image) {
+	const { exif, icc, xmp } = await image.metadata();
+	return exif || icc || xmp;
 }
 
 try {
@@ -25,9 +26,9 @@ try {
 		case '-c':
 		case '--check': {
 			const image = sharp(path);
-			const hasExif = await HasExif(image);
+			const hasExif = await HasMeta(image);
 			if (hasExif) {
-				console.error(`Image ${path} has EXIF data`);
+				console.error(`Image ${path} has meta data (EXIF or ICC or XMP)`);
 				process.exit(1);
 			}
 			break;
@@ -35,9 +36,10 @@ try {
 		case '-r':
 		case '--remove': {
 			const image = sharp(path);
-			const hasExif = await HasExif(image);
-			if (hasExif) {
-				await image.toFile(path);
+			if (await HasMeta(image)) {
+				const tempName = path.replace(/\.([^.]+)$/, '.tmp.$1');
+				await image.toFile(tempName);
+				await rename(tempName, path);
 			}
 			break;
 		}

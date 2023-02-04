@@ -12,7 +12,7 @@ fi
 
 git diff --cached --name-only --diff-filter=ACM | while read -r FILE; do
 	if [[ "${FILE}" =~ \.jpe?g$ ]] || [[ "${FILE}" =~ \.png$ ]]; then
-		node ./.hooks/exif.mjs --add "${FILE}"
+		node ./.hooks/exif.mjs --remove "${FILE}"
 		git add "${FILE}"
 	fi
 done
