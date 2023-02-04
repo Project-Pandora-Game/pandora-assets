@@ -2,8 +2,11 @@ import { AssetGraphicsDefinition, LayerDefinition, LayerImageOverride, AssetGrap
 import { DefinePngResource } from './resources';
 import { readFileSync } from 'fs';
 import { GraphicsDatabase } from './graphicsDatabase';
+import { WatchFile } from './watch';
 
 export function LoadAssetsGraphics(path: string): AssetGraphicsDefinition {
+	WatchFile(path);
+
 	const definition = JSON.parse(
 		readFileSync(path, { encoding: 'utf-8' })
 			.split('\n')

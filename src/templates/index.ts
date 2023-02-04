@@ -3,6 +3,7 @@ import { join } from 'path';
 import { readFileSync } from 'fs';
 import { SRC_DIR } from '../constants';
 import { GraphicsDatabase } from '../tools/graphicsDatabase';
+import { WatchFile } from '../tools/watch';
 
 const templateList: string[] = [
 	'static',
@@ -27,6 +28,8 @@ export function LoadTemplates() {
 
 export function LoadTemplate(name: string): PointTemplate {
 	const path = join(SRC_DIR, 'templates', `${name}.json`);
+
+	WatchFile(path);
 
 	const template = JSON.parse(
 		readFileSync(path, { encoding: 'utf-8' })
