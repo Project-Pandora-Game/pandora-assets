@@ -6,7 +6,7 @@
 	"license": "MIT",
 	"scripts": {
 		"postinstall": "node .hooks/postinstall.cjs",
-		"ci": "yarn run build --prod && yarn run lint && yarn run type-check:test && yarn run test",
+		"ci": "pnpm run build && pnpm lint && pnpm run type-check:test && pnpm run test --ci",
 		"clean": "rimraf dist",
 		"build": "pnpm run clean && tsc -p ./tsconfig.src.json && node --enable-source-maps -r dotenv/config ./dist/index",
 		"build:swc": "pnpm run clean && swc src -d dist && node --enable-source-maps -r dotenv/config ./dist/index",
