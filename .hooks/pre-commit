@@ -9,3 +9,10 @@ if [ "${BRANCH}" = "master" ] && [ "${ALLOW_MASTER_COMMIT:-}" != "true" ]; then
 	echo "You can't commit directly to master branch"
 	exit 1
 fi
+
+git diff --cached --name-only --diff-filter=ACM | while read -r FILE; do
+	if [[ "${FILE}" =~ \.jpe?g$ ]] || [[ "${FILE}" =~ \.png$ ]]; then
+		node ./.hooks/exif.mjs --add "${FILE}"
+		git add "${FILE}"
+	fi
+done
