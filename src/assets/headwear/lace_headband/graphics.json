@@ -9,7 +9,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "headband",
 			"image": {
 				"image": "maid_headband1.png",
 				"overrides": []

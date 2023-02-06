@@ -9,7 +9,7 @@
 			"priority": "BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "shoe",
 			"image": {
 				"image": "",
 				"overrides": [],
@@ -39,7 +39,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "shoe",
 			"image": {
 				"image": "boots.png",
 				"overrides": [
@@ -94,7 +94,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 2,
+			"colorizationKey": "smallRings",
 			"image": {
 				"image": "boots_rings.png",
 				"overrides": [
@@ -122,7 +122,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 3,
+			"colorizationKey": "strings",
 			"image": {
 				"image": "boots_strings.png",
 				"overrides": [
@@ -150,7 +150,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "shoe",
 			"image": {
 				"image": "boots_back.png",
 				"overrides": [
@@ -205,7 +205,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "soles",
 			"image": {
 				"image": "heels_back_soles.png",
 				"overrides": [

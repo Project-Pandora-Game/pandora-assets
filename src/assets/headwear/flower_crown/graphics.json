@@ -9,7 +9,7 @@
 			"priority": "ABOVE_FRONT_HAIR",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "flowerCrown",
 			"image": {
 				"image": "flower_crown.png",
 				"overrides": []
@@ -24,7 +24,7 @@
 			"priority": "BELOW_BACK_HAIR",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "flowerCrown",
 			"image": {
 				"image": "flower_crown_back.png",
 				"overrides": []

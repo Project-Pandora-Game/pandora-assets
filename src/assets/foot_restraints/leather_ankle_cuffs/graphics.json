@@ -9,7 +9,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 4,
+			"colorizationKey": "sockets",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -37,7 +37,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 3,
+			"colorizationKey": "chains",
 			"image": {
 				"image": "leatheranklecuffs_large_ring.png",
 				"overrides": [
@@ -65,7 +65,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 3,
+			"colorizationKey": "chains",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -129,7 +129,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "cuff",
 			"image": {
 				"image": "leatheranklecuffs_cuff.png",
 				"overrides": []
@@ -144,7 +144,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "belt",
 			"image": {
 				"image": "leatheranklecuffs_belt.png",
 				"overrides": []
@@ -159,7 +159,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 2,
+			"colorizationKey": "smallRings",
 			"image": {
 				"image": "leatheranklecuffs_rings.png",
 				"overrides": []
@@ -174,7 +174,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "cuff",
 			"image": {
 				"image": "leatheranklecuffs_cuff.png",
 				"overrides": []
@@ -189,7 +189,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "belt",
 			"image": {
 				"image": "leatheranklecuffs_belt.png",
 				"overrides": []
@@ -204,7 +204,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 2,
+			"colorizationKey": "smallRings",
 			"image": {
 				"image": "leatheranklecuffs_rings.png",
 				"overrides": []

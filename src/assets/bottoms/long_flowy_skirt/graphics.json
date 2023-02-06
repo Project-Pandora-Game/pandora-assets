@@ -9,7 +9,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "skirt_long",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "skirt",
 			"image": {
 				"image": "long_flowy_skirt_front.png",
 				"overrides": [],
@@ -25,7 +25,7 @@
 			"priority": "BELOW_BODY",
 			"points": "skirt_long",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "skirt",
 			"image": {
 				"image": "long_flowy_skirt_back.png",
 				"overrides": [],

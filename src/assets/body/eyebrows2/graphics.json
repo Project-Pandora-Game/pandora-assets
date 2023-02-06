@@ -9,7 +9,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "eyebrows",
 			"image": {
 				"image": "Eyebrows2.png",
 				"overrides": []

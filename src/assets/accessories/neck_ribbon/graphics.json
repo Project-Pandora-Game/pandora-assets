@@ -9,7 +9,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "ribbon",
 			"image": {
 				"image": "neck_ribbon_l2.png",
 				"overrides": []
@@ -24,7 +24,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "frills",
 			"image": {
 				"image": "neck_ribbon.png",
 				"overrides": []
@@ -39,7 +39,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "ribbon",
 			"image": {
 				"image": "neck_ribbon_l2.png",
 				"overrides": []

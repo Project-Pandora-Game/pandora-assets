@@ -9,7 +9,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "blush",
 			"image": {
 				"image": "",
 				"overrides": [

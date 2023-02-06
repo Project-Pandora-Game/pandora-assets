@@ -9,7 +9,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "vibrator",
 			"image": {
 				"image": "vaginal_vibrator_out.png",
 				"overrides": [

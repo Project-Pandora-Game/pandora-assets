@@ -9,7 +9,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "pants",
 			"image": {
 				"image": "Jeans_Shorts_Back.png",
 				"overrides": [],
@@ -25,7 +25,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "pants",
 			"image": {
 				"image": "Jeans_Shorts.png",
 				"overrides": [],
@@ -41,7 +41,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "button",
 			"image": {
 				"image": "Button.png",
 				"overrides": []

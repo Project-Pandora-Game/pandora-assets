@@ -9,7 +9,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "horizontal_limbs_width",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "rope",
 			"image": {
 				"image": "legs_basic.png",
 				"overrides": [
@@ -53,7 +53,6 @@
 			},
 			"name": "legs front"
 		},
-
 		{
 			"x": 0,
 			"y": 0,
@@ -62,7 +61,7 @@
 			"priority": "BELOW_BODY",
 			"points": "horizontal_limbs_width",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "rope",
 			"image": {
 				"image": "legs_basic.png",
 				"overrides": [

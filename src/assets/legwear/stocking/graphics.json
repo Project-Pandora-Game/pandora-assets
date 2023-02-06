@@ -9,7 +9,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "stocking",
 			"image": {
 				"image": "stocking_f.png",
 				"overrides": [
@@ -37,7 +37,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "stocking",
 			"image": {
 				"image": "stocking_b.png",
 				"overrides": [

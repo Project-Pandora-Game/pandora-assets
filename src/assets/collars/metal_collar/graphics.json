@@ -9,7 +9,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "collar",
 			"image": {
 				"image": "metal_collar.png",
 				"overrides": [
@@ -37,7 +37,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "ring",
 			"image": {
 				"image": "metal_collar_ring.png",
 				"overrides": [
@@ -77,7 +77,7 @@
 			"priority": "OVERLAY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 3,
+			"colorizationKey": "socket",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -134,7 +134,7 @@
 			"priority": "OVERLAY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 2,
+			"colorizationKey": "chains",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -220,7 +220,7 @@
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "collar",
 			"image": {
 				"image": "metal_collar.png",
 				"overrides": [

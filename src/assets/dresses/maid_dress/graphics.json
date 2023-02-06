@@ -9,7 +9,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "frills",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -37,7 +37,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "dress",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -65,7 +65,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "shirt",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "frills",
 			"image": {
 				"image": "maid_f_large.png",
 				"overrides": [
@@ -138,7 +138,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "shirt",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "dress",
 			"image": {
 				"image": "maid_f_large_l2.png",
 				"overrides": [
@@ -211,7 +211,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "skirt_short",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "frills",
 			"image": {
 				"image": "maid_f_skirt.png",
 				"overrides": [
@@ -244,7 +244,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "skirt_short",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "dress",
 			"image": {
 				"image": "maid_f_skirt_l2.png",
 				"overrides": [
@@ -277,7 +277,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "shirt",
 			"mirror": 0,
-			"colorizationIndex": 2,
+			"colorizationKey": "buttons",
 			"image": {
 				"image": "maid_f_buttons.png",
 				"overrides": [
@@ -312,7 +312,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "frills",
 			"image": {
 				"image": "maid_b.png",
 				"overrides": [
@@ -340,7 +340,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "dress",
 			"image": {
 				"image": "maid_b_l2.png",
 				"overrides": [
@@ -368,7 +368,7 @@
 			"priority": "BELOW_BODY",
 			"points": "skirt_short",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "frills",
 			"image": {
 				"image": "maid_b_skirt.png",
 				"overrides": [
@@ -401,7 +401,7 @@
 			"priority": "BELOW_BODY",
 			"points": "skirt_short",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "dress",
 			"image": {
 				"image": "maid_b_skirt_l2.png",
 				"overrides": [
@@ -434,7 +434,7 @@
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 3,
+			"colorizationKey": "ribbons",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -462,7 +462,7 @@
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 4,
+			"colorizationKey": "ribbonLace",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -490,7 +490,7 @@
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 3,
+			"colorizationKey": "ribbons",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -518,7 +518,7 @@
 			"priority": "BELOW_BREASTS",
 			"points": "shirt",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "frills",
 			"image": {
 				"image": "maid_f_large.png",
 				"overrides": [
@@ -591,7 +591,7 @@
 			"priority": "BELOW_BREASTS",
 			"points": "shirt",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "dress",
 			"image": {
 				"image": "maid_f_large_l2.png",
 				"overrides": [

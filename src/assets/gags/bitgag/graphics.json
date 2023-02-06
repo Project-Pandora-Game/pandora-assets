@@ -9,7 +9,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "bit",
 			"image": {
 				"image": "bitgag_bit.png",
 				"overrides": []
@@ -24,7 +24,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "straps",
 			"image": {
 				"image": "bitgag_straps.png",
 				"overrides": []
@@ -53,7 +53,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "straps",
 			"image": {
 				"image": "bitgag_straps_back.png",
 				"overrides": []

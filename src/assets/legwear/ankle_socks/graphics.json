@@ -9,7 +9,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "socks",
 			"image": {
 				"image": "ankle_socks.png",
 				"overrides": [
@@ -37,7 +37,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "socks",
 			"image": {
 				"image": "ankle_socks_back.png",
 				"overrides": [

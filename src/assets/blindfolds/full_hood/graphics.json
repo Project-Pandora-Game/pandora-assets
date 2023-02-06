@@ -9,7 +9,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "hood",
 			"image": {
 				"image": "hood.png",
 				"overrides": []
@@ -24,7 +24,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "eyeCover",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -52,7 +52,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 2,
+			"colorizationKey": "mouthCover",
 			"image": {
 				"image": "hood_mouth.png",
 				"overrides": [
@@ -80,7 +80,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "hood",
 			"image": {
 				"image": "hood_back.png",
 				"overrides": []
@@ -95,7 +95,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 3,
+			"colorizationKey": "zipper",
 			"image": {
 				"image": "hood_zipper.png",
 				"overrides": []

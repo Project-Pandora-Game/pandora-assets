@@ -14,7 +14,7 @@
 				"bodyarm"
 			],
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "skin",
 			"image": {
 				"image": "body.png",
 				"overrides": [
@@ -46,7 +46,7 @@
 				"arm_r"
 			],
 			"mirror": 1,
-			"colorizationIndex": 0,
+			"colorizationKey": "skin",
 			"image": {
 				"image": "body.png",
 				"overrides": [
@@ -123,7 +123,7 @@
 				"breasts"
 			],
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "skin",
 			"image": {
 				"image": "bust.png",
 				"overrides": [
@@ -166,7 +166,7 @@
 				"breasts"
 			],
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "nipples",
 			"image": {
 				"image": "bust_center.png",
 				"overrides": []

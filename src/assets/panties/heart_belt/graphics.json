@@ -9,7 +9,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "belt",
 			"image": {
 				"image": "waistband.png",
 				"overrides": []
@@ -24,7 +24,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "belt",
 			"image": {
 				"image": "waistband.png",
 				"overrides": []
@@ -39,7 +39,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 2,
+			"colorizationKey": "crotchPlate",
 			"image": {
 				"image": "crotchplate.png",
 				"overrides": [
@@ -67,7 +67,7 @@
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 2,
+			"colorizationKey": "crotchPlate",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -95,7 +95,7 @@
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 2,
+			"colorizationKey": "crotchPlate",
 			"image": {
 				"image": "crotchplate_back.png",
 				"overrides": [
@@ -123,7 +123,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "heartPlate",
 			"image": {
 				"image": "heartplate.png",
 				"overrides": []
@@ -138,7 +138,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "heartPlate",
 			"image": {
 				"image": "heartplate.png",
 				"overrides": []
@@ -153,7 +153,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 3,
+			"colorizationKey": "lock",
 			"image": {
 				"image": "lock.png",
 				"overrides": []

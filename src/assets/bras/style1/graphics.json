@@ -10,7 +10,7 @@
 			"priority": "BREASTS",
 			"points": "bra",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "bra",
 			"image": {
 				"image": "bra_front.png",
 				"overrides": [
@@ -38,7 +38,7 @@
 			"priority": "BELOW_BREASTS",
 			"points": "bra",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "bra",
 			"image": {
 				"image": "bra_breasts_2.png",
 				"overrides": [
@@ -66,7 +66,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "bra",
 			"image": {
 				"image": "bra_base_back.png",
 				"overrides": [
@@ -92,7 +92,7 @@
 			"height": 1500,
 			"name": "bra straps back view",
 			"priority": "BELOW_BODY",
-			"colorizationIndex": 0,
+			"colorizationKey": "bra",
 			"points": [
 				{
 					"pos": [

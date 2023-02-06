@@ -9,7 +9,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "clamps",
 			"image": {
 				"image": "clamps.png",
 				"overrides": []
@@ -24,7 +24,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "chainWeights",
 			"image": {
 				"image": "",
 				"overrides": [

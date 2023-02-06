@@ -9,7 +9,7 @@
 			"priority": "ABOVE_FRONT_HAIR",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "flower",
 			"image": {
 				"image": "flower.png",
 				"overrides": []

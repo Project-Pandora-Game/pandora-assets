@@ -37,7 +37,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "straps",
 			"image": {
 				"image": "ringgag_straps.png",
 				"overrides": []
@@ -52,7 +52,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "straps",
 			"image": {
 				"image": "front_harness_straps.png",
 				"overrides": [
@@ -80,7 +80,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "straps",
 			"image": {
 				"image": "ringgag_straps_back.png",
 				"overrides": []

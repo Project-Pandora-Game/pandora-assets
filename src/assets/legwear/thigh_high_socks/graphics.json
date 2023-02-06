@@ -9,7 +9,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "socks",
 			"image": {
 				"image": "socks.png",
 				"overrides": [
@@ -37,7 +37,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "stripeTop",
 			"image": {
 				"image": "stripe1.png",
 				"overrides": [
@@ -65,7 +65,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 2,
+			"colorizationKey": "stripeMiddle",
 			"image": {
 				"image": "stripe2.png",
 				"overrides": [
@@ -100,7 +100,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 3,
+			"colorizationKey": "stripeBottom",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -128,7 +128,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "socks",
 			"image": {
 				"image": "socks_back.png",
 				"overrides": [
@@ -156,7 +156,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "stripeTop",
 			"image": {
 				"image": "stripe1.png",
 				"overrides": [
@@ -184,7 +184,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 2,
+			"colorizationKey": "stripeMiddle",
 			"image": {
 				"image": "stripe2.png",
 				"overrides": [
@@ -219,7 +219,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 3,
+			"colorizationKey": "stripeBottom",
 			"image": {
 				"image": "",
 				"overrides": [

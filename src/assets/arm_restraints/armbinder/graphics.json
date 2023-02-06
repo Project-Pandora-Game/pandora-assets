@@ -9,7 +9,7 @@
 			"priority": "BELOW_ARMS",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "straps",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -37,7 +37,7 @@
 			"priority": "BELOW_ARMS",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 3,
+			"colorizationKey": "bigRings",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -65,7 +65,7 @@
 			"priority": "BELOW_ARMS",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "straps",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -93,7 +93,7 @@
 			"priority": "BELOW_ARMS",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "glove",
 			"image": {
 				"image": "armbinder_glove.png",
 				"overrides": [
@@ -121,7 +121,7 @@
 			"priority": "BELOW_ARMS",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "glove",
 			"image": {
 				"image": "armbinder_shine.png",
 				"overrides": []
@@ -136,7 +136,7 @@
 			"priority": "BELOW_ARMS",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 3,
+			"colorizationKey": "bigRings",
 			"image": {
 				"image": "armbinder_big_ring.png",
 				"overrides": []
@@ -151,7 +151,7 @@
 			"priority": "BELOW_ARMS",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "straps",
 			"image": {
 				"image": "armbinder_straps.png",
 				"overrides": []
@@ -166,7 +166,7 @@
 			"priority": "BELOW_ARMS",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "straps",
 			"image": {
 				"image": "armbinder_shoulder_straps.png",
 				"overrides": []
@@ -181,7 +181,7 @@
 			"priority": "BELOW_ARMS",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "glove",
 			"image": {
 				"image": "armbinder_seam.png",
 				"overrides": []
@@ -196,7 +196,7 @@
 			"priority": "BELOW_ARMS",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 2,
+			"colorizationKey": "smallRings",
 			"image": {
 				"image": "armbinder_rings.png",
 				"overrides": []
@@ -211,7 +211,7 @@
 			"priority": "BELOW_ARMS",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 4,
+			"colorizationKey": "strings",
 			"image": {
 				"image": "armbinder_strings.png",
 				"overrides": []
@@ -226,7 +226,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "straps",
 			"image": {
 				"image": "armbinder_straps_front.png",
 				"overrides": []
@@ -241,7 +241,7 @@
 			"priority": "ABOVE_ARMS",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "glove",
 			"image": {
 				"image": "armbinder_glove.png",
 				"overrides": [

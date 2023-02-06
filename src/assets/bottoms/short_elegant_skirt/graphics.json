@@ -9,7 +9,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "skirt_short",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "skirt",
 			"image": {
 				"image": "short_elegant_skirt.png",
 				"overrides": [
@@ -43,7 +43,7 @@
 			"priority": "BELOW_BODY",
 			"points": "skirt_short",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "skirt",
 			"image": {
 				"image": "short_elegant_skirt.png",
 				"overrides": [

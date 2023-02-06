@@ -9,7 +9,7 @@
 			"priority": "BACK_HAIR",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "hair",
 			"image": {
 				"image": "pigtail_left.png",
 				"overrides": [
@@ -36,7 +36,7 @@
 			"priority": "BACK_HAIR",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "hair",
 			"image": {
 				"image": "pigtail_right.png",
 				"overrides": [

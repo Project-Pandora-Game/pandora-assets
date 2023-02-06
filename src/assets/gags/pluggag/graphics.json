@@ -23,7 +23,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "straps",
 			"image": {
 				"image": "pluggag_straps.png",
 				"overrides": []
@@ -38,7 +38,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "straps",
 			"image": {
 				"image": "front_harness_straps.png",
 				"overrides": [
@@ -66,7 +66,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "gag",
 			"image": {
 				"image": "pluggag_gag.png",
 				"overrides": []
@@ -95,7 +95,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 2,
+			"colorizationKey": "plug",
 			"image": {
 				"image": "pluggag_plug.png",
 				"overrides": [
@@ -123,7 +123,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "straps",
 			"image": {
 				"image": "pluggag_straps_back.png",
 				"overrides": []

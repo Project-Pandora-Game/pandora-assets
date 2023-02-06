@@ -23,7 +23,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "straps",
 			"image": {
 				"image": "ballgag_straps.png",
 				"overrides": []
@@ -38,7 +38,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "straps",
 			"image": {
 				"image": "front_harness_straps.png",
 				"overrides": [
@@ -66,7 +66,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "ball",
 			"image": {
 				"image": "ballgag_ball.png",
 				"overrides": []
@@ -81,7 +81,7 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "straps",
 			"image": {
 				"image": "ballgag_straps_back.png",
 				"overrides": []

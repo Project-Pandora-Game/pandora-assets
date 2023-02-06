@@ -9,7 +9,7 @@
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "vulva",
 			"image": {
 				"image": "female_sex_back.png",
 				"overrides": []
@@ -23,7 +23,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "vulva",
 			"image": {
 				"image": "female_sex.png",
 				"overrides": [
@@ -50,7 +50,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "hair",
 			"image": {
 				"image": "",
 				"overrides": [

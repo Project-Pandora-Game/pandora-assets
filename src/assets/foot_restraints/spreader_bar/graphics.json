@@ -9,7 +9,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "cuffs",
 			"image": {
 				"image": "bar_cuffs.png",
 				"overrides": []
@@ -24,7 +24,7 @@
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "bar",
 			"image": {
 				"image": "bar_spread.png",
 				"overrides": [

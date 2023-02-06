@@ -9,7 +9,7 @@
 			"priority": "BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "penis",
 			"image": {
 				"image": "balls.png",
 				"overrides": []
@@ -24,7 +24,7 @@
 			"priority": "BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 1,
+			"colorizationKey": "glans",
 			"image": {
 				"image": "glans_flaccid.png",
 				"overrides": [
@@ -52,7 +52,7 @@
 			"priority": "BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationIndex": 0,
+			"colorizationKey": "penis",
 			"image": {
 				"image": "shaft_flaccid.png",
 				"overrides": [

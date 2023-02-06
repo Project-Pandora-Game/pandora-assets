@@ -9,7 +9,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 1,
-			"colorizationIndex": 2,
+			"colorizationKey": "eyeBackground",
 			"image": {
 				"image": "eyebase.png",
 				"overrides": [
@@ -39,7 +39,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 1,
-			"colorizationIndex": 0,
+			"colorizationKey": "eyeColor",
 			"image": {
 				"image": "cornea.png",
 				"overrides": [
@@ -69,7 +69,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 1,
-			"colorizationIndex": 1,
+			"colorizationKey": "lashes",
 			"image": {
 				"image": "eyelashes.png",
 				"overrides": [
@@ -99,7 +99,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 1,
-			"colorizationIndex": 3,
+			"colorizationKey": "shine",
 			"image": {
 				"image": "shine.png",
 				"overrides": [
