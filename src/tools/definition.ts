@@ -51,15 +51,15 @@ export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 	}
 
 	if (def.colorization) {
-		for (let i = 0; i < def.colorization.length; i++) {
-			const valid = HexColorStringSchema.safeParse(def.colorization[i].default).success;
+		for (const [key, value] of Object.entries(def.colorization)) {
+			const valid = HexColorStringSchema.safeParse(value.default).success;
 			if (!valid) {
 				definitionValid = false;
-				logger.error(`Invalid default in colorization[${i}]: '${def.colorization[i].default}' is not a valid color, use full hex format, like '#ffffff'`);
+				logger.error(`Invalid default in colorization.${key}: '${value.default}' is not a valid color, use full hex format, like '#ffffff'`);
 			}
 		}
 	}
-	const colorizationMaxIndex = def.colorization ? def.colorization.length - 1 : -1;
+	const colorizationKeys = new Set(Object.keys(def.colorization ?? {}));
 
 	for (const [bone, value] of Object.entries(def.poseLimits?.forcePose ?? {})) {
 		if (value == null)
@@ -142,8 +142,8 @@ export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 		for (let i = 0; i < graphics.layers.length; i++) {
 			const layer = graphics.layers[i];
 
-			if (layer.colorizationIndex != null && layer.colorizationIndex > colorizationMaxIndex) {
-				loggerGraphics.warning(`Layer #${i} has colorizationIndex ${layer.colorizationIndex} outside of defined colorization (0-${colorizationMaxIndex})`);
+			if (layer.colorizationKey != null && !colorizationKeys.has(layer.colorizationKey)) {
+				loggerGraphics.warning(`Layer #${i} has colorizationKey ${layer.colorizationKey} outside of defined colorization keys [${[...colorizationKeys].join(', ')}]`);
 			}
 		}
 
