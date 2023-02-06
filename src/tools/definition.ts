@@ -1,4 +1,4 @@
-import { AssetDefinition, AssetId, BONE_MAX, BONE_MIN, GetLogger, HexColorStringSchema } from 'pandora-common';
+import { AssetDefinition, AssetId, BoneLimitsFromOld, BONE_MAX, BONE_MIN, GetLogger, HexColorStringSchema } from 'pandora-common';
 import { AssetDatabase } from './assetDatabase';
 import { AssetSourcePath, DefaultId } from './context';
 import { LoadAssetsGraphics } from './graphics';
@@ -64,19 +64,38 @@ export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 	for (const [bone, value] of Object.entries(def.poseLimits?.forcePose ?? {})) {
 		if (value == null)
 			continue;
-		const [min, max] = typeof value === 'number' ? [value, value] : value;
 
-		if (!Number.isInteger(min) || min < BONE_MIN || min > BONE_MAX) {
-			logger.error(`Invalid min limit for poseLimits.forcePose.${bone}, must be a whole number in range [${BONE_MIN}, ${BONE_MAX}]`);
-			definitionValid = false;
+		const result = BoneLimitsFromOld(value);
+		const testIfValid = (limit: number) => {
+			if (!Number.isInteger(limit) || limit < BONE_MIN || limit > BONE_MAX) {
+				logger.error(`Invalid limit for poseLimits.forcePose.${bone}, must be a whole number in range [${BONE_MIN}, ${BONE_MAX}]`);
+				definitionValid = false;
+			}
+		};
+		for (const limit of result) {
+			if (limit.length === 1) {
+				testIfValid(limit[0]);
+			} else {
+				testIfValid(limit[0]);
+				testIfValid(limit[1]);
+				if (limit[0] > limit[1]) {
+					logger.error(`Invalid range for poseLimits.forcePose.${bone}, min must not be greater than max (min: ${limit[0]}, max: ${limit[1]})`);
+					definitionValid = false;
+				}
+			}
 		}
-		if (!Number.isInteger(max) || max < BONE_MIN || max > BONE_MAX) {
-			logger.error(`Invalid max limit for poseLimits.forcePose.${bone}, must be a whole number in range [${BONE_MIN}, ${BONE_MAX}]`);
-			definitionValid = false;
-		}
-		if (min > max) {
-			logger.error(`Invalid range for poseLimits.forcePose.${bone}, min must not be greater than max`);
-			definitionValid = false;
+		for (let i = 1; i < result.length; ++i) {
+			const lastMax = result[i - 1].length === 1 ? result[i - 1][0] : Math.max(...result[i - 1]);
+			if (lastMax === result[i][0]) {
+				logger.error(`Invalid range for poseLimits.forcePose.${bone}, ranges must not overlap`);
+				definitionValid = false;
+				break;
+			}
+			if (lastMax > result[i][0]) {
+				logger.error(`Invalid range for poseLimits.forcePose.${bone}, ranges must be in ascending order`);
+				definitionValid = false;
+				break;
+			}
 		}
 	}
 
