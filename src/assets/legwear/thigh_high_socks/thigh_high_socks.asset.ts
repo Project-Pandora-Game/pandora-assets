@@ -3,24 +3,24 @@ DefineAsset({
 	size: 'small',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		socks: {
 			name: 'Socks',
 			default: '#FFFFFF',
 		},
-		{
+		stripeTop: {
 			name: 'Stripe Top (1)',
 			default: '#83a3cc',
 		},
-		{
+		stripeMiddle: {
 			name: 'Stripe Middle (2)',
 			default: '#e49bb8',
 		},
-		{
+		stripeBottom: {
 			name: 'Stripe Bottom (3)',
 			default: '#83a3cc',
 		},
-	],
+	},
 	attributes: [
 		'Clothing',
 		'Legwear',

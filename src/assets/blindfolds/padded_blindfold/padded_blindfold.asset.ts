@@ -4,16 +4,16 @@ DefineAsset({
 	name: 'Padded Blindfold',
 	size: 'small',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		blindfold: {
 			name: 'Blindfold',
 			default: '#404040',
 		},
-		{
+		straps: {
 			name: 'Straps',
 			default: '#444444',
 		},
-	],
+	},
 	attributes: [
 		'Restraint',
 		'Restraint_eyes',

@@ -3,16 +3,16 @@ DefineAsset({
 	size: 'bodypart',
 	bodypart: 'backhair',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		hair: {
 			name: 'Hair',
 			default: '#555555',
 		},
-		{
+		hairShine: {
 			name: 'Hair shine',
 			default: '#888888',
 		},
-	],
+	},
 	attributes: [
 		'Hair',
 		'Hair_back',

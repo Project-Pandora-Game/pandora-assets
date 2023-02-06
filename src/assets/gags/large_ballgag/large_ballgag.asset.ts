@@ -4,16 +4,16 @@ DefineAsset({
 	name: 'Large Ball Gag',
 	size: 'medium',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		ball: {
 			name: 'Ball',
 			default: '#C99AF8',
 		},
-		{
+		straps: {
 			name: 'Straps',
 			default: '#444444',
 		},
-	],
+	},
 	attributes: [
 		'Restraint',
 		'Restraint_mouth',

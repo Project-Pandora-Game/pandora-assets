@@ -4,12 +4,12 @@ DefineAsset({
 	name: 'Cloth Collar',
 	size: 'small',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		collar: {
 			name: 'Collar',
 			default: '#FFFFFF',
 		},
-	],
+	},
 	modules: {
 		collarType: {
 			type: 'typed',

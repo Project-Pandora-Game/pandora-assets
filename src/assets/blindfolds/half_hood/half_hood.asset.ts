@@ -2,16 +2,16 @@ DefineAsset({
 	name: 'Half Hood',
 	size: 'small',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		hood: {
 			name: 'Hood',
 			default: '#4E4462',
 		},
-		{
+		zipper: {
 			name: 'Zipper',
 			default: '#333333',
 		},
-	],
+	},
 	attributes: [
 		'Restraint',
 		'Headgear',

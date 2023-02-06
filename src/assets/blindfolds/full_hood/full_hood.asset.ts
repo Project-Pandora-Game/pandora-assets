@@ -2,24 +2,24 @@ DefineAsset({
 	name: 'Full Hood',
 	size: 'medium',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		hood: {
 			name: 'Hood',
 			default: '#484F57',
 		},
-		{
+		eyeCover: {
 			name: 'Eye cover',
 			default: '#454A52',
 		},
-		{
+		mouthCover: {
 			name: 'Mouth cover',
 			default: '#464B53',
 		},
-		{
+		zipper: {
 			name: 'Zipper',
 			default: '#333333',
 		},
-	],
+	},
 	attributes: [
 		'Restraint',
 		'Headgear',

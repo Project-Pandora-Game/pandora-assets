@@ -4,32 +4,32 @@ DefineAsset({
 	name: 'Yoke',
 	size: 'medium',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		collar: {
 			name: 'Collar',
 			default: '#FFFFFF',
 		},
-		{
+		ring: {
 			name: 'Ring',
 			default: '#FFFFFF',
 		},
-		{
+		chains: {
 			name: 'Chains',
 			default: '#FFFFFF',
 		},
-		{
+		socket: {
 			name: 'Socket',
 			default: '#FFFFFF',
 		},
-		{
+		bar: {
 			name: 'Bar',
 			default: '#FFFFFF',
 		},
-		{
+		cuffs: {
 			name: 'Cuffs',
 			default: '#FFFFFF',
 		},
-	],
+	},
 	attributes: [
 		'Restraint',
 		'Restraint_arms',

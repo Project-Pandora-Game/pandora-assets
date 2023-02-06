@@ -4,12 +4,12 @@ DefineAsset({
 	bodypart: 'eyebrows',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		eyebrows: {
 			name: 'Eyebrows',
 			default: '#555555',
 		},
-	],
+	},
 	attributes: [
 		'Eyebrows',
 	],

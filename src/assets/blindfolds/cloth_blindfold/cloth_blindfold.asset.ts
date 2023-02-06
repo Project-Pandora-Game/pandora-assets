@@ -2,12 +2,12 @@ DefineAsset({
 	name: 'Cloth Blindfold',
 	size: 'small',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		cloth: {
 			name: 'Cloth',
 			default: '#FDF3EA',
 		},
-	],
+	},
 	attributes: [
 		'Restraint',
 		'Restraint_eyes',

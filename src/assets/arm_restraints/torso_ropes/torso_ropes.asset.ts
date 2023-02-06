@@ -4,12 +4,12 @@ DefineAsset({
 	name: 'Torso Ropes',
 	size: 'small',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		rope: {
 			name: 'Rope',
 			default: '#FED59C',
 		},
-	],
+	},
 	attributes: [
 		'Restraint',
 		'Restraint_arms',

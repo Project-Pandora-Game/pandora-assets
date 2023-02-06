@@ -4,12 +4,12 @@ DefineAsset({
 	bodypart: 'ears',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		skin: {
 			name: 'Skin',
 			default: '#FFECDF',
 		},
-	],
+	},
 	attributes: [
 		'Ears',
 	],

@@ -4,16 +4,16 @@ DefineAsset({
 	name: 'Wiffle Gag',
 	size: 'small',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		ball: {
 			name: 'Ball',
 			default: '#FF80C0',
 		},
-		{
+		straps: {
 			name: 'Straps',
 			default: '#444444',
 		},
-	],
+	},
 	attributes: [
 		'Restraint',
 		'Restraint_mouth',

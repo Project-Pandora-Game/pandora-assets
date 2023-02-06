@@ -6,16 +6,16 @@ DefineAsset({
 	bodypart: 'sex',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		vulva: {
 			name: 'Vulva',
 			default: '#FFFFFF',
 		},
-		{
+		hair: {
 			name: 'Hair',
 			default: '#A96B61',
 		},
-	],
+	},
 	attributes: [
 		'Sex',
 		'Vagina',

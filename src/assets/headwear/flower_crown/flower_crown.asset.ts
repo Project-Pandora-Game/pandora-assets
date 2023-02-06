@@ -2,12 +2,12 @@ DefineAsset({
 	name: 'Flower Crown',
 	size: 'medium',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		flowerCrown: {
 			name: 'Flower Crown',
 			default: '#FFFFFF',
 		},
-	],
+	},
 	attributes: [
 		'Clothing',
 		'Headgear',

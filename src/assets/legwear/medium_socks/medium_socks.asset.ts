@@ -3,12 +3,12 @@ DefineAsset({
 	size: 'small',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		socks: {
 			name: 'Socks',
 			default: '#FFFFFF',
 		},
-	],
+	},
 	attributes: [
 		'Clothing',
 		'Legwear',

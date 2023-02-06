@@ -3,12 +3,12 @@ DefineAsset({
 	size: 'small',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		stocking: {
 			name: 'Stocking',
 			default: '#584747',
 		},
-	],
+	},
 	attributes: [
 		'Legwear',
 	],

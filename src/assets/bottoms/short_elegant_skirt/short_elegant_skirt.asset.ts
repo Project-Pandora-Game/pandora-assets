@@ -3,12 +3,12 @@ DefineAsset({
 	size: 'medium',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		skirt: {
 			name: 'Skirt',
 			default: '#222222',
 		},
-	],
+	},
 	attributes: [
 		'Clothing',
 		'Clothing_lower',

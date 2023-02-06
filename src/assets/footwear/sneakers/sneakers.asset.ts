@@ -3,20 +3,20 @@ DefineAsset({
 	size: 'medium',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		sneakers: {
 			name: 'Sneakers',
 			default: '#006DDB',
 		},
-		{
+		soles: {
 			name: 'Soles',
 			default: '#FFFFFF',
 		},
-		{
+		shoelaces: {
 			name: 'Shoelaces',
 			default: '#FFFFFF',
 		},
-	],
+	},
 	attributes: [
 		'Clothing',
 		'Footwear',

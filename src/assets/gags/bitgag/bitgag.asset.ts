@@ -2,16 +2,16 @@ DefineAsset({
 	name: 'Bit Gag',
 	size: 'medium',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		bit: {
 			name: 'Bit',
 			default: '#535971',
 		},
-		{
+		straps: {
 			name: 'Straps',
 			default: '#444444',
 		},
-	],
+	},
 	attributes: [
 		'Restraint',
 		'Restraint_mouth',

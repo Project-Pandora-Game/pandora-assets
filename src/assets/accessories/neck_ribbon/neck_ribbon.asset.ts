@@ -2,16 +2,16 @@ DefineAsset({
 	name: 'Neck Ribbon',
 	size: 'small',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		ribbon: {
 			name: 'Ribbon',
 			default: '#FFFFFF',
 		},
-		{
+		frills: {
 			name: 'Frills',
 			default: '#333333',
 		},
-	],
+	},
 	requirements: [
 		'Collar',
 		'!Collar_front_ring',

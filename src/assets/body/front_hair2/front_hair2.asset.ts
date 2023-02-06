@@ -4,16 +4,16 @@ DefineAsset({
 	bodypart: 'fronthair',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		hair: {
 			name: 'Hair',
 			default: '#555555',
 		},
-		{
+		hairShine: {
 			name: 'Hair shine',
 			default: '#AAAAAA',
 		},
-	],
+	},
 	attributes: [
 		'Hair',
 		'Hair_front',

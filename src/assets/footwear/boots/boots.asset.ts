@@ -5,24 +5,24 @@ DefineAsset({
 	size: 'medium',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		shoe: {
 			name: 'Shoe',
 			default: '#530F1E',
 		},
-		{
+		soles: {
 			name: 'Soles',
 			default: '#393939',
 		},
-		{
+		smallRings: {
 			name: 'Small Rings',
 			default: '#FFFFFF',
 		},
-		{
+		strings: {
 			name: 'Strings',
 			default: '#000000',
 		},
-	],
+	},
 	attributes: [
 		'Clothing',
 		'Footwear',

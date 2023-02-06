@@ -3,28 +3,28 @@ DefineAsset({
 	size: 'medium',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		dress: {
 			name: 'Dress',
 			default: '#FFFFFF',
 		},
-		{
+		frills: {
 			name: 'Frills',
 			default: '#333333',
 		},
-		{
+		buttons: {
 			name: 'Buttons',
 			default: '#333333',
 		},
-		{
+		ribbons: {
 			name: 'Ribbons',
 			default: '#333333',
 		},
-		{
+		ribbonLace: {
 			name: 'Ribbon Lace',
 			default: '#FFFFFF',
 		},
-	],
+	},
 	attributes: [
 		'Clothing',
 		'Clothing_upper',

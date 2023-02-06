@@ -3,16 +3,16 @@ DefineAsset({
 	size: 'medium',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		shirt: {
 			name: 'Shirt',
 			default: '#FFFFFF',
 		},
-		{
+		print: {
 			name: 'Print',
 			default: '#FFFF00',
 		},
-	],
+	},
 	attributes: [
 		'Clothing',
 		'Clothing_upper',

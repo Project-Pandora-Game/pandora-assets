@@ -4,16 +4,16 @@ DefineAsset({
 	bodypart: 'base',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		skin: {
 			name: 'Skin',
 			default: '#FFECDF',
 		},
-		{
+		nipples: {
 			name: 'Nipples',
 			default: '#FED1CB',
 		},
-	],
+	},
 	attributes: [
 		'Body_base',
 	],

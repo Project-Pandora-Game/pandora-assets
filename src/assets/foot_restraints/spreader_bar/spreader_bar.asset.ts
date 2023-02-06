@@ -2,16 +2,16 @@ DefineAsset({
 	name: 'Spreader Bar',
 	size: 'medium',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		bar: {
 			name: 'Bar',
 			default: '#FFFFFF',
 		},
-		{
+		cuffs: {
 			name: 'Cuffs',
 			default: '#FFFFFF',
 		},
-	],
+	},
 	attributes: [
 		'Restraint',
 		'Restraint_legs',

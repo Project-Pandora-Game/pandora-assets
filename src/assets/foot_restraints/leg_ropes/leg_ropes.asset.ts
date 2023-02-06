@@ -2,12 +2,12 @@ DefineAsset({
 	name: 'Leg Ropes',
 	size: 'small',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		rope: {
 			name: 'Rope',
 			default: '#F1CA96',
 		},
-	],
+	},
 	attributes: [
 		'Restraint',
 		'Restraint_legs',

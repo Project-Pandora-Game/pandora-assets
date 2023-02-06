@@ -4,28 +4,28 @@ DefineAsset({
 	name: 'Armbinder',
 	size: 'medium',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		glove: {
 			name: 'Glove',
 			default: '#444444',
 		},
-		{
+		straps: {
 			name: 'Straps',
 			default: '#444444',
 		},
-		{
+		smallRings: {
 			name: 'Small Rings',
 			default: '#FFFFFF',
 		},
-		{
+		bigRings: {
 			name: 'Big Rings',
 			default: '#FFFFFF',
 		},
-		{
+		strings: {
 			name: 'Strings',
 			default: '#FF0000',
 		},
-	],
+	},
 	attributes: [
 		'Restraint',
 		'Restraint_arms',

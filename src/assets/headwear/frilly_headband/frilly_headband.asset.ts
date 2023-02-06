@@ -2,12 +2,12 @@ DefineAsset({
 	name: 'Frilly Headband',
 	size: 'small',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		headband: {
 			name: 'Headband',
 			default: '#FFFFFF',
 		},
-	],
+	},
 	attributes: [
 		'Clothing',
 		'Headgear',

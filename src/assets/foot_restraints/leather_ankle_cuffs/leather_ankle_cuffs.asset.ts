@@ -4,28 +4,28 @@ DefineAsset({
 	name: 'Leather Ankle Cuffs',
 	size: 'small',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		cuff: {
 			name: 'Cuff',
 			default: '#222222',
 		},
-		{
+		belt: {
 			name: 'Belt',
 			default: '#000000',
 		},
-		{
+		smallRings: {
 			name: 'Small Rings',
 			default: '#FFFFFF',
 		},
-		{
+		chains: {
 			name: 'Chains',
 			default: '#FFFFFF',
 		},
-		{
+		sockets: {
 			name: 'Sockets',
 			default: '#FFFFFF',
 		},
-	],
+	},
 	attributes: [
 		'Restraint',
 		'Restraint_legs',

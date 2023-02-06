@@ -4,20 +4,20 @@ DefineAsset({
 	name: 'Plug Gag',
 	size: 'medium',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		gag: {
 			name: 'Gag',
 			default: '#3C3E42',
 		},
-		{
+		straps: {
 			name: 'Straps',
 			default: '#444444',
 		},
-		{
+		plug: {
 			name: 'Plug',
 			default: '#FFFFFF',
 		},
-	],
+	},
 	attributes: [
 		'Restraint',
 		'Restraint_mouth',

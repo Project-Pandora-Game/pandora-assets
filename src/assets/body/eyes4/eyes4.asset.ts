@@ -4,24 +4,24 @@ DefineAsset({
 	bodypart: 'eyes',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		eyeColor: {
 			name: 'Eye color',
 			default: '#7e6ae0',
 		},
-		{
+		lashes: {
 			name: 'Lashes',
 			default: '#555555',
 		},
-		{
+		eyeBackground: {
 			name: 'Eye background',
 			default: '#FFFFFF',
 		},
-		{
+		shine: {
 			name: 'Shine',
 			default: '#FFFFFF',
 		},
-	],
+	},
 	attributes: [
 		'Eyes',
 	],

@@ -4,24 +4,24 @@ DefineAsset({
 	name: 'Leather Wrist Cuffs',
 	size: 'small',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		cuff: {
 			name: 'Cuff',
 			default: '#222222',
 		},
-		{
+		belt: {
 			name: 'Belt',
 			default: '#000000',
 		},
-		{
+		smallRings: {
 			name: 'Small Rings',
 			default: '#FFFFFF',
 		},
-		{
+		chain: {
 			name: 'Chain',
 			default: '#FFFFFF',
 		},
-	],
+	},
 	attributes: [
 		'Restraint',
 		'Restraint_arms',

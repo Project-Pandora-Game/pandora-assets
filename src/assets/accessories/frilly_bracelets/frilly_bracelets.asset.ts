@@ -2,16 +2,16 @@ DefineAsset({
 	name: 'Frilly Bracelets',
 	size: 'small',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		bracelets: {
 			name: 'Bracelets',
 			default: '#FFFFFF',
 		},
-		{
+		frills: {
 			name: 'Frills',
 			default: '#333333',
 		},
-	],
+	},
 	attributes: [
 		'Clothing',
 		'Accessory',

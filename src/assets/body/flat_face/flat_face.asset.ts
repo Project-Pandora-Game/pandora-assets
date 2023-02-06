@@ -3,12 +3,12 @@ DefineAsset({
 	size: 'bodypart',
 	bodypart: 'face',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		skin: {
 			name: 'Skin',
 			default: '#FFECDF',
 		},
-	],
+	},
 	attributes: [
 		'Face',
 		'Body_texture',

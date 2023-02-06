@@ -2,12 +2,12 @@ DefineAsset({
 	name: 'Flower',
 	size: 'small',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		flower: {
 			name: 'Flower',
 			default: '#FFD1D6',
 		},
-	],
+	},
 	attributes: [
 		'Clothing',
 		'Accessory',

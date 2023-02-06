@@ -3,16 +3,16 @@ DefineAsset({
 	size: 'medium',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		pants: {
 			name: 'Pants',
 			default: '#9BCDFF',
 		},
-		{
+		button: {
 			name: 'Button',
 			default: '#E6E6E6',
 		},
-	],
+	},
 	attributes: [
 		'Clothing',
 		'Clothing_lower',

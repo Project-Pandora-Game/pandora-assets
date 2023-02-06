@@ -3,12 +3,12 @@ DefineAsset({
 	size: 'small',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		panties: {
 			name: 'Panties',
 			default: '#FA5F55',
 		},
-	],
+	},
 	attributes: [
 		'Underwear',
 		'Underwear_panties',

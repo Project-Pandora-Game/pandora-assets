@@ -2,24 +2,24 @@ DefineAsset({
 	name: 'Heart Belt',
 	size: 'medium',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		belt: {
 			name: 'Belt',
 			default: '#CDCDCD',
 		},
-		{
+		heartPlate: {
 			name: 'Heart Plate',
 			default: '#ECECEC',
 		},
-		{
+		crotchPlate: {
 			name: 'Crotch Plate',
 			default: '#CDCDCD',
 		},
-		{
+		lock: {
 			name: 'Lock',
 			default: '#D5D5D5',
 		},
-	],
+	},
 	attributes: [
 		'Restraint',
 		'Chastity',

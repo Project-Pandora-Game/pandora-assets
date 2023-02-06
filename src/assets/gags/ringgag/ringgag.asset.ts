@@ -4,16 +4,16 @@ DefineAsset({
 	name: 'Ring Gag',
 	size: 'small',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		ring: {
 			name: 'Ring',
 			default: '#FFFFFF',
 		},
-		{
+		straps: {
 			name: 'Straps',
 			default: '#444444',
 		},
-	],
+	},
 	attributes: [
 		'Restraint',
 		'Restraint_mouth',

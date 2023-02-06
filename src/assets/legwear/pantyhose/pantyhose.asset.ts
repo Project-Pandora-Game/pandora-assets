@@ -3,12 +3,12 @@ DefineAsset({
 	size: 'small',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		pantyhose: {
 			name: 'Pantyhose',
 			default: '#9C8686',
 		},
-	],
+	},
 	attributes: [
 		'Legwear',
 	],

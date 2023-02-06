@@ -2,12 +2,12 @@ DefineAsset({
 	name: 'Vaginal vibrator',
 	size: 'small',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		vibrator: {
 			name: 'Vibrator',
 			default: '#FFC1EB',
 		},
-	],
+	},
 	attributes: ['Toy'],
 	requirements: ['Vagina_spread'],
 	modules: {

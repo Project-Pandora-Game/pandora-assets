@@ -5,16 +5,16 @@ DefineAsset({
 	bodypart: 'sex',
 	size: 'bodypart',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		penis: {
 			name: 'Penis',
 			default: '#FDDFD0',
 		},
-		{
+		glans: {
 			name: 'Glans',
 			default: '#E2B4B0',
 		},
-	],
+	},
 	attributes: [
 		'Sex',
 		'Penis',

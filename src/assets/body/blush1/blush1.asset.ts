@@ -4,12 +4,12 @@ DefineAsset({
 	bodypart: 'blush',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		blush: {
 			name: 'Blush',
 			default: '#FFFFFF',
 		},
-	],
+	},
 	attributes: [
 		'Blush',
 		'Body_texture',

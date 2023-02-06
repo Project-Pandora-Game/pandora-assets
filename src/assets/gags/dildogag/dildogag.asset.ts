@@ -4,16 +4,16 @@ DefineAsset({
 	name: 'Dildo Gag',
 	size: 'medium',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		gag: {
 			name: 'Gag',
 			default: '#484F5B',
 		},
-		{
+		straps: {
 			name: 'Straps',
 			default: '#444444',
 		},
-	],
+	},
 	attributes: [
 		'Restraint',
 		'Restraint_mouth',

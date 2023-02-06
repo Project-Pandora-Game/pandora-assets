@@ -2,12 +2,12 @@ DefineAsset({
 	name: 'Anal plug',
 	size: 'small',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		plug: {
 			name: 'Plug',
 			default: '#C4E1FF',
 		},
-	],
+	},
 	attributes: ['Toy'],
 	modules: {
 		insertedPlug: {

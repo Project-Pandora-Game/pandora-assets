@@ -4,24 +4,24 @@ DefineAsset({
 	name: 'Metal Collar',
 	size: 'small',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		collar: {
 			name: 'Collar',
 			default: '#FFFFFF',
 		},
-		{
+		ring: {
 			name: 'Ring',
 			default: '#FFFFFF',
 		},
-		{
+		chains: {
 			name: 'Chains',
 			default: '#FFFFFF',
 		},
-		{
+		socket: {
 			name: 'Socket',
 			default: '#FFFFFF',
 		},
-	],
+	},
 	attributes: [
 		'Restraint',
 		'Collar',

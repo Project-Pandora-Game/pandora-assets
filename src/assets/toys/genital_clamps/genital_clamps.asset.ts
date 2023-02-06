@@ -2,16 +2,16 @@ DefineAsset({
 	name: 'Genital Clamps',
 	size: 'small',
 	graphics: 'graphics.json',
-	colorization: [
-		{
+	colorization: {
+		clamps: {
 			name: 'Clamps',
 			default: '#FFFFFF',
 		},
-		{
+		chainWeights: {
 			name: 'Chain/Weights',
 			default: '#FFFFFF',
 		},
-	],
+	},
 	attributes: ['Toy'],
 	modules: {
 		clampAddons: {
