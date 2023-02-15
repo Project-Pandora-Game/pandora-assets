@@ -10,7 +10,7 @@ import sharp from 'sharp';
 
 export type ImageCategory = 'asset' | 'background';
 
-const MAX_SIZES: Record<ImageCategory, { bytes: number; text: string }> = {
+const MAX_SIZES: Record<ImageCategory, { bytes: number; text: string; }> = {
 	asset: {
 		bytes: 1 * 1024 * 1024,
 		text: '1MiB',

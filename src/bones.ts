@@ -43,4 +43,4 @@ type BoneDefinitionCompressedStrict = {
 
 export const boneDefinition = boneDefinitionImpl as Record<Key, BoneDefinitionCompressedStrict> as Record<Key, BoneDefinitionCompressed>;
 
-export type AllBones = Key | ((typeof boneDefinitionImpl)[Key] & { mirror: Mirrored<Key> })['mirror'];
+export type AllBones = Key | ((typeof boneDefinitionImpl)[Key] & { mirror: Mirrored<Key>; })['mirror'];
