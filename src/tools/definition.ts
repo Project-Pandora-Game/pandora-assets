@@ -23,6 +23,7 @@ const DEFINITION_FALLTHOUGH_PROPERTIES = [
 	'blockSlots',
 	'coverSlots',
 	'occupySlots',
+	'overrideColorKey',
 	// Asset definition
 	'name',
 	'wearable',

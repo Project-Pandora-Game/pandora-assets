@@ -15,6 +15,7 @@ interface AssetRepoExtraArgs {
 	bodyparts: import('./bodyparts').BodypartName;
 	attributes: import('./attributes').AttributeNames;
 	slots: import('./slots').AssetSlotNames;
+	colorGroups: import('./colorGroups').ColorGroupNames;
 }
 
 interface IntermediateAssetDefinition extends Pick<import('pandora-common').AssetDefinition<AssetRepoExtraArgs>, import('./tools/definition').AssetDefinitionFallthoughProperties> {
