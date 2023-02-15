@@ -59,7 +59,6 @@ export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 			}
 		}
 	}
-	const colorizationKeys = new Set(Object.keys(def.colorization ?? {}));
 
 	for (const [bone, value] of Object.entries(def.poseLimits?.forcePose ?? {})) {
 		if (value == null)
@@ -142,7 +141,8 @@ export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 		for (let i = 0; i < graphics.layers.length; i++) {
 			const layer = graphics.layers[i];
 
-			if (layer.colorizationKey != null && !colorizationKeys.has(layer.colorizationKey)) {
+			if (layer.colorizationKey != null && def.colorization?.[layer.colorizationKey] == null) {
+				const colorizationKeys = new Set(Object.keys(def.colorization ?? {}));
 				loggerGraphics.warning(`Layer #${i} has colorizationKey ${layer.colorizationKey} outside of defined colorization keys [${[...colorizationKeys].join(', ')}]`);
 			}
 		}
