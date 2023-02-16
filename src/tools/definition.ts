@@ -8,6 +8,7 @@ import { Contributors, CurrentCommitter, GitDataAvailable } from './git';
 import { IS_PRODUCTION_BUILD } from '../constants';
 import * as fs from 'fs';
 import { pick } from 'lodash';
+import { COLOR_GROUP_DEFINITION } from '../colorGroups';
 
 const DEFINITION_FALLTHOUGH_PROPERTIES = [
 	// Properties
@@ -31,7 +32,6 @@ const DEFINITION_FALLTHOUGH_PROPERTIES = [
 	'size',
 	'chat',
 	'bodypart',
-	'colorization',
 	'modules',
 ] as const;
 
@@ -52,12 +52,21 @@ export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 		logger.error(`Invalid size: Only bodyparts can use the 'bodypart' size`);
 	}
 
+	let colorization: Record<string, AssetColorization> | undefined;
 	if (def.colorization) {
+		colorization = {};
 		for (const [key, value] of Object.entries(def.colorization)) {
-			const valid = HexColorStringSchema.safeParse(value.default).success;
-			if (!valid) {
-				definitionValid = false;
-				logger.error(`Invalid default in colorization.${key}: '${value.default}' is not a valid color, use full hex format, like '#ffffff'`);
+			if (value.group) {
+				colorization[key] = {
+					...value,
+					default: COLOR_GROUP_DEFINITION[value.group],
+				};
+			} else {
+				if (!HexColorStringSchema.safeParse(value.default).success) {
+					definitionValid = false;
+					logger.error(`Invalid default in colorization.${key}: '${value.default}' is not a valid color, use full hex format, like '#ffffff'`);
+				}
+				colorization[key] = value;
 			}
 		}
 	}
@@ -116,6 +125,7 @@ export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 	const asset: AssetDefinition = {
 		...pick(def, DEFINITION_FALLTHOUGH_PROPERTIES),
 		id,
+		colorization,
 		hasGraphics: def.graphics !== undefined,
 	};
 
@@ -128,8 +138,8 @@ export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 		for (let i = 0; i < graphics.layers.length; i++) {
 			const layer = graphics.layers[i];
 
-			if (layer.colorizationKey != null && def.colorization?.[layer.colorizationKey] == null) {
-				const colorizationKeys = new Set(Object.keys(def.colorization ?? {}));
+			if (layer.colorizationKey != null && colorization?.[layer.colorizationKey] == null) {
+				const colorizationKeys = new Set(Object.keys(colorization ?? {}));
 				loggerGraphics.warning(`Layer #${i} has colorizationKey ${layer.colorizationKey} outside of defined colorization keys [${[...colorizationKeys].join(', ')}]`);
 			}
 		}

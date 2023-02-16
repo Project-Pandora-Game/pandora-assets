@@ -18,6 +18,12 @@ interface AssetRepoExtraArgs {
 	colorGroups: import('./colorGroups').ColorGroupNames;
 }
 
+type AssetColorization = import('pandora-common').AssetColorization<AssetRepoExtraArgs>;
+
+type IntermediateAssetColorization
+	= (Omit<AssetColorization, 'group'> & { group?: never; })
+	| (Omit<AssetColorization, 'group' | 'default'> & { group: import('./colorGroups').ColorGroupNames; default?: never; });
+
 interface IntermediateAssetDefinition extends Pick<import('pandora-common').AssetDefinition<AssetRepoExtraArgs>, import('./tools/definition').AssetDefinitionFallthoughProperties> {
 	id?: string;
 	graphics?: string;
@@ -38,6 +44,7 @@ interface IntermediateAssetDefinition extends Pick<import('pandora-common').Asse
 		 */
 		licensing: LicensingInfo[];
 	};
+	colorization?: Record<string, IntermediateAssetColorization>;
 }
 
 interface IntermediateRoomBackgroundDefinition extends Pick<import('pandora-common').IChatroomBackgroundInfo,

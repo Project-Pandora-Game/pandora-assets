@@ -1,6 +1,10 @@
-import type { HexColorString } from 'pandora-common';
+import { HexColorString, HexColorStringSchema } from 'pandora-common';
 
-const COLOR_GROUP_DEFINITION = {
+export const COLOR_GROUP_DEFINITION = {
 } as const satisfies Readonly<Record<string, HexColorString>>;
+
+if (Object.values(COLOR_GROUP_DEFINITION).some((color) => !HexColorStringSchema.safeParse(color).success)) {
+	throw new Error('Invalid color group definition');
+}
 
 export type ColorGroupNames = keyof typeof COLOR_GROUP_DEFINITION;
