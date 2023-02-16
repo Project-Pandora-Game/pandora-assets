@@ -25,6 +25,7 @@ const DEFINITION_FALLTHOUGH_PROPERTIES = [
 	'coverSlots',
 	'occupySlots',
 	'overrideColorKey',
+	'excludeFromColorInheritance',
 	// Asset definition
 	'name',
 	'wearable',

@@ -29,6 +29,7 @@ DefineAsset({
 					id: 'noHair',
 					name: 'Shaved',
 					default: true,
+					excludeFromColorInheritance: ['hair'],
 				},
 				{
 					id: 'trimmed',
