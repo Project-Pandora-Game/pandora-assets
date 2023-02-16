@@ -5,8 +5,8 @@ DefineAsset({
 	graphics: 'graphics.json',
 	colorization: {
 		skin: {
-			name: 'Skin',
-			default: '#FFECDF',
+			name: null,
+			group: 'skin',
 		},
 	},
 	attributes: [
