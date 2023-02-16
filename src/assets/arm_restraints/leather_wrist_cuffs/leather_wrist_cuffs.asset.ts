@@ -57,7 +57,7 @@ DefineAsset({
 					id: 'front',
 					name: 'Chained',
 					poseLimits: {
-						forcePose: {
+						bones: {
 							arm_r: 74,
 							arm_l: 74,
 							elbow_r: 43,
@@ -72,7 +72,7 @@ DefineAsset({
 					id: 'overhead',
 					name: 'Chained Overhead',
 					poseLimits: {
-						forcePose: {
+						bones: {
 							arm_r: -74,
 							arm_l: -74,
 							elbow_r: -43,

@@ -42,7 +42,7 @@ DefineAsset({
 					name: 'Normal',
 					default: true,
 					poseLimits: {
-						forcePose: {
+						bones: {
 							leg_r: -18,
 							leg_l: -18,
 							sitting: 0,
@@ -54,7 +54,7 @@ DefineAsset({
 					id: 'narrow',
 					name: 'Narrow',
 					poseLimits: {
-						forcePose: {
+						bones: {
 							leg_r: -10,
 							leg_l: -10,
 							sitting: 0,
@@ -66,7 +66,7 @@ DefineAsset({
 					id: 'wide',
 					name: 'Wide',
 					poseLimits: {
-						forcePose: {
+						bones: {
 							leg_r: -30,
 							leg_l: -30,
 							sitting: 0,

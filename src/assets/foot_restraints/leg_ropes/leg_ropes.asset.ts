@@ -22,7 +22,7 @@ DefineAsset({
 					name: 'Basic',
 					default: true,
 					poseLimits: {
-						forcePose: {
+						bones: {
 							leg_r: 2,
 							leg_l: 2,
 							sitting: 0,
@@ -34,7 +34,7 @@ DefineAsset({
 					id: 'complex',
 					name: 'Complex',
 					poseLimits: {
-						forcePose: {
+						bones: {
 							leg_r: 2,
 							leg_l: 2,
 							sitting: 0,
@@ -46,7 +46,7 @@ DefineAsset({
 					id: 'toes',
 					name: 'Complex with Toe Tie',
 					poseLimits: {
-						forcePose: {
+						bones: {
 							leg_r: 2,
 							leg_l: 2,
 							sitting: 0,

@@ -42,16 +42,14 @@ DefineAsset({
 					name: 'Normal',
 					default: true,
 					poseLimits: {
-						forcePose: {
-							tiptoeing: 30,
-						},
+						bones: { tiptoeing: 30 },
 					},
 				},
 				{
 					id: 'high',
 					name: 'High',
 					poseLimits: {
-						forcePose: {
+						bones: {
 							tiptoeing: 100,
 						},
 					},
@@ -60,7 +58,7 @@ DefineAsset({
 					id: 'veryhigh',
 					name: 'Very High',
 					poseLimits: {
-						forcePose: {
+						bones: {
 							tiptoeing: 160,
 						},
 					},

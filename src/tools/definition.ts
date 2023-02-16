@@ -1,4 +1,4 @@
-import { AssetDefinition, AssetId, BONE_MAX, BONE_MIN, GetLogger, HexColorStringSchema } from 'pandora-common';
+import { AssetDefinition, AssetDefinitionPoseLimit, AssetDefinitionPoseLimits, AssetId, BONE_MAX, BONE_MIN, GetLogger, HexColorStringSchema, Logger } from 'pandora-common';
 import { AssetDatabase } from './assetDatabase';
 import { AssetSourcePath, DefaultId } from './context';
 import { LoadAssetsGraphics } from './graphics';
@@ -60,23 +60,8 @@ export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 		}
 	}
 
-	for (const [bone, value] of Object.entries(def.poseLimits?.forcePose ?? {})) {
-		if (value == null)
-			continue;
-		const [min, max] = typeof value === 'number' ? [value, value] : value;
-
-		if (!Number.isInteger(min) || min < BONE_MIN || min > BONE_MAX) {
-			logger.error(`Invalid min limit for poseLimits.forcePose.${bone}, must be a whole number in range [${BONE_MIN}, ${BONE_MAX}]`);
-			definitionValid = false;
-		}
-		if (!Number.isInteger(max) || max < BONE_MIN || max > BONE_MAX) {
-			logger.error(`Invalid max limit for poseLimits.forcePose.${bone}, must be a whole number in range [${BONE_MIN}, ${BONE_MAX}]`);
-			definitionValid = false;
-		}
-		if (min > max) {
-			logger.error(`Invalid range for poseLimits.forcePose.${bone}, min must not be greater than max`);
-			definitionValid = false;
-		}
+	if (def.poseLimits) {
+		ValidateAssetDefinitionPoseLimits(logger, 'poseLimits', def.poseLimits);
 	}
 
 	//#region Validate ownership data
@@ -150,4 +135,61 @@ export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 		GraphicsDatabase.registerAsset(id, graphics);
 	}
 	AssetDatabase.registerAsset(id, asset);
+}
+
+function ValidateAssetDefinitionPoseLimits(logger: Logger, context: string, limits: AssetDefinitionPoseLimits): void {
+	ValidateAssetDefinitionPoseLimit(logger, context, limits);
+	if (!limits.options) {
+		return;
+	}
+	for (let i = 0; i < limits.options.length; i++) {
+		ValidateAssetDefinitionPoseLimits(logger, `${context}[${i}]`, limits.options[i]);
+	}
+}
+
+function ValidateAssetDefinitionPoseLimit(logger: Logger, context: string, { bones, arms, leftArm, rightArm }: AssetDefinitionPoseLimit): void {
+	for (const [name, range] of Object.entries(bones ?? {})) {
+		if (typeof range === 'number') {
+			if (range < BONE_MIN || range > BONE_MAX) {
+				logger.error(`Invalid pose limit: ${context}.bones.${name} is not a valid bone range, must be in range [${BONE_MIN}, ${BONE_MAX}]`);
+			}
+			continue;
+		} else if (!range) {
+			logger.error(`Invalid pose limit: ${context}.bones.${name} is not a valid bone range, must be an array or number`);
+			continue;
+		}
+		let lastMax = BONE_MIN - 1;
+		for (const [min, max] of range) {
+			if (!Number.isInteger(min) || min < BONE_MIN || min > BONE_MAX) {
+				logger.error(`Invalid pose limit: ${context}.bones.${name} is not a valid bone range, must be in range [${BONE_MIN}, ${BONE_MAX}] of integers`);
+			}
+			if (!Number.isInteger(max) || max < BONE_MIN || max > BONE_MAX) {
+				logger.error(`Invalid pose limit: ${context}.bones.${name} is not a valid bone range, must be in range [${BONE_MIN}, ${BONE_MAX}] of integers`);
+			}
+			if (min > max) {
+				logger.error(`Invalid pose limit: ${context}.bones.${name} is not a valid bone range, min must not be greater than max`);
+			}
+			if (min <= lastMax) {
+				logger.error(`Invalid pose limit: ${context}.bones.${name} is not a valid bone range, ranges must not overlap`);
+			}
+			lastMax = max;
+		}
+	}
+	if (arms && Object.keys(arms).length === 0) {
+		logger.error(`Invalid pose limit: ${context}.arms must be a non-empty object`);
+	}
+	if (leftArm && Object.keys(leftArm).length === 0) {
+		logger.error(`Invalid pose limit: ${context}.leftArm must be a non-empty object`);
+	}
+	if (rightArm && Object.keys(rightArm).length === 0) {
+		logger.error(`Invalid pose limit: ${context}.rightArm must be a non-empty object`);
+	}
+	for (const key of Object.keys(arms ?? {})) {
+		if (leftArm && key in leftArm) {
+			logger.error(`Invalid pose limit: ${context}.arms.${key} and ${context}.leftArm.${key} are both defined`);
+		}
+		if (rightArm && key in rightArm) {
+			logger.error(`Invalid pose limit: ${context}.arms.${key} and ${context}.rightArm.${key} are both defined`);
+		}
+	}
 }

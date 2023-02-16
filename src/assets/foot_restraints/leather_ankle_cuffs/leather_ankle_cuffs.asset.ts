@@ -62,7 +62,7 @@ DefineAsset({
 					id: 'normal',
 					name: 'Chained standing',
 					poseLimits: {
-						forcePose: {
+						bones: {
 							leg_r: 0,
 							leg_l: 0,
 							sitting: 0,
@@ -77,7 +77,7 @@ DefineAsset({
 					id: 'spread',
 					name: 'Chained Spread',
 					poseLimits: {
-						forcePose: {
+						bones: {
 							leg_r: -3,
 							leg_l: -3,
 							sitting: 0,
@@ -92,7 +92,7 @@ DefineAsset({
 					id: 'closed',
 					name: 'Chained Closed',
 					poseLimits: {
-						forcePose: {
+						bones: {
 							leg_r: 2,
 							leg_l: 2,
 							sitting: 0,
@@ -107,7 +107,7 @@ DefineAsset({
 					id: 'floor',
 					name: 'Spread Floor Chains',
 					poseLimits: {
-						forcePose: {
+						bones: {
 							leg_r: -18,
 							leg_l: -18,
 							sitting: 0,

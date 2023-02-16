@@ -77,7 +77,7 @@ DefineAsset({
 					id: 'fixed',
 					name: 'Long Floor Chain',
 					poseLimits: {
-						forcePose: {
+						bones: {
 							sitting: 0,
 						},
 					},
@@ -92,7 +92,7 @@ DefineAsset({
 					id: 'fixedShort',
 					name: 'Short Floor Chain',
 					poseLimits: {
-						forcePose: {
+						bones: {
 							sitting: 0,
 							kneeling: 180,
 						},

@@ -76,7 +76,7 @@ DefineAsset({
 					id: 'fixed',
 					name: 'Long Floor Chain Standing',
 					poseLimits: {
-						forcePose: {
+						bones: {
 							sitting: 0,
 							kneeling: 0,
 						},
@@ -89,7 +89,7 @@ DefineAsset({
 					id: 'fixedKneeling',
 					name: 'Long Floor Chain Kneeling',
 					poseLimits: {
-						forcePose: {
+						bones: {
 							sitting: 0,
 							kneeling: 180,
 						},
@@ -102,7 +102,7 @@ DefineAsset({
 					id: 'fixedKneelingShort',
 					name: 'Short Floor Chain Kneeling',
 					poseLimits: {
-						forcePose: {
+						bones: {
 							sitting: 0,
 							kneeling: 180,
 						},
@@ -122,8 +122,8 @@ DefineAsset({
 					name: 'Normal',
 					default: true,
 					poseLimits: {
-						forceArms: ArmsPose.FRONT,
-						forcePose: {
+						arms: { position: ArmsPose.FRONT },
+						bones: {
 							arm_r: 30,
 							arm_l: 30,
 							elbow_r: -119,
@@ -135,8 +135,8 @@ DefineAsset({
 					id: 'narrow',
 					name: 'Narrow',
 					poseLimits: {
-						forceArms: ArmsPose.BACK,
-						forcePose: {
+						arms: { position: ArmsPose.BACK },
+						bones: {
 							arm_r: 3,
 							arm_l: 3,
 							elbow_r: -153,
@@ -148,8 +148,8 @@ DefineAsset({
 					id: 'wide',
 					name: 'Wide',
 					poseLimits: {
-						forceArms: ArmsPose.BACK,
-						forcePose: {
+						arms: { position: ArmsPose.BACK },
+						bones: {
 							arm_r: 17,
 							arm_l: 17,
 							elbow_r: -67,
