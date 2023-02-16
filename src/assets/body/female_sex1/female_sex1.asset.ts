@@ -1,4 +1,6 @@
 import { ItemInteractionType } from 'pandora-common';
+import { CreateHairColor } from '../../../helpers/hair_base';
+const { colorization, modules } = CreateHairColor(false);
 
 DefineAsset({
 	name: 'Female Sex 1',
@@ -11,16 +13,14 @@ DefineAsset({
 			name: 'Vulva',
 			default: '#FFFFFF',
 		},
-		hair: {
-			name: 'Hair',
-			default: '#A96B61',
-		},
+		...colorization,
 	},
 	attributes: [
 		'Sex',
 		'Vagina',
 	],
 	modules: {
+		...modules,
 		hair: {
 			type: 'typed',
 			name: 'Pubic Hair',

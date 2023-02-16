@@ -1,14 +1,12 @@
+import { CreateHairColor } from '../../../helpers/hair_base';
+const { colorization, modules } = CreateHairColor(false);
+
 DefineAsset({
 	name: 'Long Twintails',
 	size: 'bodypart',
 	bodypart: 'backhair',
 	graphics: 'graphics.json',
-	colorization: {
-		hair: {
-			name: 'Hair',
-			default: '#555555',
-		},
-	},
+	colorization,
 	attributes: [
 		'Hair',
 		'Hair_extension',
@@ -17,6 +15,7 @@ DefineAsset({
 		'Hair_back',
 	],
 	modules: {
+		...modules,
 		config: {
 			type: 'typed',
 			name: 'Sides',

@@ -1,40 +1,18 @@
+import { CreateHairColor } from '../../../helpers/hair_base';
+const { colorization, modules } = CreateHairColor(true);
+
 DefineAsset({
 	name: 'Front hair 1',
 	size: 'bodypart',
 	bodypart: 'fronthair',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
-	colorization: {
-		hair: {
-			name: 'Hair',
-			default: '#555555',
-		},
-		hairShine: {
-			name: 'Hair shine',
-			default: '#AAAAAA',
-		},
-	},
+	colorization,
 	attributes: [
 		'Hair',
 		'Hair_front',
 	],
-	modules: {
-		shine: {
-			type: 'typed',
-			name: 'Shine',
-			variants: [
-				{
-					id: 'show',
-					name: 'Show Shine',
-					default: true,
-				},
-				{
-					id: 'hide',
-					name: 'Hide Shine',
-				},
-			],
-		},
-	},
+	modules,
 	ownership: {
 		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',
 		credits: ['Titania', 'Jomshir', 'ClaudiaMia'],
