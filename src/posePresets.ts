@@ -1,7 +1,7 @@
 import { ArmsPose, AssetsPosePresets } from 'pandora-common';
 import { AllBones } from './bones';
 
-export const POSE_PRESETS: AssetsPosePresets<AllBones, true> =
+export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 	[
 		{
 			category: 'Arms (front)',
