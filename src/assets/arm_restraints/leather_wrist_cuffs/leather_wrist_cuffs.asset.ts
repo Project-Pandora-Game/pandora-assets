@@ -1,4 +1,4 @@
-import { ItemInteractionType } from 'pandora-common';
+import { ArmsPose, ItemInteractionType } from 'pandora-common';
 
 DefineAsset({
 	name: 'Leather Wrist Cuffs',
@@ -54,30 +54,47 @@ DefineAsset({
 					default: true,
 				},
 				{
-					id: 'front',
+					id: 'chained',
 					name: 'Chained',
 					poseLimits: {
-						bones: {
-							arm_r: 74,
-							arm_l: 74,
-							elbow_r: 43,
-							elbow_l: 43,
-						},
-					},
-					attributes: [
-						'Wrist_cuffs_chain',
-					],
-				},
-				{
-					id: 'overhead',
-					name: 'Chained Overhead',
-					poseLimits: {
-						bones: {
-							arm_r: -74,
-							arm_l: -74,
-							elbow_r: -43,
-							elbow_l: -43,
-						},
+						options: [
+							{
+								arms: { position: ArmsPose.FRONT },
+								bones: {
+									arm_r: [[70, 80]],
+									arm_l: 74,
+									elbow_r: 43,
+									elbow_l: 43,
+								},
+							},
+							{
+								arms: { position: ArmsPose.BACK },
+								bones: {
+									arm_r: 74,
+									arm_l: 74,
+									elbow_r: 43,
+									elbow_l: 43,
+								},
+							},
+							{
+								arms: { position: ArmsPose.FRONT },
+								bones: {
+									arm_r: -74,
+									arm_l: -74,
+									elbow_r: -43,
+									elbow_l: -43,
+								},
+							},
+							{
+								arms: { position: ArmsPose.BACK },
+								bones: {
+									arm_r: -74,
+									arm_l: -74,
+									elbow_r: -43,
+									elbow_l: -43,
+								},
+							},
+						],
 					},
 					attributes: [
 						'Wrist_cuffs_chain',

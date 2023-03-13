@@ -8,7 +8,11 @@
 			"height": 1500,
 			"priority": "ABOVE_ARMS",
 			"points": "body",
-			"mirror": 0,
+			"pointType": [
+				"bodyarm_r",
+				"arm_r"
+			],
+			"mirror": 1,
 			"colorizationKey": "chain",
 			"image": {
 				"image": "leathercuffs_large_ring.png",
@@ -35,7 +39,12 @@
 								{
 									"module": "cuffState",
 									"operator": "=",
-									"value": "front"
+									"value": "chained"
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">=",
+									"value": 0
 								}
 							]
 						]
@@ -47,7 +56,12 @@
 								{
 									"module": "cuffState",
 									"operator": "=",
-									"value": "overhead"
+									"value": "chained"
+								},
+								{
+									"bone": "arm_r",
+									"operator": "<",
+									"value": 0
 								}
 							]
 						]
@@ -63,7 +77,11 @@
 			"height": 1500,
 			"priority": "ABOVE_ARMS",
 			"points": "body",
-			"mirror": 0,
+			"pointType": [
+				"bodyarm_r",
+				"arm_r"
+			],
+			"mirror": 1,
 			"colorizationKey": "cuff",
 			"image": {
 				"image": "leathercuffs_cuff.png",
@@ -78,7 +96,11 @@
 			"height": 1500,
 			"priority": "ABOVE_ARMS",
 			"points": "body",
-			"mirror": 0,
+			"pointType": [
+				"bodyarm_r",
+				"arm_r"
+			],
+			"mirror": 1,
 			"colorizationKey": "belt",
 			"image": {
 				"image": "leathercuffs_belt.png",
@@ -93,7 +115,11 @@
 			"height": 1500,
 			"priority": "ABOVE_ARMS",
 			"points": "body",
-			"mirror": 0,
+			"pointType": [
+				"bodyarm_r",
+				"arm_r"
+			],
+			"mirror": 1,
 			"colorizationKey": "smallRings",
 			"image": {
 				"image": "leathercuffs_rings.png",
@@ -108,7 +134,11 @@
 			"height": 1500,
 			"priority": "BELOW_ARMS",
 			"points": "body",
-			"mirror": 0,
+			"pointType": [
+				"bodyarm_r",
+				"arm_r"
+			],
+			"mirror": 1,
 			"colorizationKey": "cuff",
 			"image": {
 				"image": "leathercuffs_cuff.png",
@@ -123,7 +153,11 @@
 			"height": 1500,
 			"priority": "BELOW_ARMS",
 			"points": "body",
-			"mirror": 0,
+			"pointType": [
+				"bodyarm_r",
+				"arm_r"
+			],
+			"mirror": 1,
 			"colorizationKey": "belt",
 			"image": {
 				"image": "leathercuffs_belt.png",
@@ -138,7 +172,11 @@
 			"height": 1500,
 			"priority": "BELOW_ARMS",
 			"points": "body",
-			"mirror": 0,
+			"pointType": [
+				"bodyarm_r",
+				"arm_r"
+			],
+			"mirror": 1,
 			"colorizationKey": "smallRings",
 			"image": {
 				"image": "leathercuffs_rings.png",
