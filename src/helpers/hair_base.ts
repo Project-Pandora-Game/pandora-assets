@@ -6,7 +6,7 @@ export function CreateHairColor(withShine: boolean): {
 		hair: {
 			name: 'Hair',
 			group: 'hair',
-		}
+		},
 	};
 	const modules: NonNullable<IntermediateAssetDefinition['modules']> = {
 		colorGroupHair: {
