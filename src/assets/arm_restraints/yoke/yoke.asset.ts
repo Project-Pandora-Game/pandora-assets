@@ -122,7 +122,10 @@ DefineAsset({
 					name: 'Normal',
 					default: true,
 					poseLimits: {
-						arms: { position: ArmsPose.FRONT },
+						arms: {
+							position: ArmsPose.FRONT,
+							rotation: 'up'
+						},
 						bones: {
 							arm_r: 30,
 							arm_l: 30,
@@ -135,7 +138,10 @@ DefineAsset({
 					id: 'narrow',
 					name: 'Narrow',
 					poseLimits: {
-						arms: { position: ArmsPose.BACK },
+						arms: {
+							position: ArmsPose.BACK,
+							rotation: 'up'
+						},
 						bones: {
 							arm_r: 3,
 							arm_l: 3,
@@ -148,7 +154,10 @@ DefineAsset({
 					id: 'wide',
 					name: 'Wide',
 					poseLimits: {
-						arms: { position: ArmsPose.BACK },
+						arms: {
+							position: ArmsPose.BACK,
+							rotation: 'up'
+						},
 						bones: {
 							arm_r: 17,
 							arm_l: 17,

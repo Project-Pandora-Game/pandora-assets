@@ -61,6 +61,7 @@ DefineAsset({
 		arms: {
 			position: ArmsPose.BACK,
 			fingers: 'spread',
+			rotation: 'forward',
 		},
 		bones: {
 			arm_r: 104,

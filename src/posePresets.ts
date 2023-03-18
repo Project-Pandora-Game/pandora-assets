@@ -14,7 +14,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 9,
 						elbow_l: 9,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'forward',
+					},
 				},
 				{
 					name: 'Hanging front 1',
@@ -24,7 +27,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 22,
 						elbow_l: 22,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'down',
+					},
 				},
 				{
 					name: 'Hanging front 2',
@@ -34,7 +40,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 37,
 						elbow_l: 37,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'down',
+					},
 				},
 				{
 					name: 'Touching hips 1',
@@ -44,7 +53,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 112,
 						elbow_l: 112,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'down',
+					},
 				},
 				{
 					name: 'Touching hips 2',
@@ -54,7 +66,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 97,
 						elbow_l: 97,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'down',
+					},
 				},
 				// TODO: right side only poses can break in combination with back poses
 				{
@@ -63,7 +78,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						arm_r: 90,
 						elbow_r: 161,
 					},
-					arms: { position: ArmsPose.FRONT },
+					rightArm: {
+						position: ArmsPose.FRONT,
+						rotation: 'down',
+					},
 				},
 				{
 					name: 'Touching neck',
@@ -73,7 +91,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 157,
 						elbow_l: 162,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'down',
+					},
 				},
 				{
 					name: 'Casual',
@@ -83,7 +104,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 66,
 						elbow_l: 66,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'down',
+					},
 				},
 				{
 					name: 'Waving 1',
@@ -94,6 +118,8 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 20,
 					},
 					arms: { position: ArmsPose.FRONT },
+					rightArm: { rotation: 'up' },
+					leftArm: { rotation: 'down' },
 				},
 				{
 					name: 'Waving 2',
@@ -104,6 +130,8 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 20,
 					},
 					arms: { position: ArmsPose.FRONT },
+					rightArm: { rotation: 'up' },
+					leftArm: { rotation: 'down' },
 				},
 				// TODO: Consider way to switch front/back view of just the hand (maybe together with option to show fists)
 				{
@@ -114,7 +142,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: -137,
 						elbow_l: -137,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'up',
+					},
 				},
 				{
 					name: 'Covered eyes peeking',
@@ -124,7 +155,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: -137,
 						elbow_l: -137,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'up',
+					},
 				},
 				{
 					name: 'Covered eyes peeking 2',
@@ -134,7 +168,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: -137,
 						elbow_l: -137,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'up',
+					},
 				},
 				{
 					name: 'Hand on ear',
@@ -145,6 +182,8 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: -137,
 					},
 					arms: { position: ArmsPose.BACK },
+					rightArm: { rotation: 'forward' },
+					leftArm: { rotation: 'up' },
 				},
 				{
 					name: 'Wrists crossed front',
@@ -154,7 +193,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 55,
 						elbow_l: 55,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'down',
+					},
 				},
 				{
 					name: 'Arms folded over chest',
@@ -164,7 +206,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 109,
 						elbow_l: 108,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'down',
+					},
 				},
 				{
 					name: 'Covering breasts',
@@ -174,7 +219,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 129,
 						elbow_l: 130,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'down',
+					},
 				},
 				{
 					name: 'Touching sex 1',
@@ -184,7 +232,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 42,
 						elbow_l: 75,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'down',
+					},
 				},
 				{
 					name: 'Touching sex 2',
@@ -194,7 +245,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 78,
 						elbow_l: 78,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'down',
+					},
 				},
 				{
 					name: 'Covering sex 1',
@@ -204,7 +258,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 66,
 						elbow_l: 64,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'down',
+					},
 				},
 				{
 					name: 'Covering sex 2',
@@ -214,7 +271,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 43,
 						elbow_l: 43,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'down',
+					},
 				},
 				{
 					name: 'Covering breasts & sex',
@@ -224,7 +284,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 144,
 						elbow_l: 64,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'down',
+					},
 				},
 			],
 		},
@@ -239,7 +302,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 43,
 						elbow_l: 43,
 					},
-					arms: { position: ArmsPose.BACK },
+					arms: {
+						position: ArmsPose.BACK,
+						rotation: 'down',
+					},
 				},
 				{
 					name: 'Wrists crossed behind',
@@ -249,7 +315,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 55,
 						elbow_l: 55,
 					},
-					arms: { position: ArmsPose.BACK },
+					arms: {
+						position: ArmsPose.BACK,
+						rotation: 'down',
+					},
 				},
 				{
 					name: 'Arms folded behind',
@@ -259,7 +328,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 98,
 						elbow_l: 98,
 					},
-					arms: { position: ArmsPose.BACK },
+					arms: {
+						position: ArmsPose.BACK,
+						rotation: 'down',
+					},
 				},
 				{
 					name: 'Elbows together',
@@ -269,7 +341,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: -4,
 						elbow_l: -4,
 					},
-					arms: { position: ArmsPose.BACK },
+					arms: {
+						position: ArmsPose.BACK,
+						rotation: 'forward',
+					},
 				},
 				{
 					name: 'Covering butt',
@@ -280,6 +355,8 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: -6,
 					},
 					arms: { position: ArmsPose.BACK },
+					leftArm: { rotation: 'forward' },
+					rightArm: { rotation: 'up' },
 				},
 				//  TODO: Hands are under the back hair; arms need to be split at the elbows most likely
 				/* {
@@ -305,7 +382,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: -20,
 						elbow_l: -20,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'up',
+					},
 				},
 				{
 					name: 'Up/touching',
@@ -315,7 +395,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: -43,
 						elbow_l: -43,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'up',
+					},
 				},
 				{
 					name: 'Raised',
@@ -325,7 +408,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: -60,
 						elbow_l: -60,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'up',
+					},
 				},
 				{
 					name: 'Spread/Open',
@@ -335,7 +421,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: -11,
 						elbow_l: -11,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'up',
+					},
 				},
 				{
 					name: 'Spread/Open wide',
@@ -345,7 +434,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: -11,
 						elbow_l: -11,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'up',
+					},
 				},
 				{
 					name: 'T-Pose',
@@ -355,7 +447,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 0,
 						elbow_l: 0,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: {
+						position: ArmsPose.FRONT,
+						rotation: 'forward',
+					},
 				},
 			],
 		},

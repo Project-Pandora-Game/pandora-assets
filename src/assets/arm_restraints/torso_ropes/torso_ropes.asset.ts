@@ -55,7 +55,10 @@ DefineAsset({
 					id: 'wristsBack',
 					name: 'Wrists Back',
 					poseLimits: {
-						arms: { position: ArmsPose.BACK },
+						arms: {
+							position: ArmsPose.BACK,
+							rotation: 'down'
+						},
 						bones: {
 							arm_r: 82,
 							arm_l: 82,
@@ -71,7 +74,10 @@ DefineAsset({
 					id: 'boxtie',
 					name: 'Boxtie',
 					poseLimits: {
-						arms: { position: ArmsPose.BACK },
+						arms: {
+							position: ArmsPose.BACK,
+							rotation: 'down'
+						},
 						bones: {
 							arm_r: 79,
 							arm_l: 79,
@@ -87,7 +93,10 @@ DefineAsset({
 					id: 'crossed',
 					name: 'Boxtie with Crossed Wrists',
 					poseLimits: {
-						arms: { position: ArmsPose.BACK },
+						arms: {
+							position: ArmsPose.BACK,
+							rotation: 'down'
+						},
 						bones: {
 							arm_r: 82,
 							arm_l: 82,
@@ -103,7 +112,10 @@ DefineAsset({
 					id: 'elbows',
 					name: 'Boxtie with Elbows Touching',
 					poseLimits: {
-						arms: { position: ArmsPose.BACK },
+						arms: {
+							position: ArmsPose.BACK,
+							rotation: 'forward'
+						},
 						bones: {
 							arm_r: 104,
 							arm_l: 104,
