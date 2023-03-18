@@ -51,6 +51,94 @@
 				"image": "body.png",
 				"overrides": [
 					{
+						"image": "body_armsdown_fists.png",
+						"condition": [
+							[
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"armType": "fingers",
+									"side": "right",
+									"operator": "=",
+									"value": "fist"
+								}
+							]
+						]
+					},
+					{
+						"image": "body_armsdown.png",
+						"condition": [
+							[
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					},
+					{
+						"image": "body_armsup_fists.png",
+						"condition": [
+							[
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"armType": "fingers",
+									"side": "right",
+									"operator": "=",
+									"value": "fist"
+								}
+							]
+						]
+					},
+					{
+						"image": "body_armsup.png",
+						"condition": [
+							[
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "up"
+								}
+							]
+						]
+					},
+					{
+						"image": "body_back_armsdown_fists.png",
+						"condition": [
+							[
+								{
+									"bone": "backView",
+									"operator": ">",
+									"value": 0
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"armType": "fingers",
+									"side": "right",
+									"operator": "=",
+									"value": "fist"
+								}
+							]
+						]
+					},
+					{
 						"image": "body_back_armsdown.png",
 						"condition": [
 							[
@@ -60,9 +148,34 @@
 									"value": 0
 								},
 								{
-									"bone": "elbow_r",
-									"operator": ">=",
-									"value": 10
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					},
+					{
+						"image": "body_back_armsup_fists.png",
+						"condition": [
+							[
+								{
+									"bone": "backView",
+									"operator": ">",
+									"value": 0
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"armType": "fingers",
+									"side": "right",
+									"operator": "=",
+									"value": "fist"
 								}
 							]
 						]
@@ -77,33 +190,102 @@
 									"value": 0
 								},
 								{
-									"bone": "elbow_r",
-									"operator": "<=",
-									"value": -5
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "up"
 								}
 							]
 						]
 					},
 					{
-						"image": "body_armsdown.png",
+						"image": "body_back_fists_turned.png",
 						"condition": [
 							[
 								{
-									"bone": "elbow_r",
-									"operator": ">=",
-									"value": 10
+									"bone": "backView",
+									"operator": ">",
+									"value": 0
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"armType": "fingers",
+									"side": "right",
+									"operator": "=",
+									"value": "fist"
 								}
 							]
 						]
 					},
 					{
-						"image": "body_armsup.png",
+						"image": "body_back_fists.png",
 						"condition": [
 							[
 								{
-									"bone": "elbow_r",
-									"operator": "<=",
-									"value": -5
+									"bone": "backView",
+									"operator": ">",
+									"value": 0
+								},
+								{
+									"armType": "fingers",
+									"side": "right",
+									"operator": "=",
+									"value": "fist"
+								}
+							]
+						]
+					},
+					{
+						"image": "body_back.png",
+						"condition": [
+							[
+								{
+									"bone": "backView",
+									"operator": ">",
+									"value": 0
+								},
+								{
+									"armType": "fingers",
+									"side": "right",
+									"operator": "=",
+									"value": "spread"
+								}
+							]
+						]
+					},
+					{
+						"image": "body_fists_turned.png",
+						"condition": [
+							[
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"armType": "fingers",
+									"side": "right",
+									"operator": "=",
+									"value": "fist"
+								}
+							]
+						]
+					},
+					{
+						"image": "body_fists.png",
+						"condition": [
+							[
+								{
+									"armType": "fingers",
+									"side": "right",
+									"operator": "=",
+									"value": "fist"
 								}
 							]
 						]
