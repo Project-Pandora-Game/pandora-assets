@@ -124,7 +124,7 @@ DefineAsset({
 					poseLimits: {
 						arms: {
 							position: ArmsPose.FRONT,
-							rotation: 'up'
+							rotation: 'up',
 						},
 						bones: {
 							arm_r: 30,
@@ -140,7 +140,7 @@ DefineAsset({
 					poseLimits: {
 						arms: {
 							position: ArmsPose.BACK,
-							rotation: 'up'
+							rotation: 'up',
 						},
 						bones: {
 							arm_r: 3,
@@ -156,7 +156,7 @@ DefineAsset({
 					poseLimits: {
 						arms: {
 							position: ArmsPose.BACK,
-							rotation: 'up'
+							rotation: 'up',
 						},
 						bones: {
 							arm_r: 17,

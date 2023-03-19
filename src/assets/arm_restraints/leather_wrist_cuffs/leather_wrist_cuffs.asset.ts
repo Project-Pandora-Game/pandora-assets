@@ -61,7 +61,7 @@ DefineAsset({
 							{
 								arms: {
 									position: ArmsPose.FRONT,
-									rotation: 'down'
+									rotation: 'down',
 								},
 								bones: {
 									arm_r: 74,
@@ -73,7 +73,7 @@ DefineAsset({
 							{
 								arms: {
 									position: ArmsPose.BACK,
-									rotation: 'down'
+									rotation: 'down',
 								},
 								bones: {
 									arm_r: 74,
@@ -85,7 +85,7 @@ DefineAsset({
 							{
 								arms: {
 									position: ArmsPose.FRONT,
-									rotation: 'up'
+									rotation: 'up',
 								},
 								bones: {
 									arm_r: -74,
@@ -97,7 +97,7 @@ DefineAsset({
 							{
 								arms: {
 									position: ArmsPose.BACK,
-									rotation: 'up'
+									rotation: 'up',
 								},
 								bones: {
 									arm_r: -74,
