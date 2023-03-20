@@ -70,6 +70,23 @@
 				"image": "",
 				"overrides": [
 					{
+						"image": "leatheranklecuffs_chain_spread.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"bone": "leg_r",
+									"operator": "=",
+									"value": -3
+								}
+							]
+						]
+					},
+					{
 						"image": "leatheranklecuffs_chain.png",
 						"condition": [
 							[
@@ -77,18 +94,11 @@
 									"module": "cuffState",
 									"operator": "=",
 									"value": "normal"
-								}
-							]
-						]
-					},
-					{
-						"image": "leatheranklecuffs_chain_spread.png",
-						"condition": [
-							[
+								},
 								{
-									"module": "cuffState",
+									"bone": "leg_r",
 									"operator": "=",
-									"value": "spread"
+									"value": 0
 								}
 							]
 						]
@@ -100,7 +110,12 @@
 								{
 									"module": "cuffState",
 									"operator": "=",
-									"value": "closed"
+									"value": "normal"
+								},
+								{
+									"bone": "leg_r",
+									"operator": ">",
+									"value": 0
 								}
 							]
 						]

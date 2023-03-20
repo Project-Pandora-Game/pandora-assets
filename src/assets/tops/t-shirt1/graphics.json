@@ -67,10 +67,10 @@
 			"priority": "ABOVE_ARMS",
 			"points": "shirt",
 			"pointType": [
-				"bodyarm",
-				"arm"
+				"bodyarm_r",
+				"arm_r"
 			],
-			"mirror": 0,
+			"mirror": 1,
 			"colorizationKey": "shirt",
 			"image": {
 				"image": "t-shirt_combined.png",
@@ -154,7 +154,7 @@
 			"height": 1500,
 			"priority": "BELOW_ARMS",
 			"points": "shirt",
-			"mirror": 0,
+			"mirror": 1,
 			"colorizationKey": "shirt",
 			"image": {
 				"image": "t-shirt.png",
@@ -175,8 +175,8 @@
 			},
 			"name": "back_arms",
 			"pointType": [
-				"bodyarm",
-				"arm"
+				"bodyarm_r",
+				"arm_r"
 			]
 		},
 		{

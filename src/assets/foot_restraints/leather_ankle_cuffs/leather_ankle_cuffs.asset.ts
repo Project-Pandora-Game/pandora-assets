@@ -60,44 +60,32 @@ DefineAsset({
 				},
 				{
 					id: 'normal',
-					name: 'Chained standing',
+					name: 'Chained',
 					poseLimits: {
-						bones: {
-							leg_r: 0,
-							leg_l: 0,
-							sitting: 0,
-							kneeling: 0,
-						},
-					},
-					attributes: [
-						'Ankle_cuffs_chain',
-					],
-				},
-				{
-					id: 'spread',
-					name: 'Chained Spread',
-					poseLimits: {
-						bones: {
-							leg_r: -3,
-							leg_l: -3,
-							sitting: 0,
-							kneeling: 0,
-						},
-					},
-					attributes: [
-						'Ankle_cuffs_chain',
-					],
-				},
-				{
-					id: 'closed',
-					name: 'Chained Closed',
-					poseLimits: {
-						bones: {
-							leg_r: 2,
-							leg_l: 2,
-							sitting: 0,
-							kneeling: 0,
-						},
+						options: [
+							{
+								bones: {
+									leg_r: 0,
+									leg_l: 0,
+									kneeling: 0,
+								},
+							},
+							{
+								bones: {
+									leg_r: -3,
+									leg_l: -3,
+									kneeling: 0,
+								},
+							},
+							{
+								bones: {
+									leg_r: [[2, 6]],
+									leg_l: [[2, 6]],
+									kneeling: 0,
+								},
+							},
+						],
+
 					},
 					attributes: [
 						'Ankle_cuffs_chain',

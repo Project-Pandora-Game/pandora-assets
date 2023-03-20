@@ -61,7 +61,7 @@ DefineAsset({
 							{
 								arms: { position: ArmsPose.FRONT },
 								bones: {
-									arm_r: [[70, 80]],
+									arm_r: 74,
 									arm_l: 74,
 									elbow_r: 43,
 									elbow_l: 43,
