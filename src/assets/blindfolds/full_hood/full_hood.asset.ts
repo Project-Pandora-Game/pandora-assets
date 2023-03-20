@@ -83,6 +83,7 @@ DefineAsset({
 					id: 'mouth',
 					name: 'Mouth Cover',
 					requirements: ['!Mouth_tongue_out'],
+					coverSlots: ['mouth', 'outsideMouthArea'],
 					blockSlots: ['mouth'],
 					occupySlots: {
 						'outsideMouthArea': 1,
@@ -107,6 +108,7 @@ DefineAsset({
 						'Mouth_open_wide',
 						'!Mouth_tongue_out',
 					],
+					coverSlots: ['mouth', 'outsideMouthArea'],
 					blockSlots: ['mouth'],
 					occupySlots: {
 						'mouth': 9,

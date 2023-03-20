@@ -57,6 +57,7 @@ DefineAsset({
 		coherency: 4,
 		stimulus: 2,
 	},
+	coverSlots: ['mouth', 'outsideMouthArea'],
 	blockSlots: ['mouth'],
 	occupySlots: {
 		'outsideMouthArea': 2,

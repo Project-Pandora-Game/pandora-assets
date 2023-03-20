@@ -48,6 +48,7 @@ DefineAsset({
 			],
 		},
 	},
+	coverSlots: ['mouth', 'outsideMouthArea'],
 	blockSlots: ['mouth'],
 	occupySlots: {
 		'outsideMouthArea': 2,
