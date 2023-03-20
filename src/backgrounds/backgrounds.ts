@@ -959,6 +959,53 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 			],
 		},
 	},
+	{
+		// inside
+		// bathroom
+		// shower
+		// day
+		// space: small
+		id: 'large_shower',
+		name: 'Large shower',
+		image: 'large_shower.jpg',
+		size: [2250, 1677],
+		maxY: 200,
+		scaling: 1.3,
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/okchomeseller/51213807491/',
+					copyrightHolder: 'Bill Wilson',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		// inside
+		// livingroom
+		// cozy
+		// home
+		// day
+		// space: medium
+		id: 'blue_livingroom',
+		name: 'Blue livingroom',
+		image: 'blue_livingroom.jpg',
+		size: [2650, 1937],
+		maxY: 740,
+		scaling: 1.5,
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/okchomeseller/18244279019/',
+					copyrightHolder: 'Bill Wilson',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
 ];
 
 export function LoadBackgrounds() {
