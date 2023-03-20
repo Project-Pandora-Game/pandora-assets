@@ -107,8 +107,7 @@ DefineAsset({
 						'Mouth_open_wide',
 						'!Mouth_tongue_out',
 					],
-					// comment in again after issue 166 is resolved
-					// blockSlots: ['mouth'],
+					blockSlots: ['mouth'],
 					occupySlots: {
 						'mouth': 9,
 						'outsideMouthArea': 1,
