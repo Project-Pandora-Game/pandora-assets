@@ -89,6 +89,10 @@ DefineAsset({
 						stimulus: 3,
 					},
 					requirements: ['!Mouth_tongue_out'],
+					blockSlots: ['mouth'],
+					occupySlots: {
+						'outsideMouthArea': 2,
+					},
 
 				},
 				{
@@ -104,6 +108,11 @@ DefineAsset({
 						stimulus: 6,
 					},
 					requirements: ['!Mouth_tongue_out'],
+					blockSlots: ['mouth'],
+					occupySlots: {
+						'outsideMouthArea': 2,
+						'mouth': 9,
+					},
 				},
 			],
 		},

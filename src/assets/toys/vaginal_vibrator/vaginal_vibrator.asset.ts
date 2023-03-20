@@ -28,7 +28,7 @@ DefineAsset({
 					id: 'half',
 					name: 'Half Inside',
 					occupySlots: {
-						'vagina': 5,
+						'vagina': 4,
 						'outsideVaginaArea': 10,
 					},
 				},
@@ -36,7 +36,7 @@ DefineAsset({
 					id: 'in',
 					name: 'Deep Inside',
 					occupySlots: {
-						'vagina': 10,
+						'vagina': 8,
 					},
 				},
 			],

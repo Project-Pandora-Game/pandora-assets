@@ -48,7 +48,9 @@ DefineAsset({
 			],
 		},
 	},
+	blockSlots: ['mouth'],
 	occupySlots: {
+		'outsideMouthArea': 2,
 		'mouth': 6,
 	},
 	effects: {

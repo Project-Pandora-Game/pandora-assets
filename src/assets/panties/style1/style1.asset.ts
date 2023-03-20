@@ -22,6 +22,11 @@ DefineAsset({
 					id: 'normal',
 					name: 'Normal',
 					default: true,
+					blockSlots: ['vagina', 'anus'],
+					occupySlots: {
+						'outsideVaginaArea': 0.1,
+						'outsideAnusArea': 0.1,
+					},
 				},
 				{
 					id: 'aside',
@@ -30,6 +35,11 @@ DefineAsset({
 				{
 					id: 'wedged',
 					name: 'Wedged Up',
+					blockSlots: ['vagina', 'anus'],
+					occupySlots: {
+						'outsideVaginaArea': 0.1,
+						'outsideAnusArea': 0.1,
+					},
 				},
 				{
 					id: 'fully',

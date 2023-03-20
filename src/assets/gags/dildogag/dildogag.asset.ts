@@ -57,6 +57,11 @@ DefineAsset({
 		coherency: 7,
 		stimulus: 6,
 	},
+	blockSlots: ['mouth'],
+	occupySlots: {
+		'outsideMouthArea': 1,
+		'mouth': 9,
+	},
 	chat: {
 		actionAdd: 'SOURCE_CHARACTER pushed a Dildo Gag into TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth, strapping it tight.',
 		actionRemove: 'SOURCE_CHARACTER loosened and then removed the Dildo Gag from TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',

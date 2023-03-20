@@ -36,6 +36,11 @@ DefineAsset({
 		coherency: 2,
 		stimulus: 1,
 	},
+	blockSlots: ['mouth'],
+	occupySlots: {
+		'outsideMouthArea': 1,
+		'mouth': 6,
+	},
 	chat: {
 		actionAdd: 'SOURCE_CHARACTER strapped a Bit Gag tightly between TARGET_CHARACTER_DYNAMIC_POSSESSIVE teeth.',
 		actionRemove: 'SOURCE_CHARACTER loosened and then removed the Bit Gag from TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',
