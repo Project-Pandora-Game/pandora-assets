@@ -67,6 +67,7 @@ DefineAsset({
 								bones: {
 									leg_r: 0,
 									leg_l: 0,
+									sitting: 0,
 									kneeling: 0,
 								},
 							},
@@ -74,6 +75,7 @@ DefineAsset({
 								bones: {
 									leg_r: -3,
 									leg_l: -3,
+									sitting: 0,
 									kneeling: 0,
 								},
 							},
@@ -81,6 +83,7 @@ DefineAsset({
 								bones: {
 									leg_r: [[2, 6]],
 									leg_l: [[2, 6]],
+									sitting: 0,
 									kneeling: 0,
 								},
 							},
