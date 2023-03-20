@@ -21,6 +21,7 @@ const DEFINITION_FALLTHOUGH_PROPERTIES = [
 	'blockModules',
 	'blockSelfModules',
 	'blockSlots',
+	'coverSlots',
 	'occupySlots',
 	// Asset definition
 	'name',
