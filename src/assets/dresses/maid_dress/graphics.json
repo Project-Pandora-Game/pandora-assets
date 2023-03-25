@@ -220,14 +220,9 @@
 						"condition": [
 							[
 								{
-									"module": "skirtState",
+									"module": "skirtStateFront",
 									"operator": "=",
 									"value": "up"
-								},
-								{
-									"bone": "backView",
-									"operator": "=",
-									"value": 0
 								}
 							]
 						]
@@ -253,14 +248,9 @@
 						"condition": [
 							[
 								{
-									"module": "skirtState",
+									"module": "skirtStateFront",
 									"operator": "=",
 									"value": "up"
-								},
-								{
-									"bone": "backView",
-									"operator": "=",
-									"value": 0
 								}
 							]
 						]
@@ -377,14 +367,9 @@
 						"condition": [
 							[
 								{
-									"module": "skirtState",
+									"module": "skirtStateBack",
 									"operator": "=",
 									"value": "up"
-								},
-								{
-									"bone": "backView",
-									"operator": ">",
-									"value": 0
 								}
 							]
 						]
@@ -410,14 +395,9 @@
 						"condition": [
 							[
 								{
-									"module": "skirtState",
+									"module": "skirtStateBack",
 									"operator": "=",
 									"value": "up"
-								},
-								{
-									"bone": "backView",
-									"operator": ">",
-									"value": 0
 								}
 							]
 						]

@@ -71,21 +71,6 @@ DefineAsset({
 				},
 			],
 		},
-		skirtState: {
-			type: 'typed',
-			name: 'Skirt State',
-			variants: [
-				{
-					id: 'normal',
-					name: 'Normal',
-					default: true,
-				},
-				{
-					id: 'up',
-					name: 'Pulled Up',
-				},
-			],
-		},
 		bossomState: {
 			type: 'typed',
 			name: 'Bossom State',
@@ -98,6 +83,36 @@ DefineAsset({
 				{
 					id: 'down',
 					name: 'Pulled Down',
+				},
+			],
+		},
+		skirtStateFront: {
+			type: 'typed',
+			name: 'Skirt State Front',
+			variants: [
+				{
+					id: 'normal',
+					name: 'Normal',
+					default: true,
+				},
+				{
+					id: 'up',
+					name: 'Pulled Up',
+				},
+			],
+		},
+		skirtStateBack: {
+			type: 'typed',
+			name: 'Skirt State Back',
+			variants: [
+				{
+					id: 'normal',
+					name: 'Normal',
+					default: true,
+				},
+				{
+					id: 'up',
+					name: 'Pulled up',
 				},
 			],
 		},

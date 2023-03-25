@@ -14,9 +14,9 @@ DefineAsset({
 		'Clothing_lower',
 	],
 	modules: {
-		skirtState: {
+		skirtStateFront: {
 			type: 'typed',
-			name: 'Skirt State',
+			name: 'Skirt State Front',
 			variants: [
 				{
 					id: 'normal',
@@ -26,6 +26,21 @@ DefineAsset({
 				{
 					id: 'up',
 					name: 'Pulled Up',
+				},
+			],
+		},
+		skirtStateBack: {
+			type: 'typed',
+			name: 'Skirt State Back',
+			variants: [
+				{
+					id: 'normal',
+					name: 'Normal',
+					default: true,
+				},
+				{
+					id: 'up',
+					name: 'Pulled up',
 				},
 			],
 		},
