@@ -1772,7 +1772,7 @@
 			588,
 			495
 		],
-		"mirror": false,
+		"mirror": true,
 		"transforms": [
 			{
 				"type": "shift",
