@@ -49,8 +49,8 @@ DefineAsset({
 	},
 	poseLimits: {
 		bones: {
-			arm_r: [[-75,120]],
-			arm_l: [[-75,120]],
+			arm_r: [[-75, 120]],
+			arm_l: [[-75, 120]],
 		},
 	},
 	ownership: {
