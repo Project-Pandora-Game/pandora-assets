@@ -354,9 +354,10 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: -11,
 						elbow_l: -6,
 					},
-					arms: { position: ArmsPose.BACK },
-					leftArm: { rotation: 'forward' },
-					rightArm: { rotation: 'up' },
+					arms: {
+						position: ArmsPose.BACK,
+						rotation: 'up',
+					},
 				},
 				//  TODO: Hands are under the back hair; arms need to be split at the elbows most likely
 				/* {
