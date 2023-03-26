@@ -55,6 +55,11 @@
 						"condition": [
 							[
 								{
+									"bone": "backView",
+									"operator": "=",
+									"value": 0
+								},
+								{
 									"armType": "rotation",
 									"side": "right",
 									"operator": "=",
@@ -74,10 +79,21 @@
 						"condition": [
 							[
 								{
+									"bone": "backView",
+									"operator": "=",
+									"value": 0
+								},
+								{
 									"armType": "rotation",
 									"side": "right",
 									"operator": "=",
 									"value": "down"
+								},
+								{
+									"armType": "fingers",
+									"side": "right",
+									"operator": "=",
+									"value": "spread"
 								}
 							]
 						]
@@ -86,6 +102,11 @@
 						"image": "body_armsup_fists.png",
 						"condition": [
 							[
+								{
+									"bone": "backView",
+									"operator": "=",
+									"value": 0
+								},
 								{
 									"armType": "rotation",
 									"side": "right",
@@ -106,10 +127,21 @@
 						"condition": [
 							[
 								{
+									"bone": "backView",
+									"operator": "=",
+									"value": 0
+								},
+								{
 									"armType": "rotation",
 									"side": "right",
 									"operator": "=",
 									"value": "up"
+								},
+								{
+									"armType": "fingers",
+									"side": "right",
+									"operator": "=",
+									"value": "spread"
 								}
 							]
 						]
@@ -120,8 +152,8 @@
 							[
 								{
 									"bone": "backView",
-									"operator": ">",
-									"value": 0
+									"operator": "=",
+									"value": 1
 								},
 								{
 									"armType": "rotation",
@@ -144,14 +176,20 @@
 							[
 								{
 									"bone": "backView",
-									"operator": ">",
-									"value": 0
+									"operator": "=",
+									"value": 1
 								},
 								{
 									"armType": "rotation",
 									"side": "right",
 									"operator": "=",
 									"value": "down"
+								},
+								{
+									"armType": "fingers",
+									"side": "right",
+									"operator": "=",
+									"value": "spread"
 								}
 							]
 						]
@@ -162,8 +200,8 @@
 							[
 								{
 									"bone": "backView",
-									"operator": ">",
-									"value": 0
+									"operator": "=",
+									"value": 1
 								},
 								{
 									"armType": "rotation",
@@ -186,14 +224,20 @@
 							[
 								{
 									"bone": "backView",
-									"operator": ">",
-									"value": 0
+									"operator": "=",
+									"value": 1
 								},
 								{
 									"armType": "rotation",
 									"side": "right",
 									"operator": "=",
 									"value": "up"
+								},
+								{
+									"armType": "fingers",
+									"side": "right",
+									"operator": "=",
+									"value": "spread"
 								}
 							]
 						]
@@ -204,8 +248,8 @@
 							[
 								{
 									"bone": "backView",
-									"operator": ">",
-									"value": 0
+									"operator": "=",
+									"value": 1
 								},
 								{
 									"armType": "rotation",
@@ -228,14 +272,20 @@
 							[
 								{
 									"bone": "backView",
-									"operator": ">",
-									"value": 0
+									"operator": "=",
+									"value": 1
 								},
 								{
 									"armType": "fingers",
 									"side": "right",
 									"operator": "=",
 									"value": "fist"
+								},
+								{
+									"armType": "fingers",
+									"side": "right",
+									"operator": "=",
+									"value": "spread"
 								}
 							]
 						]
@@ -246,8 +296,14 @@
 							[
 								{
 									"bone": "backView",
-									"operator": ">",
-									"value": 0
+									"operator": "=",
+									"value": 1
+								},
+								{
+									"armType": "fingers",
+									"side": "right",
+									"operator": "=",
+									"value": "spread"
 								},
 								{
 									"armType": "fingers",
@@ -262,6 +318,11 @@
 						"image": "body_fists_turned.png",
 						"condition": [
 							[
+								{
+									"bone": "backView",
+									"operator": "=",
+									"value": 0
+								},
 								{
 									"armType": "rotation",
 									"side": "right",
@@ -281,6 +342,17 @@
 						"image": "body_fists.png",
 						"condition": [
 							[
+								{
+									"bone": "backView",
+									"operator": "=",
+									"value": 0
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "forward"
+								},
 								{
 									"armType": "fingers",
 									"side": "right",
