@@ -22,7 +22,7 @@ type AssetColorization = import('pandora-common').AssetColorization<AssetRepoExt
 
 type IntermediateAssetColorization
 	= (Omit<AssetColorization, 'group'> & { group?: never; })
-	| (Omit<AssetColorization, 'group' | 'default'> & { group: import('./colorGroups').ColorGroupNames; default?: never; });
+	| (Omit<AssetColorization, 'default'> & { group: AssetRepoExtraArgs['colorGroups']; default?: never; });
 
 interface IntermediateAssetDefinition extends Pick<import('pandora-common').AssetDefinition<AssetRepoExtraArgs>, import('./tools/definition').AssetDefinitionFallthoughProperties> {
 	id?: string;
