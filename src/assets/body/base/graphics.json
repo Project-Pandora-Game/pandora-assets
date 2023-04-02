@@ -61,13 +61,13 @@
 								},
 								{
 									"armType": "rotation",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "down"
 								},
 								{
 									"armType": "fingers",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "fist"
 								}
@@ -85,13 +85,13 @@
 								},
 								{
 									"armType": "rotation",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "down"
 								},
 								{
 									"armType": "fingers",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "spread"
 								}
@@ -109,13 +109,13 @@
 								},
 								{
 									"armType": "rotation",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "up"
 								},
 								{
 									"armType": "fingers",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "fist"
 								}
@@ -133,13 +133,13 @@
 								},
 								{
 									"armType": "rotation",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "up"
 								},
 								{
 									"armType": "fingers",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "spread"
 								}
@@ -157,13 +157,13 @@
 								},
 								{
 									"armType": "rotation",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "down"
 								},
 								{
 									"armType": "fingers",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "fist"
 								}
@@ -181,13 +181,13 @@
 								},
 								{
 									"armType": "rotation",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "down"
 								},
 								{
 									"armType": "fingers",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "spread"
 								}
@@ -205,13 +205,13 @@
 								},
 								{
 									"armType": "rotation",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "up"
 								},
 								{
 									"armType": "fingers",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "fist"
 								}
@@ -229,13 +229,13 @@
 								},
 								{
 									"armType": "rotation",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "up"
 								},
 								{
 									"armType": "fingers",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "spread"
 								}
@@ -253,13 +253,13 @@
 								},
 								{
 									"armType": "rotation",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "backward"
 								},
 								{
 									"armType": "fingers",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "fist"
 								}
@@ -277,13 +277,13 @@
 								},
 								{
 									"armType": "fingers",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "fist"
 								},
 								{
 									"armType": "fingers",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "spread"
 								}
@@ -301,13 +301,13 @@
 								},
 								{
 									"armType": "fingers",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "spread"
 								},
 								{
 									"armType": "fingers",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "spread"
 								}
@@ -325,13 +325,13 @@
 								},
 								{
 									"armType": "rotation",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "backward"
 								},
 								{
 									"armType": "fingers",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "fist"
 								}
@@ -349,13 +349,13 @@
 								},
 								{
 									"armType": "rotation",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "forward"
 								},
 								{
 									"armType": "fingers",
-									"side": "right",
+									"side": "left",
 									"operator": "=",
 									"value": "fist"
 								}
