@@ -9,8 +9,8 @@
 			"priority": "ABOVE_ARMS",
 			"points": "body",
 			"pointType": [
-				"bodyarm_r",
-				"arm_r"
+				"bodyarm_l",
+				"arm_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "chain",
@@ -42,7 +42,7 @@
 									"value": "chained"
 								},
 								{
-									"bone": "arm_r",
+									"bone": "arm_l",
 									"operator": ">=",
 									"value": 0
 								}
@@ -59,7 +59,7 @@
 									"value": "chained"
 								},
 								{
-									"bone": "arm_r",
+									"bone": "arm_l",
 									"operator": "<",
 									"value": 0
 								}
@@ -78,8 +78,8 @@
 			"priority": "ABOVE_ARMS",
 			"points": "body",
 			"pointType": [
-				"bodyarm_r",
-				"arm_r"
+				"bodyarm_l",
+				"arm_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "cuff",
@@ -97,8 +97,8 @@
 			"priority": "ABOVE_ARMS",
 			"points": "body",
 			"pointType": [
-				"bodyarm_r",
-				"arm_r"
+				"bodyarm_l",
+				"arm_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "belt",
@@ -116,8 +116,8 @@
 			"priority": "ABOVE_ARMS",
 			"points": "body",
 			"pointType": [
-				"bodyarm_r",
-				"arm_r"
+				"bodyarm_l",
+				"arm_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "smallRings",
@@ -135,8 +135,8 @@
 			"priority": "BELOW_ARMS",
 			"points": "body",
 			"pointType": [
-				"bodyarm_r",
-				"arm_r"
+				"bodyarm_l",
+				"arm_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "cuff",
@@ -154,8 +154,8 @@
 			"priority": "BELOW_ARMS",
 			"points": "body",
 			"pointType": [
-				"bodyarm_r",
-				"arm_r"
+				"bodyarm_l",
+				"arm_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "belt",
@@ -173,8 +173,8 @@
 			"priority": "BELOW_ARMS",
 			"points": "body",
 			"pointType": [
-				"bodyarm_r",
-				"arm_r"
+				"bodyarm_l",
+				"arm_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "smallRings",

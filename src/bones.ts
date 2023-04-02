@@ -2,20 +2,20 @@
 import { BoneDefinitionCompressed, BoneType, CoordinatesCompressed } from 'pandora-common';
 
 const boneDefinitionImpl = {
-	arm_r: {
+	arm_l: {
 		pos: [578, 432],
-		mirror: 'arm_l',
+		mirror: 'arm_r',
 		type: 'pose',
 	},
-	elbow_r: {
+	elbow_l: {
 		pos: [728, 434],
-		mirror: 'elbow_l',
-		parent: 'arm_r',
+		mirror: 'elbow_r',
+		parent: 'arm_l',
 		type: 'pose',
 	},
-	leg_r: {
+	leg_l: {
 		pos: [533, 707],
-		mirror: 'leg_l',
+		mirror: 'leg_r',
 		baseRotation: 90,
 		type: 'pose',
 	},
@@ -31,7 +31,7 @@ const boneDefinitionImpl = {
 
 type Key = keyof typeof boneDefinitionImpl;
 
-type Mirrored<Bone extends Key> = Bone extends `${infer M}_r` ? `${M}_l` : never;
+type Mirrored<Bone extends Key> = Bone extends `${infer M}_l` ? `${M}_r` : never;
 
 type BoneDefinitionCompressedStrict = {
 	pos?: Readonly<CoordinatesCompressed>;

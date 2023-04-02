@@ -9,8 +9,8 @@
 			"priority": "ABOVE_ARMS",
 			"points": "body",
 			"pointType": [
-				"bodyarm_r",
-				"arm_r"
+				"bodyarm_l",
+				"arm_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "frills",
@@ -41,8 +41,8 @@
 			"priority": "ABOVE_ARMS",
 			"points": "body",
 			"pointType": [
-				"bodyarm_r",
-				"arm_r"
+				"bodyarm_l",
+				"arm_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "bracelets",
@@ -73,8 +73,8 @@
 			"priority": "BELOW_ARMS",
 			"points": "body",
 			"pointType": [
-				"bodyarm_r",
-				"arm_r"
+				"bodyarm_l",
+				"arm_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "frills",
@@ -105,8 +105,8 @@
 			"priority": "BELOW_ARMS",
 			"points": "body",
 			"pointType": [
-				"bodyarm_r",
-				"arm_r"
+				"bodyarm_l",
+				"arm_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "bracelets",

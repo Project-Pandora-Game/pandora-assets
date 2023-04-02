@@ -5,7 +5,7 @@
 			801
 		],
 		"mirror": true,
-		"pointType": "static_l",
+		"pointType": "static_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -23,7 +23,7 @@
 			1500
 		],
 		"mirror": true,
-		"pointType": "static_l",
+		"pointType": "static_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -41,7 +41,7 @@
 			801
 		],
 		"mirror": true,
-		"pointType": "static_l",
+		"pointType": "static_r",
 		"transforms": []
 	},
 	{
@@ -59,7 +59,7 @@
 			0
 		],
 		"mirror": true,
-		"pointType": "static_l",
+		"pointType": "static_r",
 		"transforms": []
 	},
 	{
@@ -68,7 +68,7 @@
 			800
 		],
 		"mirror": true,
-		"pointType": "static_l",
+		"pointType": "static_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -86,7 +86,7 @@
 			0
 		],
 		"mirror": true,
-		"pointType": "static_l",
+		"pointType": "static_r",
 		"transforms": []
 	},
 	{

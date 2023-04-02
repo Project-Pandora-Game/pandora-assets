@@ -119,7 +119,7 @@
 						},
 						{
 							"type": "rotate",
-							"bone": "arm_r",
+							"bone": "arm_l",
 							"value": 0.03
 						}
 					],
@@ -150,7 +150,7 @@
 						},
 						{
 							"type": "rotate",
-							"bone": "arm_r",
+							"bone": "arm_l",
 							"value": 0.02
 						}
 					],

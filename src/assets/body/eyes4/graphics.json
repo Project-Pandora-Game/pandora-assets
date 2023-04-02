@@ -18,7 +18,7 @@
 						"condition": [
 							[
 								{
-									"module": "eyeState_r",
+									"module": "eyeState_l",
 									"operator": "=",
 									"value": "closed"
 								}
@@ -52,7 +52,7 @@
 				]
 			},
 			"pointType": [
-				"static_r"
+				"static_l"
 			]
 		},
 		{
@@ -72,7 +72,7 @@
 						"condition": [
 							[
 								{
-									"module": "eyeState_r",
+									"module": "eyeState_l",
 									"operator": "=",
 									"value": "closed"
 								}
@@ -106,7 +106,7 @@
 				]
 			},
 			"pointType": [
-				"static_r"
+				"static_l"
 			]
 		},
 		{
@@ -126,7 +126,7 @@
 						"condition": [
 							[
 								{
-									"module": "eyeState_r",
+									"module": "eyeState_l",
 									"operator": "=",
 									"value": "closed"
 								}
@@ -160,7 +160,7 @@
 				]
 			},
 			"pointType": [
-				"static_r"
+				"static_l"
 			]
 		},
 		{
@@ -180,7 +180,7 @@
 						"condition": [
 							[
 								{
-									"module": "eyeState_r",
+									"module": "eyeState_l",
 									"operator": "=",
 									"value": "closed"
 								}
@@ -190,7 +190,7 @@
 				]
 			},
 			"pointType": [
-				"static_r"
+				"static_l"
 			]
 		},
 		{
@@ -209,7 +209,7 @@
 						"condition": [
 							[
 								{
-									"module": "eyeState_r",
+									"module": "eyeState_l",
 									"operator": "=",
 									"value": "closed"
 								}
@@ -267,7 +267,7 @@
 				]
 			},
 			"pointType": [
-				"static_r"
+				"static_l"
 			]
 		}
 	]

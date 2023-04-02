@@ -42,8 +42,8 @@
 			"priority": "ARMS",
 			"points": "body",
 			"pointType": [
-				"bodyarm_r",
-				"arm_r"
+				"bodyarm_l",
+				"arm_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "skin",

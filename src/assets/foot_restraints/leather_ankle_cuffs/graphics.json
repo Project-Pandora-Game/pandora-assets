@@ -79,7 +79,7 @@
 									"value": "normal"
 								},
 								{
-									"bone": "leg_r",
+									"bone": "leg_l",
 									"operator": "=",
 									"value": -3
 								}
@@ -96,7 +96,7 @@
 									"value": "normal"
 								},
 								{
-									"bone": "leg_r",
+									"bone": "leg_l",
 									"operator": "=",
 									"value": 0
 								}
@@ -113,7 +113,7 @@
 									"value": "normal"
 								},
 								{
-									"bone": "leg_r",
+									"bone": "leg_l",
 									"operator": ">",
 									"value": 0
 								}

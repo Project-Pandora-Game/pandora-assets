@@ -5,7 +5,7 @@
 			0
 		],
 		"mirror": true,
-		"pointType": "static_l",
+		"pointType": "static_r",
 		"transforms": []
 	},
 	{
@@ -14,7 +14,7 @@
 			1500
 		],
 		"mirror": true,
-		"pointType": "static_l",
+		"pointType": "static_r",
 		"transforms": []
 	},
 	{
