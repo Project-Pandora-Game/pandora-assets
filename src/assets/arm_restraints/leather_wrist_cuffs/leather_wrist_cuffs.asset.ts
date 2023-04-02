@@ -1,4 +1,4 @@
-import {  ItemInteractionType } from 'pandora-common';
+import { ItemInteractionType } from 'pandora-common';
 DefineAsset({
 	name: 'Leather Wrist Cuffs',
 	size: 'small',
