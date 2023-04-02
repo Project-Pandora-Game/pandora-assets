@@ -1,5 +1,3 @@
-import { ArmsPose } from 'pandora-common';
-
 DefineAsset({
 	name: 'Armbinder',
 	size: 'medium',
@@ -59,7 +57,7 @@ DefineAsset({
 	},
 	poseLimits: {
 		arms: {
-			position: ArmsPose.BACK,
+			position: 'back',
 			fingers: 'spread',
 			rotation: 'forward',
 		},

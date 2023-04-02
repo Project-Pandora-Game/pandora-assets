@@ -1,5 +1,3 @@
-import { ArmsPose } from 'pandora-common';
-
 DefineAsset({
 	name: 'Torso Ropes',
 	size: 'small',
@@ -56,7 +54,7 @@ DefineAsset({
 					name: 'Wrists Back',
 					poseLimits: {
 						arms: {
-							position: ArmsPose.BACK,
+							position: 'back',
 							rotation: 'down',
 						},
 						bones: {
@@ -75,7 +73,7 @@ DefineAsset({
 					name: 'Boxtie',
 					poseLimits: {
 						arms: {
-							position: ArmsPose.BACK,
+							position: 'back',
 							rotation: 'down',
 						},
 						bones: {
@@ -94,7 +92,7 @@ DefineAsset({
 					name: 'Boxtie with Crossed Wrists',
 					poseLimits: {
 						arms: {
-							position: ArmsPose.BACK,
+							position: 'back',
 							rotation: 'down',
 						},
 						bones: {
@@ -113,7 +111,7 @@ DefineAsset({
 					name: 'Boxtie with Elbows Touching',
 					poseLimits: {
 						arms: {
-							position: ArmsPose.BACK,
+							position: 'back',
 							rotation: 'forward',
 						},
 						bones: {

@@ -1,4 +1,4 @@
-import { ArmsPose, AssetsPosePresets } from 'pandora-common';
+import { AssetsPosePresets } from 'pandora-common';
 import { AllBones } from './bones';
 
 export const POSE_PRESETS: AssetsPosePresets<AllBones> =
@@ -15,7 +15,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 9,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'forward',
 					},
 				},
@@ -28,7 +28,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 22,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'down',
 					},
 				},
@@ -41,7 +41,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 37,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'down',
 					},
 				},
@@ -54,7 +54,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 112,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'down',
 					},
 				},
@@ -67,7 +67,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 97,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'down',
 					},
 				},
@@ -79,7 +79,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 161,
 					},
 					rightArm: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'down',
 					},
 				},
@@ -92,7 +92,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 162,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'down',
 					},
 				},
@@ -105,7 +105,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 66,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'down',
 					},
 				},
@@ -117,7 +117,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: -113,
 						elbow_l: 20,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: { position: 'front' },
 					rightArm: { rotation: 'up' },
 					leftArm: { rotation: 'down' },
 				},
@@ -129,7 +129,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: -98,
 						elbow_l: 20,
 					},
-					arms: { position: ArmsPose.FRONT },
+					arms: { position: 'front' },
 					rightArm: { rotation: 'up' },
 					leftArm: { rotation: 'down' },
 				},
@@ -143,7 +143,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: -137,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'up',
 					},
 				},
@@ -156,7 +156,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: -137,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'up',
 					},
 				},
@@ -169,7 +169,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: -137,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'up',
 					},
 				},
@@ -181,7 +181,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: 6,
 						elbow_l: -137,
 					},
-					arms: { position: ArmsPose.BACK },
+					arms: { position: 'back' },
 					rightArm: { rotation: 'forward' },
 					leftArm: { rotation: 'up' },
 				},
@@ -194,7 +194,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 55,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'down',
 					},
 				},
@@ -207,7 +207,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 108,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'down',
 					},
 				},
@@ -220,7 +220,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 130,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'down',
 					},
 				},
@@ -233,7 +233,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 75,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'down',
 					},
 				},
@@ -246,7 +246,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 78,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'down',
 					},
 				},
@@ -259,7 +259,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 64,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'down',
 					},
 				},
@@ -272,7 +272,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 43,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'down',
 					},
 				},
@@ -285,7 +285,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 64,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'down',
 					},
 				},
@@ -303,7 +303,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 43,
 					},
 					arms: {
-						position: ArmsPose.BACK,
+						position: 'back',
 						rotation: 'down',
 					},
 				},
@@ -316,7 +316,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 55,
 					},
 					arms: {
-						position: ArmsPose.BACK,
+						position: 'back',
 						rotation: 'down',
 					},
 				},
@@ -329,7 +329,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 98,
 					},
 					arms: {
-						position: ArmsPose.BACK,
+						position: 'back',
 						rotation: 'down',
 					},
 				},
@@ -342,7 +342,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: -4,
 					},
 					arms: {
-						position: ArmsPose.BACK,
+						position: 'back',
 						rotation: 'forward',
 					},
 				},
@@ -355,7 +355,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: -6,
 					},
 					arms: {
-						position: ArmsPose.BACK,
+						position: 'back',
 						rotation: 'up',
 					},
 				},
@@ -368,7 +368,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_r: -119,
 						elbow_l: -119,
 					},
-					arms: { position: ArmsPose.BACK },
+					arms: { position: 'back' },
 				}, */
 			],
 		},
@@ -384,7 +384,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: -20,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'up',
 					},
 				},
@@ -397,7 +397,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: -43,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'up',
 					},
 				},
@@ -410,7 +410,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: -60,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'up',
 					},
 				},
@@ -423,7 +423,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: -11,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'up',
 					},
 				},
@@ -436,7 +436,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: -11,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'up',
 					},
 				},
@@ -449,7 +449,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 0,
 					},
 					arms: {
-						position: ArmsPose.FRONT,
+						position: 'front',
 						rotation: 'forward',
 					},
 				},

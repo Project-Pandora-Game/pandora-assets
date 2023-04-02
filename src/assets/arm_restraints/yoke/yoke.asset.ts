@@ -1,5 +1,3 @@
-import { ArmsPose } from 'pandora-common';
-
 DefineAsset({
 	name: 'Yoke',
 	size: 'medium',
@@ -123,7 +121,7 @@ DefineAsset({
 					default: true,
 					poseLimits: {
 						arms: {
-							position: ArmsPose.FRONT,
+							position: 'front',
 							rotation: 'up',
 						},
 						bones: {
@@ -139,7 +137,7 @@ DefineAsset({
 					name: 'Narrow',
 					poseLimits: {
 						arms: {
-							position: ArmsPose.BACK,
+							position: 'back',
 							rotation: 'up',
 						},
 						bones: {
@@ -155,7 +153,7 @@ DefineAsset({
 					name: 'Wide',
 					poseLimits: {
 						arms: {
-							position: ArmsPose.BACK,
+							position: 'back',
 							rotation: 'up',
 						},
 						bones: {

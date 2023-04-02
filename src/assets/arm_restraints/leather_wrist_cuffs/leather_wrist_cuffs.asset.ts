@@ -1,5 +1,4 @@
-import { ArmsPose, ItemInteractionType } from 'pandora-common';
-
+import {  ItemInteractionType } from 'pandora-common';
 DefineAsset({
 	name: 'Leather Wrist Cuffs',
 	size: 'small',
@@ -60,7 +59,7 @@ DefineAsset({
 						options: [
 							{
 								arms: {
-									position: ArmsPose.FRONT,
+									position: 'front',
 									rotation: 'down',
 								},
 								bones: {
@@ -72,7 +71,7 @@ DefineAsset({
 							},
 							{
 								arms: {
-									position: ArmsPose.BACK,
+									position: 'back',
 									rotation: 'down',
 								},
 								bones: {
@@ -84,7 +83,7 @@ DefineAsset({
 							},
 							{
 								arms: {
-									position: ArmsPose.FRONT,
+									position: 'front',
 									rotation: 'up',
 								},
 								bones: {
@@ -96,7 +95,7 @@ DefineAsset({
 							},
 							{
 								arms: {
-									position: ArmsPose.BACK,
+									position: 'back',
 									rotation: 'up',
 								},
 								bones: {
