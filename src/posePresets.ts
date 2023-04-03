@@ -114,8 +114,8 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						position: 'front',
 						rotation: 'down',
 					},
-					rightArm: { fingers: 'spread', },
-					leftArm: { fingers: 'fist', },
+					rightArm: { fingers: 'spread' },
+					leftArm: { fingers: 'fist' },
 				},
 				{
 					name: 'Waving 1',
@@ -126,8 +126,8 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 20,
 					},
 					arms: { position: 'front' },
-					rightArm: { rotation: 'up', fingers: 'spread', },
-					leftArm: { rotation: 'down', fingers: 'spread', },
+					rightArm: { rotation: 'up', fingers: 'spread' },
+					leftArm: { rotation: 'down', fingers: 'spread' },
 				},
 				{
 					name: 'Waving 2',
@@ -138,8 +138,8 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: 20,
 					},
 					arms: { position: 'front' },
-					rightArm: { rotation: 'up', fingers: 'spread', },
-					leftArm: { rotation: 'down', fingers: 'spread', },
+					rightArm: { rotation: 'up', fingers: 'spread' },
+					leftArm: { rotation: 'down', fingers: 'spread' },
 				},
 				{
 					name: 'Covering eyes',
@@ -192,8 +192,8 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						elbow_l: -137,
 					},
 					arms: { position: 'back' },
-					rightArm: { rotation: 'forward', fingers: 'spread', },
-					leftArm: { rotation: 'up', fingers: 'spread', },
+					rightArm: { rotation: 'forward', fingers: 'spread' },
+					leftArm: { rotation: 'up', fingers: 'spread' },
 				},
 				{
 					name: 'Wrists crossed front',
