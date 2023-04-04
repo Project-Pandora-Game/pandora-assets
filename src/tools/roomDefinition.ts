@@ -96,6 +96,7 @@ export function DefineRoomBackground(def: IntermediateRoomBackgroundDefinition):
 		size: def.size,
 		scaling: def.scaling,
 		maxY: def.maxY,
+		tags: def.tags,
 	};
 
 	RoomDatabase.registerBackground(background);
