@@ -13,7 +13,7 @@ import { LoadTemplates } from './templates';
 import { POSE_PRESETS } from './posePresets';
 import { LoadGitData } from './tools/git';
 import { RoomDatabase } from './tools/roomDatabase';
-import { LoadBackgrounds } from './backgrounds/backgrounds';
+import { LoadBackgroundTags, LoadBackgrounds } from './backgrounds/backgrounds';
 import { LoadAttributes } from './attributes';
 import { APPEARANCE_RANDOMIZATION_CONFIG } from './presets';
 import { ASSET_SLOTS } from './slots';
@@ -81,6 +81,7 @@ async function Run() {
 
 	// Load backgrounds
 	logger.info('Loading backgrounds...');
+	const tags = LoadBackgroundTags();
 	LoadBackgrounds();
 
 	logger.info('Loading assets...');
@@ -142,6 +143,7 @@ async function Run() {
 		bones: boneDefinition,
 		posePresets: POSE_PRESETS,
 		bodyparts: BODYPARTS,
+		backgroundTags: tags,
 		backgrounds: RoomDatabase.export(),
 		graphicsId: graphicsFile.hash,
 		attributes,
