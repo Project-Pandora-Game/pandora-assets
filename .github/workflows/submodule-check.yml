@@ -17,11 +17,11 @@ jobs:
       - name: Check Pandora Submodule
         run: |
           # Get the current hash for pandora
-          current_hash=$(git submodule status | grep pandora | awk '{print $1}')
+          current_hash=$(git submodule status pandora | awk '{print $1}')
 
           # Get the hash for my_submodule from origin/master
           git fetch origin master
-          master_hash=$(git ls-tree origin/master pandora | awk '{print $3}')
+          master_hash=$(git ls-tree --format='%(objectname)' origin/master pandora)
 
           if [ "$current_hash" == "$master_hash" ]; then
             # skip the rest of the checks
@@ -30,13 +30,14 @@ jobs:
 
           # Check if current is based on master
           cd pandora
-          if ! git merge-base --is-ancestor $current_hash $master_hash; then
+          git fetch origin master
+          if git merge-base --is-ancestor $current_hash $master_hash; then
             echo "Error: Pandora submodule is not up to date with origin/master" >&2
             exit 1
           fi
 
           # Get the HEAD for the submodule repo on its origin/master
-          origin_master_hash=$(git ls-remote origin master | awk '{print $1}')
+          origin_master_hash=$(git rev-parse --verify origin/master)
 
           # Check if this contains the current pandora hash
           if ! git merge-base --is-ancestor $current_hash $origin_master_hash; then
