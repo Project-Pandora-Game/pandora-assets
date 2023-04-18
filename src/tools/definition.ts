@@ -1,4 +1,4 @@
-import { AssetDefinition, AssetDefinitionPoseLimit, AssetDefinitionPoseLimits, AssetId, BONE_MAX, BONE_MIN, GetLogger, HexColorStringSchema, Logger } from 'pandora-common';
+import { AssetDefinition, AssetDefinitionPoseLimit, AssetDefinitionPoseLimits, AssetId, BONE_MAX, BONE_MIN, GetLogger, HexRGBAColorStringSchema, Logger } from 'pandora-common';
 import { AssetDatabase } from './assetDatabase';
 import { AssetSourcePath, DefaultId } from './context';
 import { LoadAssetsGraphics } from './graphics';
@@ -57,17 +57,35 @@ export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 	if (def.colorization) {
 		colorization = {};
 		for (const [key, value] of Object.entries(def.colorization)) {
+			let minAlpha: number | undefined;
+			if (value.minAlpha != null) {
+				if (typeof value.minAlpha === 'string') {
+					minAlpha = Math.round(parseInt(value.minAlpha.slice(0, -1)) / 100 * 255);
+				} else if (value.minAlpha > 0 && value.minAlpha < 1) {
+					minAlpha = Math.round(value.minAlpha * 255);
+				} else {
+					minAlpha = Math.round(value.minAlpha);
+				}
+				if (minAlpha < 0 || minAlpha > 255) {
+					definitionValid = false;
+					logger.error(`Invalid minAlpha in colorization.${key}: '${value.minAlpha}' is not a valid alpha value, accepted range is 0-255 or 0-1 or 0%-100%`);
+				}
+			}
 			if (value.group) {
 				colorization[key] = {
 					...value,
+					minAlpha,
 					default: COLOR_GROUP_DEFINITION[value.group],
 				};
 			} else {
-				if (!HexColorStringSchema.safeParse(value.default).success) {
+				if (!HexRGBAColorStringSchema.safeParse(value.default).success) {
 					definitionValid = false;
 					logger.error(`Invalid default in colorization.${key}: '${value.default}' is not a valid color, use full hex format, like '#ffffff'`);
 				}
-				colorization[key] = value;
+				colorization[key] = {
+					...value,
+					minAlpha,
+				};
 			}
 		}
 	}

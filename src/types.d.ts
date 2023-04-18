@@ -20,9 +20,19 @@ interface AssetRepoExtraArgs {
 
 type AssetColorization = import('pandora-common').AssetColorization<AssetRepoExtraArgs>;
 
+type AssetColorizationBetterMinAlpha = Omit<AssetColorization, 'minAlpha'> & {
+	/**
+	 * Minimum alpha value for this color group.
+	 * If the value is not present this color cannot be transparent.
+	 *
+	 * accepted ranges: [0, 255] or [0.0, 1.0] or [0%, 100%]
+	 */
+	minAlpha?: number | `${number}%`;
+};
+
 type IntermediateAssetColorization
-	= (Omit<AssetColorization, 'group'> & { group?: never; })
-	| (Omit<AssetColorization, 'default'> & { group: AssetRepoExtraArgs['colorGroups']; default?: never; });
+	= (Omit<AssetColorizationBetterMinAlpha, 'group'> & { group?: never; })
+	| (Omit<AssetColorizationBetterMinAlpha, 'default'> & { group: AssetRepoExtraArgs['colorGroups']; default?: never; });
 
 interface IntermediateAssetDefinition extends Pick<import('pandora-common').AssetDefinition<AssetRepoExtraArgs>, import('./tools/definition').AssetDefinitionFallthoughProperties> {
 	id?: string;
