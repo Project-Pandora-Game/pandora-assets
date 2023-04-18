@@ -7,6 +7,7 @@ DefineAsset({
 		pantyhose: {
 			name: 'Pantyhose',
 			default: '#9C8686',
+			minAlpha: 0.5,
 		},
 	},
 	attributes: [
