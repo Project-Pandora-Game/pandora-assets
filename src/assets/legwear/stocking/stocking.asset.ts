@@ -7,6 +7,7 @@ DefineAsset({
 		stocking: {
 			name: 'Stocking',
 			default: '#584747',
+			minAlpha: 0.6,
 		},
 	},
 	attributes: [
