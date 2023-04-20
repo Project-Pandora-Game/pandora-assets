@@ -8,7 +8,8 @@ type LayerMirror = import('pandora-common').LayerMirror;
 type AllBones = import('./bones').AllBones;
 
 // Globals available to all assets
-declare function DefineAsset(def: IntermediateAssetDefinition): void;
+declare function DefineAsset(def: IntermediatePersonalAssetDefinition): void;
+declare function DefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinition): void;
 
 interface AssetRepoExtraArgs {
 	bones: AllBones;
@@ -34,7 +35,7 @@ type IntermediateAssetColorization
 	= (Omit<AssetColorizationBetterMinAlpha, 'group'> & { group?: never; })
 	| (Omit<AssetColorizationBetterMinAlpha, 'default'> & { group: AssetRepoExtraArgs['colorGroups']; default?: never; });
 
-interface IntermediateAssetDefinition extends Pick<import('pandora-common').AssetDefinition<AssetRepoExtraArgs>, import('./tools/definition').AssetDefinitionFallthoughProperties> {
+interface IntermediatePersonalAssetDefinition extends Pick<import('pandora-common').PersonalAssetDefinition<AssetRepoExtraArgs>, import('./tools/definition').AssetDefinitionFallthoughProperties> {
 	id?: string;
 	graphics?: string;
 	/** Info about who owns the asset(s) */
@@ -55,6 +56,36 @@ interface IntermediateAssetDefinition extends Pick<import('pandora-common').Asse
 		licensing: LicensingInfo[];
 	};
 	colorization?: Record<string, IntermediateAssetColorization>;
+}
+
+interface IntermediateRoomDeviceWearablePartDefinition extends Pick<import('pandora-common').RoomDeviceWearablePartAssetDefinition<AssetRepoExtraArgs>, import('./tools/definitionRoomDevice').RoomDeviceWearablePartAssetDefinitionFallthoughProperties> {
+	graphics?: string;
+}
+
+interface IntermediateRoomDeviceSlotDefinition {
+	asset: IntermediateRoomDeviceWearablePartDefinition;
+}
+
+interface IntermediateRoomDeviceDefinition extends Pick<import('pandora-common').RoomDeviceAssetDefinition<AssetRepoExtraArgs>, import('./tools/definitionRoomDevice').AssetRoomDeviceDefinitionFallthoughProperties> {
+	id?: string;
+	slots: Record<string, IntermediateRoomDeviceSlotDefinition>;
+	/** Info about who owns the asset(s) */
+	ownership: {
+		/** Same as author of git commits present in PR, has responsibility for this asset */
+		responsibleContributor: string;
+		/** Who is shown in credits for this asset and at the same time people to ask when Asset should be changed */
+		credits: string[];
+		/** Defines author's preferences about how their asset can be modified */
+		modificationPolicy: PandoraAssetModificationPolicy;
+		/** Defines author's preferences about how their asset can be reused for other assets */
+		reusePolicy: PandoraAssetReusePolicy;
+		/**
+		 * Legal info about the images
+		 * If there are multiple sources used, specify this multiple times.
+		 * If author gave you express permission to use images, but wishes to remain Anonymous, write "Anonymous" into relevant fields.
+		 */
+		licensing: LicensingInfo[];
+	};
 }
 
 interface IntermediateRoomBackgroundDefinition extends Pick<import('pandora-common').IChatroomBackgroundInfo,

@@ -1,11 +1,11 @@
-import { GetLogger, AssetId, AssetDefinition } from 'pandora-common';
+import { GetLogger, AssetId, AssetDefinition, AssetType } from 'pandora-common';
 
 const logger = GetLogger('AssetDatabase');
 
 export const AssetDatabase = new class AssetDatabase {
 	private assets: Map<AssetId, AssetDefinition> = new Map();
 
-	public registerAsset(id: AssetId, asset: AssetDefinition, allowOverride: boolean = false): void {
+	public registerAsset(id: AssetId, asset: AssetDefinition<AssetType, AssetRepoExtraArgs>, allowOverride: boolean = false): void {
 		if (this.assets.has(id) && !allowOverride) {
 			throw new Error(`Duplicate asset definition, asset '${id}' already exists`);
 		}

@@ -79,7 +79,7 @@ export function ValidateBodyparts(result: AssetsDefinitionFile): void {
 		if (part.required) {
 			if (
 				!Array.from(Object.values(result.assets))
-					.some((asset) => asset.bodypart === part.name && asset.allowRandomizerUsage === true)
+					.some((asset) => asset.type === 'personal' && asset.bodypart === part.name && asset.allowRandomizerUsage === true)
 			) {
 				throw new Error(`Bodypart '${part.name}' has no asset with 'allowRandomizerUsage: true' to always fulfill 'required' condition`);
 			}

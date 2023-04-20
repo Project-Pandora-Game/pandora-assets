@@ -1,4 +1,4 @@
-import { AssetDefinition, AssetDefinitionPoseLimit, AssetDefinitionPoseLimits, AssetId, BONE_MAX, BONE_MIN, GetLogger, HexRGBAColorStringSchema, Logger } from 'pandora-common';
+import { AssetDefinitionPoseLimit, AssetDefinitionPoseLimits, AssetId, BONE_MAX, BONE_MIN, GetLogger, HexRGBAColorStringSchema, Logger, PersonalAssetDefinition } from 'pandora-common';
 import { AssetDatabase } from './assetDatabase';
 import { AssetSourcePath, DefaultId } from './context';
 import { LoadAssetsGraphics } from './graphics';
@@ -34,11 +34,11 @@ const DEFINITION_FALLTHOUGH_PROPERTIES = [
 	'chat',
 	'bodypart',
 	'modules',
-] as const;
+] as const satisfies readonly (keyof PersonalAssetDefinition)[];
 
 export type AssetDefinitionFallthoughProperties = (typeof DEFINITION_FALLTHOUGH_PROPERTIES)[number] & string;
 
-export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
+export function GlobalDefineAsset(def: IntermediatePersonalAssetDefinition): void {
 	const id: AssetId = `a/${def.id ?? DefaultId()}` as const;
 
 	const logger = GetLogger('DefineAsset', `[Asset ${id}]`);
@@ -141,8 +141,9 @@ export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 		return;
 	}
 
-	const asset: AssetDefinition = {
+	const asset: PersonalAssetDefinition<AssetRepoExtraArgs> = {
 		...pick(def, DEFINITION_FALLTHOUGH_PROPERTIES),
+		type: 'personal',
 		id,
 		colorization,
 		hasGraphics: def.graphics !== undefined,
@@ -168,7 +169,7 @@ export function GlobalDefineAsset(def: IntermediateAssetDefinition): void {
 	AssetDatabase.registerAsset(id, asset);
 }
 
-function ValidateAssetDefinitionPoseLimits(logger: Logger, context: string, limits: AssetDefinitionPoseLimits): void {
+export function ValidateAssetDefinitionPoseLimits(logger: Logger, context: string, limits: AssetDefinitionPoseLimits): void {
 	ValidateAssetDefinitionPoseLimit(logger, context, limits);
 	if (!limits.options) {
 		return;
@@ -178,7 +179,7 @@ function ValidateAssetDefinitionPoseLimits(logger: Logger, context: string, limi
 	}
 }
 
-function ValidateAssetDefinitionPoseLimit(logger: Logger, context: string, { bones, arms, leftArm, rightArm }: AssetDefinitionPoseLimit): void {
+export function ValidateAssetDefinitionPoseLimit(logger: Logger, context: string, { bones, arms, leftArm, rightArm }: AssetDefinitionPoseLimit): void {
 	for (const [name, range] of Object.entries(bones ?? {})) {
 		if (typeof range === 'number') {
 			if (range < BONE_MIN || range > BONE_MAX) {
