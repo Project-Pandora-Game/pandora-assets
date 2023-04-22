@@ -3,6 +3,7 @@ DefineRoomDeviceAsset({
 	size: 'huge',
 	slots: {
 		character_slot: {
+			name: 'Cage',
 			asset: {
 				name: 'Small cage',
 				size: 'huge',

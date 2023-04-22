@@ -63,6 +63,7 @@ interface IntermediateRoomDeviceWearablePartDefinition extends Pick<import('pand
 }
 
 interface IntermediateRoomDeviceSlotDefinition {
+	name: string;
 	asset: IntermediateRoomDeviceWearablePartDefinition;
 }
 

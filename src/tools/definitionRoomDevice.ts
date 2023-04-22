@@ -120,6 +120,7 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 		}
 
 		slots[k] = {
+			name: v.name,
 			wearableAsset: slotWearableId,
 		};
 	}
