@@ -1,4 +1,4 @@
-import { AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceWearablePartAssetDefinition } from 'pandora-common';
+import { AssertNever, AssetId, GetLogger, HexColorStringSchema, RoomDeviceAssetDefinition, RoomDeviceWearablePartAssetDefinition } from 'pandora-common';
 import { AssetDatabase } from './assetDatabase';
 import { AssetSourcePath, DefaultId } from './context';
 import { LoadAssetsGraphics } from './graphics';
@@ -42,13 +42,14 @@ const ROOM_DEVICE_DEFINITION_FALLTHOUGH_PROPERTIES = [
 	'size',
 
 	// Graphics definition
+	'colorization',
 	'pivot',
 	'graphicsLayers',
 ] as const satisfies readonly (keyof RoomDeviceAssetDefinition)[];
 
 export type AssetRoomDeviceDefinitionFallthoughProperties = (typeof ROOM_DEVICE_DEFINITION_FALLTHOUGH_PROPERTIES)[number] & string;
 
-function DefineRoomDeviceWearablePart(baseId: AssetId, slot: string, def: IntermediateRoomDeviceWearablePartDefinition): AssetId | null {
+function DefineRoomDeviceWearablePart(baseId: AssetId, slot: string, def: IntermediateRoomDeviceWearablePartDefinition, colorizationKeys: ReadonlySet<string>): AssetId | null {
 	const id: AssetId = `${baseId}/${slot}` as const;
 
 	const logger = GetLogger('RoomDeviceWearablePart', `[Asset ${id}]`);
@@ -85,8 +86,8 @@ function DefineRoomDeviceWearablePart(baseId: AssetId, slot: string, def: Interm
 		for (let i = 0; i < graphics.layers.length; i++) {
 			const layer = graphics.layers[i];
 
-			if (layer.colorizationKey != null) {
-				loggerGraphics.warning(`Layer #${i} has colorizationKey ${layer.colorizationKey}, but room devices don't support colorization yet.`);
+			if (layer.colorizationKey != null && !colorizationKeys.has(layer.colorizationKey)) {
+				loggerGraphics.warning(`Layer #${i} has colorizationKey ${layer.colorizationKey} outside of defined colorization keys [${[...colorizationKeys].join(', ')}]`);
 			}
 		}
 
@@ -107,12 +108,14 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 	const slots: RoomDeviceAssetDefinition<AssetRepoExtraArgs>['slots'] = {};
 	const slotIds = new Set<string>();
 
+	const colorizationKeys = new Set<string>(Object.keys(def.colorization ?? {}));
+
 	//#region Load slots
 
 	for (const [k, v] of Object.entries(def.slots)) {
 		slotIds.add(k);
 
-		const slotWearableId = DefineRoomDeviceWearablePart(id, k, v.asset);
+		const slotWearableId = DefineRoomDeviceWearablePart(id, k, v.asset, colorizationKeys);
 		if (slotWearableId == null) {
 			definitionValid = false;
 			logger.error(`Failed to process asset for slot '${k}'`);
@@ -127,15 +130,28 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 
 	//#endregion
 
-	//#region Load graphics layers
+	//#region Load graphics
+
+	if (def.colorization) {
+		for (const [key, value] of Object.entries(def.colorization)) {
+			if (!HexColorStringSchema.safeParse(value.default).success) {
+				definitionValid = false;
+				logger.error(`Invalid default in colorization.${key}: '${value.default}' is not a valid color, use full hex format, like '#ffffff'`);
+			}
+		}
+	}
 
 	def.graphicsLayers.forEach((layer, index) => {
 		if (layer.type === 'sprite') {
 			layer.image = layer.image && DefinePngResource(layer.image, 'asset').resultName;
+
+			if (layer.colorizationKey != null && !colorizationKeys.has(layer.colorizationKey)) {
+				logger.warning(`Layer #${index} has colorizationKey ${layer.colorizationKey} outside of defined colorization keys [${[...colorizationKeys].join(', ')}]`);
+			}
 		} else if (layer.type === 'slot') {
 			if (!slotIds.has(layer.slot)) {
 				definitionValid = false;
-				logger.error(`Layer #${index + 1} links to unknown slot '${layer.slot}'`);
+				logger.error(`Layer #${index} links to unknown slot '${layer.slot}'`);
 			}
 		} else {
 			AssertNever(layer);
