@@ -40,6 +40,7 @@ const ROOM_DEVICE_DEFINITION_FALLTHOUGH_PROPERTIES = [
 	// Asset definition
 	'name',
 	'size',
+	'chat',
 
 	// Graphics definition
 	'colorization',
