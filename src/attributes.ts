@@ -365,7 +365,6 @@ const ATTRIBUTES_DEFINITION = {
 
 export type AttributeNames = (keyof typeof ATTRIBUTES_DEFINITION) & string;
 
-// eslint-disable-next-line @typescript-eslint/naming-convention, @typescript-eslint/no-unused-vars
 type __satisfies__EFFECTS_DEFAULT = Satisfies<typeof ATTRIBUTES_DEFINITION, Record<AttributeNames, AssetAttributeDefinition>>;
 
 export function LoadAttributes(): Record<AttributeNames, AssetAttributeDefinition> {
