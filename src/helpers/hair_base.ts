@@ -30,7 +30,7 @@ export function CreateHairColor(withShine: boolean): {
 		colorization.hairShine = {
 			name: 'Hair shine',
 			group: 'hairShine',
-			minAlpha: 0.2,
+			minAlpha: 0,
 		};
 		modules.shine = {
 			type: 'typed',
