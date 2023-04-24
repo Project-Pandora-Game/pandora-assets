@@ -1,4 +1,4 @@
-import { AssertNever, AssetId, GetLogger, HexColorStringSchema, RoomDeviceAssetDefinition, RoomDeviceWearablePartAssetDefinition } from 'pandora-common';
+import { AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceWearablePartAssetDefinition } from 'pandora-common';
 import { AssetDatabase } from './assetDatabase';
 import { AssetSourcePath, DefaultId } from './context';
 import { LoadAssetsGraphics } from './graphics';
@@ -10,6 +10,7 @@ import * as fs from 'fs';
 import { pick } from 'lodash';
 import { DefinePngResource } from './resources';
 import { ValidateAssetDefinitionPoseLimits } from './definition';
+import { LoadRoomDeviceColorization } from './load_helpers/color';
 
 const ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHOUGH_PROPERTIES = [
 	// Properties
@@ -133,14 +134,12 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 
 	//#region Load graphics
 
-	if (def.colorization) {
-		for (const [key, value] of Object.entries(def.colorization)) {
-			if (!HexColorStringSchema.safeParse(value.default).success) {
-				definitionValid = false;
-				logger.error(`Invalid default in colorization.${key}: '${value.default}' is not a valid color, use full hex format, like '#ffffff'`);
-			}
-		}
-	}
+	const {
+		colorization,
+		valid: colorizationValid,
+	} = LoadRoomDeviceColorization(logger, def.colorization);
+	def.colorization = colorization;
+	definitionValid &&= colorizationValid;
 
 	def.graphicsLayers.forEach((layer, index) => {
 		if (layer.type === 'sprite') {
