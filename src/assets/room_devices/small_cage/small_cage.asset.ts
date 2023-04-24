@@ -1,6 +1,17 @@
 DefineRoomDeviceAsset({
 	name: 'Small cage',
 	size: 'huge',
+	colorization: {
+		cage: {
+			name: 'Cage',
+			default: '#ffffff',
+		},
+		cage_door: {
+			name: 'Cage door',
+			default: '#ffffff',
+			minAlpha: 0,
+		},
+	},
 	slots: {
 		character_slot: {
 			name: 'Cage',
@@ -26,6 +37,7 @@ DefineRoomDeviceAsset({
 		{
 			type: 'sprite',
 			image: 'small_cage.png',
+			colorizationKey: 'cage',
 		},
 		{
 			type: 'slot',
@@ -39,6 +51,7 @@ DefineRoomDeviceAsset({
 		{
 			type: 'sprite',
 			image: 'small_cage_door.png',
+			colorizationKey: 'cage_door',
 		},
 	],
 	ownership: {
