@@ -9,6 +9,9 @@ module.exports = {
 	coverageDirectory: 'coverage',
 	errorOnDeprecated: true,
 	transform: {
-		'^.+\\.(t|j)sx?$': ['@swc/jest'],
+		'^.+\\.tsx?$': ['ts-jest', {
+			tsconfig: './test/tsconfig.json',
+			isolatedModules: true,
+		}],
 	},
 };
