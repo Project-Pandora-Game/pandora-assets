@@ -14,12 +14,32 @@ DefineRoomDeviceAsset({
 			name: 'Pillows',
 			default: '#ffffff',
 		},
+		ropes_left: {
+			name: 'Left ropes',
+			default: '#666666',
+		},
+		ropes_right: {
+			name: 'Right ropes',
+			default: '#ffffff',
+		},
 	},
 	slots: {
 		character_slot_left: {
 			name: 'Bed - left side',
 			asset: {
 				name: 'Wooden double bed left side',
+				size: 'huge',
+				poseLimits: {
+					bones: {
+						sitting: 0,
+					},
+				},
+			},
+		},
+		character_slot_middle: {
+			name: 'Bed - center',
+			asset: {
+				name: 'Wooden double bed center',
 				size: 'huge',
 				poseLimits: {
 					bones: {
@@ -40,9 +60,55 @@ DefineRoomDeviceAsset({
 				},
 			},
 		},
+		character_slot_left_tied: {
+			name: 'Tied to bed - left side',
+			asset: {
+				name: 'Tied to bed left side',
+				size: 'huge',
+				poseLimits: {
+					bones: {
+						arm_l: -25,
+						arm_r: -27,
+						elbow_l: -60,
+						elbow_r: -58,
+						sitting: 0,
+						kneeling: 0,
+						leg_r: -18,
+						leg_l: -18,
+					},
+				},
+				effects: {
+					blockHands: true,
+					// blockRoomLeave: true,
+				},
+			},
+		},
+		character_slot_right_tied: {
+			name: 'Tied to bed - right side',
+			asset: {
+				name: 'Tied to bed right side',
+				size: 'huge',
+				poseLimits: {
+					bones: {
+						arm_l: -25,
+						arm_r: -25,
+						elbow_l: -60,
+						elbow_r: -60,
+						sitting: 0,
+						kneeling: 0,
+						leg_r: -18,
+						leg_l: -18,
+					},
+				},
+				effects: {
+					blockHands: true,
+					// blockRoomLeave: true,
+				},
+			},
+		},
 	},
 	pivot: {
-		x: 916,
+		x: 920,
 		y: 1750,
 	},
 	graphicsLayers: [
@@ -62,11 +128,78 @@ DefineRoomDeviceAsset({
 			colorizationKey: 'pillows',
 		},
 		{
+			type: 'sprite',
+			image: 'ropes_top_left.png',
+			colorizationKey: 'ropes_left',
+		},
+		{
+			type: 'sprite',
+			image: 'ropes_top_right.png',
+			colorizationKey: 'ropes_right',
+		},
+		{
+			type: 'sprite',
+			image: 'ropes_bottom_left.png',
+			colorizationKey: 'ropes_left',
+		},
+		{
+			type: 'sprite',
+			image: 'ropes_bottom_right.png',
+			colorizationKey: 'ropes_right',
+		},
+		{
+			type: 'slot',
+			slot: 'character_slot_left_tied',
+			characterPosition: {
+				offsetX: -288,
+				offsetY: 10,
+				relativeScale: 1,
+			},
+		},
+		{
+			type: 'slot',
+			slot: 'character_slot_right_tied',
+			characterPosition: {
+				offsetX: 288,
+				offsetY: 10,
+				relativeScale: 1,
+			},
+		},
+		{
+			type: 'sprite',
+			image: 'wrists_left.png',
+			colorizationKey: 'ropes_left',
+		},
+		{
+			type: 'sprite',
+			image: 'wrists_right.png',
+			colorizationKey: 'ropes_right',
+		},
+		{
+			type: 'sprite',
+			image: 'ankles_left.png',
+			colorizationKey: 'ropes_left',
+		},
+		{
+			type: 'sprite',
+			image: 'ankles_right.png',
+			colorizationKey: 'ropes_right',
+		},
+		{
 			type: 'slot',
 			slot: 'character_slot_left',
 			characterPosition: {
 				offsetX: -284,
-				offsetY: 10,
+				offsetY: 30,
+				relativeScale: 1,
+			},
+		},
+		{
+			type: 'slot',
+			slot: 'character_slot_middle',
+			characterPosition: {
+				offsetX: 0,
+				offsetY: 30,
 				relativeScale: 1,
 			},
 		},
@@ -75,7 +208,7 @@ DefineRoomDeviceAsset({
 			slot: 'character_slot_right',
 			characterPosition: {
 				offsetX: 284,
-				offsetY: 10,
+				offsetY: 30,
 				relativeScale: 1,
 			},
 		},
