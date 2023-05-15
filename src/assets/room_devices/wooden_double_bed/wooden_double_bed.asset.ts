@@ -81,6 +81,7 @@ DefineRoomDeviceAsset({
 					blockHands: true,
 					// blockRoomLeave: true,
 				},
+				graphics: 'ropes_left.json',
 			},
 		},
 		character_slot_right_tied: {
@@ -104,6 +105,7 @@ DefineRoomDeviceAsset({
 					blockHands: true,
 					// blockRoomLeave: true,
 				},
+				graphics: 'ropes_right.json',
 			},
 		},
 	},
@@ -128,26 +130,6 @@ DefineRoomDeviceAsset({
 			colorizationKey: 'pillows',
 		},
 		{
-			type: 'sprite',
-			image: 'ropes_top_left.png',
-			colorizationKey: 'ropes_left',
-		},
-		{
-			type: 'sprite',
-			image: 'ropes_top_right.png',
-			colorizationKey: 'ropes_right',
-		},
-		{
-			type: 'sprite',
-			image: 'ropes_bottom_left.png',
-			colorizationKey: 'ropes_left',
-		},
-		{
-			type: 'sprite',
-			image: 'ropes_bottom_right.png',
-			colorizationKey: 'ropes_right',
-		},
-		{
 			type: 'slot',
 			slot: 'character_slot_left_tied',
 			characterPosition: {
@@ -164,26 +146,6 @@ DefineRoomDeviceAsset({
 				offsetY: 10,
 				relativeScale: 1,
 			},
-		},
-		{
-			type: 'sprite',
-			image: 'wrists_left.png',
-			colorizationKey: 'ropes_left',
-		},
-		{
-			type: 'sprite',
-			image: 'wrists_right.png',
-			colorizationKey: 'ropes_right',
-		},
-		{
-			type: 'sprite',
-			image: 'ankles_left.png',
-			colorizationKey: 'ropes_left',
-		},
-		{
-			type: 'sprite',
-			image: 'ankles_right.png',
-			colorizationKey: 'ropes_right',
 		},
 		{
 			type: 'slot',
