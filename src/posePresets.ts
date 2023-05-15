@@ -89,6 +89,20 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					},
 				},
 				{
+					name: 'Covering mouth',
+					bones: {
+						arm_r: 92,
+						arm_l: 92,
+						elbow_r: 161,
+						elbow_l: 161,
+					},
+					leftArm: {
+						position: 'front',
+						rotation: 'down',
+						fingers: 'spread',
+					},
+				},
+				{
 					name: 'Touching neck',
 					bones: {
 						arm_r: 70,
