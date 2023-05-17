@@ -8,12 +8,16 @@ import { WatchFile } from './watch';
 import { IS_PRODUCTION_BUILD } from '../constants';
 import sharp from 'sharp';
 
-export type ImageCategory = 'asset' | 'background';
+export type ImageCategory = 'asset' | 'roomDevice' | 'background';
 
 const MAX_SIZES: Record<ImageCategory, { bytes: number; text: string; }> = {
 	asset: {
 		bytes: 1 * 1024 * 1024,
 		text: '1MiB',
+	},
+	roomDevice: {
+		bytes: 4 * 1024 * 1024,
+		text: '4MiB',
 	},
 	background: {
 		bytes: 4 * 1024 * 1024,
