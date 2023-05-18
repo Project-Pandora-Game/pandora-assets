@@ -984,6 +984,28 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 	},
 	{
 		// inside
+		// bathroom
+		// shower
+		// space: medium
+		id: 'shower_room',
+		name: 'Shower room',
+		image: 'shower_room.jpg',
+		size: [4000, 2000],
+		maxY: 125,
+		scaling: 1.8,
+		ownership: {
+			responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',
+			licensing: [
+				{
+					source: 'Self-Made',
+					copyrightHolder: 'Jomshir',
+					license: 'Pandora-Use-Only',
+				},
+			],
+		},
+	},
+	{
+		// inside
 		// livingroom
 		// cozy
 		// home
@@ -1002,6 +1024,230 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 					source: 'https://www.flickr.com/photos/okchomeseller/18244279019/',
 					copyrightHolder: 'Bill Wilson',
 					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		// indoor
+		// empty
+		// space: small
+		id: 'vintage_room',
+		name: 'Vintage room',
+		image: 'vintage_room.jpg',
+		size: [2300, 1537],
+		maxY: 285,
+		scaling: 1.9,
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/96511847@N04/9203921144/',
+					copyrightHolder: 'Miki',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		// indoor
+		// empty
+		// space: small
+		id: 'club_room_small',
+		name: 'Club room (small)',
+		image: 'club_room_small.jpg',
+		size: [3250, 2337],
+		maxY: 265,
+		scaling: 1.5,
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/96511847@N04/9203873908/',
+					copyrightHolder: 'Miki',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		// indoor
+		// empty
+		// space: medium
+		id: 'club_room_medium',
+		name: 'Club room (medium)',
+		image: 'club_room_medium.jpg',
+		size: [2300, 1637],
+		maxY: 595,
+		scaling: 1.45,
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/96511847@N04/9203873908/',
+					copyrightHolder: 'Miki',
+					license: 'Public Domain',
+				},
+				{
+					source: 'https://www.flickr.com/photos/grantguarino/50338603446/',
+					copyrightHolder: 'Grant Guarino',
+					license: 'CC BY-SA',
+				},
+			],
+		},
+	},
+	{
+		// indoor
+		// empty
+		// space: large
+		id: 'club_room_large',
+		name: 'Club room (large)',
+		image: 'club_room_large.jpg',
+		size: [2300, 1637],
+		maxY: 895,
+		scaling: 1.3,
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/96511847@N04/9203873908/',
+					copyrightHolder: 'Miki',
+					license: 'Public Domain',
+				},
+				{
+					source: 'https://www.flickr.com/photos/grantguarino/50338603446/',
+					copyrightHolder: 'Grant Guarino',
+					license: 'CC BY-SA',
+				},
+			],
+		},
+	},
+	{
+		// indoor
+		// empty
+		// fireplace
+		// space: small
+		id: 'fireplace_room',
+		name: 'Fireplace room',
+		image: 'fireplace_room.jpg',
+		size: [3050, 1887],
+		maxY: 400,
+		scaling: 1.5,
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/96511847@N04/9203896386/',
+					copyrightHolder: 'Miki',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		// indoor
+		// living room
+		// couch
+		// space: small
+		id: 'couch_living_room',
+		name: 'Couch living room',
+		image: 'couch_living_room.jpg',
+		size: [3150, 1967],
+		maxY: 345,
+		scaling: 1.7,
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/96511847@N04/9203961714/',
+					copyrightHolder: 'Miki',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		// indoor
+		// empty
+		// fireplace
+		// space: small
+		id: 'cozy_fireplace_room',
+		name: 'Cozy Fireplace room',
+		image: 'cozy_fireplace_room.jpg',
+		size: [2950, 1937],
+		maxY: 430,
+		scaling: 1.5,
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/96511847@N04/9201189979/',
+					copyrightHolder: 'Miki',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		// indoor
+		// empty
+		// space: small
+		id: 'green_room',
+		name: 'Green room',
+		image: 'green_room.jpg',
+		size: [2750, 1837],
+		maxY: 235,
+		scaling: 1.5,
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/96511847@N04/9203498418/',
+					copyrightHolder: 'Miki',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		// indoor
+		// empty
+		// space: small
+		id: 'grey_room',
+		name: 'Grey room',
+		image: 'grey_room.jpg',
+		size: [2750, 1837],
+		maxY: 260,
+		scaling: 1.6,
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/96511847@N04/9203509718/',
+					copyrightHolder: 'Miki',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		// indoor
+		// empty
+		// dungeon
+		// space: small
+		id: 'stone_room',
+		name: 'Stone room',
+		image: 'stone_room.jpg',
+		size: [2150, 1537],
+		maxY: 325,
+		scaling: 1.9,
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/96511847@N04/9200424573/',
+					copyrightHolder: 'Miki',
+					license: 'Public Domain',
 				},
 			],
 		},
