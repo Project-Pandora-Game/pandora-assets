@@ -80,6 +80,12 @@ function DefineRoomDeviceWearablePart(baseId: AssetId, slot: string, def: Interm
 		hasGraphics: def.graphics !== undefined,
 	};
 
+	// All room device parts must be marked as a room device
+	asset.attributes ??= [];
+	if (!asset.attributes.includes('Room_device')) {
+		asset.attributes.unshift('Room_device');
+	}
+
 	// Load and verify graphics
 	if (def.graphics) {
 		const graphics = LoadAssetsGraphics(join(AssetSourcePath, def.graphics));
@@ -203,10 +209,6 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 
 	//#endregion
 
-	if (!def.staticAttributes?.includes('Room_device')) {
-		logger.warning(`All room devices should have a 'Room_device' static attribute.`);
-	}
-
 	if (!definitionValid) {
 		logger.error('Invalid asset definition, asset skipped');
 		return;
@@ -218,6 +220,11 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 		id,
 		slots,
 	};
+
+	asset.staticAttributes ??= [];
+	if (!asset.staticAttributes.includes('Room_device')) {
+		asset.staticAttributes.unshift('Room_device');
+	}
 
 	AssetDatabase.registerAsset(id, asset);
 }

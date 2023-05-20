@@ -12,9 +12,6 @@ DefineRoomDeviceAsset({
 		x: 1400,
 		y: 1000,
 	},
-	staticAttributes: [
-		'Room_device',
-	],
 	graphicsLayers: [
 		{
 			type: 'sprite',

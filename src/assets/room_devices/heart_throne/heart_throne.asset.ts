@@ -39,9 +39,6 @@ DefineRoomDeviceAsset({
 			},
 		},
 	},
-	staticAttributes: [
-		'Room_device',
-	],
 	pivot: {
 		x: 357,
 		y: 1220,
