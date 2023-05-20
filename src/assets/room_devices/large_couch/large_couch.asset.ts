@@ -13,7 +13,7 @@ DefineRoomDeviceAsset({
 		y: 1000,
 	},
 	staticAttributes: [
-		'Room_device'
+		'Room_device',
 	],
 	graphicsLayers: [
 		{
