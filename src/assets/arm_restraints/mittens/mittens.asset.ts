@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Mittens',
+	name: 'Bondage Mittens',
 	size: 'small',
 	graphics: 'graphics.json',
 	colorization: {

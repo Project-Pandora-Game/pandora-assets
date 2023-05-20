@@ -1,5 +1,5 @@
 DefineRoomDeviceAsset({
-	name: 'Wooden double bed',
+	name: 'Wooden Double Bed',
 	size: 'huge',
 	colorization: {
 		bed_frame: {
@@ -27,7 +27,7 @@ DefineRoomDeviceAsset({
 		character_slot_left: {
 			name: 'Bed - left side',
 			asset: {
-				name: 'Wooden double bed left side',
+				name: 'Wooden Double Bed left side',
 				size: 'huge',
 				poseLimits: {
 					bones: {
@@ -39,7 +39,7 @@ DefineRoomDeviceAsset({
 		character_slot_middle: {
 			name: 'Bed - center',
 			asset: {
-				name: 'Wooden double bed center',
+				name: 'Wooden Double Bed center',
 				size: 'huge',
 				poseLimits: {
 					bones: {
@@ -51,7 +51,7 @@ DefineRoomDeviceAsset({
 		character_slot_right: {
 			name: 'Bed - right side',
 			asset: {
-				name: 'Wooden double bed right side',
+				name: 'Wooden Double Bed right side',
 				size: 'huge',
 				poseLimits: {
 					bones: {
@@ -109,6 +109,9 @@ DefineRoomDeviceAsset({
 			},
 		},
 	},
+	staticAttributes: [
+		'Room_device'
+	],
 	pivot: {
 		x: 920,
 		y: 1750,

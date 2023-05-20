@@ -1,9 +1,9 @@
 DefineRoomDeviceAsset({
-	name: 'Large couch',
+	name: 'Large Couch',
 	size: 'huge',
 	colorization: {
 		couch: {
-			name: 'couch',
+			name: 'Couch',
 			default: '#ffffff',
 		},
 	},
@@ -12,6 +12,9 @@ DefineRoomDeviceAsset({
 		x: 1400,
 		y: 1000,
 	},
+	staticAttributes: [
+		'Room_device'
+	],
 	graphicsLayers: [
 		{
 			type: 'sprite',

@@ -42,6 +42,7 @@ const ROOM_DEVICE_DEFINITION_FALLTHOUGH_PROPERTIES = [
 	'name',
 	'size',
 	'chat',
+	'staticAttributes',
 
 	// Graphics definition
 	'colorization',
@@ -201,6 +202,10 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 	}
 
 	//#endregion
+
+	if (!def.staticAttributes?.includes('Room_device')) {
+		logger.warning(`All room devices should have a 'Room_device' static attribute.`);
+	}
 
 	if (!definitionValid) {
 		logger.error('Invalid asset definition, asset skipped');

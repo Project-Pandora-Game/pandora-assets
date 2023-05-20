@@ -1,9 +1,9 @@
 DefineRoomDeviceAsset({
-	name: 'White chair',
+	name: 'White Chair',
 	size: 'huge',
 	colorization: {
 		chair: {
-			name: 'chair',
+			name: 'Chair',
 			default: '#ffffff',
 		},
 	},
@@ -11,7 +11,7 @@ DefineRoomDeviceAsset({
 		character_slot_sitting: {
 			name: 'Sitting on the chair',
 			asset: {
-				name: 'White chair',
+				name: 'White Chair',
 				size: 'huge',
 				poseLimits: {
 					bones: {
@@ -26,7 +26,7 @@ DefineRoomDeviceAsset({
 		character_slot_kneeling: {
 			name: 'Kneeling before the chair',
 			asset: {
-				name: 'White chair',
+				name: 'White Chair',
 				size: 'huge',
 				poseLimits: {
 					bones: {
@@ -39,6 +39,9 @@ DefineRoomDeviceAsset({
 			},
 		},
 	},
+	staticAttributes: [
+		'Room_device'
+	],
 	pivot: {
 		x: 188,
 		y: 850,
