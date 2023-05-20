@@ -37,7 +37,7 @@ logConfig.logOutputs.push({
 	},
 });
 
-function CheckErrors() {
+function CheckErrors(printWarnings: boolean = true) {
 	if (hadErrors) {
 		logger.fatal(`Some assets had errors while building, build failed.`);
 		return false;
@@ -46,7 +46,7 @@ function CheckErrors() {
 		if (IS_PRODUCTION_BUILD) {
 			logger.fatal(`Some assets had warnings while building, build failed.`);
 			return false;
-		} else {
+		} else if (printWarnings) {
 			logger.warning();
 			logger.warning(`Some assets had warnings while building, these need to be fixed before PR.`);
 			logger.warning();
@@ -128,7 +128,7 @@ async function Run() {
 		}
 	}
 
-	if (!CheckErrors())
+	if (!CheckErrors(false))
 		return;
 
 	logger.info('Exporting result...');
