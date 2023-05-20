@@ -354,6 +354,14 @@ const ATTRIBUTES_DEFINITION = {
 		},
 		icon: 'handheld',
 	},
+	Room_device: {
+		name: 'Room device',
+		description: 'A cage, cross, bed, couch, or similar room-level item',
+		useAsWardrobeFilter: {
+			tab: 'room',
+		},
+		icon: 'room_device',
+	},
 	// Locks
 	Lock: {
 		name: 'Lock',
