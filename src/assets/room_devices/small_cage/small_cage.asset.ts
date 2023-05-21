@@ -49,7 +49,6 @@ DefineRoomDeviceAsset({
 			characterPosition: {
 				offsetX: 0,
 				offsetY: 0,
-				relativeScale: 1,
 			},
 		},
 		{

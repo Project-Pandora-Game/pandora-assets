@@ -135,7 +135,7 @@ DefineRoomDeviceAsset({
 			characterPosition: {
 				offsetX: -288,
 				offsetY: 10,
-				relativeScale: 1,
+				disablePoseOffset: true,
 			},
 		},
 		{
@@ -144,7 +144,7 @@ DefineRoomDeviceAsset({
 			characterPosition: {
 				offsetX: 288,
 				offsetY: 10,
-				relativeScale: 1,
+				disablePoseOffset: true,
 			},
 		},
 		{
@@ -153,7 +153,6 @@ DefineRoomDeviceAsset({
 			characterPosition: {
 				offsetX: -284,
 				offsetY: 30,
-				relativeScale: 1,
 			},
 		},
 		{
@@ -162,7 +161,6 @@ DefineRoomDeviceAsset({
 			characterPosition: {
 				offsetX: 0,
 				offsetY: 30,
-				relativeScale: 1,
 			},
 		},
 		{
@@ -171,7 +169,6 @@ DefineRoomDeviceAsset({
 			characterPosition: {
 				offsetX: 284,
 				offsetY: 30,
-				relativeScale: 1,
 			},
 		},
 	],
