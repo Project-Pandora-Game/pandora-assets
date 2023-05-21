@@ -12,30 +12,112 @@ const ATTRIBUTES_DEFINITION = {
 	Body_base: {
 		name: 'Base body',
 		description: 'A body',
+		icon: 'body',
 	},
 	Head_base: {
 		name: 'Base head',
 		description: 'A head',
+		icon: 'body',
 	},
 	Ears: {
 		name: 'Ears',
 		description: 'A pair of ears for the body',
+		useAsWardrobeFilter: {
+			tab: 'body',
+		},
+		icon: 'ear',
 	},
 	Body_texture: {
 		name: 'Body texture',
 		description: 'A texture for the body',
+		icon: 'body',
 	},
 	Face: {
 		name: 'Face texture',
 		description: 'A face texture',
+		icon: 'body',
 	},
 	Blush: {
 		name: 'Blush',
 		description: 'A facial reddening',
+		icon: 'body',
+	},
+	Hair: {
+		name: 'Hair',
+		description: 'Hair',
+	},
+	Hair_front: {
+		name: 'Front hair',
+		description: 'Hair on the front of the head',
+		useAsWardrobeFilter: {
+			tab: 'body',
+		},
+		icon: 'hair_front',
+	},
+	Hair_back: {
+		name: 'Back hair',
+		description: 'Hair on the back of the head',
+		useAsWardrobeFilter: {
+			tab: 'body',
+		},
+		icon: 'hair_back',
+	},
+	Hair_extension: {
+		name: 'Hair extension',
+		description: 'A hair part separating from the main hair',
+		useAsWardrobeFilter: {
+			tab: 'body',
+		},
+		icon: 'hair_extension',
+	},
+	Eyebrows: {
+		name: 'Eyebrows',
+		description: 'A pair of eyebrows',
+		useAsWardrobeFilter: {
+			tab: 'body',
+		},
+		icon: 'eyebrow',
+	},
+	Eyes: {
+		name: 'Eyes',
+		description: 'A pair of eyes',
+		useAsWardrobeFilter: {
+			tab: 'body',
+		},
+		icon: 'eye',
+	},
+	Nose: {
+		name: 'Nose',
+		description: 'A nose',
+		useAsWardrobeFilter: {
+			tab: 'body',
+		},
+		icon: 'nose',
+	},
+	Mouth: {
+		name: 'Mouth',
+		description: 'A mouth',
+		useAsWardrobeFilter: {
+			tab: 'body',
+		},
+		icon: 'lips',
+	},
+	Mouth_open_wide: {
+		name: 'Wide open mouth',
+		description: 'A wide open mouth',
+	},
+	Mouth_open_teeth: {
+		name: 'Wide open mouth showing teeth',
+		description: 'A wide open mouth showing teeth',
+	},
+	Mouth_tongue_out: {
+		name: 'Tongue out',
+		description: 'A wide open mouth with its tongue out',
 	},
 	Sex: {
 		name: 'Sex',
 		description: 'A sexual organ',
+		icon: 'body',
 	},
 	Vagina: {
 		name: 'Vagina',
@@ -56,71 +138,6 @@ const ATTRIBUTES_DEFINITION = {
 	Penis_erect: {
 		name: 'Erect Penis',
 		description: 'An erect male sexual organ',
-	},
-	Hair: {
-		name: 'Hair',
-		description: 'Hair',
-	},
-	Hair_front: {
-		name: 'Front hair',
-		description: 'Hair on the front of the head',
-		useAsWardrobeFilter: {
-			tab: 'body',
-		},
-	},
-	Hair_back: {
-		name: 'Back hair',
-		description: 'Hair on the back of the head',
-		useAsWardrobeFilter: {
-			tab: 'body',
-		},
-	},
-	Hair_extension: {
-		name: 'Hair extension',
-		description: 'A hair part separating from the main hair',
-		useAsWardrobeFilter: {
-			tab: 'body',
-		},
-	},
-	Eyebrows: {
-		name: 'Eyebrows',
-		description: 'A pair of eyebrows',
-		useAsWardrobeFilter: {
-			tab: 'body',
-		},
-	},
-	Eyes: {
-		name: 'Eyes',
-		description: 'A pair of eyes',
-		useAsWardrobeFilter: {
-			tab: 'body',
-		},
-	},
-	Nose: {
-		name: 'Nose',
-		description: 'A nose',
-		useAsWardrobeFilter: {
-			tab: 'body',
-		},
-	},
-	Mouth: {
-		name: 'Mouth',
-		description: 'A mouth',
-		useAsWardrobeFilter: {
-			tab: 'body',
-		},
-	},
-	Mouth_open_wide: {
-		name: 'Wide open mouth',
-		description: 'A wide open mouth',
-	},
-	Mouth_open_teeth: {
-		name: 'Wide open mouth showing teeth',
-		description: 'A wide open mouth showing teeth',
-	},
-	Mouth_tongue_out: {
-		name: 'Tongue out',
-		description: 'A wide open mouth with its tongue out',
 	},
 	// Items or attachment points from items
 	Clothing: {
@@ -366,6 +383,7 @@ const ATTRIBUTES_DEFINITION = {
 	Lock: {
 		name: 'Lock',
 		description: 'A lock',
+		icon: 'lock',
 	},
 } as const;
 
