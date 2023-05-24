@@ -6,7 +6,7 @@
 		],
 		"transforms": [],
 		"mirror": true,
-		"pointType": "body"
+		"pointType": "body_l"
 	},
 	{
 		"pos": [
@@ -15,7 +15,7 @@
 		],
 		"transforms": [],
 		"mirror": true,
-		"pointType": "body"
+		"pointType": "body_l"
 	},
 	{
 		"pos": [
@@ -24,7 +24,7 @@
 		],
 		"transforms": [],
 		"mirror": true,
-		"pointType": "body"
+		"pointType": "body_l"
 	},
 	{
 		"pos": [
@@ -33,7 +33,7 @@
 		],
 		"transforms": [],
 		"mirror": true,
-		"pointType": "body"
+		"pointType": "body_l"
 	},
 	{
 		"pos": [
@@ -51,7 +51,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "bodyarm"
+		"pointType": "bodyarm_l"
 	},
 	{
 		"pos": [
@@ -74,7 +74,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -97,7 +97,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -120,7 +120,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -171,7 +171,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -222,7 +222,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -273,7 +273,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -324,7 +324,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -375,7 +375,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -403,7 +403,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -431,7 +431,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -459,7 +459,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -487,7 +487,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -515,7 +515,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -543,7 +543,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -594,7 +594,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -645,7 +645,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -696,7 +696,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -747,7 +747,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -798,7 +798,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -813,7 +813,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -862,7 +862,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -871,7 +871,7 @@
 		],
 		"transforms": [],
 		"mirror": true,
-		"pointType": "bodyarm"
+		"pointType": "bodyarm_l"
 	},
 	{
 		"pos": [
@@ -880,7 +880,7 @@
 		],
 		"transforms": [],
 		"mirror": true,
-		"pointType": "bodyarm"
+		"pointType": "bodyarm_l"
 	},
 	{
 		"pos": [
@@ -895,7 +895,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
@@ -922,7 +922,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body"
+		"pointType": "body_l"
 	},
 	{
 		"pos": [
@@ -956,7 +956,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body"
+		"pointType": "body_l"
 	},
 	{
 		"pos": [
@@ -987,7 +987,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body"
+		"pointType": "body_l"
 	},
 	{
 		"pos": [
@@ -1035,7 +1035,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body"
+		"pointType": "body_l"
 	},
 	{
 		"pos": [
@@ -1091,7 +1091,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body"
+		"pointType": "body_l"
 	},
 	{
 		"pos": [
@@ -1153,7 +1153,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body"
+		"pointType": "body_l"
 	},
 	{
 		"pos": [
@@ -1171,7 +1171,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body"
+		"pointType": "body_l"
 	},
 	{
 		"pos": [
@@ -1189,7 +1189,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body"
+		"pointType": "body_l"
 	},
 	{
 		"pos": [
@@ -1215,7 +1215,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body"
+		"pointType": "body_l"
 	},
 	{
 		"pos": [
@@ -1261,7 +1261,7 @@
 				]
 			}
 		],
-		"pointType": "arm"
+		"pointType": "arm_l"
 	},
 	{
 		"pos": [
