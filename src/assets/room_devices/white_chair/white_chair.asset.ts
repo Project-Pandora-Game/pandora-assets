@@ -20,6 +20,7 @@ DefineRoomDeviceAsset({
 						leg_r: [[-30, 10]],
 						leg_l: [[-30, 10]],
 					},
+					view: 'front',
 				},
 			},
 		},
