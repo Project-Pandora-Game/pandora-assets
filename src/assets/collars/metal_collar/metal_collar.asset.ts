@@ -83,6 +83,7 @@ DefineAsset({
 					},
 					effects: {
 						blockRoomMovement: true,
+						blockRoomLeave: true,
 					},
 					attributes: [
 						'Collar_front_ring',
@@ -99,6 +100,7 @@ DefineAsset({
 					},
 					effects: {
 						blockRoomMovement: true,
+						blockRoomLeave: true,
 					},
 					attributes: [
 						'Collar_front_ring',

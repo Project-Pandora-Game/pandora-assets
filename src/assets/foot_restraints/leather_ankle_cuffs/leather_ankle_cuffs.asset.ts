@@ -107,6 +107,7 @@ DefineAsset({
 					],
 					effects: {
 						blockRoomMovement: true,
+						blockRoomLeave: true,
 					},
 				},
 			],

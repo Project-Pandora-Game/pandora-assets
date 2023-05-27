@@ -81,6 +81,7 @@ DefineAsset({
 					},
 					effects: {
 						blockRoomMovement: true,
+						blockRoomLeave: true,
 					},
 				},
 				{
@@ -94,6 +95,7 @@ DefineAsset({
 					},
 					effects: {
 						blockRoomMovement: true,
+						blockRoomLeave: true,
 					},
 				},
 				{
@@ -107,6 +109,7 @@ DefineAsset({
 					},
 					effects: {
 						blockRoomMovement: true,
+						blockRoomLeave: true,
 					},
 				},
 			],
