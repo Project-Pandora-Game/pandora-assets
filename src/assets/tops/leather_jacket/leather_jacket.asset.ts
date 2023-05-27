@@ -16,7 +16,7 @@ DefineAsset({
 	],
 	hides: [
 		'Underwear_bra',
-		'Underwear_corset'
+		'Underwear_corset',
 	],
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
