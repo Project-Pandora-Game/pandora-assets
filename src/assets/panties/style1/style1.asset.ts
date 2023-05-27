@@ -27,6 +27,7 @@ DefineAsset({
 						'outsideVaginaArea': 0.1,
 						'outsideAnusArea': 0.1,
 					},
+					hides: ['Penis'],
 				},
 				{
 					id: 'aside',
@@ -40,6 +41,7 @@ DefineAsset({
 						'outsideVaginaArea': 0.1,
 						'outsideAnusArea': 0.1,
 					},
+					requirements: ['!Penis'],
 				},
 				{
 					id: 'fully',

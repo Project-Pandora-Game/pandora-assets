@@ -57,6 +57,7 @@ DefineAsset({
 					occupySlots: {
 						'outsideVaginaArea': 1,
 					},
+					hides: ['Penis'],
 				},
 			],
 		},
