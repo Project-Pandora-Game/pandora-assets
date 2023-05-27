@@ -79,7 +79,7 @@ DefineRoomDeviceAsset({
 				},
 				effects: {
 					blockHands: true,
-					// blockRoomLeave: true,
+					blockRoomLeave: true,
 				},
 				graphics: 'ropes_left.json',
 			},
@@ -103,7 +103,7 @@ DefineRoomDeviceAsset({
 				},
 				effects: {
 					blockHands: true,
-					// blockRoomLeave: true,
+					blockRoomLeave: true,
 				},
 				graphics: 'ropes_right.json',
 			},

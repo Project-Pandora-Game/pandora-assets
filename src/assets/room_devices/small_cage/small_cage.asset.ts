@@ -28,7 +28,7 @@ DefineRoomDeviceAsset({
 				},
 				effects: {
 					blockHands: true,
-					// blockRoomLeave: true,
+					blockRoomLeave: true,
 				},
 			},
 		},
