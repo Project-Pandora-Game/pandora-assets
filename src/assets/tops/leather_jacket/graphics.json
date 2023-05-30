@@ -117,7 +117,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BELOW_BODY",
-			"points": "shirt",
+			"points": "body",
 			"pointType": [
 				"body",
 				"bodyarm"
@@ -136,7 +136,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BELOW_BODY",
-			"points": "shirt",
+			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "jacket",
 			"image": {
@@ -151,7 +151,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BELOW_ARMS",
-			"points": "shirt",
+			"points": "body",
 			"pointType": [
 				"bodyarm_l",
 				"arm_l"
