@@ -24,6 +24,7 @@ DefineAsset({
 	attributes: [
 		'Restraint',
 		'Restraint_arms',
+		'Wrist_cuffs',
 	],
 	modules: {
 		lock: {

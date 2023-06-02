@@ -291,6 +291,10 @@ const ATTRIBUTES_DEFINITION = {
 		},
 		icon: 'restraint_arms',
 	},
+	Wrist_cuffs: {
+		name: 'Wrist cuffs',
+		description: 'A pair of wrist cuffs',
+	},
 	Wrist_cuffs_chain: {
 		name: 'Wrist cuff chain',
 		description: 'A chain between a pair of wrist cuffs',
@@ -302,6 +306,10 @@ const ATTRIBUTES_DEFINITION = {
 			tab: 'item',
 		},
 		icon: 'restraint_legs',
+	},
+	Ankle_cuffs: {
+		name: 'Ankle cuffs',
+		description: 'A pair of ankle cuffs',
 	},
 	Ankle_cuffs_chain: {
 		name: 'Ankle cuff chain',
