@@ -2,236 +2,97 @@ import { cloneDeep } from 'lodash';
 import { DefineRoomBackground } from '../tools/roomDefinition';
 import { BackgroundTagDefinition } from 'pandora-common';
 
+type CategoryDefinition = {
+	name: string;
+	tags: Record<string, string>;
+};
+
 const TAGS_DEFINITION = {
-	/* Time tags */
-	day: {
-		name: 'Day',
-		category: 'Time',
+	time: {
+		name: 'Time',
+		tags: {
+			day: 'Day',
+			night: 'Night',
+		},
 	},
-	night: {
-		name: 'Night',
-		category: 'Time',
+	ambiance: {
+		name: 'Ambiance',
+		tags: {
+			chill: 'Chill',
+			cozy: 'Cozy',
+			dirty: 'Dirty',
+			foggy: 'Foggy',
+			home: 'Home',
+			padded: 'Padded',
+			urban: 'Urban',
+			damp: 'Damp',
+		}
 	},
+	location: {
+		name: 'Location',
+		tags: {
+			inside: 'Inside',
+			outside: 'Outside',
+			asylum: 'Asylum',
+			bar: 'Bar',
+			bathroom: 'Bathroom',
+			beach: 'Beach',
+			bedroom: 'Bedroom',
+			casino: 'Casino',
+			cell: 'Cell',
+			cellar: 'Cellar',
+			city: 'City',
+			dungeon: 'Dungeon',
+			entrance: 'Entrance',
+			field: 'Field',
+			forest: 'Forest',
+			foyer: 'Foyer',
+			hallway: 'Hallway',
+			garage: 'Garage',
+			garden: 'Garden',
+			gym: 'Gym',
+			livingroom: 'Livingroom',
+			lounge: 'Lounge',
+			nature: 'Nature',
+			nightclub: 'Nightclub',
+			shopping: 'Shopping',
+			storage: 'Storage',
+			street: 'Street',
+			wasteland: 'Wasteland',
+		}
+	},
+	item: {
+		name: 'Item',
+		tags: {
+			bed: 'Bed',
+			buildings: 'Buildings',
+			couch: 'Couch',
+			fireplace: 'Fireplace',
+			kennel: 'Kennel',
+			path: 'Path',
+			pool: 'Pool',
+			shower: 'Shower',
+			throne: 'Throne',
+			toilet: 'Toilet',
+			wardrobe: 'Wardrobe',
+			water: 'Water',
+		}
+	},
+	space: {
+		name: 'Space',
+		tags: {
+			space_small: 'Small',
+			space_medium: 'Medium',
+			space_large: 'Large',
+			space_verylarge: 'Very Large',
+		}
+	},
+} as const satisfies Record<string, CategoryDefinition>;
 
-	/* Ambiance tags */
-	chill: {
-		name: 'Chill',
-		category: 'Ambiance',
-	},
-	cozy: {
-		name: 'Cozy',
-		category: 'Ambiance',
-	},
-	dirty: {
-		name: 'Dirty',
-		category: 'Ambiance',
-	},
-	foggy: {
-		name: 'Foggy',
-		category: 'Ambiance',
-	},
-	home: {
-		name: 'Home',
-		category: 'Ambiance',
-	},
-	padded: {
-		name: 'Padded',
-		category: 'Ambiance',
-	},
-	urban: {
-		name: 'Urban',
-		category: 'Ambiance',
-	},
-	damp: {
-		name: 'Damp',
-		category: 'Ambiance',
-	},
-
-	/* Location tags */
-	inside: {
-		name: 'Inside',
-		category: 'Location',
-	},
-	outside: {
-		name: 'Outside',
-		category: 'Location',
-	},
-	asylum: {
-		name: 'Asylum',
-		category: 'Location',
-	},
-	bar: {
-		name: 'Bar',
-		category: 'Location',
-	},
-	bathroom: {
-		name: 'Bathroom',
-		category: 'Location',
-	},
-	beach: {
-		name: 'Beach',
-		category: 'Location',
-	},
-	bedroom: {
-		name: 'Bedroom',
-		category: 'Location',
-	},
-	casino: {
-		name: 'Casino',
-		category: 'Location',
-	},
-	cell: {
-		name: 'Cell',
-		category: 'Location',
-	},
-	cellar: {
-		name: 'Cellar',
-		category: 'Location',
-	},
-	city: {
-		name: 'City',
-		category: 'Location',
-	},
-	dungeon: {
-		name: 'Dungeon',
-		category: 'Location',
-	},
-	entrance: {
-		name: 'Entrance',
-		category: 'Location',
-	},
-	field: {
-		name: 'Field',
-		category: 'Location',
-	},
-	forest: {
-		name: 'Forest',
-		category: 'Location',
-	},
-	foyer: {
-		name: 'Foyer',
-		category: 'Location',
-	},
-	hallway: {
-		name: 'Hallway',
-		category: 'Location',
-	},
-	garage: {
-		name: 'Garage',
-		category: 'Location',
-	},
-	garden: {
-		name: 'Garden',
-		category: 'Location',
-	},
-	gym: {
-		name: 'Gym',
-		category: 'Location',
-	},
-	livingroom: {
-		name: 'Livingroom',
-		category: 'Location',
-	},
-	lounge: {
-		name: 'Lounge',
-		category: 'Location',
-	},
-	nature: {
-		name: 'Nature',
-		category: 'Location',
-	},
-	nightclub: {
-		name: 'Nightclub',
-		category: 'Location',
-	},
-	shopping: {
-		name: 'Shopping',
-		category: 'Location',
-	},
-	storage: {
-		name: 'Storage',
-		category: 'Location',
-	},
-	street: {
-		name: 'Street',
-		category: 'Location',
-	},
-	wasteland: {
-		name: 'Wasteland',
-		category: 'Location',
-	},
-
-	/* Item tags */
-	bed: {
-		name: 'Bed',
-		category: 'Item',
-	},
-	buildings: {
-		name: 'Buildings',
-		category: 'Item',
-	},
-	couch: {
-		name: 'Couch',
-		category: 'Item',
-	},
-	fireplace: {
-		name: 'Fireplace',
-		category: 'Item',
-	},
-	kennel: {
-		name: 'Kennel',
-		category: 'Item',
-	},
-	path: {
-		name: 'Path',
-		category: 'Item',
-	},
-	pool: {
-		name: 'Pool',
-		category: 'Item',
-	},
-	shower: {
-		name: 'Shower',
-		category: 'Item',
-	},
-	throne: {
-		name: 'Throne',
-		category: 'Item',
-	},
-	toilet: {
-		name: 'Toilet',
-		category: 'Item',
-	},
-	wardrobe: {
-		name: 'Wardrobe',
-		category: 'Item',
-	},
-	water: {
-		name: 'Water',
-		category: 'Item',
-	},
-
-	/* Space tags */
-	space_small: {
-		name: 'Small',
-		category: 'Space',
-	},
-	space_medium: {
-		name: 'Medium',
-		category: 'Space',
-	},
-	space_large: {
-		name: 'Large',
-		category: 'Space',
-	},
-	space_verylarge: {
-		name: 'Very Large',
-		category: 'Space',
-	},
-
-} as const satisfies Readonly<Record<string, BackgroundTagDefinition>>;
-
-export type BackgroundTagNames = (keyof typeof TAGS_DEFINITION) & string;
+type BackgroundCategoryKeys = keyof typeof TAGS_DEFINITION;
+type BackgroundTags = typeof TAGS_DEFINITION[BackgroundCategoryKeys]['tags'];
+type KeysOfUnion<T> = T extends T ? keyof T : never;
+type BackgroundTagNames = KeysOfUnion<BackgroundTags>;
 
 const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 	{
@@ -1279,8 +1140,15 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 ];
 
 export function LoadBackgroundTags() {
-	const result: Record<BackgroundTagNames, BackgroundTagDefinition> = cloneDeep(TAGS_DEFINITION);
-
+	const result: Record<string, BackgroundTagDefinition> = {};
+	for (const { name: category, tags } of Object.values(TAGS_DEFINITION)) {
+		for (const [tagKey, name] of Object.entries(tags)) {
+			result[tagKey] = {
+				name,
+				category,
+			};
+		}
+	}
 	return result;
 }
 
