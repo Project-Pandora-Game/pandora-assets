@@ -1,4 +1,3 @@
-import { cloneDeep } from 'lodash';
 import { DefineRoomBackground } from '../tools/roomDefinition';
 import { BackgroundTagDefinition } from 'pandora-common';
 
@@ -26,7 +25,7 @@ const TAGS_DEFINITION = {
 			padded: 'Padded',
 			urban: 'Urban',
 			damp: 'Damp',
-		}
+		},
 	},
 	location: {
 		name: 'Location',
@@ -59,7 +58,7 @@ const TAGS_DEFINITION = {
 			storage: 'Storage',
 			street: 'Street',
 			wasteland: 'Wasteland',
-		}
+		},
 	},
 	item: {
 		name: 'Item',
@@ -76,7 +75,7 @@ const TAGS_DEFINITION = {
 			toilet: 'Toilet',
 			wardrobe: 'Wardrobe',
 			water: 'Water',
-		}
+		},
 	},
 	space: {
 		name: 'Space',
@@ -85,14 +84,14 @@ const TAGS_DEFINITION = {
 			space_medium: 'Medium',
 			space_large: 'Large',
 			space_verylarge: 'Very Large',
-		}
+		},
 	},
 } as const satisfies Record<string, CategoryDefinition>;
 
 type BackgroundCategoryKeys = keyof typeof TAGS_DEFINITION;
 type BackgroundTags = typeof TAGS_DEFINITION[BackgroundCategoryKeys]['tags'];
 type KeysOfUnion<T> = T extends T ? keyof T : never;
-type BackgroundTagNames = KeysOfUnion<BackgroundTags>;
+export type BackgroundTagNames = KeysOfUnion<BackgroundTags>;
 
 const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 	{
@@ -906,7 +905,7 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 		size: [4000, 2000],
 		maxY: 125,
 		scaling: 1.8,
-		tags: ['inside', 'bathroom', 'shower', 'day', 'space-medium'],
+		tags: ['inside', 'bathroom', 'shower', 'day', 'space_medium'],
 		ownership: {
 			responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',
 			licensing: [
@@ -944,7 +943,7 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 		size: [2300, 1537],
 		maxY: 285,
 		scaling: 1.9,
-		tags: ['inside', 'vintage', 'day', 'space-small'],
+		tags: ['inside', 'day', 'space_small'],
 		ownership: {
 			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 			licensing: [
@@ -963,7 +962,7 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 		size: [3250, 2337],
 		maxY: 265,
 		scaling: 1.5,
-		tags: ['inside', 'club', 'day', 'space-small'],
+		tags: ['inside', 'day', 'space_small'],
 		ownership: {
 			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 			licensing: [
@@ -982,7 +981,7 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 		size: [2300, 1637],
 		maxY: 595,
 		scaling: 1.45,
-		tags: ['inside', 'club', 'day', 'space-medium'],
+		tags: ['inside', 'day', 'space_medium'],
 		ownership: {
 			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 			licensing: [
@@ -1006,7 +1005,7 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 		size: [2300, 1637],
 		maxY: 895,
 		scaling: 1.3,
-		tags: ['inside', 'club', 'day', 'space-large'],
+		tags: ['inside', 'day', 'space_large'],
 		ownership: {
 			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 			licensing: [
@@ -1030,7 +1029,7 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 		size: [3050, 1887],
 		maxY: 400,
 		scaling: 1.5,
-		tags: ['inside', 'fireplace', 'day', 'space-small'],
+		tags: ['inside', 'fireplace', 'day', 'space_small'],
 		ownership: {
 			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 			licensing: [
@@ -1049,7 +1048,7 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 		size: [3150, 1967],
 		maxY: 345,
 		scaling: 1.7,
-		tags: ['inside', 'living-room', 'day', 'space-small'],
+		tags: ['inside', 'livingroom', 'day', 'space_small'],
 		ownership: {
 			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 			licensing: [
@@ -1068,7 +1067,7 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 		size: [2950, 1937],
 		maxY: 430,
 		scaling: 1.5,
-		tags: ['inside', 'fireplace', 'day', 'space-small'],
+		tags: ['inside', 'fireplace', 'day', 'space_small'],
 		ownership: {
 			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 			licensing: [
@@ -1087,7 +1086,7 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 		size: [2750, 1837],
 		maxY: 235,
 		scaling: 1.5,
-		tags: ['inside', 'day', 'space-small'],
+		tags: ['inside', 'day', 'space_small'],
 		ownership: {
 			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 			licensing: [
@@ -1106,7 +1105,7 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 		size: [2750, 1837],
 		maxY: 260,
 		scaling: 1.6,
-		tags: ['inside', 'day', 'space-small'],
+		tags: ['inside', 'day', 'space_small'],
 		ownership: {
 			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 			licensing: [
@@ -1125,7 +1124,7 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 		size: [2150, 1537],
 		maxY: 325,
 		scaling: 1.9,
-		tags: ['inside', 'dungeon', 'day', 'space-small'],
+		tags: ['inside', 'dungeon', 'day', 'space_small'],
 		ownership: {
 			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 			licensing: [
