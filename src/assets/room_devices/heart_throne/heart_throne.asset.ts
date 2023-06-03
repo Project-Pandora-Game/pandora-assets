@@ -6,6 +6,10 @@ DefineRoomDeviceAsset({
 			name: 'Cushion',
 			default: '#E34F4F',
 		},
+		gem: {
+			name: 'Gem',
+			default: '#C42626',
+		},
 	},
 	slots: {
 		character_slot_sitting: {
@@ -53,6 +57,11 @@ DefineRoomDeviceAsset({
 			type: 'sprite',
 			image: 'queen_throne_cushion.png',
 			colorizationKey: 'cushion',
+		},
+		{
+			type: 'sprite',
+			image: 'queen_throne_gem.png',
+			colorizationKey: 'gem',
 		},
 		{
 			type: 'slot',
