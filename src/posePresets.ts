@@ -321,6 +321,20 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						fingers: 'spread',
 					},
 				},
+				{
+					name: 'Arms resting while sitting',
+					bones: {
+						arm_r: 70,
+						arm_l: 70,
+						elbow_r: -32,
+						elbow_l: -32,
+					},
+					arms: {
+						position: 'front',
+						rotation: 'forward',
+						fingers: 'fist',
+					},
+				},
 			],
 		},
 		{
