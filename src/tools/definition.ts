@@ -10,7 +10,7 @@ import * as fs from 'fs';
 import { pick } from 'lodash';
 import { LoadAssetColorization } from './load_helpers/color';
 
-const DEFINITION_FALLTHOUGH_PROPERTIES = [
+const DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Properties
 	'poseLimits',
 	'effects',
@@ -36,7 +36,7 @@ const DEFINITION_FALLTHOUGH_PROPERTIES = [
 	'modules',
 ] as const satisfies readonly (keyof PersonalAssetDefinition)[];
 
-export type AssetDefinitionFallthoughProperties = (typeof DEFINITION_FALLTHOUGH_PROPERTIES)[number] & string;
+export type AssetDefinitionFallthroughProperties = (typeof DEFINITION_FALLTHROUGH_PROPERTIES)[number] & string;
 
 export function GlobalDefineAsset(def: IntermediatePersonalAssetDefinition): void {
 	const id: AssetId = `a/${def.id ?? DefaultId()}` as const;
@@ -111,7 +111,7 @@ export function GlobalDefineAsset(def: IntermediatePersonalAssetDefinition): voi
 	}
 
 	const asset: PersonalAssetDefinition<AssetRepoExtraArgs> = {
-		...pick(def, DEFINITION_FALLTHOUGH_PROPERTIES),
+		...pick(def, DEFINITION_FALLTHROUGH_PROPERTIES),
 		type: 'personal',
 		id,
 		colorization,

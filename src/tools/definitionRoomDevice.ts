@@ -12,7 +12,7 @@ import { DefinePngResource } from './resources';
 import { ValidateAssetDefinitionPoseLimits } from './definition';
 import { LoadRoomDeviceColorization } from './load_helpers/color';
 
-const ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHOUGH_PROPERTIES = [
+const ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Properties
 	'poseLimits',
 	'effects',
@@ -35,9 +35,9 @@ const ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHOUGH_PROPERTIES = [
 	'chat',
 ] as const satisfies readonly (keyof RoomDeviceWearablePartAssetDefinition)[];
 
-export type RoomDeviceWearablePartAssetDefinitionFallthoughProperties = (typeof ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHOUGH_PROPERTIES)[number] & string;
+export type RoomDeviceWearablePartAssetDefinitionFallthroughProperties = (typeof ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHROUGH_PROPERTIES)[number] & string;
 
-const ROOM_DEVICE_DEFINITION_FALLTHOUGH_PROPERTIES = [
+const ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Asset definition
 	'name',
 	'size',
@@ -50,7 +50,7 @@ const ROOM_DEVICE_DEFINITION_FALLTHOUGH_PROPERTIES = [
 	'graphicsLayers',
 ] as const satisfies readonly (keyof RoomDeviceAssetDefinition)[];
 
-export type AssetRoomDeviceDefinitionFallthoughProperties = (typeof ROOM_DEVICE_DEFINITION_FALLTHOUGH_PROPERTIES)[number] & string;
+export type AssetRoomDeviceDefinitionFallthroughProperties = (typeof ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES)[number] & string;
 
 function DefineRoomDeviceWearablePart(baseId: AssetId, slot: string, def: IntermediateRoomDeviceWearablePartDefinition, colorizationKeys: ReadonlySet<string>): AssetId | null {
 	const id: AssetId = `${baseId}/${slot}` as const;
@@ -74,7 +74,7 @@ function DefineRoomDeviceWearablePart(baseId: AssetId, slot: string, def: Interm
 	}
 
 	const asset: RoomDeviceWearablePartAssetDefinition<AssetRepoExtraArgs> = {
-		...pick(def, ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHOUGH_PROPERTIES),
+		...pick(def, ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHROUGH_PROPERTIES),
 		type: 'roomDeviceWearablePart',
 		id,
 		hasGraphics: def.graphics !== undefined,
@@ -215,7 +215,7 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 	}
 
 	const asset: RoomDeviceAssetDefinition<AssetRepoExtraArgs> = {
-		...pick(def, ROOM_DEVICE_DEFINITION_FALLTHOUGH_PROPERTIES),
+		...pick(def, ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES),
 		type: 'roomDevice',
 		id,
 		slots,

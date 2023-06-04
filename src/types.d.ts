@@ -35,7 +35,7 @@ type IntermediateAssetColorization
 	= (Omit<AssetColorizationBetterMinAlpha, 'group'> & { group?: never; })
 	| (Omit<AssetColorizationBetterMinAlpha, 'default'> & { group: AssetRepoExtraArgs['colorGroups']; default?: never; });
 
-interface IntermediatePersonalAssetDefinition extends Pick<import('pandora-common').PersonalAssetDefinition<AssetRepoExtraArgs>, import('./tools/definition').AssetDefinitionFallthoughProperties> {
+interface IntermediatePersonalAssetDefinition extends Pick<import('pandora-common').PersonalAssetDefinition<AssetRepoExtraArgs>, import('./tools/definition').AssetDefinitionFallthroughProperties> {
 	id?: string;
 	graphics?: string;
 	/** Info about who owns the asset(s) */
@@ -58,7 +58,7 @@ interface IntermediatePersonalAssetDefinition extends Pick<import('pandora-commo
 	colorization?: Record<string, IntermediateAssetColorization>;
 }
 
-interface IntermediateRoomDeviceWearablePartDefinition extends Pick<import('pandora-common').RoomDeviceWearablePartAssetDefinition<AssetRepoExtraArgs>, import('./tools/definitionRoomDevice').RoomDeviceWearablePartAssetDefinitionFallthoughProperties> {
+interface IntermediateRoomDeviceWearablePartDefinition extends Pick<import('pandora-common').RoomDeviceWearablePartAssetDefinition<AssetRepoExtraArgs>, import('./tools/definitionRoomDevice').RoomDeviceWearablePartAssetDefinitionFallthroughProperties> {
 	graphics?: string;
 }
 
@@ -67,7 +67,7 @@ interface IntermediateRoomDeviceSlotDefinition {
 	asset: IntermediateRoomDeviceWearablePartDefinition;
 }
 
-interface IntermediateRoomDeviceDefinition extends Pick<import('pandora-common').RoomDeviceAssetDefinition<AssetRepoExtraArgs>, import('./tools/definitionRoomDevice').AssetRoomDeviceDefinitionFallthoughProperties> {
+interface IntermediateRoomDeviceDefinition extends Pick<import('pandora-common').RoomDeviceAssetDefinition<AssetRepoExtraArgs>, import('./tools/definitionRoomDevice').AssetRoomDeviceDefinitionFallthroughProperties> {
 	id?: string;
 	slots: Record<string, IntermediateRoomDeviceSlotDefinition>;
 	/** Info about who owns the asset(s) */
