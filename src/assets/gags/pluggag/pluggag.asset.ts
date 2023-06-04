@@ -29,7 +29,6 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			lockRequirements: ['Lock'],
 			occupiedEffects: {
 				blockAddRemove: true,
 			},
@@ -37,7 +36,6 @@ DefineAsset({
 		lockPlug: {
 			type: 'lockSlot',
 			name: 'Lock for the plug',
-			lockRequirements: ['Lock'],
 			occupiedEffects: {
 				blockModules: ['plugState'],
 			},

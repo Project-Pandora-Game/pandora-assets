@@ -28,7 +28,6 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			lockRequirements: ['Lock'],
 			occupiedEffects: {
 				blockAddRemove: true,
 			},
@@ -36,7 +35,6 @@ DefineAsset({
 		lockPlate: {
 			type: 'lockSlot',
 			name: 'Lock for crotch plate',
-			lockRequirements: ['Lock'],
 			occupiedEffects: {
 				blockModules: ['crotchPlate'],
 			},

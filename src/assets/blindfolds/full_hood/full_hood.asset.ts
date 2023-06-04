@@ -33,7 +33,6 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			lockRequirements: ['Lock'],
 			occupiedEffects: {
 				blockAddRemove: true,
 			},
@@ -41,7 +40,6 @@ DefineAsset({
 		lockAddons: {
 			type: 'lockSlot',
 			name: 'Lock for hood covers',
-			lockRequirements: ['Lock'],
 			occupiedEffects: {
 				blockModules: [
 					'hoodEyeCover',

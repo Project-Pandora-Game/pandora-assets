@@ -36,7 +36,6 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			lockRequirements: ['Lock'],
 			occupiedEffects: {
 				blockAddRemove: true,
 			},
@@ -44,7 +43,6 @@ DefineAsset({
 		lockCollar: {
 			type: 'lockSlot',
 			name: 'Lock for collar leash',
-			lockRequirements: ['Lock'],
 			occupiedEffects: {
 				blockModules: ['collarConfig'],
 			},

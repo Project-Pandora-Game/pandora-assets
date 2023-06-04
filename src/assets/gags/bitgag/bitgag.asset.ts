@@ -21,7 +21,6 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			lockRequirements: ['Lock'],
 			occupiedEffects: {
 				blockAddRemove: true,
 			},

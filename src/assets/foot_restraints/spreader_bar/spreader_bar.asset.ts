@@ -20,7 +20,6 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			lockRequirements: ['Lock'],
 			occupiedEffects: {
 				blockAddRemove: true,
 			},
@@ -28,7 +27,6 @@ DefineAsset({
 		lockChain: {
 			type: 'lockSlot',
 			name: 'Lock for bar width',
-			lockRequirements: ['Lock'],
 			occupiedEffects: {
 				blockModules: ['barWidth'],
 			},

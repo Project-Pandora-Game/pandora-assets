@@ -30,7 +30,6 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			lockRequirements: ['Lock'],
 			occupiedEffects: {
 				blockAddRemove: true,
 			},
@@ -38,7 +37,6 @@ DefineAsset({
 		lockChain: {
 			type: 'lockSlot',
 			name: 'Lock for cuff chains',
-			lockRequirements: ['Lock'],
 			occupiedEffects: {
 				requirements: ['Wrist_cuffs_chain'],
 			},
