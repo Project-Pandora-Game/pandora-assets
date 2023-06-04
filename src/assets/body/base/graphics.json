@@ -276,16 +276,16 @@
 									"value": 1
 								},
 								{
-									"armType": "fingers",
+									"armType": "rotation",
 									"side": "left",
 									"operator": "=",
-									"value": "fist"
+									"value": "forward"
 								},
 								{
 									"armType": "fingers",
 									"side": "left",
 									"operator": "=",
-									"value": "spread"
+									"value": "fist"
 								}
 							]
 						]
@@ -300,10 +300,10 @@
 									"value": 1
 								},
 								{
-									"armType": "fingers",
+									"armType": "rotation",
 									"side": "left",
 									"operator": "=",
-									"value": "spread"
+									"value": "forward"
 								},
 								{
 									"armType": "fingers",
