@@ -5,6 +5,9 @@ DefineLockAsset({
 		actionLock: 'SOURCE_CHARACTER clicked the exclusive lock on ITEM_CONTAINER_SIMPLE_DYNAMIC shut.',
 		actionUnlock: 'SOURCE_CHARACTER unlocked the exclusive lock on ITEM_CONTAINER_SIMPLE_DYNAMIC.',
 	},
+	locked: {
+		blockSelf: true,
+	},
 	/*
 	modules: {
 		state: {

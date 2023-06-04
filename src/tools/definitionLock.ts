@@ -11,6 +11,8 @@ const LOCK_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Asset definition
 	'name',
 	'chat',
+	'locked',
+	'unlocked',
 ] as const satisfies readonly (keyof LockAssetDefinition)[];
 
 export type LockAssetDefinitionFallthroughProperties = typeof LOCK_DEFINITION_FALLTHROUGH_PROPERTIES[number];
@@ -41,9 +43,9 @@ export function GlobalDefineLockAsset(def: IntermediateLockAssetDefinition): voi
 	}
 
 	// Validate presence of licensing data
-	if (def.ownership.licensing.length === 0) {
-		logger.warning('Asset is missing licensing info');
-	}
+	// if (def.ownership.licensing.length === 0) {
+	// 	logger.warning('Asset is missing licensing info 2');
+	// }
 
 	for (const license of def.ownership.licensing) {
 		// Validate that custom license exists and is a file
