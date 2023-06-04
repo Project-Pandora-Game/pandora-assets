@@ -1,11 +1,11 @@
-DefineAsset({
+DefineLockAsset({
 	name: 'Dummy Lock',
-	size: 'small',
-	wearable: false,
-	attributes: ['Lock'],
 	chat: {
 		chatDescriptor: 'a dummy lock',
+		actionLock: 'SOURCE_CHARACTER clicked the dummy lock on ITEM_CONTAINER_SIMPLE_DYNAMIC shut.',
+		actionUnlock: 'SOURCE_CHARACTER unlocked the dummy lock on ITEM_CONTAINER_SIMPLE_DYNAMIC.',
 	},
+	/*
 	modules: {
 		state: {
 			type: 'typed',
@@ -31,6 +31,7 @@ DefineAsset({
 			],
 		},
 	},
+	*/
 	ownership: {
 		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',
 		credits: ['Jomshir'],

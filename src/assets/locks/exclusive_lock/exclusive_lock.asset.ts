@@ -1,11 +1,11 @@
-DefineAsset({
+DefineLockAsset({
 	name: 'Exclusive Lock',
-	size: 'small',
-	wearable: false,
-	attributes: ['Lock'],
 	chat: {
 		chatDescriptor: 'an exclusive lock',
+		actionLock: 'SOURCE_CHARACTER clicked the exclusive lock on ITEM_CONTAINER_SIMPLE_DYNAMIC shut.',
+		actionUnlock: 'SOURCE_CHARACTER unlocked the exclusive lock on ITEM_CONTAINER_SIMPLE_DYNAMIC.',
 	},
+	/*
 	modules: {
 		state: {
 			type: 'typed',
@@ -32,6 +32,7 @@ DefineAsset({
 			],
 		},
 	},
+	*/
 	ownership: {
 		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',
 		credits: ['Jomshir'],
