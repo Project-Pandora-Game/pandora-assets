@@ -18,6 +18,7 @@ import { LoadAttributes } from './attributes';
 import { APPEARANCE_RANDOMIZATION_CONFIG } from './presets';
 import { ASSET_SLOTS } from './slots';
 import { GlobalDefineRoomDeviceAsset } from './tools/definitionRoomDevice';
+import { GlobalDefineLockAsset } from './tools/definitionLock';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.VERBOSE);
@@ -61,6 +62,7 @@ async function Run() {
 	// Setup environment
 	globalThis.DefineAsset = GlobalDefineAsset;
 	globalThis.DefineRoomDeviceAsset = GlobalDefineRoomDeviceAsset;
+	globalThis.DefineLockAsset = GlobalDefineLockAsset;
 	SetResourceDestinationDirectory(OUT_DIR);
 
 	// Clear old data

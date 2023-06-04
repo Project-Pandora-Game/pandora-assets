@@ -10,6 +10,7 @@ type AllBones = import('./bones').AllBones;
 // Globals available to all assets
 declare function DefineAsset(def: IntermediatePersonalAssetDefinition): void;
 declare function DefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinition): void;
+declare function DefineLockAsset(def: IntermediateLockAssetDefinition): void;
 
 interface AssetRepoExtraArgs {
 	bones: AllBones;
@@ -70,6 +71,27 @@ interface IntermediateRoomDeviceSlotDefinition {
 interface IntermediateRoomDeviceDefinition extends Pick<import('pandora-common').RoomDeviceAssetDefinition<AssetRepoExtraArgs>, import('./tools/definitionRoomDevice').AssetRoomDeviceDefinitionFallthroughProperties> {
 	id?: string;
 	slots: Record<string, IntermediateRoomDeviceSlotDefinition>;
+	/** Info about who owns the asset(s) */
+	ownership: {
+		/** Same as author of git commits present in PR, has responsibility for this asset */
+		responsibleContributor: string;
+		/** Who is shown in credits for this asset and at the same time people to ask when Asset should be changed */
+		credits: string[];
+		/** Defines author's preferences about how their asset can be modified */
+		modificationPolicy: PandoraAssetModificationPolicy;
+		/** Defines author's preferences about how their asset can be reused for other assets */
+		reusePolicy: PandoraAssetReusePolicy;
+		/**
+		 * Legal info about the images
+		 * If there are multiple sources used, specify this multiple times.
+		 * If author gave you express permission to use images, but wishes to remain Anonymous, write "Anonymous" into relevant fields.
+		 */
+		licensing: LicensingInfo[];
+	};
+}
+
+interface IntermediateLockAssetDefinition extends Pick<import('pandora-common').LockAssetDefinition, import('./tools/definitionLock').LockAssetDefinitionFallthroughProperties> {
+	id?: string;
 	/** Info about who owns the asset(s) */
 	ownership: {
 		/** Same as author of git commits present in PR, has responsibility for this asset */
