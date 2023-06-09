@@ -13,6 +13,7 @@ const LOCK_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'chat',
 	'locked',
 	'unlocked',
+	'lockedText',
 ] as const satisfies readonly (keyof LockAssetDefinition)[];
 
 export type LockAssetDefinitionFallthroughProperties = typeof LOCK_DEFINITION_FALLTHROUGH_PROPERTIES[number];
@@ -73,9 +74,9 @@ export function GlobalDefineLockAsset(def: IntermediateLockAssetDefinition): voi
 
 	const asset: LockAssetDefinition<AssetRepoExtraArgs> = {
 		...pick(def, LOCK_DEFINITION_FALLTHROUGH_PROPERTIES),
+		type: 'lock',
 		id,
 		size: 'small',
-		type: 'lock',
 		hasGraphics: false,
 	};
 
