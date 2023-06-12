@@ -44,6 +44,7 @@ const ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES = [
 
 	// Graphics definition
 	'colorization',
+	'colorRibbonGroup',
 	'pivot',
 	'graphicsLayers',
 ] as const satisfies readonly (keyof RoomDeviceAssetDefinition)[];
@@ -145,6 +146,11 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 	} = LoadRoomDeviceColorization(logger, def.colorization);
 	def.colorization = colorization;
 	definitionValid &&= colorizationValid;
+
+	if (def.colorRibbonGroup != null && colorization?.[def.colorRibbonGroup] == null) {
+		definitionValid = false;
+		logger.error(`Invalid color ribbon group: It must match one of the colorization groups.`);
+	}
 
 	def.graphicsLayers.forEach((layer, index) => {
 		if (layer.type === 'sprite') {

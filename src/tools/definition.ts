@@ -24,6 +24,7 @@ const DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'occupySlots',
 	'overrideColorKey',
 	'excludeFromColorInheritance',
+	'colorRibbonGroup',
 	// Asset definition
 	'name',
 	'wearable',
@@ -56,6 +57,11 @@ export function GlobalDefineAsset(def: IntermediatePersonalAssetDefinition): voi
 		valid: colorizationValid,
 	} = LoadAssetColorization(logger, def.colorization);
 	definitionValid &&= colorizationValid;
+
+	if (def.colorRibbonGroup != null && colorization?.[def.colorRibbonGroup] == null) {
+		definitionValid = false;
+		logger.error(`Invalid color ribbon group: It must match one of the colorization groups.`);
+	}
 
 	if (def.poseLimits) {
 		ValidateAssetDefinitionPoseLimits(logger, 'poseLimits', def.poseLimits);
