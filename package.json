@@ -27,7 +27,7 @@
 		"jimp": "0.22.7",
 		"lodash": "4.17.21",
 		"pandora-common": "file:pandora/pandora-common",
-		"rimraf": "4.4.0",
+		"rimraf": "5.0.1",
 		"sharp": "0.31.3",
 		"simple-git": "3.17.0"
 	},
