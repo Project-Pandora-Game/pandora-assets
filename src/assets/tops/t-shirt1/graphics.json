@@ -204,6 +204,18 @@
 						]
 					},
 					{
+						"image": "t-shirt_print_afk.png",
+						"condition": [
+							[
+								{
+									"module": "prints",
+									"operator": "=",
+									"value": "afk"
+								}
+							]
+						]
+					},
+					{
 						"image": "",
 						"condition": [
 							[

@@ -32,6 +32,10 @@ DefineAsset({
 					name: 'Crown',
 				},
 				{
+					id: 'afk',
+					name: 'AFK',
+				},
+				{
 					id: 'noPrint',
 					name: 'No Print',
 				},
