@@ -1,6 +1,11 @@
 name: Submodule Check
 
 on:
+  # Triggers the workflow on push but only for the master branch
+  push:
+    branches:
+      - master
+      - 'renovate/**'
   # Triggers the workflow on any pull request
   pull_request:
 
