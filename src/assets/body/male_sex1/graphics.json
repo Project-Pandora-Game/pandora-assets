@@ -7,7 +7,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BODY",
-			"points": "body",
+			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "penis",
 			"image": {
@@ -22,7 +22,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BODY",
-			"points": "body",
+			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "glans",
 			"image": {
@@ -50,7 +50,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BODY",
-			"points": "body",
+			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "penis",
 			"image": {
