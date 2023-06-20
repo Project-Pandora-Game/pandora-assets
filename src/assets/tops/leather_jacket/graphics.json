@@ -44,7 +44,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"priority": "ABOVE_ARMS",
+			"priority": "ABOVE_ARM_LEFT",
 			"points": "shirt",
 			"pointType": [
 				"bodyarm_l",
@@ -150,7 +150,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"priority": "BELOW_ARMS",
+			"priority": "BELOW_ARM_LEFT",
 			"points": "body",
 			"pointType": [
 				"bodyarm_l",

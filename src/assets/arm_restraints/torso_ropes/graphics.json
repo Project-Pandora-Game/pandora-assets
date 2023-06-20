@@ -214,7 +214,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"priority": "BELOW_ARMS",
+			"priority": "BELOW_ARM_LEFT",
 			"points": "horizontal_limbs_width",
 			"mirror": 0,
 			"colorizationKey": "rope",
