@@ -1,3 +1,5 @@
+import { ItemInteractionType } from 'pandora-common';
+
 DefineAsset({
 	name: 'Yoke',
 	size: 'medium',
@@ -9,14 +11,6 @@ DefineAsset({
 		},
 		ring: {
 			name: 'Ring',
-			default: '#FFFFFF',
-		},
-		chains: {
-			name: 'Chains',
-			default: '#FFFFFF',
-		},
-		socket: {
-			name: 'Socket',
 			default: '#FFFFFF',
 		},
 		bar: {
@@ -40,13 +34,6 @@ DefineAsset({
 				blockAddRemove: true,
 			},
 		},
-		lockCollar: {
-			type: 'lockSlot',
-			name: 'Lock for collar leash',
-			occupiedEffects: {
-				blockModules: ['collarConfig'],
-			},
-		},
 		collarConfig: {
 			type: 'typed',
 			name: 'Collar Configuration',
@@ -59,62 +46,16 @@ DefineAsset({
 				{
 					id: 'ring',
 					name: 'Collar + Ring',
-				},
-				{
-					id: 'left',
-					name: 'Chain Leash Left',
-				},
-				{
-					id: 'right',
-					name: 'Chain Leash Right',
-				},
-				{
-					id: 'fixed',
-					name: 'Long Floor Chain Standing',
-					poseLimits: {
-						bones: {
-							sitting: 0,
-							kneeling: 0,
-						},
-					},
-					effects: {
-						blockRoomMovement: true,
-						blockRoomLeave: true,
-					},
-				},
-				{
-					id: 'fixedKneeling',
-					name: 'Long Floor Chain Kneeling',
-					poseLimits: {
-						bones: {
-							sitting: 0,
-							kneeling: 180,
-						},
-					},
-					effects: {
-						blockRoomMovement: true,
-						blockRoomLeave: true,
-					},
-				},
-				{
-					id: 'fixedKneelingShort',
-					name: 'Short Floor Chain Kneeling',
-					poseLimits: {
-						bones: {
-							sitting: 0,
-							kneeling: 180,
-						},
-					},
-					effects: {
-						blockRoomMovement: true,
-						blockRoomLeave: true,
-					},
+					attributes: [
+						'Collar_front_ring',
+					],
 				},
 			],
 		},
 		yokeWidth: {
 			type: 'typed',
 			name: 'Yoke Width',
+			interactionType: ItemInteractionType.ADD_REMOVE,
 			variants: [
 				{
 					id: 'normal',

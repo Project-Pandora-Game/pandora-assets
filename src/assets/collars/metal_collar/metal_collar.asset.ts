@@ -13,14 +13,6 @@ DefineAsset({
 			name: 'Ring',
 			default: '#FFFFFF',
 		},
-		chains: {
-			name: 'Chains',
-			default: '#FFFFFF',
-		},
-		socket: {
-			name: 'Socket',
-			default: '#FFFFFF',
-		},
 	},
 	attributes: [
 		'Restraint',
@@ -32,13 +24,6 @@ DefineAsset({
 			name: 'Lock',
 			occupiedEffects: {
 				blockAddRemove: true,
-			},
-		},
-		lockCollar: {
-			type: 'lockSlot',
-			name: 'Lock for collar configuration',
-			occupiedEffects: {
-				blockModules: ['collarConfig'],
 			},
 		},
 		collarConfig: {
@@ -53,53 +38,6 @@ DefineAsset({
 				{
 					id: 'ring',
 					name: 'Collar + Ring',
-					attributes: [
-						'Collar_front_ring',
-					],
-				},
-				{
-					id: 'left',
-					name: 'Chain Leash Left',
-					attributes: [
-						'Collar_front_ring',
-					],
-				},
-				{
-					id: 'right',
-					name: 'Chain Leash Right',
-					attributes: [
-						'Collar_front_ring',
-					],
-				},
-				{
-					id: 'fixed',
-					name: 'Long Floor Chain',
-					poseLimits: {
-						bones: {
-							sitting: 0,
-						},
-					},
-					effects: {
-						blockRoomMovement: true,
-						blockRoomLeave: true,
-					},
-					attributes: [
-						'Collar_front_ring',
-					],
-				},
-				{
-					id: 'fixedShort',
-					name: 'Short Floor Chain',
-					poseLimits: {
-						bones: {
-							sitting: 0,
-							kneeling: 180,
-						},
-					},
-					effects: {
-						blockRoomMovement: true,
-						blockRoomLeave: true,
-					},
 					attributes: [
 						'Collar_front_ring',
 					],
