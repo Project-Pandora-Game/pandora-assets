@@ -55,7 +55,10 @@ DefineAsset({
 					occupySlots: {
 						'outsideVaginaArea': 1,
 					},
-					hides: ['Penis'],
+					hides: [
+						'Penis',
+						'Toy_clamps_genital'
+					],
 				},
 			],
 		},

@@ -20,8 +20,8 @@ DefineAsset({
 			{
 				bones: {
 					kneeling: 0,
-					leg_l: [[-14, 6]],
-					leg_r: [[-14, 6]],
+					leg_l: [[-18, 6]],
+					leg_r: [[-18, 6]],
 				},
 			},
 			{

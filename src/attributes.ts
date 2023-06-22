@@ -347,6 +347,10 @@ const ATTRIBUTES_DEFINITION = {
 		},
 		icon: 'toy',
 	},
+	Toy_clamps_genital: {
+		name: 'Genital clamps',
+		description: 'A set of genital clamps',
+	},
 	Piercing: {
 		name: 'Piercing',
 		description: 'A body piercing',
