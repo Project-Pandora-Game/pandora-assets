@@ -14,7 +14,7 @@ DefineAsset({
 	},
 	attributes: [
 		'Toy',
-		'Toy_clamps_genital'
+		'Toy_clamps_genital',
 	],
 	modules: {
 		clampAddons: {

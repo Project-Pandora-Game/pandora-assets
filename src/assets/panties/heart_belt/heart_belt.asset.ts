@@ -57,7 +57,7 @@ DefineAsset({
 					},
 					hides: [
 						'Penis',
-						'Toy_clamps_genital'
+						'Toy_clamps_genital',
 					],
 				},
 			],
