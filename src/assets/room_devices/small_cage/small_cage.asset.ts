@@ -35,7 +35,7 @@ DefineRoomDeviceAsset({
 	},
 	pivot: {
 		x: 950,
-		y: 1400,
+		y: 1330,
 	},
 	graphicsLayers: [
 		{
@@ -48,7 +48,7 @@ DefineRoomDeviceAsset({
 			slot: 'character_slot',
 			characterPosition: {
 				offsetX: 0,
-				offsetY: 0,
+				offsetY: -140,
 			},
 		},
 		{

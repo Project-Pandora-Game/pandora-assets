@@ -10,7 +10,7 @@ DefineRoomDeviceAsset({
 	slots: {},
 	pivot: {
 		x: 1400,
-		y: 1000,
+		y: 950,
 	},
 	graphicsLayers: [
 		{

@@ -111,7 +111,7 @@ DefineRoomDeviceAsset({
 	},
 	pivot: {
 		x: 920,
-		y: 1750,
+		y: 1730,
 	},
 	graphicsLayers: [
 		{
@@ -134,7 +134,7 @@ DefineRoomDeviceAsset({
 			slot: 'character_slot_left_tied',
 			characterPosition: {
 				offsetX: -288,
-				offsetY: 10,
+				offsetY: -180,
 				disablePoseOffset: true,
 			},
 		},
@@ -143,7 +143,7 @@ DefineRoomDeviceAsset({
 			slot: 'character_slot_right_tied',
 			characterPosition: {
 				offsetX: 288,
-				offsetY: 10,
+				offsetY: -180,
 				disablePoseOffset: true,
 			},
 		},
@@ -152,7 +152,7 @@ DefineRoomDeviceAsset({
 			slot: 'character_slot_left',
 			characterPosition: {
 				offsetX: -284,
-				offsetY: 30,
+				offsetY: -180,
 			},
 		},
 		{
@@ -160,7 +160,7 @@ DefineRoomDeviceAsset({
 			slot: 'character_slot_middle',
 			characterPosition: {
 				offsetX: 0,
-				offsetY: 30,
+				offsetY: -160,
 			},
 		},
 		{
@@ -168,7 +168,7 @@ DefineRoomDeviceAsset({
 			slot: 'character_slot_right',
 			characterPosition: {
 				offsetX: 284,
-				offsetY: 30,
+				offsetY: -160,
 			},
 		},
 	],
