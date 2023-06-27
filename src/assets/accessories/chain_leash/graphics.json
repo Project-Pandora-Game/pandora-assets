@@ -117,6 +117,18 @@
 						]
 					},
 					{
+						"image": "leash.png",
+						"condition": [
+							[
+								{
+									"module": "collarConfig",
+									"operator": "=",
+									"value": "hanging"
+								}
+							]
+						]
+					},
+					{
 						"image": "leash_left.png",
 						"condition": [
 							[

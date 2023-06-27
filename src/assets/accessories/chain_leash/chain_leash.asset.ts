@@ -39,13 +39,17 @@ DefineAsset({
 			name: 'Chain Configuration',
 			variants: [
 				{
-					id: 'left',
-					name: 'Chain Leash Left',
+					id: 'hanging',
+					name: 'Chain Leash Hanging',
 					default: true,
 				},
 				{
+					id: 'left',
+					name: 'Chain Leash Held Left',
+				},
+				{
 					id: 'right',
-					name: 'Chain Leash Right',
+					name: 'Chain Leash Held Right',
 				},
 				{
 					id: 'fixed',
