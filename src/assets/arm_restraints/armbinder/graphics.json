@@ -240,7 +240,7 @@
 			"height": 1500,
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "static",
-			"mirror": 0,
+			"mirror": 1,
 			"colorizationKey": "glove",
 			"image": {
 				"image": "armbinder_glove.png",
