@@ -51,6 +51,10 @@
 			"height": 1500,
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "body",
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "cuffs",
 			"image": {
@@ -121,6 +125,10 @@
 			"height": 1500,
 			"priority": "BELOW_ARM_LEFT",
 			"points": "body",
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "cuffs",
 			"image": {
