@@ -3,6 +3,6 @@
 set -eou pipefail
 source "./.hooks/include.sh"
 
-git submodule update --init --recursive
+submodule_update
 
 pnpm_helper
