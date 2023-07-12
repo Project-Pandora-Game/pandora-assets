@@ -23,9 +23,7 @@
 									"value": "fixed"
 								},
 								{
-									"bone": "kneeling",
-									"operator": "=",
-									"value": 0
+									"legs": "!kneeling"
 								}
 							]
 						]
@@ -47,9 +45,7 @@
 									"value": "fixed"
 								},
 								{
-									"bone": "kneeling",
-									"operator": "!=",
-									"value": 0
+									"legs": "kneeling"
 								}
 							]
 						]
@@ -80,9 +76,7 @@
 									"value": "fixed"
 								},
 								{
-									"bone": "kneeling",
-									"operator": "=",
-									"value": 0
+									"legs": "!kneeling"
 								}
 							]
 						]
@@ -97,9 +91,7 @@
 									"value": "fixed"
 								},
 								{
-									"bone": "kneeling",
-									"operator": "!=",
-									"value": 0
+									"legs": "kneeling"
 								}
 							]
 						]

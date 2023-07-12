@@ -33,9 +33,14 @@ export function LoadAssetsGraphics(path: string, assetModules: string[]): AssetG
 			.join('\n'),
 	) as AssetGraphicsDefinition;
 
-	SetBoneSchemaForAtomicCondition(InArray(ALL_BONES, 'Bone not found'));
+	SetBoneSchemaForAtomicCondition(InArray(ALL_BONES, 'Bone not found', {
+		verify: (value: string) => {
+			if (!BONES.includes(value) && value !== 'backView')
+				GetLogger(`Graphics [${path}]`).warning(`Bone ${value} is a fake bone and shouldn't be used in conditions.`);
+		}
+	}));
 	SetModuleSchemaForAtomicCondition(InArray(assetModules, 'Module not found'));
-	SetAttributeSchemaForAtomicCondition(InArray(ATTRIBUTES, 'Attribute not found', true));
+	SetAttributeSchemaForAtomicCondition(InArray(ATTRIBUTES, 'Attribute not found', { allowNegate: true }));
 	SetTransformDefinitionBoneSchema(InArray(ALL_BONES, 'Bone not found'));
 	const parseResult = AssetGraphicsDefinitionSchema.safeParse(definition);
 
@@ -85,11 +90,16 @@ function LoadAssetLayer(layer: LayerDefinition): LayerDefinition {
 	};
 }
 
-function InArray(array: readonly string[], message: string, allowNegate: boolean = false) {
+function InArray(array: readonly string[], message: string, { allowNegate = false, verify }: { allowNegate?: boolean, verify?: (value: string) => void; } = {}) {
 	return z.string().refine((value) => {
 		if (allowNegate && value.startsWith('!'))
 			value = value.slice(1);
 
-		return array.includes(value);
+		if (!array.includes(value))
+			return false;
+
+		verify?.(value);
+
+		return true;
 	}, (value) => ({ message: `${message}: ${value}` }));
 }
