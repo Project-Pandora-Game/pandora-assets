@@ -85,7 +85,7 @@ export function GlobalDefineAsset(def: IntermediatePersonalAssetDefinition): voi
 
 	// Load and verify graphics
 	if (def.graphics) {
-		const graphics = LoadAssetsGraphics(join(AssetSourcePath, def.graphics));
+		const graphics = LoadAssetsGraphics(join(AssetSourcePath, def.graphics), Object.keys(asset.modules ?? {}));
 
 		const loggerGraphics = logger.prefixMessages('[Graphics]');
 

@@ -26,6 +26,9 @@ dependencies:
   simple-git:
     specifier: 3.17.0
     version: 3.17.0
+  zod:
+    specifier: ^3.21.4
+    version: 3.21.4
 
 devDependencies:
   '@types/express':

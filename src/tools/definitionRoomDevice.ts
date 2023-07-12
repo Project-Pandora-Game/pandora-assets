@@ -91,7 +91,7 @@ function DefineRoomDeviceWearablePart(baseId: AssetId, slot: string, def: Interm
 
 	// Load and verify graphics
 	if (def.graphics) {
-		const graphics = LoadAssetsGraphics(join(AssetSourcePath, def.graphics));
+		const graphics = LoadAssetsGraphics(join(AssetSourcePath, def.graphics), [/** TODO device modules */]);
 
 		const loggerGraphics = logger.prefixMessages('[Graphics]');
 

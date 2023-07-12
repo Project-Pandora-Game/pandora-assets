@@ -1,10 +1,29 @@
-import { AssetGraphicsDefinition, LayerDefinition, LayerImageOverride, AssetGraphicsDefinitionSchema, LayerImageSetting, GetLogger } from 'pandora-common';
+import {
+	AssetGraphicsDefinition,
+	AssetGraphicsDefinitionSchema,
+	FAKE_BONES,
+	GetLogger,
+	LayerDefinition,
+	LayerImageOverride,
+	LayerImageSetting,
+	SetAttributeSchemaForAtomicCondition,
+	SetBoneSchemaForAtomicCondition,
+	SetModuleSchemaForAtomicCondition,
+	SetTransformDefinitionBoneSchema,
+} from 'pandora-common';
 import { DefinePngResource } from './resources';
 import { readFileSync } from 'fs';
 import { GraphicsDatabase } from './graphicsDatabase';
 import { WatchFile } from './watch';
+import { z } from 'zod';
+import { boneDefinition } from '../bones';
+import { ATTRIBUTES_DEFINITION } from '../attributes';
 
-export function LoadAssetsGraphics(path: string): AssetGraphicsDefinition {
+const BONES: readonly string[] = Object.keys(boneDefinition);
+const ALL_BONES: readonly string[] = [...BONES, ...FAKE_BONES];
+const ATTRIBUTES: readonly string[] = Object.keys(ATTRIBUTES_DEFINITION);
+
+export function LoadAssetsGraphics(path: string, assetModules: string[]): AssetGraphicsDefinition {
 	WatchFile(path);
 
 	const definition = JSON.parse(
@@ -14,6 +33,10 @@ export function LoadAssetsGraphics(path: string): AssetGraphicsDefinition {
 			.join('\n'),
 	) as AssetGraphicsDefinition;
 
+	SetBoneSchemaForAtomicCondition(InArray(ALL_BONES, 'Bone not found'));
+	SetModuleSchemaForAtomicCondition(InArray(assetModules, 'Module not found'));
+	SetAttributeSchemaForAtomicCondition(InArray(ATTRIBUTES, 'Attribute not found', true));
+	SetTransformDefinitionBoneSchema(InArray(ALL_BONES, 'Bone not found'));
 	const parseResult = AssetGraphicsDefinitionSchema.safeParse(definition);
 
 	if (!parseResult.success) {
@@ -60,4 +83,13 @@ function LoadAssetLayer(layer: LayerDefinition): LayerDefinition {
 			stops: layer.scaling.stops.map((stop) => [stop[0], LoadLayerImageSetting(stop[1])]),
 		},
 	};
+}
+
+function InArray(array: readonly string[], message: string, allowNegate: boolean = false) {
+	return z.string().refine((value) => {
+		if (allowNegate && value.startsWith('!'))
+			value = value.slice(1);
+
+		return array.includes(value);
+	}, (value) => ({ message: `${message}: ${value}` }));
 }
