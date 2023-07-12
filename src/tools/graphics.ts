@@ -1,7 +1,6 @@
 import {
 	AssetGraphicsDefinition,
 	AssetGraphicsDefinitionSchema,
-	FAKE_BONES,
 	GetLogger,
 	LayerDefinition,
 	LayerImageOverride,
@@ -25,7 +24,6 @@ const BONES: readonly string[] = Object.keys(boneDefinition)
 		.filter((v) => v.mirror)
 		.map((v) => v.mirror)
 		.filter((v) => v != null) as string[]);
-const ALL_BONES: readonly string[] = [...BONES, ...FAKE_BONES];
 const ATTRIBUTES: readonly string[] = Object.keys(ATTRIBUTES_DEFINITION);
 
 export function LoadAssetsGraphics(path: string, assetModules: string[]): AssetGraphicsDefinition {
@@ -88,15 +86,10 @@ function LoadAssetLayer(layer: LayerDefinition): LayerDefinition {
 }
 
 export function SetGraphicsSchemaForAtomicCondition(path: string, assetModules: string[] = []) {
-	SetBoneSchemaForAtomicCondition(InArray(ALL_BONES, 'Bone not found', {
-		verify: (value: string) => {
-			if (!BONES.includes(value))
-				GetLogger(`Graphics ${path}`).warning(`Bone ${value} is a fake bone and shouldn't be used in conditions.`);
-		},
-	}));
+	SetBoneSchemaForAtomicCondition(InArray(BONES, 'Bone not found'));
 	SetModuleSchemaForAtomicCondition(InArray(assetModules, 'Module not found'));
 	SetAttributeSchemaForAtomicCondition(InArray(ATTRIBUTES, 'Attribute not found', { allowNegate: true }));
-	SetTransformDefinitionBoneSchema(InArray(ALL_BONES, 'Bone not found'));
+	SetTransformDefinitionBoneSchema(InArray(BONES, 'Bone not found'));
 }
 
 function InArray(array: readonly string[], message: string, { allowNegate = false, verify }: { allowNegate?: boolean; verify?: (value: string) => void; } = {}) {
