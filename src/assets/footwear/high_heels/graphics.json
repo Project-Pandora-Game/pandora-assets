@@ -20,9 +20,7 @@
 						"condition": [
 							[
 								{
-									"bone": "backView",
-									"operator": ">",
-									"value": 0
+									"view": "back"
 								}
 							]
 						]
@@ -48,9 +46,7 @@
 						"condition": [
 							[
 								{
-									"bone": "backView",
-									"operator": ">",
-									"value": 0
+									"view": "back"
 								}
 							]
 						]
@@ -63,9 +59,7 @@
 						"condition": [
 							[
 								{
-									"bone": "backView",
-									"operator": ">",
-									"value": 0
+									"view": "back"
 								}
 							]
 						]
@@ -96,9 +90,7 @@
 									"value": "strap"
 								},
 								{
-									"bone": "backView",
-									"operator": "=",
-									"value": 0
+									"view": "front"
 								}
 							]
 						]
@@ -124,9 +116,7 @@
 						"condition": [
 							[
 								{
-									"bone": "backView",
-									"operator": "=",
-									"value": 0
+									"view": "front"
 								}
 							]
 						]
@@ -139,9 +129,7 @@
 						"condition": [
 							[
 								{
-									"bone": "backView",
-									"operator": "=",
-									"value": 0
+									"view": "front"
 								}
 							]
 						]
@@ -172,9 +160,7 @@
 									"value": "strap"
 								},
 								{
-									"bone": "backView",
-									"operator": ">",
-									"value": 0
+									"view": "back"
 								}
 							]
 						]
@@ -200,9 +186,7 @@
 						"condition": [
 							[
 								{
-									"bone": "backView",
-									"operator": "=",
-									"value": 0
+									"view": "front"
 								}
 							]
 						]

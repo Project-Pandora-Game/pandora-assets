@@ -20,9 +20,7 @@
 						"condition": [
 							[
 								{
-									"bone": "backView",
-									"operator": ">",
-									"value": 0
+									"view": "back"
 								}
 							]
 						]
@@ -48,9 +46,7 @@
 						"condition": [
 							[
 								{
-									"bone": "backView",
-									"operator": ">",
-									"value": 0
+									"view": "back"
 								}
 							]
 						]
@@ -75,9 +71,7 @@
 						"condition": [
 							[
 								{
-									"bone": "backView",
-									"operator": ">",
-									"value": 0
+									"view": "back"
 								}
 							]
 						]
@@ -159,9 +153,7 @@
 						"condition": [
 							[
 								{
-									"bone": "backView",
-									"operator": "=",
-									"value": 0
+									"view": "front"
 								}
 							]
 						]
@@ -186,9 +178,7 @@
 						"condition": [
 							[
 								{
-									"bone": "backView",
-									"operator": "=",
-									"value": 0
+									"view": "front"
 								}
 							]
 						]
@@ -214,9 +204,7 @@
 						"condition": [
 							[
 								{
-									"bone": "backView",
-									"operator": "=",
-									"value": 0
+									"view": "front"
 								}
 							]
 						]

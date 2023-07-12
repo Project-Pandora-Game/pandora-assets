@@ -35,8 +35,8 @@ export function LoadAssetsGraphics(path: string, assetModules: string[]): AssetG
 
 	SetBoneSchemaForAtomicCondition(InArray(ALL_BONES, 'Bone not found', {
 		verify: (value: string) => {
-			if (!BONES.includes(value) && value !== 'backView')
-				GetLogger(`Graphics [${path}]`).warning(`Bone ${value} is a fake bone and shouldn't be used in conditions.`);
+			if (!BONES.includes(value))
+				GetLogger(`Graphics ${path}`).warning(`Bone ${value} is a fake bone and shouldn't be used in conditions.`);
 		}
 	}));
 	SetModuleSchemaForAtomicCondition(InArray(assetModules, 'Module not found'));

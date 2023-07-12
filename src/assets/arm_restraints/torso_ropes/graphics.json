@@ -58,9 +58,7 @@
 						"condition": [
 							[
 								{
-									"bone": "backView",
-									"operator": ">",
-									"value": 0
+									"view": "back"
 								}
 							]
 						]
