@@ -37,7 +37,7 @@ export function LoadTemplate(name: string): PointTemplate {
 			.join('\n'),
 	) as PointTemplate;
 
-	SetGraphicsSchemaForAtomicCondition(path);
+	SetGraphicsSchemaForAtomicCondition();
 	const parseResult = PointTemplateSchema.safeParse(template);
 	if (!parseResult.success) {
 		GetLogger('TemplateValidation').error(

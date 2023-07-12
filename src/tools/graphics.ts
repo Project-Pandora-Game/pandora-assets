@@ -36,7 +36,7 @@ export function LoadAssetsGraphics(path: string, assetModules: string[]): AssetG
 			.join('\n'),
 	) as AssetGraphicsDefinition;
 
-	SetGraphicsSchemaForAtomicCondition(path, assetModules);
+	SetGraphicsSchemaForAtomicCondition(assetModules);
 	const parseResult = AssetGraphicsDefinitionSchema.safeParse(definition);
 
 	if (!parseResult.success) {
@@ -85,7 +85,7 @@ function LoadAssetLayer(layer: LayerDefinition): LayerDefinition {
 	};
 }
 
-export function SetGraphicsSchemaForAtomicCondition(path: string, assetModules: string[] = []) {
+export function SetGraphicsSchemaForAtomicCondition(assetModules: string[] = []) {
 	SetBoneSchemaForAtomicCondition(InArray(BONES, 'Bone not found'));
 	SetModuleSchemaForAtomicCondition(InArray(assetModules, 'Module not found'));
 	SetAttributeSchemaForAtomicCondition(InArray(ATTRIBUTES, 'Attribute not found', { allowNegate: true }));
