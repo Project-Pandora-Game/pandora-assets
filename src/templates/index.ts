@@ -1,9 +1,10 @@
-import { PointTemplate, PointTemplateSchema, ZodMatcher } from 'pandora-common';
+import { GetLogger, PointTemplate, PointTemplateSchema } from 'pandora-common';
 import { join } from 'path';
 import { readFileSync } from 'fs';
 import { SRC_DIR } from '../constants';
 import { GraphicsDatabase } from '../tools/graphicsDatabase';
 import { WatchFile } from '../tools/watch';
+import { SetGraphicsSchemaForAtomicCondition } from '../tools/graphics';
 
 const templateList: string[] = [
 	'static',
@@ -16,8 +17,6 @@ const templateList: string[] = [
 	'skirt_short',
 	'skirt_long',
 ];
-
-const IsPointTemplate = ZodMatcher(PointTemplateSchema);
 
 export function LoadTemplates() {
 	for (const templateName of templateList) {
@@ -38,9 +37,15 @@ export function LoadTemplate(name: string): PointTemplate {
 			.join('\n'),
 	) as PointTemplate;
 
-	if (!IsPointTemplate(template)) {
-		throw new Error(`Template in '${path}' is not PointTemplate`);
+	SetGraphicsSchemaForAtomicCondition(path);
+	const parseResult = PointTemplateSchema.safeParse(template);
+	if (!parseResult.success) {
+		GetLogger('TemplateValidation').error(
+			`Template in '${path}' is not PointTemplateSchema:\n`,
+			parseResult.error.toString(),
+		);
+		throw new Error(`Graphics in '${path}' is not PointTemplateSchema`);
 	}
 
-	return template;
+	return parseResult.data;
 }

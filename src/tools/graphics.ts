@@ -19,7 +19,12 @@ import { z } from 'zod';
 import { boneDefinition } from '../bones';
 import { ATTRIBUTES_DEFINITION } from '../attributes';
 
-const BONES: readonly string[] = Object.keys(boneDefinition);
+const BONES: readonly string[] = Object.keys(boneDefinition)
+	.concat(Object
+		.values(boneDefinition)
+		.filter((v) => v.mirror)
+		.map((v) => v.mirror)
+		.filter((v) => v != null) as string[]);
 const ALL_BONES: readonly string[] = [...BONES, ...FAKE_BONES];
 const ATTRIBUTES: readonly string[] = Object.keys(ATTRIBUTES_DEFINITION);
 
@@ -33,15 +38,7 @@ export function LoadAssetsGraphics(path: string, assetModules: string[]): AssetG
 			.join('\n'),
 	) as AssetGraphicsDefinition;
 
-	SetBoneSchemaForAtomicCondition(InArray(ALL_BONES, 'Bone not found', {
-		verify: (value: string) => {
-			if (!BONES.includes(value))
-				GetLogger(`Graphics ${path}`).warning(`Bone ${value} is a fake bone and shouldn't be used in conditions.`);
-		}
-	}));
-	SetModuleSchemaForAtomicCondition(InArray(assetModules, 'Module not found'));
-	SetAttributeSchemaForAtomicCondition(InArray(ATTRIBUTES, 'Attribute not found', { allowNegate: true }));
-	SetTransformDefinitionBoneSchema(InArray(ALL_BONES, 'Bone not found'));
+	SetGraphicsSchemaForAtomicCondition(path, assetModules);
 	const parseResult = AssetGraphicsDefinitionSchema.safeParse(definition);
 
 	if (!parseResult.success) {
@@ -90,7 +87,19 @@ function LoadAssetLayer(layer: LayerDefinition): LayerDefinition {
 	};
 }
 
-function InArray(array: readonly string[], message: string, { allowNegate = false, verify }: { allowNegate?: boolean, verify?: (value: string) => void; } = {}) {
+export function SetGraphicsSchemaForAtomicCondition(path: string, assetModules: string[] = []) {
+	SetBoneSchemaForAtomicCondition(InArray(ALL_BONES, 'Bone not found', {
+		verify: (value: string) => {
+			if (!BONES.includes(value))
+				GetLogger(`Graphics ${path}`).warning(`Bone ${value} is a fake bone and shouldn't be used in conditions.`);
+		},
+	}));
+	SetModuleSchemaForAtomicCondition(InArray(assetModules, 'Module not found'));
+	SetAttributeSchemaForAtomicCondition(InArray(ATTRIBUTES, 'Attribute not found', { allowNegate: true }));
+	SetTransformDefinitionBoneSchema(InArray(ALL_BONES, 'Bone not found'));
+}
+
+function InArray(array: readonly string[], message: string, { allowNegate = false, verify }: { allowNegate?: boolean; verify?: (value: string) => void; } = {}) {
 	return z.string().refine((value) => {
 		if (allowNegate && value.startsWith('!'))
 			value = value.slice(1);

@@ -1195,9 +1195,7 @@
 				"condition": [
 					[
 						{
-							"bone": "kneeling",
-							"operator": "=",
-							"value": 0
+							"legs": "!kneeling"
 						}
 					]
 				]
@@ -1251,9 +1249,7 @@
 				"condition": [
 					[
 						{
-							"bone": "kneeling",
-							"operator": "=",
-							"value": 0
+							"legs": "!kneeling"
 						}
 					]
 				]
@@ -1714,9 +1710,7 @@
 				"condition": [
 					[
 						{
-							"bone": "kneeling",
-							"operator": "=",
-							"value": 0
+							"legs": "!kneeling"
 						}
 					]
 				]
