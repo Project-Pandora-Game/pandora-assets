@@ -24,8 +24,6 @@ const boneDefinitionImpl = {
 	breasts: { type: 'body' },
 	waist: { type: 'body' },
 	hips: { type: 'body' },
-	kneeling: { type: 'pose' },
-	sitting: { type: 'pose' },
 	tiptoeing: { type: 'pose' },
 } as const;
 

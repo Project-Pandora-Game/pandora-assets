@@ -55,9 +55,7 @@ DefineAsset({
 					id: 'fixed',
 					name: 'Long Floor Chain',
 					poseLimits: {
-						bones: {
-							sitting: 0,
-						},
+						legs: ['standing', 'kneeling'],
 					},
 					effects: {
 						blockRoomMovement: true,
@@ -68,10 +66,7 @@ DefineAsset({
 					id: 'fixedShort',
 					name: 'Short Floor Chain',
 					poseLimits: {
-						bones: {
-							sitting: 0,
-							kneeling: 180,
-						},
+						legs: 'kneeling',
 					},
 					effects: {
 						blockRoomMovement: true,

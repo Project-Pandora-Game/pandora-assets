@@ -25,9 +25,8 @@ DefineAsset({
 						bones: {
 							leg_r: 2,
 							leg_l: 2,
-							sitting: 0,
-							kneeling: 0,
 						},
+						legs: 'standing',
 					},
 				},
 				{
@@ -37,9 +36,8 @@ DefineAsset({
 						bones: {
 							leg_r: 2,
 							leg_l: 2,
-							sitting: 0,
-							kneeling: 0,
 						},
+						legs: 'standing',
 					},
 				},
 				{
@@ -49,9 +47,8 @@ DefineAsset({
 						bones: {
 							leg_r: 2,
 							leg_l: 2,
-							sitting: 0,
-							kneeling: 0,
 						},
+						legs: 'standing',
 					},
 				},
 			],

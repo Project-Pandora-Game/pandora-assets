@@ -596,90 +596,80 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					bones: {
 						leg_r: 0,
 						leg_l: 0,
-						sitting: 0,
-						kneeling: 0,
 					},
+					legs: 'standing',
 				},
 				{
 					name: 'Closed',
 					bones: {
 						leg_r: 2,
 						leg_l: 2,
-						sitting: 0,
-						kneeling: 0,
 					},
+					legs: 'standing',
 				},
 				{
 					name: 'Crossed',
 					bones: {
 						leg_r: 6,
 						leg_l: 6,
-						sitting: 0,
-						kneeling: 0,
 					},
+					legs: 'standing',
 				},
 				{
 					name: 'Balancing',
 					bones: {
 						leg_r: 4,
 						leg_l: 4,
-						sitting: 0,
-						kneeling: 0,
 					},
+					legs: 'standing',
 				},
 				{
 					name: 'Spread minimally',
 					bones: {
 						leg_r: -3,
 						leg_l: -3,
-						sitting: 0,
-						kneeling: 0,
 					},
+					legs: 'standing',
 				},
 				{
 					name: 'Spread slightly',
 					bones: {
 						leg_r: -10,
 						leg_l: -10,
-						sitting: 0,
-						kneeling: 0,
 					},
+					legs: 'standing',
 				},
 				{
 					name: 'Spread',
 					bones: {
 						leg_r: -18,
 						leg_l: -18,
-						sitting: 0,
-						kneeling: 0,
 					},
+					legs: 'standing',
 				},
 				{
 					name: 'Spread wide',
 					bones: {
 						leg_r: -30,
 						leg_l: -30,
-						sitting: 0,
-						kneeling: 0,
 					},
+					legs: 'standing',
 				},
 				{
 					name: 'Spread extreme',
 					bones: {
 						leg_r: -50,
 						leg_l: -50,
-						sitting: 0,
-						kneeling: 0,
 					},
+					legs: 'standing',
 				},
 				{
 					name: 'Full split',
 					bones: {
 						leg_r: -85,
 						leg_l: -85,
-						sitting: 0,
-						kneeling: 0,
 					},
+					legs: 'standing',
 				},
 			],
 		},
@@ -691,36 +681,32 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					bones: {
 						leg_r: 0,
 						leg_l: 0,
-						sitting: 0,
-						kneeling: 180,
 					},
+					legs: 'kneeling',
 				},
 				{
 					name: 'Kneeling spread slightly',
 					bones: {
 						leg_r: -7,
 						leg_l: -7,
-						sitting: 0,
-						kneeling: 180,
 					},
+					legs: 'kneeling',
 				},
 				{
 					name: 'Kneeling spread',
 					bones: {
 						leg_r: -16,
 						leg_l: -16,
-						sitting: 0,
-						kneeling: 180,
 					},
+					legs: 'kneeling',
 				},
 				{
 					name: 'Kneeling spread wide',
 					bones: {
 						leg_r: -25,
 						leg_l: -25,
-						sitting: 0,
-						kneeling: 180,
 					},
+					legs: 'kneeling',
 				},
 			],
 		},
@@ -732,36 +718,32 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					bones: {
 						leg_r: 0,
 						leg_l: 0,
-						sitting: 180,
-						kneeling: 0,
 					},
+					legs: 'sitting',
 				},
 				{
 					name: 'Sitting spread slightly',
 					bones: {
 						leg_r: -7,
 						leg_l: -7,
-						sitting: 180,
-						kneeling: 0,
 					},
+					legs: 'sitting',
 				},
 				{
 					name: 'Sitting spread',
 					bones: {
 						leg_r: -16,
 						leg_l: -16,
-						sitting: 180,
-						kneeling: 0,
 					},
+					legs: 'sitting',
 				},
 				{
 					name: 'Sitting spread wide',
 					bones: {
 						leg_r: -25,
 						leg_l: -25,
-						sitting: 180,
-						kneeling: 0,
 					},
+					legs: 'sitting',
 				},
 			],
 		},

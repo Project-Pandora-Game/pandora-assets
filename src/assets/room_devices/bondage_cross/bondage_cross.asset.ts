@@ -31,11 +31,10 @@ DefineRoomDeviceAsset({
 						arm_r: -44,
 						elbow_l: -21,
 						elbow_r: -21,
-						sitting: 0,
-						kneeling: 0,
 						leg_r: -29.8,
 						leg_l: -29.6,
 					},
+					legs: 'standing',
 				},
 				requirements: [
 					'Wrist_cuffs',

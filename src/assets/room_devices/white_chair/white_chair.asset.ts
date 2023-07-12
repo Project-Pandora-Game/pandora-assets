@@ -15,18 +15,15 @@ DefineRoomDeviceAsset({
 				size: 'huge',
 				poseLimits: {
 					bones: {
-						sitting: 180,
-						kneeling: 0,
 						leg_r: [[-30, 10]],
 						leg_l: [[-30, 10]],
 					},
+					legs: 'sitting',
 					view: 'front',
 				},
 				exitPose: {
 					name: 'Standing up',
-					bones: {
-						sitting: 0,
-					},
+					legs: 'standing',
 				},
 			},
 		},
@@ -37,11 +34,10 @@ DefineRoomDeviceAsset({
 				size: 'huge',
 				poseLimits: {
 					bones: {
-						sitting: 0,
-						kneeling: 180,
 						leg_r: [[-30, 10]],
 						leg_l: [[-30, 10]],
 					},
+					legs: 'kneeling',
 				},
 			},
 		},

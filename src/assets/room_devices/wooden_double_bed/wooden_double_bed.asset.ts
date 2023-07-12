@@ -30,9 +30,7 @@ DefineRoomDeviceAsset({
 				name: 'Wooden Double Bed left side',
 				size: 'huge',
 				poseLimits: {
-					bones: {
-						sitting: 0,
-					},
+					legs: ['standing', 'kneeling'],
 				},
 			},
 		},
@@ -42,9 +40,7 @@ DefineRoomDeviceAsset({
 				name: 'Wooden Double Bed center',
 				size: 'huge',
 				poseLimits: {
-					bones: {
-						sitting: 0,
-					},
+					legs: ['standing', 'kneeling'],
 				},
 			},
 		},
@@ -54,9 +50,7 @@ DefineRoomDeviceAsset({
 				name: 'Wooden Double Bed right side',
 				size: 'huge',
 				poseLimits: {
-					bones: {
-						sitting: 0,
-					},
+					legs: ['standing', 'kneeling'],
 				},
 			},
 		},
@@ -71,11 +65,10 @@ DefineRoomDeviceAsset({
 						arm_r: -27,
 						elbow_l: -60,
 						elbow_r: -58,
-						sitting: 0,
-						kneeling: 0,
 						leg_r: -18,
 						leg_l: -18,
 					},
+					legs: 'standing',
 				},
 				effects: {
 					blockHands: true,
@@ -95,11 +88,10 @@ DefineRoomDeviceAsset({
 						arm_r: -25,
 						elbow_l: -60,
 						elbow_r: -60,
-						sitting: 0,
-						kneeling: 0,
 						leg_r: -18,
 						leg_l: -18,
 					},
+					legs: 'standing',
 				},
 				effects: {
 					blockHands: true,

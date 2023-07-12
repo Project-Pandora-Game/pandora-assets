@@ -61,10 +61,7 @@ DefineAsset({
 					id: 'normal',
 					name: 'Chained',
 					poseLimits: {
-						bones: {
-							sitting: 0,
-							kneeling: 0,
-						},
+						legs: 'standing',
 						options: [
 							{
 								bones: {
@@ -97,9 +94,8 @@ DefineAsset({
 						bones: {
 							leg_r: -18,
 							leg_l: -18,
-							sitting: 0,
-							kneeling: 0,
 						},
+						legs: 'standing',
 					},
 					attributes: [
 						'Ankle_cuffs_chain',

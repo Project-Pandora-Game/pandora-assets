@@ -20,11 +20,10 @@ DefineRoomDeviceAsset({
 				size: 'huge',
 				poseLimits: {
 					bones: {
-						sitting: 0,
-						kneeling: 180,
 						leg_r: [[-30, 0]],
 						leg_l: [[-30, 0]],
 					},
+					legs: 'kneeling',
 				},
 				effects: {
 					blockRoomLeave: true,
