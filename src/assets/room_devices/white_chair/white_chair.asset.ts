@@ -22,6 +22,12 @@ DefineRoomDeviceAsset({
 					},
 					view: 'front',
 				},
+				exitPose: {
+					name: 'Standing up',
+					bones: {
+						sitting: 0,
+					},
+				},
 			},
 		},
 		character_slot_kneeling: {
