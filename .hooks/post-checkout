@@ -3,7 +3,7 @@
 set -eou pipefail
 source "./.hooks/include.sh"
 
-git submodule update --init --recursive
+submodule_update
 
 PREV_COMMIT=$1
 POST_COMMIT=$2

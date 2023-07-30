@@ -363,22 +363,6 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						},
 					},
 				},
-				{
-					name: 'Arms resting while sitting',
-					bones: {
-						arm_r: 70,
-						arm_l: 70,
-						elbow_r: -32,
-						elbow_l: -32,
-					},
-					optional: {
-						arms: {
-							position: 'front',
-							rotation: 'forward',
-							fingers: 'fist',
-						},
-					},
-				},
 			],
 		},
 		{

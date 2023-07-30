@@ -26,6 +26,46 @@ DefineRoomDeviceAsset({
 					},
 					view: 'front',
 				},
+				exitPose: {
+					name: 'Standing up',
+					bones: {
+						sitting: 0,
+					},
+				},
+				posePresets: [
+					{
+						name: 'Armrests, spread fingers',
+						bones: {
+							arm_r: 70,
+							arm_l: 70,
+							elbow_r: -32,
+							elbow_l: -32,
+						},
+						optional: {
+							arms: {
+								position: 'front',
+								rotation: 'forward',
+								fingers: 'spread',
+							},
+						},
+					},
+					{
+						name: 'Armrests, fists',
+						bones: {
+							arm_r: 70,
+							arm_l: 70,
+							elbow_r: -32,
+							elbow_l: -32,
+						},
+						optional: {
+							arms: {
+								position: 'front',
+								rotation: 'forward',
+								fingers: 'fist',
+							},
+						},
+					},
+				],
 			},
 		},
 		character_slot_kneeling: {
