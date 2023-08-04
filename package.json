@@ -23,7 +23,7 @@
 		"normalize": "node --enable-source-maps ./dist/tools/normalize"
 	},
 	"dependencies": {
-		"dotenv": "16.0.3",
+		"dotenv": "16.3.1",
 		"jimp": "0.22.7",
 		"lodash": "4.17.21",
 		"pandora-common": "file:pandora/pandora-common",
