@@ -42,6 +42,11 @@ const ATTRIBUTES_DEFINITION = {
 		description: 'A facial reddening',
 		icon: 'body',
 	},
+	Bodymark: {
+		name: 'Bodymark',
+		description: 'A mark on the body',
+		icon: 'body',
+	},
 	Hair: {
 		name: 'Hair',
 		description: 'Hair',

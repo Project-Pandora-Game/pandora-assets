@@ -1096,6 +1096,15 @@
 	{
 		"pos": [
 			500,
+			714
+		],
+		"transforms": [],
+		"mirror": false,
+		"pointType": "body"
+	},
+	{
+		"pos": [
+			500,
 			630
 		],
 		"transforms": [],

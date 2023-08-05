@@ -8,6 +8,7 @@ export const APPEARANCE_RANDOMIZATION_CONFIG: AppearanceRandomizationData<AssetR
 		'Ears',
 		'Nose',
 		'Blush',
+		'Bodymark',
 		'Eyes',
 		'Eyebrows',
 		'Mouth',
