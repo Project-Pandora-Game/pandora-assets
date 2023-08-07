@@ -103,7 +103,7 @@ DefineAsset({
 				{
 					id: 'medium',
 					name: 'Colored',
-				}
+				},
 			],
 		},
 		breastColor_r: {
@@ -119,7 +119,7 @@ DefineAsset({
 				{
 					id: 'medium',
 					name: 'Colored',
-				}
+				},
 			],
 		},
 		sexColor: {
@@ -135,7 +135,7 @@ DefineAsset({
 				{
 					id: 'medium',
 					name: 'Colored',
-				}
+				},
 			],
 		},
 	},
