@@ -29,7 +29,8 @@
 			},
 			"pointType": [
 				"body"
-			]
+			],
+			"name": "sex"
 		},
 		{
 			"x": 0,
@@ -59,7 +60,8 @@
 			},
 			"pointType": [
 				"breasts_l"
-			]
+			],
+			"name": "breasts"
 		},
 		{
 			"x": 0,
@@ -125,7 +127,51 @@
 			},
 			"pointType": [
 				"body_l"
-			]
+			],
+			"name": "butt"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "BELOW_BODY",
+			"points": "body",
+			"mirror": 1,
+			"colorizationKey": "print",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "hand_prints_outside.png",
+						"condition": [
+							[
+								{
+									"module": "buttColor_l",
+									"operator": "=",
+									"value": "printOut"
+								}
+							]
+						]
+					},
+					{
+						"image": "hand_prints_inside.png",
+						"condition": [
+							[
+								{
+									"module": "buttColor_l",
+									"operator": "=",
+									"value": "printIn"
+								}
+							]
+						]
+					}
+				]
+			},
+			"pointType": [
+				"body_l"
+			],
+			"name": "butt hand prints"
 		}
 	]
 }

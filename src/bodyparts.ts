@@ -34,6 +34,7 @@ const BODYPART_DEFINITIONS: Record<BodypartName, Partial<Omit<AssetBodyPart, 'na
 		required: true,
 	},
 	bodymarks: {
+		allowMultiple: true,
 		adjustable: true,
 	},
 	eyes: {

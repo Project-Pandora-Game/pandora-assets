@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Body Marks',
+	name: 'Spank Marks',
 	size: 'bodypart',
 	bodypart: 'bodymarks',
 	allowRandomizerUsage: true,
@@ -7,7 +7,13 @@ DefineAsset({
 	colorization: {
 		blush: {
 			name: 'Color',
-			default: '#FFFFFF',
+			default: '#DC8275F0',
+			minAlpha: 0.1,
+		},
+		print: {
+			name: 'Hand print Color',
+			default: '#F6B3A7BC',
+			minAlpha: 0.1,
 		},
 	},
 	attributes: ['Body_texture'],
@@ -38,6 +44,14 @@ DefineAsset({
 					id: 'extreme',
 					name: 'Extreme',
 				},
+				{
+					id: 'printOut',
+					name: 'Hand print outside',
+				},
+				{
+					id: 'printIn',
+					name: 'Hand print inside',
+				},
 			],
 		},
 		buttColor_r: {
@@ -65,6 +79,14 @@ DefineAsset({
 				{
 					id: 'extreme',
 					name: 'Extreme',
+				},
+				{
+					id: 'printOut',
+					name: 'Hand print outside',
+				},
+				{
+					id: 'printIn',
+					name: 'Hand print inside',
 				},
 			],
 		},
