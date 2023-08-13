@@ -1,9 +1,10 @@
 import { cloneDeep } from 'lodash';
-import { AssetAttributeDefinition } from 'pandora-common';
+import { AssetAttributeDefinition, AttributeNameSchema } from 'pandora-common';
 import { join } from 'path';
 import { SRC_DIR } from './constants';
 import { SetCurrentContext } from './tools';
 import { DefineResource } from './tools/resources';
+import { ZodIssueCode } from 'zod';
 
 //#region Attribute definitions - an attribute defines a role
 
@@ -419,4 +420,17 @@ export function LoadAttributes(): Record<AttributeNames, AssetAttributeDefinitio
 	}
 
 	return result;
+}
+
+export function LoadAttributeNameValidation() {
+	const attributes: readonly string[] = Object.keys(ATTRIBUTES_DEFINITION);
+
+	AttributeNameSchema.override((attribute, ctx) => {
+		if (!attributes.includes(attribute)) {
+			ctx.addIssue({
+				code: ZodIssueCode.custom,
+				message: `Attribute '${attribute}' is not a valid attribute name`,
+			});
+		}
+	});
 }

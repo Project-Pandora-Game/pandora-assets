@@ -5,26 +5,13 @@ import {
 	LayerDefinition,
 	LayerImageOverride,
 	LayerImageSetting,
-	SetAttributeSchemaForAtomicCondition,
-	SetBoneSchemaForAtomicCondition,
-	SetModuleSchemaForAtomicCondition,
-	SetTransformDefinitionBoneSchema,
+	ModuleNameSchema,
 } from 'pandora-common';
 import { DefinePngResource } from './resources';
 import { readFileSync } from 'fs';
 import { GraphicsDatabase } from './graphicsDatabase';
 import { WatchFile } from './watch';
 import { z } from 'zod';
-import { boneDefinition } from '../bones';
-import { ATTRIBUTES_DEFINITION } from '../attributes';
-
-const BONES: readonly string[] = Object.keys(boneDefinition)
-	.concat(Object
-		.values(boneDefinition)
-		.filter((v) => v.mirror)
-		.map((v) => v.mirror)
-		.filter((v) => v != null) as string[]);
-const ATTRIBUTES: readonly string[] = Object.keys(ATTRIBUTES_DEFINITION);
 
 export function LoadAssetsGraphics(path: string, assetModules: string[]): AssetGraphicsDefinition {
 	WatchFile(path);
@@ -36,7 +23,15 @@ export function LoadAssetsGraphics(path: string, assetModules: string[]): AssetG
 			.join('\n'),
 	) as AssetGraphicsDefinition;
 
-	SetGraphicsSchemaForAtomicCondition(assetModules);
+	ModuleNameSchema.override((module, ctx) => {
+		if (!assetModules.includes(module)) {
+			ctx.addIssue({
+				code: z.ZodIssueCode.custom,
+				message: `Module '${module}' is not a valid module name`,
+			});
+		}
+	});
+
 	const parseResult = AssetGraphicsDefinitionSchema.safeParse(definition);
 
 	if (!parseResult.success) {
@@ -83,25 +78,4 @@ function LoadAssetLayer(layer: LayerDefinition): LayerDefinition {
 			stops: layer.scaling.stops.map((stop) => [stop[0], LoadLayerImageSetting(stop[1])]),
 		},
 	};
-}
-
-export function SetGraphicsSchemaForAtomicCondition(assetModules: string[] = []) {
-	SetBoneSchemaForAtomicCondition(InArray(BONES, 'Bone not found'));
-	SetModuleSchemaForAtomicCondition(InArray(assetModules, 'Module not found'));
-	SetAttributeSchemaForAtomicCondition(InArray(ATTRIBUTES, 'Attribute not found', { allowNegate: true }));
-	SetTransformDefinitionBoneSchema(InArray(BONES, 'Bone not found'));
-}
-
-function InArray(array: readonly string[], message: string, { allowNegate = false, verify }: { allowNegate?: boolean; verify?: (value: string) => void; } = {}) {
-	return z.string().refine((value) => {
-		if (allowNegate && value.startsWith('!'))
-			value = value.slice(1);
-
-		if (!array.includes(value))
-			return false;
-
-		verify?.(value);
-
-		return true;
-	}, (value) => ({ message: `${message}: ${value}` }));
 }

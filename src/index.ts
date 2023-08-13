@@ -5,7 +5,7 @@ import { GlobalDefineAsset, SetCurrentContext } from './tools';
 import { AssetDatabase } from './tools/assetDatabase';
 import { CleanOldResources, ClearAllResources, DefineResourceInline, ExportAllResources, SetResourceDestinationDirectory } from './tools/resources';
 import { RunDev } from './tools/watch';
-import { boneDefinition } from './bones';
+import { LoadBoneNameValidation, boneDefinition } from './bones';
 import { GraphicsDatabase } from './tools/graphicsDatabase';
 import { BODYPARTS, ValidateBodyparts } from './bodyparts';
 import { ASSET_DEST_DIR, ASSET_SRC_DIR, OUT_DIR, IS_PRODUCTION_BUILD } from './constants';
@@ -14,7 +14,7 @@ import { POSE_PRESETS } from './posePresets';
 import { LoadGitData } from './tools/git';
 import { RoomDatabase } from './tools/roomDatabase';
 import { LoadBackgroundTags, LoadBackgrounds } from './backgrounds/backgrounds';
-import { LoadAttributes } from './attributes';
+import { LoadAttributeNameValidation, LoadAttributes } from './attributes';
 import { APPEARANCE_RANDOMIZATION_CONFIG } from './presets';
 import { ASSET_SLOTS } from './slots';
 import { GlobalDefineRoomDeviceAsset } from './tools/definitionRoomDevice';
@@ -75,6 +75,10 @@ async function Run() {
 
 	if (!fs.existsSync(OUT_DIR))
 		fs.mkdirSync(OUT_DIR);
+
+	// Load extra validation
+	LoadBoneNameValidation();
+	LoadAttributeNameValidation();
 
 	// Load common data
 	await LoadGitData();
