@@ -6,6 +6,7 @@ import {
 	LayerImageOverride,
 	LayerImageSetting,
 	ModuleNameSchema,
+	SCHEME_OVERRIDE,
 } from 'pandora-common';
 import { DefinePngResource } from './resources';
 import { readFileSync } from 'fs';
@@ -23,7 +24,7 @@ export function LoadAssetsGraphics(path: string, assetModules: string[]): AssetG
 			.join('\n'),
 	) as AssetGraphicsDefinition;
 
-	ModuleNameSchema.override((module, ctx) => {
+	ModuleNameSchema[SCHEME_OVERRIDE]((module, ctx) => {
 		if (!assetModules.includes(module)) {
 			ctx.addIssue({
 				code: z.ZodIssueCode.custom,

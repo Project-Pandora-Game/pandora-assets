@@ -1,5 +1,5 @@
 import { cloneDeep } from 'lodash';
-import { AssetAttributeDefinition, AttributeNameSchema } from 'pandora-common';
+import { AssetAttributeDefinition, AttributeNameSchema, SCHEME_OVERRIDE } from 'pandora-common';
 import { join } from 'path';
 import { SRC_DIR } from './constants';
 import { SetCurrentContext } from './tools';
@@ -425,7 +425,7 @@ export function LoadAttributes(): Record<AttributeNames, AssetAttributeDefinitio
 export function LoadAttributeNameValidation() {
 	const attributes: readonly string[] = Object.keys(ATTRIBUTES_DEFINITION);
 
-	AttributeNameSchema.override((attribute, ctx) => {
+	AttributeNameSchema[SCHEME_OVERRIDE]((attribute, ctx) => {
 		if (!attributes.includes(attribute)) {
 			ctx.addIssue({
 				code: ZodIssueCode.custom,

@@ -1,4 +1,4 @@
-import { GetLogger, ModuleNameSchema, PointTemplate, PointTemplateSchema } from 'pandora-common';
+import { GetLogger, ModuleNameSchema, PointTemplate, PointTemplateSchema, SCHEME_OVERRIDE } from 'pandora-common';
 import { join } from 'path';
 import { readFileSync } from 'fs';
 import { SRC_DIR } from '../constants';
@@ -36,7 +36,7 @@ export function LoadTemplate(name: string): PointTemplate {
 			.join('\n'),
 	) as PointTemplate;
 
-	ModuleNameSchema.override((_module, ctx) => {
+	ModuleNameSchema[SCHEME_OVERRIDE]((_module, ctx) => {
 		ctx.addIssue({
 			code: 'custom',
 			message: `Modules are not allowed for templates`,
