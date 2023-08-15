@@ -47,8 +47,8 @@ DefineAsset({
 				},
 				{
 					id: 'no',
-					name: 'No'
-				}
+					name: 'No',
+				},
 			],
 		},
 		handUsage_l: {
