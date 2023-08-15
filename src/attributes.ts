@@ -285,6 +285,10 @@ export const ATTRIBUTES_DEFINITION = {
 		},
 		icon: 'gloves',
 	},
+	Mittens: {
+		name: 'Mittens',
+		description: 'A pair of bondage mittens',
+	},
 	Restraint: {
 		name: 'Restraint',
 		description: 'An item that restricts or restraints the character in some form',
