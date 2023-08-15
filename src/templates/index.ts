@@ -11,6 +11,7 @@ const templateList: string[] = [
 	'body',
 	'breast_toy',
 	'breasts',
+	'handheld',
 	'horizontal_limbs_width',
 	'shirt',
 	'skirt_short',

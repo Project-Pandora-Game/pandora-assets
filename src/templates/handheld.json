@@ -1,0 +1,114 @@
+[
+	{
+		"pos": [
+			852,
+			964
+		],
+		"transforms": [
+			{
+				"type": "shift",
+				"bone": "arm_width",
+				"value": {
+					"x": 0,
+					"y": 4
+				}
+			},
+			{
+				"type": "rotate",
+				"bone": "elbow_l",
+				"value": 1
+			},
+			{
+				"type": "rotate",
+				"bone": "arm_l",
+				"value": 1
+			}
+		],
+		"mirror": true,
+		"pointType": "handheld_l"
+	},
+	{
+		"pos": [
+			1150,
+			964
+		],
+		"transforms": [
+			{
+				"type": "shift",
+				"bone": "arm_width",
+				"value": {
+					"x": 1,
+					"y": 4
+				}
+			},
+			{
+				"type": "rotate",
+				"bone": "elbow_l",
+				"value": 1
+			},
+			{
+				"type": "rotate",
+				"bone": "arm_l",
+				"value": 1
+			}
+		],
+		"mirror": true,
+		"pointType": "handheld_l"
+	},
+	{
+		"pos": [
+			852,
+			1
+		],
+		"transforms": [
+			{
+				"type": "shift",
+				"bone": "arm_width",
+				"value": {
+					"x": 0,
+					"y": -4
+				}
+			},
+			{
+				"type": "rotate",
+				"bone": "elbow_l",
+				"value": 1
+			},
+			{
+				"type": "rotate",
+				"bone": "arm_l",
+				"value": 1
+			}
+		],
+		"mirror": true,
+		"pointType": "handheld_l"
+	},
+	{
+		"pos": [
+			1150,
+			1
+		],
+		"transforms": [
+			{
+				"type": "shift",
+				"bone": "arm_width",
+				"value": {
+					"x": 1,
+					"y": -4
+				}
+			},
+			{
+				"type": "rotate",
+				"bone": "elbow_l",
+				"value": 1
+			},
+			{
+				"type": "rotate",
+				"bone": "arm_l",
+				"value": 1
+			}
+		],
+		"mirror": true,
+		"pointType": "handheld_l"
+	}
+]
