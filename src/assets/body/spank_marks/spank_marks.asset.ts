@@ -1,3 +1,5 @@
+import { ItemInteractionType } from 'pandora-common';
+
 DefineAsset({
 	name: 'Spank Marks',
 	size: 'bodypart',
@@ -16,12 +18,16 @@ DefineAsset({
 			minAlpha: 0.1,
 		},
 	},
-	attributes: ['Body_texture'],
+	attributes: [
+		'Body_texture',
+		'Bodymark',
+	],
 	modules: {
 		buttColor_l: {
 			type: 'typed',
 			name: 'Left Butt Cheek Color',
 			expression: 'Left Butt Cheek Color',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'noColor',
@@ -58,6 +64,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Right Butt Cheek Color',
 			expression: 'Right Butt Cheek Color',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'noColor',
@@ -94,6 +101,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Left Breast Color',
 			expression: 'Left Breast Color',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'noColor',
@@ -110,6 +118,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Right Breast Color',
 			expression: 'Right Breast Color',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'noColor',
@@ -126,6 +135,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Sex Color',
 			expression: 'Sex Color',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'noColor',

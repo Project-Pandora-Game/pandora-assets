@@ -1,3 +1,5 @@
+import { ItemInteractionType } from 'pandora-common';
+
 DefineAsset({
 	name: 'Whip Marks',
 	size: 'bodypart',
@@ -11,12 +13,16 @@ DefineAsset({
 			minAlpha: 0.1,
 		},
 	},
-	attributes: ['Body_texture'],
+	attributes: [
+		'Body_texture',
+		'Bodymark',
+	],
 	modules: {
 		buttColor_l: {
 			type: 'typed',
 			name: 'Left Butt Marks',
 			expression: 'Left Butt Marks',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'none',
@@ -37,6 +43,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Right Butt Marks',
 			expression: 'Right Butt Marks',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'none',
@@ -57,6 +64,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Left Thigh Marks Back',
 			expression: 'Left Thigh Marks Back',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'none',
@@ -77,6 +85,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Right Thigh Marks Back',
 			expression: 'Right Thigh Marks Back',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'none',
@@ -97,6 +106,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Back Marks',
 			expression: 'Back Marks',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'none',
@@ -117,6 +127,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Left Thigh Marks Front',
 			expression: 'Left Thigh Marks Front',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'none',
@@ -137,6 +148,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Right Thigh Marks Front',
 			expression: 'Right Thigh Marks Front',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'none',
@@ -157,6 +169,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Left Breast Marks',
 			expression: 'Left Breast Marks',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'none',
@@ -177,6 +190,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Right Breast Marks',
 			expression: 'Right Breast Marks',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'none',
@@ -197,6 +211,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Sex Marks',
 			expression: 'Sex Marks',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'none',
