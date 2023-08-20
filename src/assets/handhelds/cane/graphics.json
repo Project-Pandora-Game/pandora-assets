@@ -39,7 +39,7 @@
 			"pointType": [
 				"handheld_r"
 			],
-			"name": "handle overlay"
+			"name": "handle hand overlay"
 		},
 		{
 			"x": -200,
@@ -162,6 +162,46 @@
 			"y": 0,
 			"width": 1400,
 			"height": 1500,
+			"priority": "BELOW_ARM_RIGHT",
+			"points": "handheld",
+			"mirror": 1,
+			"colorizationKey": "handle",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "cane_handle_overlay_down.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "yes"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			},
+			"pointType": [
+				"handheld_r"
+			],
+			"name": "handle hand overlay"
+		},
+		{
+			"x": -200,
+			"y": 0,
+			"width": 1400,
+			"height": 1500,
 			"priority": "ABOVE_ARM_RIGHT",
 			"points": "handheld",
 			"mirror": 1,
@@ -216,7 +256,7 @@
 			"pointType": [
 				"handheld_r"
 			],
-			"name": "handle"
+			"name": "handle back"
 		}
 	]
 }
