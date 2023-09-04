@@ -17,7 +17,7 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Checkout submodules
@@ -33,7 +33,7 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Checkout submodules
         run: git submodule update --init --force --depth=1
       - uses: actions/setup-node@v3
@@ -47,7 +47,7 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Checkout submodules
         run: git submodule update --init --force --depth=1
       - uses: actions/setup-node@v3
