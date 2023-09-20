@@ -777,4 +777,33 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 
 			],
 		},
+		{
+			category: 'Character rotation',
+			poses: [
+				{
+					name: 'Upright',
+					bones: {
+						character_rotation: 0,
+					},
+				},
+				{
+					name: 'Left',
+					bones: {
+						character_rotation: -90,
+					},
+				},
+				{
+					name: 'Right',
+					bones: {
+						character_rotation: 90,
+					},
+				},
+				{
+					name: 'Upside down',
+					bones: {
+						character_rotation: 180,
+					},
+				},
+			],
+		},
 	];
