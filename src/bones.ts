@@ -1,6 +1,7 @@
 // TODO: Re-add `import type` after ESLint gets fixed
 import { BoneDefinitionCompressed, BoneNameSchema, BoneType, CoordinatesCompressed, SCHEME_OVERRIDE } from 'pandora-common';
 import { ZodIssueCode } from 'zod';
+import { Immutable } from 'immer';
 
 const boneDefinitionImpl = {
 	arm_l: {
@@ -26,7 +27,7 @@ const boneDefinitionImpl = {
 	waist: { type: 'body' },
 	hips: { type: 'body' },
 	tiptoeing: { type: 'pose' },
-} as const;
+} as const satisfies Immutable<Record<string, BoneDefinitionCompressed>>;
 
 type Key = keyof typeof boneDefinitionImpl;
 
