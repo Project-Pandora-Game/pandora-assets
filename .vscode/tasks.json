@@ -62,7 +62,7 @@
 			"problemMatcher": "$tsc"
 		},
 		{
-			"label": "Run development server",
+			"label": "Asset development server",
 			"type": "npm",
 			"script": "dev:inspect",
 			"hide": true,
