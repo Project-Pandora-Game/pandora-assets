@@ -4,6 +4,19 @@ import { AllBones } from './bones';
 export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 	[
 		{
+			category: 'View',
+			poses: [
+				{
+					name: 'Front',
+					view: 'front',
+				},
+				{
+					name: 'Back',
+					view: 'back',
+				},
+			],
+		},
+		{
 			category: 'Arms (front)',
 			poses: [
 				{
