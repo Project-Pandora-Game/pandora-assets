@@ -25,10 +25,6 @@ DefineRoomDeviceAsset({
 					legs: 'sitting',
 					view: 'front',
 				},
-				exitPose: {
-					name: 'Standing up',
-					legs: 'standing',
-				},
 				posePresets: [
 					{
 						name: 'Armrests, spread fingers',
