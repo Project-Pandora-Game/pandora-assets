@@ -4,9 +4,11 @@
 		"config:recommended",
 		":disableDependencyDashboard",
 		":prHourlyLimitNone",
-		":rebaseStalePrs"
+		":rebaseStalePrs",
+		":automergeMinor"
 	],
 	"autoApprove": true,
+	"automergeType": "branch",
 	"automergeStrategy": "squash",
 	"platformAutomerge": true,
 	"rangeStrategy": "pin",
@@ -21,7 +23,6 @@
 	"git-submodules": {
 		"enabled": true,
 		"automerge": true,
-		"automergeType": "branch",
 		"prCreation": "status-success"
 	},
 	"packageRules": [
