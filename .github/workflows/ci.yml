@@ -24,7 +24,7 @@ jobs:
         run: git submodule update --init --force --depth=1
       - uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: 18
       - run: pnpm install --frozen-lockfile
       - run: pnpm run build --prod
 
@@ -38,7 +38,7 @@ jobs:
         run: git submodule update --init --force --depth=1
       - uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: 18
       - run: pnpm install --frozen-lockfile
       - run: pnpm run lint
 
@@ -52,7 +52,7 @@ jobs:
         run: git submodule update --init --force --depth=1
       - uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: 18
       - run: pnpm install --frozen-lockfile
       - run: pnpm run type-check:test
       - run: pnpm run test --ci
