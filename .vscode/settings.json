@@ -7,7 +7,6 @@
 	"debug.toolBarLocation": "floating",
 	"debug.showInStatusBar": "never",
 	"debug.openDebug": "neverOpen",
-	"eslint.packageManager": "pnpm",
 	"editor.insertSpaces": false,
 	"files.insertFinalNewline": true,
 	"files.trimTrailingWhitespace": true,
@@ -20,7 +19,9 @@
 	"git.detectSubmodules": false,
 	"git.autoRepositoryDetection": false,
 	"git.repositoryScanMaxDepth": 0,
-	"git.branchProtection": ["master"],
+	"git.branchProtection": [
+		"master"
+	],
 	"git.branchProtectionPrompt": "alwaysCommitToNewBranch",
 	"git.branchPrefix": "add/",
 	"git.branchRandomName.enable": true,
@@ -34,6 +35,7 @@
 	"typescript.preferences.importModuleSpecifierEnding": "minimal",
 	"typescript.format.enable": true,
 	"typescript.format.semicolons": "insert",
+	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
 	"typescript.preferences.quoteStyle": "single",
 	"editor.codeActionsOnSave": {
 		"source.fixAll.eslint": true
