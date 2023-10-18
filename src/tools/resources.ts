@@ -5,7 +5,6 @@ import { writeFile, copyFile, unlink, readdir, stat } from 'fs/promises';
 import { join, basename } from 'path';
 import { AssetSourcePath } from './context';
 import { WatchFile } from './watch';
-import { IS_PRODUCTION_BUILD } from '../constants';
 import sharp from 'sharp';
 
 export type ImageCategory = 'asset' | 'roomDevice' | 'background';
@@ -149,14 +148,10 @@ class ImageResource extends FileResource implements IImageResource {
 	public addResizedImage(maxWidth: number, maxHeight: number, suffix: string): string {
 		const name = `${this.baseName}_${suffix}.${this.extension}`;
 		if (resourceFiles.has(name))
-			return IS_PRODUCTION_BUILD ? name : this.resultName;
+			return name;
 
-		// Prevent the generated source from being deleted, even if we are not doing a production build
+		// Prevent the generated source from being deleted
 		resourceFiles.add(name);
-
-		if (!IS_PRODUCTION_BUILD) {
-			return this.resultName;
-		}
 
 		this.addProcess(async () => {
 			const dest = join(destinationDirectory, name);
