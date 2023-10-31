@@ -29,14 +29,14 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			occupiedEffects: {
+			occupiedProperties: {
 				blockAddRemove: true,
 			},
 		},
 		lockPlug: {
 			type: 'lockSlot',
 			name: 'Lock for the plug',
-			occupiedEffects: {
+			occupiedProperties: {
 				blockModules: ['plugState'],
 			},
 		},
@@ -64,58 +64,64 @@ DefineAsset({
 					id: 'noPlug',
 					name: 'No Plug',
 					default: true,
-					occupySlots: {
-						'outsideMouthArea': 1,
-						'mouth': 1,
-					},
-					effects: {
-						lipsTouch: 9,
-						jawMove: 0,
-						tongueRoof: 0,
-						mouthBreath: 0,
-						throatBreath: 0,
-						coherency: 0,
-						stimulus: 0,
+					properties: {
+						occupySlots: {
+							'outsideMouthArea': 1,
+							'mouth': 1,
+						},
+						effects: {
+							lipsTouch: 9,
+							jawMove: 0,
+							tongueRoof: 0,
+							mouthBreath: 0,
+							throatBreath: 0,
+							coherency: 0,
+							stimulus: 0,
+						},
 					},
 				},
 				{
 					id: 'plug',
 					name: 'Plugged',
-					effects: {
-						lipsTouch: 9,
-						jawMove: 4,
-						tongueRoof: 1,
-						mouthBreath: 4,
-						throatBreath: 3,
-						coherency: 5,
-						stimulus: 3,
-					},
-					requirements: ['!Mouth_tongue_out'],
-					coverSlots: ['mouth', 'outsideMouthArea'],
-					blockSlots: ['mouth'],
-					occupySlots: {
-						'outsideMouthArea': 1,
-						'mouth': 1,
+					properties: {
+						effects: {
+							lipsTouch: 9,
+							jawMove: 4,
+							tongueRoof: 1,
+							mouthBreath: 4,
+							throatBreath: 3,
+							coherency: 5,
+							stimulus: 3,
+						},
+						requirements: ['!Mouth_tongue_out'],
+						coverSlots: ['mouth', 'outsideMouthArea'],
+						blockSlots: ['mouth'],
+						occupySlots: {
+							'outsideMouthArea': 1,
+							'mouth': 1,
+						},
 					},
 				},
 				{
 					id: 'dildoplug',
 					name: 'Plugged with inside Dildo',
-					effects: {
-						lipsTouch: 9,
-						jawMove: 9,
-						tongueRoof: 8,
-						mouthBreath: 6,
-						throatBreath: 4,
-						coherency: 7,
-						stimulus: 6,
-					},
-					requirements: ['!Mouth_tongue_out'],
-					coverSlots: ['mouth', 'outsideMouthArea'],
-					blockSlots: ['mouth'],
-					occupySlots: {
-						'outsideMouthArea': 1,
-						'mouth': 9,
+					properties: {
+						effects: {
+							lipsTouch: 9,
+							jawMove: 9,
+							tongueRoof: 8,
+							mouthBreath: 6,
+							throatBreath: 4,
+							coherency: 7,
+							stimulus: 6,
+						},
+						requirements: ['!Mouth_tongue_out'],
+						coverSlots: ['mouth', 'outsideMouthArea'],
+						blockSlots: ['mouth'],
+						occupySlots: {
+							'outsideMouthArea': 1,
+							'mouth': 9,
+						},
 					},
 				},
 			],

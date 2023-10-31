@@ -28,14 +28,14 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			occupiedEffects: {
+			occupiedProperties: {
 				blockAddRemove: true,
 			},
 		},
 		lockPlate: {
 			type: 'lockSlot',
 			name: 'Lock for crotch plate',
-			occupiedEffects: {
+			occupiedProperties: {
 				blockModules: ['crotchPlate'],
 			},
 		},
@@ -51,14 +51,16 @@ DefineAsset({
 				{
 					id: 'closed',
 					name: 'Closed',
-					blockSlots: ['vagina'],
-					occupySlots: {
-						'outsideVaginaArea': 1,
+					properties: {
+						blockSlots: ['vagina'],
+						occupySlots: {
+							'outsideVaginaArea': 1,
+						},
+						hides: [
+							'Penis',
+							'Toy_clamps_genital',
+						],
 					},
-					hides: [
-						'Penis',
-						'Toy_clamps_genital',
-					],
 				},
 			],
 		},

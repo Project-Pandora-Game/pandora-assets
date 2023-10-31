@@ -30,14 +30,14 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			occupiedEffects: {
+			occupiedProperties: {
 				blockAddRemove: true,
 			},
 		},
 		lockChain: {
 			type: 'lockSlot',
 			name: 'Lock for cuff chains',
-			occupiedEffects: {
+			occupiedProperties: {
 				requirements: ['Wrist_cuffs_chain'],
 			},
 		},
@@ -54,72 +54,74 @@ DefineAsset({
 				{
 					id: 'chained',
 					name: 'Chained',
-					poseLimits: {
-						options: [
-							{
-								arms: {
-									position: 'front',
-									rotation: 'down',
+					properties: {
+						poseLimits: {
+							options: [
+								{
+									arms: {
+										position: 'front',
+										rotation: 'down',
+									},
+									bones: {
+										arm_r: 74,
+										arm_l: 74,
+										elbow_r: 43,
+										elbow_l: 43,
+									},
 								},
-								bones: {
-									arm_r: 74,
-									arm_l: 74,
-									elbow_r: 43,
-									elbow_l: 43,
+								{
+									arms: {
+										position: 'back',
+										rotation: 'down',
+									},
+									bones: {
+										arm_r: 74,
+										arm_l: 74,
+										elbow_r: 43,
+										elbow_l: 43,
+									},
 								},
-							},
-							{
-								arms: {
-									position: 'back',
-									rotation: 'down',
+								{
+									arms: {
+										position: 'front',
+										rotation: 'up',
+									},
+									bones: {
+										arm_r: -74,
+										arm_l: -74,
+										elbow_r: -43,
+										elbow_l: -43,
+									},
 								},
-								bones: {
-									arm_r: 74,
-									arm_l: 74,
-									elbow_r: 43,
-									elbow_l: 43,
+								{
+									arms: {
+										position: 'back',
+										rotation: 'up',
+									},
+									bones: {
+										arm_r: -74,
+										arm_l: -74,
+										elbow_r: -43,
+										elbow_l: -43,
+									},
 								},
-							},
-							{
-								arms: {
-									position: 'front',
-									rotation: 'up',
+								{
+									arms: {
+										position: 'back',
+									},
+									bones: {
+										arm_r: 104,
+										arm_l: 104,
+										elbow_r: -4,
+										elbow_l: -4,
+									},
 								},
-								bones: {
-									arm_r: -74,
-									arm_l: -74,
-									elbow_r: -43,
-									elbow_l: -43,
-								},
-							},
-							{
-								arms: {
-									position: 'back',
-									rotation: 'up',
-								},
-								bones: {
-									arm_r: -74,
-									arm_l: -74,
-									elbow_r: -43,
-									elbow_l: -43,
-								},
-							},
-							{
-								arms: {
-									position: 'back',
-								},
-								bones: {
-									arm_r: 104,
-									arm_l: 104,
-									elbow_r: -4,
-									elbow_l: -4,
-								},
-							},
+							],
+						},
+						attributes: [
+							'Wrist_cuffs_chain',
 						],
 					},
-					attributes: [
-						'Wrist_cuffs_chain',
-					],
 				},
 			],
 		},

@@ -33,14 +33,14 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			occupiedEffects: {
+			occupiedProperties: {
 				blockAddRemove: true,
 			},
 		},
 		lockAddons: {
 			type: 'lockSlot',
 			name: 'Lock for hood covers',
-			occupiedEffects: {
+			occupiedProperties: {
 				blockModules: [
 					'hoodEyeCover',
 					'hoodMouthCover',
@@ -59,12 +59,14 @@ DefineAsset({
 				{
 					id: 'eye',
 					name: 'Eye Cover',
-					effects: {
-						blind: 10,
+					properties: {
+						effects: {
+							blind: 10,
+						},
+						attributes: [
+							'Restraint_eyes',
+						],
 					},
-					attributes: [
-						'Restraint_eyes',
-					],
 				},
 			],
 		},
@@ -80,37 +82,41 @@ DefineAsset({
 				{
 					id: 'mouth',
 					name: 'Mouth Cover',
-					requirements: ['!Mouth_tongue_out'],
-					coverSlots: ['mouth', 'outsideMouthArea'],
-					blockSlots: ['mouth'],
-					occupySlots: {
-						'outsideMouthArea': 1,
+					properties: {
+						requirements: ['!Mouth_tongue_out'],
+						coverSlots: ['mouth', 'outsideMouthArea'],
+						blockSlots: ['mouth'],
+						occupySlots: {
+							'outsideMouthArea': 1,
+						},
 					},
 				},
 				{
 					id: 'mouth_plug',
 					name: 'Mouth Cover with Plug',
-					effects: {
-						lipsTouch: 10,
-						jawMove: 10,
-						tongueRoof: 8,
-						mouthBreath: 7,
-						throatBreath: 6,
-						coherency: 8,
-						stimulus: 6,
-					},
-					attributes: [
-						'Restraint_mouth',
-					],
-					requirements: [
-						'Mouth_open_wide',
-						'!Mouth_tongue_out',
-					],
-					coverSlots: ['mouth', 'outsideMouthArea'],
-					blockSlots: ['mouth'],
-					occupySlots: {
-						'mouth': 9,
-						'outsideMouthArea': 1,
+					properties: {
+						effects: {
+							lipsTouch: 10,
+							jawMove: 10,
+							tongueRoof: 8,
+							mouthBreath: 7,
+							throatBreath: 6,
+							coherency: 8,
+							stimulus: 6,
+						},
+						attributes: [
+							'Restraint_mouth',
+						],
+						requirements: [
+							'Mouth_open_wide',
+							'!Mouth_tongue_out',
+						],
+						coverSlots: ['mouth', 'outsideMouthArea'],
+						blockSlots: ['mouth'],
+						occupySlots: {
+							'mouth': 9,
+							'outsideMouthArea': 1,
+						},
 					},
 				},
 			],

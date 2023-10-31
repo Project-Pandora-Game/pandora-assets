@@ -52,77 +52,85 @@ DefineAsset({
 				{
 					id: 'wristsBack',
 					name: 'Wrists Back',
-					poseLimits: {
-						arms: {
-							position: 'back',
-							rotation: 'down',
+					properties: {
+						poseLimits: {
+							arms: {
+								position: 'back',
+								rotation: 'down',
+							},
+							bones: {
+								arm_r: 82,
+								arm_l: 82,
+								elbow_r: 55,
+								elbow_l: 55,
+							},
 						},
-						bones: {
-							arm_r: 82,
-							arm_l: 82,
-							elbow_r: 55,
-							elbow_l: 55,
+						effects: {
+							blockHands: true,
 						},
-					},
-					effects: {
-						blockHands: true,
 					},
 				},
 				{
 					id: 'boxtie',
 					name: 'Boxtie',
-					poseLimits: {
-						arms: {
-							position: 'back',
-							rotation: 'down',
+					properties: {
+						poseLimits: {
+							arms: {
+								position: 'back',
+								rotation: 'down',
+							},
+							bones: {
+								arm_r: 79,
+								arm_l: 79,
+								elbow_r: 98,
+								elbow_l: 98,
+							},
 						},
-						bones: {
-							arm_r: 79,
-							arm_l: 79,
-							elbow_r: 98,
-							elbow_l: 98,
+						effects: {
+							blockHands: true,
 						},
-					},
-					effects: {
-						blockHands: true,
 					},
 				},
 				{
 					id: 'crossed',
 					name: 'Boxtie with Crossed Wrists',
-					poseLimits: {
-						arms: {
-							position: 'back',
-							rotation: 'down',
+					properties: {
+						poseLimits: {
+							arms: {
+								position: 'back',
+								rotation: 'down',
+							},
+							bones: {
+								arm_r: 82,
+								arm_l: 82,
+								elbow_r: 55,
+								elbow_l: 55,
+							},
 						},
-						bones: {
-							arm_r: 82,
-							arm_l: 82,
-							elbow_r: 55,
-							elbow_l: 55,
+						effects: {
+							blockHands: true,
 						},
-					},
-					effects: {
-						blockHands: true,
 					},
 				},
 				{
 					id: 'elbows',
 					name: 'Boxtie with Elbows Touching',
-					poseLimits: {
-						arms: {
-							position: 'back',
-							rotation: 'forward',
+					properties: {
+						poseLimits: {
+							arms: {
+								position: 'back',
+								rotation: 'forward',
+							},
+							bones: {
+								arm_r: 104,
+								arm_l: 104,
+								elbow_r: -4,
+								elbow_l: -4,
+							},
 						},
-						bones: {
-							arm_r: 104,
-							arm_l: 104,
-							elbow_r: -4,
-							elbow_l: -4,
+						effects: {
+							blockHands: true,
 						},
-					},
-					effects: {
-						blockHands: true,
 					},
 				},
 			],

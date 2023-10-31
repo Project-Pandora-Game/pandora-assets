@@ -30,12 +30,16 @@ DefineAsset({
 					id: 'flaccid',
 					name: 'Flaccid',
 					default: true,
-					attributes: ['Penis_flaccid'],
+					properties: {
+						attributes: ['Penis_flaccid'],
+					},
 				},
 				{
 					id: 'erect',
 					name: 'Erect',
-					attributes: ['Penis_erect'],
+					properties: {
+						attributes: ['Penis_erect'],
+					},
 				},
 			],
 		},

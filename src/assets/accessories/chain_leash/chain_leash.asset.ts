@@ -23,14 +23,14 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			occupiedEffects: {
+			occupiedProperties: {
 				blockAddRemove: true,
 			},
 		},
 		lockCollar: {
 			type: 'lockSlot',
 			name: 'Lock for chain configuration',
-			occupiedEffects: {
+			occupiedProperties: {
 				blockModules: ['collarConfig'],
 			},
 		},
@@ -54,23 +54,27 @@ DefineAsset({
 				{
 					id: 'fixed',
 					name: 'Long Floor Chain',
-					poseLimits: {
-						legs: ['standing', 'kneeling'],
-					},
-					effects: {
-						blockRoomMovement: true,
-						blockRoomLeave: true,
+					properties: {
+						poseLimits: {
+							legs: ['standing', 'kneeling'],
+						},
+						effects: {
+							blockRoomMovement: true,
+							blockRoomLeave: true,
+						},
 					},
 				},
 				{
 					id: 'fixedShort',
 					name: 'Short Floor Chain',
-					poseLimits: {
-						legs: 'kneeling',
-					},
-					effects: {
-						blockRoomMovement: true,
-						blockRoomLeave: true,
+					properties: {
+						poseLimits: {
+							legs: 'kneeling',
+						},
+						effects: {
+							blockRoomMovement: true,
+							blockRoomLeave: true,
+						},
 					},
 				},
 			],

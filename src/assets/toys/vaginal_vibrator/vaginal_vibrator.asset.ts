@@ -19,24 +19,30 @@ DefineAsset({
 					id: 'out',
 					name: 'Mostly Out',
 					default: true,
-					occupySlots: {
-						'vagina': 2,
-						'outsideVaginaArea': 10,
+					properties: {
+						occupySlots: {
+							'vagina': 2,
+							'outsideVaginaArea': 10,
+						},
 					},
 				},
 				{
 					id: 'half',
 					name: 'Half Inside',
-					occupySlots: {
-						'vagina': 4,
-						'outsideVaginaArea': 10,
+					properties: {
+						occupySlots: {
+							'vagina': 4,
+							'outsideVaginaArea': 10,
+						},
 					},
 				},
 				{
 					id: 'in',
 					name: 'Deep Inside',
-					occupySlots: {
-						'vagina': 8,
+					properties: {
+						occupySlots: {
+							'vagina': 8,
+						},
 					},
 				},
 			],

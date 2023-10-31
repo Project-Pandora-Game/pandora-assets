@@ -35,14 +35,14 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			occupiedEffects: {
+			occupiedProperties: {
 				blockAddRemove: true,
 			},
 		},
 		lockChain: {
 			type: 'lockSlot',
 			name: 'Lock for cuff chains',
-			occupiedEffects: {
+			occupiedProperties: {
 				requirements: ['Ankle_cuffs_chain'],
 			},
 		},
@@ -60,49 +60,53 @@ DefineAsset({
 				{
 					id: 'normal',
 					name: 'Chained',
-					poseLimits: {
-						legs: 'standing',
-						options: [
-							{
-								bones: {
-									leg_r: 0,
-									leg_l: 0,
+					properties: {
+						poseLimits: {
+							legs: 'standing',
+							options: [
+								{
+									bones: {
+										leg_r: 0,
+										leg_l: 0,
+									},
 								},
-							},
-							{
-								bones: {
-									leg_r: -3,
-									leg_l: -3,
+								{
+									bones: {
+										leg_r: -3,
+										leg_l: -3,
+									},
 								},
-							},
-							{
-								bones: {
-									leg_r: [[2, 6]],
-									leg_l: [[2, 6]],
+								{
+									bones: {
+										leg_r: [[2, 6]],
+										leg_l: [[2, 6]],
+									},
 								},
-							},
+							],
+						},
+						attributes: [
+							'Ankle_cuffs_chain',
 						],
 					},
-					attributes: [
-						'Ankle_cuffs_chain',
-					],
 				},
 				{
 					id: 'floor',
 					name: 'Spread Floor Chains',
-					poseLimits: {
-						bones: {
-							leg_r: -18,
-							leg_l: -18,
+					properties: {
+						poseLimits: {
+							bones: {
+								leg_r: -18,
+								leg_l: -18,
+							},
+							legs: 'standing',
 						},
-						legs: 'standing',
-					},
-					attributes: [
-						'Ankle_cuffs_chain',
-					],
-					effects: {
-						blockRoomMovement: true,
-						blockRoomLeave: true,
+						attributes: [
+							'Ankle_cuffs_chain',
+						],
+						effects: {
+							blockRoomMovement: true,
+							blockRoomLeave: true,
+						},
 					},
 				},
 			],

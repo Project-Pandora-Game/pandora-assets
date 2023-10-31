@@ -22,7 +22,7 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			occupiedEffects: {
+			occupiedProperties: {
 				blockAddRemove: true,
 			},
 		},
@@ -34,16 +34,20 @@ DefineAsset({
 				{
 					id: 'light',
 					name: 'Thin Padding',
-					effects: {
-						blind: 9.4,
-					},
 					default: true,
+					properties: {
+						effects: {
+							blind: 9.4,
+						},
+					},
 				},
 				{
 					id: 'full',
 					name: 'Thick Padding',
-					effects: {
-						blind: 10,
+					properties: {
+						effects: {
+							blind: 10,
+						},
 					},
 				},
 			],

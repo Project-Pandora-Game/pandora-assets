@@ -29,7 +29,9 @@ DefineAsset({
 					id: 'noHair',
 					name: 'Shaved',
 					default: true,
-					excludeFromColorInheritance: ['hair'],
+					properties: {
+						excludeFromColorInheritance: ['hair'],
+					},
 				},
 				{
 					id: 'trimmed',
@@ -59,7 +61,9 @@ DefineAsset({
 				{
 					id: 'spread',
 					name: 'Spread',
-					attributes: ['Vagina_spread'],
+					properties: {
+						attributes: ['Vagina_spread'],
+					},
 				},
 			],
 		},

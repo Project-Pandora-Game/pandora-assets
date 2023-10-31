@@ -47,31 +47,39 @@ DefineAsset({
 				{
 					id: 'laugh',
 					name: 'Open',
-					attributes: [
-						'Mouth_open_wide',
-						'Mouth_open_teeth',
-					],
+					properties: {
+						attributes: [
+							'Mouth_open_wide',
+							'Mouth_open_teeth',
+						],
+					},
 				},
 				{
 					id: 'open',
 					name: 'Open Wide',
-					attributes: ['Mouth_open_wide'],
+					properties: {
+						attributes: ['Mouth_open_wide'],
+					},
 				},
 				{
 					id: 'tongue',
 					name: 'Tongue Out',
-					attributes: [
-						'Mouth_tongue_out',
-						'Mouth_open_wide',
-					],
+					properties: {
+						attributes: [
+							'Mouth_tongue_out',
+							'Mouth_open_wide',
+						],
+					},
 				},
 				{
 					id: 'tongueLong',
 					name: 'Tongue Out Fully',
-					attributes: [
-						'Mouth_tongue_out',
-						'Mouth_open_wide',
-					],
+					properties: {
+						attributes: [
+							'Mouth_tongue_out',
+							'Mouth_open_wide',
+						],
+					},
 				},
 				{
 					id: 'pout',

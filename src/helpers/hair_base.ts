@@ -21,7 +21,9 @@ export function CreateHairColor(withShine: boolean): {
 				{
 					id: 'yes',
 					name: 'Yes',
-					overrideColorKey: ['hair'],
+					properties: {
+						overrideColorKey: ['hair'],
+					},
 				},
 			],
 		},
@@ -59,7 +61,9 @@ export function CreateHairColor(withShine: boolean): {
 				{
 					id: 'yes',
 					name: 'Yes',
-					overrideColorKey: ['hairShine'],
+					properties: {
+						overrideColorKey: ['hairShine'],
+					},
 				},
 			],
 		};

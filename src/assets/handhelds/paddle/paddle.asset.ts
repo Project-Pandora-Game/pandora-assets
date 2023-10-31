@@ -23,22 +23,24 @@ DefineAsset({
 					id: 'yes',
 					name: 'Yes',
 					default: true,
-					poseLimits: {
-						rightArm: {
-							fingers: 'fist',
+					properties: {
+						poseLimits: {
+							rightArm: {
+								fingers: 'fist',
+							},
+							options: [
+								{
+									rightArm: {
+										rotation: 'up',
+									},
+								},
+								{
+									rightArm: {
+										rotation: 'down',
+									},
+								},
+							],
 						},
-						options: [
-							{
-								rightArm: {
-									rotation: 'up',
-								},
-							},
-							{
-								rightArm: {
-									rotation: 'down',
-								},
-							},
-						],
 					},
 				},
 				{
@@ -54,22 +56,24 @@ DefineAsset({
 				{
 					id: 'yes',
 					name: 'Yes',
-					poseLimits: {
-						leftArm: {
-							fingers: 'fist',
+					properties: {
+						poseLimits: {
+							leftArm: {
+								fingers: 'fist',
+							},
+							options: [
+								{
+									leftArm: {
+										rotation: 'up',
+									},
+								},
+								{
+									leftArm: {
+										rotation: 'down',
+									},
+								},
+							],
 						},
-						options: [
-							{
-								leftArm: {
-									rotation: 'up',
-								},
-							},
-							{
-								leftArm: {
-									rotation: 'down',
-								},
-							},
-						],
 					},
 				},
 				{

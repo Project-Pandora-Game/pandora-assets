@@ -17,7 +17,7 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			occupiedEffects: {
+			occupiedProperties: {
 				blockAddRemove: true,
 				blockModules: ['cage'],
 			},
@@ -34,12 +34,16 @@ DefineAsset({
 				{
 					id: 'matte',
 					name: 'Matte Cage',
-					requirements: ['Penis_flaccid'],
+					properties: {
+						requirements: ['Penis_flaccid'],
+					},
 				},
 				{
 					id: 'chrome',
 					name: 'Chrome Cage',
-					requirements: ['Penis_flaccid'],
+					properties: {
+						requirements: ['Penis_flaccid'],
+					},
 				},
 			],
 		},

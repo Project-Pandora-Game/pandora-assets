@@ -30,7 +30,7 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			occupiedEffects: {
+			occupiedProperties: {
 				blockAddRemove: true,
 			},
 		},
@@ -46,9 +46,11 @@ DefineAsset({
 				{
 					id: 'ring',
 					name: 'Collar + Ring',
-					attributes: [
-						'Collar_front_ring',
-					],
+					properties: {
+						attributes: [
+							'Collar_front_ring',
+						],
+					},
 				},
 			],
 		},
@@ -61,48 +63,54 @@ DefineAsset({
 					id: 'normal',
 					name: 'Normal',
 					default: true,
-					poseLimits: {
-						arms: {
-							position: 'front',
-							rotation: 'up',
-						},
-						bones: {
-							arm_r: 30,
-							arm_l: 30,
-							elbow_r: -119,
-							elbow_l: -119,
+					properties: {
+						poseLimits: {
+							arms: {
+								position: 'front',
+								rotation: 'up',
+							},
+							bones: {
+								arm_r: 30,
+								arm_l: 30,
+								elbow_r: -119,
+								elbow_l: -119,
+							},
 						},
 					},
 				},
 				{
 					id: 'narrow',
 					name: 'Narrow',
-					poseLimits: {
-						arms: {
-							position: 'back',
-							rotation: 'up',
-						},
-						bones: {
-							arm_r: 3,
-							arm_l: 3,
-							elbow_r: -153,
-							elbow_l: -153,
+					properties: {
+						poseLimits: {
+							arms: {
+								position: 'back',
+								rotation: 'up',
+							},
+							bones: {
+								arm_r: 3,
+								arm_l: 3,
+								elbow_r: -153,
+								elbow_l: -153,
+							},
 						},
 					},
 				},
 				{
 					id: 'wide',
 					name: 'Wide',
-					poseLimits: {
-						arms: {
-							position: 'back',
-							rotation: 'up',
-						},
-						bones: {
-							arm_r: 17,
-							arm_l: 17,
-							elbow_r: -67,
-							elbow_l: -67,
+					properties: {
+						poseLimits: {
+							arms: {
+								position: 'back',
+								rotation: 'up',
+							},
+							bones: {
+								arm_r: 17,
+								arm_l: 17,
+								elbow_r: -67,
+								elbow_l: -67,
+							},
 						},
 					},
 				},

@@ -20,14 +20,14 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			occupiedEffects: {
+			occupiedProperties: {
 				blockAddRemove: true,
 			},
 		},
 		lockChain: {
 			type: 'lockSlot',
 			name: 'Lock for bar width',
-			occupiedEffects: {
+			occupiedProperties: {
 				blockModules: ['barWidth'],
 			},
 		},
@@ -39,34 +39,40 @@ DefineAsset({
 					id: 'normal',
 					name: 'Normal',
 					default: true,
-					poseLimits: {
-						bones: {
-							leg_r: -18,
-							leg_l: -18,
+					properties: {
+						poseLimits: {
+							bones: {
+								leg_r: -18,
+								leg_l: -18,
+							},
+							legs: 'standing',
 						},
-						legs: 'standing',
 					},
 				},
 				{
 					id: 'narrow',
 					name: 'Narrow',
-					poseLimits: {
-						bones: {
-							leg_r: -10,
-							leg_l: -10,
+					properties: {
+						poseLimits: {
+							bones: {
+								leg_r: -10,
+								leg_l: -10,
+							},
+							legs: 'standing',
 						},
-						legs: 'standing',
 					},
 				},
 				{
 					id: 'wide',
 					name: 'Wide',
-					poseLimits: {
-						bones: {
-							leg_r: -30,
-							leg_l: -30,
+					properties: {
+						poseLimits: {
+							bones: {
+								leg_r: -30,
+								leg_l: -30,
+							},
+							legs: 'standing',
 						},
-						legs: 'standing',
 					},
 				},
 			],

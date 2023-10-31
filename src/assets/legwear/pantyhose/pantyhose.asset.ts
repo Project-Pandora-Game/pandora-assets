@@ -22,10 +22,12 @@ DefineAsset({
 					id: 'normal',
 					name: 'Normal',
 					default: true,
-					blockSlots: ['vagina', 'anus'],
-					occupySlots: {
-						'outsideVaginaArea': 0.1,
-						'outsideAnusArea': 0.1,
+					properties: {
+						blockSlots: ['vagina', 'anus'],
+						occupySlots: {
+							'outsideVaginaArea': 0.1,
+							'outsideAnusArea': 0.1,
+						},
 					},
 				},
 				{

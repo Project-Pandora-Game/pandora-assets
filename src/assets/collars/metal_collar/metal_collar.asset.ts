@@ -22,7 +22,7 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			occupiedEffects: {
+			occupiedProperties: {
 				blockAddRemove: true,
 			},
 		},
@@ -38,9 +38,11 @@ DefineAsset({
 				{
 					id: 'ring',
 					name: 'Collar + Ring',
-					attributes: [
-						'Collar_front_ring',
-					],
+					properties: {
+						attributes: [
+							'Collar_front_ring',
+						],
+					},
 				},
 			],
 		},

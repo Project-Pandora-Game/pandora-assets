@@ -33,7 +33,7 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			occupiedEffects: {
+			occupiedProperties: {
 				blockAddRemove: true,
 			},
 		},
@@ -46,27 +46,33 @@ DefineAsset({
 					id: 'normal',
 					name: 'Normal',
 					default: true,
-					poseLimits: {
-						bones: {
-							tiptoeing: 30,
+					properties: {
+						poseLimits: {
+							bones: {
+								tiptoeing: 30,
+							},
 						},
 					},
 				},
 				{
 					id: 'high',
 					name: 'High',
-					poseLimits: {
-						bones: {
-							tiptoeing: 100,
+					properties: {
+						poseLimits: {
+							bones: {
+								tiptoeing: 100,
+							},
 						},
 					},
 				},
 				{
 					id: 'veryhigh',
 					name: 'Very High',
-					poseLimits: {
-						bones: {
-							tiptoeing: 160,
+					properties: {
+						poseLimits: {
+							bones: {
+								tiptoeing: 160,
+							},
 						},
 					},
 				},

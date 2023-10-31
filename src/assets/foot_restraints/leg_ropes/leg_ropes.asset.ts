@@ -21,34 +21,40 @@ DefineAsset({
 					id: 'basic',
 					name: 'Basic',
 					default: true,
-					poseLimits: {
-						bones: {
-							leg_r: 2,
-							leg_l: 2,
+					properties: {
+						poseLimits: {
+							bones: {
+								leg_r: 2,
+								leg_l: 2,
+							},
+							legs: 'standing',
 						},
-						legs: 'standing',
 					},
 				},
 				{
 					id: 'complex',
 					name: 'Complex',
-					poseLimits: {
-						bones: {
-							leg_r: 2,
-							leg_l: 2,
+					properties: {
+						poseLimits: {
+							bones: {
+								leg_r: 2,
+								leg_l: 2,
+							},
+							legs: 'standing',
 						},
-						legs: 'standing',
 					},
 				},
 				{
 					id: 'toes',
 					name: 'Complex with Toe Tie',
-					poseLimits: {
-						bones: {
-							leg_r: 2,
-							leg_l: 2,
+					properties: {
+						poseLimits: {
+							bones: {
+								leg_r: 2,
+								leg_l: 2,
+							},
+							legs: 'standing',
 						},
-						legs: 'standing',
 					},
 				},
 			],
