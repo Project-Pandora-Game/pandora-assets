@@ -31,6 +31,36 @@ DefineRoomDeviceAsset({
 			},
 		},
 	},
+	modules: {
+		door: {
+			type: 'typed',
+			name: 'Door',
+			variants: [
+				{
+					id: 'closed',
+					name: 'Closed',
+				},
+				{
+					id: 'open',
+					name: 'Open',
+					default: true,
+				},
+			],
+		},
+		lock: {
+			type: 'lockSlot',
+			name: 'Door lock',
+			lockedProperties: {
+				blockModules: ['door'],
+			},
+		},
+		storage: {
+			type: 'storage',
+			name: `Cage's floor`,
+			maxAcceptedSize: 'large',
+			maxCount: 2,
+		},
+	},
 	pivot: {
 		x: 950,
 		y: 1330,
@@ -52,6 +82,20 @@ DefineRoomDeviceAsset({
 		{
 			type: 'sprite',
 			image: 'small_cage_door.png',
+			imageOverrides: [
+				{
+					image: 'small_cage_dooropen.png',
+					condition: [
+						[
+							{
+								module: 'door',
+								operator: '=',
+								value: 'open',
+							},
+						],
+					],
+				},
+			],
 			colorizationKey: 'cage_door',
 		},
 	],
