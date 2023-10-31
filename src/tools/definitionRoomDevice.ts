@@ -41,6 +41,7 @@ const ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'name',
 	'size',
 	'chat',
+	'modules',
 	'staticAttributes',
 	'posePresets',
 
