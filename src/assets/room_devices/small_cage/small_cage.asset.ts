@@ -9,7 +9,6 @@ DefineRoomDeviceAsset({
 		cage_door: {
 			name: 'Cage door',
 			default: '#ffffff',
-			minAlpha: 0,
 		},
 	},
 	slots: {
