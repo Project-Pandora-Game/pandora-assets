@@ -38,6 +38,9 @@ DefineRoomDeviceAsset({
 				{
 					id: 'closed',
 					name: 'Closed',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot'],
+					},
 				},
 				{
 					id: 'open',
