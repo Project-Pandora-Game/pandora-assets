@@ -60,7 +60,7 @@ DefineRoomDeviceAsset({
 	modules: {
 		ropes_left: {
 			type: 'typed',
-			name: 'Bed ropes left',
+			name: 'Bed ropes - left side',
 			variants: [
 				{
 					id: 'none',
@@ -141,7 +141,7 @@ DefineRoomDeviceAsset({
 		},
 		ropes_right: {
 			type: 'typed',
-			name: 'Bed ropes right',
+			name: 'Bed ropes - right side',
 			variants: [
 				{
 					id: 'none',
