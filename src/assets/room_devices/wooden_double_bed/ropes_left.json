@@ -11,8 +11,28 @@
 			"mirror": 0,
 			"colorizationKey": "ropes_left",
 			"image": {
-				"image": "ropes_bottom_left.png",
-				"overrides": []
+				"image": "",
+				"overrides": [
+					{
+						"image": "ropes_bottom_left.png",
+						"condition": [
+							[
+								{
+									"module": "ropes_left",
+									"operator": "=",
+									"value": "tied_legs"
+								}
+							],
+							[
+								{
+									"module": "ropes_left",
+									"operator": "=",
+									"value": "tied_both"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "Ankles rope"
 		},
@@ -26,8 +46,28 @@
 			"mirror": 0,
 			"colorizationKey": "ropes_left",
 			"image": {
-				"image": "ankles_left.png",
-				"overrides": []
+				"image": "",
+				"overrides": [
+					{
+						"image": "ankles_left.png",
+						"condition": [
+							[
+								{
+									"module": "ropes_left",
+									"operator": "=",
+									"value": "tied_legs"
+								}
+							],
+							[
+								{
+									"module": "ropes_left",
+									"operator": "=",
+									"value": "tied_both"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "Ankles wrap"
 		},
@@ -41,8 +81,28 @@
 			"mirror": 0,
 			"colorizationKey": "ropes_left",
 			"image": {
-				"image": "ropes_top_left.png",
-				"overrides": []
+				"image": "",
+				"overrides": [
+					{
+						"image": "ropes_top_left.png",
+						"condition": [
+							[
+								{
+									"module": "ropes_left",
+									"operator": "=",
+									"value": "tied_arms"
+								}
+							],
+							[
+								{
+									"module": "ropes_left",
+									"operator": "=",
+									"value": "tied_both"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "Wrists rope"
 		},
@@ -56,8 +116,28 @@
 			"mirror": 0,
 			"colorizationKey": "ropes_left",
 			"image": {
-				"image": "wrists_left.png",
-				"overrides": []
+				"image": "",
+				"overrides": [
+					{
+						"image": "wrists_left.png",
+						"condition": [
+							[
+								{
+									"module": "ropes_left",
+									"operator": "=",
+									"value": "tied_arms"
+								}
+							],
+							[
+								{
+									"module": "ropes_left",
+									"operator": "=",
+									"value": "tied_both"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "Wrists wrap"
 		}

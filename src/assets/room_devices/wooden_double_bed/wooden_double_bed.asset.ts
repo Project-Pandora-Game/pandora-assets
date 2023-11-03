@@ -32,6 +32,7 @@ DefineRoomDeviceAsset({
 				poseLimits: {
 					legs: ['standing', 'kneeling'],
 				},
+				graphics: 'ropes_left.json',
 			},
 		},
 		character_slot_middle: {
@@ -52,53 +53,172 @@ DefineRoomDeviceAsset({
 				poseLimits: {
 					legs: ['standing', 'kneeling'],
 				},
-			},
-		},
-		character_slot_left_tied: {
-			name: 'Tied to bed - left side',
-			asset: {
-				name: 'Tied to bed left side',
-				size: 'huge',
-				poseLimits: {
-					bones: {
-						arm_l: -25,
-						arm_r: -27,
-						elbow_l: -60,
-						elbow_r: -58,
-						leg_r: -18,
-						leg_l: -18,
-					},
-					legs: 'standing',
-				},
-				effects: {
-					blockHands: true,
-					blockRoomLeave: true,
-				},
-				graphics: 'ropes_left.json',
-			},
-		},
-		character_slot_right_tied: {
-			name: 'Tied to bed - right side',
-			asset: {
-				name: 'Tied to bed right side',
-				size: 'huge',
-				poseLimits: {
-					bones: {
-						arm_l: -25,
-						arm_r: -25,
-						elbow_l: -60,
-						elbow_r: -60,
-						leg_r: -18,
-						leg_l: -18,
-					},
-					legs: 'standing',
-				},
-				effects: {
-					blockHands: true,
-					blockRoomLeave: true,
-				},
 				graphics: 'ropes_right.json',
 			},
+		},
+	},
+	modules: {
+		ropes_left: {
+			type: 'typed',
+			name: 'Bed ropes left',
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'tied_legs',
+					name: 'Tied (Legs)',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_left'],
+						slotProperties: {
+							character_slot_left: {
+								poseLimits: {
+									bones: {
+										leg_r: -18,
+										leg_l: -18,
+									},
+									legs: 'standing',
+								},
+								effects: {
+									blockRoomLeave: true,
+								},
+							},
+						},
+					},
+				},
+				{
+					id: 'tied_arms',
+					name: 'Tied (Arms)',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_left'],
+						slotProperties: {
+							character_slot_left: {
+								poseLimits: {
+									bones: {
+										arm_l: -25,
+										arm_r: -27,
+										elbow_l: -60,
+										elbow_r: -58,
+									},
+								},
+								effects: {
+									blockHands: true,
+									blockRoomLeave: true,
+								},
+							},
+						},
+					},
+				},
+				{
+					id: 'tied_both',
+					name: 'Tied (Legs+Arms)',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_left'],
+						slotProperties: {
+							character_slot_left: {
+								poseLimits: {
+									bones: {
+										arm_l: -25,
+										arm_r: -27,
+										elbow_l: -60,
+										elbow_r: -58,
+										leg_r: -18,
+										leg_l: -18,
+									},
+									legs: 'standing',
+								},
+								effects: {
+									blockHands: true,
+									blockRoomLeave: true,
+								},
+							},
+						},
+					},
+				},
+			],
+		},
+		ropes_right: {
+			type: 'typed',
+			name: 'Bed ropes right',
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'tied_legs',
+					name: 'Tied (Legs)',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_right'],
+						slotProperties: {
+							character_slot_right: {
+								poseLimits: {
+									bones: {
+										leg_r: -18,
+										leg_l: -18,
+									},
+									legs: 'standing',
+								},
+								effects: {
+									blockRoomLeave: true,
+								},
+							},
+						},
+					},
+				},
+				{
+					id: 'tied_arms',
+					name: 'Tied (Arms)',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_right'],
+						slotProperties: {
+							character_slot_right: {
+								poseLimits: {
+									bones: {
+										arm_l: -25,
+										arm_r: -25,
+										elbow_l: -60,
+										elbow_r: -60,
+									},
+								},
+								effects: {
+									blockHands: true,
+									blockRoomLeave: true,
+								},
+							},
+						},
+					},
+				},
+				{
+					id: 'tied_both',
+					name: 'Tied (Legs+Arms)',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_right'],
+						slotProperties: {
+							character_slot_right: {
+								poseLimits: {
+									bones: {
+										arm_l: -25,
+										arm_r: -25,
+										elbow_l: -60,
+										elbow_r: -60,
+										leg_r: -18,
+										leg_l: -18,
+									},
+									legs: 'standing',
+								},
+								effects: {
+									blockHands: true,
+									blockRoomLeave: true,
+								},
+							},
+						},
+					},
+				},
+			],
 		},
 	},
 	pivot: {
@@ -123,28 +243,11 @@ DefineRoomDeviceAsset({
 		},
 		{
 			type: 'slot',
-			slot: 'character_slot_left_tied',
+			slot: 'character_slot_left',
 			characterPosition: {
 				offsetX: -288,
 				offsetY: -180,
 				disablePoseOffset: true,
-			},
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot_right_tied',
-			characterPosition: {
-				offsetX: 288,
-				offsetY: -180,
-				disablePoseOffset: true,
-			},
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot_left',
-			characterPosition: {
-				offsetX: -284,
-				offsetY: -180,
 			},
 		},
 		{
@@ -159,8 +262,9 @@ DefineRoomDeviceAsset({
 			type: 'slot',
 			slot: 'character_slot_right',
 			characterPosition: {
-				offsetX: 284,
-				offsetY: -160,
+				offsetX: 288,
+				offsetY: -180,
+				disablePoseOffset: true,
 			},
 		},
 	],
