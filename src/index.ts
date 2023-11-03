@@ -129,8 +129,7 @@ async function Run() {
 				delete require.cache[require.resolve(moduleName)];
 				await require(moduleName);
 			} catch (error) {
-				logger.fatal(`Error while importing assets/${category}/${asset}\n`, error);
-				process.exit(1);
+				logger.error(`Error while importing assets/${category}/${asset}\n`, error);
 			}
 		}
 	}
