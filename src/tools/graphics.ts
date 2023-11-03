@@ -14,7 +14,7 @@ import { GraphicsDatabase } from './graphicsDatabase';
 import { WatchFile } from './watch';
 import { z } from 'zod';
 
-export function LoadAssetsGraphics(path: string, assetModules: string[]): AssetGraphicsDefinition {
+export function LoadAssetsGraphics(path: string, assetModules: readonly string[]): AssetGraphicsDefinition {
 	WatchFile(path);
 
 	const definition = JSON.parse(

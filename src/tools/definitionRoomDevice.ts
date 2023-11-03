@@ -54,7 +54,7 @@ const ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES = [
 
 export type AssetRoomDeviceDefinitionFallthroughProperties = (typeof ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES)[number] & string;
 
-function DefineRoomDeviceWearablePart(baseId: AssetId, slot: string, def: IntermediateRoomDeviceWearablePartDefinition, colorizationKeys: ReadonlySet<string>): AssetId | null {
+function DefineRoomDeviceWearablePart(baseId: AssetId, slot: string, def: IntermediateRoomDeviceWearablePartDefinition, colorizationKeys: ReadonlySet<string>, assetModules: readonly string[]): AssetId | null {
 	const id: AssetId = `${baseId}/${slot}` as const;
 
 	const logger = GetLogger('RoomDeviceWearablePart', `[Asset ${id}]`);
@@ -90,7 +90,7 @@ function DefineRoomDeviceWearablePart(baseId: AssetId, slot: string, def: Interm
 
 	// Load and verify graphics
 	if (def.graphics) {
-		const graphics = LoadAssetsGraphics(join(AssetSourcePath, def.graphics), [/** TODO device modules */]);
+		const graphics = LoadAssetsGraphics(join(AssetSourcePath, def.graphics), assetModules);
 
 		const loggerGraphics = logger.prefixMessages('[Graphics]');
 
@@ -126,7 +126,7 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 	for (const [k, v] of Object.entries(def.slots)) {
 		slotIds.add(k);
 
-		const slotWearableId = DefineRoomDeviceWearablePart(id, k, v.asset, colorizationKeys);
+		const slotWearableId = DefineRoomDeviceWearablePart(id, k, v.asset, colorizationKeys, Object.keys(def.modules ?? {}));
 		if (slotWearableId == null) {
 			definitionValid = false;
 			logger.error(`Failed to process asset for slot '${k}'`);
