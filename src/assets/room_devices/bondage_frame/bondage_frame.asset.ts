@@ -219,6 +219,31 @@ DefineRoomDeviceAsset({
 				offsetY: 40,
 				disablePoseOffset: true,
 			},
+			characterPositionOverrides: [
+				{
+					position: {
+						offsetX: 0,
+						offsetY: -225,
+						disablePoseOffset: true,
+					},
+					condition: [
+						[
+							{
+								module: 'chains',
+								operator: '=',
+								value: 'hanging',
+							},
+						],
+						[
+							{
+								module: 'chains',
+								operator: '=',
+								value: 'hanging_and_legs',
+							},
+						],
+					],
+				},
+			],
 		},
 	],
 	ownership: {
