@@ -1,4 +1,4 @@
-import { AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceWearablePartAssetDefinition } from 'pandora-common';
+import { AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition } from 'pandora-common';
 import { AssetDatabase } from './assetDatabase';
 import { AssetSourcePath, DefaultId } from './context';
 import { LoadAssetsGraphics } from './graphics';
@@ -6,9 +6,11 @@ import { GraphicsDatabase } from './graphicsDatabase';
 import { join } from 'path';
 import { pick } from 'lodash';
 import { DefinePngResource } from './resources';
-import { ValidateAssetDefinitionPoseLimits } from './definition';
 import { LoadRoomDeviceColorization } from './load_helpers/color';
 import { ValidateOwnershipData } from './licensing';
+import { ValidateAssetProperties } from './validation/properties';
+import { ValidateAllModules } from './validation/modules';
+import { RoomDevicePropertiesValidationMetadata, ValidateRoomDeviceProperties } from './validation/roomDeviceProperties';
 
 const ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Properties
@@ -54,7 +56,13 @@ const ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES = [
 
 export type AssetRoomDeviceDefinitionFallthroughProperties = (typeof ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES)[number] & string;
 
-function DefineRoomDeviceWearablePart(baseId: AssetId, slot: string, def: IntermediateRoomDeviceWearablePartDefinition, colorizationKeys: ReadonlySet<string>, assetModules: readonly string[]): AssetId | null {
+function DefineRoomDeviceWearablePart(
+	baseId: AssetId,
+	slot: string,
+	def: IntermediateRoomDeviceWearablePartDefinition,
+	colorizationKeys: ReadonlySet<string>,
+	propertiesValidationMetadata: RoomDevicePropertiesValidationMetadata,
+): AssetId | null {
 	const id: AssetId = `${baseId}/${slot}` as const;
 
 	const logger = GetLogger('RoomDeviceWearablePart', `[Asset ${id}]`);
@@ -66,9 +74,7 @@ function DefineRoomDeviceWearablePart(baseId: AssetId, slot: string, def: Interm
 		logger.error(`Invalid size: Only bodyparts can use the 'bodypart' size`);
 	}
 
-	if (def.poseLimits) {
-		ValidateAssetDefinitionPoseLimits(logger, 'poseLimits', def.poseLimits);
-	}
+	ValidateAssetProperties(logger, '#', propertiesValidationMetadata, def);
 
 	if (!definitionValid) {
 		logger.error('Invalid asset definition, asset skipped');
@@ -90,7 +96,7 @@ function DefineRoomDeviceWearablePart(baseId: AssetId, slot: string, def: Interm
 
 	// Load and verify graphics
 	if (def.graphics) {
-		const graphics = LoadAssetsGraphics(join(AssetSourcePath, def.graphics), assetModules);
+		const graphics = LoadAssetsGraphics(join(AssetSourcePath, def.graphics), propertiesValidationMetadata.getModuleNames());
 
 		const loggerGraphics = logger.prefixMessages('[Graphics]');
 
@@ -121,12 +127,23 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 
 	const colorizationKeys = new Set<string>(Object.keys(def.colorization ?? {}));
 
+	const propertiesValidationMetadata: RoomDevicePropertiesValidationMetadata = {
+		getModuleNames: () => Object.keys(def.modules ?? {}),
+		getSlotNames: () => Object.keys(def.slots),
+	};
+
+	// Validate all modules
+	ValidateAllModules<RoomDeviceProperties<AssetRepoExtraArgs>, RoomDevicePropertiesValidationMetadata>(logger, '#.modules', {
+		validateProperties: ValidateRoomDeviceProperties,
+		propertiesValidationMetadata,
+	}, def.modules);
+
 	//#region Load slots
 
 	for (const [k, v] of Object.entries(def.slots)) {
 		slotIds.add(k);
 
-		const slotWearableId = DefineRoomDeviceWearablePart(id, k, v.asset, colorizationKeys, Object.keys(def.modules ?? {}));
+		const slotWearableId = DefineRoomDeviceWearablePart(id, k, v.asset, colorizationKeys, propertiesValidationMetadata);
 		if (slotWearableId == null) {
 			definitionValid = false;
 			logger.error(`Failed to process asset for slot '${k}'`);
