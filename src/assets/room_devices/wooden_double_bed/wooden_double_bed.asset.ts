@@ -81,9 +81,6 @@ DefineRoomDeviceAsset({
 									},
 									legs: 'standing',
 								},
-								effects: {
-									blockRoomLeave: true,
-								},
 							},
 						},
 					},
@@ -105,7 +102,6 @@ DefineRoomDeviceAsset({
 								},
 								effects: {
 									blockHands: true,
-									blockRoomLeave: true,
 								},
 							},
 						},
@@ -113,7 +109,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'tied_both',
-					name: 'Tied (Legs+Arms)',
+					name: 'Tied (Legs & Arms)',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_left'],
 						slotProperties: {
@@ -131,7 +127,6 @@ DefineRoomDeviceAsset({
 								},
 								effects: {
 									blockHands: true,
-									blockRoomLeave: true,
 								},
 							},
 						},
@@ -162,9 +157,6 @@ DefineRoomDeviceAsset({
 									},
 									legs: 'standing',
 								},
-								effects: {
-									blockRoomLeave: true,
-								},
 							},
 						},
 					},
@@ -186,7 +178,6 @@ DefineRoomDeviceAsset({
 								},
 								effects: {
 									blockHands: true,
-									blockRoomLeave: true,
 								},
 							},
 						},
@@ -212,7 +203,6 @@ DefineRoomDeviceAsset({
 								},
 								effects: {
 									blockHands: true,
-									blockRoomLeave: true,
 								},
 							},
 						},

@@ -24,9 +24,6 @@ DefineRoomDeviceAsset({
 					},
 					legs: 'kneeling',
 				},
-				effects: {
-					blockRoomLeave: true,
-				},
 			},
 		},
 	},
