@@ -172,6 +172,8 @@ async function Run() {
 }
 
 if (process.argv.includes('--watch')) {
+	// Reduce verbosity during watch to make errors more visible
+	SetConsoleOutput(LogLevel.INFO);
 	RunDev(Run).catch((error) => {
 		logger.fatal('Error starting dev server:\n', error);
 		process.exit(2);
