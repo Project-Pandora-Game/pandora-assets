@@ -70,6 +70,25 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		size: {
+			type: 'typed',
+			name: 'Frame size',
+			variants: [
+				{
+					id: 'large',
+					name: 'Large',
+					default: true,
+				},
+				{
+					id: 'medium',
+					name: 'Medium',
+				},
+				{
+					id: 'small',
+					name: 'Small',
+				},
+			],
+		},
 	},
 	pivot: {
 		x: 700,
@@ -78,8 +97,59 @@ DefineRoomDeviceAsset({
 	graphicsLayers: [
 		{
 			type: 'sprite',
-			image: 'pandora.png',
+			image: '',
 			imageOverrides: [
+				{
+					image: 'pandora.png',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'pandora',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+					],
+				},
+				{
+					image: 'pandora.png@700x1000',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'pandora',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'medium',
+							},
+						],
+					],
+				},
+				{
+					image: 'pandora.png@350x500',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'pandora',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+					],
+				},
 				{
 					image: 'mistress.png',
 					condition: [
@@ -88,6 +158,45 @@ DefineRoomDeviceAsset({
 								module: 'picture',
 								operator: '=',
 								value: 'mistress',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+					],
+				},
+				{
+					image: 'mistress.png@700x1000',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'mistress',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'medium',
+							},
+						],
+					],
+				},
+				{
+					image: 'mistress.png@350x500',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'mistress',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
 							},
 						],
 					],
@@ -101,6 +210,45 @@ DefineRoomDeviceAsset({
 								operator: '=',
 								value: 'heel',
 							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+					],
+				},
+				{
+					image: 'heel.png@700x1000',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'heel',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'medium',
+							},
+						],
+					],
+				},
+				{
+					image: 'heel.png@350x500',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'heel',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
 						],
 					],
 				},
@@ -112,6 +260,45 @@ DefineRoomDeviceAsset({
 								module: 'picture',
 								operator: '=',
 								value: 'fruit',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+					],
+				},
+				{
+					image: 'fruits.png@700x1000',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'fruit',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'medium',
+							},
+						],
+					],
+				},
+				{
+					image: 'fruits.png@350x500',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'fruit',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
 							},
 						],
 					],
@@ -125,6 +312,71 @@ DefineRoomDeviceAsset({
 								operator: '=',
 								value: 'anime1',
 							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+					],
+				},
+				{
+					image: 'anime.png@700x1000',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'anime1',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'medium',
+							},
+						],
+					],
+				},
+				{
+					image: 'anime.png@350x500',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'anime1',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+					],
+				},
+			],
+			offsetOverrides: [
+				{
+					offset: { x: 525, y: 300 },
+					condition: [
+						[
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+					],
+				},
+				{
+					offset: { x: 350, y: 150 },
+					condition: [
+						[
+							{
+								module: 'size',
+								operator: '=',
+								value: 'medium',
+							},
 						],
 					],
 				},
@@ -132,8 +384,59 @@ DefineRoomDeviceAsset({
 		},
 		{
 			type: 'sprite',
-			image: 'passepartout1.png',
+			image: '',
 			imageOverrides: [
+				{
+					image: 'passepartout1.png',
+					condition: [
+						[
+							{
+								module: 'pp',
+								operator: '=',
+								value: 'pp1',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+					],
+				},
+				{
+					image: 'passepartout1.png@700x1000',
+					condition: [
+						[
+							{
+								module: 'pp',
+								operator: '=',
+								value: 'pp1',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'medium',
+							},
+						],
+					],
+				},
+				{
+					image: 'passepartout1.png@350x500',
+					condition: [
+						[
+							{
+								module: 'pp',
+								operator: '=',
+								value: 'pp1',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+					],
+				},
 				{
 					image: 'passepartout2.png',
 					condition: [
@@ -143,6 +446,71 @@ DefineRoomDeviceAsset({
 								operator: '=',
 								value: 'pp2',
 							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+					],
+				},
+				{
+					image: 'passepartout2.png@700x1000',
+					condition: [
+						[
+							{
+								module: 'pp',
+								operator: '=',
+								value: 'pp2',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'medium',
+							},
+						],
+					],
+				},
+				{
+					image: 'passepartout2.png@350x500',
+					condition: [
+						[
+							{
+								module: 'pp',
+								operator: '=',
+								value: 'pp2',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+					],
+				},
+			],
+			offsetOverrides: [
+				{
+					offset: { x: 525, y: 300 },
+					condition: [
+						[
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+					],
+				},
+				{
+					offset: { x: 350, y: 150 },
+					condition: [
+						[
+							{
+								module: 'size',
+								operator: '=',
+								value: 'medium',
+							},
 						],
 					],
 				},
@@ -151,8 +519,59 @@ DefineRoomDeviceAsset({
 		},
 		{
 			type: 'sprite',
-			image: 'pictureframe1.png',
+			image: '',
 			imageOverrides: [
+				{
+					image: 'pictureframe1.png',
+					condition: [
+						[
+							{
+								module: 'frame',
+								operator: '=',
+								value: 'frame1',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+					],
+				},
+				{
+					image: 'pictureframe1.png@700x1000',
+					condition: [
+						[
+							{
+								module: 'frame',
+								operator: '=',
+								value: 'frame1',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'medium',
+							},
+						],
+					],
+				},
+				{
+					image: 'pictureframe1.png@350x500',
+					condition: [
+						[
+							{
+								module: 'frame',
+								operator: '=',
+								value: 'frame1',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+					],
+				},
 				{
 					image: 'pictureframe2.png',
 					condition: [
@@ -161,6 +580,71 @@ DefineRoomDeviceAsset({
 								module: 'frame',
 								operator: '=',
 								value: 'frame2',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+					],
+				},
+				{
+					image: 'pictureframe2.png@700x1000',
+					condition: [
+						[
+							{
+								module: 'frame',
+								operator: '=',
+								value: 'frame2',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'medium',
+							},
+						],
+					],
+				},
+				{
+					image: 'pictureframe2.png@350x500',
+					condition: [
+						[
+							{
+								module: 'frame',
+								operator: '=',
+								value: 'frame2',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+					],
+				},
+			],
+			offsetOverrides: [
+				{
+					offset: { x: 525, y: 300 },
+					condition: [
+						[
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+					],
+				},
+				{
+					offset: { x: 350, y: 150 },
+					condition: [
+						[
+							{
+								module: 'size',
+								operator: '=',
+								value: 'medium',
 							},
 						],
 					],
