@@ -1,4 +1,4 @@
-import { GetLogger } from 'pandora-common';
+import { Assert, GetLogger, SplitStringFirstOccurrence } from 'pandora-common';
 import { createHash } from 'crypto';
 import { readFileSync, statSync } from 'fs';
 import { writeFile, copyFile, unlink, readdir, stat } from 'fs/promises';
@@ -205,27 +205,47 @@ function CheckMaxSize(resource: Resource, name: string, category: ImageCategory)
 	}
 }
 
-export function DefinePngResource(name: string, category: ImageCategory): IImageResource {
-	if (!name.endsWith('.png')) {
+function ProcessImageResource(resource: IImageResource, args: string): string {
+	let resultName = resource.resultName;
+
+	if (args) {
+		const resizeMatch = /^(\d+)x(\d+)$/.exec(args);
+		if (resizeMatch) {
+			const sizeX = Number.parseInt(resizeMatch[1]);
+			const sizeY = Number.parseInt(resizeMatch[2]);
+			Assert(Number.isInteger(sizeX));
+			Assert(Number.isInteger(sizeY));
+
+			resultName = resource.addResizedImage(sizeX, sizeY, args);
+		} else {
+			throw new Error(`Invalid arguments '${args}' for resource.`);
+		}
+	}
+
+	return resultName;
+}
+
+export function DefinePngResource(name: string, category: ImageCategory): string {
+	const [baseName, args] = SplitStringFirstOccurrence(name, '@');
+
+	if (!baseName.endsWith('.png')) {
 		throw new Error(`Resource ${name} is not a PNG file.`);
 	}
 
-	const resource = new ImageResource(name, category);
+	const resource = new ImageResource(baseName, category);
 
-	logger.debug(`Registered resource ${resource.resultName}`);
-
-	return resource;
+	return ProcessImageResource(resource, args);
 }
 
-export function DefineJpgResource(name: string, category: ImageCategory): IImageResource {
-	if (!name.endsWith('.jpg')) {
+export function DefineJpgResource(name: string, category: ImageCategory): string {
+	const [baseName, args] = SplitStringFirstOccurrence(name, '@');
+
+	if (!baseName.endsWith('.jpg')) {
 		throw new Error(`Resource ${name} is not a JPG file.`);
 	}
-	const resource = new ImageResource(name, category);
+	const resource = new ImageResource(baseName, category);
 
-	logger.debug(`Registered resource ${resource.resultName}`);
-
-	return resource;
+	return ProcessImageResource(resource, args);
 }
 
 export function ClearAllResources(): void {

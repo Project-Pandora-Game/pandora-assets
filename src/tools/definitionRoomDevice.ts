@@ -174,11 +174,11 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 
 	def.graphicsLayers.forEach((layer, index) => {
 		if (layer.type === 'sprite') {
-			layer.image = layer.image && DefinePngResource(layer.image, 'roomDevice').resultName;
+			layer.image = layer.image && DefinePngResource(layer.image, 'roomDevice');
 			layer.imageOverrides = layer.imageOverrides
 				?.map((override) => ({
 					...override,
-					image: override.image && DefinePngResource(override.image, 'roomDevice').resultName,
+					image: override.image && DefinePngResource(override.image, 'roomDevice'),
 				}));
 
 			if (layer.colorizationKey != null && !colorizationKeys.has(layer.colorizationKey)) {
