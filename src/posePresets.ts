@@ -297,6 +297,22 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					},
 				},
 				{
+					name: 'Fists touching',
+					bones: {
+						arm_r: 38,
+						arm_l: 37,
+						elbow_r: 135,
+						elbow_l: 136,
+					},
+					optional: {
+						arms: {
+							position: 'front',
+							rotation: 'backward',
+							fingers: 'fist',
+						},
+					},
+				},
+				{
 					name: 'Touching sex 1',
 					bones: {
 						arm_r: 66,
@@ -476,28 +492,29 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 			category: 'Arms (spread)',
 			poses: [
 				{
-					name: 'Up',
+					name: 'Up and touching',
 					bones: {
-						arm_r: -70,
-						arm_l: -70,
-						elbow_r: -20,
-						elbow_l: -20,
+						arm_r: -74,
+						arm_l: -74,
+						elbow_r: -43,
+						elbow_l: -43,
 					},
 					optional: {
 						arms: {
 							position: 'front',
 							rotation: 'up',
 							fingers: 'spread',
+
 						},
 					},
 				},
 				{
-					name: 'Up/touching',
+					name: 'Raised high',
 					bones: {
-						arm_r: -74,
-						arm_l: -74,
-						elbow_r: -43,
-						elbow_l: -43,
+						arm_r: -70,
+						arm_l: -70,
+						elbow_r: -20,
+						elbow_l: -20,
 					},
 					optional: {
 						arms: {
@@ -514,6 +531,22 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						arm_l: -25,
 						elbow_r: -60,
 						elbow_l: -60,
+					},
+					optional: {
+						arms: {
+							position: 'front',
+							rotation: 'up',
+							fingers: 'spread',
+						},
+					},
+				},
+				{
+					name: 'Raised slightly',
+					bones: {
+						arm_r: 66,
+						arm_l: 66,
+						elbow_r: -150,
+						elbow_l: -150,
 					},
 					optional: {
 						arms: {
