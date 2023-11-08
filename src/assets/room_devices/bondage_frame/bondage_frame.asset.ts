@@ -4,7 +4,7 @@ DefineRoomDeviceAsset({
 	colorization: {
 		frame: {
 			name: 'Frame',
-			default: '#A9A6A9',
+			default: '#924A2D',
 		},
 		sockets: {
 			name: 'Sockets',
@@ -12,11 +12,11 @@ DefineRoomDeviceAsset({
 		},
 		rings: {
 			name: 'Rings',
-			default: '#BCBCBC',
+			default: '#4F4F4F',
 		},
 		chains: {
 			name: 'Chains',
-			default: '#E7E7E7',
+			default: '#FE5D5D',
 		},
 	},
 	slots: {
@@ -131,7 +131,7 @@ DefineRoomDeviceAsset({
 	},
 	pivot: {
 		x: 700,
-		y: 1770,
+		y: 1800,
 	},
 	graphicsLayers: [
 		{
@@ -216,14 +216,14 @@ DefineRoomDeviceAsset({
 			slot: 'character_slot',
 			characterPosition: {
 				offsetX: 0,
-				offsetY: 40,
+				offsetY: 10,
 				disablePoseOffset: true,
 			},
 			characterPositionOverrides: [
 				{
 					position: {
 						offsetX: 0,
-						offsetY: -225,
+						offsetY: -255,
 						disablePoseOffset: true,
 					},
 					condition: [
