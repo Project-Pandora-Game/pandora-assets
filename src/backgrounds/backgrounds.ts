@@ -1136,6 +1136,30 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 			],
 		},
 	},
+	{
+		id: 'stone_room_large',
+		name: 'Stone room (large)',
+		image: 'stone_room_large.jpg',
+		size: [2150, 1537],
+		maxY: 930,
+		scaling: 1.18,
+		tags: ['inside', 'dungeon', 'day', 'space_large'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/96511847@N04/9200424573/',
+					copyrightHolder: 'Miki',
+					license: 'Public Domain',
+				},
+				{
+					source: 'https://www.flickr.com/photos/mikec2/4644991529/',
+					copyrightHolder: 'Image Nation',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
 ];
 
 export function LoadBackgroundTags() {
