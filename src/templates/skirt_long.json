@@ -1302,6 +1302,7 @@
 			495
 		],
 		"mirror": false,
+		"pointType": "body_l",
 		"transforms": [
 			{
 				"type": "shift",
@@ -1328,6 +1329,7 @@
 			535
 		],
 		"mirror": true,
+		"pointType": "body_l",
 		"transforms": [
 			{
 				"type": "shift",
@@ -1371,6 +1373,7 @@
 			545
 		],
 		"mirror": true,
+		"pointType": "body_l",
 		"transforms": [
 			{
 				"type": "shift",
@@ -1431,6 +1434,7 @@
 			761
 		],
 		"mirror": false,
+		"pointType": "body",
 		"transforms": [
 			{
 				"type": "shift",
@@ -1456,6 +1460,7 @@
 			1400
 		],
 		"mirror": true,
+		"pointType": "body_l",
 		"transforms": [
 			{
 				"type": "rotate",
@@ -1670,6 +1675,7 @@
 			1400
 		],
 		"mirror": false,
+		"pointType": "body",
 		"transforms": [
 			{
 				"type": "shift",
@@ -1727,6 +1733,7 @@
 			1400
 		],
 		"mirror": true,
+		"pointType": "body_l",
 		"transforms": [
 			{
 				"type": "rotate",

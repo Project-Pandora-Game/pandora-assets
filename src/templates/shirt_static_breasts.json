@@ -1897,6 +1897,7 @@
 			495
 		],
 		"mirror": true,
+		"pointType": "body_l",
 		"transforms": []
 	},
 	{
@@ -1905,6 +1906,7 @@
 			535
 		],
 		"mirror": true,
+		"pointType": "body_l",
 		"transforms": [
 			{
 				"type": "shift",
@@ -1931,6 +1933,7 @@
 			545
 		],
 		"mirror": true,
+		"pointType": "body_l",
 		"transforms": [
 			{
 				"type": "shift",
