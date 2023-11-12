@@ -7,15 +7,17 @@ import { WatchFile } from '../tools/watch';
 
 const templateList: string[] = [
 	'static',
-	'bra',
 	'body',
 	'breast_toy',
 	'breasts',
 	'handheld',
 	'horizontal_limbs_width',
 	'shirt',
+	'shirt_static_breasts',
 	'skirt_short',
+	'skirt_short_static_breasts',
 	'skirt_long',
+	'skirt_long_static_breasts',
 ];
 
 export function LoadTemplates() {
