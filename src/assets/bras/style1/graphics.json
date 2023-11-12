@@ -8,11 +8,11 @@
 			"height": 1500,
 			"name": "bra breasts",
 			"priority": "BREASTS",
-			"points": "bra",
+			"points": "shirt_static_breasts",
 			"mirror": 0,
 			"colorizationKey": "bra",
 			"image": {
-				"image": "bra_front.png",
+				"image": "bra_front_extreme.png",
 				"overrides": [
 					{
 						"image": "",
@@ -22,6 +22,54 @@
 									"bone": "breasts",
 									"operator": "<=",
 									"value": -170
+								}
+							]
+						]
+					},
+					{
+						"image": "bra_front_small.png",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -150
+								}
+							]
+						]
+					},
+					{
+						"image": "bra_front_medium.png",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -70
+								}
+							]
+						]
+					},
+					{
+						"image": "bra_front_large.png",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "bra_front_huge.png",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": 100
 								}
 							]
 						]
@@ -36,11 +84,11 @@
 			"height": 1500,
 			"name": "bra breasts behind",
 			"priority": "BELOW_BREASTS",
-			"points": "bra",
+			"points": "shirt_static_breasts",
 			"mirror": 0,
 			"colorizationKey": "bra",
 			"image": {
-				"image": "bra_breasts_2.png",
+				"image": "bra_front_extreme.png",
 				"overrides": [
 					{
 						"image": "",
@@ -53,6 +101,54 @@
 								}
 							]
 						]
+					},
+					{
+						"image": "bra_front_small.png",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -150
+								}
+							]
+						]
+					},
+					{
+						"image": "bra_front_medium.png",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -70
+								}
+							]
+						]
+					},
+					{
+						"image": "bra_front_large.png",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "bra_front_huge.png",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": 100
+								}
+							]
+						]
 					}
 				]
 			}
@@ -62,143 +158,13 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"name": "bra base back view",
+			"name": "bra back view",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "bra",
 			"image": {
-				"image": "bra_base_back.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": -170
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"name": "bra straps back view",
-			"priority": "BELOW_BODY",
-			"colorizationKey": "bra",
-			"points": [
-				{
-					"pos": [
-						562,
-						403
-					],
-					"mirror": true,
-					"transforms": [
-						{
-							"type": "shift",
-							"bone": "breasts",
-							"value": {
-								"x": 1,
-								"y": 0
-							}
-						},
-						{
-							"type": "shift",
-							"bone": "arm_width",
-							"value": {
-								"x": 0,
-								"y": -4
-							}
-						},
-						{
-							"type": "rotate",
-							"bone": "arm_l",
-							"value": 0.03
-						}
-					],
-					"pointType": "brabackstraps"
-				},
-				{
-					"pos": [
-						550,
-						401
-					],
-					"mirror": true,
-					"transforms": [
-						{
-							"type": "shift",
-							"bone": "breasts",
-							"value": {
-								"x": -1,
-								"y": 0
-							}
-						},
-						{
-							"type": "shift",
-							"bone": "arm_width",
-							"value": {
-								"x": 0,
-								"y": -4
-							}
-						},
-						{
-							"type": "rotate",
-							"bone": "arm_l",
-							"value": 0.02
-						}
-					],
-					"pointType": "brabackstraps"
-				},
-				{
-					"pos": [
-						551,
-						530
-					],
-					"mirror": true,
-					"transforms": [
-						{
-							"type": "shift",
-							"bone": "waist",
-							"value": {
-								"x": 6,
-								"y": 0.2
-							}
-						}
-					],
-					"pointType": "brabackstraps"
-				},
-				{
-					"pos": [
-						540,
-						528
-					],
-					"mirror": true,
-					"transforms": [
-						{
-							"type": "shift",
-							"bone": "waist",
-							"value": {
-								"x": 6,
-								"y": 0.2
-							}
-						}
-					],
-					"pointType": "brabackstraps"
-				}
-			],
-			"pointType": [
-				"brabackstraps"
-			],
-			"mirror": 0,
-			"image": {
-				"image": "bra_straps_back.png",
+				"image": "bra_back.png",
 				"overrides": [
 					{
 						"image": "",
