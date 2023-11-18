@@ -27,11 +27,12 @@ DefineRoomDeviceAsset({
 						arm_r: [[74, 82]],
 						elbow_l: [[22, 109]],
 						elbow_r: [[22, 109]],
-						leg_r: [[-10, 30]],
-						leg_l: [[-10, 30]],
+						leg_r: [[-10, 10]],
+						leg_l: [[-10, 10]],
 						character_rotation: 90,
 					},
 					legs: 'kneeling',
+					view: 'front',
 				},
 			},
 		},
@@ -44,6 +45,7 @@ DefineRoomDeviceAsset({
 					bones: {
 						leg_r: [[-30, 10]],
 						leg_l: [[-30, 10]],
+						character_rotation: 0,
 					},
 					legs: 'sitting',
 					view: 'front',
@@ -59,6 +61,7 @@ DefineRoomDeviceAsset({
 					bones: {
 						leg_r: [[-30, 10]],
 						leg_l: [[-30, 10]],
+						character_rotation: 0,
 					},
 					legs: 'sitting',
 					view: 'front',
@@ -74,6 +77,7 @@ DefineRoomDeviceAsset({
 					bones: {
 						leg_r: [[-30, 10]],
 						leg_l: [[-30, 10]],
+						character_rotation: 0,
 					},
 					legs: 'sitting',
 					view: 'front',

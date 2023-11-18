@@ -21,7 +21,7 @@ DefineRoomDeviceAsset({
 	},
 	slots: {
 		character_slot: {
-			name: 'Frame',
+			name: 'Under the frame',
 			asset: {
 				name: 'Bondage Frame',
 				size: 'huge',
@@ -38,8 +38,21 @@ DefineRoomDeviceAsset({
 			variants: [
 				{
 					id: 'none',
-					name: 'Not used',
+					name: 'Not attached',
 					default: true,
+					properties: {
+						slotProperties: {
+							character_slot: {
+								poseLimits: {
+									bones: {
+										leg_r: [[-18, 10]],
+										leg_l: [[-18, 10]],
+										character_rotation: 0,
+									},
+								},
+							},
+						},
+					},
 				},
 				{
 					id: 'standing',
@@ -54,6 +67,7 @@ DefineRoomDeviceAsset({
 										arm_r: -70,
 										elbow_l: -20,
 										elbow_r: -20,
+										character_rotation: 0,
 									},
 								},
 								effects: {
@@ -79,6 +93,7 @@ DefineRoomDeviceAsset({
 										arm_r: -70,
 										elbow_l: -20,
 										elbow_r: -20,
+										character_rotation: 0,
 									},
 								},
 								effects: {
@@ -106,6 +121,7 @@ DefineRoomDeviceAsset({
 										elbow_r: -20,
 										leg_r: -30,
 										leg_l: -30,
+										character_rotation: 0,
 									},
 								},
 								effects: {
@@ -121,11 +137,44 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		position: {
+			type: 'typed',
+			name: 'Chained position',
+			variants: [
+				{
+					id: 'front',
+					name: 'Front-facing',
+					default: true,
+					properties: {
+						slotProperties: {
+							character_slot: {
+								poseLimits: {
+									view: 'front',
+								},
+							},
+						},
+					},
+				},
+				{
+					id: 'back',
+					name: 'Back-facing',
+					properties: {
+						slotProperties: {
+							character_slot: {
+								poseLimits: {
+									view: 'back',
+								},
+							},
+						},
+					},
+				},
+			],
+		},
 		lock: {
 			type: 'lockSlot',
 			name: 'Chain locks',
 			lockedProperties: {
-				blockModules: ['chains'],
+				blockModules: ['chains', 'position'],
 			},
 		},
 	},

@@ -20,29 +20,109 @@ DefineRoomDeviceAsset({
 		},
 	},
 	slots: {
-		character_tied: {
-			name: 'Chained to bondage cross',
+		character_slot: {
+			name: 'In front of the cross',
 			asset: {
-				name: 'Chained to bondage cross',
+				name: 'Bondage cross',
 				size: 'huge',
 				poseLimits: {
-					bones: {
-						arm_l: -44,
-						arm_r: -44,
-						elbow_l: -21,
-						elbow_r: -21,
-						leg_r: -29.8,
-						leg_l: -29.6,
-					},
 					legs: 'standing',
 				},
-				requirements: [
-					'Wrist_cuffs',
-					'Ankle_cuffs',
-				],
-				effects: {
-					blockHands: true,
+			},
+		},
+	},
+	modules: {
+		chains: {
+			type: 'typed',
+			name: 'Chains',
+			variants: [
+				{
+					id: 'none',
+					name: 'Not attached',
+					default: true,
+					properties: {
+						slotProperties: {
+							character_slot: {
+								poseLimits: {
+									bones: {
+										leg_r: [[-18, 10]],
+										leg_l: [[-18, 10]],
+										character_rotation: 0,
+									},
+								},
+							},
+						},
+					},
 				},
+				{
+					id: 'front',
+					name: 'Tied front-facing',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot'],
+						slotProperties: {
+							character_slot: {
+								poseLimits: {
+									bones: {
+										arm_l: -44,
+										arm_r: -44,
+										elbow_l: -21,
+										elbow_r: -21,
+										leg_r: -29.8,
+										leg_l: -29.6,
+										character_rotation: 0,
+									},
+									legs: 'standing',
+									view: 'front',
+								},
+								requirements: [
+									'Wrist_cuffs',
+									'Ankle_cuffs',
+								],
+								effects: {
+									blockHands: true,
+								},
+							},
+						},
+					},
+				},
+				{
+					id: 'back',
+					name: 'Tied back-facing',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot'],
+						slotProperties: {
+							character_slot: {
+								poseLimits: {
+									bones: {
+										arm_l: -44,
+										arm_r: -44,
+										elbow_l: -21,
+										elbow_r: -21,
+										leg_r: -29.8,
+										leg_l: -29.6,
+										character_rotation: 0,
+									},
+									legs: 'standing',
+									view: 'back',
+								},
+								requirements: [
+									'Wrist_cuffs',
+									'Ankle_cuffs',
+								],
+								effects: {
+									blockHands: true,
+								},
+							},
+						},
+					},
+				},
+			],
+		},
+		lock: {
+			type: 'lockSlot',
+			name: 'Chain locks',
+			lockedProperties: {
+				blockModules: ['chains'],
 			},
 		},
 	},
@@ -73,7 +153,7 @@ DefineRoomDeviceAsset({
 		},
 		{
 			type: 'slot',
-			slot: 'character_tied',
+			slot: 'character_slot',
 			characterPosition: {
 				offsetX: 1,
 				offsetY: 75,

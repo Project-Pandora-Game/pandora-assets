@@ -19,8 +19,9 @@ DefineRoomDeviceAsset({
 				size: 'huge',
 				poseLimits: {
 					bones: {
-						leg_r: [[-30, 0]],
-						leg_l: [[-30, 0]],
+						leg_r: [[-30, 10]],
+						leg_l: [[-30, 10]],
+						character_rotation: 0,
 					},
 					legs: 'kneeling',
 				},

@@ -184,7 +184,7 @@
 								{
 									"module": "ropes_right",
 									"operator": "=",
-									"value": "tied_legs"
+									"value": "tied_legs_back"
 								},
 								{
 									"view": "back"
@@ -194,7 +194,7 @@
 								{
 									"module": "ropes_right",
 									"operator": "=",
-									"value": "tied_both"
+									"value": "tied_both_back"
 								},
 								{
 									"view": "back"
@@ -225,7 +225,7 @@
 								{
 									"module": "ropes_right",
 									"operator": "=",
-									"value": "tied_legs"
+									"value": "tied_legs_back"
 								},
 								{
 									"view": "back"
@@ -235,7 +235,7 @@
 								{
 									"module": "ropes_right",
 									"operator": "=",
-									"value": "tied_both"
+									"value": "tied_both_back"
 								},
 								{
 									"view": "back"
@@ -266,7 +266,7 @@
 								{
 									"module": "ropes_right",
 									"operator": "=",
-									"value": "tied_arms"
+									"value": "tied_arms_back"
 								},
 								{
 									"view": "back"
@@ -276,7 +276,7 @@
 								{
 									"module": "ropes_right",
 									"operator": "=",
-									"value": "tied_both"
+									"value": "tied_both_back"
 								},
 								{
 									"view": "back"
@@ -307,7 +307,7 @@
 								{
 									"module": "ropes_right",
 									"operator": "=",
-									"value": "tied_arms"
+									"value": "tied_arms_back"
 								},
 								{
 									"view": "back"
@@ -317,7 +317,7 @@
 								{
 									"module": "ropes_right",
 									"operator": "=",
-									"value": "tied_both"
+									"value": "tied_both_back"
 								},
 								{
 									"view": "back"
