@@ -10,6 +10,10 @@ DefineRoomDeviceAsset({
 			name: 'Bench cushion',
 			default: '#800020',
 		},
+		curtain: {
+			name: 'Curtain cover',
+			default: '#7C0418',
+		},
 	},
 	slots: {
 		character_slot_inside: {
@@ -31,6 +35,51 @@ DefineRoomDeviceAsset({
 				},
 			},
 		},
+		character_slot_sitting_left: {
+			name: 'Sitting on the left',
+			asset: {
+				name: 'Cage Bench',
+				size: 'huge',
+				poseLimits: {
+					bones: {
+						leg_r: [[-30, 10]],
+						leg_l: [[-30, 10]],
+					},
+					legs: 'sitting',
+					view: 'front',
+				},
+			},
+		},
+		character_slot_sitting_middle: {
+			name: 'Sitting in the middle',
+			asset: {
+				name: 'Cage Bench',
+				size: 'huge',
+				poseLimits: {
+					bones: {
+						leg_r: [[-30, 10]],
+						leg_l: [[-30, 10]],
+					},
+					legs: 'sitting',
+					view: 'front',
+				},
+			},
+		},
+		character_slot_sitting_right: {
+			name: 'Sitting on the right',
+			asset: {
+				name: 'Cage Bench',
+				size: 'huge',
+				poseLimits: {
+					bones: {
+						leg_r: [[-30, 10]],
+						leg_l: [[-30, 10]],
+					},
+					legs: 'sitting',
+					view: 'front',
+				},
+			},
+		},
 	},
 	modules: {
 		door: {
@@ -47,6 +96,30 @@ DefineRoomDeviceAsset({
 				{
 					id: 'open',
 					name: 'Open',
+					default: true,
+				},
+			],
+		},
+		curtain: {
+			type: 'typed',
+			name: 'Curtain cover',
+			variants: [
+				{
+					id: 'closed',
+					name: 'Closed',
+					properties: {
+						slotProperties: {
+							character_slot_inside: {
+								effects: {
+									blind: 9.6,
+								},
+							},
+						},
+					},
+				},
+				{
+					id: 'open',
+					name: 'Removed',
 					default: true,
 				},
 			],
@@ -99,11 +172,12 @@ DefineRoomDeviceAsset({
 			slot: 'character_slot_inside',
 			characterPosition: {
 				offsetX: 0,
-				offsetY: -140,
+				offsetY: -100,
 				disablePoseOffset: true,
-				pivot: {
-					x: 129,
-					y: 960,
+				relativeScale: 0.96,
+				pivotOffset: {
+					x: 0,
+					y: -690,
 				},
 			},
 		},
@@ -117,6 +191,52 @@ DefineRoomDeviceAsset({
 			image: 'bench_cushion.png',
 			colorizationKey: 'cushion',
 		},
+		{
+			type: 'sprite',
+			image: 'bench_curtain.png',
+			colorizationKey: 'curtain',
+			imageOverrides: [
+				{
+					image: '',
+					condition: [
+						[
+							{
+								module: 'curtain',
+								operator: '=',
+								value: 'open',
+							},
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'slot',
+			slot: 'character_slot_sitting_left',
+			characterPosition: {
+				offsetX: -280,
+				offsetY: 64,
+				relativeScale: 1.08,
+			},
+		},
+		{
+			type: 'slot',
+			slot: 'character_slot_sitting_middle',
+			characterPosition: {
+				offsetX: 0,
+				offsetY: 64,
+				relativeScale: 1.08,
+			},
+		},
+		{
+			type: 'slot',
+			slot: 'character_slot_sitting_right',
+			characterPosition: {
+				offsetX: 280,
+				offsetY: 64,
+				relativeScale: 1.08,
+			},
+		},
 	],
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
@@ -128,6 +248,13 @@ DefineRoomDeviceAsset({
 				part: 'used 3D model',
 				source: 'https://skfb.ly/oLr8J',
 				copyrightHolder: 'Samuel Francis Johnson (Oneironauticus)',
+				editedBy: 'ClaudiaMia',
+				license: 'CC BY',
+			},
+			{
+				part: 'curtain',
+				source: 'https://www.flickr.com/photos/tusnelda/4338079314/',
+				copyrightHolder: 'storebukkebruse',
 				editedBy: 'ClaudiaMia',
 				license: 'CC BY',
 			},
