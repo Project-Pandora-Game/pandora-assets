@@ -66,17 +66,6 @@ DefineRoomDeviceAsset({
 					id: 'none',
 					name: 'None',
 					default: true,
-					properties: {
-						slotProperties: {
-							character_slot_left: {
-								poseLimits: {
-									bones: {
-										character_rotation: 0,
-									},
-								},
-							},
-						},
-					},
 				},
 				{
 					id: 'tied_legs',
@@ -151,7 +140,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'tied_legs_back',
-					name: 'Tied (Legs) back-facing',
+					name: 'Tied (Legs) facing down',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_left'],
 						slotProperties: {
@@ -171,7 +160,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'tied_arms_back',
-					name: 'Tied (Arms) back-facing',
+					name: 'Tied (Arms) facing down',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_left'],
 						slotProperties: {
@@ -195,7 +184,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'tied_both_back',
-					name: 'Tied (Legs & Arms) back-facing',
+					name: 'Tied (Legs & Arms) facing down',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_left'],
 						slotProperties: {
@@ -230,17 +219,6 @@ DefineRoomDeviceAsset({
 					id: 'none',
 					name: 'None',
 					default: true,
-					properties: {
-						slotProperties: {
-							character_slot_right: {
-								poseLimits: {
-									bones: {
-										character_rotation: 0,
-									},
-								},
-							},
-						},
-					},
 				},
 				{
 					id: 'tied_legs',
@@ -315,7 +293,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'tied_legs_back',
-					name: 'Tied (Legs) back-facing',
+					name: 'Tied (Legs) facing down',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_right'],
 						slotProperties: {
@@ -335,7 +313,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'tied_arms_back',
-					name: 'Tied (Arms) back-facing',
+					name: 'Tied (Arms) facing down',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_right'],
 						slotProperties: {
@@ -359,7 +337,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'tied_both_back',
-					name: 'Tied (Legs+Arms) back-facing',
+					name: 'Tied (Legs+Arms) facing down',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_right'],
 						slotProperties: {
@@ -412,16 +390,45 @@ DefineRoomDeviceAsset({
 			slot: 'character_slot_left',
 			characterPosition: {
 				offsetX: -288,
-				offsetY: -180,
-				disablePoseOffset: true,
+				offsetY: -680,
+				pivotOffset: {
+					x: 0,
+					y: -500,
+				},
 			},
+			characterPositionOverrides: [
+				{
+					position: {
+						offsetX: -288,
+						offsetY: -680,
+						pivotOffset: {
+							x: 0,
+							y: -500,
+						},
+						disablePoseOffset: true,
+					},
+					condition: [
+						[
+							{
+								module: 'ropes_left',
+								operator: '!=',
+								value: 'none',
+							},
+						],
+					],
+				},
+			],
 		},
 		{
 			type: 'slot',
 			slot: 'character_slot_middle',
 			characterPosition: {
 				offsetX: 0,
-				offsetY: -160,
+				offsetY: -670,
+				pivotOffset: {
+					x: 0,
+					y: -500,
+				},
 			},
 		},
 		{
@@ -429,9 +436,34 @@ DefineRoomDeviceAsset({
 			slot: 'character_slot_right',
 			characterPosition: {
 				offsetX: 288,
-				offsetY: -180,
-				disablePoseOffset: true,
+				offsetY: -680,
+				pivotOffset: {
+					x: 0,
+					y: -500,
+				},
 			},
+			characterPositionOverrides: [
+				{
+					position: {
+						offsetX: 288,
+						offsetY: -680,
+						pivotOffset: {
+							x: 0,
+							y: -500,
+						},
+						disablePoseOffset: true,
+					},
+					condition: [
+						[
+							{
+								module: 'ropes_right',
+								operator: '!=',
+								value: 'none',
+							},
+						],
+					],
+				},
+			],
 		},
 	],
 	ownership: {
