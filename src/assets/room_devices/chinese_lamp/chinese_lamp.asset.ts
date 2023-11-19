@@ -23,6 +23,21 @@ DefineRoomDeviceAsset({
 	},
 	slots: {},
 	modules: {
+		operation: {
+			type: 'typed',
+			name: 'Lamp operation',
+			variants: [
+				{
+					id: 'on',
+					name: 'Light on',
+					default: true,
+				},
+				{
+					id: 'off',
+					name: 'Light off',
+				},
+			],
+		},
 		configuration: {
 			type: 'typed',
 			name: 'Lamp configuration',
@@ -40,7 +55,7 @@ DefineRoomDeviceAsset({
 		},
 		size: {
 			type: 'typed',
-			name: 'Frame size',
+			name: 'Lamp size',
 			variants: [
 				{
 					id: 'normal',
@@ -61,8 +76,25 @@ DefineRoomDeviceAsset({
 	graphicsLayers: [
 		{
 			type: 'sprite',
-			image: 'lamp_shine_outer.png',
+			image: '',
 			imageOverrides: [
+				{
+					image: 'lamp_shine_outer.png',
+					condition: [
+						[
+							{
+								module: 'size',
+								operator: '=',
+								value: 'normal',
+							},
+							{
+								module: 'operation',
+								operator: '=',
+								value: 'on',
+							},
+						],
+					],
+				},
 				{
 					image: 'lamp_shine_outer.png@375x525',
 					condition: [
@@ -72,7 +104,13 @@ DefineRoomDeviceAsset({
 								operator: '=',
 								value: 'small',
 							},
+							{
+								module: 'operation',
+								operator: '=',
+								value: 'on',
+							},
 						],
+
 					],
 				},
 			],
@@ -127,8 +165,25 @@ DefineRoomDeviceAsset({
 		},
 		{
 			type: 'sprite',
-			image: 'lamp_shine_inner.png',
+			image: '',
 			imageOverrides: [
+				{
+					image: 'lamp_shine_inner.png',
+					condition: [
+						[
+							{
+								module: 'size',
+								operator: '=',
+								value: 'normal',
+							},
+							{
+								module: 'operation',
+								operator: '=',
+								value: 'on',
+							},
+						],
+					],
+				},
 				{
 					image: 'lamp_shine_inner.png@375x525',
 					condition: [
@@ -138,7 +193,13 @@ DefineRoomDeviceAsset({
 								operator: '=',
 								value: 'small',
 							},
+							{
+								module: 'operation',
+								operator: '=',
+								value: 'on',
+							},
 						],
+
 					],
 				},
 			],
