@@ -7,7 +7,7 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "bra breasts",
-			"priority": "BREASTS",
+			"priority": "ABOVE_BODY",
 			"points": "shirt_static_breasts",
 			"mirror": 0,
 			"colorizationKey": "bra",
