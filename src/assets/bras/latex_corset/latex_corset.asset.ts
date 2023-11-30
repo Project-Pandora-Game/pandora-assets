@@ -72,12 +72,6 @@ DefineAsset({
 					name: 'Covering crotch',
 					default: true,
 					properties: {
-						blockSlots: ['vagina', 'anus'],
-						coverSlots: ['vagina', 'anus'],
-						occupySlots: {
-							'outsideVaginaArea': 0.1,
-							'outsideAnusArea': 0.1,
-						},
 						hides: ['Penis'],
 						attributes: [
 							'Underwear_pants',
