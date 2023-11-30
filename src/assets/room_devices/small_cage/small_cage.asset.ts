@@ -58,7 +58,7 @@ DefineRoomDeviceAsset({
 			type: 'storage',
 			name: `Cage's floor`,
 			maxAcceptedSize: 'large',
-			maxCount: 2,
+			maxCount: 5,
 		},
 	},
 	pivot: {

@@ -32,7 +32,7 @@ DefineAsset({
 					properties: {
 						occupySlots: {
 							'vagina': 4,
-							'outsideVaginaArea': 10,
+							'outsideVaginaArea': 6,
 						},
 					},
 				},
