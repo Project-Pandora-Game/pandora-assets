@@ -17,12 +17,6 @@ DefineAsset({
 		'Clothing',
 		'Clothing_lower',
 	],
-	blockSlots: ['vagina', 'anus'],
-	coverSlots: ['vagina', 'anus'],
-	occupySlots: {
-		'outsideVaginaArea': 1,
-		'outsideAnusArea': 1,
-	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia', 'Titania'],
