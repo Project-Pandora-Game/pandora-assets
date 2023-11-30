@@ -19,15 +19,15 @@ DefineAsset({
 		options: [
 			{
 				bones: {
-					leg_l: [[-18, 6]],
-					leg_r: [[-18, 6]],
+					leg_l: [[-18, 24]],
+					leg_r: [[-18, 24]],
 				},
 				legs: ['standing', 'sitting'],
 			},
 			{
 				bones: {
-					leg_l: [[-25, 6]],
-					leg_r: [[-25, 6]],
+					leg_l: [[-25, 24]],
+					leg_r: [[-25, 24]],
 				},
 				legs: 'kneeling',
 			},
