@@ -261,10 +261,6 @@ export const ATTRIBUTES_DEFINITION = {
 		},
 		icon: 'footwear',
 	},
-	Shoe_top_strap: {
-		name: 'Shoe strap',
-		description: 'A pair of shoes with straps that keep the shoes in place',
-	},
 	Headgear: {
 		name: 'Headgear',
 		description: 'A hat, cap, hood, helmet, or similar head gear',
@@ -305,10 +301,6 @@ export const ATTRIBUTES_DEFINITION = {
 		name: 'Wrist cuffs',
 		description: 'A pair of wrist cuffs',
 	},
-	Wrist_cuffs_chain: {
-		name: 'Wrist cuff chain',
-		description: 'A chain between a pair of wrist cuffs',
-	},
 	Restraint_legs: {
 		name: 'Leg restraint',
 		description: 'An item that restricts or restraints legs or feet',
@@ -320,10 +312,6 @@ export const ATTRIBUTES_DEFINITION = {
 	Ankle_cuffs: {
 		name: 'Ankle cuffs',
 		description: 'A pair of ankle cuffs',
-	},
-	Ankle_cuffs_chain: {
-		name: 'Ankle cuff chain',
-		description: 'A chain between a pair of ankle cuffs',
 	},
 	Restraint_eyes: {
 		name: 'Sight restraint',

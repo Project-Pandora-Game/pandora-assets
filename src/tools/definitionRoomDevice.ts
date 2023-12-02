@@ -17,6 +17,7 @@ const ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'poseLimits',
 	'effects',
 	'attributes',
+	'stateFlags',
 	'blockAddRemove',
 	'blockSelfAddRemove',
 	'blockModules',

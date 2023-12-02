@@ -1,4 +1,3 @@
-import { ItemInteractionType } from 'pandora-common';
 DefineAsset({
 	name: 'Leather Wrist Cuffs',
 	size: 'small',
@@ -40,15 +39,17 @@ DefineAsset({
 			type: 'lockSlot',
 			name: 'Lock for cuff chains',
 			occupiedProperties: {
-				attributes: {
-					requires: ['Wrist_cuffs_chain'], // TODO: Use flags
+				blockModules: ['cuffState'],
+				stateFlags: {
+					requires: {
+						chain: 'Locking requires a chain to lock.',
+					},
 				},
 			},
 		},
 		cuffState: {
 			type: 'typed',
 			name: 'Cuff states',
-			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'unchained',
@@ -122,10 +123,8 @@ DefineAsset({
 								},
 							],
 						},
-						attributes: {
-							provides: [
-								'Wrist_cuffs_chain',
-							],
+						stateFlags: {
+							provides: ['chain'],
 						},
 					},
 				},

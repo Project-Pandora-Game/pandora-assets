@@ -15,6 +15,7 @@ const DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'poseLimits',
 	'effects',
 	'attributes',
+	'stateFlags',
 	'blockAddRemove',
 	'blockSelfAddRemove',
 	'blockModules',

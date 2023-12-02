@@ -29,8 +29,11 @@ DefineAsset({
 			name: 'Lock',
 			occupiedProperties: {
 				blockAddRemove: true,
-				attributes: {
-					requires: ['Shoe_top_strap'], // TODO: Use flags
+				blockModules: ['heelType'],
+				stateFlags: {
+					requires: {
+						strap: 'Locking requires a strap to lock.',
+					},
 				},
 			},
 		},
@@ -86,10 +89,8 @@ DefineAsset({
 					id: 'strap',
 					name: 'With Strap',
 					properties: {
-						attributes: {
-							provides: [
-								'Shoe_top_strap',
-							],
+						stateFlags: {
+							provides: ['strap'],
 						},
 					},
 				},
