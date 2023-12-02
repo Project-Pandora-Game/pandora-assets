@@ -12,12 +12,14 @@ DefineAsset({
 			default: '#FEFCFC',
 		},
 	},
-	attributes: [
-		'Handheld',
-	],
-	requirements: [
-		'!Mittens',
-	],
+	attributes: {
+		provides: [
+			'Handheld',
+		],
+		requires: [
+			'!Mittens',
+		],
+	},
 	modules: {
 		handUsage_r: {
 			type: 'typed',

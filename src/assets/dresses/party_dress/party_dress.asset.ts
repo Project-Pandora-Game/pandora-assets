@@ -9,12 +9,14 @@ DefineAsset({
 			default: '#E15682',
 		},
 	},
-	attributes: [
-		'Clothing',
-		'Clothing_upper',
-		'Clothing_lower',
-		'Clothing_large',
-	],
+	attributes: {
+		provides: [
+			'Clothing',
+			'Clothing_upper',
+			'Clothing_lower',
+			'Clothing_large',
+		],
+	},
 	poseLimits: {
 		options: [
 			{

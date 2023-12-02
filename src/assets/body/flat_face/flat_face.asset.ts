@@ -9,10 +9,12 @@ DefineAsset({
 			group: 'skin',
 		},
 	},
-	attributes: [
-		'Face',
-		'Body_texture',
-	],
+	attributes: {
+		provides: [
+			'Face',
+			'Body_texture',
+		],
+	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

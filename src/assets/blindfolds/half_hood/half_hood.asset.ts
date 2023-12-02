@@ -12,20 +12,21 @@ DefineAsset({
 			default: '#333333',
 		},
 	},
-	attributes: [
-		'Restraint',
-		'Headgear',
-		'Headgear_hood',
-		'Restraint_eyes',
-	],
+	attributes: {
+		provides: [
+			'Restraint',
+			'Headgear',
+			'Headgear_hood',
+			'Restraint_eyes',
+		],
+		hides: [
+			'Hair',
+			'Ears',
+		],
+	},
 	effects: {
 		blind: 9.9,
-
 	},
-	hides: [
-		'Hair',
-		'Ears',
-	],
 	modules: {
 		lock: {
 			type: 'lockSlot',

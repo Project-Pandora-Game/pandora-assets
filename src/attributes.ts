@@ -333,14 +333,6 @@ export const ATTRIBUTES_DEFINITION = {
 		},
 		icon: 'blindfold',
 	},
-	Restraint_mouth: {
-		name: 'Speech restraint',
-		description: 'An item that decreases the ability to speak',
-		useAsWardrobeFilter: {
-			tab: 'item',
-		},
-		icon: 'gag',
-	},
 	Restraint_ears: {
 		name: 'Hearing restraint',
 		description: 'An item that decreases the ability to hear',
@@ -361,6 +353,86 @@ export const ATTRIBUTES_DEFINITION = {
 		name: 'Genital clamps',
 		description: 'A set of genital clamps',
 	},
+
+	//#region Mouth items
+	Mouth_item: {
+		name: 'An item used on the mouth or lips',
+		description: 'Any item that is positioned on the mouth (either outside or inside)',
+	},
+	Restraint_mouth: {
+		name: 'Speech restraint',
+		description: 'An item that decreases the ability to speak',
+		useAsWardrobeFilter: {
+			tab: 'item',
+		},
+		icon: 'gag',
+		// Subtype of Mouth_item
+	},
+	Mouth_insert: {
+		name: 'An item inserted in the mouth',
+		description: 'An item that is inserted in the mouth (in the area between the lips)',
+	},
+	Mouth_insert_deep: {
+		name: 'An item inserted deep in the mouth',
+		description: 'An item that is inserted deep inside the mouth (in the area not usually visible from outside)',
+	},
+	Mouth_protruding: {
+		name: 'An item protruding outside of the mouth',
+		description: 'An item that is protruding outside of the mouth',
+	},
+	Mouth_cover: {
+		name: 'An item covering the mouth',
+		description: 'An item that is covering the mouth',
+	},
+
+	//#endregion
+
+	//#region Vagina items
+	Vagina_item: {
+		name: 'An item used on the vagina',
+		description: 'Any item that is positioned on the vagina (either outside or inside)',
+	},
+	Vagina_insert: {
+		name: 'An item inserted in the vagina',
+		description: 'An item that is inserted in the vagina (in the area between the lips)',
+	},
+	Vagina_insert_deep: {
+		name: 'An item inserted deep in the vagina',
+		description: 'An item that is inserted deep inside the vagina (in the area not usually visible from outside)',
+	},
+	Vagina_protruding: {
+		name: 'An item protruding outside of the vagina',
+		description: 'An item that is protruding outside of the vagina',
+	},
+	Vagina_cover: {
+		name: 'An item covering the vagina',
+		description: 'An item that is covering the vagina',
+	},
+	//#endregion
+
+	//#region Anus items
+	Anus_item: {
+		name: 'An item used on the anus',
+		description: 'Any item that is positioned on the anus (either outside or inside)',
+	},
+	Anus_insert: {
+		name: 'An item inserted in the anus',
+		description: 'An item that is inserted in the anus (in the area of the sphincter)',
+	},
+	Anus_insert_deep: {
+		name: 'An item inserted deep in the anus',
+		description: 'An item that is inserted deep inside the anus (in the area not usually visible from outside)',
+	},
+	Anus_protruding: {
+		name: 'An item protruding outside of the anus',
+		description: 'An item that is protruding outside of the anus',
+	},
+	Anus_cover: {
+		name: 'An item covering the anus',
+		description: 'An item that is covering the anus',
+	},
+	//#endregion
+
 	Piercing: {
 		name: 'Piercing',
 		description: 'A body piercing',

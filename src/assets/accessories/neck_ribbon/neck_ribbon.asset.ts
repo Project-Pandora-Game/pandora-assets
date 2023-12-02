@@ -12,14 +12,16 @@ DefineAsset({
 			default: '#333333',
 		},
 	},
-	requirements: [
-		'Collar',
-		'!Collar_front_ring',
-	],
-	attributes: [
-		'Clothing',
-		'Accessory',
-	],
+	attributes: {
+		provides: [
+			'Clothing',
+			'Accessory',
+		],
+		requires: [
+			'Collar',
+			'!Collar_front_ring',
+		],
+	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia', 'Jomshir'],

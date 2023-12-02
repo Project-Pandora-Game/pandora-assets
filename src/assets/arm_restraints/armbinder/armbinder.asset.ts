@@ -24,10 +24,12 @@ DefineAsset({
 			default: '#FF0000',
 		},
 	},
-	attributes: [
-		'Restraint',
-		'Restraint_arms',
-	],
+	attributes: {
+		provides: [
+			'Restraint',
+			'Restraint_arms',
+		],
+	},
 	modules: {
 		lock: {
 			type: 'lockSlot',
@@ -48,9 +50,7 @@ DefineAsset({
 				{
 					id: 'ring',
 					name: 'Ring At Glove End',
-
 				},
-
 			],
 		},
 	},

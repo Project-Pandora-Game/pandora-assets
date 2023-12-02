@@ -17,10 +17,12 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
-	attributes: [
-		'Clothing',
-		'Footwear',
-	],
+	attributes: {
+		provides: [
+			'Clothing',
+			'Footwear',
+		],
+	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

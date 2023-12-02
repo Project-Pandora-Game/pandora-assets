@@ -8,8 +8,10 @@ DefineAsset({
 			default: '#FFC1EB',
 		},
 	},
-	attributes: ['Toy'],
-	requirements: ['Vagina_spread'],
+	attributes: {
+		provides: ['Toy'],
+		requires: ['Vagina_spread'],
+	},
 	modules: {
 		insertedVibrator: {
 			type: 'typed',
@@ -20,9 +22,9 @@ DefineAsset({
 					name: 'Mostly Out',
 					default: true,
 					properties: {
-						occupySlots: {
-							'vagina': 2,
-							'outsideVaginaArea': 10,
+						attributes: {
+							provides: ['Vagina_insert', 'Vagina_protruding'],
+							requires: ['!Vagina_cover'],
 						},
 					},
 				},
@@ -30,9 +32,9 @@ DefineAsset({
 					id: 'half',
 					name: 'Half Inside',
 					properties: {
-						occupySlots: {
-							'vagina': 4,
-							'outsideVaginaArea': 6,
+						attributes: {
+							provides: ['Vagina_insert', 'Vagina_insert_deep', 'Vagina_protruding'],
+							requires: ['!Vagina_cover'],
 						},
 					},
 				},
@@ -40,8 +42,9 @@ DefineAsset({
 					id: 'in',
 					name: 'Deep Inside',
 					properties: {
-						occupySlots: {
-							'vagina': 8,
+						attributes: {
+							provides: ['Vagina_insert', 'Vagina_insert_deep'],
+							requires: ['!Vagina_cover'],
 						},
 					},
 				},

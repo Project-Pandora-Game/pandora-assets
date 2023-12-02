@@ -8,12 +8,14 @@ DefineAsset({
 			default: '#D7A67E',
 		},
 	},
-	attributes: [
-		'Handheld',
-	],
-	requirements: [
-		'!Mittens',
-	],
+	attributes: {
+		provides: [
+			'Handheld',
+		],
+		requires: [
+			'!Mittens',
+		],
+	},
 	modules: {
 		handUsage_r: {
 			type: 'typed',

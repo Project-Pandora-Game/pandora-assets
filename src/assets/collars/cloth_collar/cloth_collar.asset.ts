@@ -10,6 +10,13 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
+	attributes: {
+		provides: [
+			'Clothing',
+			'Accessory',
+			'Collar',
+		],
+	},
 	modules: {
 		collarType: {
 			type: 'typed',
@@ -28,11 +35,6 @@ DefineAsset({
 			],
 		},
 	},
-	attributes: [
-		'Clothing',
-		'Accessory',
-		'Collar',
-	],
 	chat: {
 		actionAdd: 'SOURCE_CHARACTER fitted and closed a Cloth Collar around TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',
 		actionRemove: 'SOURCE_CHARACTER opened and then removed the Cloth Collar from TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',

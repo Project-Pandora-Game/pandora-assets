@@ -14,12 +14,14 @@ DefineAsset({
 			default: '#F39EFA',
 		},
 	},
-	attributes: [
-		'Clothing',
-		'Footwear',
-		'Restraint',
-		'Restraint_legs',
-	],
+	attributes: {
+		provides: [
+			'Clothing',
+			'Footwear',
+			'Restraint',
+			'Restraint_legs',
+		],
+	},
 	modules: {
 		lock: {
 			type: 'lockSlot',

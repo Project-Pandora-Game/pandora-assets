@@ -14,10 +14,12 @@ DefineAsset({
 			default: '#444444',
 		},
 	},
-	attributes: [
-		'Restraint',
-		'Restraint_eyes',
-	],
+	attributes: {
+		provides: [
+			'Restraint',
+			'Restraint_eyes',
+		],
+	},
 	modules: {
 		lock: {
 			type: 'lockSlot',

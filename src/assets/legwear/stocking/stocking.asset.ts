@@ -10,9 +10,11 @@ DefineAsset({
 			minAlpha: 0.6,
 		},
 	},
-	attributes: [
-		'Legwear',
-	],
+	attributes: {
+		provides: [
+			'Legwear',
+		],
+	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

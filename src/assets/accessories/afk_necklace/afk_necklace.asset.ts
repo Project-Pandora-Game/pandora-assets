@@ -14,10 +14,12 @@ DefineAsset({
 			default: '#CCBA7C',
 		},
 	},
-	attributes: [
-		'Clothing',
-		'Accessory',
-	],
+	attributes: {
+		provides: [
+			'Clothing',
+			'Accessory',
+		],
+	},
 	modules: {
 		lock: {
 			type: 'lockSlot',

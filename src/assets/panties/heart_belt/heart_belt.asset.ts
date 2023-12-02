@@ -20,10 +20,12 @@ DefineAsset({
 			default: '#D5D5D5',
 		},
 	},
-	attributes: [
-		'Restraint',
-		'Chastity',
-	],
+	attributes: {
+		provides: [
+			'Restraint',
+			'Chastity',
+		],
+	},
 	modules: {
 		lock: {
 			type: 'lockSlot',
@@ -52,15 +54,21 @@ DefineAsset({
 					id: 'closed',
 					name: 'Closed',
 					properties: {
-						blockSlots: ['vagina'],
-						coverSlots: ['vagina', 'outsideVaginaArea'],
-						occupySlots: {
-							'outsideVaginaArea': 1,
+						attributes: {
+							provides: [
+								'Vagina_cover',
+							],
+							covers: [
+								'Vagina_item',
+							],
+							requires: [
+								'!Vagina_protruding',
+							],
+							hides: [
+								'Penis',
+								'Toy_clamps_genital',
+							],
 						},
-						hides: [
-							'Penis',
-							'Toy_clamps_genital',
-						],
 					},
 				},
 			],

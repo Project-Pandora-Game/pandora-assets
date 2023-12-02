@@ -8,10 +8,12 @@ DefineAsset({
 			default: '#FED59C',
 		},
 	},
-	attributes: [
-		'Restraint',
-		'Restraint_arms',
-	],
+	attributes: {
+		provides: [
+			'Restraint',
+			'Restraint_arms',
+		],
+	},
 	modules: {
 		harness: {
 			type: 'typed',

@@ -8,10 +8,12 @@ DefineAsset({
 			default: '#F1CA96',
 		},
 	},
-	attributes: [
-		'Restraint',
-		'Restraint_legs',
-	],
+	attributes: {
+		provides: [
+			'Restraint',
+			'Restraint_legs',
+		],
+	},
 	modules: {
 		legTies: {
 			type: 'typed',

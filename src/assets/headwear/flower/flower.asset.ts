@@ -8,11 +8,13 @@ DefineAsset({
 			default: '#FFD1D6',
 		},
 	},
-	attributes: [
-		'Clothing',
-		'Accessory',
-		'Headgear',
-	],
+	attributes: {
+		provides: [
+			'Clothing',
+			'Accessory',
+			'Headgear',
+		],
+	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

@@ -8,7 +8,9 @@ DefineAsset({
 			default: '#C4E1FF',
 		},
 	},
-	attributes: ['Toy'],
+	attributes: {
+		provides: ['Toy'],
+	},
 	modules: {
 		insertedPlug: {
 			type: 'typed',
@@ -19,9 +21,9 @@ DefineAsset({
 					name: 'Mostly Out',
 					default: true,
 					properties: {
-						occupySlots: {
-							'anus': 2,
-							'outsideAnusArea': 10,
+						attributes: {
+							provides: ['Anus_insert', 'Anus_protruding'],
+							requires: ['!Anus_cover'],
 						},
 					},
 				},
@@ -29,9 +31,9 @@ DefineAsset({
 					id: 'half',
 					name: 'Half Inside',
 					properties: {
-						occupySlots: {
-							'anus': 4,
-							'outsideAnusArea': 10,
+						attributes: {
+							provides: ['Anus_insert', 'Anus_insert_deep', 'Anus_protruding'],
+							requires: ['!Anus_cover'],
 						},
 					},
 				},
@@ -39,9 +41,9 @@ DefineAsset({
 					id: 'in',
 					name: 'Deep Inside',
 					properties: {
-						occupySlots: {
-							'anus': 6,
-							'outsideAnusArea': 10,
+						attributes: {
+							provides: ['Anus_insert', 'Anus_insert_deep', 'Anus_protruding'],
+							requires: ['!Anus_cover'],
 						},
 					},
 				},
@@ -49,8 +51,9 @@ DefineAsset({
 					id: 'plugged',
 					name: 'Plugged',
 					properties: {
-						occupySlots: {
-							'anus': 8,
+						attributes: {
+							provides: ['Anus_insert', 'Anus_insert_deep'],
+							requires: ['!Anus_cover'],
 						},
 					},
 				},

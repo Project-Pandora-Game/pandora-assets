@@ -9,10 +9,12 @@ DefineAsset({
 			default: '#222222',
 		},
 	},
-	attributes: [
-		'Clothing',
-		'Clothing_lower',
-	],
+	attributes: {
+		provides: [
+			'Clothing',
+			'Clothing_lower',
+		],
+	},
 	modules: {
 		skirtStateFront: {
 			type: 'typed',

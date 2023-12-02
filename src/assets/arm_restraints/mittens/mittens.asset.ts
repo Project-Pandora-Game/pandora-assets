@@ -21,12 +21,14 @@ DefineAsset({
 			default: '#cccccc',
 		},
 	},
-	attributes: [
-		'Restraint',
-		'Restraint_arms',
-		'Gloves',
-		'Mittens',
-	],
+	attributes: {
+		provides: [
+			'Restraint',
+			'Restraint_arms',
+			'Gloves',
+			'Mittens',
+		],
+	},
 	modules: {
 		lock: {
 			type: 'lockSlot',

@@ -74,10 +74,12 @@ DefineRoomDeviceAsset({
 									legs: 'standing',
 									view: 'front',
 								},
-								requirements: [
-									'Wrist_cuffs',
-									'Ankle_cuffs',
-								],
+								attributes: {
+									requires: [
+										'Wrist_cuffs',
+										'Ankle_cuffs',
+									],
+								},
 								effects: {
 									blockHands: true,
 								},
@@ -105,10 +107,12 @@ DefineRoomDeviceAsset({
 									legs: 'standing',
 									view: 'back',
 								},
-								requirements: [
-									'Wrist_cuffs',
-									'Ankle_cuffs',
-								],
+								attributes: {
+									requires: [
+										'Wrist_cuffs',
+										'Ankle_cuffs',
+									],
+								},
 								effects: {
 									blockHands: true,
 								},

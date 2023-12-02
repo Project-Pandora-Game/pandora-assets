@@ -73,9 +73,11 @@ DefineRoomDeviceAsset({
 								effects: {
 									blockHands: true,
 								},
-								requirements: [
-									'Wrist_cuffs',
-								],
+								attributes: {
+									requires: [
+										'Wrist_cuffs',
+									],
+								},
 							},
 						},
 					},
@@ -99,9 +101,11 @@ DefineRoomDeviceAsset({
 								effects: {
 									blockHands: true,
 								},
-								requirements: [
-									'Wrist_cuffs',
-								],
+								attributes: {
+									requires: [
+										'Wrist_cuffs',
+									],
+								},
 							},
 						},
 					},
@@ -127,10 +131,12 @@ DefineRoomDeviceAsset({
 								effects: {
 									blockHands: true,
 								},
-								requirements: [
-									'Wrist_cuffs',
-									'Ankle_cuffs',
-								],
+								attributes: {
+									requires: [
+										'Wrist_cuffs',
+										'Ankle_cuffs',
+									],
+								},
 							},
 						},
 					},

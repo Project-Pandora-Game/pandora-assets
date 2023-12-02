@@ -9,12 +9,14 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
-	attributes: [
-		'Clothing',
-		'Clothing_upper',
-		'Clothing_lower',
-		'Clothing_large',
-	],
+	attributes: {
+		provides: [
+			'Clothing',
+			'Clothing_upper',
+			'Clothing_lower',
+			'Clothing_large',
+		],
+	},
 	modules: {
 		skirtStateFront: {
 			type: 'typed',

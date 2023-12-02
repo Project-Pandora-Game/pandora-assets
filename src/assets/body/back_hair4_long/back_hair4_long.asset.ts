@@ -8,10 +8,12 @@ DefineAsset({
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization,
-	attributes: [
-		'Hair',
-		'Hair_back',
-	],
+	attributes: {
+		provides: [
+			'Hair',
+			'Hair_back',
+		],
+	},
 	modules,
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

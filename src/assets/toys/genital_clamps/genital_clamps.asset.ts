@@ -12,10 +12,12 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
-	attributes: [
-		'Toy',
-		'Toy_clamps_genital',
-	],
+	attributes: {
+		provides: [
+			'Toy',
+			'Toy_clamps_genital',
+		],
+	},
 	modules: {
 		clampAddons: {
 			type: 'typed',

@@ -15,10 +15,12 @@ DefineAsset({
 		},
 		...colorization,
 	},
-	attributes: [
-		'Sex',
-		'Vagina',
-	],
+	attributes: {
+		provides: [
+			'Sex',
+			'Vagina',
+		],
+	},
 	modules: {
 		...modules,
 		hair: {
@@ -62,7 +64,9 @@ DefineAsset({
 					id: 'spread',
 					name: 'Spread',
 					properties: {
-						attributes: ['Vagina_spread'],
+						attributes: {
+							provides: ['Vagina_spread'],
+						},
 					},
 				},
 			],

@@ -15,10 +15,12 @@ DefineAsset({
 			default: '#E2B4B0',
 		},
 	},
-	attributes: [
-		'Sex',
-		'Penis',
-	],
+	attributes: {
+		provides: [
+			'Sex',
+			'Penis',
+		],
+	},
 	modules: {
 		penis: {
 			type: 'typed',
@@ -31,14 +33,18 @@ DefineAsset({
 					name: 'Flaccid',
 					default: true,
 					properties: {
-						attributes: ['Penis_flaccid'],
+						attributes: {
+							provides: ['Penis_flaccid'],
+						},
 					},
 				},
 				{
 					id: 'erect',
 					name: 'Erect',
 					properties: {
-						attributes: ['Penis_erect'],
+						attributes: {
+							provides: ['Penis_erect'],
+						},
 					},
 				},
 			],

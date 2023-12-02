@@ -18,13 +18,20 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
-	attributes: [
-		'Restraint',
-		'Restraint_mouth',
-	],
-	requirements: [
-		'Mouth_open_wide',
-	],
+	attributes: {
+		provides: [
+			'Restraint',
+			'Restraint_mouth',
+			'Mouth_item',
+			'Mouth_insert',
+			'Mouth_cover',
+		],
+		requires: [
+			'Mouth_open_wide',
+			'!Mouth_cover',
+			'!Mouth_protruding',
+		],
+	},
 	modules: {
 		lock: {
 			type: 'lockSlot',
@@ -65,10 +72,6 @@ DefineAsset({
 					name: 'No Plug',
 					default: true,
 					properties: {
-						occupySlots: {
-							'outsideMouthArea': 1,
-							'mouth': 1,
-						},
 						effects: {
 							lipsTouch: 9,
 							jawMove: 0,
@@ -93,12 +96,13 @@ DefineAsset({
 							coherency: 5,
 							stimulus: 3,
 						},
-						requirements: ['!Mouth_tongue_out'],
-						coverSlots: ['mouth', 'outsideMouthArea'],
-						blockSlots: ['mouth'],
-						occupySlots: {
-							'outsideMouthArea': 1,
-							'mouth': 1,
+						attributes: {
+							requires: [
+								'!Mouth_tongue_out',
+							],
+							covers: [
+								'Mouth_item',
+							],
 						},
 					},
 				},
@@ -115,12 +119,16 @@ DefineAsset({
 							coherency: 7,
 							stimulus: 6,
 						},
-						requirements: ['!Mouth_tongue_out'],
-						coverSlots: ['mouth', 'outsideMouthArea'],
-						blockSlots: ['mouth'],
-						occupySlots: {
-							'outsideMouthArea': 1,
-							'mouth': 9,
+						attributes: {
+							provides: [
+								'Mouth_insert_deep',
+							],
+							requires: [
+								'!Mouth_tongue_out',
+							],
+							covers: [
+								'Mouth_item',
+							],
 						},
 					},
 				},

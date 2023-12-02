@@ -7,13 +7,15 @@ DefineAsset({
 	bodypart: 'backhair',
 	graphics: 'graphics.json',
 	colorization,
-	attributes: [
-		'Hair',
-		'Hair_extension',
-	],
-	requirements: [
-		'Hair_back',
-	],
+	attributes: {
+		provides: [
+			'Hair',
+			'Hair_extension',
+		],
+		requires: [
+			'Hair_back',
+		],
+	},
 	modules: {
 		...modules,
 		config: {

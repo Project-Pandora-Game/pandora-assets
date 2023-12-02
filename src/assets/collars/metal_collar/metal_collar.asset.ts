@@ -14,10 +14,12 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
-	attributes: [
-		'Restraint',
-		'Collar',
-	],
+	attributes: {
+		provides: [
+			'Restraint',
+			'Collar',
+		],
+	},
 	modules: {
 		lock: {
 			type: 'lockSlot',
@@ -39,9 +41,11 @@ DefineAsset({
 					id: 'ring',
 					name: 'Collar + Ring',
 					properties: {
-						attributes: [
-							'Collar_front_ring',
-						],
+						attributes: {
+							provides: [
+								'Collar_front_ring',
+							],
+						},
 					},
 				},
 			],

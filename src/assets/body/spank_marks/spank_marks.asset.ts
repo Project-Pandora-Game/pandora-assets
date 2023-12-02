@@ -18,10 +18,12 @@ DefineAsset({
 			minAlpha: 0.1,
 		},
 	},
-	attributes: [
-		'Body_texture',
-		'Bodymark',
-	],
+	attributes: {
+		provides: [
+			'Body_texture',
+			'Bodymark',
+		],
+	},
 	modules: {
 		buttColor_l: {
 			type: 'typed',

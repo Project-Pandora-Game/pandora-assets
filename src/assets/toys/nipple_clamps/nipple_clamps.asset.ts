@@ -12,7 +12,9 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
-	attributes: ['Toy'],
+	attributes: {
+		provides: ['Toy'],
+	},
 	modules: {
 		clampAddons: {
 			type: 'typed',

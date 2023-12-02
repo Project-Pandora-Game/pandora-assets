@@ -10,10 +10,12 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
-	attributes: [
-		'Blush',
-		'Body_texture',
-	],
+	attributes: {
+		provides: [
+			'Blush',
+			'Body_texture',
+		],
+	},
 	modules: {
 		blush: {
 			type: 'typed',

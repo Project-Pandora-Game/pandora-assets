@@ -10,11 +10,17 @@ DefineAsset({
 			default: '#444444',
 		},
 	},
-	attributes: [
-		'Restraint',
-		'Restraint_mouth',
-	],
-	requirements: ['Mouth_tongue_out'],
+	attributes: {
+		provides: [
+			'Restraint',
+			'Restraint_mouth',
+			'Mouth_item',
+			'Mouth_protruding',
+		],
+		requires: [
+			'Mouth_tongue_out',
+		],
+	},
 	modules: {
 		lock: {
 			type: 'lockSlot',
@@ -39,9 +45,6 @@ DefineAsset({
 				},
 			],
 		},
-	},
-	occupySlots: {
-		'outsideMouthArea': 1,
 	},
 	effects: {
 		lipsTouch: 2,

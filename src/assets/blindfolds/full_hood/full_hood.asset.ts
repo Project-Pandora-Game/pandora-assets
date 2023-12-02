@@ -20,15 +20,17 @@ DefineAsset({
 			default: '#333333',
 		},
 	},
-	attributes: [
-		'Restraint',
-		'Headgear',
-		'Headgear_hood',
-	],
-	hides: [
-		'Hair',
-		'Ears',
-	],
+	attributes: {
+		provides: [
+			'Restraint',
+			'Headgear',
+			'Headgear_hood',
+		],
+		hides: [
+			'Hair',
+			'Ears',
+		],
+	},
 	modules: {
 		lock: {
 			type: 'lockSlot',
@@ -63,9 +65,11 @@ DefineAsset({
 						effects: {
 							blind: 10,
 						},
-						attributes: [
-							'Restraint_eyes',
-						],
+						attributes: {
+							provides: [
+								'Restraint_eyes',
+							],
+						},
 					},
 				},
 			],
@@ -83,11 +87,17 @@ DefineAsset({
 					id: 'mouth',
 					name: 'Mouth Cover',
 					properties: {
-						requirements: ['!Mouth_tongue_out'],
-						coverSlots: ['mouth', 'outsideMouthArea'],
-						blockSlots: ['mouth'],
-						occupySlots: {
-							'outsideMouthArea': 1,
+						attributes: {
+							provides: [
+								'Mouth_cover',
+							],
+							requires: [
+								'!Mouth_tongue_out',
+								'!Mouth_protruding',
+							],
+							covers: [
+								'Mouth_item',
+							],
 						},
 					},
 				},
@@ -104,18 +114,22 @@ DefineAsset({
 							coherency: 8,
 							stimulus: 6,
 						},
-						attributes: [
-							'Restraint_mouth',
-						],
-						requirements: [
-							'Mouth_open_wide',
-							'!Mouth_tongue_out',
-						],
-						coverSlots: ['mouth', 'outsideMouthArea'],
-						blockSlots: ['mouth'],
-						occupySlots: {
-							'mouth': 9,
-							'outsideMouthArea': 1,
+						attributes: {
+							provides: [
+								'Restraint_mouth',
+								'Mouth_insert',
+								'Mouth_insert_deep',
+								'Mouth_cover',
+							],
+							requires: [
+								'Mouth_open_wide',
+								'!Mouth_tongue_out',
+								'!Mouth_protruding',
+								'!Mouth_cover',
+							],
+							covers: [
+								'Mouth_item',
+							],
 						},
 					},
 				},

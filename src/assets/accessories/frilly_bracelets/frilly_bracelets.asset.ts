@@ -12,10 +12,12 @@ DefineAsset({
 			default: '#333333',
 		},
 	},
-	attributes: [
-		'Clothing',
-		'Accessory',
-	],
+	attributes: {
+		provides: [
+			'Clothing',
+			'Accessory',
+		],
+	},
 	modules: {
 		braceState: {
 			type: 'typed',

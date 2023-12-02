@@ -15,10 +15,12 @@ DefineAsset({
 			default: '#AB0606',
 		},
 	},
-	attributes: [
-		'Underwear',
-		'Underwear_corset',
-	],
+	attributes: {
+		provides: [
+			'Underwear',
+			'Underwear_corset',
+		],
+	},
 	modules: {
 		lock: {
 			type: 'lockSlot',
@@ -51,9 +53,11 @@ DefineAsset({
 					name: 'Covered bust',
 					default: true,
 					properties: {
-						attributes: [
-							'Underwear_bra',
-						],
+						attributes: {
+							provides: [
+								'Underwear_bra',
+							],
+						},
 					},
 				},
 				{
@@ -72,10 +76,12 @@ DefineAsset({
 					name: 'Covering crotch',
 					default: true,
 					properties: {
-						hides: ['Penis'],
-						attributes: [
-							'Underwear_pants',
-						],
+						attributes: {
+							provides: [
+								'Underwear_pants',
+							],
+							hides: ['Penis'],
+						},
 					},
 				},
 				{

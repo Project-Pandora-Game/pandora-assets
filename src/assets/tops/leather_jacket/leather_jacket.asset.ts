@@ -9,15 +9,17 @@ DefineAsset({
 			default: '#BBBBBB',
 		},
 	},
-	attributes: [
-		'Clothing',
-		'Clothing_upper',
-		'Clothing_outer',
-	],
-	hides: [
-		'Underwear_bra',
-		'Underwear_corset',
-	],
+	attributes: {
+		provides: [
+			'Clothing',
+			'Clothing_upper',
+			'Clothing_outer',
+		],
+		hides: [
+			'Underwear_bra',
+			'Underwear_corset',
+		],
+	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

@@ -17,15 +17,10 @@ const ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'poseLimits',
 	'effects',
 	'attributes',
-	'requirements',
-	'hides',
 	'blockAddRemove',
 	'blockSelfAddRemove',
 	'blockModules',
 	'blockSelfModules',
-	'blockSlots',
-	'coverSlots',
-	'occupySlots',
 	'overrideColorKey',
 	'excludeFromColorInheritance',
 
@@ -74,6 +69,13 @@ function DefineRoomDeviceWearablePart(
 		logger.error(`Invalid size: Only bodyparts can use the 'bodypart' size`);
 	}
 
+	// All room device parts must be marked as a room device
+	def.attributes ??= {};
+	def.attributes.provides ??= [];
+	if (!def.attributes.provides.includes('Room_device')) {
+		def.attributes.provides.unshift('Room_device');
+	}
+
 	ValidateAssetProperties(logger, '#', propertiesValidationMetadata, def);
 
 	if (!definitionValid) {
@@ -87,12 +89,6 @@ function DefineRoomDeviceWearablePart(
 		id,
 		hasGraphics: def.graphics !== undefined,
 	};
-
-	// All room device parts must be marked as a room device
-	asset.attributes ??= [];
-	if (!asset.attributes.includes('Room_device')) {
-		asset.attributes.unshift('Room_device');
-	}
 
 	// Load and verify graphics
 	if (def.graphics) {

@@ -19,10 +19,12 @@ DefineAsset({
 			minAlpha: 0.1,
 		},
 	},
-	attributes: [
-		'Clothing',
-		'Clothing_upper',
-	],
+	attributes: {
+		provides: [
+			'Clothing',
+			'Clothing_upper',
+		],
+	},
 	modules: {
 		nylon: {
 			type: 'typed',

@@ -12,13 +12,15 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
-	attributes: [
-		'Restraint',
-		'Accessory',
-	],
-	requirements: [
-		'Collar_front_ring',
-	],
+	attributes: {
+		provides: [
+			'Restraint',
+			'Accessory',
+		],
+		requires: [
+			'Collar_front_ring',
+		],
+	},
 	modules: {
 		lock: {
 			type: 'lockSlot',

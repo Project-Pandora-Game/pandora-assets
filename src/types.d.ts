@@ -16,7 +16,6 @@ interface AssetRepoExtraArgs {
 	bones: AllBones;
 	bodyparts: import('./bodyparts').BodypartName;
 	attributes: import('./attributes').AttributeNames;
-	slots: import('./slots').AssetSlotNames;
 	colorGroups: import('./colorGroups').ColorGroupNames;
 }
 

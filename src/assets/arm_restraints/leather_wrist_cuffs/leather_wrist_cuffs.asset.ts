@@ -21,11 +21,13 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
-	attributes: [
-		'Restraint',
-		'Restraint_arms',
-		'Wrist_cuffs',
-	],
+	attributes: {
+		provides: [
+			'Restraint',
+			'Restraint_arms',
+			'Wrist_cuffs',
+		],
+	},
 	modules: {
 		lock: {
 			type: 'lockSlot',
@@ -38,7 +40,9 @@ DefineAsset({
 			type: 'lockSlot',
 			name: 'Lock for cuff chains',
 			occupiedProperties: {
-				requirements: ['Wrist_cuffs_chain'],
+				attributes: {
+					requires: ['Wrist_cuffs_chain'], // TODO: Use flags
+				},
 			},
 		},
 		cuffState: {
@@ -118,9 +122,11 @@ DefineAsset({
 								},
 							],
 						},
-						attributes: [
-							'Wrist_cuffs_chain',
-						],
+						attributes: {
+							provides: [
+								'Wrist_cuffs_chain',
+							],
+						},
 					},
 				},
 			],

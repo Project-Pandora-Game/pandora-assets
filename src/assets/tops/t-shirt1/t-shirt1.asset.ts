@@ -13,10 +13,12 @@ DefineAsset({
 			default: '#FFFF00',
 		},
 	},
-	attributes: [
-		'Clothing',
-		'Clothing_upper',
-	],
+	attributes: {
+		provides: [
+			'Clothing',
+			'Clothing_upper',
+		],
+	},
 	modules: {
 		prints: {
 			type: 'typed',

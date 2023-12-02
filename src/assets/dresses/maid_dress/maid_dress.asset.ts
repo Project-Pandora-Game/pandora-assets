@@ -25,13 +25,15 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
-	attributes: [
-		'Clothing',
-		'Clothing_upper',
-		'Clothing_lower',
-		'Clothing_large',
-		'Restraint',
-	],
+	attributes: {
+		provides: [
+			'Clothing',
+			'Clothing_upper',
+			'Clothing_lower',
+			'Clothing_large',
+			'Restraint',
+		],
+	},
 	modules: {
 		lock: {
 			type: 'lockSlot',

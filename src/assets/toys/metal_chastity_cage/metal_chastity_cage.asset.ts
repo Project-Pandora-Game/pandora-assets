@@ -8,11 +8,13 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
-	attributes: [
-		'Restraint',
-		'Chastity',
-	],
-	requirements: ['Penis'],
+	attributes: {
+		provides: [
+			'Restraint',
+			'Chastity',
+		],
+		requires: ['Penis'],
+	},
 	modules: {
 		lock: {
 			type: 'lockSlot',
@@ -35,14 +37,18 @@ DefineAsset({
 					id: 'matte',
 					name: 'Matte Cage',
 					properties: {
-						requirements: ['Penis_flaccid'],
+						attributes: {
+							requires: ['Penis_flaccid'],
+						},
 					},
 				},
 				{
 					id: 'chrome',
 					name: 'Chrome Cage',
 					properties: {
-						requirements: ['Penis_flaccid'],
+						attributes: {
+							requires: ['Penis_flaccid'],
+						},
 					},
 				},
 			],

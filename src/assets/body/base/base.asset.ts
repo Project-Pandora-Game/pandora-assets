@@ -19,9 +19,11 @@ DefineAsset({
 			breasts: [[-180, -180], [-150, -150], [-70, -70], [0, 0], [100, 100], [180, 180]],
 		},
 	},
-	attributes: [
-		'Body_base',
-	],
+	attributes: {
+		provides: [
+			'Body_base',
+		],
+	},
 	ownership: {
 		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',
 		credits: ['Titania', 'Jomshir', 'ClaudiaMia'],

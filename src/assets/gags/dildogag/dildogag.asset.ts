@@ -14,14 +14,25 @@ DefineAsset({
 			default: '#444444',
 		},
 	},
-	attributes: [
-		'Restraint',
-		'Restraint_mouth',
-	],
-	requirements: [
-		'Mouth_open_wide',
-		'!Mouth_tongue_out',
-	],
+	attributes: {
+		provides: [
+			'Restraint',
+			'Restraint_mouth',
+			'Mouth_item',
+			'Mouth_insert',
+			'Mouth_insert_deep',
+			'Mouth_cover',
+		],
+		requires: [
+			'Mouth_open_wide',
+			'!Mouth_tongue_out',
+			'!Mouth_protruding',
+			'!Mouth_cover',
+		],
+		covers: [
+			'Mouth_item',
+		],
+	},
 	modules: {
 		lock: {
 			type: 'lockSlot',
@@ -55,12 +66,6 @@ DefineAsset({
 		throatBreath: 4,
 		coherency: 7,
 		stimulus: 6,
-	},
-	coverSlots: ['mouth', 'outsideMouthArea'],
-	blockSlots: ['mouth'],
-	occupySlots: {
-		'outsideMouthArea': 1,
-		'mouth': 9,
 	},
 	chat: {
 		actionAdd: 'SOURCE_CHARACTER pushed a Dildo Gag into TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth, strapping it tight.',

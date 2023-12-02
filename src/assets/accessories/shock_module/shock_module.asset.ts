@@ -12,10 +12,12 @@ DefineAsset({
 			default: '#AAAAAA',
 		},
 	},
-	attributes: ['Accessory'],
-	requirements: [
-		'Collar',
-	],
+	attributes: {
+		provides: ['Accessory'],
+		requires: [
+			'Collar',
+		],
+	},
 	modules: {
 		lock: {
 			type: 'lockSlot',

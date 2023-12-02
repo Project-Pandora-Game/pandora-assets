@@ -10,9 +10,11 @@ DefineAsset({
 			group: 'skin',
 		},
 	},
-	attributes: [
-		'Ears',
-	],
+	attributes: {
+		provides: [
+			'Ears',
+		],
+	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['Titania', 'Jomshir', 'ClaudiaMia'],

@@ -16,7 +16,6 @@ import { RoomDatabase } from './tools/roomDatabase';
 import { LoadBackgroundTags, LoadBackgrounds } from './backgrounds/backgrounds';
 import { LoadAttributeNameValidation, LoadAttributes } from './attributes';
 import { APPEARANCE_RANDOMIZATION_CONFIG } from './presets';
-import { ASSET_SLOTS } from './slots';
 import { GlobalDefineRoomDeviceAsset } from './tools/definitionRoomDevice';
 import { GlobalDefineLockAsset } from './tools/definitionLock';
 
@@ -144,7 +143,6 @@ async function Run() {
 
 	const definitions: AssetsDefinitionFile = {
 		assets: AssetDatabase.export(),
-		assetSlots: ASSET_SLOTS,
 		bones: boneDefinition,
 		posePresets: POSE_PRESETS,
 		bodyparts: BODYPARTS,

@@ -10,9 +10,11 @@ DefineAsset({
 			default: '#FCB6B4',
 		},
 	},
-	attributes: [
-		'Mouth',
-	],
+	attributes: {
+		provides: [
+			'Mouth',
+		],
+	},
 	modules: {
 		mouth: {
 			type: 'typed',
@@ -48,37 +50,45 @@ DefineAsset({
 					id: 'laugh',
 					name: 'Open',
 					properties: {
-						attributes: [
-							'Mouth_open_wide',
-							'Mouth_open_teeth',
-						],
+						attributes: {
+							provides: [
+								'Mouth_open_wide',
+								'Mouth_open_teeth',
+							],
+						},
 					},
 				},
 				{
 					id: 'open',
 					name: 'Open Wide',
 					properties: {
-						attributes: ['Mouth_open_wide'],
+						attributes: {
+							provides: ['Mouth_open_wide'],
+						},
 					},
 				},
 				{
 					id: 'tongue',
 					name: 'Tongue Out',
 					properties: {
-						attributes: [
-							'Mouth_tongue_out',
-							'Mouth_open_wide',
-						],
+						attributes: {
+							provides: [
+								'Mouth_tongue_out',
+								'Mouth_open_wide',
+							],
+						},
 					},
 				},
 				{
 					id: 'tongueLong',
 					name: 'Tongue Out Fully',
 					properties: {
-						attributes: [
-							'Mouth_tongue_out',
-							'Mouth_open_wide',
-						],
+						attributes: {
+							provides: [
+								'Mouth_tongue_out',
+								'Mouth_open_wide',
+							],
+						},
 					},
 				},
 				{

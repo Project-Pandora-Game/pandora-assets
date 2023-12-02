@@ -10,9 +10,11 @@ DefineAsset({
 			minAlpha: 0.6,
 		},
 	},
-	attributes: [
-		'Legwear',
-	],
+	attributes: {
+		provides: [
+			'Legwear',
+		],
+	},
 	modules: {
 		pantiesState: {
 			type: 'typed',

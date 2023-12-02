@@ -26,11 +26,13 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
-	attributes: [
-		'Restraint',
-		'Restraint_legs',
-		'Ankle_cuffs',
-	],
+	attributes: {
+		provides: [
+			'Restraint',
+			'Restraint_legs',
+			'Ankle_cuffs',
+		],
+	},
 	modules: {
 		lock: {
 			type: 'lockSlot',
@@ -43,7 +45,9 @@ DefineAsset({
 			type: 'lockSlot',
 			name: 'Lock for cuff chains',
 			occupiedProperties: {
-				requirements: ['Ankle_cuffs_chain'],
+				attributes: {
+					requires: ['Ankle_cuffs_chain'], // TODO: Use flags
+				},
 			},
 		},
 		cuffState: {
@@ -84,9 +88,11 @@ DefineAsset({
 								},
 							],
 						},
-						attributes: [
-							'Ankle_cuffs_chain',
-						],
+						attributes: {
+							provides: [
+								'Ankle_cuffs_chain',
+							],
+						},
 					},
 				},
 				{
@@ -100,9 +106,11 @@ DefineAsset({
 							},
 							legs: 'standing',
 						},
-						attributes: [
-							'Ankle_cuffs_chain',
-						],
+						attributes: {
+							provides: [
+								'Ankle_cuffs_chain',
+							],
+						},
 						effects: {
 							blockRoomMovement: true,
 							blockRoomLeave: true,
