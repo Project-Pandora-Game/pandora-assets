@@ -9,7 +9,10 @@ DefineAsset({
 		},
 	},
 	attributes: {
-		provides: ['Toy'],
+		provides: [
+			'Vagina_item',
+			'Toy',
+		],
 		requires: ['Vagina_spread'],
 	},
 	modules: {

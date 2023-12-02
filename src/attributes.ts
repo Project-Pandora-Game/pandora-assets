@@ -1,5 +1,5 @@
 import { cloneDeep } from 'lodash';
-import { AssetAttributeDefinition, AttributeNameSchema, SCHEME_OVERRIDE } from 'pandora-common';
+import { AssetAttributeDefinition, AttributeNameSchema, GetLogger, SCHEME_OVERRIDE } from 'pandora-common';
 import { join } from 'path';
 import { SRC_DIR } from './constants';
 import { SetCurrentContext } from './tools';
@@ -8,7 +8,7 @@ import { ZodIssueCode } from 'zod';
 
 //#region Attribute definitions - an attribute defines a role
 
-export const ATTRIBUTES_DEFINITION = {
+const ATTRIBUTES_DEFINITION_BASE = {
 	// Bodypart attributes
 	Body_base: {
 		name: 'Base body',
@@ -59,6 +59,7 @@ export const ATTRIBUTES_DEFINITION = {
 			tab: 'body',
 		},
 		icon: 'hair_front',
+		parentAttributes: ['Hair'],
 	},
 	Hair_back: {
 		name: 'Back hair',
@@ -67,6 +68,7 @@ export const ATTRIBUTES_DEFINITION = {
 			tab: 'body',
 		},
 		icon: 'hair_back',
+		parentAttributes: ['Hair'],
 	},
 	Hair_extension: {
 		name: 'Hair extension',
@@ -75,6 +77,7 @@ export const ATTRIBUTES_DEFINITION = {
 			tab: 'body',
 		},
 		icon: 'hair_extension',
+		parentAttributes: ['Hair'],
 	},
 	Eyebrows: {
 		name: 'Eyebrows',
@@ -111,14 +114,17 @@ export const ATTRIBUTES_DEFINITION = {
 	Mouth_open_wide: {
 		name: 'Wide open mouth',
 		description: 'A wide open mouth',
+		parentAttributes: ['Mouth'],
 	},
 	Mouth_open_teeth: {
 		name: 'Wide open mouth showing teeth',
 		description: 'A wide open mouth showing teeth',
+		parentAttributes: ['Mouth'],
 	},
 	Mouth_tongue_out: {
 		name: 'Tongue out',
 		description: 'A wide open mouth with its tongue out',
+		parentAttributes: ['Mouth'],
 	},
 	Sex: {
 		name: 'Sex',
@@ -128,22 +134,27 @@ export const ATTRIBUTES_DEFINITION = {
 	Vagina: {
 		name: 'Vagina',
 		description: 'A female sexual organ',
+		parentAttributes: ['Sex'],
 	},
 	Vagina_spread: {
 		name: 'Spread vagina',
 		description: 'A spread female sex',
+		parentAttributes: ['Vagina'],
 	},
 	Penis: {
 		name: 'Penis',
 		description: 'A male sexual organ',
+		parentAttributes: ['Sex'],
 	},
 	Penis_flaccid: {
 		name: 'Flaccid Penis',
 		description: 'A flaccid male sexual organ',
+		parentAttributes: ['Penis'],
 	},
 	Penis_erect: {
 		name: 'Erect Penis',
 		description: 'An erect male sexual organ',
+		parentAttributes: ['Penis'],
 	},
 	// Items or attachment points from items
 	Clothing: {
@@ -158,6 +169,7 @@ export const ATTRIBUTES_DEFINITION = {
 			excludeAttributes: ['Clothing_large', 'Clothing_outer'],
 		},
 		icon: 'upper',
+		parentAttributes: ['Clothing'],
 	},
 	Clothing_lower: {
 		name: 'Lower clothing',
@@ -167,6 +179,7 @@ export const ATTRIBUTES_DEFINITION = {
 			excludeAttributes: ['Clothing_large', 'Clothing_outer'],
 		},
 		icon: 'lower',
+		parentAttributes: ['Clothing'],
 	},
 	Clothing_large: {
 		name: 'Large clothing',
@@ -176,6 +189,7 @@ export const ATTRIBUTES_DEFINITION = {
 			excludeAttributes: ['Clothing_outer'],
 		},
 		icon: 'dress',
+		parentAttributes: ['Clothing'],
 	},
 	Clothing_outer: {
 		name: 'Outer clothing',
@@ -184,6 +198,7 @@ export const ATTRIBUTES_DEFINITION = {
 			tab: 'item',
 		},
 		icon: 'outer',
+		parentAttributes: ['Clothing'],
 	},
 	Underwear: {
 		name: 'Underwear',
@@ -192,22 +207,27 @@ export const ATTRIBUTES_DEFINITION = {
 			tab: 'item',
 		},
 		icon: 'underwear',
+		parentAttributes: ['Clothing'],
 	},
 	Underwear_bra: {
 		name: 'Bra',
 		description: 'A bra',
+		parentAttributes: ['Underwear'],
 	},
 	Underwear_panties: {
 		name: 'Panties',
 		description: 'A pair of panties',
+		parentAttributes: ['Underwear'],
 	},
 	Underwear_corset: {
 		name: 'Corset',
 		description: 'A corset',
+		parentAttributes: ['Underwear'],
 	},
 	Underwear_pants: {
 		name: 'Underpants',
 		description: 'A pair of underpants, briefs, or shorts',
+		parentAttributes: ['Underwear'],
 	},
 	Fantasy: {
 		name: 'Fantasy',
@@ -216,10 +236,12 @@ export const ATTRIBUTES_DEFINITION = {
 	Fantasy_ears: {
 		name: 'Fantasy ears',
 		description: 'A pair of animal or fantasy ears',
+		parentAttributes: ['Fantasy'],
 	},
 	Fantasy_tail: {
 		name: 'Fantasy tail',
 		description: 'An animal or fantasy tail',
+		parentAttributes: ['Fantasy'],
 	},
 	Facewear: {
 		name: 'Facewear',
@@ -232,10 +254,12 @@ export const ATTRIBUTES_DEFINITION = {
 	Facewear_mask: {
 		name: 'Mask',
 		description: 'A mask',
+		parentAttributes: ['Facewear'],
 	},
 	Facewear_glasses: {
 		name: 'Glasses',
 		description: 'A pair of glasses',
+		parentAttributes: ['Facewear'],
 	},
 	Accessory: {
 		name: 'Accessory',
@@ -272,6 +296,7 @@ export const ATTRIBUTES_DEFINITION = {
 	Headgear_hood: {
 		name: 'Hood',
 		description: 'A hood',
+		parentAttributes: ['Headgear'],
 	},
 	Gloves: {
 		name: 'Gloves',
@@ -296,10 +321,12 @@ export const ATTRIBUTES_DEFINITION = {
 			tab: 'item',
 		},
 		icon: 'restraint_arms',
+		parentAttributes: ['Restraint'],
 	},
 	Wrist_cuffs: {
 		name: 'Wrist cuffs',
 		description: 'A pair of wrist cuffs',
+		parentAttributes: ['Restraint_arms'],
 	},
 	Restraint_legs: {
 		name: 'Leg restraint',
@@ -308,10 +335,12 @@ export const ATTRIBUTES_DEFINITION = {
 			tab: 'item',
 		},
 		icon: 'restraint_legs',
+		parentAttributes: ['Restraint'],
 	},
 	Ankle_cuffs: {
 		name: 'Ankle cuffs',
 		description: 'A pair of ankle cuffs',
+		parentAttributes: ['Restraint_legs'],
 	},
 	Restraint_eyes: {
 		name: 'Sight restraint',
@@ -320,6 +349,7 @@ export const ATTRIBUTES_DEFINITION = {
 			tab: 'item',
 		},
 		icon: 'blindfold',
+		parentAttributes: ['Restraint'],
 	},
 	Restraint_ears: {
 		name: 'Hearing restraint',
@@ -328,6 +358,7 @@ export const ATTRIBUTES_DEFINITION = {
 			tab: 'item',
 		},
 		icon: 'headphones',
+		parentAttributes: ['Restraint'],
 	},
 	Toy: {
 		name: 'Toy',
@@ -340,6 +371,7 @@ export const ATTRIBUTES_DEFINITION = {
 	Toy_clamps_genital: {
 		name: 'Genital clamps',
 		description: 'A set of genital clamps',
+		parentAttributes: ['Toy'],
 	},
 
 	//#region Mouth items
@@ -354,19 +386,22 @@ export const ATTRIBUTES_DEFINITION = {
 			tab: 'item',
 		},
 		icon: 'gag',
-		// Subtype of Mouth_item
+		parentAttributes: ['Restraint', 'Mouth_item'],
 	},
 	Mouth_insert: {
 		name: 'An item inserted in the mouth',
 		description: 'An item that is inserted in the mouth (in the area between the lips)',
+		parentAttributes: ['Mouth_item'],
 	},
 	Mouth_insert_deep: {
 		name: 'An item inserted deep in the mouth',
 		description: 'An item that is inserted deep inside the mouth (in the area not usually visible from outside)',
+		parentAttributes: ['Mouth_item'],
 	},
 	Mouth_protruding: {
 		name: 'An item protruding outside of the mouth',
 		description: 'An item that is protruding outside of the mouth',
+		parentAttributes: ['Mouth_item'],
 	},
 	Mouth_cover: {
 		name: 'An item covering the mouth',
@@ -383,14 +418,17 @@ export const ATTRIBUTES_DEFINITION = {
 	Vagina_insert: {
 		name: 'An item inserted in the vagina',
 		description: 'An item that is inserted in the vagina (in the area between the lips)',
+		parentAttributes: ['Vagina_item'],
 	},
 	Vagina_insert_deep: {
 		name: 'An item inserted deep in the vagina',
 		description: 'An item that is inserted deep inside the vagina (in the area not usually visible from outside)',
+		parentAttributes: ['Vagina_item'],
 	},
 	Vagina_protruding: {
 		name: 'An item protruding outside of the vagina',
 		description: 'An item that is protruding outside of the vagina',
+		parentAttributes: ['Vagina_item'],
 	},
 	Vagina_cover: {
 		name: 'An item covering the vagina',
@@ -406,14 +444,17 @@ export const ATTRIBUTES_DEFINITION = {
 	Anus_insert: {
 		name: 'An item inserted in the anus',
 		description: 'An item that is inserted in the anus (in the area of the sphincter)',
+		parentAttributes: ['Anus_item'],
 	},
 	Anus_insert_deep: {
 		name: 'An item inserted deep in the anus',
 		description: 'An item that is inserted deep inside the anus (in the area not usually visible from outside)',
+		parentAttributes: ['Anus_item'],
 	},
 	Anus_protruding: {
 		name: 'An item protruding outside of the anus',
 		description: 'An item that is protruding outside of the anus',
+		parentAttributes: ['Anus_item'],
 	},
 	Anus_cover: {
 		name: 'An item covering the anus',
@@ -436,6 +477,7 @@ export const ATTRIBUTES_DEFINITION = {
 	Collar_front_ring: {
 		name: 'Collar ring',
 		description: 'A front ring on a collar',
+		parentAttributes: ['Collar'],
 	},
 	Chastity: {
 		name: 'Chastity',
@@ -467,16 +509,29 @@ export const ATTRIBUTES_DEFINITION = {
 		description: 'A lock',
 		icon: 'lock',
 	},
-} as const satisfies Record<string, AssetAttributeDefinition>;
+} as const satisfies Record<string, AssetRepoAttributeDefinition>;
 
 //#endregion
 
-export type AttributeNames = (keyof typeof ATTRIBUTES_DEFINITION) & string;
+export type AttributeNames = (keyof typeof ATTRIBUTES_DEFINITION_BASE) & string;
+export const ATTRIBUTES_DEFINITION: Readonly<Record<AttributeNames, AssetRepoAttributeDefinition>> = ATTRIBUTES_DEFINITION_BASE;
+
+type AssetRepoAttributeDefinition = AssetAttributeDefinition & {
+	parentAttributes?: readonly string[];
+};
 
 export function LoadAttributes(): Record<AttributeNames, AssetAttributeDefinition> {
-	const result: Record<AttributeNames, AssetAttributeDefinition> = cloneDeep(ATTRIBUTES_DEFINITION);
+	const logger = GetLogger('LoadAttributes');
+	const result: Record<AttributeNames, AssetRepoAttributeDefinition> = cloneDeep(ATTRIBUTES_DEFINITION);
+	const unknownAttributeLookup: Partial<Readonly<Record<string, AssetRepoAttributeDefinition>>> = result;
 
 	for (const [id, attribute] of Object.entries(result)) {
+		for (const parentAttribute of (attribute.parentAttributes ?? [])) {
+			if (unknownAttributeLookup[parentAttribute] == null) {
+				logger.error(`Attribute '${id}' has unknown parent '${parentAttribute}'`);
+			}
+		}
+
 		SetCurrentContext('attributes', id, join(SRC_DIR, 'icons'));
 		if (attribute.icon != null) {
 			attribute.icon = DefineResource(attribute.icon + '.svg').resultName;

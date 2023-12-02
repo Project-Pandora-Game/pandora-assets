@@ -9,7 +9,10 @@ DefineAsset({
 		},
 	},
 	attributes: {
-		provides: ['Toy'],
+		provides: [
+			'Anus_item',
+			'Toy',
+		],
 	},
 	modules: {
 		insertedPlug: {

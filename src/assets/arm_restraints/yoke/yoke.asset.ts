@@ -24,6 +24,7 @@ DefineAsset({
 	},
 	attributes: {
 		provides: [
+			'Collar',
 			'Restraint',
 			'Restraint_arms',
 		],

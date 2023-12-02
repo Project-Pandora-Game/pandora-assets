@@ -63,6 +63,7 @@ export function GlobalDefineAsset(def: IntermediatePersonalAssetDefinition): voi
 
 	const propertiesValidationMetadata: PropertiesValidationMetadata = {
 		getModuleNames: () => Object.keys(def.modules ?? {}),
+		getBaseAttributes: () => (def.attributes?.provides ?? []),
 	};
 
 	// Validate base properties

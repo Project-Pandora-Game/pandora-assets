@@ -55,7 +55,7 @@ export function ValidateTypedModule<TProperties, TPropertiesValidationMetadata>(
 		const variantCtx = `${context}.variants[${i}]`;
 
 		if (seenIds.has(variant.id)) {
-			logger.error(`Invalid module id: ${variantCtx} has duplicate id, all ids must be unique`);
+			logger.error(`Invalid module id:\n\t${variantCtx} has duplicate id, all ids must be unique`);
 		}
 		seenIds.add(variant.id);
 	}
@@ -67,7 +67,7 @@ export function ValidateTypedModule<TProperties, TPropertiesValidationMetadata>(
 		const variantCtx = `${context}.variants[${i}]`;
 
 		if (variant.default && i !== explicitDefault) {
-			logger.warning(`Invalid module config: ${variantCtx} is set as default, but earlier variant takes precedence`);
+			logger.warning(`Invalid module config:\n\t${variantCtx} is set as default, but earlier variant takes precedence`);
 		}
 
 		if (variant.properties !== undefined) {
@@ -79,7 +79,7 @@ export function ValidateTypedModule<TProperties, TPropertiesValidationMetadata>(
 				if (k === '_')
 					continue;
 				if (!seenIds.has(k)) {
-					logger.warning(`Invalid module config: ${variantCtx}.switchMessage: Unknown variant '${k}'`);
+					logger.warning(`Invalid module config:\n\t${variantCtx}.switchMessage: Unknown variant '${k}'`);
 				}
 			}
 		}

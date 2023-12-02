@@ -17,6 +17,7 @@ DefineAsset({
 	},
 	attributes: {
 		provides: [
+			'Clothing',
 			'Underwear',
 			'Underwear_corset',
 		],

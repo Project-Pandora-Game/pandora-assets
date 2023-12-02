@@ -77,6 +77,11 @@ function DefineRoomDeviceWearablePart(
 		def.attributes.provides.unshift('Room_device');
 	}
 
+	propertiesValidationMetadata = {
+		...propertiesValidationMetadata,
+		getBaseAttributes: () => (def.attributes?.provides ?? []),
+	};
+
 	ValidateAssetProperties(logger, '#', propertiesValidationMetadata, def);
 
 	if (!definitionValid) {
@@ -126,6 +131,7 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 
 	const propertiesValidationMetadata: RoomDevicePropertiesValidationMetadata = {
 		getModuleNames: () => Object.keys(def.modules ?? {}),
+		getBaseAttributes: () => [],
 		getSlotNames: () => Object.keys(def.slots),
 	};
 

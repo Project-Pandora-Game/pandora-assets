@@ -117,6 +117,7 @@ DefineAsset({
 						attributes: {
 							provides: [
 								'Restraint_mouth',
+								'Mouth_item',
 								'Mouth_insert',
 								'Mouth_insert_deep',
 								'Mouth_cover',
