@@ -23,6 +23,32 @@
 									"value": "up"
 								},
 								{
+									"module": "tool",
+									"operator": "=",
+									"value": "modern"
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "hammer_overlay.png",
+						"condition": [
+							[
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"module": "tool",
+									"operator": "=",
+									"value": "historic"
+								},
+								{
 									"view": "front"
 								}
 							]
@@ -57,6 +83,11 @@
 									"value": "up"
 								},
 								{
+									"module": "tool",
+									"operator": "=",
+									"value": "modern"
+								},
+								{
 									"view": "front"
 								}
 							]
@@ -71,6 +102,53 @@
 									"side": "right",
 									"operator": "=",
 									"value": "down"
+								},
+								{
+									"module": "tool",
+									"operator": "=",
+									"value": "modern"
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "hammer.png",
+						"condition": [
+							[
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"module": "tool",
+									"operator": "=",
+									"value": "historic"
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "hammer_down.png",
+						"condition": [
+							[
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"module": "tool",
+									"operator": "=",
+									"value": "historic"
 								},
 								{
 									"view": "front"
@@ -107,6 +185,32 @@
 									"value": "down"
 								},
 								{
+									"module": "tool",
+									"operator": "=",
+									"value": "modern"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					},
+					{
+						"image": "hammer_overlay_down.png",
+						"condition": [
+							[
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"module": "tool",
+									"operator": "=",
+									"value": "historic"
+								},
+								{
 									"view": "back"
 								}
 							]
@@ -141,6 +245,11 @@
 									"value": "up"
 								},
 								{
+									"module": "tool",
+									"operator": "=",
+									"value": "modern"
+								},
+								{
 									"view": "back"
 								}
 							]
@@ -155,6 +264,53 @@
 									"side": "right",
 									"operator": "=",
 									"value": "down"
+								},
+								{
+									"module": "tool",
+									"operator": "=",
+									"value": "modern"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					},
+					{
+						"image": "hammer.png",
+						"condition": [
+							[
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"module": "tool",
+									"operator": "=",
+									"value": "historic"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					},
+					{
+						"image": "hammer_down.png",
+						"condition": [
+							[
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"module": "tool",
+									"operator": "=",
+									"value": "historic"
 								},
 								{
 									"view": "back"
@@ -177,15 +333,28 @@
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "static",
 			"mirror": 0,
-			"colorizationKey": "box",
+			"colorizationKey": "box_m",
 			"image": {
 				"image": "construction_tool_box.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "tool",
+									"operator": "=",
+									"value": "historic"
+								}
+							]
+						]
+					}
+				]
 			},
 			"pointType": [
 				"static_l"
 			],
-			"name": "box"
+			"name": "box modern"
 		},
 		{
 			"x": 0,
@@ -205,6 +374,13 @@
 								{
 									"view": "back"
 								}
+							],
+							[
+								{
+									"module": "tool",
+									"operator": "=",
+									"value": "historic"
+								}
 							]
 						]
 					}
@@ -213,7 +389,7 @@
 			"pointType": [
 				"static_l"
 			],
-			"name": "box handle front"
+			"name": "box modern handle front"
 		},
 		{
 			"x": 0,
@@ -233,6 +409,13 @@
 								{
 									"view": "front"
 								}
+							],
+							[
+								{
+									"module": "tool",
+									"operator": "=",
+									"value": "historic"
+								}
 							]
 						]
 					}
@@ -241,7 +424,79 @@
 			"pointType": [
 				"static_l"
 			],
-			"name": "box handle back"
+			"name": "box modern handle back"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "ABOVE_ARM_LEFT",
+			"points": "static",
+			"colorizationKey": "box_w",
+			"mirror": 0,
+			"image": {
+				"image": "construction_tools_box_wood.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"view": "back"
+								}
+							],
+							[
+								{
+									"module": "tool",
+									"operator": "=",
+									"value": "modern"
+								}
+							]
+						]
+					}
+				]
+			},
+			"pointType": [
+				"static_l"
+			],
+			"name": "box wooden front"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "BELOW_ARM_LEFT",
+			"points": "static",
+			"colorizationKey": "box_w",
+			"mirror": 0,
+			"image": {
+				"image": "construction_tools_box_wood.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"view": "front"
+								}
+							],
+							[
+								{
+									"module": "tool",
+									"operator": "=",
+									"value": "modern"
+								}
+							]
+						]
+					}
+				]
+			},
+			"pointType": [
+				"static_l"
+			],
+			"name": "box wooden back"
 		}
 	]
 }

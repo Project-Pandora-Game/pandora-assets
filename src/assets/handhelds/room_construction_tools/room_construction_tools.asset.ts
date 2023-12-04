@@ -3,15 +3,36 @@ DefineAsset({
 	size: 'medium',
 	graphics: 'graphics.json',
 	colorization: {
-		box: {
-			name: 'Toolbox',
+		box_m: {
+			name: 'Metallic toolbox',
 			default: '#FF4244',
+		},
+		box_w: {
+			name: 'Wooden toolbox',
+			default: '#826154',
 		},
 	},
 	attributes: {
 		provides: ['Handheld'],
 		requires: ['!Mittens'],
 		hides: ['Handheld'],
+	},
+	modules: {
+		tool: {
+			type: 'typed',
+			name: 'Tool Type',
+			variants: [
+				{
+					id: 'modern',
+					name: 'Modern',
+					default: true,
+				},
+				{
+					id: 'historic',
+					name: 'Historic',
+				},
+			],
+		},
 	},
 	poseLimits: {
 		leftArm: {
@@ -69,6 +90,20 @@ DefineAsset({
 				part: 'used 3D model - toolbox',
 				source: 'https://skfb.ly/ovrqE',
 				copyrightHolder: 'DJHaski',
+				editedBy: 'ClaudiaMia',
+				license: 'CC BY',
+			},
+			{
+				part: 'used 3D model - hammer',
+				source: 'https://skfb.ly/oK6tS',
+				copyrightHolder: 'Harri Snellman',
+				editedBy: 'ClaudiaMia',
+				license: 'CC BY',
+			},
+			{
+				part: 'used 3D model - wooden toolbox',
+				source: 'https://skfb.ly/JIC8',
+				copyrightHolder: 'beyondmatter',
 				editedBy: 'ClaudiaMia',
 				license: 'CC BY',
 			},
