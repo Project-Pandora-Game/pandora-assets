@@ -9,7 +9,6 @@
 			"priority": "ABOVE_ARM_RIGHT",
 			"points": "handheld",
 			"mirror": 0,
-			"colorizationKey": "",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -44,7 +43,6 @@
 			"priority": "BELOW_ARM_RIGHT",
 			"points": "handheld",
 			"mirror": 0,
-			"colorizationKey": "",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -95,7 +93,6 @@
 			"priority": "BELOW_ARM_RIGHT",
 			"points": "handheld",
 			"mirror": 0,
-			"colorizationKey": "",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -130,7 +127,6 @@
 			"priority": "ABOVE_ARM_RIGHT",
 			"points": "handheld",
 			"mirror": 0,
-			"colorizationKey": "",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -199,7 +195,6 @@
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "static",
 			"mirror": 0,
-			"colorizationKey": "",
 			"image": {
 				"image": "construction_tool_handle_front.png",
 				"overrides": [
@@ -228,7 +223,6 @@
 			"priority": "BELOW_ARM_LEFT",
 			"points": "static",
 			"mirror": 0,
-			"colorizationKey": "",
 			"image": {
 				"image": "construction_tool_handle_back.png",
 				"overrides": [
