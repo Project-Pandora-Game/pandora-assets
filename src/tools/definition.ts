@@ -61,23 +61,6 @@ export function GlobalDefineAsset(def: IntermediatePersonalAssetDefinition): voi
 		logger.error(`Invalid color ribbon group: It must match one of the colorization groups.`);
 	}
 
-	const propertiesValidationMetadata: PropertiesValidationMetadata = {
-		getModuleNames: () => Object.keys(def.modules ?? {}),
-		getBaseAttributes: () => (def.attributes?.provides ?? []),
-	};
-
-	// Validate base properties
-	ValidateAssetProperties(logger, '#', propertiesValidationMetadata, def);
-
-	// Validate all modules
-	ValidateAllModules(logger, '#.modules', {
-		validateProperties: ValidateAssetProperties,
-		propertiesValidationMetadata,
-	}, def.modules);
-
-	// Validate ownership data
-	ValidateOwnershipData(def.ownership, logger, def.graphics != null);
-
 	if (!definitionValid) {
 		logger.error('Invalid asset definition, asset skipped');
 		return;
@@ -90,6 +73,24 @@ export function GlobalDefineAsset(def: IntermediatePersonalAssetDefinition): voi
 		colorization,
 		hasGraphics: def.graphics !== undefined,
 	};
+
+	const propertiesValidationMetadata: PropertiesValidationMetadata = {
+		getModuleNames: () => Object.keys(def.modules ?? {}),
+		getBaseAttributes: () => (def.attributes?.provides ?? []),
+	};
+
+	// Validate base properties
+	ValidateAssetProperties(logger, '#', propertiesValidationMetadata, def);
+
+	// Validate all modules
+	ValidateAllModules(logger, '#.modules', {
+		baseAssetDefinition: asset,
+		validateProperties: ValidateAssetProperties,
+		propertiesValidationMetadata,
+	}, def.modules);
+
+	// Validate ownership data
+	ValidateOwnershipData(def.ownership, logger, def.graphics != null);
 
 	// Load and verify graphics
 	if (def.graphics) {

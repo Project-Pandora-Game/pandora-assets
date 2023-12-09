@@ -135,12 +135,6 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 		getSlotNames: () => Object.keys(def.slots),
 	};
 
-	// Validate all modules
-	ValidateAllModules<RoomDeviceProperties<AssetRepoExtraArgs>, RoomDevicePropertiesValidationMetadata>(logger, '#.modules', {
-		validateProperties: ValidateRoomDeviceProperties,
-		propertiesValidationMetadata,
-	}, def.modules);
-
 	//#region Load slots
 
 	for (const [k, v] of Object.entries(def.slots)) {
@@ -199,9 +193,6 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 
 	//#endregion
 
-	// Validate ownership data
-	ValidateOwnershipData(def.ownership, logger, true);
-
 	if (!definitionValid) {
 		logger.error('Invalid asset definition, asset skipped');
 		return;
@@ -213,6 +204,16 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 		id,
 		slots,
 	};
+
+	// Validate all modules
+	ValidateAllModules<RoomDeviceProperties<AssetRepoExtraArgs>, RoomDevicePropertiesValidationMetadata>(logger, '#.modules', {
+		baseAssetDefinition: asset,
+		validateProperties: ValidateRoomDeviceProperties,
+		propertiesValidationMetadata,
+	}, def.modules);
+
+	// Validate ownership data
+	ValidateOwnershipData(def.ownership, logger, true);
 
 	asset.staticAttributes ??= [];
 	if (!asset.staticAttributes.includes('Room_device')) {

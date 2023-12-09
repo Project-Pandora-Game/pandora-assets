@@ -1,6 +1,9 @@
 import {
 	AssertNever,
+	AssetBaseDefinition,
 	AssetModuleDefinition,
+	AssetSizeMapping,
+	AssetType,
 	IsObject,
 	Logger,
 } from 'pandora-common';
@@ -9,6 +12,7 @@ import { IModuleConfigStorage } from 'pandora-common/dist/assets/modules/storage
 import { IModuleConfigTyped } from 'pandora-common/dist/assets/modules/typed';
 
 interface ModuleValidationMetadata<TProperties, TPropertiesValidationMetadata> {
+	baseAssetDefinition: AssetBaseDefinition<AssetType, AssetRepoExtraArgs>;
 	validateProperties: (logger: Logger, context: string, metadata: TPropertiesValidationMetadata, properties: TProperties) => void;
 	propertiesValidationMetadata: TPropertiesValidationMetadata;
 }
@@ -106,10 +110,16 @@ export function ValidateLockSlotModule<TProperties, TPropertiesValidationMetadat
 export function ValidateStorageModule<TProperties, TPropertiesValidationMetadata>(
 	logger: Logger,
 	context: string,
-	_metadata: ModuleValidationMetadata<TProperties, TPropertiesValidationMetadata>,
+	metadata: ModuleValidationMetadata<TProperties, TPropertiesValidationMetadata>,
 	moduleDefinition: IModuleConfigStorage,
 ): void {
 	if (!Number.isInteger(moduleDefinition.maxCount) || moduleDefinition.maxCount < 1) {
 		logger.error(`Invalid module config: ${context}.maxCount: Expected positive integer, found '${moduleDefinition.maxCount}'`);
+	}
+
+	const maxContentSize = AssetSizeMapping[moduleDefinition.maxAcceptedSize];
+	const assetSize = AssetSizeMapping[metadata.baseAssetDefinition.size];
+	if (!(maxContentSize < assetSize)) {
+		logger.error(`Invalid module config: ${context}.maxAcceptedSize:\n\tSize of accepted content must be strictly smaller than the asset itself ('${moduleDefinition.maxAcceptedSize}' >= '${metadata.baseAssetDefinition.size}')`);
 	}
 }
