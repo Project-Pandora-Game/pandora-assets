@@ -22,7 +22,14 @@ DefineAsset({
 			type: 'storage',
 			name: 'Bag contents',
 			maxCount: 10,
-			maxAcceptedSize: 'medium',
+			maxAcceptedSize: 'small',
+		},
+		lock: {
+			type: 'lockSlot',
+			name: 'Bag zipper lock',
+			lockedProperties: {
+				blockModules: ['content'],
+			},
 		},
 	},
 	ownership: {
