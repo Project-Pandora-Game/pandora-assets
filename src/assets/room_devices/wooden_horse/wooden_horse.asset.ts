@@ -54,7 +54,7 @@ DefineRoomDeviceAsset({
 					},
 				},
 				{
-					id: 'sitting',
+					id: 'forward',
 					name: 'Sitting on top',
 					properties: {
 						slotProperties: {
@@ -77,90 +77,8 @@ DefineRoomDeviceAsset({
 								},
 							},
 						},
-					},
-				},
-				{
-					id: 'chained_feet',
-					name: 'Tied feet',
-					properties: {
-						blockSlotsEnterLeave: ['character_slot'],
-						slotProperties: {
-							character_slot: {
-								poseLimits: {
-									bones: {
-										leg_r: -30,
-										leg_l: -29,
-										character_rotation: 0,
-									},
-									legs: 'standing',
-									view: 'front',
-								},
-								attributes: {
-									provides: ['Vagina_cover', 'Anus_cover'],
-									requires: [
-										'!Vagina_protruding',
-										'!Anus_protruding',
-										'Ankle_cuffs',
-									],
-								},
-							},
-						},
-					},
-				},
-				{
-					id: 'chained_collar',
-					name: 'Tied collar',
-					properties: {
-						blockSlotsEnterLeave: ['character_slot'],
-						slotProperties: {
-							character_slot: {
-								poseLimits: {
-									bones: {
-										leg_r: -30,
-										leg_l: -29,
-										character_rotation: 0,
-									},
-									legs: ['standing', 'kneeling'],
-									view: 'front',
-								},
-								attributes: {
-									provides: ['Vagina_cover', 'Anus_cover'],
-									requires: [
-										'!Vagina_protruding',
-										'!Anus_protruding',
-										'Collar_front_ring',
-									],
-								},
-							},
-						},
-					},
-				},
-				{
-					id: 'chained_both',
-					name: 'Tied feet and collar',
-					properties: {
-						blockSlotsEnterLeave: ['character_slot'],
-						slotProperties: {
-							character_slot: {
-								poseLimits: {
-									bones: {
-										leg_r: -30,
-										leg_l: -29,
-										character_rotation: 0,
-									},
-									legs: 'standing',
-									view: 'front',
-								},
-								attributes: {
-									provides: ['Vagina_cover', 'Anus_cover'],
-									requires: [
-										'!Vagina_protruding',
-										'!Anus_protruding',
-										'Ankle_cuffs',
-										'Collar_front_ring',
-									],
-								},
-							},
+						stateFlags: {
+							provides: ['sitting'],
 						},
 					},
 				},
@@ -188,32 +106,84 @@ DefineRoomDeviceAsset({
 								},
 							},
 						},
+						stateFlags: {
+							provides: ['sitting'],
+						},
 					},
 				},
+			],
+		},
+		leg_chain: {
+			type: 'typed',
+			name: 'Feet chains',
+			variants: [
 				{
-					id: 'chained_reverse',
-					name: 'Tied feet reverse',
+					id: 'none',
+					name: 'None',
+				},
+				{
+					id: 'chained',
+					name: 'Chained to the horse',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot'],
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
-									bones: {
-										leg_r: -29,
-										leg_l: -30,
-										character_rotation: 0,
-									},
 									legs: 'standing',
-									view: 'back',
-								},
-								attributes: {
-									provides: ['Vagina_cover', 'Anus_cover'],
-									requires: [
-										'!Vagina_protruding',
-										'!Anus_protruding',
-										'Ankle_cuffs',
+									options: [
+										{
+											view: 'front',
+											bones: {
+												leg_r: -30,
+												leg_l: -29,
+											},
+										},
+										{
+											view: 'back',
+											bones: {
+												leg_r: -29,
+												leg_l: -30,
+											},
+										},
 									],
 								},
+								attributes: {
+									requires: ['Ankle_cuffs'],
+								},
+							},
+						},
+						stateFlags: {
+							requires: {
+								sitting: 'Chains can only be used while sitting on the device',
+							},
+						},
+					},
+				},
+			],
+		},
+		collar_chain: {
+			type: 'typed',
+			name: 'Collar chain',
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+				},
+				{
+					id: 'chained',
+					name: 'Chained to the horse',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot'],
+						slotProperties: {
+							character_slot: {
+								attributes: {
+									requires: ['Collar_front_ring'],
+								},
+							},
+						},
+						stateFlags: {
+							requires: {
+								sitting: 'Chains can only be used while sitting on the device',
 							},
 						},
 					},
@@ -224,7 +194,7 @@ DefineRoomDeviceAsset({
 			type: 'lockSlot',
 			name: 'Chain locks',
 			lockedProperties: {
-				blockModules: ['position'],
+				blockModules: ['leg_chain', 'collar_chain'],
 			},
 		},
 	},
@@ -286,27 +256,17 @@ DefineRoomDeviceAsset({
 		},
 		{
 			type: 'sprite',
-			image: 'horse_chain_feet.png',
 			colorizationKey: 'chains',
+			image: '',
 			imageOverrides: [
 				{
-					image: '',
+					image: 'horse_chain_feet.png',
 					condition: [
 						[
 							{
-								module: 'position',
-								operator: '!=',
-								value: 'chained_feet',
-							},
-							{
-								module: 'position',
-								operator: '!=',
-								value: 'chained_both',
-							},
-							{
-								module: 'position',
-								operator: '!=',
-								value: 'chained_reverse',
+								module: 'leg_chain',
+								operator: '=',
+								value: 'chained',
 							},
 						],
 					],
@@ -315,22 +275,22 @@ DefineRoomDeviceAsset({
 		},
 		{
 			type: 'sprite',
-			image: 'horse_chain_collar.png',
 			colorizationKey: 'chains',
+			image: '',
 			imageOverrides: [
 				{
-					image: '',
+					image: 'horse_chain_collar.png',
 					condition: [
 						[
 							{
-								module: 'position',
-								operator: '!=',
-								value: 'chained_collar',
+								module: 'collar_chain',
+								operator: '=',
+								value: 'chained',
 							},
 							{
 								module: 'position',
-								operator: '!=',
-								value: 'chained_both',
+								operator: '=',
+								value: 'forward',
 							},
 						],
 					],
