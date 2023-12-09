@@ -18,6 +18,14 @@ DefineRoomDeviceAsset({
 			name: 'Chains',
 			default: '#FFFFFF',
 		},
+		stone: {
+			name: 'Stone weights',
+			default: '#C3CABD',
+		},
+		iron: {
+			name: 'Iron weights',
+			default: '#AAAAAA',
+		},
 	},
 	slots: {
 		character_slot: {
@@ -126,6 +134,124 @@ DefineRoomDeviceAsset({
 					name: 'Chained to the horse',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot'],
+						blockModules: ['position'],
+						slotProperties: {
+							character_slot: {
+								poseLimits: {
+									legs: 'standing',
+									options: [
+										{
+											view: 'front',
+											bones: {
+												leg_r: -30,
+												leg_l: -29,
+											},
+										},
+										{
+											view: 'back',
+											bones: {
+												leg_r: -29,
+												leg_l: -30,
+											},
+										},
+									],
+								},
+								attributes: {
+									requires: ['Ankle_cuffs'],
+								},
+							},
+						},
+						stateFlags: {
+							requires: {
+								sitting: 'Chains can only be used while sitting on the device',
+							},
+						},
+					},
+				},
+				{
+					id: 'weights_small',
+					name: 'Chained to small weights',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot'],
+						blockModules: ['position'],
+						slotProperties: {
+							character_slot: {
+								poseLimits: {
+									legs: 'standing',
+									options: [
+										{
+											view: 'front',
+											bones: {
+												leg_r: -30,
+												leg_l: -29,
+											},
+										},
+										{
+											view: 'back',
+											bones: {
+												leg_r: -29,
+												leg_l: -30,
+											},
+										},
+									],
+								},
+								attributes: {
+									requires: ['Ankle_cuffs'],
+								},
+							},
+						},
+						stateFlags: {
+							requires: {
+								sitting: 'Chains can only be used while sitting on the device',
+							},
+						},
+					},
+				},
+				{
+					id: 'weights_medium',
+					name: 'Chained to medium weights',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot'],
+						blockModules: ['position'],
+						slotProperties: {
+							character_slot: {
+								poseLimits: {
+									legs: 'standing',
+									options: [
+										{
+											view: 'front',
+											bones: {
+												leg_r: -30,
+												leg_l: -29,
+											},
+										},
+										{
+											view: 'back',
+											bones: {
+												leg_r: -29,
+												leg_l: -30,
+											},
+										},
+									],
+								},
+								attributes: {
+									requires: ['Ankle_cuffs'],
+								},
+							},
+						},
+						stateFlags: {
+							requires: {
+								sitting: 'Chains can only be used while sitting on the device',
+							},
+						},
+					},
+				},
+				{
+					id: 'weights_large',
+					name: 'Chained to large weights',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot'],
+						blockModules: ['position'],
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
@@ -174,6 +300,7 @@ DefineRoomDeviceAsset({
 					name: 'Chained to the horse',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot'],
+						blockModules: ['position'],
 						slotProperties: {
 							character_slot: {
 								attributes: {
@@ -190,11 +317,25 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		weights: {
+			type: 'typed',
+			name: 'Weight type',
+			variants: [
+				{
+					id: 'iron',
+					name: 'Iron balls',
+				},
+				{
+					id: 'stone',
+					name: 'Stones',
+				},
+			],
+		},
 		lock: {
 			type: 'lockSlot',
 			name: 'Chain locks',
 			lockedProperties: {
-				blockModules: ['leg_chain', 'collar_chain'],
+				blockModules: ['leg_chain', 'collar_chain', 'weights'],
 			},
 		},
 	},
@@ -222,6 +363,122 @@ DefineRoomDeviceAsset({
 			type: 'sprite',
 			image: 'horse_metal.png',
 			colorizationKey: 'parts',
+		},
+		{
+			type: 'sprite',
+			colorizationKey: 'iron',
+			image: '',
+			imageOverrides: [
+				{
+					image: 'horse_iron_big.png',
+					condition: [
+						[
+							{
+								module: 'leg_chain',
+								operator: '=',
+								value: 'weights_large',
+							},
+							{
+								module: 'weights',
+								operator: '=',
+								value: 'iron',
+							},
+						],
+					],
+				},
+				{
+					image: 'horse_iron_medium.png',
+					condition: [
+						[
+							{
+								module: 'leg_chain',
+								operator: '=',
+								value: 'weights_medium',
+							},
+							{
+								module: 'weights',
+								operator: '=',
+								value: 'iron',
+							},
+						],
+					],
+				},
+				{
+					image: 'horse_iron_small.png',
+					condition: [
+						[
+							{
+								module: 'leg_chain',
+								operator: '=',
+								value: 'weights_small',
+							},
+							{
+								module: 'weights',
+								operator: '=',
+								value: 'iron',
+							},
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'sprite',
+			colorizationKey: 'stone',
+			image: '',
+			imageOverrides: [
+				{
+					image: 'horse_stone_big.png',
+					condition: [
+						[
+							{
+								module: 'leg_chain',
+								operator: '=',
+								value: 'weights_large',
+							},
+							{
+								module: 'weights',
+								operator: '=',
+								value: 'stone',
+							},
+						],
+					],
+				},
+				{
+					image: 'horse_stone_medium.png',
+					condition: [
+						[
+							{
+								module: 'leg_chain',
+								operator: '=',
+								value: 'weights_medium',
+							},
+							{
+								module: 'weights',
+								operator: '=',
+								value: 'stone',
+							},
+						],
+					],
+				},
+				{
+					image: 'horse_stone_small.png',
+					condition: [
+						[
+							{
+								module: 'leg_chain',
+								operator: '=',
+								value: 'weights_small',
+							},
+							{
+								module: 'weights',
+								operator: '=',
+								value: 'stone',
+							},
+						],
+					],
+				},
+			],
 		},
 		{
 			type: 'slot',
@@ -267,6 +524,23 @@ DefineRoomDeviceAsset({
 								module: 'leg_chain',
 								operator: '=',
 								value: 'chained',
+							},
+						],
+					],
+				},
+				{
+					image: 'horse_chain_feet_short.png',
+					condition: [
+						[
+							{
+								module: 'leg_chain',
+								operator: '!=',
+								value: 'chained',
+							},
+							{
+								module: 'leg_chain',
+								operator: '!=',
+								value: 'none',
 							},
 						],
 					],
@@ -322,6 +596,20 @@ DefineRoomDeviceAsset({
 				part: 'used 3D model - top',
 				source: 'https://skfb.ly/6XCRD',
 				copyrightHolder: 'donnichols',
+				editedBy: 'ClaudiaMia',
+				license: 'CC BY',
+			},
+			{
+				part: 'used 3D model - stone',
+				source: 'https://skfb.ly/67zpP',
+				copyrightHolder: 'Xephira',
+				editedBy: 'ClaudiaMia',
+				license: 'CC BY',
+			},
+			{
+				part: 'used 3D model - iron ball',
+				source: 'https://skfb.ly/68wyW',
+				copyrightHolder: 'amitmaragaje1994',
 				editedBy: 'ClaudiaMia',
 				license: 'CC BY',
 			},
