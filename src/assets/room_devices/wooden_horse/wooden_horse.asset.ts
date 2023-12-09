@@ -25,6 +25,7 @@ DefineRoomDeviceAsset({
 			asset: {
 				name: 'Wooden horse',
 				size: 'huge',
+				graphics: 'horse.json',
 			},
 		},
 	},
@@ -35,7 +36,7 @@ DefineRoomDeviceAsset({
 			variants: [
 				{
 					id: 'none',
-					name: 'Standing behind',
+					name: 'Standing in front',
 					default: true,
 					properties: {
 						slotProperties: {
@@ -65,10 +66,14 @@ DefineRoomDeviceAsset({
 										character_rotation: 0,
 									},
 									legs: ['standing', 'kneeling'],
+									view: 'front',
 								},
 								attributes: {
 									provides: ['Vagina_cover', 'Anus_cover'],
-									requires: ['!Vagina_protruding', '!Anus_protruding'],
+									requires: [
+										'!Vagina_protruding',
+										'!Anus_protruding',
+									],
 								},
 							},
 						},
@@ -88,6 +93,7 @@ DefineRoomDeviceAsset({
 										character_rotation: 0,
 									},
 									legs: 'standing',
+									view: 'front',
 								},
 								attributes: {
 									provides: ['Vagina_cover', 'Anus_cover'],
@@ -115,6 +121,7 @@ DefineRoomDeviceAsset({
 										character_rotation: 0,
 									},
 									legs: ['standing', 'kneeling'],
+									view: 'front',
 								},
 								attributes: {
 									provides: ['Vagina_cover', 'Anus_cover'],
@@ -142,6 +149,7 @@ DefineRoomDeviceAsset({
 										character_rotation: 0,
 									},
 									legs: 'standing',
+									view: 'front',
 								},
 								attributes: {
 									provides: ['Vagina_cover', 'Anus_cover'],
@@ -156,8 +164,60 @@ DefineRoomDeviceAsset({
 						},
 					},
 				},
-				// IDEA: add a new state which needs a new LegsPoseSchema "laying_on_stomach"
-				// This pose would show the charcter reverse mounting the horse with the arms hanging down on the other side, hiding most of the upper body
+				{
+					id: 'reverse',
+					name: 'Sitting reverse',
+					properties: {
+						slotProperties: {
+							character_slot: {
+								poseLimits: {
+									bones: {
+										leg_r: -29,
+										leg_l: -30,
+										character_rotation: 0,
+									},
+									legs: ['standing', 'kneeling'],
+									view: 'back',
+								},
+								attributes: {
+									provides: ['Vagina_cover', 'Anus_cover'],
+									requires: [
+										'!Vagina_protruding',
+										'!Anus_protruding',
+									],
+								},
+							},
+						},
+					},
+				},
+				{
+					id: 'chained_reverse',
+					name: 'Tied feet reverse',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot'],
+						slotProperties: {
+							character_slot: {
+								poseLimits: {
+									bones: {
+										leg_r: -29,
+										leg_l: -30,
+										character_rotation: 0,
+									},
+									legs: 'standing',
+									view: 'back',
+								},
+								attributes: {
+									provides: ['Vagina_cover', 'Anus_cover'],
+									requires: [
+										'!Vagina_protruding',
+										'!Anus_protruding',
+										'Ankle_cuffs',
+									],
+								},
+							},
+						},
+					},
+				},
 			],
 		},
 		lock: {
@@ -177,70 +237,6 @@ DefineRoomDeviceAsset({
 			type: 'sprite',
 			image: 'horse_top_unused.png',
 			colorizationKey: 'top',
-			imageOverrides: [
-				{
-					image: '',
-					condition: [
-						[
-							{
-								module: 'position',
-								operator: '=',
-								value: 'none',
-							},
-						],
-					],
-				},
-			],
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot',
-			characterPosition: {
-				offsetX: 30,
-				offsetY: -108,
-				relativeScale: 0.92,
-			},
-			characterPositionOverrides: [
-				{
-					position: {
-						offsetX: 1,
-						offsetY: 38,
-						pivotOffset: {
-							x: 3,
-							y: 142,
-						},
-						disablePoseOffset: true,
-					},
-					condition: [
-						[
-							{
-								module: 'position',
-								operator: '!=',
-								value: 'none',
-							},
-						],
-					],
-				},
-			],
-		},
-		{
-			type: 'sprite',
-			image: 'horse_top_unused.png',
-			colorizationKey: 'top',
-			imageOverrides: [
-				{
-					image: '',
-					condition: [
-						[
-							{
-								module: 'position',
-								operator: '!=',
-								value: 'none',
-							},
-						],
-					],
-				},
-			],
 		},
 		{
 			type: 'sprite',
@@ -256,6 +252,37 @@ DefineRoomDeviceAsset({
 			type: 'sprite',
 			image: 'horse_metal.png',
 			colorizationKey: 'parts',
+		},
+		{
+			type: 'slot',
+			slot: 'character_slot',
+			characterPosition: {
+				offsetX: 50,
+				offsetY: 65,
+				relativeScale: 1.05,
+			},
+			characterPositionOverrides: [
+				{
+					position: {
+						offsetX: 0,
+						offsetY: 38,
+						pivotOffset: {
+							x: 0,
+							y: 142,
+						},
+						disablePoseOffset: true,
+					},
+					condition: [
+						[
+							{
+								module: 'position',
+								operator: '!=',
+								value: 'none',
+							},
+						],
+					],
+				},
+			],
 		},
 		{
 			type: 'sprite',
@@ -275,6 +302,11 @@ DefineRoomDeviceAsset({
 								module: 'position',
 								operator: '!=',
 								value: 'chained_both',
+							},
+							{
+								module: 'position',
+								operator: '!=',
+								value: 'chained_reverse',
 							},
 						],
 					],
