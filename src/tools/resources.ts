@@ -16,6 +16,8 @@ const MAX_SIZES = {
 	preview: 1 * 1024 * 1024,
 } as const satisfies Record<ImageCategory, number>;
 
+const SIZE_UNITS = ['B', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB'];
+
 const PREVIEW_SIZE = 256;
 
 const logger = GetLogger('Resources');
@@ -204,17 +206,13 @@ export function DefineResourceInline(name: string, value: string | Buffer, resul
 function CheckMaxSize(resource: Resource, name: string, category: ImageCategory) {
 	const maxBytes = MAX_SIZES[category];
 	if (resource.size > maxBytes) {
-		const size = ['iB', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB']
-			.reduce((s: number | string, quantity) => {
-				if (typeof s !== 'number')
-					return s;
-				if (s > 1024 && s % 1024 === 0)
-					return s / 1024;
-
-				return `${s}${quantity}`;
-			}, resource.size);
-		Assert(typeof size === 'string');
-		logger.warning(`Image '${name}' is larger than maximum allowed size of ${size}`);
+		let limitSize = maxBytes;
+		let unitIndex = 0;
+		while (limitSize >= 1024 && (limitSize % 1024) === 0 && unitIndex < (SIZE_UNITS.length - 1)) {
+			limitSize /= 1024;
+			unitIndex++;
+		}
+		logger.warning(`Image '${name}' is larger than maximum allowed size of ${limitSize} ${SIZE_UNITS[unitIndex]}`);
 	}
 }
 
