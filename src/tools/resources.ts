@@ -7,13 +7,16 @@ import { AssetSourcePath } from './context';
 import { WatchFile } from './watch';
 import sharp from 'sharp';
 
-export type ImageCategory = 'asset' | 'roomDevice' | 'background';
+export type ImageCategory = 'asset' | 'roomDevice' | 'background' | 'preview';
 
 const MAX_SIZES = {
 	asset: 1 * 1024 * 1024,
 	roomDevice: 4 * 1024 * 1024,
 	background: 4 * 1024 * 1024,
+	preview: 1 * 1024 * 1024,
 } as const satisfies Record<ImageCategory, number>;
+
+const PREVIEW_SIZE = 256;
 
 const logger = GetLogger('Resources');
 
@@ -155,6 +158,15 @@ class ImageResource extends FileResource implements IImageResource {
 		});
 		return name;
 	}
+
+	public addSizeCheck(exactWidth: number, exactHeight: number): void {
+		this.addProcess(async () => {
+			const { width, height } = await sharp(this.sourcePath).metadata();
+			if (width !== exactWidth || height !== exactHeight) {
+				logger.warning(`Image '${this.sourcePath}' has size ${width}x${height}, expected ${exactWidth}x${exactHeight}.`);
+			}
+		});
+	}
 }
 
 export function GetResourceBufferHash(value: Buffer): string {
@@ -245,6 +257,10 @@ export function DefineJpgResource(name: string, category: ImageCategory): string
 		throw new Error(`Resource ${name} is not a JPG file.`);
 	}
 	const resource = new ImageResource(baseName, category);
+
+	if (category === 'preview') {
+		resource.addSizeCheck(PREVIEW_SIZE, PREVIEW_SIZE);
+	}
 
 	return ProcessImageResource(resource, args);
 }

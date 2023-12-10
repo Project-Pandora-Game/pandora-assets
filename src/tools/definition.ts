@@ -31,6 +31,7 @@ const DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'chat',
 	'bodypart',
 	'modules',
+	'preview',
 ] as const satisfies readonly (keyof PersonalAssetDefinition)[];
 
 export type AssetDefinitionFallthroughProperties = (typeof DEFINITION_FALLTHROUGH_PROPERTIES)[number] & string;

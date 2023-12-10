@@ -30,6 +30,7 @@ const ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'size',
 	'chat',
 	'posePresets',
+	'preview',
 ] as const satisfies readonly (keyof RoomDeviceWearablePartAssetDefinition)[];
 
 export type RoomDeviceWearablePartAssetDefinitionFallthroughProperties = (typeof ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHROUGH_PROPERTIES)[number] & string;
@@ -42,6 +43,7 @@ const ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'modules',
 	'staticAttributes',
 	'posePresets',
+	'preview',
 
 	// Graphics definition
 	'colorization',
