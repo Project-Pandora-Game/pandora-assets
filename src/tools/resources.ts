@@ -9,20 +9,11 @@ import sharp from 'sharp';
 
 export type ImageCategory = 'asset' | 'roomDevice' | 'background';
 
-const MAX_SIZES: Record<ImageCategory, { bytes: number; text: string; }> = {
-	asset: {
-		bytes: 1 * 1024 * 1024,
-		text: '1MiB',
-	},
-	roomDevice: {
-		bytes: 4 * 1024 * 1024,
-		text: '4MiB',
-	},
-	background: {
-		bytes: 4 * 1024 * 1024,
-		text: '4MiB',
-	},
-};
+const MAX_SIZES = {
+	asset: 1 * 1024 * 1024,
+	roomDevice: 4 * 1024 * 1024,
+	background: 4 * 1024 * 1024,
+} as const satisfies Record<ImageCategory, number>;
 
 const logger = GetLogger('Resources');
 
@@ -199,9 +190,19 @@ export function DefineResourceInline(name: string, value: string | Buffer, resul
 }
 
 function CheckMaxSize(resource: Resource, name: string, category: ImageCategory) {
-	const maxSize = MAX_SIZES[category];
-	if (resource.size > maxSize.bytes) {
-		logger.warning(`Image '${name}' is larger than maximum allowed size of ${maxSize.text}.`);
+	const maxBytes = MAX_SIZES[category];
+	if (resource.size > maxBytes) {
+		const size = ['iB', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB']
+			.reduce((s: number | string, quantity) => {
+				if (typeof s !== 'number')
+					return s;
+				if (s > 1024 && s % 1024 === 0)
+					return s / 1024;
+
+				return `${s}${quantity}`;
+			}, resource.size);
+		Assert(typeof size === 'string');
+		logger.warning(`Image '${name}' is larger than maximum allowed size of ${size}`);
 	}
 }
 
