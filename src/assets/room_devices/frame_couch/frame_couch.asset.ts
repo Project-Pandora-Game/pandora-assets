@@ -4,44 +4,41 @@ DefineRoomDeviceAsset({
 	colorization: {
 		frame: {
 			name: 'Frame',
-			default: '#C9CBCA',
+			default: '#735448',
 		},
 		cushion: {
 			name: 'Couch cushion',
-			default: '#800020',
+			default: '#6A84AB',
+		},
+		ropes: {
+			name: 'Ropes',
+			default: '#F1CA96',
 		},
 	},
 	slots: {
-		character_slot_inside: {
+		character_slot_top: {
 			name: 'Lying on top',
 			asset: {
-				name: 'Cage Bench',
+				name: 'Frame Couch',
 				size: 'huge',
 				poseLimits: {
 					bones: {
-						arm_l: [[74, 82]],
-						arm_r: [[74, 82]],
-						elbow_l: [[22, 109]],
-						elbow_r: [[22, 109]],
-						leg_r: [[-10, 10]],
-						leg_l: [[-10, 10]],
-						character_rotation: 90,
+						character_rotation: -90,
 					},
-					legs: 'kneeling',
-					view: 'front',
+					legs: 'standing',
 				},
 			},
 		},
 		character_slot_sitting_left: {
 			name: 'Sitting on the left',
 			asset: {
-				name: 'Cage Bench',
+				name: 'Frame Couch',
 				size: 'huge',
 				poseLimits: {
 					bones: {
 						leg_r: [[-30, 10]],
 						leg_l: [[-30, 10]],
-						character_rotation: 0,
+						character_rotation: [[-13, 13]],
 					},
 					legs: 'sitting',
 					view: 'front',
@@ -51,13 +48,13 @@ DefineRoomDeviceAsset({
 		character_slot_sitting_middle: {
 			name: 'Sitting in the middle',
 			asset: {
-				name: 'Cage Bench',
+				name: 'Frame Couch',
 				size: 'huge',
 				poseLimits: {
 					bones: {
 						leg_r: [[-30, 10]],
 						leg_l: [[-30, 10]],
-						character_rotation: 0,
+						character_rotation: [[-13, 13]],
 					},
 					legs: 'sitting',
 					view: 'front',
@@ -67,13 +64,13 @@ DefineRoomDeviceAsset({
 		character_slot_sitting_right: {
 			name: 'Sitting on the right',
 			asset: {
-				name: 'Cage Bench',
+				name: 'Frame Couch',
 				size: 'huge',
 				poseLimits: {
 					bones: {
 						leg_r: [[-30, 10]],
 						leg_l: [[-30, 10]],
-						character_rotation: 0,
+						character_rotation: [[-13, 13]],
 					},
 					legs: 'sitting',
 					view: 'front',
@@ -82,103 +79,110 @@ DefineRoomDeviceAsset({
 		},
 	},
 	modules: {
-		door: {
+		ropes: {
 			type: 'typed',
-			name: 'Door',
+			name: 'Frame ropes',
 			variants: [
 				{
-					id: 'closed',
-					name: 'Closed',
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'tied_arms',
+					name: 'Tied (Arms)',
 					properties: {
-						blockSlotsEnterLeave: ['character_slot_inside'],
+						blockSlotsEnterLeave: ['character_slot_top'],
+						slotProperties: {
+							character_slot_top: {
+								poseLimits: {
+									bones: {
+										arm_l: -86,
+										arm_r: -86,
+										elbow_l: -43,
+										elbow_r: -43,
+									},
+									arms: {
+										rotation: 'up',
+										position: 'back',
+									},
+								},
+								effects: {
+									blockHands: true,
+								},
+							},
+						},
 					},
 				},
 				{
-					id: 'open',
-					name: 'Open',
-					default: true,
+					id: 'tied_legs',
+					name: 'Tied (Legs)',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_top'],
+						slotProperties: {
+							character_slot_top: {
+								poseLimits: {
+									bones: {
+										leg_l: 2,
+										leg_r: 2,
+									},
+								},
+							},
+						},
+					},
+				},
+				{
+					id: 'tied_both',
+					name: 'Tied (Arms+Legs)',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_top'],
+						slotProperties: {
+							character_slot_top: {
+								poseLimits: {
+									bones: {
+										arm_l: -86,
+										arm_r: -86,
+										elbow_l: -43,
+										elbow_r: -43,
+										leg_l: 2,
+										leg_r: 2,
+									},
+									arms: {
+										rotation: 'up',
+										position: 'back',
+									},
+								},
+								effects: {
+									blockHands: true,
+								},
+							},
+						},
+					},
 				},
 			],
 		},
 	},
 	pivot: {
-		x: 529,
-		y: 680,
+		x: 900,
+		y: 870,
 	},
 	graphicsLayers: [
 		{
 			type: 'sprite',
-			image: 'bench_open.png',
-			colorizationKey: 'cage',
+			image: 'couch_frame.png',
+			colorizationKey: 'frame',
 		},
 		{
 			type: 'sprite',
-			image: '',
-			imageOverrides: [
-				{
-					image: '',
-					condition: [
-						[
-							{
-								module: 'door',
-								operator: '=',
-								value: 'open',
-							},
-						],
-					],
-				},
-			],
-			colorizationKey: 'cage',
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot_inside',
-			characterPosition: {
-				offsetX: 0,
-				offsetY: -100,
-				disablePoseOffset: true,
-				relativeScale: 0.96,
-				pivotOffset: {
-					x: 0,
-					y: -690,
-				},
-			},
-		},
-		{
-			type: 'sprite',
-			image: 'bench_overlay.png',
-			colorizationKey: 'cage',
-		},
-		{
-			type: 'sprite',
-			image: 'bench_cushion.png',
+			image: 'couch_cushion.png',
 			colorizationKey: 'cushion',
-		},
-		{
-			type: 'sprite',
-			image: 'bench_curtain.png',
-			colorizationKey: 'curtain',
-			imageOverrides: [
-				{
-					image: '',
-					condition: [
-						[
-							{
-								module: 'curtain',
-								operator: '=',
-								value: 'open',
-							},
-						],
-					],
-				},
-			],
 		},
 		{
 			type: 'slot',
 			slot: 'character_slot_sitting_left',
 			characterPosition: {
-				offsetX: -280,
-				offsetY: 64,
+				offsetX: -360,
+				offsetY: 120,
 				relativeScale: 1.08,
 			},
 		},
@@ -187,7 +191,7 @@ DefineRoomDeviceAsset({
 			slot: 'character_slot_sitting_middle',
 			characterPosition: {
 				offsetX: 0,
-				offsetY: 64,
+				offsetY: 120,
 				relativeScale: 1.08,
 			},
 		},
@@ -195,10 +199,76 @@ DefineRoomDeviceAsset({
 			type: 'slot',
 			slot: 'character_slot_sitting_right',
 			characterPosition: {
-				offsetX: 280,
-				offsetY: 64,
+				offsetX: 360,
+				offsetY: 120,
 				relativeScale: 1.08,
 			},
+		},
+		{
+			type: 'slot',
+			slot: 'character_slot_top',
+			characterPosition: {
+				offsetX: 0,
+				offsetY: -290,
+				disablePoseOffset: true,
+				relativeScale: 0.96,
+				pivotOffset: {
+					x: 0,
+					y: -590,
+				},
+			},
+		},
+		{
+			type: 'sprite',
+			image: '',
+			imageOverrides: [
+				{
+					image: 'couch_rope_feet.png',
+					condition: [
+						[
+							{
+								module: 'ropes',
+								operator: '=',
+								value: 'tied_legs',
+							},
+						],
+						[
+							{
+								module: 'ropes',
+								operator: '=',
+								value: 'tied_both',
+							},
+						],
+					],
+				},
+			],
+			colorizationKey: 'ropes',
+		},
+		{
+			type: 'sprite',
+			image: '',
+			imageOverrides: [
+				{
+					image: 'couch_rope_arms.png',
+					condition: [
+						[
+							{
+								module: 'ropes',
+								operator: '=',
+								value: 'tied_arms',
+							},
+						],
+						[
+							{
+								module: 'ropes',
+								operator: '=',
+								value: 'tied_both',
+							},
+						],
+					],
+				},
+			],
+			colorizationKey: 'ropes',
 		},
 	],
 	ownership: {
