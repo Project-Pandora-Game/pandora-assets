@@ -111,6 +111,9 @@ async function Run() {
 
 			Normalize(image, maxR, maxG, maxB);
 
+			image.filterType(Jimp.PNG_FILTER_AUTO);
+			image.deflateStrategy(0);
+			image.deflateLevel(9);
 			await image.writeAsync(resultPath);
 			const resultSize = fs.statSync(resultPath).size;
 			logger.info(`\tDone; ${originalSize} -> ${resultSize}`);
