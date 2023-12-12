@@ -1,0 +1,226 @@
+DefineRoomDeviceAsset({
+	name: 'Frame Couch',
+	size: 'huge',
+	colorization: {
+		frame: {
+			name: 'Frame',
+			default: '#C9CBCA',
+		},
+		cushion: {
+			name: 'Couch cushion',
+			default: '#800020',
+		},
+	},
+	slots: {
+		character_slot_inside: {
+			name: 'Lying on top',
+			asset: {
+				name: 'Cage Bench',
+				size: 'huge',
+				poseLimits: {
+					bones: {
+						arm_l: [[74, 82]],
+						arm_r: [[74, 82]],
+						elbow_l: [[22, 109]],
+						elbow_r: [[22, 109]],
+						leg_r: [[-10, 10]],
+						leg_l: [[-10, 10]],
+						character_rotation: 90,
+					},
+					legs: 'kneeling',
+					view: 'front',
+				},
+			},
+		},
+		character_slot_sitting_left: {
+			name: 'Sitting on the left',
+			asset: {
+				name: 'Cage Bench',
+				size: 'huge',
+				poseLimits: {
+					bones: {
+						leg_r: [[-30, 10]],
+						leg_l: [[-30, 10]],
+						character_rotation: 0,
+					},
+					legs: 'sitting',
+					view: 'front',
+				},
+			},
+		},
+		character_slot_sitting_middle: {
+			name: 'Sitting in the middle',
+			asset: {
+				name: 'Cage Bench',
+				size: 'huge',
+				poseLimits: {
+					bones: {
+						leg_r: [[-30, 10]],
+						leg_l: [[-30, 10]],
+						character_rotation: 0,
+					},
+					legs: 'sitting',
+					view: 'front',
+				},
+			},
+		},
+		character_slot_sitting_right: {
+			name: 'Sitting on the right',
+			asset: {
+				name: 'Cage Bench',
+				size: 'huge',
+				poseLimits: {
+					bones: {
+						leg_r: [[-30, 10]],
+						leg_l: [[-30, 10]],
+						character_rotation: 0,
+					},
+					legs: 'sitting',
+					view: 'front',
+				},
+			},
+		},
+	},
+	modules: {
+		door: {
+			type: 'typed',
+			name: 'Door',
+			variants: [
+				{
+					id: 'closed',
+					name: 'Closed',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_inside'],
+					},
+				},
+				{
+					id: 'open',
+					name: 'Open',
+					default: true,
+				},
+			],
+		},
+	},
+	pivot: {
+		x: 529,
+		y: 680,
+	},
+	graphicsLayers: [
+		{
+			type: 'sprite',
+			image: 'bench_open.png',
+			colorizationKey: 'cage',
+		},
+		{
+			type: 'sprite',
+			image: '',
+			imageOverrides: [
+				{
+					image: '',
+					condition: [
+						[
+							{
+								module: 'door',
+								operator: '=',
+								value: 'open',
+							},
+						],
+					],
+				},
+			],
+			colorizationKey: 'cage',
+		},
+		{
+			type: 'slot',
+			slot: 'character_slot_inside',
+			characterPosition: {
+				offsetX: 0,
+				offsetY: -100,
+				disablePoseOffset: true,
+				relativeScale: 0.96,
+				pivotOffset: {
+					x: 0,
+					y: -690,
+				},
+			},
+		},
+		{
+			type: 'sprite',
+			image: 'bench_overlay.png',
+			colorizationKey: 'cage',
+		},
+		{
+			type: 'sprite',
+			image: 'bench_cushion.png',
+			colorizationKey: 'cushion',
+		},
+		{
+			type: 'sprite',
+			image: 'bench_curtain.png',
+			colorizationKey: 'curtain',
+			imageOverrides: [
+				{
+					image: '',
+					condition: [
+						[
+							{
+								module: 'curtain',
+								operator: '=',
+								value: 'open',
+							},
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'slot',
+			slot: 'character_slot_sitting_left',
+			characterPosition: {
+				offsetX: -280,
+				offsetY: 64,
+				relativeScale: 1.08,
+			},
+		},
+		{
+			type: 'slot',
+			slot: 'character_slot_sitting_middle',
+			characterPosition: {
+				offsetX: 0,
+				offsetY: 64,
+				relativeScale: 1.08,
+			},
+		},
+		{
+			type: 'slot',
+			slot: 'character_slot_sitting_right',
+			characterPosition: {
+				offsetX: 280,
+				offsetY: 64,
+				relativeScale: 1.08,
+			},
+		},
+	],
+	ownership: {
+		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+		credits: ['ClaudiaMia'],
+		modificationPolicy: `Fixes and New uses, otherwise ask`,
+		reusePolicy: 'Ask first',
+		licensing: [
+			{
+				part: 'used 3D model',
+				source: 'https://skfb.ly/6WZDu',
+				copyrightHolder: 'donnichols',
+				editedBy: 'ClaudiaMia',
+				license: 'CC BY',
+			},
+			{
+				part: 'images',
+				source: 'Self-Made',
+				copyrightHolder: 'ClaudiaMia',
+				editedBy: 'ClaudiaMia',
+				license: 'Pandora-Use-Only',
+			},
+		],
+	},
+});
