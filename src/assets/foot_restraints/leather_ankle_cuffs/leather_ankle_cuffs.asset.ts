@@ -19,6 +19,10 @@ DefineAsset({
 			name: 'D-Rings',
 			default: '#FFFFFF',
 		},
+		chains: {
+			name: 'Chains',
+			default: '#FFFFFF',
+		},
 	},
 	attributes: {
 		provides: [
