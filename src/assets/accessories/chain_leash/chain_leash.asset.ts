@@ -4,11 +4,7 @@ DefineAsset({
 	graphics: 'graphics.json',
 	colorization: {
 		chains: {
-			name: 'Chains',
-			default: '#FFFFFF',
-		},
-		socket: {
-			name: 'Socket',
+			name: 'Chain',
 			default: '#FFFFFF',
 		},
 	},
@@ -29,13 +25,6 @@ DefineAsset({
 				blockAddRemove: true,
 			},
 		},
-		lockCollar: {
-			type: 'lockSlot',
-			name: 'Lock for chain configuration',
-			occupiedProperties: {
-				blockModules: ['collarConfig'],
-			},
-		},
 		collarConfig: {
 			type: 'typed',
 			name: 'Chain Configuration',
@@ -52,32 +41,6 @@ DefineAsset({
 				{
 					id: 'right',
 					name: 'Chain Leash Held Right',
-				},
-				{
-					id: 'fixed',
-					name: 'Long Floor Chain',
-					properties: {
-						poseLimits: {
-							legs: ['standing', 'kneeling'],
-						},
-						effects: {
-							blockRoomMovement: true,
-							blockRoomLeave: true,
-						},
-					},
-				},
-				{
-					id: 'fixedShort',
-					name: 'Short Floor Chain',
-					properties: {
-						poseLimits: {
-							legs: 'kneeling',
-						},
-						effects: {
-							blockRoomMovement: true,
-							blockRoomLeave: true,
-						},
-					},
 				},
 			],
 		},

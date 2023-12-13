@@ -9,105 +9,10 @@
 			"priority": "OVERLAY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationKey": "socket",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "socket.png",
-						"condition": [
-							[
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "fixed"
-								},
-								{
-									"legs": "!kneeling"
-								}
-							]
-						]
-					},
-					{
-						"image": "socket_short.png",
-						"condition": [
-							[
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "fixedShort"
-								}
-							],
-							[
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "fixed"
-								},
-								{
-									"legs": "kneeling"
-								}
-							]
-						]
-					}
-				]
-			},
-			"name": "socket"
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"priority": "OVERLAY",
-			"points": "static",
-			"mirror": 0,
 			"colorizationKey": "chains",
 			"image": {
 				"image": "",
 				"overrides": [
-					{
-						"image": "chain_hanging.png",
-						"condition": [
-							[
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "fixed"
-								},
-								{
-									"legs": "!kneeling"
-								}
-							]
-						]
-					},
-					{
-						"image": "chain_hanging_kneeling.png",
-						"condition": [
-							[
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "fixed"
-								},
-								{
-									"legs": "kneeling"
-								}
-							]
-						]
-					},
-					{
-						"image": "chain_hanging_short.png",
-						"condition": [
-							[
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "fixedShort"
-								}
-							]
-						]
-					},
 					{
 						"image": "leash.png",
 						"condition": [
