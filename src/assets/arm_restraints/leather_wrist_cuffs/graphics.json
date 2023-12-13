@@ -13,7 +13,7 @@
 				"arm_l"
 			],
 			"mirror": 1,
-			"colorizationKey": "chain",
+			"colorizationKey": "largeRings",
 			"image": {
 				"image": "leathercuffs_large_ring.png",
 				"overrides": []

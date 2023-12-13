@@ -12,7 +12,11 @@ DefineAsset({
 			default: '#000000',
 		},
 		smallRings: {
-			name: 'Small Rings',
+			name: 'Eyelets',
+			default: '#FFFFFF',
+		},
+		largeRings: {
+			name: 'D-Rings',
 			default: '#FFFFFF',
 		},
 		chain: {
@@ -30,7 +34,7 @@ DefineAsset({
 	modules: {
 		lock: {
 			type: 'lockSlot',
-			name: 'Lock',
+			name: 'Lock cuffs',
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
