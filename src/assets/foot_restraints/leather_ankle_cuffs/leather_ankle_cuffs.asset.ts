@@ -12,15 +12,11 @@ DefineAsset({
 			default: '#000000',
 		},
 		smallRings: {
-			name: 'Small Rings',
+			name: 'Eyelets',
 			default: '#FFFFFF',
 		},
-		chains: {
-			name: 'Chains',
-			default: '#FFFFFF',
-		},
-		sockets: {
-			name: 'Sockets',
+		largeRings: {
+			name: 'D-Rings',
 			default: '#FFFFFF',
 		},
 	},
@@ -34,14 +30,14 @@ DefineAsset({
 	modules: {
 		lock: {
 			type: 'lockSlot',
-			name: 'Lock',
+			name: 'Lock cuffs',
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
 		},
 		lockChain: {
 			type: 'lockSlot',
-			name: 'Lock for cuff chains',
+			name: 'Lock for cuff chain',
 			occupiedProperties: {
 				blockModules: ['cuffState'],
 				stateFlags: {
@@ -89,26 +85,6 @@ DefineAsset({
 						},
 						stateFlags: {
 							provides: ['chain'],
-						},
-					},
-				},
-				{
-					id: 'floor',
-					name: 'Spread Floor Chains',
-					properties: {
-						poseLimits: {
-							bones: {
-								leg_r: -18,
-								leg_l: -18,
-							},
-							legs: 'standing',
-						},
-						stateFlags: {
-							provides: ['chain'],
-						},
-						effects: {
-							blockRoomMovement: true,
-							blockRoomLeave: true,
 						},
 					},
 				},
