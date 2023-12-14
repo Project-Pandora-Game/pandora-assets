@@ -7,6 +7,7 @@ DefineRoomDeviceAsset({
 			default: '#ffffff',
 		},
 	},
+	staticAttributes: ['Furniture'],
 	slots: {
 		character_slot_sitting: {
 			name: 'Sitting on the chair',

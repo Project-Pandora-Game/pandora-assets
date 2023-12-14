@@ -15,6 +15,7 @@ DefineRoomDeviceAsset({
 			default: '#F1CA96',
 		},
 	},
+	staticAttributes: ['Furniture'],
 	slots: {
 		character_slot_top: {
 			name: 'Lying on top',

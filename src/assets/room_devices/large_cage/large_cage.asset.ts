@@ -1,5 +1,5 @@
 DefineRoomDeviceAsset({
-	name: 'Small Cage',
+	name: 'Large Cage',
 	size: 'huge',
 	colorization: {
 		cage: {
@@ -11,11 +11,12 @@ DefineRoomDeviceAsset({
 			default: '#ffffff',
 		},
 	},
+	staticAttributes: ['Play_furniture'],
 	slots: {
 		character_slot: {
-			name: 'Cage',
+			name: 'Inside the cage',
 			asset: {
-				name: 'Small Cage',
+				name: 'Large Cage',
 				size: 'huge',
 				poseLimits: {
 					bones: {

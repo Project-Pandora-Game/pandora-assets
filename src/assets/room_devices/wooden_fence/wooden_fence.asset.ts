@@ -7,6 +7,7 @@ DefineRoomDeviceAsset({
 			default: '#924A2D',
 		},
 	},
+	staticAttributes: ['Floor'],
 	slots: {},
 	pivot: {
 		x: 800,

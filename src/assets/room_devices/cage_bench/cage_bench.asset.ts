@@ -15,6 +15,7 @@ DefineRoomDeviceAsset({
 			default: '#7C0418',
 		},
 	},
+	staticAttributes: ['Play_furniture', 'Furniture'],
 	slots: {
 		character_slot_inside: {
 			name: 'Lying inside',

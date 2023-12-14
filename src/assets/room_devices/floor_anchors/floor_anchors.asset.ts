@@ -19,6 +19,7 @@ DefineRoomDeviceAsset({
 			default: '#FFFFFF',
 		},
 	},
+	staticAttributes: ['Play_furniture'],
 	slots: {
 		character_slot_left: {
 			name: 'Left side - for collar',

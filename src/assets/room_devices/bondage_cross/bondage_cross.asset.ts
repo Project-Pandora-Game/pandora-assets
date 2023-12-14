@@ -19,6 +19,7 @@ DefineRoomDeviceAsset({
 			default: '#1E1E1D',
 		},
 	},
+	staticAttributes: ['Play_furniture'],
 	slots: {
 		character_slot: {
 			name: 'In front of the cross',

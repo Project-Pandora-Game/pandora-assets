@@ -495,13 +495,51 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		},
 		icon: 'handheld',
 	},
+	// Room devices
 	Room_device: {
 		name: 'Room device',
-		description: 'A cage, cross, bed, couch, or similar room-level item',
+		description: 'A lamp, cross, table, plant, or similar room-level item',
+		icon: 'room_device',
+	},
+	Play_furniture: {
+		name: 'Play furniture',
+		description: 'A cage, cross, frame, or similar toy-like room-level item',
 		useAsWardrobeFilter: {
 			tab: 'room',
 		},
-		icon: 'room_device',
+		icon: 'cross',
+	},
+	Furniture: {
+		name: 'Furniture',
+		description: 'A bed, chair, bench, or similar usable room-level item',
+		useAsWardrobeFilter: {
+			tab: 'room',
+		},
+		icon: 'furniture',
+	},
+	Wall: {
+		name: 'Wall items',
+		description: 'A picture, lamp, TV, or similar item to decorate a wall',
+		useAsWardrobeFilter: {
+			tab: 'room',
+		},
+		icon: 'wall',
+	},
+	Storage: {
+		name: 'Storage items',
+		description: 'A chest, box, barrel, or similar room-level storage item',
+		useAsWardrobeFilter: {
+			tab: 'room',
+		},
+		icon: 'storage',
+	},
+	Floor: {
+		name: 'Floor items',
+		description: 'A carpet, plant, fence, or similar item to decorate a floor',
+		useAsWardrobeFilter: {
+			tab: 'room',
+		},
+		icon: 'floor',
 	},
 	// Locks
 	Lock: {

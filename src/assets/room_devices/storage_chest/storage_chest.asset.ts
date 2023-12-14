@@ -11,6 +11,7 @@ DefineRoomDeviceAsset({
 			default: '#922D2D',
 		},
 	},
+	staticAttributes: ['Storage'],
 	slots: {},
 	modules: {
 		content: {

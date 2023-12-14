@@ -7,6 +7,7 @@ DefineRoomDeviceAsset({
 			default: '#965441',
 		},
 	},
+	staticAttributes: ['Storage'],
 	slots: {
 		character_slot_inside: {
 			name: 'Inside the barrel',
@@ -59,7 +60,6 @@ DefineRoomDeviceAsset({
 						blockSlotsEnterLeave: ['character_slot_inside'],
 						slotProperties: {
 							character_slot_inside: {
-								blockSelfModules: ['lock'],
 								effects: {
 									blind: 9.85,
 								},

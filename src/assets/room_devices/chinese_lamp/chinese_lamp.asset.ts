@@ -21,6 +21,7 @@ DefineRoomDeviceAsset({
 			default: '#CEA278',
 		},
 	},
+	staticAttributes: ['Wall'],
 	slots: {},
 	modules: {
 		operation: {
