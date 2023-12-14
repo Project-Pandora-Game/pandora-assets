@@ -16,6 +16,7 @@ DefineRoomDeviceAsset({
 		},
 	},
 	staticAttributes: ['Play_furniture', 'Furniture'],
+	preview: 'cage_bench_preview.png',
 	slots: {
 		character_slot_inside: {
 			name: 'Lying inside',

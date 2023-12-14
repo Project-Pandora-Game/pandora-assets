@@ -24,6 +24,7 @@ DefineRoomDeviceAsset({
 		},
 	},
 	staticAttributes: ['Floor'],
+	preview: 'pot_preview.png',
 	slots: {},
 	modules: {
 		type: {

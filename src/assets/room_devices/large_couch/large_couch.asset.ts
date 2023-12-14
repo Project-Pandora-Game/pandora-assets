@@ -8,6 +8,7 @@ DefineRoomDeviceAsset({
 		},
 	},
 	staticAttributes: ['Furniture'],
+	preview: 'couch_preview.png',
 	slots: {},
 	pivot: {
 		x: 1400,

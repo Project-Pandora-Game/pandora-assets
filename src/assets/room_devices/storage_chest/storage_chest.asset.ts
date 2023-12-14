@@ -12,6 +12,7 @@ DefineRoomDeviceAsset({
 		},
 	},
 	staticAttributes: ['Storage'],
+	preview: 'chest_preview.png',
 	slots: {},
 	modules: {
 		content: {

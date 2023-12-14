@@ -12,6 +12,7 @@ DefineRoomDeviceAsset({
 		},
 	},
 	staticAttributes: ['Floor'],
+	preview: 'flower_preview.png',
 	slots: {},
 	pivot: {
 		x: 400,

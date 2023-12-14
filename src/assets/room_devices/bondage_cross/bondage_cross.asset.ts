@@ -20,6 +20,7 @@ DefineRoomDeviceAsset({
 		},
 	},
 	staticAttributes: ['Play_furniture'],
+	preview: 'cross_preview.png',
 	slots: {
 		character_slot: {
 			name: 'In front of the cross',

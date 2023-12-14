@@ -12,6 +12,7 @@ DefineRoomDeviceAsset({
 		},
 	},
 	staticAttributes: ['Wall'],
+	preview: 'picture_preview.png',
 	slots: {},
 	modules: {
 		frame: {

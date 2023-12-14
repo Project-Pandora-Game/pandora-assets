@@ -22,6 +22,7 @@ DefineRoomDeviceAsset({
 		},
 	},
 	staticAttributes: ['Wall'],
+	preview: 'lamp_preview.png',
 	slots: {},
 	modules: {
 		operation: {

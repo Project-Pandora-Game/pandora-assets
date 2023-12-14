@@ -24,6 +24,7 @@ DefineRoomDeviceAsset({
 		},
 	},
 	staticAttributes: ['Furniture', 'Play_furniture'],
+	preview: 'bed_preview.png',
 	slots: {
 		character_slot_left: {
 			name: 'Bed - left side',

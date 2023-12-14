@@ -20,6 +20,7 @@ DefineRoomDeviceAsset({
 		},
 	},
 	staticAttributes: ['Play_furniture'],
+	preview: 'frame_preview.png',
 	slots: {
 		character_slot: {
 			name: 'Under the frame',

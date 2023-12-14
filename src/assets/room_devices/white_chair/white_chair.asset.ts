@@ -8,6 +8,7 @@ DefineRoomDeviceAsset({
 		},
 	},
 	staticAttributes: ['Furniture'],
+	preview: 'chair_preview.png',
 	slots: {
 		character_slot_sitting: {
 			name: 'Sitting on the chair',

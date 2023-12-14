@@ -8,6 +8,7 @@ DefineRoomDeviceAsset({
 		},
 	},
 	staticAttributes: ['Storage'],
+	preview: 'barrel_preview.png',
 	slots: {
 		character_slot_inside: {
 			name: 'Inside the barrel',
