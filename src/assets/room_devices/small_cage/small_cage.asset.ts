@@ -34,16 +34,16 @@ DefineRoomDeviceAsset({
 			name: 'Door',
 			variants: [
 				{
+					id: 'open',
+					name: 'Open',
+					default: true,
+				},
+				{
 					id: 'closed',
 					name: 'Closed',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot'],
 					},
-				},
-				{
-					id: 'open',
-					name: 'Open',
-					default: true,
 				},
 			],
 		},
