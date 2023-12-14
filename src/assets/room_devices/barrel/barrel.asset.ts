@@ -60,6 +60,9 @@ DefineRoomDeviceAsset({
 						slotProperties: {
 							character_slot_inside: {
 								blockSelfModules: ['lock'],
+								effects: {
+									blind: 9.85,
+								},
 							},
 						},
 					},
