@@ -8,6 +8,7 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
+	preview: 'chcage_preview.png',
 	attributes: {
 		provides: [
 			'Restraint',

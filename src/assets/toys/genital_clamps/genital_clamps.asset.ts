@@ -12,6 +12,7 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
+	preview: 'clamps_g_preview.png',
 	attributes: {
 		provides: [
 			'Toy',

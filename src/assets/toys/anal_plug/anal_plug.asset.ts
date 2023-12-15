@@ -8,6 +8,7 @@ DefineAsset({
 			default: '#C4E1FF',
 		},
 	},
+	preview: 'plug_preview.png',
 	attributes: {
 		provides: [
 			'Anus_item',
@@ -74,6 +75,13 @@ DefineAsset({
 				copyrightHolder: 'ClaudiaMia',
 				editedBy: 'ClaudiaMia',
 				license: 'Pandora-Use-Only',
+			},
+			{
+				part: 'used 3D model for preview',
+				source: 'https://skfb.ly/6XuEB',
+				copyrightHolder: 'Gavinn',
+				editedBy: 'ClaudiaMia',
+				license: 'CC BY',
 			},
 		],
 	},

@@ -8,6 +8,7 @@ DefineAsset({
 			default: '#FFC1EB',
 		},
 	},
+	preview: 'vibrator_preview.png',
 	attributes: {
 		provides: [
 			'Vagina_item',
@@ -65,6 +66,13 @@ DefineAsset({
 				copyrightHolder: 'ClaudiaMia',
 				editedBy: 'ClaudiaMia',
 				license: 'Pandora-Use-Only',
+			},
+			{
+				part: 'used 3D model for preview',
+				source: 'https://skfb.ly/oF9vF',
+				copyrightHolder: 'cassies_secrets',
+				editedBy: 'ClaudiaMia',
+				license: 'CC BY',
 			},
 		],
 	},
