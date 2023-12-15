@@ -507,6 +507,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		useAsWardrobeFilter: {
 			tab: 'room',
 		},
+		parentAttributes: ['Room_device'],
 		icon: 'cross',
 	},
 	Furniture: {
@@ -515,6 +516,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		useAsWardrobeFilter: {
 			tab: 'room',
 		},
+		parentAttributes: ['Room_device'],
 		icon: 'furniture',
 	},
 	Wall: {
@@ -523,6 +525,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		useAsWardrobeFilter: {
 			tab: 'room',
 		},
+		parentAttributes: ['Room_device'],
 		icon: 'wall',
 	},
 	Storage: {
@@ -531,6 +534,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		useAsWardrobeFilter: {
 			tab: 'room',
 		},
+		parentAttributes: ['Room_device'],
 		icon: 'storage',
 	},
 	Floor: {
@@ -539,6 +543,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		useAsWardrobeFilter: {
 			tab: 'room',
 		},
+		parentAttributes: ['Room_device'],
 		icon: 'floor',
 	},
 	// Locks
