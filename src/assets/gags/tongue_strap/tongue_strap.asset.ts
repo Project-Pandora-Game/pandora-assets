@@ -10,6 +10,7 @@ DefineAsset({
 			default: '#444444',
 		},
 	},
+	preview: 'tongue_preview.png',
 	attributes: {
 		provides: [
 			'Restraint',

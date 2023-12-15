@@ -14,6 +14,7 @@ DefineAsset({
 			default: '#444444',
 		},
 	},
+	preview: 'dildo_preview.png',
 	attributes: {
 		provides: [
 			'Restraint',

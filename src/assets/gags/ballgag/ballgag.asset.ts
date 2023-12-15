@@ -14,6 +14,7 @@ DefineAsset({
 			default: '#444444',
 		},
 	},
+	preview: 'ball_preview.png',
 	attributes: {
 		provides: [
 			'Restraint',
@@ -81,6 +82,13 @@ DefineAsset({
 				copyrightHolder: 'ClaudiaMia',
 				editedBy: 'ClaudiaMia',
 				license: 'Pandora-Use-Only',
+			},
+			{
+				part: 'used 3D model',
+				source: 'https://skfb.ly/6V7MU',
+				copyrightHolder: 'Teitoku Ippan',
+				editedBy: 'ClaudiaMia',
+				license: 'CC BY',
 			},
 		],
 	},

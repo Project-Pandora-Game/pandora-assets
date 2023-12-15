@@ -18,6 +18,7 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
+	preview: 'plug_preview.png',
 	attributes: {
 		provides: [
 			'Restraint',
