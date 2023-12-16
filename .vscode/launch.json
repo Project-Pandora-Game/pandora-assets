@@ -8,7 +8,6 @@
 			"restart": {
 				"delay": 200,
 			},
-			"continueOnAttach": true,
 			"port": 26958,
 			"sourceMaps": true,
 			"internalConsoleOptions": "neverOpen",

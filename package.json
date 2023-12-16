@@ -11,7 +11,7 @@
 		"clean": "rimraf dist",
 		"build": "pnpm run --silent clean && tsc -p ./tsconfig.json && node --enable-source-maps -r dotenv/config ./dist/index",
 		"dev": "pnpm run --silent clean && tsc-watch -p ./tsconfig.json --onSuccess \"node --enable-source-maps -r dotenv/config ./dist/index --watch\"",
-		"dev:inspect": "pnpm run --silent clean && tsc-watch -p ./tsconfig.json --onSuccess \"node --inspect=26958 --inspect-brk --enable-source-maps -r dotenv/config ./dist/index --watch\"",
+		"dev:inspect": "pnpm run --silent clean && tsc-watch -p ./tsconfig.json --onSuccess \"node --inspect=26958 --enable-source-maps -r dotenv/config ./dist/index --watch\"",
 		"lint": "eslint --max-warnings 0 --report-unused-disable-directives .",
 		"lint:fix": "eslint --fix .",
 		"type-check": "pnpm run '/type-check:.*/'",
