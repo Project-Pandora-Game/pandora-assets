@@ -198,25 +198,6 @@ DefineRoomDeviceAsset({
 		},
 		{
 			type: 'sprite',
-			image: 'frame_chains_bottom_hanging.png',
-			imageOverrides: [
-				{
-					image: 'frame_chains_bottom_attached.png',
-					condition: [
-						[
-							{
-								module: 'chains',
-								operator: '=',
-								value: 'hanging_and_legs',
-							},
-						],
-					],
-				},
-			],
-			colorizationKey: 'chains',
-		},
-		{
-			type: 'sprite',
 			image: 'frame.png',
 			colorizationKey: 'frame',
 		},
@@ -274,9 +255,24 @@ DefineRoomDeviceAsset({
 			characterPosition: {
 				offsetX: 0,
 				offsetY: 10,
-				disablePoseOffset: true,
 			},
 			characterPositionOverrides: [
+				{
+					position: {
+						offsetX: 0,
+						offsetY: 10,
+						disablePoseOffset: true,
+					},
+					condition: [
+						[
+							{
+								module: 'chains',
+								operator: '=',
+								value: 'standing',
+							},
+						],
+					],
+				},
 				{
 					position: {
 						offsetX: 0,
@@ -301,6 +297,25 @@ DefineRoomDeviceAsset({
 					],
 				},
 			],
+		},
+		{
+			type: 'sprite',
+			image: 'frame_chains_bottom_hanging.png',
+			imageOverrides: [
+				{
+					image: 'frame_chains_bottom_attached.png',
+					condition: [
+						[
+							{
+								module: 'chains',
+								operator: '=',
+								value: 'hanging_and_legs',
+							},
+						],
+					],
+				},
+			],
+			colorizationKey: 'chains',
 		},
 	],
 	ownership: {
