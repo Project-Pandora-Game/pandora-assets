@@ -12,7 +12,6 @@ DefineAsset({
 			default: '#AAAAAA',
 		},
 	},
-	preview: 'module_preview.png',
 	attributes: {
 		provides: ['Accessory'],
 		requires: [
