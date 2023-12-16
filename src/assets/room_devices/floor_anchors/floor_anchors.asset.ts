@@ -316,6 +316,13 @@ DefineRoomDeviceAsset({
 				editedBy: 'ClaudiaMia',
 				license: 'Pandora-Use-Only',
 			},
+			{
+				part: 'used 3D model - preview',
+				source: 'https://skfb.ly/6UTQr',
+				copyrightHolder: 'DaBoRi',
+				editedBy: 'ClaudiaMia',
+				license: 'CC BY',
+			},
 		],
 	},
 });
