@@ -8,6 +8,7 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
+	preview: 'chain_preview.png',
 	attributes: {
 		provides: [
 			'Restraint',

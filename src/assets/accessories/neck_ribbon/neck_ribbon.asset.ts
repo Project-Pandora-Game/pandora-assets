@@ -12,6 +12,7 @@ DefineAsset({
 			default: '#333333',
 		},
 	},
+	preview: 'ribbon_preview.png',
 	attributes: {
 		provides: [
 			'Clothing',
