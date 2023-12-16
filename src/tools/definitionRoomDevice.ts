@@ -76,7 +76,7 @@ function DefineRoomDeviceWearablePart(
 	def.attributes ??= {};
 	def.attributes.provides ??= [];
 	if (!def.attributes.provides.includes('Room_device')) {
-		def.attributes.provides.unshift('Room_device');
+		def.attributes.provides.push('Room_device');
 	}
 
 	propertiesValidationMetadata = {
@@ -219,7 +219,7 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 
 	asset.staticAttributes ??= [];
 	if (!asset.staticAttributes.includes('Room_device')) {
-		asset.staticAttributes.unshift('Room_device');
+		asset.staticAttributes.push('Room_device');
 	}
 
 	AssetDatabase.registerAsset(id, asset);

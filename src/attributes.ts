@@ -498,7 +498,10 @@ const ATTRIBUTES_DEFINITION_BASE = {
 	// Room devices
 	Room_device: {
 		name: 'Room device',
-		description: 'A lamp, cross, table, plant, or similar room-level item',
+		description: 'Any room-level item (a lamp, cross, table, plant, ...)',
+		useAsWardrobeFilter: {
+			tab: 'room',
+		},
 		icon: 'room_device',
 	},
 	Play_furniture: {
