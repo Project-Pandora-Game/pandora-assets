@@ -30,7 +30,6 @@ const ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'size',
 	'chat',
 	'posePresets',
-	'preview',
 ] as const satisfies readonly (keyof RoomDeviceWearablePartAssetDefinition)[];
 
 export type RoomDeviceWearablePartAssetDefinitionFallthroughProperties = (typeof ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHROUGH_PROPERTIES)[number] & string;
@@ -60,6 +59,7 @@ function DefineRoomDeviceWearablePart(
 	def: IntermediateRoomDeviceWearablePartDefinition,
 	colorizationKeys: ReadonlySet<string>,
 	propertiesValidationMetadata: RoomDevicePropertiesValidationMetadata,
+	preview: string | null,
 ): AssetId | null {
 	const id: AssetId = `${baseId}/${slot}` as const;
 
@@ -95,6 +95,7 @@ function DefineRoomDeviceWearablePart(
 		...pick(def, ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHROUGH_PROPERTIES),
 		type: 'roomDeviceWearablePart',
 		id,
+		preview,
 		hasGraphics: def.graphics !== undefined,
 	};
 
@@ -137,12 +138,17 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 		getSlotNames: () => Object.keys(def.slots),
 	};
 
+	if (def.preview === undefined) {
+		logger.warning(`Missing preview. It should be a png file or \`null\` if the asset shouldn't have one.`);
+	}
+	const preview = def.preview != null ? DefinePngResource(def.preview, 'preview') : null;
+
 	//#region Load slots
 
 	for (const [k, v] of Object.entries(def.slots)) {
 		slotIds.add(k);
 
-		const slotWearableId = DefineRoomDeviceWearablePart(id, k, v.asset, colorizationKeys, propertiesValidationMetadata);
+		const slotWearableId = DefineRoomDeviceWearablePart(id, k, v.asset, colorizationKeys, propertiesValidationMetadata, preview);
 		if (slotWearableId == null) {
 			definitionValid = false;
 			logger.error(`Failed to process asset for slot '${k}'`);
@@ -204,6 +210,7 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 		...pick(def, ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES),
 		type: 'roomDevice',
 		id,
+		preview,
 		slots,
 	};
 

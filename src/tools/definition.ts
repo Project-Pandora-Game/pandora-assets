@@ -9,6 +9,7 @@ import { LoadAssetColorization } from './load_helpers/color';
 import { ValidateOwnershipData } from './licensing';
 import { PropertiesValidationMetadata, ValidateAssetProperties } from './validation/properties';
 import { ValidateAllModules } from './validation/modules';
+import { DefinePngResource } from './resources';
 
 const DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Properties
@@ -67,10 +68,15 @@ export function GlobalDefineAsset(def: IntermediatePersonalAssetDefinition): voi
 		return;
 	}
 
+	if (def.preview === undefined) {
+		logger.warning(`Missing preview. It should be a png file or \`null\` if the asset shouldn't have one.`);
+	}
+
 	const asset: PersonalAssetDefinition<AssetRepoExtraArgs> = {
 		...pick(def, DEFINITION_FALLTHROUGH_PROPERTIES),
 		type: 'personal',
 		id,
+		preview: def.preview != null ? DefinePngResource(def.preview, 'preview') : null,
 		colorization,
 		hasGraphics: def.graphics !== undefined,
 	};
