@@ -9,6 +9,8 @@ DefineAsset({
 			group: 'skin',
 		},
 	},
+	// size:200, y:195, centered
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Face',
