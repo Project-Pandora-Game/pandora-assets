@@ -12,6 +12,8 @@ DefineAsset({
 			default: '#826154',
 		},
 	},
+	// size:520, y:479, X:227
+	preview: 'preview.png',
 	attributes: {
 		provides: ['Handheld'],
 		requires: ['!Mittens'],

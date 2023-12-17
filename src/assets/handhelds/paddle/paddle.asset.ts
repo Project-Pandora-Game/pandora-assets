@@ -8,6 +8,8 @@ DefineAsset({
 			default: '#D7A67E',
 		},
 	},
+	// size:410, y:194, X:0
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Handheld',
