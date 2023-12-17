@@ -12,6 +12,8 @@ DefineAsset({
 			default: '#FFD1D6',
 		},
 	},
+	// size:450, y:358, centered
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Accessory',

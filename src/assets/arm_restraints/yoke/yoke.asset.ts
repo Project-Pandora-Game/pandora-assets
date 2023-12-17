@@ -22,6 +22,8 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
+	// size:520, y:144, centered
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Collar',
