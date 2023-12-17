@@ -10,6 +10,8 @@ DefineAsset({
 			minAlpha: 0.6,
 		},
 	},
+	// size:800, y:574, centered
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Legwear',
