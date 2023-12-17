@@ -18,7 +18,8 @@ const MAX_SIZES = {
 
 const SIZE_UNITS = ['B', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB'];
 
-const PREVIEW_SIZE = 256;
+/** Vertical and horizontal size of preview image in pixels */
+export const PREVIEW_SIZE = 256;
 
 const logger = GetLogger('Resources');
 

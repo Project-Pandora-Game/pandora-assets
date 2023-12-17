@@ -5,7 +5,7 @@ import { LoadAssetsGraphics } from './graphics';
 import { GraphicsDatabase } from './graphicsDatabase';
 import { join } from 'path';
 import { pick } from 'lodash';
-import { DefinePngResource } from './resources';
+import { DefinePngResource, PREVIEW_SIZE } from './resources';
 import { LoadRoomDeviceColorization } from './load_helpers/color';
 import { ValidateOwnershipData } from './licensing';
 import { ValidateAssetProperties } from './validation/properties';
@@ -139,7 +139,7 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 	};
 
 	if (def.preview === undefined) {
-		logger.warning(`Missing preview. It should be a png file or \`null\` if the asset shouldn't have one.`);
+		logger.warning(`Missing preview. It should be a ${PREVIEW_SIZE}x${PREVIEW_SIZE} png image or \`null\` if the asset shouldn't have one.`);
 	}
 	const preview = def.preview != null ? DefinePngResource(def.preview, 'preview') : null;
 

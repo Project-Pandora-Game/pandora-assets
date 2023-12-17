@@ -3,7 +3,7 @@ import { DefaultId } from './context';
 import { pick } from 'lodash';
 import { AssetDatabase } from './assetDatabase';
 import { ValidateOwnershipData } from './licensing';
-import { DefinePngResource } from './resources';
+import { DefinePngResource, PREVIEW_SIZE } from './resources';
 
 const LOCK_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Asset definition
@@ -27,7 +27,7 @@ export function GlobalDefineLockAsset(def: IntermediateLockAssetDefinition): voi
 	ValidateOwnershipData(def.ownership, logger, false);
 
 	if (def.preview === undefined) {
-		logger.warning(`Missing preview. It should be a png file or \`null\` if the asset shouldn't have one.`);
+		logger.warning(`Missing preview. It should be a ${PREVIEW_SIZE}x${PREVIEW_SIZE} png image or \`null\` if the asset shouldn't have one.`);
 	}
 
 	const asset: LockAssetDefinition<AssetRepoExtraArgs> = {
