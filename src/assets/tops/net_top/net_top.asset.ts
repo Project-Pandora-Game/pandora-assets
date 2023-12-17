@@ -19,6 +19,8 @@ DefineAsset({
 			minAlpha: 0.1,
 		},
 	},
+	// size:350, y:348, centered
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Clothing',
