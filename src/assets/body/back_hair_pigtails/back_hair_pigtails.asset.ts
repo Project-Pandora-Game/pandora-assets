@@ -7,6 +7,8 @@ DefineAsset({
 	bodypart: 'backhair',
 	graphics: 'graphics.json',
 	colorization,
+	// size:250, y:177, centered
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Hair',
