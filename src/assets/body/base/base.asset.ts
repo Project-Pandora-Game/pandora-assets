@@ -14,6 +14,7 @@ DefineAsset({
 			default: '#FED1CB',
 		},
 	},
+	preview: null,
 	poseLimits: {
 		bones: {
 			breasts: [[-180, -180], [-150, -150], [-70, -70], [0, 0], [100, 100], [180, 180]],

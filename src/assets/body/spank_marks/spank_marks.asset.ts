@@ -18,6 +18,7 @@ DefineAsset({
 			minAlpha: 0.1,
 		},
 	},
+	preview: null,
 	attributes: {
 		provides: [
 			'Body_texture',

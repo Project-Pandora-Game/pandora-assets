@@ -10,6 +10,7 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
+	preview: null,
 	attributes: {
 		provides: [
 			'Blush',

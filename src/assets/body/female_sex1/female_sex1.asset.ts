@@ -15,6 +15,7 @@ DefineAsset({
 		},
 		...colorization,
 	},
+	preview: null,
 	attributes: {
 		provides: [
 			'Sex',

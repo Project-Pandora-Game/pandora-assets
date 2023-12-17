@@ -15,6 +15,7 @@ DefineAsset({
 			default: '#E2B4B0',
 		},
 	},
+	preview: null,
 	attributes: {
 		provides: [
 			'Sex',

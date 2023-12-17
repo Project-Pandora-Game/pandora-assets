@@ -10,6 +10,7 @@ DefineAsset({
 			group: 'skin',
 		},
 	},
+	preview: null,
 	attributes: {
 		provides: [
 			'Ears',

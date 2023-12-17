@@ -9,6 +9,7 @@ DefineAsset({
 			'Nose',
 		],
 	},
+	preview: null,
 	ownership: {
 		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',
 		credits: ['Titania', 'Jomshir', 'ClaudiaMia'],

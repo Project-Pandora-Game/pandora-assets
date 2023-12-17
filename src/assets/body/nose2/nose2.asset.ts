@@ -4,6 +4,7 @@ DefineAsset({
 	bodypart: 'nose',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
+	preview: null,
 	attributes: {
 		provides: [
 			'Nose',
