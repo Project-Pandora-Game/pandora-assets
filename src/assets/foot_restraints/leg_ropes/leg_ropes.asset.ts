@@ -8,6 +8,8 @@ DefineAsset({
 			default: '#F1CA96',
 		},
 	},
+	// size:400, y:950, centered
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Restraint',
