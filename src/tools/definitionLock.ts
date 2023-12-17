@@ -26,6 +26,11 @@ export function GlobalDefineLockAsset(def: IntermediateLockAssetDefinition): voi
 	// Validate ownership data
 	ValidateOwnershipData(def.ownership, logger, false);
 
+	// TODO: Remove once locks support having graphics
+	if (!def.preview) {
+		def.preview = null;
+	}
+
 	if (def.preview === undefined) {
 		logger.warning(`Missing preview. It should be a ${PREVIEW_SIZE}x${PREVIEW_SIZE} png image or \`null\` if the asset shouldn't have one.`);
 	}
