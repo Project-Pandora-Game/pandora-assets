@@ -10,6 +10,8 @@ DefineAsset({
 			default: '#555555',
 		},
 	},
+	// size:200, y:195, centered
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Eyebrows',
