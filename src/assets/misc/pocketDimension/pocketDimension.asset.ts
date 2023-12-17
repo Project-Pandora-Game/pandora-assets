@@ -1,6 +1,7 @@
 DefineAsset({
 	name: 'Pocket dimension [PoC]',
 	size: 'large',
+	preview: 'preview.png',
 	modules: {
 		content: {
 			type: 'storage',
