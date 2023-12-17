@@ -8,6 +8,8 @@ DefineAsset({
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization,
+	// size:250, y:155, centered
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Hair',
