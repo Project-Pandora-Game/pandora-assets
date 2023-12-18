@@ -8,7 +8,7 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
-	// size:210, y:1152, centered
+	// size:350, y:1013, centered
 	preview: 'preview.png',
 	attributes: {
 		provides: [

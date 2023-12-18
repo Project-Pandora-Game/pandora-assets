@@ -24,7 +24,7 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
-	// size:200, y:1150, centered
+	// size:350, y:1013, centered
 	preview: 'preview.png',
 	attributes: {
 		provides: [
