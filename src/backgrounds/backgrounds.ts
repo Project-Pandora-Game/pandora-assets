@@ -95,6 +95,25 @@ export type BackgroundTagNames = KeysOfUnion<BackgroundTags>;
 
 const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 	{
+		id: 'couch_living_room',
+		name: 'Couch living room',
+		image: 'couch_living_room.jpg',
+		size: [3150, 1967],
+		maxY: 345,
+		scaling: 1.7,
+		tags: ['inside', 'livingroom', 'day', 'space_small'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/96511847@N04/9203961714/',
+					copyrightHolder: 'Miki',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
 		id: 'loft_living_room',
 		name: 'Loft living room',
 		image: 'loft_living_room.jpg',
@@ -1035,25 +1054,6 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 			licensing: [
 				{
 					source: 'https://www.flickr.com/photos/96511847@N04/9203896386/',
-					copyrightHolder: 'Miki',
-					license: 'Public Domain',
-				},
-			],
-		},
-	},
-	{
-		id: 'couch_living_room',
-		name: 'Couch living room',
-		image: 'couch_living_room.jpg',
-		size: [3150, 1967],
-		maxY: 345,
-		scaling: 1.7,
-		tags: ['inside', 'livingroom', 'day', 'space_small'],
-		ownership: {
-			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-			licensing: [
-				{
-					source: 'https://www.flickr.com/photos/96511847@N04/9203961714/',
 					copyrightHolder: 'Miki',
 					license: 'Public Domain',
 				},
