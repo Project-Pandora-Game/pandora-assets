@@ -26,6 +26,15 @@ DefineAsset({
 			'Collar_front_ring',
 		],
 	},
+	modules: {
+		lock: {
+			type: 'lockSlot',
+			name: 'Lock',
+			occupiedProperties: {
+				blockAddRemove: true,
+			},
+		},
+	},
 	chat: {
 		actionAdd: 'SOURCE_CHARACTER fitted and closed a Heart Choker around TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',
 		actionRemove: 'SOURCE_CHARACTER opened and then removed the Heart Choker from TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',
