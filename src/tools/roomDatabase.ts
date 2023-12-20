@@ -16,7 +16,7 @@ export const RoomDatabase = new class RoomDatabase {
 
 	public export(): IChatroomBackgroundInfo[] {
 		const result = Array.from(this.backgrounds.values());
-		result.sort((a, b) => a.name.localeCompare(b.name));
+		// Do NOT sort the exported backgrounds! Order matters.
 
 		return result;
 	}
