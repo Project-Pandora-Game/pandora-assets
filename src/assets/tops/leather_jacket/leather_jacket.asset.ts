@@ -20,6 +20,7 @@ DefineAsset({
 		hides: [
 			'Underwear_bra',
 			'Underwear_corset',
+			'Clothing_upper',
 		],
 	},
 	ownership: {
