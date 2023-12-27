@@ -875,6 +875,15 @@
 	},
 	{
 		"pos": [
+			590,
+			479
+		],
+		"transforms": [],
+		"mirror": true,
+		"pointType": "bodyarm_l"
+	},
+	{
+		"pos": [
 			578,
 			432
 		],
