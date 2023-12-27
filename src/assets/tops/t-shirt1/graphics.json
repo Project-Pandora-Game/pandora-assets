@@ -216,6 +216,54 @@
 						]
 					},
 					{
+						"image": "t-shirt_print_cathead.png",
+						"condition": [
+							[
+								{
+									"module": "prints",
+									"operator": "=",
+									"value": "catHead"
+								}
+							]
+						]
+					},
+					{
+						"image": "t-shirt_print_cc.png",
+						"condition": [
+							[
+								{
+									"module": "prints",
+									"operator": "=",
+									"value": "cc"
+								}
+							]
+						]
+					},
+					{
+						"image": "t-shirt_print_flogger.png",
+						"condition": [
+							[
+								{
+									"module": "prints",
+									"operator": "=",
+									"value": "flogger"
+								}
+							]
+						]
+					},
+					{
+						"image": "t-shirt_print_sittingcat.png",
+						"condition": [
+							[
+								{
+									"module": "prints",
+									"operator": "=",
+									"value": "sittingCat"
+								}
+							]
+						]
+					},
+					{
 						"image": "",
 						"condition": [
 							[

@@ -6,11 +6,11 @@ DefineAsset({
 	colorization: {
 		shirt: {
 			name: 'Shirt',
-			default: '#FFFFFF',
+			default: '#6E8991',
 		},
 		print: {
 			name: 'Print',
-			default: '#FFFF00',
+			default: '#FFFFFF',
 		},
 	},
 	// size:350, y:380, centered
@@ -27,17 +27,33 @@ DefineAsset({
 			name: 'T-Shirt Print',
 			variants: [
 				{
-					id: 'kissingSmilie',
-					name: 'Kissing Smilie',
+					id: 'crown',
+					name: 'Crown',
 					default: true,
 				},
 				{
-					id: 'crown',
-					name: 'Crown',
+					id: 'kissingSmilie',
+					name: 'Kissing Smilie',
 				},
 				{
 					id: 'afk',
 					name: 'AFK',
+				},
+				{
+					id: 'cc',
+					name: 'CC art',
+				},
+				{
+					id: 'catHead',
+					name: 'Cat Head',
+				},
+				{
+					id: 'sittingCat',
+					name: 'Sitting Cat',
+				},
+				{
+					id: 'flogger',
+					name: 'Flogger',
 				},
 				{
 					id: 'noPrint',
@@ -68,7 +84,7 @@ DefineAsset({
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
-				part: 'shirt',
+				part: 'shirt & and the prints not listed below',
 				source: 'Self-Made',
 				copyrightHolder: 'ClaudiaMia',
 				editedBy: 'ClaudiaMia',
@@ -87,6 +103,20 @@ DefineAsset({
 				copyrightHolder: 'Rafael Ferran i Peralta',
 				editedBy: 'ClaudiaMia',
 				license: 'CC0',
+			},
+			{
+				part: 'cat head',
+				source: 'https://www.flickr.com/photos/vintage_illustration/32200181178/',
+				copyrightHolder: 'Rawpixel.com & Jean Bernard',
+				editedBy: 'ClaudiaMia',
+				license: 'CC BY',
+			},
+			{
+				part: 'sitting cat',
+				source: 'https://www.flickr.com/photos/vintage_illustration/46234365162/',
+				copyrightHolder: 'Rawpixel.com & Julie de Graag',
+				editedBy: 'ClaudiaMia',
+				license: 'CC BY',
 			},
 		],
 	},
