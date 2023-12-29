@@ -8,7 +8,7 @@ DefineAsset({
 	colorization: {
 		bra: {
 			name: 'Corset',
-			default: '#AAAAAA',
+			default: '#CCCCCC',
 		},
 		laces: {
 			name: 'Laces',
@@ -90,6 +90,22 @@ DefineAsset({
 				{
 					id: 'short',
 					name: 'Short corset',
+				},
+			],
+		},
+		color: {
+			type: 'typed',
+			name: 'Corset Base Color',
+			interactionType: ItemInteractionType.ADD_REMOVE,
+			variants: [
+				{
+					id: 'black',
+					name: 'Black Corset',
+					default: true,
+				},
+				{
+					id: 'white',
+					name: 'White Corset',
 				},
 			],
 		},
