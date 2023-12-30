@@ -26,7 +26,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Ears',
 		description: 'A pair of ears for the body',
 		useAsWardrobeFilter: {
-			tab: 'body',
+			tabs: ['body'],
 		},
 		icon: 'ear',
 		useAsAssetPreference: false,
@@ -63,7 +63,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Front hair',
 		description: 'Hair on the front of the head',
 		useAsWardrobeFilter: {
-			tab: 'body',
+			tabs: ['body'],
 		},
 		icon: 'hair_front',
 		parentAttributes: ['Hair'],
@@ -73,7 +73,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Back hair',
 		description: 'Hair on the back of the head',
 		useAsWardrobeFilter: {
-			tab: 'body',
+			tabs: ['body'],
 		},
 		icon: 'hair_back',
 		parentAttributes: ['Hair'],
@@ -83,7 +83,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Hair extension',
 		description: 'A hair part separating from the main hair',
 		useAsWardrobeFilter: {
-			tab: 'body',
+			tabs: ['body'],
 		},
 		icon: 'hair_extension',
 		parentAttributes: ['Hair'],
@@ -93,7 +93,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Eyebrows',
 		description: 'A pair of eyebrows',
 		useAsWardrobeFilter: {
-			tab: 'body',
+			tabs: ['body'],
 		},
 		icon: 'eyebrow',
 		useAsAssetPreference: false,
@@ -102,7 +102,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Eyes',
 		description: 'A pair of eyes',
 		useAsWardrobeFilter: {
-			tab: 'body',
+			tabs: ['body'],
 		},
 		icon: 'eye',
 		useAsAssetPreference: false,
@@ -111,7 +111,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Nose',
 		description: 'A nose',
 		useAsWardrobeFilter: {
-			tab: 'body',
+			tabs: ['body'],
 		},
 		icon: 'nose',
 		useAsAssetPreference: false,
@@ -120,7 +120,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Mouth',
 		description: 'A mouth',
 		useAsWardrobeFilter: {
-			tab: 'body',
+			tabs: ['body'],
 		},
 		icon: 'lips',
 		useAsAssetPreference: false,
@@ -185,7 +185,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Upper clothing',
 		description: 'A top, shirt, or similar item worn over the upper body',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 			excludeAttributes: ['Clothing_large', 'Clothing_outer'],
 		},
 		icon: 'upper',
@@ -195,7 +195,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Lower clothing',
 		description: 'A skirt, pants, or similar item worn on the hips',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 			excludeAttributes: ['Clothing_large', 'Clothing_outer'],
 		},
 		icon: 'lower',
@@ -205,7 +205,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Large clothing',
 		description: 'A dress, suit, or similar item worn over large parts of the body',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 			excludeAttributes: ['Clothing_outer'],
 		},
 		icon: 'dress',
@@ -215,7 +215,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Outer clothing',
 		description: 'A jacket, coat, or similar item worn as outer clothing layer',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 		},
 		icon: 'outer',
 		parentAttributes: ['Clothing'],
@@ -224,7 +224,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Underwear',
 		description: 'A bra, panties, underpants, or similar item worn as lowest clothing layer',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 		},
 		icon: 'underwear',
 		parentAttributes: ['Clothing'],
@@ -267,7 +267,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Facewear',
 		description: 'A mask, glasses, or similar item worn over the face',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 		},
 		icon: 'facewear',
 	},
@@ -285,7 +285,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Accessory',
 		description: 'A necklace, bracelet, ring, hair accessory, or similar body or clothing addon',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 		},
 		icon: 'accessory',
 	},
@@ -293,7 +293,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Legwear',
 		description: 'A pair of socks, stockings, tights, or similar leg covering clothing',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 		},
 		icon: 'legwear',
 	},
@@ -301,7 +301,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Footwear',
 		description: 'A pair of shoes, boots, sandals, or similar item',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 		},
 		icon: 'footwear',
 	},
@@ -309,7 +309,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Headgear',
 		description: 'A hat, cap, hood, helmet, or similar head gear',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 		},
 		icon: 'headgear',
 	},
@@ -322,7 +322,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Gloves',
 		description: 'A pair of gloves',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 		},
 		icon: 'gloves',
 	},
@@ -338,7 +338,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Arms restraint',
 		description: 'An item that restricts or restraints arms or hands',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 		},
 		icon: 'restraint_arms',
 		parentAttributes: ['Restraint'],
@@ -352,7 +352,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Leg restraint',
 		description: 'An item that restricts or restraints legs or feet',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 		},
 		icon: 'restraint_legs',
 		parentAttributes: ['Restraint'],
@@ -366,7 +366,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Sight restraint',
 		description: 'An item that decreases the ability to see',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 		},
 		icon: 'blindfold',
 		parentAttributes: ['Restraint'],
@@ -375,7 +375,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Hearing restraint',
 		description: 'An item that decreases the ability to hear',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 		},
 		icon: 'headphones',
 		parentAttributes: ['Restraint'],
@@ -384,7 +384,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Toy',
 		description: 'A sexual toy',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 		},
 		icon: 'toy',
 	},
@@ -403,7 +403,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Speech restraint',
 		description: 'An item that decreases the ability to speak',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 		},
 		icon: 'gag',
 		parentAttributes: ['Restraint', 'Mouth_item'],
@@ -490,7 +490,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Collar',
 		description: 'A Collar',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 		},
 		icon: 'collar',
 	},
@@ -503,7 +503,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Chastity',
 		description: 'An item, typically a bra or belt, used for chastity play',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 		},
 		icon: 'chastity',
 	},
@@ -511,7 +511,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Hand-held item',
 		description: 'A crop, whip, paddle, wand or similar hand-held item',
 		useAsWardrobeFilter: {
-			tab: 'item',
+			tabs: ['worn', 'storage'],
 		},
 		icon: 'handheld',
 	},
@@ -520,7 +520,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Room device',
 		description: 'Any room-level item (a lamp, cross, table, plant, ...)',
 		useAsWardrobeFilter: {
-			tab: 'room',
+			tabs: ['room', 'storage'],
 		},
 		icon: 'room_device',
 	},
@@ -528,7 +528,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Play furniture',
 		description: 'A cage, cross, frame, or similar toy-like room-level item',
 		useAsWardrobeFilter: {
-			tab: 'room',
+			tabs: ['room', 'storage'],
 		},
 		parentAttributes: ['Room_device'],
 		icon: 'cross',
@@ -537,7 +537,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Furniture',
 		description: 'A bed, chair, bench, or similar usable room-level item',
 		useAsWardrobeFilter: {
-			tab: 'room',
+			tabs: ['room', 'storage'],
 		},
 		parentAttributes: ['Room_device'],
 		icon: 'furniture',
@@ -546,7 +546,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Wall items',
 		description: 'A picture, lamp, TV, or similar item to decorate a wall',
 		useAsWardrobeFilter: {
-			tab: 'room',
+			tabs: ['room', 'storage'],
 		},
 		parentAttributes: ['Room_device'],
 		icon: 'wall',
@@ -555,7 +555,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Storage items',
 		description: 'A chest, box, barrel, or similar room-level storage item',
 		useAsWardrobeFilter: {
-			tab: 'room',
+			tabs: ['room', 'storage'],
 		},
 		parentAttributes: ['Room_device'],
 		icon: 'storage',
@@ -564,7 +564,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Floor items',
 		description: 'A carpet, plant, fence, or similar item to decorate a floor',
 		useAsWardrobeFilter: {
-			tab: 'room',
+			tabs: ['room', 'storage'],
 		},
 		parentAttributes: ['Room_device'],
 		icon: 'floor',
@@ -573,6 +573,9 @@ const ATTRIBUTES_DEFINITION_BASE = {
 	Lock: {
 		name: 'Lock',
 		description: 'A lock',
+		useAsWardrobeFilter: {
+			tabs: ['room', 'storage', 'lockSlot'],
+		},
 		icon: 'lock',
 	},
 } as const satisfies Record<string, AssetRepoAttributeDefinition>;
