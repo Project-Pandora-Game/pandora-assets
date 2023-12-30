@@ -14,11 +14,13 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Base body',
 		description: 'A body',
 		icon: 'body',
+		useAsAssetPreference: false,
 	},
 	Head_base: {
 		name: 'Base head',
 		description: 'A head',
 		icon: 'body',
+		useAsAssetPreference: false,
 	},
 	Ears: {
 		name: 'Ears',
@@ -27,21 +29,25 @@ const ATTRIBUTES_DEFINITION_BASE = {
 			tab: 'body',
 		},
 		icon: 'ear',
+		useAsAssetPreference: false,
 	},
 	Body_texture: {
 		name: 'Body texture',
 		description: 'A texture for the body',
 		icon: 'body',
+		useAsAssetPreference: false,
 	},
 	Face: {
 		name: 'Face texture',
 		description: 'A face texture',
 		icon: 'body',
+		useAsAssetPreference: false,
 	},
 	Blush: {
 		name: 'Blush',
 		description: 'A facial reddening',
 		icon: 'body',
+		useAsAssetPreference: false,
 	},
 	Bodymark: {
 		name: 'Bodymark',
@@ -51,6 +57,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 	Hair: {
 		name: 'Hair',
 		description: 'Hair',
+		useAsAssetPreference: false,
 	},
 	Hair_front: {
 		name: 'Front hair',
@@ -60,6 +67,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		},
 		icon: 'hair_front',
 		parentAttributes: ['Hair'],
+		useAsAssetPreference: false,
 	},
 	Hair_back: {
 		name: 'Back hair',
@@ -69,6 +77,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		},
 		icon: 'hair_back',
 		parentAttributes: ['Hair'],
+		useAsAssetPreference: false,
 	},
 	Hair_extension: {
 		name: 'Hair extension',
@@ -78,6 +87,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		},
 		icon: 'hair_extension',
 		parentAttributes: ['Hair'],
+		useAsAssetPreference: false,
 	},
 	Eyebrows: {
 		name: 'Eyebrows',
@@ -86,6 +96,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 			tab: 'body',
 		},
 		icon: 'eyebrow',
+		useAsAssetPreference: false,
 	},
 	Eyes: {
 		name: 'Eyes',
@@ -94,6 +105,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 			tab: 'body',
 		},
 		icon: 'eye',
+		useAsAssetPreference: false,
 	},
 	Nose: {
 		name: 'Nose',
@@ -102,6 +114,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 			tab: 'body',
 		},
 		icon: 'nose',
+		useAsAssetPreference: false,
 	},
 	Mouth: {
 		name: 'Mouth',
@@ -110,21 +123,25 @@ const ATTRIBUTES_DEFINITION_BASE = {
 			tab: 'body',
 		},
 		icon: 'lips',
+		useAsAssetPreference: false,
 	},
 	Mouth_open_wide: {
 		name: 'Wide open mouth',
 		description: 'A wide open mouth',
 		parentAttributes: ['Mouth'],
+		useAsAssetPreference: false,
 	},
 	Mouth_open_teeth: {
 		name: 'Wide open mouth showing teeth',
 		description: 'A wide open mouth showing teeth',
 		parentAttributes: ['Mouth'],
+		useAsAssetPreference: false,
 	},
 	Mouth_tongue_out: {
 		name: 'Tongue out',
 		description: 'A wide open mouth with its tongue out',
 		parentAttributes: ['Mouth'],
+		useAsAssetPreference: false,
 	},
 	Sex: {
 		name: 'Sex',
@@ -140,6 +157,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Spread vagina',
 		description: 'A spread female sex',
 		parentAttributes: ['Vagina'],
+		useAsAssetPreference: false,
 	},
 	Penis: {
 		name: 'Penis',
@@ -150,11 +168,13 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Flaccid Penis',
 		description: 'A flaccid male sexual organ',
 		parentAttributes: ['Penis'],
+		useAsAssetPreference: false,
 	},
 	Penis_erect: {
 		name: 'Erect Penis',
 		description: 'An erect male sexual organ',
 		parentAttributes: ['Penis'],
+		useAsAssetPreference: false,
 	},
 	// Items or attachment points from items
 	Clothing: {
