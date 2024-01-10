@@ -19,9 +19,6 @@ DefineAsset({
 		requires: ['!Mittens'],
 		hides: ['Handheld'],
 	},
-	effects: {
-		toolRoomConstruction: true,
-	},
 	modules: {
 		tool: {
 			type: 'typed',
