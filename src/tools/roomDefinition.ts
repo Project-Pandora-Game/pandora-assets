@@ -88,7 +88,7 @@ export function DefineRoomBackground(def: IntermediateRoomBackgroundDefinition):
 		name: def.name,
 		preview,
 		tags: def.tags,
-	}
+	};
 
 	RoomDatabase.registerBackground(background);
 }
