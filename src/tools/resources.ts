@@ -217,7 +217,7 @@ function CheckMaxSize(resource: Resource, name: string, category: ImageCategory)
 	}
 }
 
-function ProcessImageResource(resource: IImageResource, args: string): string {
+export function ProcessImageResource(resource: IImageResource, args: string = ''): string {
 	let resultName = resource.resultName;
 
 	if (args) {
@@ -235,6 +235,16 @@ function ProcessImageResource(resource: IImageResource, args: string): string {
 	}
 
 	return resultName;
+}
+
+export function DefineImageResource(name: string, category: ImageCategory, expectedFormat: 'png' | 'jpg'): ImageResource {
+	if (!name.endsWith('.' + expectedFormat)) {
+		throw new Error(`Resource ${name} is not a ${expectedFormat.toUpperCase()} file.`);
+	}
+
+	const resource = new ImageResource(name, category);
+
+	return resource;
 }
 
 export function DefinePngResource(name: string, category: ImageCategory): string {

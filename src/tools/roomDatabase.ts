@@ -1,11 +1,11 @@
-import { GetLogger, IChatroomBackgroundInfo } from 'pandora-common';
+import { GetLogger, RoomBackgroundInfo } from 'pandora-common';
 
 const logger = GetLogger('RoomDatabase');
 
 export const RoomDatabase = new class RoomDatabase {
-	private backgrounds: Map<string, IChatroomBackgroundInfo> = new Map();
+	private backgrounds: Map<string, RoomBackgroundInfo> = new Map();
 
-	public registerBackground(background: IChatroomBackgroundInfo, allowOverride: boolean = false): void {
+	public registerBackground(background: RoomBackgroundInfo, allowOverride: boolean = false): void {
 		if (this.backgrounds.has(background.id) && !allowOverride) {
 			throw new Error(`Duplicate background definition, background '${background.id}' already exists`);
 		}
@@ -14,7 +14,7 @@ export const RoomDatabase = new class RoomDatabase {
 		logger.debug('Registered background', background.id);
 	}
 
-	public export(): IChatroomBackgroundInfo[] {
+	public export(): RoomBackgroundInfo[] {
 		const result = Array.from(this.backgrounds.values());
 		// Do NOT sort the exported backgrounds! Order matters.
 

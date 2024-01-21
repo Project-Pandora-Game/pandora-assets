@@ -1,11 +1,12 @@
-import { CharacterSize, GetLogger, IChatroomBackgroundInfo } from 'pandora-common';
+import { Assert, CalculateBackgroundDataFromCalibrationData, GetLogger, RoomBackgroundCalibrationDataSchema, RoomBackgroundInfo } from 'pandora-common';
 import { SetCurrentContext } from './context';
 import { join } from 'path';
 import { Contributors, CurrentCommitter, GitDataAvailable } from './git';
 import { BACKGROUNDS_SRC_DIR, IS_PRODUCTION_BUILD } from '../constants';
 import * as fs from 'fs';
 import { RoomDatabase } from './roomDatabase';
-import { DefineJpgResource } from './resources';
+import { DefineImageResource, DefineJpgResource, ProcessImageResource } from './resources';
+import { isEqual } from 'lodash';
 
 const PREVIEW_WIDTH = 200;
 const PREVIEW_HEIGHT = 100;
@@ -18,24 +19,13 @@ export function DefineRoomBackground(def: IntermediateRoomBackgroundDefinition):
 
 	let definitionValid = true;
 
-	if (
-		!Number.isInteger(def.size[0]) ||
-		!Number.isInteger(def.size[1]) ||
-		def.size[0] < CharacterSize.WIDTH ||
-		def.size[1] < CharacterSize.HEIGHT
-	) {
-		definitionValid = false;
-		logger.error(`Invalid size: Size must be whole number and at least ${CharacterSize.WIDTH}x${CharacterSize.HEIGHT}`);
-	}
+	const parsedCalibration = RoomBackgroundCalibrationDataSchema.safeParse(def.calibration);
 
-	if (def.scaling < 0) {
+	if (!parsedCalibration.success) {
 		definitionValid = false;
-		logger.error(`Invalid scaling: Scaling can't be negative`);
-	}
-
-	if (def.maxY != null && (!Number.isInteger(def.maxY) || def.maxY > def.size[1])) {
-		definitionValid = false;
-		logger.error(`Invalid maxY: maxY must be an integer no larger than the height of the room`);
+		logger.error('Invalid calibration data:\n', JSON.stringify(parsedCalibration.error.issues, undefined, 4));
+	} else if (!isEqual(parsedCalibration.data, def.calibration)) {
+		logger.warning('Invalid calibration data: Data changed during parsing:', '\nOriginal:', def.calibration, '\nAfter load:', parsedCalibration.data);
 	}
 
 	//#region Validate ownership data
@@ -84,20 +74,21 @@ export function DefineRoomBackground(def: IntermediateRoomBackgroundDefinition):
 		logger.error('Invalid background definition, background skipped');
 		return;
 	}
+	Assert(parsedCalibration.success);
 
-	const image = DefineJpgResource(def.image, 'background');
+	const imageResource = DefineImageResource(def.image, 'background', 'jpg');
+	imageResource.addSizeCheck(def.calibration.imageSize[0], def.calibration.imageSize[1]);
+	const image = ProcessImageResource(imageResource);
+
 	const preview = DefineJpgResource(`${def.image}@${PREVIEW_WIDTH}x${PREVIEW_HEIGHT}`, 'background');
 
-	const background: IChatroomBackgroundInfo = {
+	const background: RoomBackgroundInfo = {
+		...CalculateBackgroundDataFromCalibrationData(image, parsedCalibration.data),
 		id,
 		name: def.name,
-		image,
 		preview,
-		size: def.size,
-		scaling: def.scaling,
-		maxY: def.maxY,
 		tags: def.tags,
-	};
+	}
 
 	RoomDatabase.registerBackground(background);
 }

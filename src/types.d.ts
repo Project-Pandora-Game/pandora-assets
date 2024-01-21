@@ -83,16 +83,15 @@ interface IntermediateLockAssetDefinition extends Pick<import('pandora-common').
 	ownership: AssetOwnershipData;
 }
 
-interface IntermediateRoomBackgroundDefinition extends Pick<import('pandora-common').IChatroomBackgroundInfo,
+interface IntermediateRoomBackgroundDefinition extends Pick<import('pandora-common').RoomBackgroundInfo,
 	| 'id'
 	| 'name'
-	| 'size'
-	| 'maxY'
-	| 'scaling'
 > {
 	/** The background image of the chat room; must be in `jpg` format */
 	image: `${string}.jpg`;
 	tags: import('./backgrounds/backgrounds').BackgroundTagNames[];
+	/** Data needed for correctly positioning characters and room devices inside the room */
+	calibration: import('pandora-common').RoomBackgroundCalibrationData;
 	/** Info about who owns the asset(s) */
 	ownership: {
 		/** Same as author of git commits present in PR, has responsibility for this asset */
