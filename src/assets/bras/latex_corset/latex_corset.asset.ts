@@ -96,7 +96,7 @@ DefineAsset({
 		color: {
 			type: 'typed',
 			name: 'Corset Base Color',
-			interactionType: ItemInteractionType.ADD_REMOVE,
+			interactionType: ItemInteractionType.STYLING,
 			variants: [
 				{
 					id: 'black',

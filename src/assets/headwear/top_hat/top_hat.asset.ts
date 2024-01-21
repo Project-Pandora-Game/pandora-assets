@@ -46,7 +46,7 @@ DefineAsset({
 		hatColor: {
 			type: 'typed',
 			name: 'Hat Base Color',
-			interactionType: ItemInteractionType.ADD_REMOVE,
+			interactionType: ItemInteractionType.STYLING,
 			variants: [
 				{
 					id: 'black',
