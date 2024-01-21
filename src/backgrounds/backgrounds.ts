@@ -20,9 +20,11 @@ const TAGS_DEFINITION = {
 			chill: 'Chill',
 			cozy: 'Cozy',
 			dirty: 'Dirty',
+			event: 'Event',
 			foggy: 'Foggy',
 			home: 'Home',
 			padded: 'Padded',
+			public: 'Public',
 			urban: 'Urban',
 			damp: 'Damp',
 		},
@@ -50,14 +52,17 @@ const TAGS_DEFINITION = {
 			garage: 'Garage',
 			garden: 'Garden',
 			gym: 'Gym',
+			kitchen: 'Kitchen',
 			livingroom: 'Livingroom',
 			lounge: 'Lounge',
+			museum: 'Museum',
 			nature: 'Nature',
 			nightclub: 'Nightclub',
 			shopping: 'Shopping',
 			storage: 'Storage',
 			street: 'Street',
 			wasteland: 'Wasteland',
+			work: 'Work',
 		},
 	},
 	item: {
@@ -104,7 +109,7 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 			areaCoverage: 1.83,
 			ceiling: 4643,
 			areaDepthRatio: 0.37,
-			baseScale: 1.8,
+			baseScale: 2.14,
 			fov: 80,
 		},
 		tags: ['inside', 'livingroom', 'day', 'space_small'],
@@ -119,82 +124,106 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 			],
 		},
 	},
-	// {
-	// 	id: 'loft_living_room',
-	// 	name: 'Loft living room',
-	// 	image: 'loft_living_room.jpg',
-	// 	size: [2750, 1837],
-	// 	maxY: 720,
-	// 	scaling: 1.3,
-	// 	tags: ['inside', 'couch', 'cozy', 'space_small'],
-	// 	ownership: {
-	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-	// 		licensing: [
-	// 			{
-	// 				source: 'https://www.flickr.com/photos/96511847@N04/10560297166/',
-	// 				copyrightHolder: 'Miki',
-	// 				license: 'Public Domain',
-	// 			},
-	// 		],
-	// 	},
-	// },
-	// {
-	// 	id: 'sea_house',
-	// 	name: 'Sea house',
-	// 	image: 'sea_house.jpg',
-	// 	size: [2750, 1837],
-	// 	maxY: 530,
-	// 	scaling: 1.7,
-	// 	tags: ['water', 'beach', 'space_medium'],
-	// 	ownership: {
-	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-	// 		licensing: [
-	// 			{
-	// 				source: 'https://www.flickr.com/photos/96511847@N04/9203979618/',
-	// 				copyrightHolder: 'Miki',
-	// 				license: 'Public Domain',
-	// 			},
-	// 		],
-	// 	},
-	// },
-	// {
-	// 	id: 'wheat_field',
-	// 	name: 'Wheat field',
-	// 	image: 'wheat_field.jpg',
-	// 	size: [2750, 2000],
-	// 	maxY: 1400,
-	// 	scaling: 1.3,
-	// 	tags: ['outside', 'nature', 'field', 'day', 'space_large'],
-	// 	ownership: {
-	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-	// 		licensing: [
-	// 			{
-	// 				source: 'https://www.flickr.com/photos/enneafive/29034594946/',
-	// 				copyrightHolder: 'Johan Neven',
-	// 				license: 'CC BY',
-	// 			},
-	// 		],
-	// 	},
-	// },
-	// {
-	// 	id: 'wet_forest_road',
-	// 	name: 'Wet forest road',
-	// 	image: 'wet_forest_road.jpg',
-	// 	size: [2750, 1937],
-	// 	maxY: 950,
-	// 	scaling: 1.8,
-	// 	tags: ['outside', 'nature', 'forest', 'dirty', 'damp', 'day', 'space_small'],
-	// 	ownership: {
-	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-	// 		licensing: [
-	// 			{
-	// 				source: 'https://www.flickr.com/photos/enneafive/27031985094/',
-	// 				copyrightHolder: 'Johan Neven',
-	// 				license: 'CC BY',
-	// 			},
-	// 		],
-	// 	},
-	// },
+	{
+		id: 'sea_house',
+		name: 'Sea house',
+		image: 'sea_house.jpg',
+		calibration: {
+			imageSize: [5789, 3015],
+			cameraCenterOffset: [0, 236],
+			areaCoverage: 2,
+			ceiling: 0,
+			areaDepthRatio: 0.47,
+			baseScale: 2,
+			fov: 80,
+		},
+		tags: ['water', 'beach', 'space_medium'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/96511847@N04/9203979618/',
+					copyrightHolder: 'Miki',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'loft_living_room',
+		name: 'Loft living room',
+		image: 'loft_living_room.jpg',
+		calibration: {
+			imageSize: [2500, 1670],
+			cameraCenterOffset: [900, 100],
+			areaCoverage: 2.6,
+			ceiling: 3128,
+			areaDepthRatio: 0.76,
+			baseScale: 1.2,
+			fov: 80,
+		},
+		tags: ['inside', 'couch', 'cozy', 'space_small'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/96511847@N04/10560297166/',
+					copyrightHolder: 'Miki',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'wheat_field',
+		name: 'Wheat field',
+		image: 'wheat_field.jpg',
+		calibration: {
+			imageSize: [2406, 1803],
+			cameraCenterOffset: [0, 500],
+			areaCoverage: 19,
+			ceiling: 0,
+			areaDepthRatio: 7.49,
+			baseScale: 1.26,
+			fov: 80,
+		},
+		tags: ['outside', 'nature', 'field', 'day', 'space_large'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/enneafive/29034594946/',
+					copyrightHolder: 'Johan Neven',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'wet_forest_road',
+		name: 'Wet forest road',
+		image: 'wet_forest_road.jpg',
+		calibration: {
+			imageSize: [2867, 2149],
+			cameraCenterOffset: [-50, 120],
+			areaCoverage: 1.57,
+			ceiling: 0,
+			areaDepthRatio: 8.1,
+			baseScale: 1.6,
+			fov: 80,
+		},
+		tags: ['outside', 'nature', 'forest', 'dirty', 'damp', 'day', 'space_small'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/enneafive/27031985094/',
+					copyrightHolder: 'Johan Neven',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
 	// {
 	// 	id: 'spring_path',
 	// 	name: 'Countryside path in spring',
@@ -1161,6 +1190,239 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 	// 			{
 	// 				source: 'https://www.flickr.com/photos/mikec2/4644991529/',
 	// 				copyrightHolder: 'Image Nation',
+	// 				license: 'CC BY',
+	// 			},
+	// 		],
+	// 	},
+	// },
+	// {
+	// 	id: 'blue_wall_room',
+	// 	name: 'Blue wall room',
+	// 	image: 'blue_wall_room.jpg',
+	// 	size: [2150, 1537],
+	// 	maxY: 325,
+	// 	scaling: 1.9,
+	// 	tags: ['inside', 'home', 'day', 'space_medium'],
+	// 	ownership: {
+	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+	// 		licensing: [
+	// 			{
+	// 				source: 'https://skfb.ly/oI8uY',
+	// 				copyrightHolder: 'QuarizonStudio',
+	// 				license: 'CC BY',
+	// 			},
+	// 		],
+	// 	},
+	// },
+	// {
+	// 	id: 'pink_wall_room',
+	// 	name: 'Pink wall room',
+	// 	image: 'pink_wall_room.jpg',
+	// 	size: [2150, 1537],
+	// 	maxY: 325,
+	// 	scaling: 1.9,
+	// 	tags: ['inside', 'home', 'day', 'space_medium'],
+	// 	ownership: {
+	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+	// 		licensing: [
+	// 			{
+	// 				source: 'https://skfb.ly/oI8uY',
+	// 				copyrightHolder: 'QuarizonStudio',
+	// 				license: 'CC BY',
+	// 			},
+	// 		],
+	// 	},
+	// },
+	// {
+	// 	id: 'red_wall_room',
+	// 	name: 'Red wall room',
+	// 	image: 'red_wall_room.jpg',
+	// 	size: [2150, 1537],
+	// 	maxY: 325,
+	// 	scaling: 1.9,
+	// 	tags: ['inside', 'home', 'day', 'space_medium'],
+	// 	ownership: {
+	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+	// 		licensing: [
+	// 			{
+	// 				source: 'https://skfb.ly/oI8uY',
+	// 				copyrightHolder: 'QuarizonStudio',
+	// 				license: 'CC BY',
+	// 			},
+	// 		],
+	// 	},
+	// },
+	// {
+	// 	id: 'show_stage',
+	// 	name: 'Show stage',
+	// 	image: 'show_stage.jpg',
+	// 	size: [2150, 1537],
+	// 	maxY: 325,
+	// 	scaling: 1.9,
+	// 	tags: ['inside', 'event', 'space_medium'],
+	// 	ownership: {
+	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+	// 		licensing: [
+	// 			{
+	// 				source: 'https://skfb.ly/oMzKN',
+	// 				copyrightHolder: 'QuarizonStudio',
+	// 				license: 'CC BY',
+	// 			},
+	// 		],
+	// 	},
+	// },
+	// {
+	// 	id: 'show_stage_large',
+	// 	name: 'Show stage (large)',
+	// 	image: 'show_stage_large.jpg',
+	// 	size: [2150, 1537],
+	// 	maxY: 325,
+	// 	scaling: 1.9,
+	// 	tags: ['inside', 'event', 'space_large'],
+	// 	ownership: {
+	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+	// 		licensing: [
+	// 			{
+	// 				source: 'https://skfb.ly/oMzKN',
+	// 				copyrightHolder: 'QuarizonStudio',
+	// 				license: 'CC BY',
+	// 			},
+	// 		],
+	// 	},
+	// },
+	// {
+	// 	id: 'open_kitchen',
+	// 	name: 'Open kitchen',
+	// 	image: 'open_kitchen.jpg',
+	// 	size: [2150, 1537],
+	// 	maxY: 325,
+	// 	scaling: 1.9,
+	// 	tags: ['inside', 'home', 'day', 'kitchen', 'space_medium'],
+	// 	ownership: {
+	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+	// 		licensing: [
+	// 			{
+	// 				source: 'https://skfb.ly/oIqQL',
+	// 				copyrightHolder: 'QuarizonStudio',
+	// 				license: 'CC BY',
+	// 			},
+	// 		],
+	// 	},
+	// },
+	// {
+	// 	id: 'upper_office',
+	// 	name: 'Upper office',
+	// 	image: 'upper_office.jpg',
+	// 	size: [2150, 1537],
+	// 	maxY: 325,
+	// 	scaling: 1.9,
+	// 	tags: ['inside', 'day', 'work', 'space_small'],
+	// 	ownership: {
+	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+	// 		licensing: [
+	// 			{
+	// 				source: 'https://skfb.ly/oIwoz',
+	// 				copyrightHolder: 'dylanheyes',
+	// 				license: 'CC BY',
+	// 			},
+	// 		],
+	// 	},
+	// },
+	// {
+	// 	id: 'modern_toilet',
+	// 	name: 'Modern toilet room',
+	// 	image: 'modern_toilet.jpg',
+	// 	size: [2150, 1537],
+	// 	maxY: 325,
+	// 	scaling: 1.9,
+	// 	tags: ['inside', 'day', 'toilet', 'space_small'],
+	// 	ownership: {
+	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+	// 		licensing: [
+	// 			{
+	// 				source: 'https://skfb.ly/oyVRv',
+	// 				copyrightHolder: 'dylanheyes',
+	// 				license: 'CC BY',
+	// 			},
+	// 		],
+	// 	},
+	// },
+	// {
+	// 	id: 'museum_hall_1',
+	// 	name: 'Museum hall A',
+	// 	image: 'museum_hall_1.jpg',
+	// 	size: [2150, 1537],
+	// 	maxY: 325,
+	// 	scaling: 1.9,
+	// 	tags: ['inside', 'day', 'event', 'foyer', 'museum', 'space_large'],
+	// 	ownership: {
+	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+	// 		licensing: [
+	// 			{
+	// 				source: 'https://skfb.ly/oF9N6',
+	// 				copyrightHolder: 'artfletch',
+	// 				license: 'CC BY',
+	// 			},
+	// 		],
+	// 	},
+	// },
+	// {
+	// 	id: 'museum_hall_2',
+	// 	name: 'Museum hall B',
+	// 	image: 'museum_hall_2.jpg',
+	// 	size: [2150, 1537],
+	// 	maxY: 325,
+	// 	scaling: 1.9,
+	// 	tags: ['inside', 'day', 'event', 'foyer', 'museum', 'space_large'],
+	// 	ownership: {
+	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+	// 		licensing: [
+	// 			{
+	// 				source: 'https://skfb.ly/oF9N6',
+	// 				copyrightHolder: 'artfletch',
+	// 				license: 'CC BY',
+	// 			},
+	// 		],
+	// 	},
+	// },
+	// {
+	// 	id: 'public_square',
+	// 	name: 'Public square',
+	// 	image: 'public_square.jpg',
+	// 	size: [2150, 1537],
+	// 	maxY: 325,
+	// 	scaling: 1.9,
+	// 	tags: ['outside', 'day', 'urban', 'public', 'space_large'],
+	// 	ownership: {
+	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+	// 		licensing: [
+	// 			{
+	// 				source: 'https://flic.kr/p/2eyErPz',
+	// 				copyrightHolder: 'R Boed',
+	// 				license: 'CC BY',
+	// 			},
+	// 		],
+	// 	},
+	// },
+	// {
+	// 	id: 'public_square_platform',
+	// 	name: 'Public square platform',
+	// 	image: 'public_square_platform.jpg',
+	// 	size: [2150, 1537],
+	// 	maxY: 325,
+	// 	scaling: 1.9,
+	// 	tags: ['outside', 'day', 'urban', 'public', 'space_large'],
+	// 	ownership: {
+	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+	// 		licensing: [
+	// 			{
+	// 				source: 'https://flic.kr/p/2eyErPz',
+	// 				copyrightHolder: 'R Boed',
+	// 				license: 'CC BY',
+	// 			},
+	// 			{
+	// 				source: 'https://skfb.ly/oMCHp',
+	// 				copyrightHolder: '5CNG5',
 	// 				license: 'CC BY',
 	// 			},
 	// 		],
