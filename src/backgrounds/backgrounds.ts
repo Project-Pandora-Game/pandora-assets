@@ -199,177 +199,231 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 			],
 		},
 	},
-	// {
-	// 	id: 'spring_path',
-	// 	name: 'Countryside path in spring',
-	// 	image: 'spring_path.jpg',
-	// 	size: [2750, 1837],
-	// 	maxY: 980,
-	// 	scaling: 1.7,
-	// 	tags: ['outside', 'nature', 'path', 'day', 'space_small'],
-	// 	ownership: {
-	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-	// 		licensing: [
-	// 			{
-	// 				source: 'https://www.flickr.com/photos/enneafive/26835108092/',
-	// 				copyrightHolder: 'Johan Neven',
-	// 				license: 'CC BY',
-	// 			},
-	// 		],
-	// 	},
-	// },
-	// {
-	// 	id: 'corn_field',
-	// 	name: 'Corn field',
-	// 	image: 'corn_field.jpg',
-	// 	size: [3050, 2237],
-	// 	maxY: 1080,
-	// 	scaling: 1.74,
-	// 	tags: ['outside', 'nature', 'field', 'day', 'space_large'],
-	// 	ownership: {
-	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-	// 		licensing: [
-	// 			{
-	// 				source: 'https://www.flickr.com/photos/enneafive/49959217797/',
-	// 				copyrightHolder: 'Johan Neven',
-	// 				license: 'CC BY',
-	// 			},
-	// 		],
-	// 	},
-	// },
-	// {
-	// 	id: 'walking_path',
-	// 	name: 'Countryside walking path',
-	// 	image: 'walking_path.jpg',
-	// 	size: [2750, 1937],
-	// 	maxY: 980,
-	// 	scaling: 1.8,
-	// 	tags: ['outside', 'nature', 'path', 'day', 'space_small'],
-	// 	ownership: {
-	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-	// 		licensing: [
-	// 			{
-	// 				source: 'https://www.flickr.com/photos/enneafive/33486478823/',
-	// 				copyrightHolder: 'Johan Neven',
-	// 				license: 'CC BY',
-	// 			},
-	// 		],
-	// 	},
-	// },
-	// {
-	// 	id: 'large_garden',
-	// 	name: 'Large garden',
-	// 	image: 'large_garden.jpg',
-	// 	size: [5000, 3600],
-	// 	maxY: 1400,
-	// 	scaling: 2.0,
-	// 	tags: ['outside', 'nature', 'garden', 'day', 'space_large'],
-	// 	ownership: {
-	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-	// 		licensing: [
-	// 			{
-	// 				source: 'https://www.flickr.com/photos/21203533@N00/9487449967',
-	// 				copyrightHolder: 'Jim G',
-	// 				license: 'CC BY',
-	// 			},
-	// 		],
-	// 	},
-	// },
-	// {
-	// 	id: 'underground_area',
-	// 	name: 'Underground Area',
-	// 	image: 'underground_area.jpg',
-	// 	size: [4000, 2800],
-	// 	maxY: 1180,
-	// 	scaling: 1.7,
-	// 	tags: ['inside', 'dungeon', 'cellar', 'day', 'space_medium'],
-	// 	ownership: {
-	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-	// 		licensing: [
-	// 			{
-	// 				source: 'https://www.flickr.com/photos/9019841@N08/6628953893',
-	// 				copyrightHolder: 'fusion-of-horizons',
-	// 				license: 'CC BY',
-	// 			},
-	// 		],
-	// 	},
-	// },
-	// {
-	// 	id: 'foggy_forest',
-	// 	name: 'Foggy forest',
-	// 	image: 'foggy_forest.jpg',
-	// 	size: [4000, 2800],
-	// 	maxY: 780,
-	// 	scaling: 2.3,
-	// 	tags: ['outside', 'nature', 'forest', 'foggy', 'day', 'space_small'],
-	// 	ownership: {
-	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-	// 		licensing: [
-	// 			{
-	// 				source: 'https://www.flickr.com/photos/scotbot/11341643694/',
-	// 				copyrightHolder: 'Scott Wylie',
-	// 				license: 'CC BY',
-	// 			},
-	// 		],
-	// 	},
-	// },
-	// {
-	// 	id: 'sunny_forest_clearing',
-	// 	name: 'Sunny forest clearing',
-	// 	image: 'sunny_forest_clearing.jpg',
-	// 	size: [4000, 2800],
-	// 	maxY: 1080,
-	// 	scaling: 1.9,
-	// 	tags: ['outside', 'nature', 'forest', 'day', 'space_small'],
-	// 	ownership: {
-	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-	// 		licensing: [
-	// 			{
-	// 				source: 'https://www.flickr.com/photos/scotbot/14181010173/',
-	// 				copyrightHolder: 'Scott Wylie',
-	// 				license: 'CC BY',
-	// 			},
-	// 		],
-	// 	},
-	// },
-	// {
-	// 	id: 'abandoned_wide_space',
-	// 	name: 'Abandoned wasteland',
-	// 	image: 'abandoned_wide_space.jpg',
-	// 	size: [3750, 2667],
-	// 	maxY: 1180,
-	// 	scaling: 2.4,
-	// 	tags: ['outside', 'buildings', 'wasteland', 'day', 'space_verylarge'],
-	// 	ownership: {
-	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-	// 		licensing: [
-	// 			{
-	// 				source: 'https://www.flickr.com/photos/scotbot/14203759230/',
-	// 				copyrightHolder: 'Scott Wylie',
-	// 				license: 'CC BY',
-	// 			},
-	// 		],
-	// 	},
-	// },
-	// {
-	// 	id: 'long_narrow_beach',
-	// 	name: 'Long narrow beach',
-	// 	image: 'long_narrow_beach.jpg',
-	// 	size: [3250, 2237],
-	// 	maxY: 680,
-	// 	scaling: 2.1,
-	// 	tags: ['outside', 'buildings', 'beach', 'water', 'day', 'space_small'],
-	// 	ownership: {
-	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-	// 		licensing: [
-	// 			{
-	// 				source: 'https://www.flickr.com/photos/21976354@N07/2349726936',
-	// 				copyrightHolder: 'NeilsPhotography',
-	// 				license: 'CC BY',
-	// 			},
-	// 		],
-	// 	},
-	// },
+	{
+		id: 'spring_path',
+		name: 'Countryside path in spring',
+		image: 'spring_path.jpg',
+		calibration: {
+			imageSize: [2458, 1843],
+			cameraCenterOffset: [-100, 150],
+			areaCoverage: 1.43,
+			ceiling: 0,
+			areaDepthRatio: 6.67,
+			baseScale: 1.39,
+			fov: 80,
+		},
+		tags: ['outside', 'nature', 'path', 'day', 'space_small'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/enneafive/26835108092/',
+					copyrightHolder: 'Johan Neven',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'corn_field',
+		name: 'Corn field',
+		image: 'corn_field.jpg',
+		calibration: {
+			imageSize: [2396, 1596],
+			cameraCenterOffset: [0, 110],
+			areaCoverage: 19,
+			ceiling: 0,
+			areaDepthRatio: 7.37,
+			baseScale: 0.8,
+			fov: 80,
+		},
+		tags: ['outside', 'nature', 'field', 'day', 'space_large'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/enneafive/49959217797/',
+					copyrightHolder: 'Johan Neven',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'walking_path',
+		name: 'Countryside walking path',
+		image: 'walking_path.jpg',
+		calibration: {
+			imageSize: [2761, 2058],
+			cameraCenterOffset: [-200, 150],
+			areaCoverage: 3,
+			ceiling: 0,
+			areaDepthRatio: 4.67,
+			baseScale: 1,
+			fov: 80,
+		},
+		tags: ['outside', 'nature', 'path', 'day', 'space_small'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/enneafive/33486478823/',
+					copyrightHolder: 'Johan Neven',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'large_garden',
+		name: 'Large garden',
+		image: 'large_garden.jpg',
+		calibration: {
+			imageSize: [2795, 2074],
+			cameraCenterOffset: [500, 100],
+			areaCoverage: 2.4,
+			ceiling: 0,
+			areaDepthRatio: 1.2,
+			baseScale: 0.6,
+			fov: 80,
+		},
+		tags: ['outside', 'nature', 'garden', 'day', 'space_large'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/21203533@N00/9487449967',
+					copyrightHolder: 'Jim G',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'underground_area',
+		name: 'Underground Area',
+		image: 'underground_area.jpg',
+		calibration: {
+			imageSize: [2573, 1709],
+			cameraCenterOffset: [0, 10],
+			areaCoverage: 4,
+			ceiling: 0,
+			areaDepthRatio: 3.21,
+			baseScale: 1.1,
+			fov: 80,
+		},
+		tags: ['inside', 'dungeon', 'cellar', 'day', 'space_medium'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/9019841@N08/6628953893',
+					copyrightHolder: 'fusion-of-horizons',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'foggy_forest',
+		name: 'Foggy forest',
+		image: 'foggy_forest.jpg',
+		calibration: {
+			imageSize: [2250, 1266],
+			cameraCenterOffset: [0, -80],
+			areaCoverage: 19,
+			ceiling: 0,
+			areaDepthRatio: 1.92,
+			baseScale: 0.7,
+			fov: 80,
+		},
+		tags: ['outside', 'nature', 'forest', 'foggy', 'day', 'space_small'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/scotbot/11341643694/',
+					copyrightHolder: 'Scott Wylie',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'sunny_forest_clearing',
+		name: 'Sunny forest clearing',
+		image: 'sunny_forest_clearing.jpg',
+		calibration: {
+			imageSize: [2835, 1933],
+			cameraCenterOffset: [0, 100],
+			areaCoverage: 19,
+			ceiling: 0,
+			areaDepthRatio: 4.17,
+			baseScale: 0.9,
+			fov: 80,
+		},
+		tags: ['outside', 'nature', 'forest', 'day', 'space_small'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/scotbot/14181010173/',
+					copyrightHolder: 'Scott Wylie',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'abandoned_wide_space',
+		name: 'Abandoned wasteland',
+		image: 'abandoned_wide_space.jpg',
+		calibration: {
+			imageSize: [2458, 1639],
+			cameraCenterOffset: [0, -130],
+			areaCoverage: 20,
+			ceiling: 0,
+			areaDepthRatio: 12.72,
+			baseScale: 0.8,
+			fov: 80,
+		},
+		tags: ['outside', 'buildings', 'wasteland', 'day', 'space_verylarge'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/scotbot/14203759230/',
+					copyrightHolder: 'Scott Wylie',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'long_narrow_beach',
+		name: 'Long narrow beach',
+		image: 'long_narrow_beach.jpg',
+		calibration: {
+			imageSize: [3888, 2592],
+			cameraCenterOffset: [0, -140],
+			areaCoverage: 3.4,
+			ceiling: 0,
+			areaDepthRatio: 2.76,
+			baseScale: 1.2,
+			fov: 80,
+		},
+		tags: ['outside', 'buildings', 'beach', 'water', 'day', 'space_small'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/21976354@N07/2349726936',
+					copyrightHolder: 'NeilsPhotography',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
 	// {
 	// 	id: 'ritual_dungeon',
 	// 	name: 'Ritual dungeon',
