@@ -150,31 +150,6 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 		},
 	},
 	{
-		id: 'loft_living_room',
-		name: 'Loft living room',
-		image: 'loft_living_room.jpg',
-		calibration: {
-			imageSize: [2500, 1670],
-			cameraCenterOffset: [900, 100],
-			areaCoverage: 2.6,
-			ceiling: 3128,
-			areaDepthRatio: 0.76,
-			baseScale: 1.2,
-			fov: 80,
-		},
-		tags: ['inside', 'couch', 'cozy', 'space_small'],
-		ownership: {
-			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-			licensing: [
-				{
-					source: 'https://www.flickr.com/photos/96511847@N04/10560297166/',
-					copyrightHolder: 'Miki',
-					license: 'Public Domain',
-				},
-			],
-		},
-	},
-	{
 		id: 'wheat_field',
 		name: 'Wheat field',
 		image: 'wheat_field.jpg',
@@ -468,26 +443,6 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 	// 			{
 	// 				source: 'https://commons.wikimedia.org/w/index.php?curid=15987770',
 	// 				copyrightHolder: 'Rolf Mueller',
-	// 				license: 'CC BY-SA',
-	// 			},
-	// 		],
-	// 	},
-	// },
-	// {
-	// 	id: 'holy_throne_room',
-	// 	name: 'Holy throne room',
-	// 	image: 'holy_throne_room.jpg',
-	// 	size: [4000, 2800],
-	// 	maxY: 650,
-	// 	scaling: 2.0,
-	// 	tags: ['inside', 'throne', 'day', 'space_medium'],
-	// 	ownership: {
-	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-	// 		licensing: [
-	// 			{
-	// 				source: 'https://commons.wikimedia.org/w/index.php?curid=74598735',
-	// 				copyrightHolder: 'Ad Maskens',
-	// 				editedBy: 'ClaudiaMia',
 	// 				license: 'CC BY-SA',
 	// 			},
 	// 		],
@@ -831,25 +786,6 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 	// 		licensing: [
 	// 			{
 	// 				source: 'https://www.flickr.com/photos/okchomeseller/43213499724/',
-	// 				copyrightHolder: 'Bill Wilson',
-	// 				license: 'CC BY',
-	// 			},
-	// 		],
-	// 	},
-	// },
-	// {
-	// 	id: 'bathroom_with_dressing_room',
-	// 	name: 'Bathroom with dressing room',
-	// 	image: 'bathroom_with_dressing_room.jpg',
-	// 	size: [2450, 1837],
-	// 	maxY: 720,
-	// 	scaling: 1.8,
-	// 	tags: ['inside', 'bathroom', 'shower', 'toilet', 'day', 'space_small'],
-	// 	ownership: {
-	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-	// 		licensing: [
-	// 			{
-	// 				source: 'https://www.flickr.com/photos/okchomeseller/52174609523/',
 	// 				copyrightHolder: 'Bill Wilson',
 	// 				license: 'CC BY',
 	// 			},
@@ -1291,25 +1227,6 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 	// 	},
 	// },
 	// {
-	// 	id: 'open_kitchen',
-	// 	name: 'Open kitchen',
-	// 	image: 'open_kitchen.jpg',
-	// 	size: [2150, 1537],
-	// 	maxY: 325,
-	// 	scaling: 1.9,
-	// 	tags: ['inside', 'home', 'day', 'kitchen', 'space_medium'],
-	// 	ownership: {
-	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-	// 		licensing: [
-	// 			{
-	// 				source: 'https://skfb.ly/oIqQL',
-	// 				copyrightHolder: 'QuarizonStudio',
-	// 				license: 'CC BY',
-	// 			},
-	// 		],
-	// 	},
-	// },
-	// {
 	// 	id: 'upper_office',
 	// 	name: 'Upper office',
 	// 	image: 'upper_office.jpg',
@@ -1342,44 +1259,6 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 	// 			{
 	// 				source: 'https://skfb.ly/oyVRv',
 	// 				copyrightHolder: 'dylanheyes',
-	// 				license: 'CC BY',
-	// 			},
-	// 		],
-	// 	},
-	// },
-	// {
-	// 	id: 'museum_hall_1',
-	// 	name: 'Museum hall A',
-	// 	image: 'museum_hall_1.jpg',
-	// 	size: [2150, 1537],
-	// 	maxY: 325,
-	// 	scaling: 1.9,
-	// 	tags: ['inside', 'day', 'event', 'foyer', 'museum', 'space_large'],
-	// 	ownership: {
-	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-	// 		licensing: [
-	// 			{
-	// 				source: 'https://skfb.ly/oF9N6',
-	// 				copyrightHolder: 'artfletch',
-	// 				license: 'CC BY',
-	// 			},
-	// 		],
-	// 	},
-	// },
-	// {
-	// 	id: 'museum_hall_2',
-	// 	name: 'Museum hall B',
-	// 	image: 'museum_hall_2.jpg',
-	// 	size: [2150, 1537],
-	// 	maxY: 325,
-	// 	scaling: 1.9,
-	// 	tags: ['inside', 'day', 'event', 'foyer', 'museum', 'space_large'],
-	// 	ownership: {
-	// 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-	// 		licensing: [
-	// 			{
-	// 				source: 'https://skfb.ly/oF9N6',
-	// 				copyrightHolder: 'artfletch',
 	// 				license: 'CC BY',
 	// 			},
 	// 		],
