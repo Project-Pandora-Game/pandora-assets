@@ -44,6 +44,7 @@ const ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'staticAttributes',
 	'posePresets',
 	'preview',
+	'assetPreferenceDefault',
 
 	// Graphics definition
 	'colorization',
