@@ -3,6 +3,7 @@ DefineAsset({
 	size: 'small',
 	graphics: undefined,
 	colorization: undefined,
+	assetPreferenceDefault: 'maybe',
 	preview: 'preview.png',
 	attributes: {
 		provides: [
@@ -14,9 +15,6 @@ DefineAsset({
 		requires: [
 			'!Ear_cover',
 			'!Ear_insert',
-		],
-		covers: [
-			'Ear_item',
 		],
 	},
 	effects: {

@@ -15,9 +15,6 @@ DefineAsset({
 			'!Ear_cover',
 			'!Ear_insert',
 		],
-		covers: [
-			'Ear_item',
-		],
 	},
 	effects: {
 		distortion: 6,
