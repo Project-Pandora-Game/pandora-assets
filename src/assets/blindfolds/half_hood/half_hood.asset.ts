@@ -20,10 +20,15 @@ DefineAsset({
 			'Headgear',
 			'Headgear_hood',
 			'Restraint_eyes',
+			'Ear_item',
+			'Ear_cover',
 		],
 		hides: [
 			'Hair',
 			'Ears',
+		],
+		covers: [
+			'Ear_item',
 		],
 	},
 	effects: {

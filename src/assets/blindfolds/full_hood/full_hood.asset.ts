@@ -27,10 +27,15 @@ DefineAsset({
 			'Restraint',
 			'Headgear',
 			'Headgear_hood',
+			'Ear_item',
+			'Ear_cover',
 		],
 		hides: [
 			'Hair',
 			'Ears',
+		],
+		covers: [
+			'Ear_item',
 		],
 	},
 	modules: {
