@@ -14,6 +14,7 @@ const LOCK_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'lockedText',
 	'password',
 	'preview',
+	'assetPreferenceDefault',
 ] as const satisfies readonly (keyof LockAssetDefinition)[];
 
 export type LockAssetDefinitionFallthroughProperties = typeof LOCK_DEFINITION_FALLTHROUGH_PROPERTIES[number];
