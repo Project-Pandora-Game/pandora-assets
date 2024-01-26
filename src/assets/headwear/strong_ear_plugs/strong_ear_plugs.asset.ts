@@ -1,13 +1,21 @@
 DefineAsset({
-	name: 'Ear Plugs',
+	name: 'Strong Ear Plugs',
 	size: 'small',
 	graphics: undefined,
 	colorization: undefined,
 	preview: 'preview.png',
 	attributes: {
 		provides: [
+			'Restraint',
 			'Restraint_ears',
 		],
+	},
+	effects: {
+		distortion: 8,
+		frequencyLoss: 8,
+		vowelLoss: 7,
+		middleLoss: 6,
+
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
