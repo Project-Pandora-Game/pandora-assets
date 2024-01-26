@@ -402,7 +402,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 	Ear_insert: {
 		name: 'An item inserted into the ears',
 		description: 'An item that is inserted into the ears',
-		parentAttributes: ['Mouth_item'],
+		parentAttributes: ['Ear_item'],
 	},
 	Ear_cover: {
 		name: 'An item covering the ears',
