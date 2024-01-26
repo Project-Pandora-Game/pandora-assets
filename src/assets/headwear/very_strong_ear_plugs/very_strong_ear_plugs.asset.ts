@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Strong Ear Plugs',
+	name: 'Very Strong Ear Plugs',
 	size: 'small',
 	graphics: undefined,
 	colorization: undefined,
@@ -20,11 +20,10 @@ DefineAsset({
 		],
 	},
 	effects: {
-		distortion: 8,
-		frequencyLoss: 8,
-		vowelLoss: 7,
-		middleLoss: 6,
-
+		distortion: 10,
+		frequencyLoss: 10,
+		vowelLoss: 10,
+		middleLoss: 10,
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

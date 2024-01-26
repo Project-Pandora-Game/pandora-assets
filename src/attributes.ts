@@ -371,15 +371,6 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		icon: 'blindfold',
 		parentAttributes: ['Restraint'],
 	},
-	Restraint_ears: {
-		name: 'Hearing restraint',
-		description: 'An item that decreases the ability to hear',
-		useAsWardrobeFilter: {
-			tabs: ['worn', 'storage'],
-		},
-		icon: 'headphones',
-		parentAttributes: ['Restraint'],
-	},
 	Toy: {
 		name: 'Toy',
 		description: 'A sexual toy',
@@ -392,6 +383,30 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Genital clamps',
 		description: 'A set of genital clamps',
 		parentAttributes: ['Toy'],
+	},
+
+	//#region Ear items
+	Ear_item: {
+		name: 'An item used on the ears or inside',
+		description: 'Any item that is positioned on the ears (either outside or inside)',
+	},
+	Restraint_ears: {
+		name: 'Hearing restraint',
+		description: 'An item that decreases the ability to hear',
+		useAsWardrobeFilter: {
+			tabs: ['worn', 'storage'],
+		},
+		icon: 'headphones',
+		parentAttributes: ['Restraint', 'Ear_item'],
+	},
+	Ear_insert: {
+		name: 'An item inserted into the ears',
+		description: 'An item that is inserted into the ears',
+		parentAttributes: ['Mouth_item'],
+	},
+	Ear_cover: {
+		name: 'An item covering the ears',
+		description: 'An item that is covering the ears',
 	},
 
 	//#region Mouth items

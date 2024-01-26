@@ -8,6 +8,15 @@ DefineAsset({
 		provides: [
 			'Restraint',
 			'Restraint_ears',
+			'Ear_item',
+			'Ear_insert',
+		],
+		requires: [
+			'!Ear_cover',
+			'!Ear_insert',
+		],
+		covers: [
+			'Ear_item',
 		],
 	},
 	effects: {
