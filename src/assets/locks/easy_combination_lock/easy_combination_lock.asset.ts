@@ -1,5 +1,6 @@
 DefineLockAsset({
 	name: 'Easy Combination Lock',
+	assetPreferenceDefault: 'prevent',
 	chat: {
 		chatDescriptor: 'an easy combination lock',
 		actionLock: 'SOURCE_CHARACTER clicked the easy combination lock on ITEM_CONTAINER_SIMPLE_DYNAMIC shut.',

@@ -1,5 +1,6 @@
 DefineLockAsset({
 	name: 'Password Lock',
+	assetPreferenceDefault: 'prevent',
 	chat: {
 		chatDescriptor: 'a password lock',
 		actionLock: 'SOURCE_CHARACTER clicked the password lock on ITEM_CONTAINER_SIMPLE_DYNAMIC shut.',
