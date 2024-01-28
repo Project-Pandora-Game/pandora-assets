@@ -10,6 +10,8 @@ When contributing a new asset to Pandora, the contributors are required to fill 
 
 For details about licensing, please check `ASSET_LICENSING.md` and `LICENSE`.
 
+Be aware that each asset contribution will be reviewed by the Pandora team. We may request changes, if we consider any aspects, especially the consistency of asset properties among related assets in Pandora, not fitting to the vision of how we want Pandora to work. Please consider getting in contact with us using Discord, if you have any questions or doubts about your asset idea. We will try to work together with you to get your contribution into Pandora.
+
 # Modification policy
 
 Authors can choose from multiple policies on how they prefer their assets to be changed by others. Note that an asset can always be entirely removed from the game if the Pandora team decides, for any reason, including but not limited to it being broken and the author preferring it not to be modified.
