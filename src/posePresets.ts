@@ -392,6 +392,20 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						},
 					},
 				},
+				{
+					name: 'Arms down apart',
+					bones: {
+						arm_l: 50,
+						arm_r: 50,
+						elbow_l: 0,
+						elbow_r: 0,
+					},
+					arms: {
+						position: 'front',
+						rotation: 'forward',
+						fingers: 'spread',
+					},
+				},
 			],
 		},
 		{
