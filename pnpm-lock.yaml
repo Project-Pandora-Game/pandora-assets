@@ -1479,17 +1479,10 @@ packages:
     resolution: {integrity: sha512-QpLcX9ZSsq3YYUUnD3nFDY8H7wctAhQj/TFKL8Ya8v5fMm3CFXxo8zStsLAl780ltoYoo1WvKUVGBQK+1ifr7g==}
     dev: false
 
-  /@types/node@18.19.12:
-    resolution: {integrity: sha512-uLcpWEAvatBEubmgCMzWforZbAu1dT9syweWnU3/DNwbeUBq2miP5nG8Y4JL9MDMKWt+7Yv1CSvA8xELdEl54w==}
-    dependencies:
-      undici-types: 5.26.5
-    dev: false
-
   /@types/node@18.19.13:
     resolution: {integrity: sha512-kgnbRDj8ioDyGxoiaXsiu1Ybm/K14ajCgMOkwiqpHrnF7d7QiYRoRqHIpglMMs3DwXinlK4qJ8TZGlj4hfleJg==}
     dependencies:
       undici-types: 5.26.5
-    dev: true
 
   /@types/qs@6.9.7:
     resolution: {integrity: sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==}
@@ -4737,7 +4730,7 @@ packages:
     dependencies:
       '@types/async-lock': 1.4.2
       '@types/lodash': 4.14.202
-      '@types/node': 18.19.12
+      '@types/node': 18.19.13
       async-lock: 1.4.1
       immer: 10.0.3
       lodash: 4.17.21
