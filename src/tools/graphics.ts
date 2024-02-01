@@ -60,6 +60,7 @@ function LoadLayerImageSetting(setting: LayerImageSetting): LayerImageSetting {
 			image: override.image && DefinePngResource(override.image, 'asset'),
 		}));
 	return {
+		...setting,
 		image: setting.image && DefinePngResource(setting.image, 'asset'),
 		alphaImage: setting.alphaImage && DefinePngResource(setting.alphaImage, 'asset'),
 		overrides,
