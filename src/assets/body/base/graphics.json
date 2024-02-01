@@ -6,6 +6,35 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"priority": "BODY_SOLES",
+			"points": "body_soles_back",
+			"mirror": 0,
+			"colorizationKey": "skin",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "body_soles_back.png",
+						"condition": [
+							[
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "Soles"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"name": "Body",
 			"priority": "BODY",
 			"points": "body",

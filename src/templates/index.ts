@@ -8,6 +8,7 @@ import { WatchFile } from '../tools/watch';
 const templateList: string[] = [
 	'static',
 	'body',
+	'body_soles_back',
 	'breast_toy',
 	'breasts',
 	'handheld',
