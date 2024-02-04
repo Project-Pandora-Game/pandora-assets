@@ -130,6 +130,64 @@
 				]
 			},
 			"name": "soles back"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "BELOW_BODY_SOLES",
+			"points": "body_soles_back",
+			"mirror": 0,
+			"colorizationKey": "soles",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "sneakers_soles_sides.png",
+						"condition": [
+							[
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "soles kneeling sides"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "BELOW_BODY_SOLES",
+			"points": "body_soles_back",
+			"mirror": 0,
+			"colorizationKey": "sneakers",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "sneakers_soles_kneeling.png",
+						"condition": [
+							[
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "soles kneeling sole"
 		}
 	]
 }

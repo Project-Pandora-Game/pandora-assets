@@ -104,6 +104,35 @@
 				]
 			},
 			"name": "back belts"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "BELOW_BODY_SOLES",
+			"points": "body_soles_back",
+			"mirror": 0,
+			"colorizationKey": "shoes",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "fluffy_soles.png",
+						"condition": [
+							[
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "soles kneeling sole"
 		}
 	]
 }

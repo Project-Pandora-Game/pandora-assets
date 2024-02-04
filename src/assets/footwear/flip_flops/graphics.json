@@ -104,6 +104,35 @@
 				]
 			},
 			"name": "straps back"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "BELOW_BODY_SOLES",
+			"points": "body_soles_back",
+			"mirror": 0,
+			"colorizationKey": "soles",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "flip-flops_soles.png",
+						"condition": [
+							[
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "soles kneeling sole"
 		}
 	]
 }

@@ -12,7 +12,7 @@ DefineAsset({
 		},
 		soles: {
 			name: 'Soles',
-			default: '#393939',
+			default: '#686868',
 		},
 		smallRings: {
 			name: 'Small Rings',
