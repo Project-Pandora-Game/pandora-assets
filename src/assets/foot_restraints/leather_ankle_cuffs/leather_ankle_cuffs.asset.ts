@@ -67,7 +67,6 @@ DefineAsset({
 					name: 'Chained',
 					properties: {
 						poseLimits: {
-							legs: 'standing',
 							options: [
 								{
 									bones: {
