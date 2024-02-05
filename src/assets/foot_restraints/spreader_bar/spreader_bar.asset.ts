@@ -40,6 +40,18 @@ DefineAsset({
 			name: 'Bar Width',
 			variants: [
 				{
+					id: 'narrow',
+					name: 'Narrow',
+					properties: {
+						poseLimits: {
+							bones: {
+								leg_r: -10,
+								leg_l: -10,
+							},
+						},
+					},
+				},
+				{
 					id: 'normal',
 					name: 'Normal',
 					default: true,
@@ -49,33 +61,19 @@ DefineAsset({
 								leg_r: -18,
 								leg_l: -18,
 							},
-							legs: 'standing',
-						},
-					},
-				},
-				{
-					id: 'narrow',
-					name: 'Narrow',
-					properties: {
-						poseLimits: {
-							bones: {
-								leg_r: -10,
-								leg_l: -10,
-							},
-							legs: 'standing',
 						},
 					},
 				},
 				{
 					id: 'wide',
-					name: 'Wide',
+					name: 'Wide (no kneeling)',
 					properties: {
 						poseLimits: {
 							bones: {
 								leg_r: -30,
 								leg_l: -30,
 							},
-							legs: 'standing',
+							legs: ['standing', 'sitting'],
 						},
 					},
 				},
