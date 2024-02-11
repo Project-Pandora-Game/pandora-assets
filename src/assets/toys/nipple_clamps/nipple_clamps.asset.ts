@@ -14,7 +14,11 @@ DefineAsset({
 	},
 	preview: 'clamps_n_preview.png',
 	attributes: {
-		provides: ['Toy'],
+		provides: [
+			'Toy',
+			'Breast_item',
+			'Breast_nipple',
+		],
 	},
 	modules: {
 		clampAddons: {
@@ -25,6 +29,10 @@ DefineAsset({
 					id: 'none',
 					name: 'No Addon',
 					default: true,
+				},
+				{
+					id: 'ring',
+					name: 'Attached Ring',
 				},
 				{
 					id: 'chain',

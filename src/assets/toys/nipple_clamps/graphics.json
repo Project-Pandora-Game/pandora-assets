@@ -12,7 +12,20 @@
 			"colorizationKey": "clamps",
 			"image": {
 				"image": "clamps.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "clamps_base.png",
+						"condition": [
+							[
+								{
+									"module": "clampAddons",
+									"operator": "=",
+									"value": "none"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "clamps"
 		},
