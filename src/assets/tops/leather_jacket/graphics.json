@@ -84,6 +84,10 @@
 			"height": 1500,
 			"priority": "BELOW_BREASTS",
 			"points": "shirt",
+			"pointType": [
+				"body",
+				"bodyarm"
+			],
 			"mirror": 0,
 			"colorizationKey": "jacket",
 			"image": {
@@ -137,6 +141,10 @@
 			"height": 1500,
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"bodyarm"
+			],
 			"mirror": 0,
 			"colorizationKey": "jacket",
 			"image": {
