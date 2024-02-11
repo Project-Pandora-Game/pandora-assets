@@ -445,6 +445,22 @@ const ATTRIBUTES_DEFINITION_BASE = {
 
 	//#endregion
 
+	//#region Breasts items
+	Breast_item: {
+		name: 'An item used over the breasts',
+		description: 'Any item that is positioned over the breasts',
+	},
+	Breast_nipple: {
+		name: 'An item used on the nipple',
+		description: 'An item that is used on or over the nipples',
+		parentAttributes: ['Breast_item'],
+	},
+	Breast_cover: {
+		name: 'An item covering the breasts',
+		description: 'An item that is covering the breasts',
+	},
+	//#endregion
+
 	//#region Vagina items
 	Vagina_item: {
 		name: 'An item used on the vagina',
