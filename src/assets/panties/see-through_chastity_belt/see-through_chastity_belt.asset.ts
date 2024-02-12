@@ -1,3 +1,5 @@
+import { ItemInteractionType } from 'pandora-common';
+
 DefineAsset({
 	name: 'See-through Chastity Belt',
 	size: 'medium',
@@ -10,7 +12,7 @@ DefineAsset({
 		cover: {
 			name: 'Belt Cover',
 			default: '#AEB9B88B',
-			minAlpha: '30%',
+			minAlpha: '25%',
 		},
 		buckle: {
 			name: 'Buckle',
@@ -39,6 +41,22 @@ DefineAsset({
 			occupiedProperties: {
 				blockModules: ['crotchPlate'],
 			},
+		},
+		beltType: {
+			type: 'typed',
+			name: 'Belt Type',
+			interactionType: ItemInteractionType.ADD_REMOVE,
+			variants: [
+				{
+					id: 'female',
+					name: 'Female',
+					default: true,
+				},
+				{
+					id: 'male',
+					name: 'Male',
+				},
+			],
 		},
 		crotchPlate: {
 			type: 'typed',

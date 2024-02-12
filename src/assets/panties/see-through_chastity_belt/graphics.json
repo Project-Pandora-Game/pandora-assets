@@ -34,6 +34,18 @@
 								}
 							]
 						]
+					},
+					{
+						"image": "belt_front_cover_m.png",
+						"condition": [
+							[
+								{
+									"module": "beltType",
+									"operator": "=",
+									"value": "male"
+								}
+							]
+						]
 					}
 				]
 			},
@@ -96,7 +108,20 @@
 			"colorizationKey": "belt",
 			"image": {
 				"image": "belt_front.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "belt_front_m.png",
+						"condition": [
+							[
+								{
+									"module": "beltType",
+									"operator": "=",
+									"value": "male"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "belt front"
 		},
