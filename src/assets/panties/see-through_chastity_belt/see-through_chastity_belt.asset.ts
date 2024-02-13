@@ -51,6 +51,13 @@ DefineAsset({
 					id: 'female',
 					name: 'Female',
 					default: true,
+					properties: {
+						attributes: {
+							requires: [
+								'!Penis',
+							],
+						},
+					},
 				},
 				{
 					id: 'male',
@@ -80,6 +87,7 @@ DefineAsset({
 							],
 							requires: [
 								'!Vagina_protruding',
+								'!Penis_erect',
 							],
 							hides: [
 								'Toy_clamps_genital',
@@ -119,6 +127,7 @@ DefineAsset({
 							],
 							requires: [
 								'!Vagina_protruding',
+								'!Penis_erect',
 								'!Anus_protruding',
 							],
 							hides: [
