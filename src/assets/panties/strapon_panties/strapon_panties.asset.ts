@@ -4,7 +4,7 @@ DefineAsset({
 	graphics: 'graphics.json',
 	colorization: {
 		panties: {
-			name: 'Pantiess',
+			name: 'Panties',
 			default: '#FFFFFF',
 		},
 		straponSmall: {
@@ -28,7 +28,9 @@ DefineAsset({
 			'Underwear',
 			'Underwear_panties',
 			'Toy',
+			'Vagina_cover',
 		],
+		hides: ['Penis'],
 	},
 	modules: {
 		lock: {
