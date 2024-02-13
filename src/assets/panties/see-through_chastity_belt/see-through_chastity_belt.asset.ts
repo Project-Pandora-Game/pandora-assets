@@ -62,6 +62,13 @@ DefineAsset({
 				{
 					id: 'male',
 					name: 'Male',
+					properties: {
+						attributes: {
+							requires: [
+								'Penis',
+							],
+						},
+					},
 				},
 			],
 		},
