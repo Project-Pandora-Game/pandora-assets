@@ -1,3 +1,5 @@
+import { ItemInteractionType } from 'pandora-common';
+
 DefineAsset({
 	name: 'Strapon Panties',
 	size: 'medium',
@@ -71,6 +73,22 @@ DefineAsset({
 				{
 					id: 'huge',
 					name: 'Huge',
+				},
+			],
+		},
+		color: {
+			type: 'typed',
+			name: 'Panties Base Color',
+			interactionType: ItemInteractionType.STYLING,
+			variants: [
+				{
+					id: 'black',
+					name: 'Black Panties',
+					default: true,
+				},
+				{
+					id: 'white',
+					name: 'White Panties',
 				},
 			],
 		},

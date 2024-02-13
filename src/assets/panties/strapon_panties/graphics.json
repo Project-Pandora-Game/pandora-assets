@@ -12,7 +12,20 @@
 			"colorizationKey": "panties",
 			"image": {
 				"image": "panties_front.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "panties_front_white.png",
+						"condition": [
+							[
+								{
+									"module": "color",
+									"operator": "=",
+									"value": "white"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "Panties Front"
 		},
@@ -125,7 +138,20 @@
 			"colorizationKey": "panties",
 			"image": {
 				"image": "panties_back.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "panties_back_white.png",
+						"condition": [
+							[
+								{
+									"module": "color",
+									"operator": "=",
+									"value": "white"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "Panties Back"
 		}
