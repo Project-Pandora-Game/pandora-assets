@@ -79,7 +79,7 @@ DefineRoomDeviceAsset({
 		},
 		storage: {
 			type: 'storage',
-			name: `Barell contents`,
+			name: `Barrel contents`,
 			maxAcceptedSize: 'large',
 			maxCount: 10,
 		},
