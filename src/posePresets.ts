@@ -490,16 +490,16 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					},
 				},
 				//  TODO: Hands are under the back hair; arms need to be split at the elbows most likely
-				/* {
+				{
 					name: 'Hands behind head',
 					bones: {
-						arm_r: -45,
-						arm_l: -45,
-						elbow_r: -119,
-						elbow_l: -119,
+						arm_r: -35,
+						arm_l: -35,
+						elbow_r: -135,
+						elbow_l: -135,
 					},
 					arms: { position: 'back' },
-				}, */
+				},
 			],
 		},
 		{
@@ -745,6 +745,14 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					legs: 'kneeling',
 				},
 				{
+					name: 'Kneeling closed',
+					bones: {
+						leg_r: 6,
+						leg_l: 6,
+					},
+					legs: 'kneeling',
+				},
+				{
 					name: 'Kneeling spread slightly',
 					bones: {
 						leg_r: -7,
@@ -778,6 +786,14 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					bones: {
 						leg_r: 0,
 						leg_l: 0,
+					},
+					legs: 'sitting',
+				},
+				{
+					name: 'Sitting closed',
+					bones: {
+						leg_r: 4,
+						leg_l: 4,
 					},
 					legs: 'sitting',
 				},
