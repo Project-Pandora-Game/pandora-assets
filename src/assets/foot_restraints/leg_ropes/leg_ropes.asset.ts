@@ -27,11 +27,29 @@ DefineAsset({
 					default: true,
 					properties: {
 						poseLimits: {
-							bones: {
-								leg_r: 2,
-								leg_l: 2,
-							},
-							legs: 'standing',
+							options: [
+								{
+									bones: {
+										leg_r: 2,
+										leg_l: 2,
+									},
+									legs: 'standing',
+								},
+								{
+									bones: {
+										leg_r: 4,
+										leg_l: 4,
+									},
+									legs: 'sitting',
+								},
+								{
+									bones: {
+										leg_r: 6,
+										leg_l: 6,
+									},
+									legs: 'kneeling',
+								},
+							],
 						},
 					},
 				},

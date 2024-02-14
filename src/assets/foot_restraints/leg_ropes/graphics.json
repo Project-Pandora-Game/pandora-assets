@@ -46,6 +46,26 @@
 								}
 							]
 						]
+					},
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"legs": "kneeling"
+								}
+							]
+						]
+					},
+					{
+						"image": "legs_basic_sitting.png",
+						"condition": [
+							[
+								{
+									"legs": "sitting"
+								}
+							]
+						]
 					}
 				]
 			},
@@ -93,6 +113,26 @@
 									"module": "legTies",
 									"operator": "=",
 									"value": "toes"
+								}
+							]
+						]
+					},
+					{
+						"image": "legs_basic_kneeling.png",
+						"condition": [
+							[
+								{
+									"legs": "kneeling"
+								}
+							]
+						]
+					},
+					{
+						"image": "legs_basic_sitting.png",
+						"condition": [
+							[
+								{
+									"legs": "sitting"
 								}
 							]
 						]
