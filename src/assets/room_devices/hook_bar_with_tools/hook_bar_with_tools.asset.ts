@@ -141,7 +141,7 @@ DefineRoomDeviceAsset({
 					],
 				},
 			],
-			colorizationKey: '',
+			colorizationKey: undefined,
 		},
 		{
 			type: 'sprite',
@@ -160,7 +160,7 @@ DefineRoomDeviceAsset({
 					],
 				},
 			],
-			colorizationKey: '',
+			colorizationKey: undefined,
 		},
 		{
 			type: 'sprite',
@@ -198,7 +198,7 @@ DefineRoomDeviceAsset({
 					],
 				},
 			],
-			colorizationKey: '',
+			colorizationKey: undefined,
 		},
 		{
 			type: 'sprite',
@@ -236,7 +236,7 @@ DefineRoomDeviceAsset({
 					],
 				},
 			],
-			colorizationKey: '',
+			colorizationKey: undefined,
 		},
 		{
 			type: 'sprite',
@@ -274,7 +274,7 @@ DefineRoomDeviceAsset({
 					],
 				},
 			],
-			colorizationKey: '',
+			colorizationKey: undefined,
 		},
 		{
 			type: 'sprite',
