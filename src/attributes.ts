@@ -1,10 +1,10 @@
 import { cloneDeep } from 'lodash';
 import { AssetAttributeDefinition, AttributeNameSchema, GetLogger, SCHEME_OVERRIDE } from 'pandora-common';
 import { join } from 'path';
-import { SRC_DIR } from './constants';
-import { SetCurrentContext } from './tools';
-import { DefineResource } from './tools/resources';
 import { ZodIssueCode } from 'zod';
+import { SRC_DIR } from './constants';
+import { SetCurrentContext } from './tools/context';
+import { DefineResource } from './tools/resources';
 
 //#region Attribute definitions - an attribute defines a role
 

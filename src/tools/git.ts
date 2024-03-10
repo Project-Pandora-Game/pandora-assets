@@ -1,5 +1,5 @@
 import { GetLogger } from 'pandora-common';
-import simpleGit from 'simple-git';
+import { simpleGit } from 'simple-git';
 import { BASE_DIR } from '../constants';
 
 export let GitDataAvailable = false;
