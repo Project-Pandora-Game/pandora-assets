@@ -59,12 +59,12 @@ DefineAsset({
 		},
 	},
 	effects: {
-		lipsTouch: 7,
-		jawMove: 10,
-		tongueRoof: 6,
-		mouthBreath: 3,
-		throatBreath: 2,
-		coherency: 4,
+		lipsTouch: 8,
+		jawMove: 9,
+		tongueRoof: 7,
+		mouthBreath: 4,
+		throatBreath: 3,
+		coherency: 5,
 		stimulus: 2,
 	},
 	chat: {

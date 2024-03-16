@@ -75,12 +75,12 @@ DefineAsset({
 					properties: {
 						effects: {
 							lipsTouch: 9,
-							jawMove: 0,
+							jawMove: 4,
 							tongueRoof: 0,
 							mouthBreath: 0,
 							throatBreath: 0,
 							coherency: 0,
-							stimulus: 0,
+							stimulus: 2,
 						},
 					},
 				},
@@ -91,9 +91,9 @@ DefineAsset({
 						effects: {
 							lipsTouch: 9,
 							jawMove: 4,
-							tongueRoof: 1,
+							tongueRoof: 0,
 							mouthBreath: 4,
-							throatBreath: 3,
+							throatBreath: 1,
 							coherency: 5,
 							stimulus: 3,
 						},
@@ -114,7 +114,7 @@ DefineAsset({
 						effects: {
 							lipsTouch: 9,
 							jawMove: 9,
-							tongueRoof: 8,
+							tongueRoof: 7,
 							mouthBreath: 6,
 							throatBreath: 4,
 							coherency: 7,

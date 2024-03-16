@@ -54,7 +54,7 @@ DefineAsset({
 		},
 	},
 	effects: {
-		lipsTouch: 8,
+		lipsTouch: 9,
 		jawMove: 4,
 		tongueRoof: 0,
 		mouthBreath: 0,
