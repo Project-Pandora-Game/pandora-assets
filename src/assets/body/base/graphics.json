@@ -6,9 +6,9 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"priority": "BODY_SOLES",
+			"priority": "LEG_SOLE_LEFT",
 			"points": "body_soles_back",
-			"mirror": 0,
+			"mirror": 1,
 			"colorizationKey": "skin",
 			"image": {
 				"image": "",
@@ -40,9 +40,40 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm"
+				"bodyarm",
+				"bodyleg"
 			],
 			"mirror": 0,
+			"colorizationKey": "skin",
+			"image": {
+				"image": "body.png",
+				"overrides": [
+					{
+						"image": "body_back.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Leg",
+			"priority": "LEG_LEFT",
+			"points": "body",
+			"pointType": [
+				"bodyleg_l",
+				"leg_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "skin",
 			"image": {
 				"image": "body.png",
