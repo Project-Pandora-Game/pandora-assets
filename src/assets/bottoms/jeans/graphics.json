@@ -6,9 +6,9 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"priority": "BELOW_BODY",
+			"priority": "BELOW_LEG_LEFT",
 			"points": "body",
-			"mirror": 0,
+			"mirror": 1,
 			"colorizationKey": "pants",
 			"image": {
 				"image": "jeans_back.png",
@@ -22,9 +22,9 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"priority": "ABOVE_BODY",
+			"priority": "ABOVE_LEG_LEFT",
 			"points": "body",
-			"mirror": 0,
+			"mirror": 1,
 			"colorizationKey": "pants",
 			"image": {
 				"image": "jeans.png",
