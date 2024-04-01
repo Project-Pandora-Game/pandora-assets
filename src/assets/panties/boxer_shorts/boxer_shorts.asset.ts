@@ -22,7 +22,7 @@ DefineAsset({
 		hides: ['Penis'],
 	},
 	ownership: {
-		responsibleContributor: 'Kane-678 <59668834+Kane-678@users.noreply.github.com>',
+		responsibleContributor: 'Kane <59668834+Kane-678@users.noreply.github.com>',
 		credits: ['Kane'],
 		modificationPolicy: 'Fixes only, otherwise ask',
 		reusePolicy: 'Ask first',
