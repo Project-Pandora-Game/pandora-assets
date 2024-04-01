@@ -1,8 +1,8 @@
 import { Assert, CalculateBackgroundDataFromCalibrationData, GetLogger, RoomBackgroundCalibrationDataSchema, RoomBackgroundInfo } from 'pandora-common';
 import { SetCurrentContext } from './context';
 import { join } from 'path';
-import { Contributors, CurrentCommitter, GitDataAvailable } from './git';
-import { BACKGROUNDS_SRC_DIR, IS_PRODUCTION_BUILD } from '../constants';
+import { GitValidateResponsibleContributor } from './git';
+import { BACKGROUNDS_SRC_DIR } from '../constants';
 import * as fs from 'fs';
 import { RoomDatabase } from './roomDatabase';
 import { DefineImageResource, DefineJpgResource, ProcessImageResource } from './resources';
@@ -31,20 +31,7 @@ export function DefineRoomBackground(def: IntermediateRoomBackgroundDefinition):
 	//#region Validate ownership data
 
 	// Validate responsible contributor
-	const contributor = def.ownership.responsibleContributor.toLowerCase();
-	if (GitDataAvailable &&
-		!Contributors.has(contributor) &&
-		(!CurrentCommitter || CurrentCommitter.toLowerCase() !== contributor)
-	) {
-		if (IS_PRODUCTION_BUILD || !CurrentCommitter) {
-			logger.warning('The responsible contributor was not found in the Git history.');
-		} else {
-			logger.warning(
-				'The responsible contributor was not found in the Git history.\n' +
-				`If you commit with current settings, this is your commit signature: '${CurrentCommitter}'`,
-			);
-		}
-	}
+	GitValidateResponsibleContributor(logger, def.ownership);
 
 	// Validate presence of licensing data
 	if (def.ownership.licensing.length === 0) {

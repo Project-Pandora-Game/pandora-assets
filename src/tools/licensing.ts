@@ -1,26 +1,12 @@
 import type { Logger } from 'pandora-common';
-import { Contributors, CurrentCommitter, GitDataAvailable } from './git';
-import { IS_PRODUCTION_BUILD } from '../constants';
+import { GitValidateResponsibleContributor } from './git';
 import { AssetSourcePath } from './context';
 import { join } from 'path';
 import * as fs from 'fs';
 
 export function ValidateOwnershipData(ownership: AssetOwnershipData, logger: Logger, requireLicensing: boolean): void {
 	// Validate responsible contributor
-	const contributor = ownership.responsibleContributor.toLowerCase();
-	if (GitDataAvailable &&
-		!Contributors.has(contributor) &&
-		(!CurrentCommitter || CurrentCommitter.toLowerCase() !== contributor)
-	) {
-		if (IS_PRODUCTION_BUILD || !CurrentCommitter) {
-			logger.warning('The responsible contributor was not found in the Git history.');
-		} else {
-			logger.warning(
-				'The responsible contributor was not found in the Git history.\n' +
-				`If you commit with current settings, this is your commit signature: '${CurrentCommitter}'`,
-			);
-		}
-	}
+	GitValidateResponsibleContributor(logger, ownership);
 
 	// Validate presence of licensing data
 	if (requireLicensing && ownership.licensing.length === 0) {

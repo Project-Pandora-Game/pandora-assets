@@ -1,10 +1,10 @@
-import { GetLogger } from 'pandora-common';
+import { GetLogger, Logger } from 'pandora-common';
 import { simpleGit } from 'simple-git';
-import { BASE_DIR } from '../constants';
+import { BASE_DIR, IS_PRODUCTION_BUILD } from '../constants';
 
-export let GitDataAvailable = false;
-export let Contributors = new Set<string>();
-export let CurrentCommitter = '';
+let GitDataAvailable = false;
+let Contributors = new Set<string>();
+let CurrentCommitter = '';
 
 const logger = GetLogger('Git');
 
@@ -41,5 +41,22 @@ export async function LoadGitData(): Promise<void> {
 		CurrentCommitter = '';
 		GitDataAvailable = false;
 		logger.warning('Failed to load Git data, Git checks will be skipped.\n', error);
+	}
+}
+
+export function GitValidateResponsibleContributor(log: Logger, { responsibleContributor }: { responsibleContributor: string; }): void {
+	const contributor = responsibleContributor.toLowerCase();
+	if (GitDataAvailable &&
+		!Contributors.has(contributor) &&
+		(!CurrentCommitter || CurrentCommitter.toLowerCase() !== contributor)
+	) {
+		if (IS_PRODUCTION_BUILD || !CurrentCommitter) {
+			log.warning('The responsible contributor was not found in the Git history.');
+		} else {
+			log.warning(
+				'The responsible contributor was not found in the Git history.\n' +
+				`If you commit with current settings, this is your commit signature: '${CurrentCommitter}'`,
+			);
+		}
 	}
 }
