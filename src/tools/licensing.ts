@@ -6,7 +6,7 @@ import * as fs from 'fs';
 
 export function ValidateOwnershipData(ownership: AssetOwnershipData, logger: Logger, requireLicensing: boolean): void {
 	// Validate responsible contributor
-	GitValidateResponsibleContributor(logger, ownership);
+	GitValidateResponsibleContributor(logger, ownership.responsibleContributor);
 
 	// Validate presence of licensing data
 	if (requireLicensing && ownership.licensing.length === 0) {

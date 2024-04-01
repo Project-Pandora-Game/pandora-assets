@@ -31,7 +31,7 @@ export function DefineRoomBackground(def: IntermediateRoomBackgroundDefinition):
 	//#region Validate ownership data
 
 	// Validate responsible contributor
-	GitValidateResponsibleContributor(logger, def.ownership);
+	GitValidateResponsibleContributor(logger, def.ownership.responsibleContributor);
 
 	// Validate presence of licensing data
 	if (def.ownership.licensing.length === 0) {

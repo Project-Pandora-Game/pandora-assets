@@ -44,7 +44,7 @@ export async function LoadGitData(): Promise<void> {
 	}
 }
 
-export function GitValidateResponsibleContributor(log: Logger, { responsibleContributor }: { responsibleContributor: string; }): void {
+export function GitValidateResponsibleContributor(log: Logger, responsibleContributor: string): void {
 	const contributor = responsibleContributor.toLowerCase();
 	if (GitDataAvailable &&
 		!Contributors.has(contributor) &&
