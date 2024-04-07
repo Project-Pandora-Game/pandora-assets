@@ -937,7 +937,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body_l"
+		"pointType": "bodyleg_l"
 	},
 	{
 		"pos": [
@@ -974,7 +974,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body_l"
+		"pointType": "leg_l"
 	},
 	{
 		"pos": [
@@ -1028,7 +1028,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body_l"
+		"pointType": "leg_l"
 	},
 	{
 		"pos": [
@@ -1090,7 +1090,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body_l"
+		"pointType": "leg_l"
 	},
 	{
 		"pos": [
@@ -1141,7 +1141,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body_l"
+		"pointType": "leg_l"
 	},
 	{
 		"pos": [
@@ -1212,7 +1212,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body_l"
+		"pointType": "leg_l"
 	},
 	{
 		"pos": [
@@ -1315,7 +1315,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body_l"
+		"pointType": "leg_l"
 	},
 	{
 		"pos": [
@@ -1447,7 +1447,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body_l"
+		"pointType": "leg_l"
 	},
 	{
 		"pos": [
@@ -1510,7 +1510,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body_l"
+		"pointType": "leg_l"
 	},
 	{
 		"pos": [
@@ -1564,7 +1564,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body_l"
+		"pointType": "leg_l"
 	},
 	{
 		"pos": [
@@ -1618,7 +1618,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body_l"
+		"pointType": "leg_l"
 	},
 	{
 		"pos": [
@@ -1655,7 +1655,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body_l"
+		"pointType": "leg_l"
 	},
 	{
 		"pos": [
@@ -1687,7 +1687,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body"
+		"pointType": "bodyleg"
 	},
 	{
 		"pos": [
@@ -1803,7 +1803,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body_l"
+		"pointType": "bodyleg_l"
 	},
 	{
 		"pos": [
@@ -1874,7 +1874,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body_l"
+		"pointType": "leg_l"
 	},
 	{
 		"pos": [
@@ -1903,7 +1903,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body_l"
+		"pointType": "leg_l"
 	},
 	{
 		"pos": [
@@ -1974,7 +1974,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body_l"
+		"pointType": "leg_l"
 	},
 	{
 		"pos": [
@@ -2077,7 +2077,7 @@
 			}
 		],
 		"mirror": true,
-		"pointType": "body_l"
+		"pointType": "leg_l"
 	},
 	{
 		"pos": [
