@@ -1074,7 +1074,7 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 					source: 'Self-Made',
 					copyrightHolder: 'ClaudiaMia',
 					editedBy: 'ClaudiaMia',
-					license: 'Pandora-Use-Only',
+					license: 'Pandora-Use-Only-v1-or-later',
 				},
 			],
 		},
@@ -1124,7 +1124,7 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 				{
 					source: 'Self-Made',
 					copyrightHolder: 'Jomshir',
-					license: 'Pandora-Use-Only',
+					license: 'Pandora-Use-Only-v1-or-later',
 				},
 			],
 		},

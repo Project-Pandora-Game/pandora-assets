@@ -61,7 +61,7 @@ DefineAsset({
 				source: 'Self-Made',
 				copyrightHolder: 'Ayesha',
 				editedBy: 'Ayesha',
-				license: 'Pandora-Use-Only',
+				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
 	},

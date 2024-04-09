@@ -314,7 +314,7 @@ DefineRoomDeviceAsset({
 				source: 'Self-Made',
 				copyrightHolder: 'ClaudiaMia',
 				editedBy: 'ClaudiaMia',
-				license: 'Pandora-Use-Only',
+				license: 'Pandora-Use-Only-v1-or-later',
 			},
 			{
 				part: 'used 3D model - preview',

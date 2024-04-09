@@ -1,17 +1,19 @@
+# Licensing of assets submitted to Project Pandora
+
 All assets must provide license information about their asset images that allows them to be used in Project Pandora.
 Note, that any licensing rights given specifically to "Project Pandora" do not imply any rights for forks or derivative projects.
 The asset code is not covered by these licenses.
 
 To do that, a license must be provided for each contributed asset image. This license must be either:
-- `Pandora-Use-Only`
+- `Pandora-Use-Only-v1-or-later`
   - The author gives explicit permission for this asset image to be modified and/or used for any purpose within Project Pandora.
   - Reusing the asset images or parts of them is allowed for other assets, even without explicit permission of the author.
   - This permission is irrevocable.
-- `Pandora-Use-Only-NoModify`
+- `Pandora-Use-Only-NoModify-v1-or-later`
   - The author gives explicit permission for the asset images to be used for any purpose within Project Pandora.
   - Modifying the asset images or reusing them requires gaining explicit permission from the author.
   - This permission is irrevocable.
-- `Pandora-Use-Only-Reserved`
+- `Pandora-Use-Only-Reserved-v1-or-later`
   - The author gives explicit permission for the asset images to be used for any purpose within Project Pandora.
   - Modifying the asset images or reusing them requires gaining explicit permission from the author.
   - The author retains the right to revoke this license at any time.
@@ -35,3 +37,14 @@ Known incompatible licenses:
   - [`CC BY-ND`](https://creativecommons.org/licenses/by-nd/4.0)
   - [`CC BY-NC-ND`](https://creativecommons.org/licenses/by-nc-nd/4.0)
   - [`CC BY-NC-SA`](https://creativecommons.org/licenses/by-nc-sa/4.0)
+
+# Further details about `Pandora-Use-Only-*` licenses
+
+## Revised Versions of the licenses
+
+The Project Pandora may publish revised and/or new versions of the Pandora Use Only licenses from time to time.
+Such new versions will be similar in spirit to the present version, but may differ in detail to address new problems or concerns.
+
+Each version is given a distinguishing version number.
+If any asset specifies that a certain numbered version of the Pandora Use Only "or any later version" applies to it,
+we have the option of licensing said asset using any later version published by the Project Pandora.

@@ -144,9 +144,9 @@ type PandoraAssetReusePolicy =
 
 type PandoraAssetLicense =
 	// Pandora licenses
-	| `Pandora-Use-Only`
-	| `Pandora-Use-Only-NoModify`
-	| `Pandora-Use-Only-Reserved`
+	| `Pandora-Use-Only-v1-or-later`
+	| `Pandora-Use-Only-NoModify-v1-or-later`
+	| `Pandora-Use-Only-Reserved-v1-or-later`
 	// Compatible licenses
 	| `CC0`
 	| `CC BY`

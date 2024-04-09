@@ -49,7 +49,7 @@ DefineAsset({
 				editedBy: 'CHANGE_ME',
 				// License; see possible licenses in ASSET_LICENSING.md file.
 				// Alternatively, write the name of the file with the license prefixed by `./` (e.g. `./LICENSE.md`)
-				license: 'Pandora-Use-Only',
+				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
 	},

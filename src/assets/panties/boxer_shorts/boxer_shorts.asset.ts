@@ -31,7 +31,7 @@ DefineAsset({
 				source: 'Self-Made',
 				copyrightHolder: 'Kane',
 				editedBy: 'Kane',
-				license: 'Pandora-Use-Only',
+				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
 	},

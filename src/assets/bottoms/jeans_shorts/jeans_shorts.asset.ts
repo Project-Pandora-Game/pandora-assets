@@ -32,7 +32,7 @@ DefineAsset({
 				source: 'Private',
 				copyrightHolder: 'QueenTita',
 				editedBy: 'ClaudiaMia',
-				license: 'Pandora-Use-Only',
+				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
 	},
