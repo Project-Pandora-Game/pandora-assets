@@ -1,21 +1,23 @@
-All assets must provide license information that allows them to be used in Project Pandora.
+All assets must provide license information about their asset images that allows them to be used in Project Pandora.
+Note, that any licensing rights given specifically to "Project Pandora" do not imply any rights for forks or derivative projects.
+The asset code is not covered by these licenses.
 
-To do that, a license must be provided for each contributed asset. This license must be either:
+To do that, a license must be provided for each contributed asset image. This license must be either:
 - `Pandora-Use-Only`
-  - The author gives explicit permission for this asset to be modified and/or used for any purpose within Project Pandora.
-  - Reusing the asset or its parts is allowed for other assets, even without explicit permission of the author.
+  - The author gives explicit permission for this asset image to be modified and/or used for any purpose within Project Pandora.
+  - Reusing the asset images or parts of them is allowed for other assets, even without explicit permission of the author.
   - This permission is irrevocable.
 - `Pandora-Use-Only-NoModify`
-  - The author gives explicit permission for this asset to be used for any purpose within Project Pandora.
-  - Modifying the asset or reusing it requires gaining explicit permission from the author.
+  - The author gives explicit permission for the asset images to be used for any purpose within Project Pandora.
+  - Modifying the asset images or reusing them requires gaining explicit permission from the author.
   - This permission is irrevocable.
 - `Pandora-Use-Only-Reserved`
-  - The author gives explicit permission for this asset to be used for any purpose within Project Pandora.
-  - Modifying the asset or reusing it requires gaining explicit permission from the author.
+  - The author gives explicit permission for the asset images to be used for any purpose within Project Pandora.
+  - Modifying the asset images or reusing them requires gaining explicit permission from the author.
   - The author retains the right to revoke this license at any time.
-- Custom license provided together with the asset. Write the name of the file with the license prefixed by `./` (e.g. `./LICENSE.md`)
+- Custom license provided together with the asset image. Write the name of the file with the license prefixed by `./` (e.g. `./LICENSE.md`)
 - One of the known compatible open-source or copyleft licenses listed below.
-- `Public Domain`, if the asset is considered as such.
+- `Public Domain`, if the asset image is considered as such.
 
 Known compatible licenses:
 - Creative commons:
