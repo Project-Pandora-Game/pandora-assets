@@ -1,6 +1,6 @@
 DefineAsset({
 	name: 'Shoulder Bag',
-	size: 'medium',
+	size: 'large',
 	graphics: 'graphics.json',
 	colorization: {
 		handbag: {
@@ -24,7 +24,7 @@ DefineAsset({
 			type: 'storage',
 			name: 'Bag contents',
 			maxCount: 10,
-			maxAcceptedSize: 'small',
+			maxAcceptedSize: 'medium',
 		},
 		lock: {
 			type: 'lockSlot',
