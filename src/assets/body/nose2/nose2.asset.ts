@@ -4,6 +4,12 @@ DefineAsset({
 	bodypart: 'nose',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
+	colorization: {
+		skin: {
+			name: 'Nose',
+			default: '#ECBFA8',
+		},
+	},
 	preview: null,
 	attributes: {
 		provides: [

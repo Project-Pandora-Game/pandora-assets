@@ -9,6 +9,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 0,
+			"colorizationKey": "skin",
 			"image": {
 				"image": "Nose1.png",
 				"overrides": []
