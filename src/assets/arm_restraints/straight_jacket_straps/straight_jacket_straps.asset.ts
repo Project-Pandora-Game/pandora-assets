@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Straight Jacket Straps',
+	name: 'Straitjacket Straps',
 	size: 'medium',
 	graphics: 'graphics.json',
 	colorization: {
