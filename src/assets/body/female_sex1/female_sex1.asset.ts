@@ -19,7 +19,7 @@ DefineAsset({
 	attributes: {
 		provides: [
 			'Sex',
-			'Vagina',
+			'Vulva',
 		],
 	},
 	modules: {
@@ -50,10 +50,10 @@ DefineAsset({
 				},
 			],
 		},
-		vagina: {
+		vulva: {
 			type: 'typed',
-			name: 'Vagina',
-			expression: 'Vagina',
+			name: 'Vulva',
+			expression: 'Vulva',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
@@ -66,7 +66,7 @@ DefineAsset({
 					name: 'Spread',
 					properties: {
 						attributes: {
-							provides: ['Vagina_spread'],
+							provides: ['Vulva_spread'],
 						},
 					},
 				},

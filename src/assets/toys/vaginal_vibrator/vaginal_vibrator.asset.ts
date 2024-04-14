@@ -11,10 +11,10 @@ DefineAsset({
 	preview: 'vibrator_preview.png',
 	attributes: {
 		provides: [
-			'Vagina_item',
+			'Vulva_item',
 			'Toy',
 		],
-		requires: ['Vagina_spread'],
+		requires: ['Vulva_spread'],
 	},
 	modules: {
 		insertedVibrator: {
@@ -27,8 +27,8 @@ DefineAsset({
 					default: true,
 					properties: {
 						attributes: {
-							provides: ['Vagina_insert', 'Vagina_protruding'],
-							requires: ['!Vagina_cover'],
+							provides: ['Vulva_insert', 'Vulva_protruding'],
+							requires: ['!Vulva_cover'],
 						},
 					},
 				},
@@ -37,8 +37,8 @@ DefineAsset({
 					name: 'Half Inside',
 					properties: {
 						attributes: {
-							provides: ['Vagina_insert', 'Vagina_insert_deep', 'Vagina_protruding'],
-							requires: ['!Vagina_cover'],
+							provides: ['Vulva_insert', 'Vulva_insert_deep', 'Vulva_protruding'],
+							requires: ['!Vulva_cover'],
 						},
 					},
 				},
@@ -47,8 +47,8 @@ DefineAsset({
 					name: 'Deep Inside',
 					properties: {
 						attributes: {
-							provides: ['Vagina_insert', 'Vagina_insert_deep'],
-							requires: ['!Vagina_cover'],
+							provides: ['Vulva_insert', 'Vulva_insert_deep'],
+							requires: ['!Vulva_cover'],
 						},
 					},
 				},

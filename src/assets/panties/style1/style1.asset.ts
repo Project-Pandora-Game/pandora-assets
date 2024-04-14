@@ -29,7 +29,7 @@ DefineAsset({
 					default: true,
 					properties: {
 						attributes: {
-							provides: ['Vagina_cover'],
+							provides: ['Vulva_cover'],
 							hides: ['Penis'],
 						},
 					},
@@ -43,7 +43,7 @@ DefineAsset({
 					name: 'Wedged Up',
 					properties: {
 						attributes: {
-							provides: ['Vagina_cover'],
+							provides: ['Vulva_cover'],
 							requires: ['!Penis'],
 						},
 					},

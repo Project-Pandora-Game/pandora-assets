@@ -87,13 +87,13 @@ DefineAsset({
 					properties: {
 						attributes: {
 							provides: [
-								'Vagina_cover',
+								'Vulva_cover',
 							],
 							covers: [
-								'Vagina_item',
+								'Vulva_item',
 							],
 							requires: [
-								'!Vagina_protruding',
+								'!Vulva_protruding',
 								'!Penis_erect',
 							],
 							hides: [
@@ -125,15 +125,15 @@ DefineAsset({
 					properties: {
 						attributes: {
 							provides: [
-								'Vagina_cover',
+								'Vulva_cover',
 								'Anus_cover',
 							],
 							covers: [
-								'Vagina_item',
+								'Vulva_item',
 								'Anus_item',
 							],
 							requires: [
-								'!Vagina_protruding',
+								'!Vulva_protruding',
 								'!Penis_erect',
 								'!Anus_protruding',
 							],

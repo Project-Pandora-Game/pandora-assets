@@ -148,15 +148,15 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		description: 'A sexual organ',
 		icon: 'body',
 	},
-	Vagina: {
-		name: 'Vagina',
+	Vulva: {
+		name: 'Vulva',
 		description: 'A female sexual organ',
 		parentAttributes: ['Sex'],
 	},
-	Vagina_spread: {
-		name: 'Spread vagina',
-		description: 'A spread female sex',
-		parentAttributes: ['Vagina'],
+	Vulva_spread: {
+		name: 'Spread vulva',
+		description: 'A spread female sexual organ',
+		parentAttributes: ['Vulva'],
 		useAsAssetPreference: false,
 	},
 	Penis: {
@@ -461,29 +461,29 @@ const ATTRIBUTES_DEFINITION_BASE = {
 	},
 	//#endregion
 
-	//#region Vagina items
-	Vagina_item: {
-		name: 'An item used on the vagina',
-		description: 'Any item that is positioned on the vagina (either outside or inside)',
+	//#region Vulva items
+	Vulva_item: {
+		name: 'An item used on the vulva',
+		description: 'Any item that is positioned on the vulva (either outside or inside)',
 	},
-	Vagina_insert: {
-		name: 'An item inserted in the vagina',
-		description: 'An item that is inserted in the vagina (in the area between the lips)',
-		parentAttributes: ['Vagina_item'],
+	Vulva_insert: {
+		name: 'An item inserted in the vulva',
+		description: 'An item that is inserted in the vulva (in the area between the lips)',
+		parentAttributes: ['Vulva_item'],
 	},
-	Vagina_insert_deep: {
-		name: 'An item inserted deep in the vagina',
-		description: 'An item that is inserted deep inside the vagina (in the area not usually visible from outside)',
-		parentAttributes: ['Vagina_item'],
+	Vulva_insert_deep: {
+		name: 'An item inserted deep in the vulva',
+		description: 'An item that is inserted deep inside the vulva (in the area not usually visible from outside)',
+		parentAttributes: ['Vulva_item'],
 	},
-	Vagina_protruding: {
-		name: 'An item protruding outside of the vagina',
-		description: 'An item that is protruding outside of the vagina',
-		parentAttributes: ['Vagina_item'],
+	Vulva_protruding: {
+		name: 'An item protruding outside of the vulva',
+		description: 'An item that is protruding outside of the vulva',
+		parentAttributes: ['Vulva_item'],
 	},
-	Vagina_cover: {
-		name: 'An item covering the vagina',
-		description: 'An item that is covering the vagina',
+	Vulva_cover: {
+		name: 'An item covering the vulva',
+		description: 'An item that is covering the vulva',
 	},
 	//#endregion
 

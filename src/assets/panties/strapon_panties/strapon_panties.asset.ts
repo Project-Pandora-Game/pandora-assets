@@ -30,7 +30,7 @@ DefineAsset({
 			'Underwear',
 			'Underwear_panties',
 			'Toy',
-			'Vagina_cover',
+			'Vulva_cover',
 		],
 		hides: ['Penis'],
 	},

@@ -313,7 +313,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					},
 				},
 				{
-					name: 'Touching sex 1',
+					name: 'Touching genitals 1',
 					bones: {
 						arm_r: 66,
 						arm_l: 53,
@@ -329,7 +329,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					},
 				},
 				{
-					name: 'Touching sex 2',
+					name: 'Touching genitals 2',
 					bones: {
 						arm_r: 50,
 						arm_l: 50,
@@ -345,7 +345,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					},
 				},
 				{
-					name: 'Covering sex 1',
+					name: 'Covering genitals 1',
 					bones: {
 						arm_r: 64,
 						arm_l: 64,
@@ -361,7 +361,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					},
 				},
 				{
-					name: 'Covering sex 2',
+					name: 'Covering genitals 2',
 					bones: {
 						arm_r: 74,
 						arm_l: 74,
@@ -377,7 +377,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					},
 				},
 				{
-					name: 'Covering breasts & sex',
+					name: 'Covering breasts & genitals',
 					bones: {
 						arm_r: 43,
 						arm_l: 64,
