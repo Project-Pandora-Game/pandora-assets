@@ -41,7 +41,45 @@ DefineRoomDeviceAsset({
 					name: 'Closed',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot'],
+						blockModules: ['position'],
 					},
+				},
+			],
+		},
+		position: {
+			type: 'typed',
+			name: 'Standing position',
+			variants: [
+				{
+					id: 'front',
+					name: 'Front-facing enforced',
+					properties: {
+						slotProperties: {
+							character_slot: {
+								poseLimits: {
+									view: 'front',
+								},
+							},
+						},
+					},
+				},
+				{
+					id: 'back',
+					name: 'Back-facing enforced',
+					properties: {
+						slotProperties: {
+							character_slot: {
+								poseLimits: {
+									view: 'back',
+								},
+							},
+						},
+					},
+				},
+				{
+					id: 'both',
+					name: 'Character can turn freely',
+					default: true,
 				},
 			],
 		},
