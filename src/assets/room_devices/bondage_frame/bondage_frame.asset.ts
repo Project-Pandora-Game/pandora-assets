@@ -85,6 +85,31 @@ DefineRoomDeviceAsset({
 					},
 				},
 				{
+					id: 'standing_legs',
+					name: 'Tied standing (Legs)',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot'],
+						slotProperties: {
+							character_slot: {
+								poseLimits: {
+									bones: {
+										leg_r: -30,
+										leg_l: -30,
+										character_rotation: 0,
+									},
+								},
+								effects: {
+								},
+								attributes: {
+									requires: [
+										'Ankle_cuffs',
+									],
+								},
+							},
+						},
+					},
+				},
+				{
 					id: 'hanging',
 					name: 'Tied Hanging (Arms)',
 					properties: {
@@ -302,6 +327,18 @@ DefineRoomDeviceAsset({
 			type: 'sprite',
 			image: 'frame_chains_bottom_hanging.png',
 			imageOverrides: [
+				{
+					image: 'frame_chains_bottom_long_attached.png',
+					condition: [
+						[
+							{
+								module: 'chains',
+								operator: '=',
+								value: 'standing_legs',
+							},
+						],
+					],
+				},
 				{
 					image: 'frame_chains_bottom_attached.png',
 					condition: [
