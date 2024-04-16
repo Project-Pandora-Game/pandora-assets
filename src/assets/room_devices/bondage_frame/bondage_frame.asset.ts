@@ -300,6 +300,11 @@ DefineRoomDeviceAsset({
 								value: 'standing',
 							},
 						],
+					],
+				},
+				{
+					image: 'frame_chains_top_longer.png',
+					condition: [
 						[
 							{
 								module: 'chains',
@@ -425,7 +430,7 @@ DefineRoomDeviceAsset({
 	],
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-		credits: ['ClaudiaMia'],
+		credits: ['ClaudiaMia', 'Angela-BC'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
