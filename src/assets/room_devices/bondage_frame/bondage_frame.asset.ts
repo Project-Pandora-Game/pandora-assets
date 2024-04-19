@@ -32,6 +32,47 @@ DefineRoomDeviceAsset({
 				},
 			},
 		},
+		character_slot_left: {
+			name: 'Tied against the left post',
+			asset: {
+				name: 'Bondage Frame',
+				size: 'huge',
+				poseLimits: {
+					arms: {
+						position: 'back',
+					},
+					bones: {
+						arm_l: 78,
+						arm_r: 78,
+						elbow_l: 55,
+						elbow_r: 55,
+						character_rotation: 0,
+					},
+				},
+				effects: {
+					blockHands: true,
+				},
+			},
+		},
+		character_slot_right: {
+			name: 'Tied against the right post',
+			asset: {
+				name: 'Bondage Frame',
+				size: 'huge',
+				poseLimits: {
+					bones: {
+						arm_l: 78,
+						arm_r: 78,
+						elbow_l: 55,
+						elbow_r: 55,
+						character_rotation: 0,
+					},
+				},
+				effects: {
+					blockHands: true,
+				},
+			},
+		},
 	},
 	modules: {
 		chains: {
@@ -426,6 +467,22 @@ DefineRoomDeviceAsset({
 				},
 			],
 			colorizationKey: 'chains',
+		},
+		{
+			type: 'slot',
+			slot: 'character_slot_left',
+			characterPosition: {
+				offsetX: -520,
+				offsetY: 10,
+			},
+		},
+		{
+			type: 'slot',
+			slot: 'character_slot_right',
+			characterPosition: {
+				offsetX: 520,
+				offsetY: 10,
+			},
 		},
 	],
 	ownership: {
