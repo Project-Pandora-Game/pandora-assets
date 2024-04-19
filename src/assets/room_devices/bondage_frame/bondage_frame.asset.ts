@@ -48,6 +48,7 @@ DefineRoomDeviceAsset({
 						elbow_r: 55,
 						character_rotation: 0,
 					},
+					view: 'front',
 				},
 				effects: {
 					blockHands: true,
@@ -60,6 +61,9 @@ DefineRoomDeviceAsset({
 				name: 'Bondage Frame',
 				size: 'huge',
 				poseLimits: {
+					arms: {
+						position: 'back',
+					},
 					bones: {
 						arm_l: 78,
 						arm_r: 78,
@@ -67,6 +71,7 @@ DefineRoomDeviceAsset({
 						elbow_r: 55,
 						character_rotation: 0,
 					},
+					view: 'front',
 				},
 				effects: {
 					blockHands: true,
