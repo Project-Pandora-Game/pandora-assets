@@ -478,7 +478,7 @@ DefineRoomDeviceAsset({
 			slot: 'character_slot_left',
 			characterPosition: {
 				offsetX: -520,
-				offsetY: 10,
+				offsetY: 35,
 			},
 		},
 		{
