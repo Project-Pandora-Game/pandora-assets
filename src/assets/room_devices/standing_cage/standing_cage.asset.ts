@@ -13,7 +13,7 @@ DefineRoomDeviceAsset({
 		character_slot: {
 			name: 'Inside the cage',
 			asset: {
-				name: 'Large Cage',
+				name: 'Standing Cage',
 				size: 'huge',
 				poseLimits: {
 					bones: {
