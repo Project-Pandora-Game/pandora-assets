@@ -44,6 +44,9 @@ DefineAsset({
 			elbow_r: 109,
 			elbow_l: 109,
 		},
+		armsOrder: {
+			upper: 'right',
+		},
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

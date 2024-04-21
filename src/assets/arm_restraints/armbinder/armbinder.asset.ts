@@ -67,6 +67,9 @@ DefineAsset({
 			elbow_r: -4,
 			elbow_l: -4,
 		},
+		armsOrder: {
+			upper: 'right',
+		},
 	},
 	effects: {
 		blockHands: true,
