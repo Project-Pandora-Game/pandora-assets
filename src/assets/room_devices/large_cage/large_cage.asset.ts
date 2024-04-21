@@ -25,7 +25,6 @@ DefineRoomDeviceAsset({
 						leg_l: [[-30, 10]],
 						character_rotation: 0,
 					},
-					view: 'front',
 					legs: 'kneeling',
 				},
 			},
@@ -41,7 +40,6 @@ DefineRoomDeviceAsset({
 						leg_l: [[-30, 10]],
 						character_rotation: 0,
 					},
-					view: 'front',
 					legs: 'kneeling',
 				},
 			},
@@ -57,7 +55,6 @@ DefineRoomDeviceAsset({
 						leg_l: [[-30, 10]],
 						character_rotation: 0,
 					},
-					view: 'front',
 					legs: 'kneeling',
 				},
 			},
@@ -115,8 +112,23 @@ DefineRoomDeviceAsset({
 			slot: 'character_slot_middle',
 			characterPosition: {
 				offsetX: 0,
-				offsetY: -180,
+				offsetY: -140,
+				relativeScale: 0.96,
 			},
+			characterPositionOverrides: [
+				{
+					position: {
+						offsetX: 0,
+						offsetY: -210,
+						relativeScale: 0.86,
+					},
+					condition: [
+						[
+							{ view: 'back' },
+						],
+					],
+				},
+			],
 		},
 		{
 			type: 'slot',
@@ -125,6 +137,20 @@ DefineRoomDeviceAsset({
 				offsetX: -180,
 				offsetY: -80,
 			},
+			characterPositionOverrides: [
+				{
+					position: {
+						offsetX: -180,
+						offsetY: -190,
+						relativeScale: 0.87,
+					},
+					condition: [
+						[
+							{ view: 'back' },
+						],
+					],
+				},
+			],
 		},
 		{
 			type: 'slot',
@@ -133,6 +159,20 @@ DefineRoomDeviceAsset({
 				offsetX: 180,
 				offsetY: -80,
 			},
+			characterPositionOverrides: [
+				{
+					position: {
+						offsetX: -180,
+						offsetY: -190,
+						relativeScale: 0.87,
+					},
+					condition: [
+						[
+							{ view: 'back' },
+						],
+					],
+				},
+			],
 		},
 		{
 			type: 'sprite',
