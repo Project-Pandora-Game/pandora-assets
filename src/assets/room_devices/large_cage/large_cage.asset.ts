@@ -14,8 +14,38 @@ DefineRoomDeviceAsset({
 	staticAttributes: ['Play_furniture'],
 	preview: 'cage_preview.png',
 	slots: {
-		character_slot: {
-			name: 'Inside the cage',
+		character_slot_left: {
+			name: 'Inside the cage (left)',
+			asset: {
+				name: 'Large Cage',
+				size: 'huge',
+				poseLimits: {
+					bones: {
+						leg_r: [[-30, 10]],
+						leg_l: [[-30, 10]],
+						character_rotation: 0,
+					},
+					legs: 'kneeling',
+				},
+			},
+		},
+		character_slot_middle: {
+			name: 'Inside the cage (middle)',
+			asset: {
+				name: 'Large Cage',
+				size: 'huge',
+				poseLimits: {
+					bones: {
+						leg_r: [[-30, 10]],
+						leg_l: [[-30, 10]],
+						character_rotation: 0,
+					},
+					legs: 'kneeling',
+				},
+			},
+		},
+		character_slot_right: {
+			name: 'Inside the cage (right)',
 			asset: {
 				name: 'Large Cage',
 				size: 'huge',
@@ -44,7 +74,11 @@ DefineRoomDeviceAsset({
 					id: 'closed',
 					name: 'Closed',
 					properties: {
-						blockSlotsEnterLeave: ['character_slot'],
+						blockSlotsEnterLeave: [
+							'character_slot_left',
+							'character_slot_middle',
+							'character_slot_right',
+						],
 					},
 				},
 			],
@@ -75,11 +109,70 @@ DefineRoomDeviceAsset({
 		},
 		{
 			type: 'slot',
-			slot: 'character_slot',
+			slot: 'character_slot_middle',
 			characterPosition: {
 				offsetX: 0,
 				offsetY: -140,
+				relativeScale: 0.96,
 			},
+			characterPositionOverrides: [
+				{
+					position: {
+						offsetX: 0,
+						offsetY: -210,
+						relativeScale: 0.86,
+					},
+					condition: [
+						[
+							{ view: 'back' },
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'slot',
+			slot: 'character_slot_left',
+			characterPosition: {
+				offsetX: -180,
+				offsetY: -80,
+			},
+			characterPositionOverrides: [
+				{
+					position: {
+						offsetX: -180,
+						offsetY: -190,
+						relativeScale: 0.87,
+					},
+					condition: [
+						[
+							{ view: 'back' },
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'slot',
+			slot: 'character_slot_right',
+			characterPosition: {
+				offsetX: 180,
+				offsetY: -80,
+			},
+			characterPositionOverrides: [
+				{
+					position: {
+						offsetX: -180,
+						offsetY: -190,
+						relativeScale: 0.87,
+					},
+					condition: [
+						[
+							{ view: 'back' },
+						],
+					],
+				},
+			],
 		},
 		{
 			type: 'sprite',

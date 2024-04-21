@@ -68,6 +68,9 @@ DefineAsset({
 								elbow_r: 55,
 								elbow_l: 55,
 							},
+							armsOrder: {
+								upper: 'right',
+							},
 						},
 						effects: {
 							blockHands: true,
@@ -88,6 +91,9 @@ DefineAsset({
 								arm_l: 79,
 								elbow_r: 98,
 								elbow_l: 98,
+							},
+							armsOrder: {
+								upper: 'right',
 							},
 						},
 						effects: {
@@ -110,6 +116,9 @@ DefineAsset({
 								elbow_r: 55,
 								elbow_l: 55,
 							},
+							armsOrder: {
+								upper: 'right',
+							},
 						},
 						effects: {
 							blockHands: true,
@@ -130,6 +139,9 @@ DefineAsset({
 								arm_l: 104,
 								elbow_r: -4,
 								elbow_l: -4,
+							},
+							armsOrder: {
+								upper: 'right',
 							},
 						},
 						effects: {

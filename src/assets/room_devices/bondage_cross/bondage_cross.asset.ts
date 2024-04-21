@@ -122,6 +122,72 @@ DefineRoomDeviceAsset({
 						},
 					},
 				},
+				{
+					id: 'upsideFront',
+					name: 'Tied upside-down front-facing',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot'],
+						slotProperties: {
+							character_slot: {
+								poseLimits: {
+									bones: {
+										arm_l: -43,
+										arm_r: -43,
+										elbow_l: -15,
+										elbow_r: -15,
+										leg_r: -26,
+										leg_l: -26,
+										character_rotation: 180,
+									},
+									legs: 'standing',
+									view: 'front',
+								},
+								attributes: {
+									requires: [
+										'Wrist_cuffs',
+										'Ankle_cuffs',
+									],
+								},
+								effects: {
+									blockHands: true,
+								},
+							},
+						},
+					},
+				},
+				{
+					id: 'upsideBack',
+					name: 'Tied upside-down back-facing',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot'],
+						slotProperties: {
+							character_slot: {
+								poseLimits: {
+									bones: {
+										arm_l: -43,
+										arm_r: -43,
+										elbow_l: -15,
+										elbow_r: -15,
+										leg_r: -26,
+										leg_l: -26,
+										character_rotation: 180,
+									},
+									legs: 'standing',
+									view: 'back',
+								},
+								attributes: {
+									requires: [
+										'Wrist_cuffs',
+										'Ankle_cuffs',
+									],
+								},
+								effects: {
+									blockHands: true,
+								},
+							},
+						},
+					},
+				},
 			],
 		},
 		lock: {
@@ -165,6 +231,31 @@ DefineRoomDeviceAsset({
 				offsetY: 75,
 				disablePoseOffset: true,
 			},
+			characterPositionOverrides: [
+				{
+					position: {
+						offsetX: 1,
+						offsetY: -1130,
+						disablePoseOffset: true,
+					},
+					condition: [
+						[
+							{
+								module: 'chains',
+								operator: '=',
+								value: 'upsideFront',
+							},
+						],
+						[
+							{
+								module: 'chains',
+								operator: '=',
+								value: 'upsideBack',
+							},
+						],
+					],
+				},
+			],
 		},
 	],
 	ownership: {
