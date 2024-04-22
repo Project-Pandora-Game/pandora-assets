@@ -5,7 +5,8 @@ import { writeFile, copyFile, unlink, readdir, stat } from 'fs/promises';
 import { join, basename } from 'path';
 import { AssetSourcePath } from './context';
 import { WatchFile } from './watch';
-import sharp from 'sharp';
+import sharp, { type AvifOptions, type Sharp } from 'sharp';
+import { GENERATE_AVIF } from '../constants';
 
 export type ImageCategory = 'asset' | 'roomDevice' | 'background' | 'preview';
 
@@ -36,6 +37,11 @@ async function IsFile(path: string): Promise<boolean> {
 		return false;
 	}
 }
+
+const AVIF_OPTIONS: AvifOptions = {
+	quality: 80,
+};
+export const AVIF_SUFFIX = GetResourceBufferHash(Buffer.from(JSON.stringify(AVIF_OPTIONS))).substring(0, 8);
 
 export function SetResourceDestinationDirectory(path: string): void {
 	destinationDirectory = path;
@@ -140,9 +146,12 @@ class ImageResource extends FileResource implements IImageResource {
 	constructor(path: string, category: ImageCategory) {
 		super(path);
 		CheckMaxSize(this, path, category);
+		this.addAVIFConversion('', (s) => s);
 	}
 
 	public addResizedImage(maxWidth: number, maxHeight: number, suffix: string): string {
+		this.addAVIFConversion(`_${suffix}`, (s) => s.resize(maxWidth, maxHeight));
+
 		const name = `${this.baseName}_${suffix}.${this.extension}`;
 		if (resourceFiles.has(name))
 			return name;
@@ -168,6 +177,26 @@ class ImageResource extends FileResource implements IImageResource {
 			if (width !== exactWidth || height !== exactHeight) {
 				logger.warning(`Image '${this.sourcePath}' has size ${width}x${height}, expected ${exactWidth}x${exactHeight}.`);
 			}
+		});
+	}
+
+	private addAVIFConversion(suffix: string, process: (s: Sharp) => Sharp): void {
+		if (!GENERATE_AVIF)
+			return;
+
+		const name = `${this.baseName}${suffix}_${AVIF_SUFFIX}.avif`;
+		if (resourceFiles.has(name))
+			return;
+
+		resourceFiles.add(name);
+		this.addProcess(async () => {
+			const dest = join(destinationDirectory, name);
+			if (await IsFile(dest))
+				return;
+
+			await process(sharp(this.sourcePath))
+				.toFormat('avif', AVIF_OPTIONS)
+				.toFile(dest);
 		});
 	}
 }

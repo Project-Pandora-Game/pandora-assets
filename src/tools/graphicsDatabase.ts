@@ -1,4 +1,6 @@
 import { GetLogger, AssetId, AssetGraphicsDefinition, PointTemplate, AssetsGraphicsDefinitionFile } from 'pandora-common';
+import { GENERATE_AVIF } from '../constants';
+import { AVIF_SUFFIX } from './resources';
 
 const logger = GetLogger('GraphicsDatabase');
 
@@ -37,9 +39,14 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 		for (const [id, graphics] of this.assets.entries()) {
 			assets[id] = graphics;
 		}
+		const imageFormats: AssetsGraphicsDefinitionFile['imageFormats'] = {};
+		if (GENERATE_AVIF) {
+			imageFormats.avif = AVIF_SUFFIX;
+		}
 		return {
 			assets,
 			pointTemplates,
+			imageFormats,
 		};
 	}
 

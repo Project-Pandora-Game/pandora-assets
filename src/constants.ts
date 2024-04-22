@@ -11,6 +11,8 @@ export const SERVER_HTTPS_CERT = process.env.SERVER_HTTPS_CERT ?? '';
 export const SERVER_HTTPS_KEY = process.env.SERVER_HTTPS_KEY ?? '';
 //#endregion
 
+export const GENERATE_AVIF = process.env.GENERATE_AVIF === 'true';
+
 export const BASE_DIR = join(__dirname, '..');
 
 export const SRC_DIR = join(BASE_DIR, 'src');
