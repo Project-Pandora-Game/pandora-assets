@@ -12,7 +12,18 @@
 			"colorizationKey": "outer",
 			"image": {
 				"image": "catears_neutral_back.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"view": "front"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "Ear Back"
 		},
@@ -27,7 +38,18 @@
 			"colorizationKey": "outer",
 			"image": {
 				"image": "catears_neutral_front_outer.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "Ear Outer"
 		},
@@ -42,7 +64,18 @@
 			"colorizationKey": "inner",
 			"image": {
 				"image": "catears_neutral_front_inner.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "Ear Inner"
 		},
@@ -66,6 +99,16 @@
 									"module": "earTufts",
 									"operator": "=",
 									"value": "none"
+								}
+							]
+						]
+					},
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"view": "back"
 								}
 							]
 						]
