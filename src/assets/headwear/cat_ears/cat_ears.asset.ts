@@ -18,12 +18,11 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
+	// size:216, y:162, centered
 	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Clothing',
-			'Accessory',
-			'Headgear',
 			'Fantasy',
 			'Fantasy_ears',
 		],
