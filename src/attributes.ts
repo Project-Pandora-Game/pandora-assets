@@ -252,6 +252,10 @@ const ATTRIBUTES_DEFINITION_BASE = {
 	Fantasy: {
 		name: 'Fantasy',
 		description: 'A tail, pair of ears, or similar cosplay/fantasy item',
+		useAsWardrobeFilter: {
+			tabs: ['worn', 'storage'],
+		},
+		icon: 'fantasy',
 	},
 	Fantasy_ears: {
 		name: 'Fantasy ears',
