@@ -6,13 +6,24 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"priority": "BODY",
+			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "skin",
 			"image": {
 				"image": "ears.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "ears_back.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
 			}
 		}
 	]
