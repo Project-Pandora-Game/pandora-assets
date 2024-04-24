@@ -1,7 +1,7 @@
 import { HexRGBAColorString, HexRGBAColorStringSchema } from 'pandora-common';
 
 export const COLOR_GROUP_DEFINITION = {
-	skin: '#FFECDF',
+	skin: '#FAF2EE',
 	hair: '#444444',
 	hairShine: '#FFFFFF55',
 } as const satisfies Readonly<Record<string, HexRGBAColorString>>;
