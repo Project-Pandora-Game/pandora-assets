@@ -7,7 +7,104 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BELOW_BODY",
-			"points": "static",
+			"points": [
+				{
+					"pos": [
+						0,
+						0
+					],
+					"transforms": [
+						{
+							"type": "const-shift",
+							"value": {
+								"x": 0,
+								"y": -29
+							},
+							"condition": [
+								[
+									{
+										"legs": "sitting"
+									}
+								]
+							]
+						}
+					],
+					"mirror": true,
+					"pointType": "static_r"
+				},
+				{
+					"pos": [
+						0,
+						1500
+					],
+					"transforms": [
+						{
+							"type": "const-shift",
+							"value": {
+								"x": 0,
+								"y": -29
+							},
+							"condition": [
+								[
+									{
+										"legs": "sitting"
+									}
+								]
+							]
+						}
+					],
+					"mirror": true,
+					"pointType": "static_r"
+				},
+				{
+					"pos": [
+						500,
+						0
+					],
+					"transforms": [
+						{
+							"type": "const-shift",
+							"value": {
+								"x": 0,
+								"y": -29
+							},
+							"condition": [
+								[
+									{
+										"legs": "sitting"
+									}
+								]
+							]
+						}
+					],
+					"mirror": false,
+					"pointType": "static"
+				},
+				{
+					"pos": [
+						500,
+						1500
+					],
+					"transforms": [
+						{
+							"type": "const-shift",
+							"value": {
+								"x": 0,
+								"y": -29
+							},
+							"condition": [
+								[
+									{
+										"legs": "sitting"
+									}
+								]
+							]
+						}
+					],
+					"mirror": false,
+					"pointType": "static"
+				}
+			],
 			"mirror": 0,
 			"colorizationKey": "vulva",
 			"image": {
@@ -21,7 +118,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BODY",
-			"points": "static",
+			"points": 0,
 			"mirror": 0,
 			"colorizationKey": "vulva",
 			"image": {
@@ -48,7 +145,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BODY",
-			"points": "static",
+			"points": 0,
 			"mirror": 0,
 			"colorizationKey": "hair",
 			"image": {
