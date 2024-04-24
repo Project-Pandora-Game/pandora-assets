@@ -156,12 +156,18 @@ async function Run() {
 	ValidateBodyparts(definitions);
 
 	const definitionsFile = DefineResourceInline('assets.json', JSON.stringify(definitions));
+
+	// Do export of all resources pending so far
+	await ExportAllResources();
+
+	// Defer exporting the "current" file until after all previous files were processed (to avoid race condition of shard reloading before it should)
 	DefineResourceInline('current', `${definitionsFile.hash}\n`, 'current');
 
-	await Promise.all([
-		ExportAllResources(),
-		CleanOldResources(),
-	]);
+	// Do export all again to wait for the "current" file
+	await ExportAllResources();
+
+	// Perform cleanup only after all resources are exported (this allows shard to still use old data before new data is ready)
+	await CleanOldResources();
 
 	if (!CheckErrors())
 		return;
