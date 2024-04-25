@@ -25,10 +25,12 @@ DefineAsset({
 			name: 'Bag contents',
 			maxCount: 10,
 			maxAcceptedSize: 'medium',
+			assetSpecific: undefined,
 		},
 		lock: {
 			type: 'lockSlot',
 			name: 'Bag zipper lock',
+			assetSpecific: undefined,
 			lockedProperties: {
 				blockModules: ['content'],
 			},

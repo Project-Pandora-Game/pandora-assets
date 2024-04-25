@@ -20,6 +20,7 @@ DefineAsset({
 		harness: {
 			type: 'typed',
 			name: 'Body Harness',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'no',
@@ -47,6 +48,7 @@ DefineAsset({
 		armTies: {
 			type: 'typed',
 			name: 'Arm Ties',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'wrists',

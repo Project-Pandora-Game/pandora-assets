@@ -31,6 +31,7 @@ DefineAsset({
 			name: 'Left Butt Cheek Color',
 			expression: 'Left Butt Cheek Color',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'noColor',
@@ -68,6 +69,7 @@ DefineAsset({
 			name: 'Right Butt Cheek Color',
 			expression: 'Right Butt Cheek Color',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'noColor',
@@ -105,6 +107,7 @@ DefineAsset({
 			name: 'Left Breast Color',
 			expression: 'Left Breast Color',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'noColor',
@@ -122,6 +125,7 @@ DefineAsset({
 			name: 'Right Breast Color',
 			expression: 'Right Breast Color',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'noColor',
@@ -139,6 +143,7 @@ DefineAsset({
 			name: 'Sex Color',
 			expression: 'Sex Color',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'noColor',

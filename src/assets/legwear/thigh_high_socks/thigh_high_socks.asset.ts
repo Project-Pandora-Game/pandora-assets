@@ -33,6 +33,7 @@ DefineAsset({
 		stripes: {
 			type: 'typed',
 			name: 'Sock Stripes',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'three',

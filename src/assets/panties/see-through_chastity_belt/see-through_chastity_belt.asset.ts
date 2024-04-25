@@ -31,6 +31,7 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
+			assetSpecific: undefined,
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
@@ -38,6 +39,7 @@ DefineAsset({
 		lockPlate: {
 			type: 'lockSlot',
 			name: 'Lock for crotch covers',
+			assetSpecific: undefined,
 			occupiedProperties: {
 				blockModules: ['crotchPlate'],
 			},
@@ -46,6 +48,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Belt Type',
 			interactionType: ItemInteractionType.ADD_REMOVE,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'female',
@@ -75,6 +78,7 @@ DefineAsset({
 		crotchPlate: {
 			type: 'typed',
 			name: 'Crotch Cover',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'open',

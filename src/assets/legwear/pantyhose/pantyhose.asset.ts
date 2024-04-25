@@ -21,6 +21,7 @@ DefineAsset({
 		pantiesState: {
 			type: 'typed',
 			name: 'Pantyhose State',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'normal',

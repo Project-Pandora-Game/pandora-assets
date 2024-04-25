@@ -34,6 +34,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Pupil Types',
 			expression: 'Eye Pupil Types',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'largePupils',
@@ -62,6 +63,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Left Eye Open/Close',
 			expression: 'Left Eye Open/Close',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'normal',
@@ -78,6 +80,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Right Eye Open/Close',
 			expression: 'Right Eye Open/Close',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'normal',

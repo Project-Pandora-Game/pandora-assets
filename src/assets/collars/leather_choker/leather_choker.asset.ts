@@ -29,6 +29,7 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
+			assetSpecific: undefined,
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
@@ -36,6 +37,7 @@ DefineAsset({
 		config: {
 			type: 'typed',
 			name: 'Choker Configuration',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'choker',

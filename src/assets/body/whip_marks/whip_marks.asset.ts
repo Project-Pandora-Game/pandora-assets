@@ -26,6 +26,7 @@ DefineAsset({
 			name: 'Left Butt Marks',
 			expression: 'Left Butt Marks',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'none',
@@ -47,6 +48,7 @@ DefineAsset({
 			name: 'Right Butt Marks',
 			expression: 'Right Butt Marks',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'none',
@@ -68,6 +70,7 @@ DefineAsset({
 			name: 'Left Thigh Marks Back',
 			expression: 'Left Thigh Marks Back',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'none',
@@ -89,6 +92,7 @@ DefineAsset({
 			name: 'Right Thigh Marks Back',
 			expression: 'Right Thigh Marks Back',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'none',
@@ -110,6 +114,7 @@ DefineAsset({
 			name: 'Back Marks',
 			expression: 'Back Marks',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'none',
@@ -131,6 +136,7 @@ DefineAsset({
 			name: 'Left Thigh Marks Front',
 			expression: 'Left Thigh Marks Front',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'none',
@@ -152,6 +158,7 @@ DefineAsset({
 			name: 'Right Thigh Marks Front',
 			expression: 'Right Thigh Marks Front',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'none',
@@ -173,6 +180,7 @@ DefineAsset({
 			name: 'Left Breast Marks',
 			expression: 'Left Breast Marks',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'none',
@@ -194,6 +202,7 @@ DefineAsset({
 			name: 'Right Breast Marks',
 			expression: 'Right Breast Marks',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'none',
@@ -215,6 +224,7 @@ DefineAsset({
 			name: 'Sex Marks',
 			expression: 'Sex Marks',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'none',

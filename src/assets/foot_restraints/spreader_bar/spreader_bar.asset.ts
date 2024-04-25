@@ -24,6 +24,7 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
+			assetSpecific: undefined,
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
@@ -31,6 +32,7 @@ DefineAsset({
 		lockChain: {
 			type: 'lockSlot',
 			name: 'Lock for bar width',
+			assetSpecific: undefined,
 			occupiedProperties: {
 				blockModules: ['barWidth'],
 			},
@@ -38,6 +40,7 @@ DefineAsset({
 		barWidth: {
 			type: 'typed',
 			name: 'Bar Width',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'narrow',

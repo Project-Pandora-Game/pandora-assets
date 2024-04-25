@@ -23,6 +23,7 @@ DefineAsset({
 		config: {
 			type: 'typed',
 			name: 'Sides',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'both',

@@ -48,6 +48,7 @@ DefineRoomDeviceAsset({
 		lid: {
 			type: 'typed',
 			name: 'Barrel lid',
+			assetSpecific: { slotName: 'character_slot_inside' },
 			variants: [
 				{
 					id: 'open',
@@ -73,6 +74,7 @@ DefineRoomDeviceAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lid lock',
+			assetSpecific: { slotName: 'character_slot_inside' },
 			lockedProperties: {
 				blockModules: ['lid'],
 			},
@@ -82,6 +84,7 @@ DefineRoomDeviceAsset({
 			name: `Barrel contents`,
 			maxAcceptedSize: 'large',
 			maxCount: 10,
+			assetSpecific: { slotName: null },
 		},
 	},
 	pivot: {

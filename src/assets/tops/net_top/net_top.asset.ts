@@ -31,6 +31,7 @@ DefineAsset({
 		nylon: {
 			type: 'typed',
 			name: 'Nylon body',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'show',

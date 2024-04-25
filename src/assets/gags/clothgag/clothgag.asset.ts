@@ -24,6 +24,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Gag Type',
 			interactionType: ItemInteractionType.ADD_REMOVE,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'standard',

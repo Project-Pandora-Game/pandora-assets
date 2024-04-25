@@ -22,6 +22,7 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
+			assetSpecific: undefined,
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
@@ -29,6 +30,7 @@ DefineAsset({
 		collarConfig: {
 			type: 'typed',
 			name: 'Chain Configuration',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'hanging',

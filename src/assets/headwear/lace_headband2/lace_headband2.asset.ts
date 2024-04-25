@@ -20,6 +20,7 @@ DefineAsset({
 		headbandSize: {
 			type: 'typed',
 			name: 'Headband Size',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'normal',

@@ -12,6 +12,7 @@ export function CreateHairColor(withShine: boolean): {
 		colorGroupHair: {
 			type: 'typed',
 			name: 'Group Hair Color',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'no',
@@ -37,6 +38,7 @@ export function CreateHairColor(withShine: boolean): {
 		modules.shine = {
 			type: 'typed',
 			name: 'Shine',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'show',
@@ -52,6 +54,7 @@ export function CreateHairColor(withShine: boolean): {
 		modules.colorGroupHairShine = {
 			type: 'typed',
 			name: 'Group Hair Shine Color',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'no',

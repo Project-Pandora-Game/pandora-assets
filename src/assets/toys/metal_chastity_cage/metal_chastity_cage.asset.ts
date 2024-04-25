@@ -20,6 +20,7 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
+			assetSpecific: undefined,
 			occupiedProperties: {
 				blockAddRemove: true,
 				blockModules: ['cage'],
@@ -28,6 +29,7 @@ DefineAsset({
 		cage: {
 			type: 'typed',
 			name: 'Cage',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'ring',

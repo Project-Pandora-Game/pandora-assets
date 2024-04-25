@@ -22,6 +22,7 @@ DefineAsset({
 		sleeves: {
 			type: 'typed',
 			name: 'Jacket Type',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'none',

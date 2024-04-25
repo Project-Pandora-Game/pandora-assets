@@ -26,6 +26,7 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
+			assetSpecific: undefined,
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
@@ -33,6 +34,7 @@ DefineAsset({
 		collarConfig: {
 			type: 'typed',
 			name: 'Collar Configuration',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'collar',
@@ -56,6 +58,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Collar Type',
 			interactionType: ItemInteractionType.ADD_REMOVE,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'normal',

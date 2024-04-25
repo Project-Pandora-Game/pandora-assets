@@ -28,6 +28,7 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
+			assetSpecific: undefined,
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
@@ -37,6 +38,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Uncomfortable inlay soles put inside the shoe',
 			interactionType: ItemInteractionType.ADD_REMOVE,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'none',

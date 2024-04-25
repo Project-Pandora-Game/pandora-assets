@@ -57,6 +57,7 @@ DefineRoomDeviceAsset({
 		chains: {
 			type: 'typed',
 			name: 'Under the frame chains',
+			assetSpecific: { slotName: 'character_slot' },
 			variants: [
 				{
 					id: 'none',
@@ -224,6 +225,7 @@ DefineRoomDeviceAsset({
 		position: {
 			type: 'typed',
 			name: 'Under the frame position',
+			assetSpecific: { slotName: 'character_slot' },
 			variants: [
 				{
 					id: 'front',
@@ -257,6 +259,7 @@ DefineRoomDeviceAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Under the frame chain locks',
+			assetSpecific: { slotName: 'character_slot' },
 			lockedProperties: {
 				blockModules: ['chains', 'position'],
 			},

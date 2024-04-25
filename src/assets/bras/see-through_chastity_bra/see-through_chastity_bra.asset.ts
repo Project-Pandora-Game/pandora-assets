@@ -30,6 +30,7 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
+			assetSpecific: undefined,
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
@@ -37,6 +38,7 @@ DefineAsset({
 		lockCover: {
 			type: 'lockSlot',
 			name: 'Lock for bra cover',
+			assetSpecific: undefined,
 			occupiedProperties: {
 				blockModules: ['cover'],
 			},
@@ -44,6 +46,7 @@ DefineAsset({
 		cover: {
 			type: 'typed',
 			name: 'Bra cover',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'open',

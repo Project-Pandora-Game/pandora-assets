@@ -20,6 +20,7 @@ DefineAsset({
 		insertedVibrator: {
 			type: 'typed',
 			name: 'Penetration Depth',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'out',

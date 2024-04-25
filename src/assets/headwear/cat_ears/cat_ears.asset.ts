@@ -32,6 +32,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Ear tufts',
 			interactionType: ItemInteractionType.ADD_REMOVE,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'none',

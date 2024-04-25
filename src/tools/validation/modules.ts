@@ -111,7 +111,7 @@ export function ValidateStorageModule<TProperties, TPropertiesValidationMetadata
 	logger: Logger,
 	context: string,
 	metadata: ModuleValidationMetadata<TProperties, TPropertiesValidationMetadata>,
-	moduleDefinition: IModuleConfigStorage,
+	moduleDefinition: IModuleConfigStorage<TProperties>,
 ): void {
 	if (!Number.isInteger(moduleDefinition.maxCount) || moduleDefinition.maxCount < 1) {
 		logger.error(`Invalid module config: ${context}.maxCount: Expected positive integer, found '${moduleDefinition.maxCount}'`);

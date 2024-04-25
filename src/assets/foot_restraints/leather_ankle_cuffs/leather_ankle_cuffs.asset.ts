@@ -37,6 +37,7 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock cuffs',
+			assetSpecific: undefined,
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
@@ -44,6 +45,7 @@ DefineAsset({
 		lockChain: {
 			type: 'lockSlot',
 			name: 'Lock for cuff chain',
+			assetSpecific: undefined,
 			occupiedProperties: {
 				blockModules: ['cuffState'],
 				stateFlags: {
@@ -56,6 +58,7 @@ DefineAsset({
 		cuffState: {
 			type: 'typed',
 			name: 'Cuff states',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'unchained',

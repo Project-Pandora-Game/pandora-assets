@@ -8,6 +8,7 @@ DefineAsset({
 			name: 'Contents',
 			maxCount: 10,
 			maxAcceptedSize: 'medium',
+			assetSpecific: undefined,
 		},
 	},
 	chat: {

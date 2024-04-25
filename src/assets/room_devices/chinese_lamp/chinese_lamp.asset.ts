@@ -28,6 +28,7 @@ DefineRoomDeviceAsset({
 		operation: {
 			type: 'typed',
 			name: 'Lamp operation',
+			assetSpecific: { slotName: null },
 			variants: [
 				{
 					id: 'on',
@@ -43,6 +44,7 @@ DefineRoomDeviceAsset({
 		configuration: {
 			type: 'typed',
 			name: 'Lamp configuration',
+			assetSpecific: { slotName: null },
 			variants: [
 				{
 					id: 'wall',
@@ -58,6 +60,7 @@ DefineRoomDeviceAsset({
 		size: {
 			type: 'typed',
 			name: 'Lamp size',
+			assetSpecific: { slotName: null },
 			variants: [
 				{
 					id: 'normal',

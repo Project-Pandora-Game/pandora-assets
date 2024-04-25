@@ -37,6 +37,7 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
+			assetSpecific: undefined,
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
@@ -44,6 +45,7 @@ DefineAsset({
 		lockPlug: {
 			type: 'lockSlot',
 			name: 'Lock for the plug',
+			assetSpecific: undefined,
 			occupiedProperties: {
 				blockModules: ['plugState'],
 			},
@@ -52,6 +54,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Gag Type',
 			interactionType: ItemInteractionType.ADD_REMOVE,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'standard',
@@ -67,6 +70,7 @@ DefineAsset({
 		plugState: {
 			type: 'typed',
 			name: 'Plug Addon',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'noPlug',

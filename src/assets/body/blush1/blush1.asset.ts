@@ -22,6 +22,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Blush Strength',
 			expression: 'Blush',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'noBlush',

@@ -28,6 +28,7 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
+			assetSpecific: undefined,
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
@@ -35,6 +36,7 @@ DefineAsset({
 		lacing: {
 			type: 'typed',
 			name: 'Lacing',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'laced',
@@ -50,6 +52,7 @@ DefineAsset({
 		bust: {
 			type: 'typed',
 			name: 'Bust Type',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'covered',
@@ -73,6 +76,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Corset Length',
 			interactionType: ItemInteractionType.ADD_REMOVE,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'normal',
@@ -97,6 +101,7 @@ DefineAsset({
 			type: 'typed',
 			name: 'Corset Base Color',
 			interactionType: ItemInteractionType.STYLING,
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'black',

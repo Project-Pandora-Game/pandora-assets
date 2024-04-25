@@ -23,6 +23,7 @@ DefineAsset({
 		tool: {
 			type: 'typed',
 			name: 'Tool Type',
+			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'modern',
