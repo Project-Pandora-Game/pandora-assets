@@ -164,7 +164,7 @@ async function Run() {
 	DefineResourceInline('current', `${definitionsFile.hash}\n`, 'current');
 
 	// Do export all again to wait for the "current" file
-	await ExportAllResources();
+	await ExportAllResources(false);
 
 	// Perform cleanup only after all resources are exported (this allows shard to still use old data before new data is ready)
 	await CleanOldResources();

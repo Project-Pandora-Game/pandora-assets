@@ -59,7 +59,7 @@ export abstract class Resource {
 		resources.push(this);
 	}
 
-	public abstract finalize(): Promise<void>;
+	public abstract getProcesses(): readonly (() => Promise<void>)[];
 }
 
 export interface IImageResource extends Resource {
@@ -67,7 +67,7 @@ export interface IImageResource extends Resource {
 }
 
 class FileResource extends Resource {
-	private process: Promise<void>[] = [];
+	private _process: (() => Promise<void>)[] = [];
 	protected readonly baseName: string;
 	protected readonly extension: string;
 	protected readonly sourcePath: string;
@@ -89,20 +89,20 @@ class FileResource extends Resource {
 		this.baseName = resultName.replace(/\.[^.]*$/, '');
 		this.extension = resultName.replace(/^.*\.([^.]+)$/, '$1');
 
-		if (resourceFiles.has(resultName)) {
-			return;
-		}
-
-		resourceFiles.add(resultName);
 		WatchFile(sourcePath);
 
-		const dest = join(destinationDirectory, resultName);
-		this.addProcess(IsFile(dest)
-			.then(async (isFile) => {
-				if (!isFile) {
-					await copyFile(sourcePath, dest);
-				}
-			}));
+		this.addProcess(async () => {
+			if (resourceFiles.has(resultName)) {
+				return;
+			}
+			resourceFiles.add(resultName);
+			const dest = join(destinationDirectory, resultName);
+
+			if (await IsFile(dest))
+				return;
+
+			await copyFile(sourcePath, dest);
+		});
 
 		this.addProcess(async () => {
 			const { exif, icc, xmp } = await sharp(sourcePath).metadata();
@@ -112,33 +112,33 @@ class FileResource extends Resource {
 		});
 	}
 
-	public async finalize(): Promise<void> {
-		await Promise.all(this.process);
+	protected addProcess(process: (() => Promise<void>)): void {
+		this._process.push(process);
 	}
 
-	protected addProcess(process: Promise<void> | (() => Promise<void>)): void {
-		if (typeof process === 'function') {
-			process = process();
-		}
-		this.process.push(process);
+	public override getProcesses(): readonly (() => Promise<void>)[] {
+		return this._process;
 	}
 }
 
 class InlineResource extends Resource {
-	private readonly finished: Promise<void>;
+	private readonly value: Buffer;
 
 	constructor(resultName: string, hash: string, value: Buffer) {
 		super(resultName, value.byteLength, hash);
-		if (resourceFiles.has(this.resultName)) {
-			this.finished = Promise.resolve();
-		} else {
-			resourceFiles.add(this.resultName);
-			this.finished = writeFile(join(destinationDirectory, this.resultName), value);
-		}
+		this.value = value;
 	}
 
-	public async finalize(): Promise<void> {
-		await this.finished;
+	private _process(): Promise<void> {
+		if (resourceFiles.has(this.resultName)) {
+			return Promise.resolve();
+		}
+		resourceFiles.add(this.resultName);
+		return writeFile(join(destinationDirectory, this.resultName), this.value);
+	}
+
+	public override getProcesses(): readonly (() => Promise<void>)[] {
+		return [() => this._process()];
 	}
 }
 
@@ -146,11 +146,11 @@ class ImageResource extends FileResource implements IImageResource {
 	constructor(path: string, category: ImageCategory) {
 		super(path);
 		CheckMaxSize(this, path, category);
-		this.addAVIFConversion('', (s) => s);
+		this._addAVIFConversion('', (s) => s);
 	}
 
 	public addResizedImage(maxWidth: number, maxHeight: number, suffix: string): string {
-		this.addAVIFConversion(`_${suffix}`, (s) => s.resize(maxWidth, maxHeight));
+		this._addAVIFConversion(`_${suffix}`, (s) => s.resize(maxWidth, maxHeight));
 
 		const name = `${this.baseName}_${suffix}.${this.extension}`;
 		if (resourceFiles.has(name))
@@ -180,7 +180,7 @@ class ImageResource extends FileResource implements IImageResource {
 		});
 	}
 
-	private addAVIFConversion(suffix: string, process: (s: Sharp) => Sharp): void {
+	private _addAVIFConversion(suffix: string, process: (s: Sharp) => Sharp): void {
 		if (!GENERATE_AVIF)
 			return;
 
@@ -308,9 +308,32 @@ export function ClearAllResources(): void {
 	resourceFiles.clear();
 }
 
-export async function ExportAllResources(): Promise<void> {
-	await Promise.all(resources
-		.map((resource) => resource.finalize()));
+export async function ExportAllResources(printProgress: boolean = true): Promise<void> {
+	const tasks = resources.flatMap((r) => r.getProcesses());
+	let finishedTasks = 0;
+	const digitLen = Math.max(Math.log10(tasks.length));
+
+	const updateProgress = () => {
+		if (!printProgress)
+			return;
+		process.stdout.write(`\r${finishedTasks.toString().padStart(digitLen)}/${tasks.length} (${Math.floor(100 * finishedTasks / tasks.length).toString().padStart(3)}%)`);
+	};
+
+	updateProgress();
+
+	await Promise.all(tasks
+		.map((task) => task()
+			.finally(() => {
+				finishedTasks++;
+				updateProgress();
+			}),
+		));
+
+	updateProgress();
+	// Add a final newline
+	if (printProgress) {
+		process.stdout.write('\n');
+	}
 }
 
 export async function CleanOldResources(): Promise<void> {
