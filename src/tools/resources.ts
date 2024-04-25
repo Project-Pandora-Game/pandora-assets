@@ -24,7 +24,7 @@ export const PREVIEW_SIZE = 256;
 
 const logger = GetLogger('Resources');
 
-const resources: Map<string, Resource> = new Map();
+let resources: Resource[] = [];
 const resourceFiles: Set<string> = new Set();
 
 let destinationDirectory = '';
@@ -56,7 +56,7 @@ export abstract class Resource {
 		this.resultName = resultName;
 		this.size = size;
 		this.hash = hash;
-		resources.set(resultName, this);
+		resources.push(this);
 	}
 
 	public abstract finalize(): Promise<void>;
@@ -304,12 +304,12 @@ export function DefineJpgResource(name: string, category: ImageCategory): string
 }
 
 export function ClearAllResources(): void {
-	resources.clear();
+	resources = [];
 	resourceFiles.clear();
 }
 
 export async function ExportAllResources(): Promise<void> {
-	await Promise.all([...resources.values()]
+	await Promise.all(resources
 		.map((resource) => resource.finalize()));
 }
 
