@@ -1,4 +1,4 @@
-import { AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition } from 'pandora-common';
+import { AssertNever, AssertNotNullable, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition } from 'pandora-common';
 import { AssetDatabase } from './assetDatabase';
 import { AssetSourcePath, DefaultId } from './context';
 import { LoadAssetsGraphics } from './graphics';
@@ -223,6 +223,16 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 		validateProperties: ValidateRoomDeviceProperties,
 		propertiesValidationMetadata,
 	}, def.modules);
+
+	for (const module of Object.values(def.modules ?? {})) {
+		AssertNotNullable(module.assetSpecific);
+		if (module.assetSpecific.slotName == null) {
+			continue;
+		}
+		if (!slotIds.has(module.assetSpecific.slotName)) {
+			logger.error(`Module '${module.name}' references unknown slot '${module.assetSpecific.slotName}'`);
+		}
+	}
 
 	// Validate ownership data
 	ValidateOwnershipData(def.ownership, logger, true);
