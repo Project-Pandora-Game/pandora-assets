@@ -1,12 +1,13 @@
-import { Assert, GetLogger, SplitStringFirstOccurrence } from 'pandora-common';
 import { createHash } from 'crypto';
 import { readFileSync, statSync } from 'fs';
-import { writeFile, copyFile, unlink, readdir, stat } from 'fs/promises';
-import { join, basename } from 'path';
-import { AssetSourcePath } from './context';
-import { WatchFile } from './watch';
+import { copyFile, readdir, stat, unlink, writeFile } from 'fs/promises';
+import { availableParallelism } from 'os';
+import { Assert, GetLogger, SplitStringFirstOccurrence } from 'pandora-common';
+import { basename, join } from 'path';
 import sharp, { type AvifOptions, type Sharp } from 'sharp';
 import { GENERATE_AVIF } from '../constants';
+import { AssetSourcePath } from './context';
+import { WatchFile } from './watch';
 
 export type ImageCategory = 'asset' | 'roomDevice' | 'background' | 'preview';
 
@@ -310,24 +311,41 @@ export function ClearAllResources(): void {
 
 export async function ExportAllResources(printProgress: boolean = true): Promise<void> {
 	const tasks = resources.flatMap((r) => r.getProcesses());
+	const totalTasks = tasks.length;
 	let finishedTasks = 0;
-	const digitLen = Math.max(Math.log10(tasks.length));
+	const digitLen = Math.max(Math.log10(totalTasks)) + 1;
 
 	const updateProgress = () => {
 		if (!printProgress)
 			return;
-		process.stdout.write(`\r${finishedTasks.toString().padStart(digitLen)}/${tasks.length} (${Math.floor(100 * finishedTasks / tasks.length).toString().padStart(3)}%)`);
+		process.stdout.write(`\r${finishedTasks.toString().padStart(digitLen)}/${totalTasks} (${Math.floor(100 * finishedTasks / totalTasks).toString().padStart(3)}%)`);
 	};
 
 	updateProgress();
 
-	await Promise.all(tasks
-		.map((task) => task()
-			.finally(() => {
-				finishedTasks++;
-				updateProgress();
-			}),
-		));
+	const taskRunner = async () => {
+		for (; ;) {
+			const task = tasks.shift();
+			if (!task)
+				return;
+
+			try {
+				await task();
+			} catch (error) {
+				logger.fatal(`Error processing resource:`, error);
+			}
+			finishedTasks++;
+			updateProgress();
+		}
+	};
+
+	const runners: Promise<void>[] = [];
+
+	for (let i = 0; i < availableParallelism(); i++) {
+		runners.push(taskRunner());
+	}
+
+	await Promise.allSettled(runners);
 
 	updateProgress();
 	// Add a final newline
