@@ -26,7 +26,6 @@ DefineAsset({
 		handUsage_r: {
 			type: 'typed',
 			name: 'Held in right hand',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'yes',
@@ -61,7 +60,6 @@ DefineAsset({
 		handUsage_l: {
 			type: 'typed',
 			name: 'Held in left hand',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'yes',

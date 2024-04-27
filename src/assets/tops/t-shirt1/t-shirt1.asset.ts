@@ -25,7 +25,6 @@ DefineAsset({
 		prints: {
 			type: 'typed',
 			name: 'T-Shirt Print',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'crown',
@@ -65,7 +64,6 @@ DefineAsset({
 		sleeves: {
 			type: 'typed',
 			name: 'T-Shirt Type',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'short',

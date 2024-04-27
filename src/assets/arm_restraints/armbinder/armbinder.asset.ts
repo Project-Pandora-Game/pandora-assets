@@ -36,7 +36,6 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			assetSpecific: undefined,
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
@@ -44,7 +43,6 @@ DefineAsset({
 		gloveRing: {
 			type: 'typed',
 			name: 'Glove Ring',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'noRing',

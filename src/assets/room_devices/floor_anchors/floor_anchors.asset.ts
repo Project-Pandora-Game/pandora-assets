@@ -59,7 +59,7 @@ DefineRoomDeviceAsset({
 		left: {
 			type: 'typed',
 			name: 'Collar chain - left',
-			assetSpecific: { slotName: 'character_slot_left' },
+			staticConfig: { slotName: 'character_slot_left' },
 			variants: [
 				{
 					id: 'none',
@@ -118,7 +118,7 @@ DefineRoomDeviceAsset({
 		lockLeftChain: {
 			type: 'lockSlot',
 			name: 'Lock for collar chain - left',
-			assetSpecific: { slotName: 'character_slot_left' },
+			staticConfig: { slotName: 'character_slot_left' },
 			occupiedProperties: {
 				blockModules: ['left'],
 				stateFlags: {
@@ -131,7 +131,7 @@ DefineRoomDeviceAsset({
 		right: {
 			type: 'typed',
 			name: 'Collar chain - right',
-			assetSpecific: { slotName: 'character_slot_right' },
+			staticConfig: { slotName: 'character_slot_right' },
 			variants: [
 				{
 					id: 'none',
@@ -190,7 +190,7 @@ DefineRoomDeviceAsset({
 		lockRightChain: {
 			type: 'lockSlot',
 			name: 'Lock for collar chain - right',
-			assetSpecific: { slotName: 'character_slot_right' },
+			staticConfig: { slotName: 'character_slot_right' },
 			occupiedProperties: {
 				blockModules: ['right'],
 				stateFlags: {
@@ -203,7 +203,7 @@ DefineRoomDeviceAsset({
 		center: {
 			type: 'typed',
 			name: 'Ankle chains',
-			assetSpecific: { slotName: 'character_slot_middle' },
+			staticConfig: { slotName: 'character_slot_middle' },
 			variants: [
 				{
 					id: 'none',
@@ -239,7 +239,7 @@ DefineRoomDeviceAsset({
 		lockCenterChain: {
 			type: 'lockSlot',
 			name: 'Lock for ankle cuff chains',
-			assetSpecific: { slotName: 'character_slot_middle' },
+			staticConfig: { slotName: 'character_slot_middle' },
 			occupiedProperties: {
 				blockModules: ['center'],
 				stateFlags: {

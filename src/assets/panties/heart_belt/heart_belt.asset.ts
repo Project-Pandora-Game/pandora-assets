@@ -32,7 +32,6 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			assetSpecific: undefined,
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
@@ -40,7 +39,6 @@ DefineAsset({
 		lockPlate: {
 			type: 'lockSlot',
 			name: 'Lock for crotch plate',
-			assetSpecific: undefined,
 			occupiedProperties: {
 				blockModules: ['crotchPlate'],
 			},
@@ -48,7 +46,6 @@ DefineAsset({
 		crotchPlate: {
 			type: 'typed',
 			name: 'Crotch Plate',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'open',

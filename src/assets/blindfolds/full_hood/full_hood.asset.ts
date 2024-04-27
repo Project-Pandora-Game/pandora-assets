@@ -42,7 +42,6 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			assetSpecific: undefined,
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
@@ -50,7 +49,6 @@ DefineAsset({
 		lockAddons: {
 			type: 'lockSlot',
 			name: 'Lock for hood covers',
-			assetSpecific: undefined,
 			occupiedProperties: {
 				blockModules: [
 					'hoodEyeCover',
@@ -61,7 +59,6 @@ DefineAsset({
 		hoodEyeCover: {
 			type: 'typed',
 			name: 'Hood Eye Cover',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'eye_free',
@@ -87,7 +84,6 @@ DefineAsset({
 		hoodMouthCover: {
 			type: 'typed',
 			name: 'Hood Mouth Cover',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'mouth_free',

@@ -26,7 +26,6 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			assetSpecific: undefined,
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
@@ -35,7 +34,6 @@ DefineAsset({
 			type: 'typed',
 			name: 'Pendant Type',
 			interactionType: ItemInteractionType.ADD_REMOVE,
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'afk',

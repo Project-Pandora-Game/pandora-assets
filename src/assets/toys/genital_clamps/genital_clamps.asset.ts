@@ -23,7 +23,6 @@ DefineAsset({
 		clampAddons: {
 			type: 'typed',
 			name: 'Clamp Addons',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'none',

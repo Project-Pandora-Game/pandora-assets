@@ -91,7 +91,7 @@ DefineRoomDeviceAsset({
 		door: {
 			type: 'typed',
 			name: 'Door',
-			assetSpecific: { slotName: 'character_slot_inside' },
+			staticConfig: { slotName: 'character_slot_inside' },
 			variants: [
 				{
 					id: 'open',
@@ -110,7 +110,7 @@ DefineRoomDeviceAsset({
 		curtain: {
 			type: 'typed',
 			name: 'Curtain cover',
-			assetSpecific: { slotName: 'character_slot_inside' },
+			staticConfig: { slotName: 'character_slot_inside' },
 			variants: [
 				{
 					id: 'open',
@@ -135,7 +135,7 @@ DefineRoomDeviceAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Door lock',
-			assetSpecific: { slotName: 'character_slot_inside' },
+			staticConfig: { slotName: 'character_slot_inside' },
 			lockedProperties: {
 				blockModules: ['door'],
 			},
@@ -143,9 +143,9 @@ DefineRoomDeviceAsset({
 		storage: {
 			type: 'storage',
 			name: `Cage's floor`,
+			staticConfig: { slotName: null },
 			maxAcceptedSize: 'large',
 			maxCount: 3,
-			assetSpecific: { slotName: null },
 		},
 	},
 	pivot: {

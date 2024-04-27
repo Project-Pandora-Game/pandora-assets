@@ -34,7 +34,7 @@ DefineRoomDeviceAsset({
 		crop: {
 			type: 'typed',
 			name: 'Long Crop',
-			assetSpecific: { slotName: null },
+			staticConfig: { slotName: null },
 			variants: [
 				{
 					id: 'on',
@@ -50,7 +50,7 @@ DefineRoomDeviceAsset({
 		paddle: {
 			type: 'typed',
 			name: 'Paddle',
-			assetSpecific: { slotName: null },
+			staticConfig: { slotName: null },
 			variants: [
 				{
 					id: 'on',
@@ -66,7 +66,7 @@ DefineRoomDeviceAsset({
 		flogger: {
 			type: 'typed',
 			name: 'Flogger',
-			assetSpecific: { slotName: null },
+			staticConfig: { slotName: null },
 			variants: [
 				{
 					id: 'on',
@@ -82,7 +82,7 @@ DefineRoomDeviceAsset({
 		heart: {
 			type: 'typed',
 			name: 'Heart Crop',
-			assetSpecific: { slotName: null },
+			staticConfig: { slotName: null },
 			variants: [
 				{
 					id: 'on',
@@ -98,7 +98,7 @@ DefineRoomDeviceAsset({
 		cane: {
 			type: 'typed',
 			name: 'Cane',
-			assetSpecific: { slotName: null },
+			staticConfig: { slotName: null },
 			variants: [
 				{
 					id: 'on',

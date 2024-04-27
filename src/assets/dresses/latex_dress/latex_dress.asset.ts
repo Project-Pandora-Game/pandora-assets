@@ -23,7 +23,6 @@ DefineAsset({
 		skirtStateFront: {
 			type: 'typed',
 			name: 'Skirt State Front',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'normal',
@@ -39,7 +38,6 @@ DefineAsset({
 		skirtStateBack: {
 			type: 'typed',
 			name: 'Skirt State Back',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'normal',

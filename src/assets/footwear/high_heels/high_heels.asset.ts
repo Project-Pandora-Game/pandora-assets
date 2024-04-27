@@ -29,7 +29,6 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			assetSpecific: undefined,
 			occupiedProperties: {
 				blockAddRemove: true,
 				blockModules: ['heelType'],
@@ -44,7 +43,6 @@ DefineAsset({
 			type: 'typed',
 			name: 'Heel Length',
 			interactionType: ItemInteractionType.ADD_REMOVE,
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'normal',
@@ -83,7 +81,6 @@ DefineAsset({
 		heelType: {
 			type: 'typed',
 			name: 'Heel Type',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'noStrap',

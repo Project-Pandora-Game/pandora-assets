@@ -24,7 +24,6 @@ DefineAsset({
 			type: 'typed',
 			name: 'Collar Type',
 			interactionType: ItemInteractionType.ADD_REMOVE,
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'normal',

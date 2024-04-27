@@ -22,7 +22,6 @@ DefineAsset({
 			type: 'typed',
 			name: 'Mouth expressions',
 			expression: 'Mouth',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'neutral',

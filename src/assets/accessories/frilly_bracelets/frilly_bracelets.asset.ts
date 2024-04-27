@@ -24,7 +24,6 @@ DefineAsset({
 		braceState: {
 			type: 'typed',
 			name: 'Bracelet Style',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'up',

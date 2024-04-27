@@ -64,7 +64,7 @@ DefineRoomDeviceAsset({
 		door: {
 			type: 'typed',
 			name: 'Door',
-			assetSpecific: { slotName: null },
+			staticConfig: { slotName: null },
 			variants: [
 				{
 					id: 'open',
@@ -105,7 +105,7 @@ DefineRoomDeviceAsset({
 		lock_left: {
 			type: 'lockSlot',
 			name: 'Left floor anchor lock',
-			assetSpecific: { slotName: null },
+			staticConfig: { slotName: null },
 			lockedProperties: {
 				blockModules: ['anchor_left'],
 			},
@@ -163,9 +163,9 @@ DefineRoomDeviceAsset({
 		storage: {
 			type: 'storage',
 			name: `Cage's floor`,
+			staticConfig: { slotName: null },
 			maxAcceptedSize: 'large',
 			maxCount: 5,
-			assetSpecific: { slotName: null },
 		},
 	},
 	pivot: {

@@ -40,7 +40,6 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			assetSpecific: undefined,
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
@@ -48,7 +47,6 @@ DefineAsset({
 		buttons: {
 			type: 'typed',
 			name: 'Buttons',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'yes',
@@ -64,7 +62,6 @@ DefineAsset({
 		ribbons: {
 			type: 'typed',
 			name: 'Back Ribbon',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'yes',
@@ -80,7 +77,6 @@ DefineAsset({
 		bossomState: {
 			type: 'typed',
 			name: 'Bossom State',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'normal',
@@ -96,7 +92,6 @@ DefineAsset({
 		skirtStateFront: {
 			type: 'typed',
 			name: 'Skirt State Front',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'normal',
@@ -112,7 +107,6 @@ DefineAsset({
 		skirtStateBack: {
 			type: 'typed',
 			name: 'Skirt State Back',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'normal',

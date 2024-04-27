@@ -27,7 +27,6 @@ DefineAsset({
 		hair: {
 			type: 'typed',
 			name: 'Pubic Hair',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'noHair',
@@ -56,7 +55,6 @@ DefineAsset({
 			name: 'Vulva',
 			expression: 'Vulva',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'normal',

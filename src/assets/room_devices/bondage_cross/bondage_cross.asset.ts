@@ -37,7 +37,7 @@ DefineRoomDeviceAsset({
 		chains: {
 			type: 'typed',
 			name: 'Chains',
-			assetSpecific: { slotName: 'character_slot' },
+			staticConfig: { slotName: 'character_slot' },
 			variants: [
 				{
 					id: 'none',
@@ -194,7 +194,7 @@ DefineRoomDeviceAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Chain locks',
-			assetSpecific: { slotName: 'character_slot' },
+			staticConfig: { slotName: 'character_slot' },
 			lockedProperties: {
 				blockModules: ['chains'],
 			},

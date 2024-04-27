@@ -20,7 +20,6 @@ DefineAsset({
 		legTies: {
 			type: 'typed',
 			name: 'Leg Ties',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'basic',

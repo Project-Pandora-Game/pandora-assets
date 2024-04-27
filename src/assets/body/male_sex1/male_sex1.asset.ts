@@ -28,7 +28,6 @@ DefineAsset({
 			name: 'Penis',
 			expression: 'Penis',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'flaccid',

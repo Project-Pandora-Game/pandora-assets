@@ -32,7 +32,6 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			assetSpecific: undefined,
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
@@ -41,7 +40,6 @@ DefineAsset({
 			type: 'typed',
 			name: 'Gag Type',
 			interactionType: ItemInteractionType.ADD_REMOVE,
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'standard',

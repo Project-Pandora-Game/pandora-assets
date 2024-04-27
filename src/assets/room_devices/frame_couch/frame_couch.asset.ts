@@ -84,7 +84,7 @@ DefineRoomDeviceAsset({
 		ropes: {
 			type: 'typed',
 			name: 'Frame ropes',
-			assetSpecific: { slotName: 'character_slot_top' },
+			staticConfig: { slotName: 'character_slot_top' },
 			variants: [
 				{
 					id: 'none',

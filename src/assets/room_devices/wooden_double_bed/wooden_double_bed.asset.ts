@@ -63,7 +63,7 @@ DefineRoomDeviceAsset({
 		ropes_left: {
 			type: 'typed',
 			name: 'Bed ropes - left side',
-			assetSpecific: { slotName: 'character_slot_left' },
+			staticConfig: { slotName: 'character_slot_left' },
 			variants: [
 				{
 					id: 'none',
@@ -217,7 +217,7 @@ DefineRoomDeviceAsset({
 		ropes_right: {
 			type: 'typed',
 			name: 'Bed ropes - right side',
-			assetSpecific: { slotName: 'character_slot_right' },
+			staticConfig: { slotName: 'character_slot_right' },
 			variants: [
 				{
 					id: 'none',

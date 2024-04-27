@@ -38,7 +38,6 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			assetSpecific: undefined,
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
@@ -46,7 +45,6 @@ DefineAsset({
 		straponLock: {
 			type: 'lockSlot',
 			name: 'Strapon Lock',
-			assetSpecific: undefined,
 			occupiedProperties: {
 				blockModules: ['strapons'],
 			},
@@ -54,7 +52,6 @@ DefineAsset({
 		strapons: {
 			type: 'typed',
 			name: 'Strapons',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'none',
@@ -83,7 +80,6 @@ DefineAsset({
 			type: 'typed',
 			name: 'Panties Base Color',
 			interactionType: ItemInteractionType.STYLING,
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'black',

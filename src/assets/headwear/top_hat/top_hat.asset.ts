@@ -27,7 +27,6 @@ DefineAsset({
 			type: 'typed',
 			name: 'Hat Type',
 			interactionType: ItemInteractionType.ADD_REMOVE,
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'high',
@@ -48,7 +47,6 @@ DefineAsset({
 			type: 'typed',
 			name: 'Hat Base Color',
 			interactionType: ItemInteractionType.STYLING,
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'black',
@@ -64,7 +62,6 @@ DefineAsset({
 		hair: {
 			type: 'typed',
 			name: 'Hide Hair',
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'no',

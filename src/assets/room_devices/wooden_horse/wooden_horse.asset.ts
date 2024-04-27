@@ -43,7 +43,7 @@ DefineRoomDeviceAsset({
 		position: {
 			type: 'typed',
 			name: 'Position',
-			assetSpecific: { slotName: 'character_slot' },
+			staticConfig: { slotName: 'character_slot' },
 			variants: [
 				{
 					id: 'none',
@@ -127,7 +127,7 @@ DefineRoomDeviceAsset({
 		leg_chain: {
 			type: 'typed',
 			name: 'Feet chains',
-			assetSpecific: { slotName: 'character_slot' },
+			staticConfig: { slotName: 'character_slot' },
 			variants: [
 				{
 					id: 'none',
@@ -294,7 +294,7 @@ DefineRoomDeviceAsset({
 		collar_chain: {
 			type: 'typed',
 			name: 'Collar chain',
-			assetSpecific: { slotName: 'character_slot' },
+			staticConfig: { slotName: 'character_slot' },
 			variants: [
 				{
 					id: 'none',
@@ -325,7 +325,7 @@ DefineRoomDeviceAsset({
 		weights: {
 			type: 'typed',
 			name: 'Weight type',
-			assetSpecific: { slotName: 'character_slot' },
+			staticConfig: { slotName: 'character_slot' },
 			variants: [
 				{
 					id: 'iron',
@@ -340,7 +340,7 @@ DefineRoomDeviceAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Chain locks',
-			assetSpecific: { slotName: 'character_slot' },
+			staticConfig: { slotName: 'character_slot' },
 			lockedProperties: {
 				blockModules: ['leg_chain', 'collar_chain', 'weights'],
 			},

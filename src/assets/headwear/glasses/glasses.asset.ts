@@ -29,7 +29,6 @@ DefineAsset({
 			type: 'typed',
 			name: 'Wearing style',
 			interactionType: ItemInteractionType.ADD_REMOVE,
-			assetSpecific: undefined,
 			variants: [
 				{
 					id: 'normal',
