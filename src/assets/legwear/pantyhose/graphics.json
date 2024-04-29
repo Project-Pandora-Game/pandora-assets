@@ -152,30 +152,6 @@
 								}
 							]
 						]
-					},
-					{
-						"image": "pantyhose_b_ripped.png",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "between"
-								}
-							]
-						]
-					},
-					{
-						"image": "pantyhose_b_ripped_full.png",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "fully"
-								}
-							]
-						]
 					}
 				]
 			},
