@@ -98,7 +98,10 @@
 						"condition": [
 							[
 								{
-									"view": "front"
+										"module": "stockingState",
+										"operator": "!=",
+										"value": "seam"
+
 								}
 							]
 						]

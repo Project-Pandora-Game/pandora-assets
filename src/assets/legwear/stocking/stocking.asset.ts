@@ -9,6 +9,10 @@ DefineAsset({
 			default: '#584747',
 			minAlpha: 0.6,
 		},
+		seams: {
+			name: 'Seams',
+			default: '#766060',
+		},
 	},
 	// size:600, y:763, centered
 	preview: 'preview.png',
@@ -28,8 +32,8 @@ DefineAsset({
 					default: true,
 				},
 				{
-					id: 'seams',
-					name: 'Seams',
+					id: 'seam',
+					name: 'Seams on the back',
 				},
 			],
 		},

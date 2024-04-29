@@ -146,7 +146,9 @@
 						"condition": [
 							[
 								{
-									"view": "front"
+									"module": "pantiesState",
+									"operator": "!=",
+									"value": "seam"
 								}
 							]
 						]
