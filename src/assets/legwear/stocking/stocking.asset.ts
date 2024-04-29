@@ -17,6 +17,23 @@ DefineAsset({
 			'Legwear',
 		],
 	},
+	modules: {
+		stockingState: {
+			type: 'typed',
+			name: 'Stocking State',
+			variants: [
+				{
+					id: 'normal',
+					name: 'Normal',
+					default: true,
+				},
+				{
+					id: 'seams',
+					name: 'Seams',
+				},
+			],
+		},
+	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],
@@ -30,12 +47,20 @@ DefineAsset({
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 			{
-				part: 'stocking end pattern',
+				part: 'stocking and pattern',
 				source: 'https://www.flickr.com/photos/61470346@N04/6259911046',
 				copyrightHolder: 'Maria',
 				editedBy: 'ClaudiaMia',
 				license: 'CC BY-SA',
 			},
+			{
+				part: 'Seam',
+				source: 'Self-Made',
+				copyrightHolder: 'Naera',
+				editedBy: 'Sandrine',
+				license: 'Pandora-Use-Only-v1-or-later',
+			},
+
 		],
 	},
 });
