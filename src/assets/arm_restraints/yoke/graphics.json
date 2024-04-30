@@ -123,7 +123,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"priority": "BELOW_ARM_LEFT",
+			"priority": "BELOW_BODY",
 			"points": "body",
 			"pointType": [
 				"bodyarm_l",

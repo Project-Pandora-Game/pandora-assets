@@ -5,7 +5,11 @@ DefineAsset({
 	colorization: {
 		shoes: {
 			name: 'Shoes',
-			default: '#D2042D',
+			default: '#000000',
+		},
+		shoesHighlights: {
+			name: 'Shoes Highlights',
+			default: '#FFFFFF',
 		},
 	},
 	// size:240, y:1143, centered

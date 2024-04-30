@@ -16,8 +16,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 35,
-					"y": -230
+					"x": 20,
+					"y": -360
 				},
 				"condition": [
 					[
@@ -57,7 +57,7 @@
 				"type": "const-shift",
 				"value": {
 					"x": 15,
-					"y": -230
+					"y": -360
 				},
 				"condition": [
 					[
@@ -81,8 +81,8 @@
 	},
 	{
 		"pos": [
-			501,
-			1258
+			505,
+			1259
 		],
 		"transforms": [
 			{
@@ -96,8 +96,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 15,
-					"y": -230
+					"x": 10,
+					"y": -360
 				},
 				"condition": [
 					[
@@ -136,8 +136,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 35,
-					"y": -230
+					"x": 20,
+					"y": -360
 				},
 				"condition": [
 					[
@@ -176,8 +176,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 15,
-					"y": -230
+					"x": 5,
+					"y": -360
 				},
 				"condition": [
 					[
