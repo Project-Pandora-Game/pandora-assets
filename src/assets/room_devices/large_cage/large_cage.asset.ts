@@ -87,6 +87,7 @@ DefineRoomDeviceAsset({
 		anchor_left: {
 			type: 'typed',
 			name: 'Left cage spot',
+			staticConfig: { slotName: 'character_slot_left' },
 			variants: [
 				{
 					id: 'free_left',
@@ -105,7 +106,7 @@ DefineRoomDeviceAsset({
 		lock_left: {
 			type: 'lockSlot',
 			name: 'Left floor anchor lock',
-			staticConfig: { slotName: null },
+			staticConfig: { slotName: 'character_slot_left' },
 			lockedProperties: {
 				blockModules: ['anchor_left'],
 			},
@@ -113,6 +114,7 @@ DefineRoomDeviceAsset({
 		anchor_middle: {
 			type: 'typed',
 			name: 'Middle cage spot',
+			staticConfig: { slotName: 'character_slot_middle' },
 			variants: [
 				{
 					id: 'free_mid',
@@ -131,6 +133,7 @@ DefineRoomDeviceAsset({
 		lock_middle: {
 			type: 'lockSlot',
 			name: 'Middle floor anchor lock',
+			staticConfig: { slotName: 'character_slot_middle' },
 			lockedProperties: {
 				blockModules: ['anchor_middle'],
 			},
@@ -138,6 +141,7 @@ DefineRoomDeviceAsset({
 		anchor_right: {
 			type: 'typed',
 			name: 'Right cage spot',
+			staticConfig: { slotName: 'character_slot_right' },
 			variants: [
 				{
 					id: 'free_right',
@@ -156,6 +160,7 @@ DefineRoomDeviceAsset({
 		lock_right: {
 			type: 'lockSlot',
 			name: 'Right floor anchor lock',
+			staticConfig: { slotName: 'character_slot_right' },
 			lockedProperties: {
 				blockModules: ['anchor_right'],
 			},
