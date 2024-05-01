@@ -8,11 +8,13 @@ import {
 	ModuleNameSchema,
 	SCHEME_OVERRIDE,
 } from 'pandora-common';
-import { DefinePngResource } from './resources';
+import { DefineImageResource } from './resources';
 import { readFileSync } from 'fs';
 import { GraphicsDatabase } from './graphicsDatabase';
 import { WatchFile } from './watch';
 import { z } from 'zod';
+
+export const GENERATED_RESOLUTIONS: readonly number[] = [0.5, 0.25];
 
 export function LoadAssetsGraphics(path: string, assetModules: readonly string[]): AssetGraphicsDefinition {
 	WatchFile(path);
@@ -48,21 +50,31 @@ export function LoadAssetsGraphics(path: string, assetModules: readonly string[]
 	};
 }
 
+function LoadLayerImage(image: string): string {
+	const resource = DefineImageResource(image, 'asset', 'png');
+
+	for (const resolution of GENERATED_RESOLUTIONS) {
+		resource.addDownscaledImage(resolution);
+	}
+
+	return resource.resultName;
+}
+
 function LoadLayerImageSetting(setting: LayerImageSetting): LayerImageSetting {
 	const overrides: LayerImageOverride[] = setting.overrides
 		.map((override) => ({
 			...override,
-			image: override.image && DefinePngResource(override.image, 'asset'),
+			image: override.image && LoadLayerImage(override.image),
 		}));
 	const alphaOverrides: LayerImageOverride[] | undefined = setting.alphaOverrides
 		?.map((override) => ({
 			...override,
-			image: override.image && DefinePngResource(override.image, 'asset'),
+			image: override.image && LoadLayerImage(override.image),
 		}));
 	return {
 		...setting,
-		image: setting.image && DefinePngResource(setting.image, 'asset'),
-		alphaImage: setting.alphaImage && DefinePngResource(setting.alphaImage, 'asset'),
+		image: setting.image && LoadLayerImage(setting.image),
+		alphaImage: setting.alphaImage && LoadLayerImage(setting.alphaImage),
 		overrides,
 		alphaOverrides,
 	};

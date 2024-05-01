@@ -50,27 +50,39 @@ export function SetResourceDestinationDirectory(path: string): void {
 
 export abstract class Resource {
 	public readonly resultName: string;
+	public readonly baseName: string;
+	public readonly extension: string;
+
 	public readonly size: number;
 	public readonly hash: string;
+	private _processes: (() => Promise<void>)[] = [];
 
 	constructor(resultName: string, size: number, hash: string) {
 		this.resultName = resultName;
+		this.baseName = resultName.replace(/\.[^.]*$/, '');
+		this.extension = resultName.replace(/^.*\.([^.]+)$/, '$1');
 		this.size = size;
 		this.hash = hash;
 		resources.push(this);
 	}
 
-	public abstract getProcesses(): readonly (() => Promise<void>)[];
+	protected addProcess(process: (() => Promise<void>)): void {
+		this._processes.push(process);
+	}
+
+	public getProcesses(): readonly (() => Promise<void>)[] {
+		return this._processes;
+	}
 }
 
 export interface IImageResource extends Resource {
-	addResizedImage(maxWidth: number, maxHeight: number, suffix: string): string;
+	addResizedImage(maxWidth: number, maxHeight: number, suffix: string): IImageResource;
+	addDownscaledImage(resolution: number): string;
+	addSizeCheck(exactWidth: number, exactHeight: number): void;
+	loadImageSharp(): Sharp | Promise<Sharp>;
 }
 
 class FileResource extends Resource {
-	private _process: (() => Promise<void>)[] = [];
-	protected readonly baseName: string;
-	protected readonly extension: string;
 	protected readonly sourcePath: string;
 
 	constructor(path: string) {
@@ -87,8 +99,6 @@ class FileResource extends Resource {
 		super(resultName, size, hash);
 
 		this.sourcePath = sourcePath;
-		this.baseName = resultName.replace(/\.[^.]*$/, '');
-		this.extension = resultName.replace(/^.*\.([^.]+)$/, '$1');
 
 		WatchFile(sourcePath);
 
@@ -112,14 +122,6 @@ class FileResource extends Resource {
 			}
 		});
 	}
-
-	protected addProcess(process: (() => Promise<void>)): void {
-		this._process.push(process);
-	}
-
-	public override getProcesses(): readonly (() => Promise<void>)[] {
-		return this._process;
-	}
 }
 
 class InlineResource extends Resource {
@@ -128,6 +130,7 @@ class InlineResource extends Resource {
 	constructor(resultName: string, hash: string, value: Buffer) {
 		super(resultName, value.byteLength, hash);
 		this.value = value;
+		this.addProcess(() => this._process());
 	}
 
 	private _process(): Promise<void> {
@@ -137,11 +140,9 @@ class InlineResource extends Resource {
 		resourceFiles.add(this.resultName);
 		return writeFile(join(destinationDirectory, this.resultName), this.value);
 	}
-
-	public override getProcesses(): readonly (() => Promise<void>)[] {
-		return [() => this._process()];
-	}
 }
+
+type SharpImageGenerator = (sharp: Sharp) => Sharp | Promise<Sharp>;
 
 class ImageResource extends FileResource implements IImageResource {
 	constructor(path: string, category: ImageCategory) {
@@ -150,10 +151,28 @@ class ImageResource extends FileResource implements IImageResource {
 		this._addAVIFConversion('', (s) => s);
 	}
 
-	public addResizedImage(maxWidth: number, maxHeight: number, suffix: string): string {
-		this._addAVIFConversion(`_${suffix}`, (s) => s.resize(maxWidth, maxHeight));
+	public addResizedImage(maxWidth: number, maxHeight: number, suffix: string): IImageResource {
+		return new GeneratedImageResource(this, `_${suffix}`, (s) => s.resize(maxWidth, maxHeight));
+	}
 
-		const name = `${this.baseName}_${suffix}.${this.extension}`;
+	public addDownscaledImage(resolution: number): string {
+		const process: SharpImageGenerator = async (s) => {
+			const meta = await s.metadata();
+			Assert(meta.width != null, 'Failed to get image width');
+			Assert(meta.height != null, 'Failed to get image height');
+
+			return s
+				.resize(Math.ceil(resolution * meta.width), Math.ceil(resolution * meta.height), {
+					fit: 'fill',
+					kernel: 'lanczos3',
+					fastShrinkOnLoad: false,
+				})
+				.sharpen();
+		};
+
+		this._addAVIFConversion(`_r${resolution}`, process);
+
+		const name = `${this.baseName}_r${resolution}.${this.extension}`;
 		if (resourceFiles.has(name))
 			return name;
 
@@ -165,8 +184,7 @@ class ImageResource extends FileResource implements IImageResource {
 			if (await IsFile(dest))
 				return;
 
-			await sharp(this.sourcePath)
-				.resize(maxWidth, maxHeight)
+			await (await process(this.loadImageSharp()))
 				.toFile(dest);
 		});
 		return name;
@@ -174,14 +192,14 @@ class ImageResource extends FileResource implements IImageResource {
 
 	public addSizeCheck(exactWidth: number, exactHeight: number): void {
 		this.addProcess(async () => {
-			const { width, height } = await sharp(this.sourcePath).metadata();
+			const { width, height } = await this.loadImageSharp().metadata();
 			if (width !== exactWidth || height !== exactHeight) {
 				logger.warning(`Image '${this.sourcePath}' has size ${width}x${height}, expected ${exactWidth}x${exactHeight}.`);
 			}
 		});
 	}
 
-	private _addAVIFConversion(suffix: string, process: (s: Sharp) => Sharp): void {
+	private _addAVIFConversion(suffix: string, process: SharpImageGenerator): void {
 		if (!GENERATE_AVIF)
 			return;
 
@@ -195,10 +213,115 @@ class ImageResource extends FileResource implements IImageResource {
 			if (await IsFile(dest))
 				return;
 
-			await process(sharp(this.sourcePath))
+			await (await process(this.loadImageSharp()))
 				.toFormat('avif', AVIF_OPTIONS)
 				.toFile(dest);
 		});
+	}
+
+	public loadImageSharp(): Sharp {
+		return sharp(this.sourcePath);
+	}
+}
+
+class GeneratedImageResource extends Resource implements IImageResource {
+	private readonly _baseImage: IImageResource;
+	private readonly _generator: SharpImageGenerator;
+
+	constructor(baseImage: IImageResource, suffix: string, generator: SharpImageGenerator) {
+		super(baseImage.baseName + suffix + baseImage.extension, baseImage.size, baseImage.hash);
+		this._baseImage = baseImage;
+		this._generator = generator;
+
+		// Base export
+
+		if (!resourceFiles.has(this.resultName)) {
+			// Prevent the generated source from being deleted
+			resourceFiles.add(this.resultName);
+
+			this.addProcess(async () => {
+				const dest = join(destinationDirectory, this.resultName);
+				if (await IsFile(dest))
+					return;
+
+				const result = await generator(await this.loadImageSharp());
+				await result.toFile(dest);
+			});
+		}
+
+		this._addAVIFConversion('', (s) => s);
+	}
+
+	public addResizedImage(maxWidth: number, maxHeight: number, suffix: string): IImageResource {
+		return new GeneratedImageResource(this, `_${suffix}`, (s) => s.resize(maxWidth, maxHeight));
+	}
+
+	public addDownscaledImage(resolution: number): string {
+		const process = async (s: Sharp): Promise<Sharp> => {
+			const meta = await s.metadata();
+			Assert(meta.width != null, 'Failed to get image width');
+			Assert(meta.height != null, 'Failed to get image height');
+
+			return s
+				.resize(Math.ceil(resolution * meta.width), Math.ceil(resolution * meta.height), {
+					fit: 'fill',
+					kernel: 'lanczos3',
+					fastShrinkOnLoad: false,
+				})
+				.sharpen();
+		};
+
+		this._addAVIFConversion(`_r${resolution}`, process);
+
+		const name = `${this.baseName}_r${resolution}.${this.extension}`;
+		if (resourceFiles.has(name))
+			return name;
+
+		// Prevent the generated source from being deleted
+		resourceFiles.add(name);
+
+		this.addProcess(async () => {
+			const dest = join(destinationDirectory, name);
+			if (await IsFile(dest))
+				return;
+
+			await (await process(await this.loadImageSharp()))
+				.toFile(dest);
+		});
+		return name;
+	}
+
+	public addSizeCheck(exactWidth: number, exactHeight: number): void {
+		this.addProcess(async () => {
+			const { width, height } = await (await this.loadImageSharp()).metadata();
+			if (width !== exactWidth || height !== exactHeight) {
+				logger.warning(`Image '${this.resultName}' has size ${width}x${height}, expected ${exactWidth}x${exactHeight}.`);
+			}
+		});
+	}
+
+	private _addAVIFConversion(suffix: string, process: SharpImageGenerator): void {
+		if (!GENERATE_AVIF)
+			return;
+
+		const name = `${this.baseName}${suffix}_${AVIF_SUFFIX}.avif`;
+		if (resourceFiles.has(name))
+			return;
+
+		resourceFiles.add(name);
+		this.addProcess(async () => {
+			const dest = join(destinationDirectory, name);
+			if (await IsFile(dest))
+				return;
+
+			await (await process(await this.loadImageSharp()))
+				.toFormat('avif', AVIF_OPTIONS)
+				.toFile(dest);
+		});
+	}
+
+	public async loadImageSharp(): Promise<Sharp> {
+		return await this._generator(await this._baseImage.loadImageSharp());
 	}
 }
 
@@ -247,9 +370,7 @@ function CheckMaxSize(resource: Resource, name: string, category: ImageCategory)
 	}
 }
 
-export function ProcessImageResource(resource: IImageResource, args: string = ''): string {
-	let resultName = resource.resultName;
-
+export function ProcessImageResource(resource: IImageResource, args: string = ''): IImageResource {
 	if (args) {
 		const resizeMatch = /^(\d+)x(\d+)$/.exec(args);
 		if (resizeMatch) {
@@ -258,35 +379,29 @@ export function ProcessImageResource(resource: IImageResource, args: string = ''
 			Assert(Number.isInteger(sizeX));
 			Assert(Number.isInteger(sizeY));
 
-			resultName = resource.addResizedImage(sizeX, sizeY, args);
+			return resource.addResizedImage(sizeX, sizeY, args);
 		} else {
 			throw new Error(`Invalid arguments '${args}' for resource.`);
 		}
 	}
 
-	return resultName;
-}
-
-export function DefineImageResource(name: string, category: ImageCategory, expectedFormat: 'png' | 'jpg'): ImageResource {
-	if (!name.endsWith('.' + expectedFormat)) {
-		throw new Error(`Resource ${name} is not a ${expectedFormat.toUpperCase()} file.`);
-	}
-
-	const resource = new ImageResource(name, category);
-
 	return resource;
 }
 
-export function DefinePngResource(name: string, category: ImageCategory): string {
+export function DefineImageResource(name: string, category: ImageCategory, expectedFormat: 'png' | 'jpg'): IImageResource {
 	const [baseName, args] = SplitStringFirstOccurrence(name, '@');
 
-	if (!baseName.endsWith('.png')) {
-		throw new Error(`Resource ${name} is not a PNG file.`);
+	if (!baseName.endsWith('.' + expectedFormat)) {
+		throw new Error(`Resource ${name} is not a ${expectedFormat.toUpperCase()} file.`);
 	}
 
 	const resource = new ImageResource(baseName, category);
 
 	return ProcessImageResource(resource, args);
+}
+
+export function DefinePngResource(name: string, category: ImageCategory): string {
+	return DefineImageResource(name, category, 'png').resultName;
 }
 
 export function DefineJpgResource(name: string, category: ImageCategory): string {
@@ -301,7 +416,7 @@ export function DefineJpgResource(name: string, category: ImageCategory): string
 		resource.addSizeCheck(PREVIEW_SIZE, PREVIEW_SIZE);
 	}
 
-	return ProcessImageResource(resource, args);
+	return ProcessImageResource(resource, args).resultName;
 }
 
 export function ClearAllResources(): void {

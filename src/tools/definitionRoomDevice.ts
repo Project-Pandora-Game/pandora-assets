@@ -3,11 +3,11 @@ import { AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceM
 import { join } from 'path';
 import { AssetDatabase } from './assetDatabase';
 import { AssetSourcePath, DefaultId } from './context';
-import { LoadAssetsGraphics } from './graphics';
+import { GENERATED_RESOLUTIONS, LoadAssetsGraphics } from './graphics';
 import { GraphicsDatabase } from './graphicsDatabase';
 import { ValidateOwnershipData } from './licensing';
 import { LoadRoomDeviceColorization } from './load_helpers/color';
-import { DefinePngResource, PREVIEW_SIZE } from './resources';
+import { DefineImageResource, DefinePngResource, PREVIEW_SIZE } from './resources';
 import { ValidateAllModules } from './validation/modules';
 import { ValidateAssetProperties } from './validation/properties';
 import { RoomDevicePropertiesValidationMetadata, ValidateRoomDeviceProperties } from './validation/roomDeviceProperties';
@@ -180,13 +180,23 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 		logger.error(`Invalid color ribbon group: It must match one of the colorization groups.`);
 	}
 
+	function loadLayerImage(image: string): string {
+		const resource = DefineImageResource(image, 'roomDevice', 'png');
+
+		for (const resolution of GENERATED_RESOLUTIONS) {
+			resource.addDownscaledImage(resolution);
+		}
+
+		return resource.resultName;
+	}
+
 	def.graphicsLayers.forEach((layer, index) => {
 		if (layer.type === 'sprite') {
-			layer.image = layer.image && DefinePngResource(layer.image, 'roomDevice');
+			layer.image = layer.image && loadLayerImage(layer.image);
 			layer.imageOverrides = layer.imageOverrides
 				?.map((override) => ({
 					...override,
-					image: override.image && DefinePngResource(override.image, 'roomDevice'),
+					image: override.image && loadLayerImage(override.image),
 				}));
 
 			if (layer.colorizationKey != null && !colorizationKeys.has(layer.colorizationKey)) {
