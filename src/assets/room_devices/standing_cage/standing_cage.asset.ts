@@ -30,6 +30,7 @@ DefineRoomDeviceAsset({
 		door: {
 			type: 'typed',
 			name: 'Door',
+			staticConfig: { slotName: 'character_slot' },
 			variants: [
 				{
 					id: 'open',
@@ -49,6 +50,7 @@ DefineRoomDeviceAsset({
 		position: {
 			type: 'typed',
 			name: 'Standing position',
+			staticConfig: { slotName: 'character_slot' },
 			variants: [
 				{
 					id: 'front',
@@ -86,6 +88,7 @@ DefineRoomDeviceAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Door lock',
+			staticConfig: { slotName: 'character_slot' },
 			lockedProperties: {
 				blockModules: ['door'],
 			},

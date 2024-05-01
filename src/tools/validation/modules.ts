@@ -17,22 +17,22 @@ interface ModuleValidationMetadata<TProperties, TPropertiesValidationMetadata> {
 	propertiesValidationMetadata: TPropertiesValidationMetadata;
 }
 
-export function ValidateAllModules<TProperties, TPropertiesValidationMetadata>(
+export function ValidateAllModules<TProperties, TStaticData, TPropertiesValidationMetadata>(
 	logger: Logger,
 	context: string,
 	metadata: ModuleValidationMetadata<TProperties, TPropertiesValidationMetadata>,
-	modules: Record<string, AssetModuleDefinition<TProperties>> | undefined,
+	modules: Record<string, AssetModuleDefinition<TProperties, TStaticData>> | undefined,
 ): void {
 	for (const [k, v] of Object.entries(modules ?? {})) {
 		ValidateModule(logger, `${context}.${k}`, metadata, v);
 	}
 }
 
-export function ValidateModule<TProperties, TPropertiesValidationMetadata>(
+export function ValidateModule<TProperties, TStaticData, TPropertiesValidationMetadata>(
 	logger: Logger,
 	context: string,
 	metadata: ModuleValidationMetadata<TProperties, TPropertiesValidationMetadata>,
-	moduleDefinition: AssetModuleDefinition<TProperties>,
+	moduleDefinition: AssetModuleDefinition<TProperties, TStaticData>,
 ): void {
 	if (moduleDefinition.type === 'typed') {
 		ValidateTypedModule(logger, context, metadata, moduleDefinition);
@@ -45,11 +45,11 @@ export function ValidateModule<TProperties, TPropertiesValidationMetadata>(
 	}
 }
 
-export function ValidateTypedModule<TProperties, TPropertiesValidationMetadata>(
+export function ValidateTypedModule<TProperties, TStaticData, TPropertiesValidationMetadata>(
 	logger: Logger,
 	context: string,
 	metadata: ModuleValidationMetadata<TProperties, TPropertiesValidationMetadata>,
-	moduleDefinition: IModuleConfigTyped<TProperties>,
+	moduleDefinition: IModuleConfigTyped<TProperties, TStaticData>,
 ): void {
 	const seenIds = new Set<string>();
 
@@ -90,11 +90,11 @@ export function ValidateTypedModule<TProperties, TPropertiesValidationMetadata>(
 	}
 }
 
-export function ValidateLockSlotModule<TProperties, TPropertiesValidationMetadata>(
+export function ValidateLockSlotModule<TProperties, TStaticData, TPropertiesValidationMetadata>(
 	logger: Logger,
 	context: string,
 	metadata: ModuleValidationMetadata<TProperties, TPropertiesValidationMetadata>,
-	moduleDefinition: IModuleConfigLockSlot<TProperties>,
+	moduleDefinition: IModuleConfigLockSlot<TProperties, TStaticData>,
 ): void {
 	if (moduleDefinition.emptyProperties !== undefined) {
 		metadata.validateProperties(logger, `${context}.emptyProperties`, metadata.propertiesValidationMetadata, moduleDefinition.emptyProperties);
@@ -107,11 +107,11 @@ export function ValidateLockSlotModule<TProperties, TPropertiesValidationMetadat
 	}
 }
 
-export function ValidateStorageModule<TProperties, TPropertiesValidationMetadata>(
+export function ValidateStorageModule<TProperties, TStaticData, TPropertiesValidationMetadata>(
 	logger: Logger,
 	context: string,
 	metadata: ModuleValidationMetadata<TProperties, TPropertiesValidationMetadata>,
-	moduleDefinition: IModuleConfigStorage,
+	moduleDefinition: IModuleConfigStorage<TProperties, TStaticData>,
 ): void {
 	if (!Number.isInteger(moduleDefinition.maxCount) || moduleDefinition.maxCount < 1) {
 		logger.error(`Invalid module config: ${context}.maxCount: Expected positive integer, found '${moduleDefinition.maxCount}'`);

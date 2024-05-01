@@ -1,15 +1,15 @@
-import { AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition } from 'pandora-common';
+import { pick } from 'lodash';
+import { AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition } from 'pandora-common';
+import { join } from 'path';
 import { AssetDatabase } from './assetDatabase';
 import { AssetSourcePath, DefaultId } from './context';
 import { LoadAssetsGraphics } from './graphics';
 import { GraphicsDatabase } from './graphicsDatabase';
-import { join } from 'path';
-import { pick } from 'lodash';
-import { DefinePngResource, PREVIEW_SIZE } from './resources';
-import { LoadRoomDeviceColorization } from './load_helpers/color';
 import { ValidateOwnershipData } from './licensing';
-import { ValidateAssetProperties } from './validation/properties';
+import { LoadRoomDeviceColorization } from './load_helpers/color';
+import { DefinePngResource, PREVIEW_SIZE } from './resources';
 import { ValidateAllModules } from './validation/modules';
+import { ValidateAssetProperties } from './validation/properties';
 import { RoomDevicePropertiesValidationMetadata, ValidateRoomDeviceProperties } from './validation/roomDeviceProperties';
 
 const ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHROUGH_PROPERTIES = [
@@ -218,11 +218,20 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 	};
 
 	// Validate all modules
-	ValidateAllModules<RoomDeviceProperties<AssetRepoExtraArgs>, RoomDevicePropertiesValidationMetadata>(logger, '#.modules', {
+	ValidateAllModules<RoomDeviceProperties<AssetRepoExtraArgs>, RoomDeviceModuleStaticData, RoomDevicePropertiesValidationMetadata>(logger, '#.modules', {
 		baseAssetDefinition: asset,
 		validateProperties: ValidateRoomDeviceProperties,
 		propertiesValidationMetadata,
 	}, def.modules);
+
+	for (const module of Object.values(def.modules ?? {})) {
+		if (module.staticConfig.slotName == null) {
+			continue;
+		}
+		if (!slotIds.has(module.staticConfig.slotName)) {
+			logger.error(`Module '${module.name}' references unknown slot '${module.staticConfig.slotName}'`);
+		}
+	}
 
 	// Validate ownership data
 	ValidateOwnershipData(def.ownership, logger, true);
