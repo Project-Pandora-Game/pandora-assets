@@ -23,7 +23,7 @@ DefineRoomDeviceAsset({
 					bones: {
 						leg_r: [[-30, 10]],
 						leg_l: [[-30, 10]],
-						character_rotation: [[-10, -10]],
+						character_rotation: [[-10, 10]],
 					},
 					legs: 'kneeling',
 				},
@@ -38,7 +38,7 @@ DefineRoomDeviceAsset({
 					bones: {
 						leg_r: [[-30, 10]],
 						leg_l: [[-30, 10]],
-						character_rotation: [[-10, -10]],
+						character_rotation: [[-10, 10]],
 					},
 					legs: 'kneeling',
 				},
@@ -53,7 +53,7 @@ DefineRoomDeviceAsset({
 					bones: {
 						leg_r: [[-30, 10]],
 						leg_l: [[-30, 10]],
-						character_rotation: [[-10, -10]],
+						character_rotation: [[-10, 10]],
 					},
 					legs: 'kneeling',
 				},
@@ -64,6 +64,7 @@ DefineRoomDeviceAsset({
 		door: {
 			type: 'typed',
 			name: 'Door',
+			staticConfig: { slotName: null },
 			variants: [
 				{
 					id: 'open',
@@ -83,16 +84,91 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
-		lock: {
+		anchor_left: {
+			type: 'typed',
+			name: 'Left cage spot',
+			staticConfig: { slotName: 'character_slot_left' },
+			variants: [
+				{
+					id: 'free_left',
+					name: 'Free',
+					default: true,
+				},
+				{
+					id: 'tied_left',
+					name: 'Anchored to the floor',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_left'],
+					},
+				},
+			],
+		},
+		lock_left: {
 			type: 'lockSlot',
-			name: 'Door lock',
+			name: 'Left floor anchor lock',
+			staticConfig: { slotName: 'character_slot_left' },
 			lockedProperties: {
-				blockModules: ['door'],
+				blockModules: ['anchor_left'],
+			},
+		},
+		anchor_middle: {
+			type: 'typed',
+			name: 'Middle cage spot',
+			staticConfig: { slotName: 'character_slot_middle' },
+			variants: [
+				{
+					id: 'free_mid',
+					name: 'Free',
+					default: true,
+				},
+				{
+					id: 'tied_mid',
+					name: 'Anchored to the floor',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_middle'],
+					},
+				},
+			],
+		},
+		lock_middle: {
+			type: 'lockSlot',
+			name: 'Middle floor anchor lock',
+			staticConfig: { slotName: 'character_slot_middle' },
+			lockedProperties: {
+				blockModules: ['anchor_middle'],
+			},
+		},
+		anchor_right: {
+			type: 'typed',
+			name: 'Right cage spot',
+			staticConfig: { slotName: 'character_slot_right' },
+			variants: [
+				{
+					id: 'free_right',
+					name: 'Free',
+					default: true,
+				},
+				{
+					id: 'tied_right',
+					name: 'Anchored to the floor',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_right'],
+					},
+				},
+			],
+		},
+		lock_right: {
+			type: 'lockSlot',
+			name: 'Right floor anchor lock',
+			staticConfig: { slotName: 'character_slot_right' },
+			lockedProperties: {
+				blockModules: ['anchor_right'],
 			},
 		},
 		storage: {
 			type: 'storage',
 			name: `Cage's floor`,
+			staticConfig: { slotName: null },
 			maxAcceptedSize: 'large',
 			maxCount: 5,
 		},

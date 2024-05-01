@@ -30,6 +30,7 @@ DefineRoomDeviceAsset({
 		type: {
 			type: 'typed',
 			name: 'Type of plant',
+			staticConfig: { slotName: null },
 			variants: [
 				{
 					id: 'rose',
@@ -49,6 +50,7 @@ DefineRoomDeviceAsset({
 		size: {
 			type: 'typed',
 			name: 'Plant size',
+			staticConfig: { slotName: null },
 			variants: [
 				{
 					id: 'normal',

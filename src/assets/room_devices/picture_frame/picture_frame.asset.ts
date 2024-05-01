@@ -18,6 +18,7 @@ DefineRoomDeviceAsset({
 		frame: {
 			type: 'typed',
 			name: 'Frame',
+			staticConfig: { slotName: null },
 			variants: [
 				{
 					id: 'frame1',
@@ -33,6 +34,7 @@ DefineRoomDeviceAsset({
 		pp: {
 			type: 'typed',
 			name: 'Passe-partout',
+			staticConfig: { slotName: null },
 			variants: [
 				{
 					id: 'pp1',
@@ -48,6 +50,7 @@ DefineRoomDeviceAsset({
 		picture: {
 			type: 'typed',
 			name: 'Picture',
+			staticConfig: { slotName: null },
 			variants: [
 				{
 					id: 'pandora',
@@ -75,6 +78,7 @@ DefineRoomDeviceAsset({
 		size: {
 			type: 'typed',
 			name: 'Frame size',
+			staticConfig: { slotName: null },
 			variants: [
 				{
 					id: 'large',
