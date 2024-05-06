@@ -39,7 +39,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "ABOVE_BODY",
-			"points": "shirt",
+			"points": "body",
 			"pointType": [
 				"body",
 				"bodyarm"
@@ -84,7 +84,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "ABOVE_BODY",
-			"points": "shirt",
+			"points": "body",
 			"pointType": [
 				"body",
 				"bodyarm"
@@ -129,7 +129,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "ABOVE_ARM_LEFT",
-			"points": "shirt",
+			"points": "body",
 			"pointType": [
 				"bodyarm_l",
 				"arm_l"
@@ -174,7 +174,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BELOW_BREASTS",
-			"points": "shirt",
+			"points": "body",
 			"pointType": [
 				"body",
 				"bodyarm"

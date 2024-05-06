@@ -8,7 +8,7 @@
 			"height": 1500,
 			"name": "base",
 			"priority": "ABOVE_BODY",
-			"points": "shirt",
+			"points": "body",
 			"pointType": [
 				"body",
 				"bodyarm"
@@ -16,7 +16,7 @@
 			"mirror": 0,
 			"colorizationKey": "shirt",
 			"image": {
-				"image": "t-shirt_combined.png",
+				"image": "t-shirt.png",
 				"overrides": [
 					{
 						"image": "t-shirt_combined_long.png",
@@ -63,9 +63,37 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"priority": "ABOVE_BODY",
+			"points": "breasts",
+			"mirror": 0,
+			"colorizationKey": "shirt",
+			"image": {
+				"image": "t-shirt_bust.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<",
+									"value": -34
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "bust"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"name": "arms",
 			"priority": "ABOVE_ARM_LEFT",
-			"points": "shirt",
+			"points": "body",
 			"pointType": [
 				"bodyarm_l",
 				"arm_l"
@@ -73,7 +101,7 @@
 			"mirror": 1,
 			"colorizationKey": "shirt",
 			"image": {
-				"image": "t-shirt_combined.png",
+				"image": "t-shirt.png",
 				"overrides": [
 					{
 						"image": "t-shirt_combined_long.png",
@@ -121,7 +149,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BELOW_BODY",
-			"points": "shirt",
+			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "shirt",
 			"image": {
@@ -153,7 +181,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BELOW_ARM_LEFT",
-			"points": "shirt",
+			"points": "body",
 			"mirror": 1,
 			"colorizationKey": "shirt",
 			"image": {

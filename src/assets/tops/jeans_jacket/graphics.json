@@ -7,7 +7,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BELOW_BODY",
-			"points": "shirt_static_breasts",
+			"points": "body",
 			"pointType": [
 				"body",
 				"bodyarm"
@@ -26,7 +26,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BELOW_ARM_LEFT",
-			"points": "shirt_static_breasts",
+			"points": "body",
 			"pointType": [
 				"arm_l",
 				"bodyarm_l"
@@ -45,7 +45,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BELOW_ARM_LEFT",
-			"points": "shirt_static_breasts",
+			"points": "body",
 			"pointType": [
 				"arm_l",
 				"bodyarm_l"
@@ -77,7 +77,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "ABOVE_ARM_LEFT",
-			"points": "shirt_static_breasts",
+			"points": "body",
 			"pointType": [
 				"arm_l",
 				"bodyarm_l"
@@ -109,7 +109,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "ABOVE_BODY",
-			"points": "shirt_static_breasts",
+			"points": "body",
 			"pointType": [
 				"body",
 				"bodyarm"
@@ -128,7 +128,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "ABOVE_ARM_LEFT",
-			"points": "shirt_static_breasts",
+			"points": "body",
 			"pointType": [
 				"bodyarm",
 				"arm_l"

@@ -63,7 +63,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "ABOVE_BODY",
-			"points": "shirt",
+			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "frills",
 			"image": {
@@ -136,7 +136,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "ABOVE_BODY",
-			"points": "shirt",
+			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "dress",
 			"image": {
@@ -265,7 +265,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "ABOVE_BODY",
-			"points": "shirt",
+			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "buttons",
 			"image": {
@@ -496,7 +496,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BELOW_BREASTS",
-			"points": "shirt",
+			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "frills",
 			"image": {
@@ -569,7 +569,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BELOW_BREASTS",
-			"points": "shirt",
+			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "dress",
 			"image": {
