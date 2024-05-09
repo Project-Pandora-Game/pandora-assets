@@ -1,11 +1,11 @@
 DefineAsset({
-	name: 'Stocking',
+	name: 'Stockings',
 	size: 'small',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: {
 		stocking: {
-			name: 'Stocking',
+			name: 'Stockings',
 			default: '#584747',
 			minAlpha: 0.6,
 		},
@@ -24,7 +24,7 @@ DefineAsset({
 	modules: {
 		stockingState: {
 			type: 'typed',
-			name: 'Stocking State',
+			name: 'Stocking Type',
 			variants: [
 				{
 					id: 'normal',
