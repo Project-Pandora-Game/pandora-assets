@@ -51,12 +51,6 @@ DefineAsset({
 			],
 		},
 	},
-	poseLimits: {
-		bones: {
-			arm_r: [[-75, 120]],
-			arm_l: [[-75, 120]],
-		},
-	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],
