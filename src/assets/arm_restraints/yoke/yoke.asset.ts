@@ -124,6 +124,11 @@ DefineAsset({
 			],
 		},
 	},
+	poseLimits: {
+		armsOrder: {
+			upper: 'left',
+		},
+	},
 	effects: {
 		blockHands: true,
 	},
