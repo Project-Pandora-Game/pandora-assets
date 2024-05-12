@@ -48,34 +48,37 @@
 			"colorizationKey": "top",
 			"image": {
 				"image": "net_top_base_front.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "net_top_base_front3.png",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -165
+								}
+							]
+						]
+					},
+					{
+						"image": "net_top_base_front2.png",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -35
+								}
+							]
+						]
+					}
+				]
 			},
 			"name": "front",
 			"scaling": {
 				"scaleBone": "breasts",
-				"stops": [
-					[
-						-180,
-						{
-							"image": "net_top_base_front_flat.png",
-							"overrides": []
-						}
-					],
-					[
-						100,
-						{
-							"image": "net_top_base_front_huge.png",
-							"overrides": []
-						}
-					],
-					[
-						150,
-						{
-							"image": "net_top_base_front_extreme.png",
-							"overrides": []
-						}
-					]
-				]
+				"stops": []
 			}
 		},
 		{
@@ -282,6 +285,86 @@
 				"overrides": []
 			},
 			"name": "back arms"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "OVERLAY",
+			"points": "breasts",
+			"mirror": 0,
+			"colorizationKey": "top",
+			"image": {
+				"image": "net_top_bust.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -165
+								}
+							]
+						]
+					},
+					{
+						"image": "net_top_bust2.png",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -35
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "bust"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "BELOW_BREASTS",
+			"points": "breasts",
+			"mirror": 0,
+			"colorizationKey": "top",
+			"image": {
+				"image": "net_top_bust.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -165
+								}
+							]
+						]
+					},
+					{
+						"image": "net_top_bust2.png",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -35
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "bust back"
 		}
 	]
 }

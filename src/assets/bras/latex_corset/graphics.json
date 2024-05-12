@@ -48,7 +48,7 @@
 			"height": 1500,
 			"name": "bra breasts above body",
 			"priority": "ABOVE_BODY",
-			"points": "shirt_static_breasts",
+			"points": "breasts",
 			"mirror": 0,
 			"colorizationKey": "bra",
 			"image": {
@@ -220,8 +220,8 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "bra underbust above body",
-			"priority": "ABOVE_BODY",
-			"points": "shirt_static_breasts",
+			"priority": "BELOW_BREASTS",
+			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "bra",
 			"image": {
@@ -365,7 +365,7 @@
 			"height": 1500,
 			"name": "bra breasts behind",
 			"priority": "BELOW_BREASTS",
-			"points": "shirt_static_breasts",
+			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "bra",
 			"image": {

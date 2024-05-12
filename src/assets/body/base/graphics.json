@@ -3828,44 +3828,44 @@
 					],
 					"transforms": [
 						{
-							"bone": "leg_width",
 							"type": "shift",
+							"bone": "leg_width",
 							"value": {
 								"x": 3,
 								"y": 0
 							}
 						},
 						{
+							"type": "const-shift",
+							"value": {
+								"x": 0,
+								"y": -170
+							},
 							"condition": [
 								[
 									{
 										"legs": "sitting"
 									}
 								]
-							],
-							"type": "const-shift",
-							"value": {
-								"x": 0,
-								"y": -170
-							}
+							]
 						},
 						{
+							"type": "const-shift",
+							"value": {
+								"x": -31,
+								"y": -167
+							},
 							"condition": [
 								[
 									{
 										"legs": "kneeling"
 									}
 								]
-							],
-							"type": "const-shift",
-							"value": {
-								"x": -31,
-								"y": -167
-							}
+							]
 						},
 						{
-							"bone": "leg_r",
 							"type": "rotate",
+							"bone": "leg_r",
 							"value": -1
 						}
 					],
@@ -4008,44 +4008,44 @@
 					],
 					"transforms": [
 						{
-							"bone": "leg_width",
 							"type": "shift",
+							"bone": "leg_width",
 							"value": {
-								"x": 6,
+								"x": 4,
 								"y": 0
 							}
 						},
 						{
+							"type": "const-shift",
+							"value": {
+								"x": 0,
+								"y": -162
+							},
 							"condition": [
 								[
 									{
 										"legs": "sitting"
 									}
 								]
-							],
-							"type": "const-shift",
-							"value": {
-								"x": 0,
-								"y": -162
-							}
+							]
 						},
 						{
+							"type": "const-shift",
+							"value": {
+								"x": -35,
+								"y": -75
+							},
 							"condition": [
 								[
 									{
 										"legs": "kneeling"
 									}
 								]
-							],
-							"type": "const-shift",
-							"value": {
-								"x": -35,
-								"y": -75
-							}
+							]
 						},
 						{
-							"bone": "leg_r",
 							"type": "rotate",
+							"bone": "leg_r",
 							"value": -1
 						}
 					],
@@ -4059,15 +4059,20 @@
 					],
 					"transforms": [
 						{
-							"bone": "leg_width",
 							"type": "shift",
+							"bone": "leg_width",
 							"value": {
-								"x": 4,
+								"x": 2,
 								"y": 0
 							}
 						},
 						{
+							"type": "shift",
 							"bone": "leg_width",
+							"value": {
+								"x": 3,
+								"y": 0
+							},
 							"condition": [
 								[
 									{
@@ -4076,44 +4081,39 @@
 										"value": 0
 									}
 								]
-							],
-							"type": "shift",
-							"value": {
-								"x": 4,
-								"y": 0
-							}
+							]
 						},
 						{
+							"type": "const-shift",
+							"value": {
+								"x": 0,
+								"y": -162
+							},
 							"condition": [
 								[
 									{
 										"legs": "sitting"
 									}
 								]
-							],
-							"type": "const-shift",
-							"value": {
-								"x": 0,
-								"y": -162
-							}
+							]
 						},
 						{
+							"type": "const-shift",
+							"value": {
+								"x": -19,
+								"y": -97
+							},
 							"condition": [
 								[
 									{
 										"legs": "kneeling"
 									}
 								]
-							],
-							"type": "const-shift",
-							"value": {
-								"x": -19,
-								"y": -97
-							}
+							]
 						},
 						{
-							"bone": "leg_r",
 							"type": "rotate",
+							"bone": "leg_r",
 							"value": -1
 						}
 					],
@@ -4127,15 +4127,20 @@
 					],
 					"transforms": [
 						{
-							"bone": "leg_width",
 							"type": "shift",
+							"bone": "leg_width",
 							"value": {
-								"x": 4,
+								"x": 2,
 								"y": 0
 							}
 						},
 						{
+							"type": "shift",
 							"bone": "leg_width",
+							"value": {
+								"x": 2,
+								"y": 0
+							},
 							"condition": [
 								[
 									{
@@ -4144,44 +4149,39 @@
 										"value": 0
 									}
 								]
-							],
-							"type": "shift",
-							"value": {
-								"x": 2,
-								"y": 0
-							}
+							]
 						},
 						{
+							"type": "const-shift",
+							"value": {
+								"x": 0,
+								"y": -162
+							},
 							"condition": [
 								[
 									{
 										"legs": "sitting"
 									}
 								]
-							],
-							"type": "const-shift",
-							"value": {
-								"x": 0,
-								"y": -162
-							}
+							]
 						},
 						{
+							"type": "const-shift",
+							"value": {
+								"x": -35,
+								"y": -124
+							},
 							"condition": [
 								[
 									{
 										"legs": "kneeling"
 									}
 								]
-							],
-							"type": "const-shift",
-							"value": {
-								"x": -35,
-								"y": -124
-							}
+							]
 						},
 						{
-							"bone": "leg_r",
 							"type": "rotate",
+							"bone": "leg_r",
 							"value": -1
 						}
 					],
@@ -4195,15 +4195,20 @@
 					],
 					"transforms": [
 						{
-							"bone": "leg_width",
 							"type": "shift",
+							"bone": "leg_width",
 							"value": {
-								"x": 3,
+								"x": 2,
 								"y": 0
 							}
 						},
 						{
+							"type": "shift",
 							"bone": "leg_width",
+							"value": {
+								"x": 4,
+								"y": 0
+							},
 							"condition": [
 								[
 									{
@@ -4212,44 +4217,39 @@
 										"value": 0
 									}
 								]
-							],
-							"type": "shift",
-							"value": {
-								"x": 4,
-								"y": 0
-							}
+							]
 						},
 						{
+							"type": "const-shift",
+							"value": {
+								"x": 0,
+								"y": -162
+							},
 							"condition": [
 								[
 									{
 										"legs": "sitting"
 									}
 								]
-							],
-							"type": "const-shift",
-							"value": {
-								"x": 0,
-								"y": -162
-							}
+							]
 						},
 						{
+							"type": "const-shift",
+							"value": {
+								"x": -15,
+								"y": -141
+							},
 							"condition": [
 								[
 									{
 										"legs": "kneeling"
 									}
 								]
-							],
-							"type": "const-shift",
-							"value": {
-								"x": -15,
-								"y": -141
-							}
+							]
 						},
 						{
-							"bone": "leg_r",
 							"type": "rotate",
+							"bone": "leg_r",
 							"value": -1
 						}
 					],
@@ -4331,15 +4331,20 @@
 					],
 					"transforms": [
 						{
-							"bone": "leg_width",
 							"type": "shift",
+							"bone": "leg_width",
 							"value": {
 								"x": -10,
 								"y": 0
 							}
 						},
 						{
+							"type": "shift",
 							"bone": "leg_width",
+							"value": {
+								"x": 9,
+								"y": 0
+							},
 							"condition": [
 								[
 									{
@@ -4348,44 +4353,39 @@
 										"value": 0
 									}
 								]
-							],
-							"type": "shift",
-							"value": {
-								"x": 4,
-								"y": 0
-							}
+							]
 						},
 						{
+							"type": "const-shift",
+							"value": {
+								"x": 0,
+								"y": -162
+							},
 							"condition": [
 								[
 									{
 										"legs": "sitting"
 									}
 								]
-							],
-							"type": "const-shift",
-							"value": {
-								"x": 0,
-								"y": -162
-							}
+							]
 						},
 						{
+							"type": "const-shift",
+							"value": {
+								"x": 38,
+								"y": -97
+							},
 							"condition": [
 								[
 									{
 										"legs": "kneeling"
 									}
 								]
-							],
-							"type": "const-shift",
-							"value": {
-								"x": 38,
-								"y": -97
-							}
+							]
 						},
 						{
-							"bone": "leg_r",
 							"type": "rotate",
+							"bone": "leg_r",
 							"value": -1
 						}
 					],
@@ -4399,15 +4399,20 @@
 					],
 					"transforms": [
 						{
-							"bone": "leg_width",
 							"type": "shift",
+							"bone": "leg_width",
 							"value": {
-								"x": -5,
+								"x": -4,
 								"y": 0
 							}
 						},
 						{
+							"type": "shift",
 							"bone": "leg_width",
+							"value": {
+								"x": 4,
+								"y": 0
+							},
 							"condition": [
 								[
 									{
@@ -4416,44 +4421,39 @@
 										"value": 0
 									}
 								]
-							],
-							"type": "shift",
-							"value": {
-								"x": 4,
-								"y": 0
-							}
+							]
 						},
 						{
+							"type": "const-shift",
+							"value": {
+								"x": 0,
+								"y": -162
+							},
 							"condition": [
 								[
 									{
 										"legs": "sitting"
 									}
 								]
-							],
-							"type": "const-shift",
-							"value": {
-								"x": 0,
-								"y": -162
-							}
+							]
 						},
 						{
+							"type": "const-shift",
+							"value": {
+								"x": 13,
+								"y": -162
+							},
 							"condition": [
 								[
 									{
 										"legs": "kneeling"
 									}
 								]
-							],
-							"type": "const-shift",
-							"value": {
-								"x": 13,
-								"y": -162
-							}
+							]
 						},
 						{
-							"bone": "leg_r",
 							"type": "rotate",
+							"bone": "leg_r",
 							"value": -1
 						}
 					],
@@ -4467,15 +4467,20 @@
 					],
 					"transforms": [
 						{
-							"bone": "leg_width",
 							"type": "shift",
+							"bone": "leg_width",
 							"value": {
 								"x": -9,
 								"y": 0
 							}
 						},
 						{
+							"type": "shift",
 							"bone": "leg_width",
+							"value": {
+								"x": 7,
+								"y": 0
+							},
 							"condition": [
 								[
 									{
@@ -4484,44 +4489,39 @@
 										"value": 0
 									}
 								]
-							],
-							"type": "shift",
-							"value": {
-								"x": 4,
-								"y": 0
-							}
+							]
 						},
 						{
+							"type": "const-shift",
+							"value": {
+								"x": 0,
+								"y": -162
+							},
 							"condition": [
 								[
 									{
 										"legs": "sitting"
 									}
 								]
-							],
-							"type": "const-shift",
-							"value": {
-								"x": 0,
-								"y": -162
-							}
+							]
 						},
 						{
+							"type": "const-shift",
+							"value": {
+								"x": 31,
+								"y": -146
+							},
 							"condition": [
 								[
 									{
 										"legs": "kneeling"
 									}
 								]
-							],
-							"type": "const-shift",
-							"value": {
-								"x": 31,
-								"y": -146
-							}
+							]
 						},
 						{
-							"bone": "leg_r",
 							"type": "rotate",
+							"bone": "leg_r",
 							"value": -1
 						}
 					],
@@ -4773,44 +4773,44 @@
 					],
 					"transforms": [
 						{
-							"bone": "leg_width",
 							"type": "shift",
+							"bone": "leg_width",
 							"value": {
-								"x": 2,
+								"x": -2,
 								"y": 0
 							}
 						},
 						{
+							"type": "const-shift",
+							"value": {
+								"x": 0,
+								"y": -162
+							},
 							"condition": [
 								[
 									{
 										"legs": "sitting"
 									}
 								]
-							],
-							"type": "const-shift",
-							"value": {
-								"x": 0,
-								"y": -162
-							}
+							]
 						},
 						{
+							"type": "const-shift",
+							"value": {
+								"x": 24,
+								"y": -236
+							},
 							"condition": [
 								[
 									{
 										"legs": "kneeling"
 									}
 								]
-							],
-							"type": "const-shift",
-							"value": {
-								"x": 24,
-								"y": -236
-							}
+							]
 						},
 						{
-							"bone": "leg_r",
 							"type": "rotate",
+							"bone": "leg_r",
 							"value": -1
 						}
 					],

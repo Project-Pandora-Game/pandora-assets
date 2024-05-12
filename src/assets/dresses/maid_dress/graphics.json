@@ -265,6 +265,62 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "ABOVE_BODY",
+			"points": "breasts",
+			"mirror": 0,
+			"colorizationKey": "frills",
+			"image": {
+				"image": "maid_b_breasts.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "bossomState",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "front breasts"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "ABOVE_BODY",
+			"points": "breasts",
+			"mirror": 0,
+			"colorizationKey": "dress",
+			"image": {
+				"image": "maid_b_l2_breasts.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "bossomState",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "front frills breasts"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "buttons",

@@ -91,6 +91,34 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"priority": "BELOW_BREASTS",
+			"points": "breasts",
+			"mirror": 0,
+			"colorizationKey": "shirt",
+			"image": {
+				"image": "t-shirt_bust.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<",
+									"value": -34
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "bust back"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"name": "arms",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "body",

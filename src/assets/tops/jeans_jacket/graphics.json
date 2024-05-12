@@ -7,6 +7,21 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BELOW_BODY",
+			"points": 5,
+			"mirror": 0,
+			"colorizationKey": "jacket",
+			"image": {
+				"image": "jj_back.png",
+				"overrides": []
+			},
+			"name": "jeans back breasts"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "BELOW_BODY",
 			"points": "body",
 			"pointType": [
 				"body",
@@ -102,6 +117,330 @@
 				]
 			},
 			"name": "jeans sleeves"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "ABOVE_BODY",
+			"points": [
+				{
+					"pos": [
+						559,
+						503
+					],
+					"transforms": [
+						{
+							"bone": "breasts",
+							"condition": [
+								[
+									{
+										"bone": "breasts",
+										"operator": ">",
+										"value": 0
+									}
+								]
+							],
+							"type": "shift",
+							"value": {
+								"x": 0,
+								"y": 10
+							}
+						},
+						{
+							"bone": "chest_width",
+							"condition": [
+								[
+									{
+										"bone": "chest_width",
+										"operator": ">",
+										"value": 0
+									}
+								]
+							],
+							"type": "shift",
+							"value": {
+								"x": 2,
+								"y": 8
+							}
+						}
+					],
+					"mirror": true,
+					"pointType": "breasts_r"
+				},
+				{
+					"pos": [
+						509,
+						468
+					],
+					"transforms": [
+						{
+							"bone": "breasts",
+							"condition": [
+								[
+									{
+										"bone": "breasts",
+										"operator": ">",
+										"value": 0
+									}
+								]
+							],
+							"type": "shift",
+							"value": {
+								"x": 3,
+								"y": 3
+							}
+						}
+					],
+					"mirror": true,
+					"pointType": "breasts_r"
+				},
+				{
+					"pos": [
+						430,
+						529
+					],
+					"transforms": [
+						{
+							"bone": "breasts",
+							"condition": [
+								[
+									{
+										"bone": "breasts",
+										"operator": ">",
+										"value": 0
+									}
+								]
+							],
+							"type": "shift",
+							"value": {
+								"x": -6,
+								"y": 10
+							}
+						},
+						{
+							"bone": "chest_width",
+							"condition": [
+								[
+									{
+										"bone": "chest_width",
+										"operator": ">",
+										"value": 0
+									}
+								]
+							],
+							"type": "shift",
+							"value": {
+								"x": -10,
+								"y": 10
+							}
+						}
+					],
+					"mirror": true,
+					"pointType": "breasts_r"
+				},
+				{
+					"pos": [
+						419,
+						499
+					],
+					"transforms": [
+						{
+							"bone": "breasts",
+							"condition": [
+								[
+									{
+										"bone": "breasts",
+										"operator": ">",
+										"value": 0
+									}
+								]
+							],
+							"type": "shift",
+							"value": {
+								"x": -2,
+								"y": -1
+							}
+						},
+						{
+							"bone": "chest_width",
+							"condition": [
+								[
+									{
+										"bone": "chest_width",
+										"operator": ">",
+										"value": 0
+									}
+								]
+							],
+							"type": "shift",
+							"value": {
+								"x": -10,
+								"y": 0
+							}
+						},
+						{
+							"bone": "chest_width",
+							"condition": [
+								[
+									{
+										"bone": "chest_width",
+										"operator": "<",
+										"value": 0
+									}
+								]
+							],
+							"type": "shift",
+							"value": {
+								"x": -5,
+								"y": 0
+							}
+						}
+					],
+					"mirror": true,
+					"pointType": "breasts_r"
+				},
+				{
+					"pos": [
+						423,
+						516
+					],
+					"transforms": [
+						{
+							"bone": "breasts",
+							"condition": [
+								[
+									{
+										"bone": "breasts",
+										"operator": ">",
+										"value": 0
+									}
+								]
+							],
+							"type": "shift",
+							"value": {
+								"x": -7,
+								"y": 3
+							}
+						},
+						{
+							"bone": "chest_width",
+							"condition": [
+								[
+									{
+										"bone": "chest_width",
+										"operator": ">",
+										"value": 0
+									}
+								]
+							],
+							"type": "shift",
+							"value": {
+								"x": -10,
+								"y": 2
+							}
+						},
+						{
+							"bone": "chest_width",
+							"condition": [
+								[
+									{
+										"bone": "chest_width",
+										"operator": "<",
+										"value": 0
+									}
+								]
+							],
+							"type": "shift",
+							"value": {
+								"x": -2,
+								"y": 0
+							}
+						}
+					],
+					"mirror": true,
+					"pointType": "breasts_r"
+				},
+				{
+					"pos": [
+						462,
+						510
+					],
+					"transforms": [
+						{
+							"bone": "breasts",
+							"condition": [
+								[
+									{
+										"bone": "breasts",
+										"operator": ">",
+										"value": 0
+									}
+								]
+							],
+							"type": "shift",
+							"value": {
+								"x": 3,
+								"y": 6
+							}
+						}
+					],
+					"mirror": true,
+					"pointType": "breasts_r"
+				},
+				{
+					"pos": [
+						423,
+						480
+					],
+					"transforms": [
+						{
+							"bone": "chest_width",
+							"condition": [
+								[
+									{
+										"bone": "chest_width",
+										"operator": ">",
+										"value": 0
+									}
+								]
+							],
+							"type": "shift",
+							"value": {
+								"x": -10,
+								"y": 0
+							}
+						},
+						{
+							"bone": "chest_width",
+							"condition": [
+								[
+									{
+										"bone": "chest_width",
+										"operator": "<",
+										"value": 0
+									}
+								]
+							],
+							"type": "shift",
+							"value": {
+								"x": -5,
+								"y": 0
+							}
+						}
+					],
+					"mirror": true,
+					"pointType": "breasts_r"
+				}
+			],
+			"mirror": 0,
+			"colorizationKey": "jacket",
+			"image": {
+				"image": "jj.png",
+				"overrides": []
+			},
+			"name": "jeans breasts"
 		},
 		{
 			"x": 0,

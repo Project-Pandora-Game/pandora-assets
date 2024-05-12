@@ -87,10 +87,10 @@ DefineAsset({
 								rotation: 'down',
 							},
 							bones: {
-								arm_r: 79,
-								arm_l: 79,
-								elbow_r: 98,
-								elbow_l: 98,
+								arm_r: 87,
+								arm_l: 87,
+								elbow_r: 93,
+								elbow_l: 93,
 							},
 							armsOrder: {
 								upper: 'right',
@@ -111,10 +111,10 @@ DefineAsset({
 								rotation: 'down',
 							},
 							bones: {
-								arm_r: 82,
-								arm_l: 82,
-								elbow_r: 55,
-								elbow_l: 55,
+								arm_r: 87,
+								arm_l: 87,
+								elbow_r: 52,
+								elbow_l: 52,
 							},
 							armsOrder: {
 								upper: 'right',
