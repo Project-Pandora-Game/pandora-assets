@@ -431,7 +431,7 @@ export async function ExportAllResources(printProgress: boolean = true): Promise
 	const digitLen = Math.max(Math.log10(totalTasks)) + 1;
 
 	const updateProgress = () => {
-		if (!printProgress)
+		if (!printProgress || process.env.CI === 'true')
 			return;
 		process.stdout.write(`\r${finishedTasks.toString().padStart(digitLen)}/${totalTasks} (${Math.floor(100 * finishedTasks / totalTasks).toString().padStart(3)}%)`);
 	};
