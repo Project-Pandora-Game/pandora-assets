@@ -27,6 +27,8 @@ jobs:
           node-version: 20
       - run: pnpm install --frozen-lockfile
       - run: pnpm run build --prod
+        env:
+          CI_SKIP_DOWNSCALE: true
 
   lint:
     name: Lint

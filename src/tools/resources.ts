@@ -257,10 +257,15 @@ class GeneratedImageResource extends Resource implements IImageResource {
 	}
 
 	public addDownscaledImage(resolution: number): string {
-		const process = async (s: Sharp): Promise<Sharp> => {
+		const generator = async (s: Sharp): Promise<Sharp> => {
 			const meta = await s.metadata();
 			Assert(meta.width != null, 'Failed to get image width');
 			Assert(meta.height != null, 'Failed to get image height');
+
+			// Skip downscaling in CI to speed things up by a lot.
+			if (process.env.CI_SKIP_DOWNSCALE === 'true') {
+				return s;
+			}
 
 			return s
 				.resize(Math.ceil(resolution * meta.width), Math.ceil(resolution * meta.height), {
@@ -271,7 +276,7 @@ class GeneratedImageResource extends Resource implements IImageResource {
 				.sharpen();
 		};
 
-		this._addAVIFConversion(`_r${resolution}`, process);
+		this._addAVIFConversion(`_r${resolution}`, generator);
 
 		const name = `${this.baseName}_r${resolution}.${this.extension}`;
 		if (resourceFiles.has(name))
@@ -285,7 +290,7 @@ class GeneratedImageResource extends Resource implements IImageResource {
 			if (await IsFile(dest))
 				return;
 
-			await (await process(await this.loadImageSharp()))
+			await (await generator(await this.loadImageSharp()))
 				.toFile(dest);
 		});
 		return name;
