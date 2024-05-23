@@ -20,6 +20,7 @@ DefineAsset({
 		provides: [
 			'Legwear',
 		],
+		limit: 20,
 	},
 	modules: {
 		pantiesState: {
