@@ -1,5 +1,6 @@
 import * as fs from 'fs';
-import { join } from 'path';
+import { join, relative } from 'path';
+import ignore from 'ignore';
 import { GetLogger, SetConsoleOutput, LogLevel, AssetsDefinitionFile, AssetsGraphicsDefinitionFile, logConfig } from 'pandora-common';
 import { GlobalDefineAsset, SetCurrentContext } from './tools';
 import { AssetDatabase } from './tools/assetDatabase';
@@ -8,7 +9,7 @@ import { RunDev } from './tools/watch';
 import { LoadBoneNameValidation, boneDefinition } from './bones';
 import { GraphicsDatabase } from './tools/graphicsDatabase';
 import { BODYPARTS, ValidateBodyparts } from './bodyparts';
-import { ASSET_DEST_DIR, ASSET_SRC_DIR, OUT_DIR, IS_PRODUCTION_BUILD } from './constants';
+import { ASSET_DEST_DIR, ASSET_SRC_DIR, OUT_DIR, IS_PRODUCTION_BUILD, BASE_DIR } from './constants';
 import { LoadTemplates } from './templates';
 import { POSE_PRESETS } from './posePresets';
 import { LoadGitData } from './tools/git';
@@ -58,6 +59,9 @@ function CheckErrors(printWarnings: boolean = true) {
 async function Run() {
 	logger.info('Building...');
 
+	const ig = ignore();
+	ig.add(fs.readFileSync(join(BASE_DIR, '.gitignore'), 'utf-8'));
+
 	// Setup environment
 	globalThis.DefineAsset = GlobalDefineAsset;
 	globalThis.DefineRoomDeviceAsset = GlobalDefineRoomDeviceAsset;
@@ -106,6 +110,10 @@ async function Run() {
 			const assetDestPath = join(categoryDestPath, asset);
 			const assetSrcPath = join(categorySrcPath, asset);
 
+			if (ig.ignores(relative(process.cwd(), assetSrcPath))) {
+				logger.verbose(`Ignoring assets/${category}/${asset}...`);
+				continue;
+			}
 			if (!IsDirectory(assetSrcPath)) {
 				logger.warning(`assets/${category}/${asset} is not directory`);
 				continue;
