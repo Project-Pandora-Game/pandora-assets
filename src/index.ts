@@ -95,28 +95,27 @@ async function Run() {
 		const categoryDestPath = join(ASSET_DEST_DIR, category);
 
 		// Ignore non-directories in assets
-		if (!fs.statSync(categorySrcPath).isDirectory())
+		if (!IsDirectory(categorySrcPath))
 			continue;
 
-		if (!fs.statSync(categoryDestPath).isDirectory()) {
+		if (!IsDirectory(categoryDestPath)) {
 			throw new Error(`assets/${category} is not directory`);
-		}
-		if (!fs.statSync(categorySrcPath).isDirectory()) {
-			throw new Error(`assets/${category} missing in source path`);
 		}
 
 		for (const asset of fs.readdirSync(categorySrcPath)) {
 			const assetDestPath = join(categoryDestPath, asset);
 			const assetSrcPath = join(categorySrcPath, asset);
 
-			if (!fs.statSync(assetDestPath).isDirectory()) {
+			if (!IsDirectory(assetSrcPath)) {
+				logger.warning(`assets/${category}/${asset} is not directory`);
+				continue;
+			}
+			if (!IsFile(join(assetSrcPath, `${asset}.asset.ts`))) {
+				logger.error(`assets/${category}/${asset} expected asset file '${asset}.asset.ts' not found`);
+				continue;
+			}
+			if (!IsDirectory(assetDestPath)) {
 				throw new Error(`assets/${category}/${asset} is not directory`);
-			}
-			if (!fs.statSync(assetSrcPath).isDirectory()) {
-				throw new Error(`assets/${category}/${asset} missing in source path`);
-			}
-			if (!fs.statSync(join(assetSrcPath, `${asset}.asset.ts`)).isFile()) {
-				throw new Error(`assets/${category}/${asset} expected asset file '${asset}.asset.ts' not found`);
 			}
 
 			SetCurrentContext(category, asset, assetSrcPath);
@@ -191,4 +190,27 @@ if (process.argv.includes('--watch')) {
 	Run().catch((error) => {
 		logger.fatal('Error:\n', error);
 	});
+}
+
+function AssertErrorEnoent(error: unknown) {
+	if (!(error instanceof Error && 'code' in error && error.code === 'ENOENT'))
+		throw error;
+}
+
+function IsDirectory(path: string) {
+	try {
+		return fs.statSync(path).isDirectory();
+	} catch (error) {
+		AssertErrorEnoent(error);
+		return false;
+	}
+}
+
+function IsFile(path: string) {
+	try {
+		return fs.statSync(path).isFile();
+	} catch (error) {
+		AssertErrorEnoent(error);
+		return false;
+	}
 }
