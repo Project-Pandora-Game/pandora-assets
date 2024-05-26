@@ -5,3 +5,5 @@
 /coverage
 /.env
 /.hooks/.env
+
+.DS_Store
