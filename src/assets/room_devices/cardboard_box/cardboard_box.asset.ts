@@ -46,6 +46,7 @@ DefineRoomDeviceAsset({
 		lid: {
 			type: 'typed',
 			name: 'Box lid',
+			staticConfig: { slotName: 'character_slot_inside' },
 			variants: [
 				{
 					id: 'open',
@@ -71,6 +72,7 @@ DefineRoomDeviceAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lid lock',
+			staticConfig: { slotName: 'character_slot_inside' },
 			lockedProperties: {
 				blockModules: ['lid'],
 			},
@@ -78,6 +80,7 @@ DefineRoomDeviceAsset({
 		storage: {
 			type: 'storage',
 			name: `Box contents`,
+			staticConfig: { slotName: null },
 			maxAcceptedSize: 'large',
 			maxCount: 10,
 		},

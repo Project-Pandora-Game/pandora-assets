@@ -1,12 +1,13 @@
-import { Assert, CalculateBackgroundDataFromCalibrationData, GetLogger, RoomBackgroundCalibrationDataSchema, RoomBackgroundInfo } from 'pandora-common';
-import { SetCurrentContext } from './context';
-import { join } from 'path';
-import { GitValidateResponsibleContributor } from './git';
-import { BACKGROUNDS_SRC_DIR } from '../constants';
 import * as fs from 'fs';
-import { RoomDatabase } from './roomDatabase';
-import { DefineImageResource, DefineJpgResource, ProcessImageResource } from './resources';
 import { isEqual } from 'lodash';
+import { Assert, CalculateBackgroundDataFromCalibrationData, GetLogger, RoomBackgroundCalibrationDataSchema, RoomBackgroundInfo } from 'pandora-common';
+import { join } from 'path';
+import { BACKGROUNDS_SRC_DIR } from '../constants';
+import { SetCurrentContext } from './context';
+import { GitValidateResponsibleContributor } from './git';
+import { GENERATED_RESOLUTIONS } from './graphics';
+import { DefineImageResource, DefineJpgResource } from './resources';
+import { RoomDatabase } from './roomDatabase';
 
 const PREVIEW_WIDTH = 200;
 const PREVIEW_HEIGHT = 100;
@@ -65,12 +66,15 @@ export function DefineRoomBackground(def: IntermediateRoomBackgroundDefinition):
 
 	const imageResource = DefineImageResource(def.image, 'background', 'jpg');
 	imageResource.addSizeCheck(def.calibration.imageSize[0], def.calibration.imageSize[1]);
-	const image = ProcessImageResource(imageResource);
+
+	for (const resolution of GENERATED_RESOLUTIONS) {
+		imageResource.addDownscaledImage(resolution);
+	}
 
 	const preview = DefineJpgResource(`${def.image}@${PREVIEW_WIDTH}x${PREVIEW_HEIGHT}`, 'background');
 
 	const background: RoomBackgroundInfo = {
-		...CalculateBackgroundDataFromCalibrationData(image, parsedCalibration.data),
+		...CalculateBackgroundDataFromCalibrationData(imageResource.resultName, parsedCalibration.data),
 		id,
 		name: def.name,
 		preview,

@@ -39,7 +39,19 @@
 								{
 									"module": "cuffState",
 									"operator": "=",
-									"value": "chained"
+									"value": "chained_front"
+								},
+								{
+									"bone": "arm_l",
+									"operator": ">=",
+									"value": 0
+								}
+							],
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "chained_back"
 								},
 								{
 									"bone": "arm_l",
@@ -56,7 +68,19 @@
 								{
 									"module": "cuffState",
 									"operator": "=",
-									"value": "chained"
+									"value": "chained_front"
+								},
+								{
+									"bone": "arm_l",
+									"operator": "<",
+									"value": 0
+								}
+							],
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "chained_back"
 								},
 								{
 									"bone": "arm_l",

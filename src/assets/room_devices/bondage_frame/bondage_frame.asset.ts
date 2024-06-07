@@ -33,48 +33,22 @@ DefineRoomDeviceAsset({
 			},
 		},
 		character_slot_left: {
-			name: 'Tied against the left post',
+			name: 'In front of the left frame',
 			asset: {
 				name: 'Bondage Frame',
 				size: 'huge',
 				poseLimits: {
-					arms: {
-						position: 'back',
-					},
-					bones: {
-						arm_l: 78,
-						arm_r: 78,
-						elbow_l: 55,
-						elbow_r: 55,
-						character_rotation: 0,
-					},
-					view: 'front',
-				},
-				effects: {
-					blockHands: true,
+					legs: ['standing', 'kneeling'],
 				},
 			},
 		},
 		character_slot_right: {
-			name: 'Tied against the right post',
+			name: 'In front of the right frame',
 			asset: {
 				name: 'Bondage Frame',
 				size: 'huge',
 				poseLimits: {
-					arms: {
-						position: 'back',
-					},
-					bones: {
-						arm_l: 78,
-						arm_r: 78,
-						elbow_l: 55,
-						elbow_r: 55,
-						character_rotation: 0,
-					},
-					view: 'front',
-				},
-				effects: {
-					blockHands: true,
+					legs: ['standing', 'kneeling'],
 				},
 			},
 		},
@@ -82,7 +56,8 @@ DefineRoomDeviceAsset({
 	modules: {
 		chains: {
 			type: 'typed',
-			name: 'Chains',
+			name: 'Under the frame chains',
+			staticConfig: { slotName: 'character_slot' },
 			variants: [
 				{
 					id: 'none',
@@ -249,7 +224,8 @@ DefineRoomDeviceAsset({
 		},
 		position: {
 			type: 'typed',
-			name: 'Chained position',
+			name: 'Under the frame position',
+			staticConfig: { slotName: 'character_slot' },
 			variants: [
 				{
 					id: 'front',
@@ -282,9 +258,104 @@ DefineRoomDeviceAsset({
 		},
 		lock: {
 			type: 'lockSlot',
-			name: 'Chain locks',
+			name: 'Under the frame chain locks',
+			staticConfig: { slotName: 'character_slot' },
 			lockedProperties: {
 				blockModules: ['chains', 'position'],
+			},
+		},
+		frame_left: {
+			type: 'typed',
+			name: 'Left frame position',
+			staticConfig: { slotName: 'character_slot_left' },
+			variants: [
+				{
+					id: 'free_left',
+					name: 'Leaning against',
+					default: true,
+				},
+				{
+					id: 'tied_left',
+					name: 'Tied to the frame',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_left'],
+						slotProperties: {
+							character_slot_left: {
+								poseLimits: {
+									arms: {
+										position: 'back',
+									},
+									bones: {
+										arm_l: 78,
+										arm_r: 78,
+										elbow_l: 55,
+										elbow_r: 55,
+										character_rotation: 0,
+									},
+									view: 'front',
+								},
+								effects: {
+									blockHands: true,
+								},
+							},
+						},
+					},
+				},
+			],
+		},
+		lock_left: {
+			type: 'lockSlot',
+			name: 'Left frame restraints lock',
+			staticConfig: { slotName: 'character_slot_left' },
+			lockedProperties: {
+				blockModules: ['frame_left'],
+			},
+		},
+		frame_right: {
+			type: 'typed',
+			name: 'Right frame position',
+			staticConfig: { slotName: 'character_slot_right' },
+			variants: [
+				{
+					id: 'free_right',
+					name: 'Leaning against',
+					default: true,
+				},
+				{
+					id: 'tied_right',
+					name: 'Tied to the frame',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_right'],
+						slotProperties: {
+							character_slot_right: {
+								poseLimits: {
+									arms: {
+										position: 'back',
+									},
+									bones: {
+										arm_l: 78,
+										arm_r: 78,
+										elbow_l: 55,
+										elbow_r: 55,
+										character_rotation: 0,
+									},
+									view: 'front',
+								},
+								effects: {
+									blockHands: true,
+								},
+							},
+						},
+					},
+				},
+			],
+		},
+		lock_right: {
+			type: 'lockSlot',
+			name: 'Right frame restraints lock',
+			staticConfig: { slotName: 'character_slot_right' },
+			lockedProperties: {
+				blockModules: ['frame_right'],
 			},
 		},
 	},

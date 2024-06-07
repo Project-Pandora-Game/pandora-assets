@@ -13,6 +13,12 @@
 					"${workspaceFolder}/.hooks/vscode-setup.sh"
 				]
 			},
+			"osx": {
+				"command": "zsh",
+				"args": [
+					"${workspaceFolder}/.hooks/vscode-setup.sh"
+				]
+			},
 			"presentation": {
 				"echo": false,
 				"reveal": "always",

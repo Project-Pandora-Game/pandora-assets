@@ -1,12 +1,13 @@
-import { Assert, GetLogger, SplitStringFirstOccurrence } from 'pandora-common';
 import { createHash } from 'crypto';
 import { readFileSync, statSync } from 'fs';
-import { writeFile, copyFile, unlink, readdir, stat } from 'fs/promises';
-import { join, basename } from 'path';
-import { AssetSourcePath } from './context';
-import { WatchFile } from './watch';
+import { copyFile, readdir, stat, unlink, writeFile } from 'fs/promises';
+import { availableParallelism } from 'os';
+import { Assert, GetLogger, SplitStringFirstOccurrence } from 'pandora-common';
+import { basename, join } from 'path';
 import sharp, { type AvifOptions, type Sharp } from 'sharp';
 import { GENERATE_AVIF } from '../constants';
+import { AssetSourcePath } from './context';
+import { WatchFile } from './watch';
 
 export type ImageCategory = 'asset' | 'roomDevice' | 'background' | 'preview';
 
@@ -24,7 +25,7 @@ export const PREVIEW_SIZE = 256;
 
 const logger = GetLogger('Resources');
 
-const resources: Map<string, Resource> = new Map();
+let resources: Resource[] = [];
 const resourceFiles: Set<string> = new Set();
 
 let destinationDirectory = '';
@@ -49,27 +50,39 @@ export function SetResourceDestinationDirectory(path: string): void {
 
 export abstract class Resource {
 	public readonly resultName: string;
+	public readonly baseName: string;
+	public readonly extension: string;
+
 	public readonly size: number;
 	public readonly hash: string;
+	private _processes: (() => Promise<void>)[] = [];
 
 	constructor(resultName: string, size: number, hash: string) {
 		this.resultName = resultName;
+		this.baseName = resultName.replace(/\.[^.]*$/, '');
+		this.extension = resultName.replace(/^.*\.([^.]+)$/, '$1');
 		this.size = size;
 		this.hash = hash;
-		resources.set(resultName, this);
+		resources.push(this);
 	}
 
-	public abstract finalize(): Promise<void>;
+	protected addProcess(process: (() => Promise<void>)): void {
+		this._processes.push(process);
+	}
+
+	public getProcesses(): readonly (() => Promise<void>)[] {
+		return this._processes;
+	}
 }
 
 export interface IImageResource extends Resource {
-	addResizedImage(maxWidth: number, maxHeight: number, suffix: string): string;
+	addResizedImage(maxWidth: number, maxHeight: number, suffix: string): IImageResource;
+	addDownscaledImage(resolution: number): string;
+	addSizeCheck(exactWidth: number, exactHeight: number): void;
+	loadImageSharp(): Sharp | Promise<Sharp>;
 }
 
 class FileResource extends Resource {
-	private process: Promise<void>[] = [];
-	protected readonly baseName: string;
-	protected readonly extension: string;
 	protected readonly sourcePath: string;
 
 	constructor(path: string) {
@@ -86,23 +99,21 @@ class FileResource extends Resource {
 		super(resultName, size, hash);
 
 		this.sourcePath = sourcePath;
-		this.baseName = resultName.replace(/\.[^.]*$/, '');
-		this.extension = resultName.replace(/^.*\.([^.]+)$/, '$1');
 
-		if (resourceFiles.has(resultName)) {
-			return;
-		}
-
-		resourceFiles.add(resultName);
 		WatchFile(sourcePath);
 
-		const dest = join(destinationDirectory, resultName);
-		this.addProcess(IsFile(dest)
-			.then(async (isFile) => {
-				if (!isFile) {
-					await copyFile(sourcePath, dest);
-				}
-			}));
+		this.addProcess(async () => {
+			if (resourceFiles.has(resultName)) {
+				return;
+			}
+			resourceFiles.add(resultName);
+			const dest = join(destinationDirectory, resultName);
+
+			if (await IsFile(dest))
+				return;
+
+			await copyFile(sourcePath, dest);
+		});
 
 		this.addProcess(async () => {
 			const { exif, icc, xmp } = await sharp(sourcePath).metadata();
@@ -111,48 +122,57 @@ class FileResource extends Resource {
 			}
 		});
 	}
-
-	public async finalize(): Promise<void> {
-		await Promise.all(this.process);
-	}
-
-	protected addProcess(process: Promise<void> | (() => Promise<void>)): void {
-		if (typeof process === 'function') {
-			process = process();
-		}
-		this.process.push(process);
-	}
 }
 
 class InlineResource extends Resource {
-	private readonly finished: Promise<void>;
+	private readonly value: Buffer;
 
 	constructor(resultName: string, hash: string, value: Buffer) {
 		super(resultName, value.byteLength, hash);
-		if (resourceFiles.has(this.resultName)) {
-			this.finished = Promise.resolve();
-		} else {
-			resourceFiles.add(this.resultName);
-			this.finished = writeFile(join(destinationDirectory, this.resultName), value);
-		}
+		this.value = value;
+		this.addProcess(() => this._process());
 	}
 
-	public async finalize(): Promise<void> {
-		await this.finished;
+	private _process(): Promise<void> {
+		if (resourceFiles.has(this.resultName)) {
+			return Promise.resolve();
+		}
+		resourceFiles.add(this.resultName);
+		return writeFile(join(destinationDirectory, this.resultName), this.value);
 	}
 }
+
+type SharpImageGenerator = (sharp: Sharp) => Sharp | Promise<Sharp>;
 
 class ImageResource extends FileResource implements IImageResource {
 	constructor(path: string, category: ImageCategory) {
 		super(path);
 		CheckMaxSize(this, path, category);
-		this.addAVIFConversion('', (s) => s);
+		this._addAVIFConversion('', (s) => s);
 	}
 
-	public addResizedImage(maxWidth: number, maxHeight: number, suffix: string): string {
-		this.addAVIFConversion(`_${suffix}`, (s) => s.resize(maxWidth, maxHeight));
+	public addResizedImage(maxWidth: number, maxHeight: number, suffix: string): IImageResource {
+		return new GeneratedImageResource(this, `_${suffix}`, (s) => s.resize(maxWidth, maxHeight));
+	}
 
-		const name = `${this.baseName}_${suffix}.${this.extension}`;
+	public addDownscaledImage(resolution: number): string {
+		const process: SharpImageGenerator = async (s) => {
+			const meta = await s.metadata();
+			Assert(meta.width != null, 'Failed to get image width');
+			Assert(meta.height != null, 'Failed to get image height');
+
+			return s
+				.resize(Math.ceil(resolution * meta.width), Math.ceil(resolution * meta.height), {
+					fit: 'fill',
+					kernel: 'lanczos3',
+					fastShrinkOnLoad: false,
+				})
+				.sharpen();
+		};
+
+		this._addAVIFConversion(`_r${resolution}`, process);
+
+		const name = `${this.baseName}_r${resolution}.${this.extension}`;
 		if (resourceFiles.has(name))
 			return name;
 
@@ -164,8 +184,7 @@ class ImageResource extends FileResource implements IImageResource {
 			if (await IsFile(dest))
 				return;
 
-			await sharp(this.sourcePath)
-				.resize(maxWidth, maxHeight)
+			await (await process(this.loadImageSharp()))
 				.toFile(dest);
 		});
 		return name;
@@ -173,14 +192,14 @@ class ImageResource extends FileResource implements IImageResource {
 
 	public addSizeCheck(exactWidth: number, exactHeight: number): void {
 		this.addProcess(async () => {
-			const { width, height } = await sharp(this.sourcePath).metadata();
+			const { width, height } = await this.loadImageSharp().metadata();
 			if (width !== exactWidth || height !== exactHeight) {
 				logger.warning(`Image '${this.sourcePath}' has size ${width}x${height}, expected ${exactWidth}x${exactHeight}.`);
 			}
 		});
 	}
 
-	private addAVIFConversion(suffix: string, process: (s: Sharp) => Sharp): void {
+	private _addAVIFConversion(suffix: string, process: SharpImageGenerator): void {
 		if (!GENERATE_AVIF)
 			return;
 
@@ -194,10 +213,120 @@ class ImageResource extends FileResource implements IImageResource {
 			if (await IsFile(dest))
 				return;
 
-			await process(sharp(this.sourcePath))
+			await (await process(this.loadImageSharp()))
 				.toFormat('avif', AVIF_OPTIONS)
 				.toFile(dest);
 		});
+	}
+
+	public loadImageSharp(): Sharp {
+		return sharp(this.sourcePath);
+	}
+}
+
+class GeneratedImageResource extends Resource implements IImageResource {
+	private readonly _baseImage: IImageResource;
+	private readonly _generator: SharpImageGenerator;
+
+	constructor(baseImage: IImageResource, suffix: string, generator: SharpImageGenerator) {
+		super(baseImage.baseName + suffix + baseImage.extension, baseImage.size, baseImage.hash);
+		this._baseImage = baseImage;
+		this._generator = generator;
+
+		// Base export
+
+		if (!resourceFiles.has(this.resultName)) {
+			// Prevent the generated source from being deleted
+			resourceFiles.add(this.resultName);
+
+			this.addProcess(async () => {
+				const dest = join(destinationDirectory, this.resultName);
+				if (await IsFile(dest))
+					return;
+
+				const result = await generator(await this.loadImageSharp());
+				await result.toFile(dest);
+			});
+		}
+
+		this._addAVIFConversion('', (s) => s);
+	}
+
+	public addResizedImage(maxWidth: number, maxHeight: number, suffix: string): IImageResource {
+		return new GeneratedImageResource(this, `_${suffix}`, (s) => s.resize(maxWidth, maxHeight));
+	}
+
+	public addDownscaledImage(resolution: number): string {
+		const generator = async (s: Sharp): Promise<Sharp> => {
+			const meta = await s.metadata();
+			Assert(meta.width != null, 'Failed to get image width');
+			Assert(meta.height != null, 'Failed to get image height');
+
+			// Skip downscaling in CI to speed things up by a lot.
+			if (process.env.CI_SKIP_DOWNSCALE === 'true') {
+				return s;
+			}
+
+			return s
+				.resize(Math.ceil(resolution * meta.width), Math.ceil(resolution * meta.height), {
+					fit: 'fill',
+					kernel: 'lanczos3',
+					fastShrinkOnLoad: false,
+				})
+				.sharpen();
+		};
+
+		this._addAVIFConversion(`_r${resolution}`, generator);
+
+		const name = `${this.baseName}_r${resolution}.${this.extension}`;
+		if (resourceFiles.has(name))
+			return name;
+
+		// Prevent the generated source from being deleted
+		resourceFiles.add(name);
+
+		this.addProcess(async () => {
+			const dest = join(destinationDirectory, name);
+			if (await IsFile(dest))
+				return;
+
+			await (await generator(await this.loadImageSharp()))
+				.toFile(dest);
+		});
+		return name;
+	}
+
+	public addSizeCheck(exactWidth: number, exactHeight: number): void {
+		this.addProcess(async () => {
+			const { width, height } = await (await this.loadImageSharp()).metadata();
+			if (width !== exactWidth || height !== exactHeight) {
+				logger.warning(`Image '${this.resultName}' has size ${width}x${height}, expected ${exactWidth}x${exactHeight}.`);
+			}
+		});
+	}
+
+	private _addAVIFConversion(suffix: string, process: SharpImageGenerator): void {
+		if (!GENERATE_AVIF)
+			return;
+
+		const name = `${this.baseName}${suffix}_${AVIF_SUFFIX}.avif`;
+		if (resourceFiles.has(name))
+			return;
+
+		resourceFiles.add(name);
+		this.addProcess(async () => {
+			const dest = join(destinationDirectory, name);
+			if (await IsFile(dest))
+				return;
+
+			await (await process(await this.loadImageSharp()))
+				.toFormat('avif', AVIF_OPTIONS)
+				.toFile(dest);
+		});
+	}
+
+	public async loadImageSharp(): Promise<Sharp> {
+		return await this._generator(await this._baseImage.loadImageSharp());
 	}
 }
 
@@ -246,9 +375,7 @@ function CheckMaxSize(resource: Resource, name: string, category: ImageCategory)
 	}
 }
 
-export function ProcessImageResource(resource: IImageResource, args: string = ''): string {
-	let resultName = resource.resultName;
-
+export function ProcessImageResource(resource: IImageResource, args: string = ''): IImageResource {
 	if (args) {
 		const resizeMatch = /^(\d+)x(\d+)$/.exec(args);
 		if (resizeMatch) {
@@ -257,35 +384,29 @@ export function ProcessImageResource(resource: IImageResource, args: string = ''
 			Assert(Number.isInteger(sizeX));
 			Assert(Number.isInteger(sizeY));
 
-			resultName = resource.addResizedImage(sizeX, sizeY, args);
+			return resource.addResizedImage(sizeX, sizeY, args);
 		} else {
 			throw new Error(`Invalid arguments '${args}' for resource.`);
 		}
 	}
 
-	return resultName;
-}
-
-export function DefineImageResource(name: string, category: ImageCategory, expectedFormat: 'png' | 'jpg'): ImageResource {
-	if (!name.endsWith('.' + expectedFormat)) {
-		throw new Error(`Resource ${name} is not a ${expectedFormat.toUpperCase()} file.`);
-	}
-
-	const resource = new ImageResource(name, category);
-
 	return resource;
 }
 
-export function DefinePngResource(name: string, category: ImageCategory): string {
+export function DefineImageResource(name: string, category: ImageCategory, expectedFormat: 'png' | 'jpg'): IImageResource {
 	const [baseName, args] = SplitStringFirstOccurrence(name, '@');
 
-	if (!baseName.endsWith('.png')) {
-		throw new Error(`Resource ${name} is not a PNG file.`);
+	if (!baseName.endsWith('.' + expectedFormat)) {
+		throw new Error(`Resource ${name} is not a ${expectedFormat.toUpperCase()} file.`);
 	}
 
 	const resource = new ImageResource(baseName, category);
 
 	return ProcessImageResource(resource, args);
+}
+
+export function DefinePngResource(name: string, category: ImageCategory): string {
+	return DefineImageResource(name, category, 'png').resultName;
 }
 
 export function DefineJpgResource(name: string, category: ImageCategory): string {
@@ -300,17 +421,61 @@ export function DefineJpgResource(name: string, category: ImageCategory): string
 		resource.addSizeCheck(PREVIEW_SIZE, PREVIEW_SIZE);
 	}
 
-	return ProcessImageResource(resource, args);
+	return ProcessImageResource(resource, args).resultName;
 }
 
 export function ClearAllResources(): void {
-	resources.clear();
+	resources = [];
 	resourceFiles.clear();
 }
 
-export async function ExportAllResources(): Promise<void> {
-	await Promise.all([...resources.values()]
-		.map((resource) => resource.finalize()));
+export async function ExportAllResources(printProgress: boolean = true): Promise<void> {
+	const tasks = resources.flatMap((r) => r.getProcesses());
+	const totalTasks = tasks.length;
+	let finishedTasks = 0;
+	const digitLen = Math.max(Math.log10(totalTasks)) + 1;
+
+	if (process.env.CI === 'true') {
+		printProgress = false;
+	}
+
+	const updateProgress = () => {
+		if (!printProgress)
+			return;
+		process.stdout.write(`\r${finishedTasks.toString().padStart(digitLen)}/${totalTasks} (${Math.floor(100 * finishedTasks / totalTasks).toString().padStart(3)}%)`);
+	};
+
+	updateProgress();
+
+	const taskRunner = async () => {
+		for (; ;) {
+			const task = tasks.shift();
+			if (!task)
+				return;
+
+			try {
+				await task();
+			} catch (error) {
+				logger.fatal(`Error processing resource:`, error);
+			}
+			finishedTasks++;
+			updateProgress();
+		}
+	};
+
+	const runners: Promise<void>[] = [];
+
+	for (let i = 0; i < availableParallelism(); i++) {
+		runners.push(taskRunner());
+	}
+
+	await Promise.allSettled(runners);
+
+	updateProgress();
+	// Add a final newline
+	if (printProgress) {
+		process.stdout.write('\n');
+	}
 }
 
 export async function CleanOldResources(): Promise<void> {

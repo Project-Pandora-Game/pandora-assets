@@ -9,6 +9,10 @@ DefineAsset({
 			default: '#9C8686',
 			minAlpha: 0.6,
 		},
+		seams: {
+			name: 'Seams',
+			default: '#766060',
+		},
 	},
 	// size:800, y:574, centered
 	preview: 'preview.png',
@@ -35,12 +39,16 @@ DefineAsset({
 					id: 'fully',
 					name: 'Ripped fully',
 				},
+				{
+					id: 'seam',
+					name: 'Seams on the back',
+				},
 			],
 		},
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-		credits: ['ClaudiaMia'],
+		credits: ['ClaudiaMia', 'Naera', 'Sandrine'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
@@ -48,6 +56,13 @@ DefineAsset({
 				source: 'Self-Made',
 				copyrightHolder: 'ClaudiaMia',
 				editedBy: 'ClaudiaMia',
+				license: 'Pandora-Use-Only-v1-or-later',
+			},
+			{
+				part: 'Seam',
+				source: 'Self-Made',
+				copyrightHolder: 'Naera',
+				editedBy: 'Sandrine',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],

@@ -36,7 +36,7 @@ DefineAsset({
 	modules: {
 		lock: {
 			type: 'lockSlot',
-			name: 'Lock cuffs',
+			name: 'Lock for cuffs',
 			occupiedProperties: {
 				blockAddRemove: true,
 			},
@@ -63,8 +63,8 @@ DefineAsset({
 					default: true,
 				},
 				{
-					id: 'chained',
-					name: 'Chained',
+					id: 'chained_front',
+					name: 'Chained in front',
 					properties: {
 						poseLimits: {
 							options: [
@@ -82,18 +82,6 @@ DefineAsset({
 								},
 								{
 									arms: {
-										position: 'back',
-										rotation: 'down',
-									},
-									bones: {
-										arm_r: 74,
-										arm_l: 74,
-										elbow_r: 43,
-										elbow_l: 43,
-									},
-								},
-								{
-									arms: {
 										position: 'front',
 										rotation: 'up',
 									},
@@ -114,6 +102,31 @@ DefineAsset({
 										arm_l: -74,
 										elbow_r: -43,
 										elbow_l: -43,
+									},
+								},
+							],
+						},
+						stateFlags: {
+							provides: ['chain'],
+						},
+					},
+				},
+				{
+					id: 'chained_back',
+					name: 'Chained behind',
+					properties: {
+						poseLimits: {
+							options: [
+								{
+									arms: {
+										position: 'back',
+										rotation: 'down',
+									},
+									bones: {
+										arm_r: 74,
+										arm_l: 74,
+										elbow_r: 43,
+										elbow_l: 43,
 									},
 								},
 								{

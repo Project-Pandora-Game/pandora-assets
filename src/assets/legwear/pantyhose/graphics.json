@@ -129,6 +129,34 @@
 				]
 			},
 			"name": "soles"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "BELOW_BODY",
+			"points": "body",
+			"mirror": 0,
+			"colorizationKey": "seams",
+			"image": {
+				"image": "pantyhose_b_seam.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "pantiesState",
+									"operator": "!=",
+									"value": "seam"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "seams"
 		}
 	]
 }

@@ -1,5 +1,6 @@
 import * as fs from 'fs';
-import { join } from 'path';
+import { join, relative } from 'path';
+import ignore from 'ignore';
 import { GetLogger, SetConsoleOutput, LogLevel, AssetsDefinitionFile, AssetsGraphicsDefinitionFile, logConfig } from 'pandora-common';
 import { GlobalDefineAsset, SetCurrentContext } from './tools';
 import { AssetDatabase } from './tools/assetDatabase';
@@ -8,7 +9,7 @@ import { RunDev } from './tools/watch';
 import { LoadBoneNameValidation, boneDefinition } from './bones';
 import { GraphicsDatabase } from './tools/graphicsDatabase';
 import { BODYPARTS, ValidateBodyparts } from './bodyparts';
-import { ASSET_DEST_DIR, ASSET_SRC_DIR, OUT_DIR, IS_PRODUCTION_BUILD } from './constants';
+import { ASSET_DEST_DIR, ASSET_SRC_DIR, OUT_DIR, IS_PRODUCTION_BUILD, BASE_DIR } from './constants';
 import { LoadTemplates } from './templates';
 import { POSE_PRESETS } from './posePresets';
 import { LoadGitData } from './tools/git';
@@ -58,6 +59,9 @@ function CheckErrors(printWarnings: boolean = true) {
 async function Run() {
 	logger.info('Building...');
 
+	const ig = ignore();
+	ig.add(fs.readFileSync(join(BASE_DIR, '.gitignore'), 'utf-8'));
+
 	// Setup environment
 	globalThis.DefineAsset = GlobalDefineAsset;
 	globalThis.DefineRoomDeviceAsset = GlobalDefineRoomDeviceAsset;
@@ -95,28 +99,31 @@ async function Run() {
 		const categoryDestPath = join(ASSET_DEST_DIR, category);
 
 		// Ignore non-directories in assets
-		if (!fs.statSync(categorySrcPath).isDirectory())
+		if (!IsDirectory(categorySrcPath))
 			continue;
 
-		if (!fs.statSync(categoryDestPath).isDirectory()) {
+		if (!IsDirectory(categoryDestPath)) {
 			throw new Error(`assets/${category} is not directory`);
-		}
-		if (!fs.statSync(categorySrcPath).isDirectory()) {
-			throw new Error(`assets/${category} missing in source path`);
 		}
 
 		for (const asset of fs.readdirSync(categorySrcPath)) {
 			const assetDestPath = join(categoryDestPath, asset);
 			const assetSrcPath = join(categorySrcPath, asset);
 
-			if (!fs.statSync(assetDestPath).isDirectory()) {
+			if (ig.ignores(relative(process.cwd(), assetSrcPath))) {
+				logger.verbose(`Ignoring assets/${category}/${asset}...`);
+				continue;
+			}
+			if (!IsDirectory(assetSrcPath)) {
+				logger.warning(`assets/${category}/${asset} is not directory`);
+				continue;
+			}
+			if (!IsFile(join(assetSrcPath, `${asset}.asset.ts`))) {
+				logger.error(`assets/${category}/${asset} expected asset file '${asset}.asset.ts' not found`);
+				continue;
+			}
+			if (!IsDirectory(assetDestPath)) {
 				throw new Error(`assets/${category}/${asset} is not directory`);
-			}
-			if (!fs.statSync(assetSrcPath).isDirectory()) {
-				throw new Error(`assets/${category}/${asset} missing in source path`);
-			}
-			if (!fs.statSync(join(assetSrcPath, `${asset}.asset.ts`)).isFile()) {
-				throw new Error(`assets/${category}/${asset} expected asset file '${asset}.asset.ts' not found`);
 			}
 
 			SetCurrentContext(category, asset, assetSrcPath);
@@ -156,12 +163,18 @@ async function Run() {
 	ValidateBodyparts(definitions);
 
 	const definitionsFile = DefineResourceInline('assets.json', JSON.stringify(definitions));
+
+	// Do export of all resources pending so far
+	await ExportAllResources();
+
+	// Defer exporting the "current" file until after all previous files were processed (to avoid race condition of shard reloading before it should)
 	DefineResourceInline('current', `${definitionsFile.hash}\n`, 'current');
 
-	await Promise.all([
-		ExportAllResources(),
-		CleanOldResources(),
-	]);
+	// Do export all again to wait for the "current" file
+	await ExportAllResources(false);
+
+	// Perform cleanup only after all resources are exported (this allows shard to still use old data before new data is ready)
+	await CleanOldResources();
 
 	if (!CheckErrors())
 		return;
@@ -185,4 +198,27 @@ if (process.argv.includes('--watch')) {
 	Run().catch((error) => {
 		logger.fatal('Error:\n', error);
 	});
+}
+
+function AssertErrorEnoent(error: unknown) {
+	if (!(error instanceof Error && 'code' in error && error.code === 'ENOENT'))
+		throw error;
+}
+
+function IsDirectory(path: string) {
+	try {
+		return fs.statSync(path).isDirectory();
+	} catch (error) {
+		AssertErrorEnoent(error);
+		return false;
+	}
+}
+
+function IsFile(path: string) {
+	try {
+		return fs.statSync(path).isFile();
+	} catch (error) {
+		AssertErrorEnoent(error);
+		return false;
+	}
 }
