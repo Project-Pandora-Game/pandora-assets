@@ -47,7 +47,7 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "bra breasts above body",
-			"priority": "ABOVE_BODY",
+			"priority": "BREASTS",
 			"points": "breasts",
 			"mirror": 0,
 			"colorizationKey": "bra",
@@ -227,18 +227,6 @@
 			"image": {
 				"image": "",
 				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "bust",
-									"operator": "=",
-									"value": "covered"
-								}
-							]
-						]
-					},
 					{
 						"image": "latex_corset_underbust_medium_bright.png",
 						"condition": [
@@ -537,7 +525,7 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "bra back view",
-			"priority": "BELOW_BODY",
+			"priority": "BODY_SOLES",
 			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "bra",
@@ -565,7 +553,7 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "bra back bottom",
-			"priority": "BELOW_BODY",
+			"priority": "BODY_SOLES",
 			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "bra",
@@ -605,7 +593,7 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "bra back lacing",
-			"priority": "BELOW_BODY",
+			"priority": "BELOW_BODY_SOLES",
 			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "laces",
