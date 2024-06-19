@@ -1,5 +1,4 @@
 import { readFileSync } from 'fs';
-import { Immutable } from 'immer';
 import { diffString } from 'json-diff';
 import { isEqual } from 'lodash';
 import {
@@ -9,10 +8,7 @@ import {
 	LayerDefinition,
 	LayerImageOverride,
 	LayerImageSetting,
-	Logger,
 	ModuleNameSchema,
-	PointTemplate,
-	PointTemplateDiff,
 	SCHEME_OVERRIDE,
 } from 'pandora-common';
 import { relative } from 'path';
@@ -20,6 +16,7 @@ import { z } from 'zod';
 import { SRC_DIR } from '../constants';
 import { GraphicsDatabase } from './graphicsDatabase';
 import { DefineImageResource } from './resources';
+import { AssetGraphicsValidate } from './validation/assetGraphics';
 import { WatchFile } from './watch';
 
 export const GENERATED_RESOLUTIONS: readonly number[] = [0.5, 0.25];
@@ -63,36 +60,6 @@ export function LoadAssetsGraphics(path: string, assetModules: readonly string[]
 	return {
 		layers: parseResult.data.layers.map(LoadAssetLayer),
 	};
-}
-
-function AssetGraphicsValidate(definition: AssetGraphicsDefinition, logger: Logger): void {
-	for (let layerIndex = 0; layerIndex < definition.layers.length; layerIndex++) {
-		const layer = definition.layers[layerIndex];
-
-		const layerLogger = logger.prefixMessages(`Layer #${layerIndex} (${layer.name ?? '[UNNAMED]'}): `);
-
-		// If layer has custom points, validate them
-		if (Array.isArray(layer.points)) {
-			// Try to find if there isn't a point template matching the
-			for (const [template, templateData] of GraphicsDatabase.templates) {
-				if (PointDefinitionsMatch(templateData, layer.points)) {
-					layerLogger.warning(`Custom point definition exactly matches template '${template}'. Use template reference instead.`);
-				}
-			}
-			// Try to find if any earlier layer has a matching template
-			for (let otherLayerIndex = 0; otherLayerIndex < layerIndex; otherLayerIndex++) {
-				const otherLayer = definition.layers[otherLayerIndex];
-				if (Array.isArray(otherLayer.points) && PointDefinitionsMatch(otherLayer.points, layer.points)) {
-					layerLogger.warning(`Custom point definition exactly matches layer #${otherLayerIndex} (${otherLayer.name ?? '[UNNAMED]'}). Use reference for one of the layers instead.`);
-				}
-			}
-		}
-	}
-}
-
-function PointDefinitionsMatch(a: Immutable<PointTemplate>, b: Immutable<PointTemplate>): boolean {
-	const delta = PointTemplateDiff(a, b);
-	return delta.added == null && delta.removed == null;
 }
 
 function LoadLayerImage(image: string): string {
