@@ -28,6 +28,22 @@ export function AssetGraphicsValidate(definition: AssetGraphicsDefinition, logge
 					layerLogger.warning(`Custom point definition exactly matches layer #${otherLayerIndex} (${otherLayer.name ?? '[UNNAMED]'}). Use reference for one of the layers instead.`);
 				}
 			}
+		} else if (typeof layer.points === 'number') {
+			// If layer references another, validate that link
+			if (!Number.isInteger(layer.points) || layer.points < 0 || layer.points >= definition.layers.length) {
+				layerLogger.error(`Point definition references non-existing layer #${layer.points}`);
+				continue;
+			}
+
+			const referencedLayer = definition.layers[layer.points];
+
+			if (typeof referencedLayer.points === 'number') {
+				// No indirect layer references
+				layerLogger.warning(`Point definition references layer #${layer.points} (${referencedLayer.name ?? '[UNNAMED]'}), but that layer references layer #${referencedLayer.points}. Use reference to layer #${referencedLayer.points} instead.`);
+			} else if (typeof referencedLayer.points === 'string') {
+				// No indirect template references
+				layerLogger.warning(`Point definition references layer #${layer.points} (${referencedLayer.name ?? '[UNNAMED]'}), but that layer uses template '${referencedLayer.points}'. Use the template directly instead.`);
+			}
 		}
 	}
 }
