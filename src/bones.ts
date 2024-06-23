@@ -1,7 +1,7 @@
 // TODO: Re-add `import type` after ESLint gets fixed
-import { BoneDefinitionCompressed, BoneNameSchema, BoneType, CoordinatesCompressed, SCHEME_OVERRIDE } from 'pandora-common';
-import { ZodIssueCode } from 'zod';
 import { Immutable } from 'immer';
+import { BoneDefinitionCompressed, BoneNameSchema, BoneType, CoordinatesCompressed, IsNotNullable, SCHEME_OVERRIDE } from 'pandora-common';
+import { ZodIssueCode } from 'zod';
 
 const boneDefinitionImpl = {
 	arm_l: {
@@ -52,7 +52,7 @@ export function LoadBoneNameValidation() {
 			.values(boneDefinition)
 			.filter((v) => v.mirror)
 			.map((v) => v.mirror)
-			.filter((v) => v != null) as string[]);
+			.filter(IsNotNullable));
 
 	BoneNameSchema[SCHEME_OVERRIDE]((bone, ctx) => {
 		if (!bones.includes(bone)) {
