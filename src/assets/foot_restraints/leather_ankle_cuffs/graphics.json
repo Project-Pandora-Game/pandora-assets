@@ -158,6 +158,112 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "ABOVE_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "bar",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "leatheranklecuffs_bar_wide.png",
+						"condition": [
+							[
+								{
+									"module": "barWidth",
+									"operator": "=",
+									"value": "wide"
+								},
+								{
+									"legs": "standing"
+								}
+							]
+						]
+					},
+					{
+						"image": "leatheranklecuffs_bar_spread.png",
+						"condition": [
+							[
+								{
+									"module": "barWidth",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"legs": "standing"
+								}
+							]
+						]
+					},
+					{
+						"image": "leatheranklecuffs_bar_narrow.png",
+						"condition": [
+							[
+								{
+									"module": "barWidth",
+									"operator": "=",
+									"value": "narrow"
+								},
+								{
+									"legs": "standing"
+								}
+							]
+						]
+					},
+					{
+						"image": "leatheranklecuffs_bar_sitting_wide.png",
+						"condition": [
+							[
+								{
+									"module": "barWidth",
+									"operator": "=",
+									"value": "wide"
+								},
+								{
+									"legs": "sitting"
+								}
+							]
+						]
+					},
+					{
+						"image": "leatheranklecuffs_bar_sitting.png",
+						"condition": [
+							[
+								{
+									"module": "barWidth",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"legs": "sitting"
+								}
+							]
+						]
+					},
+					{
+						"image": "leatheranklecuffs_bar_sitting_narrow.png",
+						"condition": [
+							[
+								{
+									"module": "barWidth",
+									"operator": "=",
+									"value": "narrow"
+								},
+								{
+									"legs": "sitting"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "bar"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "cuff",
@@ -390,6 +496,71 @@
 				]
 			},
 			"name": "chain kneeling"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "bar",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "leatheranklecuffs_bar_kneeling_front.png",
+						"condition": [
+							[
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "leatheranklecuffs_bar_kneeling.png",
+						"condition": [
+							[
+								{
+									"legs": "kneeling"
+								},
+								{
+									"module": "barWidth",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					},
+					{
+						"image": "leatheranklecuffs_bar_kneeling_narrow.png",
+						"condition": [
+							[
+								{
+									"legs": "kneeling"
+								},
+								{
+									"module": "barWidth",
+									"operator": "=",
+									"value": "narrow"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			},
+			"name": "bar kneeling"
 		}
 	]
 }
