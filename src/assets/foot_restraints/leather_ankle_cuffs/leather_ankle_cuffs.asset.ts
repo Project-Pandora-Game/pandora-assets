@@ -118,7 +118,6 @@ DefineAsset({
 				{
 					id: 'unbarred',
 					name: 'No Bar',
-					default: true,
 				},
 				{
 					id: 'narrow',
@@ -135,7 +134,6 @@ DefineAsset({
 				{
 					id: 'normal',
 					name: 'Normal',
-					default: true,
 					properties: {
 						poseLimits: {
 							bones: {
