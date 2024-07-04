@@ -117,8 +117,8 @@ DefineRoomDeviceAsset({
 			{
 				part: 'rug',
 				source: 'Self-Made',
-				copyrightHolder: 'Sandrine',
-				editedBy: 'Sandrine',
+				copyrightHolder: 'SandrinePDR',
+				editedBy: 'SandrinePDR',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
