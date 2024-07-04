@@ -110,7 +110,7 @@ DefineRoomDeviceAsset({
 	],
 	ownership: {
 		responsibleContributor: 'SandrinePDR <118102950+SandrinePDR@users.noreply.github.com>',
-		credits: ['Sandrine'],
+		credits: ['SandrinePDR'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
