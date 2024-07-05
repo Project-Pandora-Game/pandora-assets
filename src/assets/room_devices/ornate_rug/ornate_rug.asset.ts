@@ -46,7 +46,7 @@ DefineRoomDeviceAsset({
 	},
 	pivot: {
 		x: 353,
-		y: 165,
+		y: -120,
 	},
 	graphicsLayers: [
 		{
