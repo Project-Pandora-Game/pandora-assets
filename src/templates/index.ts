@@ -19,6 +19,8 @@ const templateList: string[] = [
 	'skirt_short_static_breasts',
 	'skirt_long',
 	'skirt_long_static_breasts',
+	// Custom templates
+	'custom_latex_dress',
 ];
 
 export function LoadTemplates() {
