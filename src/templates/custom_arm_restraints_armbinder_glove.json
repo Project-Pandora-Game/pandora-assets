@@ -1,0 +1,155 @@
+[
+	{
+		"pos": [
+			604,
+			469
+		],
+		"mirror": true,
+		"transforms": [
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": 7,
+					"y": 0
+				}
+			}
+		]
+	},
+	{
+		"pos": [
+			576,
+			599
+		],
+		"mirror": true,
+		"transforms": [
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": 7,
+					"y": 0
+				}
+			}
+		]
+	},
+	{
+		"pos": [
+			560,
+			681
+		],
+		"mirror": true,
+		"transforms": [
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": 7,
+					"y": 0
+				}
+			}
+		]
+	},
+	{
+		"pos": [
+			540,
+			736
+		],
+		"mirror": true,
+		"transforms": [
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": 3,
+					"y": 0
+				},
+				"condition": [
+					[
+						{
+							"bone": "chest_width",
+							"operator": "<",
+							"value": 0
+						}
+					]
+				]
+			},
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": 7,
+					"y": 0
+				},
+				"condition": [
+					[
+						{
+							"bone": "chest_width",
+							"operator": ">",
+							"value": 0
+						}
+					]
+				]
+			}
+		]
+	},
+	{
+		"pos": [
+			539,
+			779
+		],
+		"mirror": true,
+		"transforms": [
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": -16,
+					"y": 0
+				},
+				"condition": [
+					[
+						{
+							"bone": "chest_width",
+							"operator": "<",
+							"value": 0
+						}
+					]
+				]
+			},
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": 7,
+					"y": 0
+				},
+				"condition": [
+					[
+						{
+							"bone": "chest_width",
+							"operator": ">",
+							"value": 0
+						}
+					]
+				]
+			}
+		]
+	},
+	{
+		"pos": [
+			525,
+			836
+		],
+		"mirror": true,
+		"transforms": []
+	},
+	{
+		"pos": [
+			499,
+			856
+		],
+		"mirror": false,
+		"transforms": []
+	}
+]

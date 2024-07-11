@@ -1,0 +1,98 @@
+[
+	{
+		"pos": [
+			0,
+			0
+		],
+		"transforms": [
+			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -29
+				},
+				"condition": [
+					[
+						{
+							"legs": "sitting"
+						}
+					]
+				]
+			}
+		],
+		"mirror": true,
+		"pointType": "static_r"
+	},
+	{
+		"pos": [
+			0,
+			1500
+		],
+		"transforms": [
+			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -29
+				},
+				"condition": [
+					[
+						{
+							"legs": "sitting"
+						}
+					]
+				]
+			}
+		],
+		"mirror": true,
+		"pointType": "static_r"
+	},
+	{
+		"pos": [
+			500,
+			0
+		],
+		"transforms": [
+			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -29
+				},
+				"condition": [
+					[
+						{
+							"legs": "sitting"
+						}
+					]
+				]
+			}
+		],
+		"mirror": false,
+		"pointType": "static"
+	},
+	{
+		"pos": [
+			500,
+			1500
+		],
+		"transforms": [
+			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -29
+				},
+				"condition": [
+					[
+						{
+							"legs": "sitting"
+						}
+					]
+				]
+			}
+		],
+		"mirror": false,
+		"pointType": "static"
+	}
+]

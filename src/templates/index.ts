@@ -20,7 +20,17 @@ const templateList: string[] = [
 	'skirt_long',
 	'skirt_long_static_breasts',
 	// Custom templates
-	'custom_latex_dress',
+	'custom_arm_restraints_armbinder_glove',
+	'custom_arm_restraints_straight_jacket_straps',
+	'custom_arm_restraints_torso_ropes',
+	'custom_body_female_sex1',
+	'custom_body_nipples',
+	'custom_bras_style1_breasts',
+	'custom_dresses_latex_dress_breasts',
+	'custom_dresses_nightgown',
+	'custom_foot_restraints_leg_ropes',
+	'custom_tops_jeans_jacket_breasts',
+	'custom_tops_leather_jacket_breasts',
 ];
 
 export function LoadTemplates() {
