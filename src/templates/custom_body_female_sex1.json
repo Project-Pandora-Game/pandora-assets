@@ -4,6 +4,8 @@
 			0,
 			0
 		],
+		"mirror": true,
+		"pointType": "static_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -19,15 +21,15 @@
 					]
 				]
 			}
-		],
-		"mirror": true,
-		"pointType": "static_r"
+		]
 	},
 	{
 		"pos": [
 			0,
 			1500
 		],
+		"mirror": true,
+		"pointType": "static_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -43,15 +45,15 @@
 					]
 				]
 			}
-		],
-		"mirror": true,
-		"pointType": "static_r"
+		]
 	},
 	{
 		"pos": [
 			500,
 			0
 		],
+		"mirror": false,
+		"pointType": "static",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -67,15 +69,15 @@
 					]
 				]
 			}
-		],
-		"mirror": false,
-		"pointType": "static"
+		]
 	},
 	{
 		"pos": [
 			500,
 			1500
 		],
+		"mirror": false,
+		"pointType": "static",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -91,8 +93,6 @@
 					]
 				]
 			}
-		],
-		"mirror": false,
-		"pointType": "static"
+		]
 	}
 ]

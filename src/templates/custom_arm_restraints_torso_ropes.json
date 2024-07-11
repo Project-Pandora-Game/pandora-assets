@@ -4,53 +4,60 @@
 			454,
 			365
 		],
-		"transforms": [],
 		"mirror": true,
-		"pointType": "body_r"
+		"pointType": "body_r",
+		"transforms": []
 	},
 	{
 		"pos": [
 			417,
 			325
 		],
-		"transforms": [],
 		"mirror": true,
-		"pointType": "body_r"
+		"pointType": "body_r",
+		"transforms": []
 	},
 	{
 		"pos": [
 			443,
 			187
 		],
-		"transforms": [],
 		"mirror": true,
-		"pointType": "body_r"
+		"pointType": "body_r",
+		"transforms": []
 	},
 	{
 		"pos": [
 			470,
 			387
 		],
-		"transforms": [],
 		"mirror": true,
-		"pointType": "body_r"
+		"pointType": "body_r",
+		"transforms": []
 	},
 	{
 		"pos": [
 			441,
 			392
 		],
+		"mirror": true,
+		"pointType": "bodyarm_r",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": -4
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "arm_width",
+				"value": {
+					"x": 0,
+					"y": 1
+				},
 				"condition": [
 					[
 						{
@@ -59,23 +66,23 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 0,
-					"y": 1
-				}
+				]
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": -7,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "arm_r",
+				"value": {
+					"x": -36,
+					"y": 20
+				},
 				"condition": [
 					[
 						{
@@ -84,54 +91,54 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": -36,
-					"y": 20
-				}
+				]
 			}
-		],
-		"mirror": true,
-		"pointType": "bodyarm_r"
+		]
 	},
 	{
 		"pos": [
 			429,
 			397
 		],
+		"mirror": true,
+		"pointType": "arm_r",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": -4
 				}
 			},
 			{
-				"bone": "arm_r",
 				"type": "rotate",
+				"bone": "arm_r",
 				"value": -0.12
 			},
 			{
-				"bone": "arm_r",
 				"type": "shift",
+				"bone": "arm_r",
 				"value": {
 					"x": 0,
 					"y": 4
 				}
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": -7,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "arm_r",
+				"value": {
+					"x": -36,
+					"y": 30
+				},
 				"condition": [
 					[
 						{
@@ -140,15 +147,15 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": -36,
-					"y": 30
-				}
+				]
 			},
 			{
+				"type": "shift",
 				"bone": "arm_r",
+				"value": {
+					"x": 20,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -157,46 +164,46 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 20,
-					"y": 0
-				}
+				]
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_r"
+		]
 	},
 	{
 		"pos": [
 			413,
 			397
 		],
+		"mirror": true,
+		"pointType": "arm_r",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": -4
 				}
 			},
 			{
-				"bone": "arm_r",
 				"type": "rotate",
+				"bone": "arm_r",
 				"value": -0.7
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": -7,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "arm_r",
+				"value": {
+					"x": -10,
+					"y": 50
+				},
 				"condition": [
 					[
 						{
@@ -205,15 +212,15 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": -10,
-					"y": 50
-				}
+				]
 			},
 			{
+				"type": "shift",
 				"bone": "arm_r",
+				"value": {
+					"x": 20,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -222,22 +229,17 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 20,
-					"y": 0
-				}
+				]
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_r"
+		]
 	},
 	{
 		"pos": [
 			400,
 			399
 		],
+		"mirror": true,
+		"pointType": "arm_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -294,26 +296,28 @@
 					]
 				]
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_r"
+		]
 	},
 	{
 		"pos": [
 			714,
 			408
 		],
+		"mirror": true,
+		"pointType": "arm_l",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": -4
 				}
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 0.05,
 				"condition": [
 					[
 						{
@@ -322,12 +326,12 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 0.05
+				]
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 0.1,
 				"condition": [
 					[
 						{
@@ -336,43 +340,43 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 0.1
+				]
 			},
 			{
-				"bone": "arm_l",
 				"type": "rotate",
+				"bone": "arm_l",
 				"value": 1
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_l"
+		]
 	},
 	{
 		"pos": [
 			718,
 			408
 		],
+		"mirror": true,
+		"pointType": "arm_l",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": -4
 				}
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 0.6,
 				"condition": [
 					[
 						{
@@ -381,12 +385,12 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 0.6
+				]
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 0.15,
 				"condition": [
 					[
 						{
@@ -395,43 +399,43 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 0.15
+				]
 			},
 			{
-				"bone": "arm_l",
 				"type": "rotate",
+				"bone": "arm_l",
 				"value": 1
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_l"
+		]
 	},
 	{
 		"pos": [
 			728,
 			408
 		],
+		"mirror": true,
+		"pointType": "arm_l",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": -4
 				}
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 0.6,
 				"condition": [
 					[
 						{
@@ -440,12 +444,12 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 0.6
+				]
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 0.15,
 				"condition": [
 					[
 						{
@@ -454,43 +458,43 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 0.15
+				]
 			},
 			{
-				"bone": "arm_l",
 				"type": "rotate",
+				"bone": "arm_l",
 				"value": 1
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_l"
+		]
 	},
 	{
 		"pos": [
 			734,
 			408
 		],
+		"mirror": true,
+		"pointType": "arm_l",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": -4
 				}
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 1.08,
 				"condition": [
 					[
 						{
@@ -499,12 +503,12 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 1.08
+				]
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 0.6,
 				"condition": [
 					[
 						{
@@ -513,43 +517,43 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 0.6
+				]
 			},
 			{
-				"bone": "arm_l",
 				"type": "rotate",
+				"bone": "arm_l",
 				"value": 1
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_l"
+		]
 	},
 	{
 		"pos": [
 			744,
 			408
 		],
+		"mirror": true,
+		"pointType": "arm_l",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": -4
 				}
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 1,
 				"condition": [
 					[
 						{
@@ -558,12 +562,12 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 1
+				]
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 0.8,
 				"condition": [
 					[
 						{
@@ -572,259 +576,259 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 0.8
+				]
 			},
 			{
-				"bone": "arm_l",
 				"type": "rotate",
+				"bone": "arm_l",
 				"value": 1
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_l"
+		]
 	},
 	{
 		"pos": [
 			876,
 			408
 		],
+		"mirror": true,
+		"pointType": "arm_l",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": -2
 				}
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
-				"type": "rotate",
 				"value": 1
 			},
 			{
+				"type": "rotate",
 				"bone": "arm_l",
-				"type": "rotate",
 				"value": 1
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_l"
+		]
 	},
 	{
 		"pos": [
 			938,
 			365
 		],
+		"mirror": true,
+		"pointType": "arm_l",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": -1
 				}
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
-				"type": "rotate",
 				"value": 1
 			},
 			{
+				"type": "rotate",
 				"bone": "arm_l",
-				"type": "rotate",
 				"value": 1
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_l"
+		]
 	},
 	{
 		"pos": [
 			999,
 			408
 		],
+		"mirror": true,
+		"pointType": "arm_l",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 1,
 					"y": -1
 				}
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
-				"type": "rotate",
 				"value": 1
 			},
 			{
+				"type": "rotate",
 				"bone": "arm_l",
-				"type": "rotate",
 				"value": 1
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_l"
+		]
 	},
 	{
 		"pos": [
 			999,
 			462
 		],
+		"mirror": true,
+		"pointType": "arm_l",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 1,
 					"y": 1
 				}
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
-				"type": "rotate",
 				"value": 1
 			},
 			{
+				"type": "rotate",
 				"bone": "arm_l",
-				"type": "rotate",
 				"value": 1
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_l"
+		]
 	},
 	{
 		"pos": [
 			938,
 			514
 		],
+		"mirror": true,
+		"pointType": "arm_l",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": 1
 				}
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
-				"type": "rotate",
 				"value": 1
 			},
 			{
+				"type": "rotate",
 				"bone": "arm_l",
-				"type": "rotate",
 				"value": 1
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_l"
+		]
 	},
 	{
 		"pos": [
 			876,
 			462
 		],
+		"mirror": true,
+		"pointType": "arm_l",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": 2
 				}
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
-				"type": "rotate",
 				"value": 1
 			},
 			{
+				"type": "rotate",
 				"bone": "arm_l",
-				"type": "rotate",
 				"value": 1
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_l"
+		]
 	},
 	{
 		"pos": [
 			744,
 			462
 		],
+		"mirror": true,
+		"pointType": "arm_l",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": 4
 				}
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 0.8,
 				"condition": [
 					[
 						{
@@ -833,12 +837,12 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 0.8
+				]
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 1,
 				"condition": [
 					[
 						{
@@ -847,43 +851,43 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 1
+				]
 			},
 			{
+				"type": "rotate",
 				"bone": "arm_l",
-				"type": "rotate",
 				"value": 1
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_l"
+		]
 	},
 	{
 		"pos": [
 			734,
 			462
 		],
+		"mirror": true,
+		"pointType": "arm_l",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": 4
 				}
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 0.6,
 				"condition": [
 					[
 						{
@@ -892,12 +896,12 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 0.6
+				]
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 1.08,
 				"condition": [
 					[
 						{
@@ -906,43 +910,43 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 1.08
+				]
 			},
 			{
-				"bone": "arm_l",
 				"type": "rotate",
+				"bone": "arm_l",
 				"value": 1
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_l"
+		]
 	},
 	{
 		"pos": [
 			728,
 			462
 		],
+		"mirror": true,
+		"pointType": "arm_l",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": 4
 				}
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 0.15,
 				"condition": [
 					[
 						{
@@ -951,12 +955,12 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 0.15
+				]
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 0.6,
 				"condition": [
 					[
 						{
@@ -965,43 +969,43 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 0.6
+				]
 			},
 			{
-				"bone": "arm_l",
 				"type": "rotate",
+				"bone": "arm_l",
 				"value": 1
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_l"
+		]
 	},
 	{
 		"pos": [
 			718,
 			462
 		],
+		"mirror": true,
+		"pointType": "arm_l",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": 4
 				}
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 0.15,
 				"condition": [
 					[
 						{
@@ -1010,12 +1014,12 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 0.15
+				]
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 0.6,
 				"condition": [
 					[
 						{
@@ -1024,43 +1028,43 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 0.6
+				]
 			},
 			{
-				"bone": "arm_l",
 				"type": "rotate",
+				"bone": "arm_l",
 				"value": 1
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_l"
+		]
 	},
 	{
 		"pos": [
 			714,
 			462
 		],
+		"mirror": true,
+		"pointType": "arm_l",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": 4
 				}
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 0.1,
 				"condition": [
 					[
 						{
@@ -1069,12 +1073,12 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 0.1
+				]
 			},
 			{
+				"type": "rotate",
 				"bone": "elbow_l",
+				"value": 0.05,
 				"condition": [
 					[
 						{
@@ -1083,58 +1087,61 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": 0.05
+				]
 			},
 			{
-				"bone": "arm_l",
 				"type": "rotate",
+				"bone": "arm_l",
 				"value": 1
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_l"
+		]
 	},
 	{
 		"pos": [
 			736,
 			434
 		],
+		"mirror": true,
+		"pointType": "arm_l",
 		"transforms": [
 			{
-				"bone": "arm_l",
 				"type": "rotate",
+				"bone": "arm_l",
 				"value": 1
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_l"
+		]
 	},
 	{
 		"pos": [
 			421,
 			478
 		],
+		"mirror": true,
+		"pointType": "bodyarm_r",
 		"transforms": [
 			{
+				"type": "shift",
 				"bone": "arm_r",
+				"value": {
+					"x": 5,
+					"y": 25
+				},
 				"condition": [
 					[
 						{
@@ -1143,64 +1150,59 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 5,
-					"y": 25
-				}
+				]
 			},
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": 5
 				}
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": -7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "bodyarm_r"
+		]
 	},
 	{
 		"pos": [
 			426,
 			440
 		],
+		"mirror": true,
+		"pointType": "bodyarm_r",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": 5
 				}
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": -7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "bodyarm_r"
+		]
 	},
 	{
 		"pos": [
 			402,
 			447
 		],
+		"mirror": true,
+		"pointType": "arm_r",
 		"transforms": [
 			{
 				"type": "rotate",
@@ -1223,52 +1225,57 @@
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_r"
+		]
 	},
 	{
 		"pos": [
 			425,
 			495
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "waist",
 				"type": "shift",
+				"bone": "waist",
 				"value": {
 					"x": -2,
 					"y": 0
 				}
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": -7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			442,
 			727
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "hips",
 				"type": "shift",
+				"bone": "hips",
 				"value": {
 					"x": -3,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "hips",
+				"value": {
+					"x": -1,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -1277,52 +1284,52 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": -1,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 10,
+					"y": -36
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 10,
-					"y": -36
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.5
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			388,
 			705
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -9,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "leg_width",
+				"value": {
+					"x": 4,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -1331,23 +1338,23 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 4,
-					"y": 0
-				}
+				]
 			},
 			{
-				"bone": "hips",
 				"type": "shift",
+				"bone": "hips",
 				"value": {
 					"x": -5,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "hips",
+				"value": {
+					"x": -4,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -1356,64 +1363,64 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": -4,
-					"y": 0
-				}
+				]
 			},
 			{
-				"condition": [
-					[
-						{
-							"legs": "sitting"
-						}
-					]
-				],
 				"type": "const-shift",
 				"value": {
 					"x": 10,
 					"y": -26
-				}
-			},
-			{
-				"bone": "leg_r",
-				"type": "rotate",
-				"value": -0.39
-			},
-			{
-				"bone": "leg_r",
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
+				]
+			},
+			{
 				"type": "rotate",
-				"value": 0.1
+				"bone": "leg_r",
+				"value": -0.39
+			},
+			{
+				"type": "rotate",
+				"bone": "leg_r",
+				"value": 0.1,
+				"condition": [
+					[
+						{
+							"legs": "sitting"
+						}
+					]
+				]
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			409,
 			734
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -9,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "leg_width",
+				"value": {
+					"x": 6,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -1422,23 +1429,23 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 6,
-					"y": 0
-				}
+				]
 			},
 			{
-				"bone": "hips",
 				"type": "shift",
+				"bone": "hips",
 				"value": {
 					"x": -3,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "hips",
+				"value": {
+					"x": -3,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -1447,60 +1454,60 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": -3,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 8,
+					"y": -48
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 8,
-					"y": -48
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.6
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			386,
 			760
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -9,
 					"y": 0
 				}
 			},
 			{
-				"bone": "hips",
 				"type": "shift",
+				"bone": "hips",
 				"value": {
 					"x": -4,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "hips",
+				"value": {
+					"x": -2,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -1509,62 +1516,62 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": -2,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 16,
+					"y": -56
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 16,
-					"y": -56
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.67
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			420,
 			956
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -170
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -170
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -1574,117 +1581,117 @@
 							"view": "front"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": 0
-				}
+				]
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			409,
 			1016
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -3,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -180
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -180
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 44,
+					"y": -34
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 44,
-					"y": -34
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			400,
 			1351
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -2,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -162
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 53,
+					"y": -369
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 53,
-					"y": -369
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			},
 			{
+				"type": "shift",
 				"bone": "tiptoeing",
+				"value": {
+					"x": 0,
+					"y": 20
+				},
 				"condition": [
 					[
 						{
@@ -1693,66 +1700,66 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 0,
-					"y": 20
-				}
+				]
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			491,
 			1374
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 2,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -162
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -38,
+					"y": -392
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": -38,
-					"y": -392
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			},
 			{
+				"type": "shift",
 				"bone": "tiptoeing",
+				"value": {
+					"x": 0,
+					"y": 20
+				},
 				"condition": [
 					[
 						{
@@ -1761,121 +1768,121 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 0,
-					"y": 20
-				}
+				]
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			484,
 			962
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -170
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -170
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			482,
 			1008
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 6,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -170
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -170
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -29,
+					"y": -26
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": -29,
-					"y": -26
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			430,
 			1050
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -5,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "leg_width",
+				"value": {
+					"x": 4,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -1884,257 +1891,257 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 4,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -170
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -170
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 23,
+					"y": -68
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 23,
-					"y": -68
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			469,
 			1034
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 4,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -170
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -170
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -16,
+					"y": -52
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": -16,
-					"y": -52
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			497,
 			784
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -2,
+					"y": -50
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": -2,
-					"y": -50
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.7
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			495,
 			758
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -32
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -32
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.2
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			500,
 			687
 		],
+		"mirror": false,
+		"pointType": "body",
 		"transforms": [
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -10
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -10
-				}
+				]
 			}
-		],
-		"mirror": false,
-		"pointType": "body"
+		]
 	},
 	{
 		"pos": [
 			500,
 			620
 		],
+		"mirror": false,
+		"pointType": "body",
 		"transforms": [
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -5
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -5
-				}
+				]
 			}
-		],
-		"mirror": false,
-		"pointType": "body"
+		]
 	},
 	{
 		"pos": [
 			500,
 			448
 		],
-		"transforms": [],
 		"mirror": false,
-		"pointType": "body"
+		"pointType": "body",
+		"transforms": []
 	},
 	{
 		"pos": [
 			500,
 			517
 		],
-		"transforms": [],
 		"mirror": false,
-		"pointType": "body"
+		"pointType": "body",
+		"transforms": []
 	},
 	{
 		"pos": [
 			428,
 			548
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "waist",
 				"type": "shift",
+				"bone": "waist",
 				"value": {
 					"x": -10,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "waist",
+				"value": {
+					"x": 7,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -2143,41 +2150,41 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 7,
-					"y": 0
-				}
+				]
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": -7,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			424,
 			582
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "waist",
 				"type": "shift",
+				"bone": "waist",
 				"value": {
 					"x": -12,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "waist",
+				"value": {
+					"x": 2,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -2186,46 +2193,46 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 2,
-					"y": 0
-				}
+				]
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": -6,
 					"y": 0
 				}
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.01
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			415,
 			611
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "waist",
 				"type": "shift",
+				"bone": "waist",
 				"value": {
 					"x": -12,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "waist",
+				"value": {
+					"x": 2,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -2234,23 +2241,23 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 2,
-					"y": 0
-				}
+				]
 			},
 			{
-				"bone": "hips",
 				"type": "shift",
+				"bone": "hips",
 				"value": {
 					"x": -1,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "hips",
+				"value": {
+					"x": -6,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -2259,60 +2266,60 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": -6,
-					"y": 0
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.05
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -2
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -2
-				}
+				]
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			403,
 			646
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "waist",
 				"type": "shift",
+				"bone": "waist",
 				"value": {
 					"x": -4,
 					"y": 0
 				}
 			},
 			{
-				"bone": "hips",
 				"type": "shift",
+				"bone": "hips",
 				"value": {
 					"x": -3,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "hips",
+				"value": {
+					"x": -6,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -2321,224 +2328,224 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": -6,
-					"y": 0
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.1
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": 5
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": 5
-				}
+				]
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			493,
 			1252
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 2,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -162
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -40,
+					"y": -270
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": -40,
-					"y": -270
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			493,
 			818
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -1,
+					"y": -76
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": -1,
-					"y": -76
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.83
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			410,
 			1290
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -2,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -162
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 43,
+					"y": -308
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 43,
-					"y": -308
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			493,
 			1295
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 2,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -162
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -40,
+					"y": -313
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": -40,
-					"y": -313
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			},
 			{
+				"type": "shift",
 				"bone": "tiptoeing",
+				"value": {
+					"x": 0,
+					"y": 20
+				},
 				"condition": [
 					[
 						{
@@ -2547,33 +2554,30 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 0,
-					"y": 20
-				}
+				]
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			403,
 			459
 		],
+		"mirror": true,
+		"pointType": "arm_r",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": 4
 				}
 			},
 			{
+				"type": "rotate",
 				"bone": "arm_r",
+				"value": -1,
 				"condition": [
 					[
 						{
@@ -2582,12 +2586,12 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": -1
+				]
 			},
 			{
+				"type": "rotate",
 				"bone": "arm_r",
+				"value": -0.7,
 				"condition": [
 					[
 						{
@@ -2596,20 +2600,23 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "rotate",
-				"value": -0.7
+				]
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": -7,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "arm_r",
+				"value": {
+					"x": -16,
+					"y": 50
+				},
 				"condition": [
 					[
 						{
@@ -2618,15 +2625,15 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": -16,
-					"y": 50
-				}
+				]
 			},
 			{
+				"type": "shift",
 				"bone": "arm_r",
+				"value": {
+					"x": 10,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -2635,107 +2642,107 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 10,
-					"y": 0
-				}
+				]
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_r"
+		]
 	},
 	{
 		"pos": [
 			398,
 			864
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -9,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 12,
+					"y": -120
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 12,
-					"y": -120
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.9
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			488,
 			890
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -133
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -133
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.95
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			443,
 			766
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -6,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "leg_width",
+				"value": {
+					"x": 4,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -2744,23 +2751,23 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 4,
-					"y": 0
-				}
+				]
 			},
 			{
-				"bone": "hips",
 				"type": "shift",
+				"bone": "hips",
 				"value": {
 					"x": -2,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "hips",
+				"value": {
+					"x": 0,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -2769,52 +2776,52 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 0,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 9,
+					"y": -62
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 9,
-					"y": -62
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.86
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			444,
 			810
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -6,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "leg_width",
+				"value": {
+					"x": 4,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -2823,52 +2830,52 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 4,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 9,
+					"y": -90
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 9,
-					"y": -90
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.92
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			411,
 			787
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -9,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "leg_width",
+				"value": {
+					"x": 2,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -2877,15 +2884,15 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 2,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "shift",
 				"bone": "hips",
+				"value": {
+					"x": -1,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -2894,118 +2901,118 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": -1,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 11,
+					"y": -78
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 11,
-					"y": -78
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.8
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			480,
 			803
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -72
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -72
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.8
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			471,
 			750
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -44
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -44
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.7
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			392,
 			817
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -9,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "hips",
+				"value": {
+					"x": -2,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -3014,52 +3021,52 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": -2,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 13,
+					"y": -94
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 13,
-					"y": -94
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.83
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			416,
 			837
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -9,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "leg_width",
+				"value": {
+					"x": 4,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -3068,126 +3075,126 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 4,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 12,
+					"y": -106
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 12,
-					"y": -106
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.9
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			478,
 			839
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -96
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -96
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.89
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			488,
 			856
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -106
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -106
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.9
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			419,
 			689
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "hips",
 				"type": "shift",
+				"bone": "hips",
 				"value": {
 					"x": -2,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "hips",
+				"value": {
+					"x": -6,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -3196,81 +3203,81 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": -6,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 2,
+					"y": -25
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 2,
-					"y": -25
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.2
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			463,
 			725
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 8,
+					"y": -35
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 8,
-					"y": -35
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.5
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			447,
 			857
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -4,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "leg_width",
+				"value": {
+					"x": 4,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -3279,471 +3286,471 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 4,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 7,
+					"y": -120
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 7,
-					"y": -120
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.97
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			422,
 			882
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -5,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 8,
+					"y": -132
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 8,
-					"y": -132
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.95
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			476,
 			874
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -120
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -120
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.94
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			449,
 			900
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 6,
+					"y": -148
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 6,
-					"y": -148
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.996
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			476,
 			906
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -142
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -142
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.97
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			487,
 			925
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -2,
+					"y": -158
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": -2,
-					"y": -158
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.987
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			425,
 			918
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -2,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 5,
+					"y": -148
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 5,
-					"y": -148
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.98
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			406,
 			910
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -6,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 8,
+					"y": -148
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 8,
-					"y": -148
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.95
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			452,
 			938
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 5,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 5,
-					"y": -162
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.99
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			484,
 			1149
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 3,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -170
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -170
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -31,
+					"y": -167
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": -31,
-					"y": -167
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			463,
 			1165
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 3,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -170
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -170
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -10,
+					"y": -183
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": -10,
-					"y": -183
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			494,
 			747
 		],
+		"mirror": true,
+		"pointType": "body",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -29
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -29
-				}
+				]
 			}
-		],
-		"mirror": true,
-		"pointType": "body"
+		]
 	},
 	{
 		"pos": [
 			460,
 			996
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
+				]
+			},
+			{
 				"type": "const-shift",
 				"value": {
 					"x": 0,
-					"y": -162
-				}
-			},
-			{
+					"y": -18
+				},
 				"condition": [
 					[
 						{
@@ -3753,89 +3760,89 @@
 							"view": "front"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -18
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			488,
 			1057
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 6,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -162
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -35,
+					"y": -75
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": -35,
-					"y": -75
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			472,
 			1079
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 4,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "leg_width",
+				"value": {
+					"x": 4,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -3844,66 +3851,66 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 4,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -162
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -19,
+					"y": -97
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": -19,
-					"y": -97
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			488,
 			1106
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 4,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "leg_width",
+				"value": {
+					"x": 2,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -3912,66 +3919,66 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 2,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -162
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -35,
+					"y": -124
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": -35,
-					"y": -124
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			468,
 			1123
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 3,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "leg_width",
+				"value": {
+					"x": 4,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -3980,66 +3987,66 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 4,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -162
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -15,
+					"y": -141
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": -15,
-					"y": -141
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			434,
 			1100
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -4,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "leg_width",
+				"value": {
+					"x": 1,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -4048,66 +4055,66 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 1,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -162
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 19,
+					"y": -118
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 19,
-					"y": -118
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			415,
 			1079
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -10,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "leg_width",
+				"value": {
+					"x": 4,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -4116,66 +4123,66 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 4,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -162
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 38,
+					"y": -97
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 38,
-					"y": -97
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			440,
 			1144
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -5,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "leg_width",
+				"value": {
+					"x": 4,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -4184,66 +4191,66 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 4,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -162
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 13,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 13,
-					"y": -162
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			422,
 			1128
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -9,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "leg_width",
+				"value": {
+					"x": 4,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -4252,117 +4259,117 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 4,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -162
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 31,
+					"y": -146
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 31,
-					"y": -146
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			424,
 			1168
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -4,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -162
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 29,
+					"y": -186
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 29,
-					"y": -186
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			444,
 			1183
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": -2,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "leg_width",
+				"value": {
+					"x": 1,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -4371,117 +4378,117 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 1,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -162
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 9,
+					"y": -201
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 9,
-					"y": -201
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			462,
 			1206
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 2,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -162
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -9,
+					"y": -224
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": -9,
-					"y": -224
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			486,
 			1185
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 3,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "leg_width",
+				"value": {
+					"x": -1,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -4490,200 +4497,200 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": -1,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -162
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -33,
+					"y": -203
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": -33,
-					"y": -203
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			429,
 			1218
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 2,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -162
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 24,
+					"y": -236
+				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 24,
-					"y": -236
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			483,
 			748
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -36
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -36
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.2
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			482,
 			770
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "leg_width",
 				"type": "shift",
+				"bone": "leg_width",
 				"value": {
 					"x": 7,
 					"y": 0
 				}
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -1,
+					"y": -47
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": -1,
-					"y": -47
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -0.6
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			500,
 			567
 		],
-		"transforms": [],
 		"mirror": true,
-		"pointType": "body"
+		"pointType": "body",
+		"transforms": []
 	},
 	{
 		"pos": [
 			458,
 			537
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "waist",
 				"type": "shift",
+				"bone": "waist",
 				"value": {
 					"x": -10,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "waist",
+				"value": {
+					"x": 6,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -4692,41 +4699,41 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 6,
-					"y": 0
-				}
+				]
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": -8,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			460,
 			589
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "waist",
 				"type": "shift",
+				"bone": "waist",
 				"value": {
 					"x": -20,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "waist",
+				"value": {
+					"x": 11,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -4735,41 +4742,41 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 11,
-					"y": 0
-				}
+				]
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": -6,
 					"y": 0
 				}
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			446,
 			640
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
-				"bone": "waist",
 				"type": "shift",
+				"bone": "waist",
 				"value": {
 					"x": -10,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "waist",
+				"value": {
+					"x": 2,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -4778,23 +4785,23 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 2,
-					"y": 0
-				}
+				]
 			},
 			{
-				"bone": "hips",
 				"type": "shift",
+				"bone": "hips",
 				"value": {
 					"x": -3,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "hips",
+				"value": {
+					"x": -4,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -4803,55 +4810,55 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": -4,
-					"y": 0
-				}
+				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -6,
+					"y": -5
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": -6,
-					"y": -5
-				}
+				]
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			433,
 			411
 		],
+		"mirror": true,
+		"pointType": "bodyarm_r",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": -2
 				}
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": -7,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "arm_r",
+				"value": {
+					"x": -36,
+					"y": 20
+				},
 				"condition": [
 					[
 						{
@@ -4860,38 +4867,38 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": -36,
-					"y": 20
-				}
+				]
 			}
-		],
-		"mirror": true,
-		"pointType": "bodyarm_r"
+		]
 	},
 	{
 		"pos": [
 			436,
 			995
 		],
+		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -162
+				},
 				"condition": [
 					[
 						{
 							"legs": "sitting"
 						}
 					]
-				],
+				]
+			},
+			{
 				"type": "const-shift",
 				"value": {
 					"x": 0,
-					"y": -162
-				}
-			},
-			{
+					"y": -18
+				},
 				"condition": [
 					[
 						{
@@ -4901,51 +4908,51 @@
 							"view": "front"
 						}
 					]
-				],
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -18
-				}
+				]
 			},
 			{
-				"bone": "leg_r",
 				"type": "rotate",
+				"bone": "leg_r",
 				"value": -1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_r"
+		]
 	},
 	{
 		"pos": [
 			421,
 			409
 		],
+		"mirror": true,
+		"pointType": "arm_r",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": -4
 				}
 			},
 			{
-				"bone": "arm_r",
 				"type": "rotate",
+				"bone": "arm_r",
 				"value": -0.6
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": -7,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "arm_r",
+				"value": {
+					"x": -10,
+					"y": 60
+				},
 				"condition": [
 					[
 						{
@@ -4954,15 +4961,15 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": -10,
-					"y": 60
-				}
+				]
 			},
 			{
+				"type": "shift",
 				"bone": "arm_r",
+				"value": {
+					"x": 20,
+					"y": -14
+				},
 				"condition": [
 					[
 						{
@@ -4971,46 +4978,46 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 20,
-					"y": -14
-				}
+				]
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_r"
+		]
 	},
 	{
 		"pos": [
 			410,
 			412
 		],
+		"mirror": true,
+		"pointType": "arm_r",
 		"transforms": [
 			{
-				"bone": "arm_width",
 				"type": "shift",
+				"bone": "arm_width",
 				"value": {
 					"x": 0,
 					"y": -4
 				}
 			},
 			{
-				"bone": "arm_r",
 				"type": "rotate",
+				"bone": "arm_r",
 				"value": -0.6
 			},
 			{
-				"bone": "chest_width",
 				"type": "shift",
+				"bone": "chest_width",
 				"value": {
 					"x": -7,
 					"y": 0
 				}
 			},
 			{
+				"type": "shift",
 				"bone": "arm_r",
+				"value": {
+					"x": -10,
+					"y": 60
+				},
 				"condition": [
 					[
 						{
@@ -5019,15 +5026,15 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": -10,
-					"y": 60
-				}
+				]
 			},
 			{
+				"type": "shift",
 				"bone": "arm_r",
+				"value": {
+					"x": 20,
+					"y": 0
+				},
 				"condition": [
 					[
 						{
@@ -5036,15 +5043,8 @@
 							"value": 0
 						}
 					]
-				],
-				"type": "shift",
-				"value": {
-					"x": 20,
-					"y": 0
-				}
+				]
 			}
-		],
-		"mirror": true,
-		"pointType": "arm_r"
+		]
 	}
 ]

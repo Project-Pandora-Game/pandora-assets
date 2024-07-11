@@ -4,6 +4,8 @@
 			499,
 			549
 		],
+		"mirror": true,
+		"pointType": "breasts_l",
 		"transforms": [
 			{
 				"type": "shift",
@@ -73,15 +75,15 @@
 					]
 				]
 			}
-		],
-		"mirror": true,
-		"pointType": "breasts_l"
+		]
 	},
 	{
 		"pos": [
 			499,
 			449
 		],
+		"mirror": true,
+		"pointType": "breasts_l",
 		"transforms": [
 			{
 				"type": "shift",
@@ -151,15 +153,15 @@
 					]
 				]
 			}
-		],
-		"mirror": true,
-		"pointType": "breasts_l"
+		]
 	},
 	{
 		"pos": [
 			415,
 			549
 		],
+		"mirror": true,
+		"pointType": "breasts_l",
 		"transforms": [
 			{
 				"type": "shift",
@@ -229,15 +231,15 @@
 					]
 				]
 			}
-		],
-		"mirror": true,
-		"pointType": "breasts_l"
+		]
 	},
 	{
 		"pos": [
 			415,
 			449
 		],
+		"mirror": true,
+		"pointType": "breasts_l",
 		"transforms": [
 			{
 				"type": "shift",
@@ -307,8 +309,6 @@
 					]
 				]
 			}
-		],
-		"mirror": true,
-		"pointType": "breasts_l"
+		]
 	}
 ]

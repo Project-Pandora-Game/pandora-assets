@@ -4,6 +4,8 @@
 			499,
 			549
 		],
+		"mirror": true,
+		"pointType": "breasts_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -39,15 +41,15 @@
 					]
 				]
 			}
-		],
-		"mirror": true,
-		"pointType": "breasts_r"
+		]
 	},
 	{
 		"pos": [
 			499,
 			449
 		],
+		"mirror": true,
+		"pointType": "breasts_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -66,15 +68,15 @@
 					]
 				]
 			}
-		],
-		"mirror": true,
-		"pointType": "breasts_r"
+		]
 	},
 	{
 		"pos": [
 			419,
 			549
 		],
+		"mirror": true,
+		"pointType": "breasts_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -110,15 +112,15 @@
 					]
 				]
 			}
-		],
-		"mirror": true,
-		"pointType": "breasts_r"
+		]
 	},
 	{
 		"pos": [
 			414,
 			452
 		],
+		"mirror": true,
+		"pointType": "breasts_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -171,9 +173,7 @@
 					]
 				]
 			}
-		],
-		"mirror": true,
-		"pointType": "breasts_r"
+		]
 	},
 	{
 		"pos": [
@@ -181,6 +181,7 @@
 			500
 		],
 		"mirror": true,
+		"pointType": "breasts_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -233,8 +234,7 @@
 					]
 				]
 			}
-		],
-		"pointType": "breasts_r"
+		]
 	},
 	{
 		"pos": [
@@ -242,6 +242,7 @@
 			500
 		],
 		"mirror": true,
+		"pointType": "breasts_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -260,8 +261,7 @@
 					]
 				]
 			}
-		],
-		"pointType": "breasts_r"
+		]
 	},
 	{
 		"pos": [
@@ -269,6 +269,7 @@
 			432
 		],
 		"mirror": true,
+		"pointType": "breasts_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -304,8 +305,7 @@
 					]
 				]
 			}
-		],
-		"pointType": "breasts_r"
+		]
 	},
 	{
 		"pos": [
@@ -313,6 +313,7 @@
 			500
 		],
 		"mirror": true,
+		"pointType": "breasts_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -348,8 +349,7 @@
 					]
 				]
 			}
-		],
-		"pointType": "breasts_r"
+		]
 	},
 	{
 		"pos": [
@@ -357,6 +357,7 @@
 			559
 		],
 		"mirror": true,
+		"pointType": "breasts_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -392,7 +393,6 @@
 					]
 				]
 			}
-		],
-		"pointType": "breasts_r"
+		]
 	}
 ]
