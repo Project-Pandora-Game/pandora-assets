@@ -1,7 +1,7 @@
-import { readFileSync } from 'fs';
+import { readFileSync, writeFileSync } from 'fs';
 import { CanonizePointTemplate, GetLogger, ModuleNameSchema, PointTemplate, PointTemplateSchema, SCHEME_OVERRIDE } from 'pandora-common';
 import { join, relative } from 'path';
-import { SRC_DIR } from '../constants';
+import { SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../constants';
 import { GraphicsDatabase } from '../tools/graphicsDatabase';
 import { WatchFile } from '../tools/watch';
 
@@ -31,6 +31,8 @@ export function LoadTemplates() {
 }
 
 export function LoadTemplate(name: string): PointTemplate {
+	const logger = GetLogger('TemplateValidation');
+
 	const path = join(SRC_DIR, 'templates', `${name}.json`);
 	const usrPath = relative(SRC_DIR, path);
 
@@ -54,18 +56,17 @@ export function LoadTemplate(name: string): PointTemplate {
 
 	const parseResult = PointTemplateSchema.safeParse(template);
 	if (!parseResult.success) {
-		GetLogger('TemplateValidation').error(
-			`Template in '${usrPath}' is not PointTemplateSchema:\n`,
-			parseResult.error.toString(),
-		);
+		logger.error(`Template in '${usrPath}' is not PointTemplateSchema:\n`, parseResult.error.toString());
 		throw new Error(`Graphics in '${usrPath}' is not PointTemplateSchema`);
 	}
 
 	const canonizedExport = JSON.stringify(CanonizePointTemplate(parseResult.data), undefined, '\t').trim() + '\n';
 	if (canonizedExport !== rawTemplate) {
-		GetLogger('TemplateValidation').warning(
-			`Template in '${usrPath}' is not in its canonic form. Please use editor to correct this.`,
-		);
+		logger.warning(`Template in '${usrPath}' is not in its canonic form. Please use editor to correct this.`);
+		if (TRY_AUTOCORRECT_WARNINGS) {
+			writeFileSync(path, canonizedExport, { encoding: 'utf-8' });
+			logger.info('The above warning has been auto-corrected; re-run to check if successful.');
+		}
 	}
 
 	return parseResult.data;
