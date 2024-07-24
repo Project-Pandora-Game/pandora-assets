@@ -7,7 +7,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BELOW_BODY",
-			"points": "custom_body_female_sex1",
+			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "vulva",
 			"image": {
@@ -21,7 +21,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BODY",
-			"points": "custom_body_female_sex1",
+			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "vulva",
 			"image": {
@@ -48,7 +48,7 @@
 			"width": 1000,
 			"height": 1500,
 			"priority": "BODY",
-			"points": "custom_body_female_sex1",
+			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "hair",
 			"image": {

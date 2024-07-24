@@ -23,7 +23,6 @@ const templateList: string[] = [
 	'custom_arm_restraints_armbinder_glove',
 	'custom_arm_restraints_straight_jacket_straps',
 	'custom_arm_restraints_torso_ropes',
-	'custom_body_female_sex1',
 	'custom_body_nipples',
 	'custom_bras_style1_breasts',
 	'custom_dresses_latex_dress_breasts',
