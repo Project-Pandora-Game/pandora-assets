@@ -300,11 +300,11 @@
 	},
 	{
 		"pos": [
-			714,
+			286,
 			408
 		],
 		"mirror": true,
-		"pointType": "arm_l",
+		"pointType": "arm_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -316,12 +316,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 0.05,
+				"bone": "elbow_r",
+				"value": -0.05,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": ">",
 							"value": 0
 						}
@@ -330,12 +330,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 0.1,
+				"bone": "elbow_r",
+				"value": -0.1,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": "<",
 							"value": 0
 						}
@@ -344,14 +344,14 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "arm_l",
-				"value": 1
+				"bone": "arm_r",
+				"value": -1
 			},
 			{
 				"type": "shift",
 				"bone": "chest_width",
 				"value": {
-					"x": 7,
+					"x": -7,
 					"y": 0
 				}
 			}
@@ -359,11 +359,11 @@
 	},
 	{
 		"pos": [
-			718,
+			282,
 			408
 		],
 		"mirror": true,
-		"pointType": "arm_l",
+		"pointType": "arm_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -375,12 +375,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 0.6,
+				"bone": "elbow_r",
+				"value": -0.6,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": ">",
 							"value": 0
 						}
@@ -389,12 +389,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 0.15,
+				"bone": "elbow_r",
+				"value": -0.15,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": "<",
 							"value": 0
 						}
@@ -403,14 +403,14 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "arm_l",
-				"value": 1
+				"bone": "arm_r",
+				"value": -1
 			},
 			{
 				"type": "shift",
 				"bone": "chest_width",
 				"value": {
-					"x": 7,
+					"x": -7,
 					"y": 0
 				}
 			}
@@ -418,11 +418,11 @@
 	},
 	{
 		"pos": [
-			728,
+			272,
 			408
 		],
 		"mirror": true,
-		"pointType": "arm_l",
+		"pointType": "arm_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -434,12 +434,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 0.6,
+				"bone": "elbow_r",
+				"value": -0.6,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": ">",
 							"value": 0
 						}
@@ -448,12 +448,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 0.15,
+				"bone": "elbow_r",
+				"value": -0.15,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": "<",
 							"value": 0
 						}
@@ -462,14 +462,14 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "arm_l",
-				"value": 1
+				"bone": "arm_r",
+				"value": -1
 			},
 			{
 				"type": "shift",
 				"bone": "chest_width",
 				"value": {
-					"x": 7,
+					"x": -7,
 					"y": 0
 				}
 			}
@@ -477,11 +477,11 @@
 	},
 	{
 		"pos": [
-			734,
+			266,
 			408
 		],
 		"mirror": true,
-		"pointType": "arm_l",
+		"pointType": "arm_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -493,12 +493,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 1.08,
+				"bone": "elbow_r",
+				"value": -1.08,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": ">",
 							"value": 0
 						}
@@ -507,12 +507,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 0.6,
+				"bone": "elbow_r",
+				"value": -0.6,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": "<",
 							"value": 0
 						}
@@ -521,14 +521,14 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "arm_l",
-				"value": 1
+				"bone": "arm_r",
+				"value": -1
 			},
 			{
 				"type": "shift",
 				"bone": "chest_width",
 				"value": {
-					"x": 7,
+					"x": -7,
 					"y": 0
 				}
 			}
@@ -536,11 +536,11 @@
 	},
 	{
 		"pos": [
-			744,
+			256,
 			408
 		],
 		"mirror": true,
-		"pointType": "arm_l",
+		"pointType": "arm_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -552,12 +552,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 1,
+				"bone": "elbow_r",
+				"value": -1,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": ">",
 							"value": 0
 						}
@@ -566,12 +566,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 0.8,
+				"bone": "elbow_r",
+				"value": -0.8,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": "<",
 							"value": 0
 						}
@@ -580,14 +580,14 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "arm_l",
-				"value": 1
+				"bone": "arm_r",
+				"value": -1
 			},
 			{
 				"type": "shift",
 				"bone": "chest_width",
 				"value": {
-					"x": 7,
+					"x": -7,
 					"y": 0
 				}
 			}
@@ -595,11 +595,11 @@
 	},
 	{
 		"pos": [
-			876,
+			124,
 			408
 		],
 		"mirror": true,
-		"pointType": "arm_l",
+		"pointType": "arm_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -611,19 +611,19 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 1
+				"bone": "elbow_r",
+				"value": -1
 			},
 			{
 				"type": "rotate",
-				"bone": "arm_l",
-				"value": 1
+				"bone": "arm_r",
+				"value": -1
 			},
 			{
 				"type": "shift",
 				"bone": "chest_width",
 				"value": {
-					"x": 7,
+					"x": -7,
 					"y": 0
 				}
 			}
@@ -631,11 +631,11 @@
 	},
 	{
 		"pos": [
-			938,
+			62,
 			365
 		],
 		"mirror": true,
-		"pointType": "arm_l",
+		"pointType": "arm_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -647,19 +647,19 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 1
+				"bone": "elbow_r",
+				"value": -1
 			},
 			{
 				"type": "rotate",
-				"bone": "arm_l",
-				"value": 1
+				"bone": "arm_r",
+				"value": -1
 			},
 			{
 				"type": "shift",
 				"bone": "chest_width",
 				"value": {
-					"x": 7,
+					"x": -7,
 					"y": 0
 				}
 			}
@@ -667,35 +667,35 @@
 	},
 	{
 		"pos": [
-			999,
+			1,
 			408
 		],
 		"mirror": true,
-		"pointType": "arm_l",
+		"pointType": "arm_r",
 		"transforms": [
 			{
 				"type": "shift",
 				"bone": "arm_width",
 				"value": {
-					"x": 1,
+					"x": -1,
 					"y": -1
 				}
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 1
+				"bone": "elbow_r",
+				"value": -1
 			},
 			{
 				"type": "rotate",
-				"bone": "arm_l",
-				"value": 1
+				"bone": "arm_r",
+				"value": -1
 			},
 			{
 				"type": "shift",
 				"bone": "chest_width",
 				"value": {
-					"x": 7,
+					"x": -7,
 					"y": 0
 				}
 			}
@@ -703,35 +703,35 @@
 	},
 	{
 		"pos": [
-			999,
+			1,
 			462
 		],
 		"mirror": true,
-		"pointType": "arm_l",
+		"pointType": "arm_r",
 		"transforms": [
 			{
 				"type": "shift",
 				"bone": "arm_width",
 				"value": {
-					"x": 1,
+					"x": -1,
 					"y": 1
 				}
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 1
+				"bone": "elbow_r",
+				"value": -1
 			},
 			{
 				"type": "rotate",
-				"bone": "arm_l",
-				"value": 1
+				"bone": "arm_r",
+				"value": -1
 			},
 			{
 				"type": "shift",
 				"bone": "chest_width",
 				"value": {
-					"x": 7,
+					"x": -7,
 					"y": 0
 				}
 			}
@@ -739,11 +739,11 @@
 	},
 	{
 		"pos": [
-			938,
+			62,
 			514
 		],
 		"mirror": true,
-		"pointType": "arm_l",
+		"pointType": "arm_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -755,19 +755,19 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 1
+				"bone": "elbow_r",
+				"value": -1
 			},
 			{
 				"type": "rotate",
-				"bone": "arm_l",
-				"value": 1
+				"bone": "arm_r",
+				"value": -1
 			},
 			{
 				"type": "shift",
 				"bone": "chest_width",
 				"value": {
-					"x": 7,
+					"x": -7,
 					"y": 0
 				}
 			}
@@ -775,11 +775,11 @@
 	},
 	{
 		"pos": [
-			876,
+			124,
 			462
 		],
 		"mirror": true,
-		"pointType": "arm_l",
+		"pointType": "arm_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -791,19 +791,19 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 1
+				"bone": "elbow_r",
+				"value": -1
 			},
 			{
 				"type": "rotate",
-				"bone": "arm_l",
-				"value": 1
+				"bone": "arm_r",
+				"value": -1
 			},
 			{
 				"type": "shift",
 				"bone": "chest_width",
 				"value": {
-					"x": 7,
+					"x": -7,
 					"y": 0
 				}
 			}
@@ -811,11 +811,11 @@
 	},
 	{
 		"pos": [
-			744,
+			256,
 			462
 		],
 		"mirror": true,
-		"pointType": "arm_l",
+		"pointType": "arm_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -827,12 +827,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 0.8,
+				"bone": "elbow_r",
+				"value": -0.8,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": ">",
 							"value": 0
 						}
@@ -841,12 +841,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 1,
+				"bone": "elbow_r",
+				"value": -1,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": "<",
 							"value": 0
 						}
@@ -855,14 +855,14 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "arm_l",
-				"value": 1
+				"bone": "arm_r",
+				"value": -1
 			},
 			{
 				"type": "shift",
 				"bone": "chest_width",
 				"value": {
-					"x": 7,
+					"x": -7,
 					"y": 0
 				}
 			}
@@ -870,11 +870,11 @@
 	},
 	{
 		"pos": [
-			734,
+			266,
 			462
 		],
 		"mirror": true,
-		"pointType": "arm_l",
+		"pointType": "arm_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -886,12 +886,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 0.6,
+				"bone": "elbow_r",
+				"value": -0.6,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": ">",
 							"value": 0
 						}
@@ -900,12 +900,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 1.08,
+				"bone": "elbow_r",
+				"value": -1.08,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": "<",
 							"value": 0
 						}
@@ -914,14 +914,14 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "arm_l",
-				"value": 1
+				"bone": "arm_r",
+				"value": -1
 			},
 			{
 				"type": "shift",
 				"bone": "chest_width",
 				"value": {
-					"x": 7,
+					"x": -7,
 					"y": 0
 				}
 			}
@@ -929,11 +929,11 @@
 	},
 	{
 		"pos": [
-			728,
+			272,
 			462
 		],
 		"mirror": true,
-		"pointType": "arm_l",
+		"pointType": "arm_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -945,12 +945,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 0.15,
+				"bone": "elbow_r",
+				"value": -0.15,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": ">",
 							"value": 0
 						}
@@ -959,12 +959,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 0.6,
+				"bone": "elbow_r",
+				"value": -0.6,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": "<",
 							"value": 0
 						}
@@ -973,14 +973,14 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "arm_l",
-				"value": 1
+				"bone": "arm_r",
+				"value": -1
 			},
 			{
 				"type": "shift",
 				"bone": "chest_width",
 				"value": {
-					"x": 7,
+					"x": -7,
 					"y": 0
 				}
 			}
@@ -988,11 +988,11 @@
 	},
 	{
 		"pos": [
-			718,
+			282,
 			462
 		],
 		"mirror": true,
-		"pointType": "arm_l",
+		"pointType": "arm_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -1004,12 +1004,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 0.15,
+				"bone": "elbow_r",
+				"value": -0.15,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": ">",
 							"value": 0
 						}
@@ -1018,12 +1018,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 0.6,
+				"bone": "elbow_r",
+				"value": -0.6,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": "<",
 							"value": 0
 						}
@@ -1032,14 +1032,14 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "arm_l",
-				"value": 1
+				"bone": "arm_r",
+				"value": -1
 			},
 			{
 				"type": "shift",
 				"bone": "chest_width",
 				"value": {
-					"x": 7,
+					"x": -7,
 					"y": 0
 				}
 			}
@@ -1047,11 +1047,11 @@
 	},
 	{
 		"pos": [
-			711,
+			289,
 			457
 		],
 		"mirror": true,
-		"pointType": "arm_l",
+		"pointType": "arm_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -1063,12 +1063,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 0.1,
+				"bone": "elbow_r",
+				"value": -0.1,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": ">",
 							"value": 0
 						}
@@ -1077,12 +1077,12 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "elbow_l",
-				"value": 0.05,
+				"bone": "elbow_r",
+				"value": -0.05,
 				"condition": [
 					[
 						{
-							"bone": "elbow_l",
+							"bone": "elbow_r",
 							"operator": "<",
 							"value": 0
 						}
@@ -1091,14 +1091,14 @@
 			},
 			{
 				"type": "rotate",
-				"bone": "arm_l",
-				"value": 1
+				"bone": "arm_r",
+				"value": -1
 			},
 			{
 				"type": "shift",
 				"bone": "chest_width",
 				"value": {
-					"x": 7,
+					"x": -7,
 					"y": 0
 				}
 			}
@@ -1106,22 +1106,22 @@
 	},
 	{
 		"pos": [
-			736,
+			264,
 			434
 		],
 		"mirror": true,
-		"pointType": "arm_l",
+		"pointType": "arm_r",
 		"transforms": [
 			{
 				"type": "rotate",
-				"bone": "arm_l",
-				"value": 1
+				"bone": "arm_r",
+				"value": -1
 			},
 			{
 				"type": "shift",
 				"bone": "chest_width",
 				"value": {
-					"x": 7,
+					"x": -7,
 					"y": 0
 				}
 			}
@@ -1281,8 +1281,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 10,
-					"y": -36
+					"x": 0,
+					"y": -11
 				},
 				"condition": [
 					[
@@ -1360,8 +1360,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 10,
-					"y": -26
+					"x": -4,
+					"y": -10
 				},
 				"condition": [
 					[
@@ -1375,18 +1375,6 @@
 				"type": "rotate",
 				"bone": "leg_r",
 				"value": -0.39
-			},
-			{
-				"type": "rotate",
-				"bone": "leg_r",
-				"value": 0.1,
-				"condition": [
-					[
-						{
-							"legs": "sitting"
-						}
-					]
-				]
 			}
 		]
 	},
@@ -1451,8 +1439,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 8,
-					"y": -48
+					"x": 0,
+					"y": -12
 				},
 				"condition": [
 					[
@@ -1513,8 +1501,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 16,
-					"y": -56
+					"x": -1,
+					"y": -25
 				},
 				"condition": [
 					[
@@ -1542,8 +1530,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -170
+					"x": -3,
+					"y": -152
 				},
 				"condition": [
 					[
@@ -1596,8 +1584,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -180
+					"x": -5,
+					"y": -162
 				},
 				"condition": [
 					[
@@ -1647,8 +1635,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": -6,
+					"y": -125
 				},
 				"condition": [
 					[
@@ -1715,8 +1703,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": 4,
+					"y": -122
 				},
 				"condition": [
 					[
@@ -1783,8 +1771,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -170
+					"x": 3,
+					"y": -152
 				},
 				"condition": [
 					[
@@ -1820,8 +1808,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -170
+					"x": 3,
+					"y": -162
 				},
 				"condition": [
 					[
@@ -1888,8 +1876,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -170
+					"x": -2,
+					"y": -158
 				},
 				"condition": [
 					[
@@ -1939,8 +1927,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -170
+					"x": 2,
+					"y": -160
 				},
 				"condition": [
 					[
@@ -1990,8 +1978,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": -2,
-					"y": -50
+					"x": 0,
+					"y": -28
 				},
 				"condition": [
 					[
@@ -2010,7 +1998,7 @@
 	},
 	{
 		"pos": [
-			495,
+			499,
 			758
 		],
 		"mirror": true,
@@ -2028,7 +2016,7 @@
 				"type": "const-shift",
 				"value": {
 					"x": 0,
-					"y": -32
+					"y": -5
 				},
 				"condition": [
 					[
@@ -2052,22 +2040,7 @@
 		],
 		"mirror": false,
 		"pointType": "body",
-		"transforms": [
-			{
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -10
-				},
-				"condition": [
-					[
-						{
-							"legs": "sitting"
-						}
-					]
-				]
-			}
-		]
+		"transforms": []
 	},
 	{
 		"pos": [
@@ -2076,22 +2049,7 @@
 		],
 		"mirror": false,
 		"pointType": "body",
-		"transforms": [
-			{
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -5
-				},
-				"condition": [
-					[
-						{
-							"legs": "sitting"
-						}
-					]
-				]
-			}
-		]
+		"transforms": []
 	},
 	{
 		"pos": [
@@ -2204,8 +2162,8 @@
 	},
 	{
 		"pos": [
-			417,
-			609
+			415,
+			611
 		],
 		"mirror": true,
 		"pointType": "body_r",
@@ -2264,20 +2222,6 @@
 				"type": "rotate",
 				"bone": "leg_r",
 				"value": -0.05
-			},
-			{
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -2
-				},
-				"condition": [
-					[
-						{
-							"legs": "sitting"
-						}
-					]
-				]
 			}
 		]
 	},
@@ -2326,20 +2270,6 @@
 				"type": "rotate",
 				"bone": "leg_r",
 				"value": -0.1
-			},
-			{
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": 5
-				},
-				"condition": [
-					[
-						{
-							"legs": "sitting"
-						}
-					]
-				]
 			}
 		]
 	},
@@ -2362,8 +2292,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": 4,
+					"y": -136
 				},
 				"condition": [
 					[
@@ -2413,8 +2343,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": -1,
-					"y": -76
+					"x": 2,
+					"y": -57
 				},
 				"condition": [
 					[
@@ -2450,8 +2380,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": -5,
+					"y": -132
 				},
 				"condition": [
 					[
@@ -2501,8 +2431,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": 5,
+					"y": -130
 				},
 				"condition": [
 					[
@@ -2657,8 +2587,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 12,
-					"y": -120
+					"x": -3,
+					"y": -94
 				},
 				"condition": [
 					[
@@ -2694,8 +2624,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -133
+					"x": 3,
+					"y": -112
 				},
 				"condition": [
 					[
@@ -2773,8 +2703,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 9,
-					"y": -62
+					"x": 0,
+					"y": -38
 				},
 				"condition": [
 					[
@@ -2827,8 +2757,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 9,
-					"y": -90
+					"x": 0,
+					"y": -70
 				},
 				"condition": [
 					[
@@ -2898,8 +2828,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 11,
-					"y": -78
+					"x": -1,
+					"y": -48
 				},
 				"condition": [
 					[
@@ -2935,8 +2865,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -72
+					"x": 1,
+					"y": -50
 				},
 				"condition": [
 					[
@@ -2965,7 +2895,7 @@
 				"type": "const-shift",
 				"value": {
 					"x": 0,
-					"y": -44
+					"y": -13
 				},
 				"condition": [
 					[
@@ -3018,8 +2948,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 13,
-					"y": -94
+					"x": -3,
+					"y": -62
 				},
 				"condition": [
 					[
@@ -3072,8 +3002,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 12,
-					"y": -106
+					"x": -2,
+					"y": -82
 				},
 				"condition": [
 					[
@@ -3109,8 +3039,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -96
+					"x": 1,
+					"y": -80
 				},
 				"condition": [
 					[
@@ -3129,7 +3059,7 @@
 	},
 	{
 		"pos": [
-			488,
+			490,
 			856
 		],
 		"mirror": true,
@@ -3146,8 +3076,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -106
+					"x": 3,
+					"y": -88
 				},
 				"condition": [
 					[
@@ -3198,20 +3128,6 @@
 				]
 			},
 			{
-				"type": "const-shift",
-				"value": {
-					"x": 2,
-					"y": -25
-				},
-				"condition": [
-					[
-						{
-							"legs": "sitting"
-						}
-					]
-				]
-			},
-			{
 				"type": "rotate",
 				"bone": "leg_r",
 				"value": -0.2
@@ -3220,8 +3136,8 @@
 	},
 	{
 		"pos": [
-			463,
-			725
+			466,
+			724
 		],
 		"mirror": true,
 		"pointType": "body_r",
@@ -3229,8 +3145,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 8,
-					"y": -35
+					"x": 0,
+					"y": -10
 				},
 				"condition": [
 					[
@@ -3283,8 +3199,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 7,
-					"y": -120
+					"x": 0,
+					"y": -104
 				},
 				"condition": [
 					[
@@ -3320,8 +3236,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 8,
-					"y": -132
+					"x": -2,
+					"y": -114
 				},
 				"condition": [
 					[
@@ -3357,8 +3273,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -120
+					"x": 2,
+					"y": -108
 				},
 				"condition": [
 					[
@@ -3386,8 +3302,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 6,
-					"y": -148
+					"x": 0,
+					"y": -132
 				},
 				"condition": [
 					[
@@ -3423,8 +3339,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -142
+					"x": 2,
+					"y": -129
 				},
 				"condition": [
 					[
@@ -3460,8 +3376,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": -2,
-					"y": -158
+					"x": 3,
+					"y": -136
 				},
 				"condition": [
 					[
@@ -3497,8 +3413,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 5,
-					"y": -148
+					"x": -2,
+					"y": -134
 				},
 				"condition": [
 					[
@@ -3534,8 +3450,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 8,
-					"y": -148
+					"x": -5,
+					"y": -122
 				},
 				"condition": [
 					[
@@ -3563,8 +3479,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 5,
-					"y": -162
+					"x": 0,
+					"y": -150
 				},
 				"condition": [
 					[
@@ -3600,8 +3516,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -170
+					"x": 4,
+					"y": -147
 				},
 				"condition": [
 					[
@@ -3651,8 +3567,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -170
+					"x": 1,
+					"y": -145
 				},
 				"condition": [
 					[
@@ -3698,20 +3614,6 @@
 					"x": 7,
 					"y": 0
 				}
-			},
-			{
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": -29
-				},
-				"condition": [
-					[
-						{
-							"legs": "sitting"
-						}
-					]
-				]
 			}
 		]
 	},
@@ -3726,8 +3628,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": 1,
+					"y": -164
 				},
 				"condition": [
 					[
@@ -3773,15 +3675,15 @@
 				"type": "shift",
 				"bone": "leg_width",
 				"value": {
-					"x": 6,
+					"x": 4,
 					"y": 0
 				}
 			},
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": 4,
+					"y": -157
 				},
 				"condition": [
 					[
@@ -3824,7 +3726,7 @@
 				"type": "shift",
 				"bone": "leg_width",
 				"value": {
-					"x": 4,
+					"x": 2,
 					"y": 0
 				}
 			},
@@ -3832,7 +3734,7 @@
 				"type": "shift",
 				"bone": "leg_width",
 				"value": {
-					"x": 4,
+					"x": 3,
 					"y": 0
 				},
 				"condition": [
@@ -3848,8 +3750,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": 2,
+					"y": -155
 				},
 				"condition": [
 					[
@@ -3892,7 +3794,7 @@
 				"type": "shift",
 				"bone": "leg_width",
 				"value": {
-					"x": 4,
+					"x": 2,
 					"y": 0
 				}
 			},
@@ -3916,8 +3818,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": 4,
+					"y": -152
 				},
 				"condition": [
 					[
@@ -3960,7 +3862,7 @@
 				"type": "shift",
 				"bone": "leg_width",
 				"value": {
-					"x": 3,
+					"x": 2,
 					"y": 0
 				}
 			},
@@ -3984,8 +3886,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": 2,
+					"y": -150
 				},
 				"condition": [
 					[
@@ -4052,8 +3954,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": -2,
+					"y": -152
 				},
 				"condition": [
 					[
@@ -4104,7 +4006,7 @@
 				"type": "shift",
 				"bone": "leg_width",
 				"value": {
-					"x": 4,
+					"x": 9,
 					"y": 0
 				},
 				"condition": [
@@ -4120,8 +4022,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": -4,
+					"y": -155
 				},
 				"condition": [
 					[
@@ -4164,7 +4066,7 @@
 				"type": "shift",
 				"bone": "leg_width",
 				"value": {
-					"x": -5,
+					"x": -4,
 					"y": 0
 				}
 			},
@@ -4188,8 +4090,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": -1,
+					"y": -147
 				},
 				"condition": [
 					[
@@ -4240,7 +4142,7 @@
 				"type": "shift",
 				"bone": "leg_width",
 				"value": {
-					"x": 4,
+					"x": 7,
 					"y": 0
 				},
 				"condition": [
@@ -4256,8 +4158,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": -3,
+					"y": -150
 				},
 				"condition": [
 					[
@@ -4307,8 +4209,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": -3,
+					"y": -145
 				},
 				"condition": [
 					[
@@ -4375,8 +4277,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": -1,
+					"y": -143
 				},
 				"condition": [
 					[
@@ -4426,8 +4328,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": 1,
+					"y": -140
 				},
 				"condition": [
 					[
@@ -4494,8 +4396,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": 4,
+					"y": -143
 				},
 				"condition": [
 					[
@@ -4538,15 +4440,15 @@
 				"type": "shift",
 				"bone": "leg_width",
 				"value": {
-					"x": 2,
+					"x": -2,
 					"y": 0
 				}
 			},
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": -3,
+					"y": -140
 				},
 				"condition": [
 					[
@@ -4596,8 +4498,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -36
+					"x": 2,
+					"y": -2
 				},
 				"condition": [
 					[
@@ -4633,8 +4535,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": -1,
-					"y": -47
+					"x": 1,
+					"y": -21
 				},
 				"condition": [
 					[
@@ -4656,7 +4558,7 @@
 			500,
 			567
 		],
-		"mirror": true,
+		"mirror": false,
 		"pointType": "body",
 		"transforms": []
 	},
@@ -4803,20 +4705,6 @@
 						}
 					]
 				]
-			},
-			{
-				"type": "const-shift",
-				"value": {
-					"x": -6,
-					"y": -5
-				},
-				"condition": [
-					[
-						{
-							"legs": "sitting"
-						}
-					]
-				]
 			}
 		]
 	},
@@ -4874,8 +4762,8 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 0,
-					"y": -162
+					"x": -2,
+					"y": -164
 				},
 				"condition": [
 					[

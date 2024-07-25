@@ -18,8 +18,8 @@ const templateList: string[] = [
 	'skirt_long_static_breasts',
 	// Custom templates
 	'custom_arm_restraints_armbinder_glove',
-	'custom_arm_restraints_straight_jacket_straps',
-	'custom_arm_restraints_torso_ropes',
+	'custom_arm_restraints_straight_jacket_straps', // Based on body, small edits
+	'custom_arm_restraints_torso_ropes', // Based on body, small edits
 	'custom_body_nipples',
 	'custom_bras_style1_breasts',
 	'custom_dresses_latex_dress_breasts',
