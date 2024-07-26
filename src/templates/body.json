@@ -4555,6 +4555,48 @@
 	},
 	{
 		"pos": [
+			475,
+			562
+		],
+		"mirror": true,
+		"transforms": [
+			{
+				"type": "shift",
+				"bone": "waist",
+				"value": {
+					"x": -14,
+					"y": 0
+				}
+			},
+			{
+				"type": "shift",
+				"bone": "waist",
+				"value": {
+					"x": 9,
+					"y": 0
+				},
+				"condition": [
+					[
+						{
+							"bone": "waist",
+							"operator": ">",
+							"value": 0
+						}
+					]
+				]
+			},
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": -5,
+					"y": 0
+				}
+			}
+		]
+	},
+	{
+		"pos": [
 			500,
 			567
 		],

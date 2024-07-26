@@ -13,9 +13,7 @@ const templateList: string[] = [
 	'breasts',
 	'handheld',
 	'skirt_short',
-	'skirt_short_static_breasts',
 	'skirt_long',
-	'skirt_long_static_breasts',
 	// Custom templates
 	'custom_arm_restraints_armbinder_glove',
 	'custom_arm_restraints_straight_jacket_straps', // Based on body, small edits
