@@ -747,8 +747,8 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 				{
 					name: 'Kneeling closed',
 					bones: {
-						leg_r: 6,
-						leg_l: 6,
+						leg_r: 5,
+						leg_l: 5,
 					},
 					legs: 'kneeling',
 				},

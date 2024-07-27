@@ -1553,23 +1553,6 @@
 				"type": "rotate",
 				"bone": "leg_r",
 				"value": -1
-			},
-			{
-				"type": "const-shift",
-				"value": {
-					"x": 0,
-					"y": 0
-				},
-				"condition": [
-					[
-						{
-							"legs": "kneeling"
-						},
-						{
-							"view": "front"
-						}
-					]
-				]
 			}
 		]
 	},
@@ -1606,13 +1589,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 44,
-					"y": -34
+					"x": 11,
+					"y": -60
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": 3,
+					"y": -40
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -1657,13 +1660,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 53,
-					"y": -369
+					"x": 36,
+					"y": -374
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": 18,
+					"y": -307
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -1725,13 +1748,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": -38,
-					"y": -392
+					"x": -31,
+					"y": -396
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -10,
+					"y": -330
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -1830,13 +1873,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": -29,
-					"y": -26
+					"x": 2,
+					"y": -46
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": 2,
+					"y": -28
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -1898,13 +1961,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 23,
-					"y": -68
+					"x": 6,
+					"y": -73
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -1,
+					"y": -66
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -1949,13 +2032,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": -16,
+					"x": -9,
+					"y": -56
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -2,
 					"y": -52
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -2314,13 +2417,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": -40,
-					"y": -270
+					"x": -33,
+					"y": -274
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -12,
+					"y": -208
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -2402,13 +2525,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 43,
-					"y": -308
+					"x": 26,
+					"y": -313
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": 8,
+					"y": -246
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -2453,13 +2596,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": -40,
-					"y": -313
+					"x": -33,
+					"y": -317
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -12,
+					"y": -251
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -3538,13 +3701,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": -31,
-					"y": -167
+					"x": 0,
+					"y": -187
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -4,
+					"y": -134
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -3558,7 +3741,7 @@
 	},
 	{
 		"pos": [
-			463,
+			462,
 			1165
 		],
 		"mirror": true,
@@ -3589,13 +3772,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": -10,
-					"y": -183
+					"x": -3,
+					"y": -187
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -7,
+					"y": -148
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -3665,6 +3868,23 @@
 				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -1,
+					"y": -26
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
+					]
+				]
+			},
+			{
 				"type": "rotate",
 				"bone": "leg_r",
 				"value": -1
@@ -3704,13 +3924,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": -35,
-					"y": -75
+					"x": -4,
+					"y": -95
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -1,
+					"y": -65
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -3772,13 +4012,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": -19,
-					"y": -97
+					"x": -12,
+					"y": -101
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -3,
+					"y": -86
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -3840,13 +4100,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": -35,
-					"y": -124
+					"x": -4,
+					"y": -144
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -2,
+					"y": -102
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -3908,13 +4188,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": -15,
-					"y": -141
+					"x": -8,
+					"y": -145
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -4,
+					"y": -119
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -3976,13 +4276,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 19,
-					"y": -118
+					"x": 2,
+					"y": -123
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -3,
+					"y": -104
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -4044,13 +4364,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 38,
-					"y": -97
+					"x": 5,
+					"y": -123
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -1,
+					"y": -84
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -4112,13 +4452,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 13,
-					"y": -162
+					"x": -4,
+					"y": -167
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -5,
+					"y": -134
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -4180,13 +4540,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 31,
-					"y": -146
+					"x": -2,
+					"y": -172
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -4,
+					"y": -120
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -4231,13 +4611,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 29,
-					"y": -186
+					"x": 12,
+					"y": -191
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -4,
+					"y": -146
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -4299,13 +4699,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 9,
-					"y": -201
+					"x": -8,
+					"y": -206
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -5,
+					"y": -158
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -4350,13 +4770,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": -9,
-					"y": -224
+					"x": -2,
+					"y": -228
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -8,
+					"y": -176
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -4418,13 +4858,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": -33,
-					"y": -203
+					"x": -2,
+					"y": -223
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -6,
+					"y": -161
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -4469,13 +4929,33 @@
 			{
 				"type": "const-shift",
 				"value": {
-					"x": 24,
-					"y": -236
+					"x": 7,
+					"y": -241
 				},
 				"condition": [
 					[
 						{
 							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -7,
+					"y": -183
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
 						}
 					]
 				]
@@ -4841,6 +5321,23 @@
 				]
 			},
 			{
+				"type": "const-shift",
+				"value": {
+					"x": -3,
+					"y": -26
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
+					]
+				]
+			},
+			{
 				"type": "rotate",
 				"bone": "leg_r",
 				"value": -1
@@ -4974,6 +5471,121 @@
 						}
 					]
 				]
+			}
+		]
+	},
+	{
+		"pos": [
+			424,
+			1252
+		],
+		"mirror": true,
+		"transforms": [
+			{
+				"type": "shift",
+				"bone": "leg_width",
+				"value": {
+					"x": -2,
+					"y": 0
+				}
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -3,
+					"y": -140
+				},
+				"condition": [
+					[
+						{
+							"legs": "sitting"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": 12,
+					"y": -275
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": -6,
+					"y": -208
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
+					]
+				]
+			},
+			{
+				"type": "rotate",
+				"bone": "leg_r",
+				"value": -1
+			}
+		]
+	},
+	{
+		"pos": [
+			449,
+			963
+		],
+		"mirror": true,
+		"transforms": [
+			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -154
+				},
+				"condition": [
+					[
+						{
+							"legs": "sitting"
+						}
+					]
+				]
+			},
+			{
+				"type": "const-shift",
+				"value": {
+					"x": 0,
+					"y": -7
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
+					]
+				]
+			},
+			{
+				"type": "rotate",
+				"bone": "leg_r",
+				"value": -1
 			}
 		]
 	}
