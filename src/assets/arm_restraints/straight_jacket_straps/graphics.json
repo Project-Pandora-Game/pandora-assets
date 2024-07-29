@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 1,
@@ -13,14 +14,14 @@
 			"image": {
 				"image": "s_j_front.png",
 				"overrides": []
-			},
-			"name": "front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front arms",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "body",
 			"pointType": [
@@ -32,14 +33,14 @@
 			"image": {
 				"image": "s_j_back_arms.png",
 				"overrides": []
-			},
-			"name": "front arms"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "buckles",
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -47,14 +48,14 @@
 			"image": {
 				"image": "s_j_buckle.png",
 				"overrides": []
-			},
-			"name": "buckles"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "strap cuffs",
 			"priority": "ABOVE_ARM_RIGHT",
 			"points": "static",
 			"mirror": 0,
@@ -62,14 +63,14 @@
 			"image": {
 				"image": "s_j_loop.png",
 				"overrides": []
-			},
-			"name": "strap cuffs"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -77,14 +78,14 @@
 			"image": {
 				"image": "s_j_back.png",
 				"overrides": []
-			},
-			"name": "back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back arms",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "body",
 			"pointType": [
@@ -96,8 +97,7 @@
 			"image": {
 				"image": "s_j_back_arms.png",
 				"overrides": []
-			},
-			"name": "back arms"
+			}
 		}
 	]
 }

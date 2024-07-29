@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Front",
 			"priority": "ABOVE_BODY",
 			"points": "skirt_short",
 			"pointType": [
@@ -31,14 +32,14 @@
 					}
 				],
 				"alphaImage": "alpha_short_elegant_skirt.png"
-			},
-			"name": "Front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Back",
 			"priority": "BELOW_BODY",
 			"points": "skirt_short_static_breasts",
 			"pointType": [
@@ -64,8 +65,7 @@
 					}
 				],
 				"alphaImage": "alpha_short_elegant_skirt.png"
-			},
-			"name": "Back"
+			}
 		}
 	]
 }

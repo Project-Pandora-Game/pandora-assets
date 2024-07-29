@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "small ring strap",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "static",
 			"mirror": 0,
@@ -26,14 +27,14 @@
 						]
 					}
 				]
-			},
-			"name": "small ring strap"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "small ring",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "static",
 			"mirror": 0,
@@ -54,14 +55,14 @@
 						]
 					}
 				]
-			},
-			"name": "small ring"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "small ring strap",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "static",
 			"mirror": 0,
@@ -82,14 +83,14 @@
 						]
 					}
 				]
-			},
-			"name": "small ring strap"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "glove",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "static",
 			"mirror": 0,
@@ -110,14 +111,14 @@
 						]
 					}
 				]
-			},
-			"name": "glove"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "shine",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "static",
 			"mirror": 0,
@@ -125,14 +126,14 @@
 			"image": {
 				"image": "armbinder_shine.png",
 				"overrides": []
-			},
-			"name": "shine"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "large ring",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "static",
 			"mirror": 0,
@@ -140,14 +141,14 @@
 			"image": {
 				"image": "armbinder_big_ring.png",
 				"overrides": []
-			},
-			"name": "large ring"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "straps",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "static",
 			"mirror": 0,
@@ -155,14 +156,14 @@
 			"image": {
 				"image": "armbinder_straps.png",
 				"overrides": []
-			},
-			"name": "straps"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "shoulder straps",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "body",
 			"mirror": 0,
@@ -170,14 +171,14 @@
 			"image": {
 				"image": "armbinder_shoulder_straps.png",
 				"overrides": []
-			},
-			"name": "shoulder straps"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "seam",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "static",
 			"mirror": 0,
@@ -185,14 +186,14 @@
 			"image": {
 				"image": "armbinder_seam.png",
 				"overrides": []
-			},
-			"name": "seam"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "rings",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "static",
 			"mirror": 0,
@@ -200,14 +201,14 @@
 			"image": {
 				"image": "armbinder_rings.png",
 				"overrides": []
-			},
-			"name": "rings"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "strings",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "static",
 			"mirror": 0,
@@ -215,14 +216,14 @@
 			"image": {
 				"image": "armbinder_strings.png",
 				"overrides": []
-			},
-			"name": "strings"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "shoulder straps front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -230,14 +231,14 @@
 			"image": {
 				"image": "armbinder_straps_front.png",
 				"overrides": []
-			},
-			"name": "shoulder straps front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "glove front",
 			"priority": "ABOVE_ARM_RIGHT",
 			"points": "static",
 			"mirror": 0,
@@ -258,8 +259,7 @@
 						]
 					}
 				]
-			},
-			"name": "glove front"
+			}
 		}
 	]
 }

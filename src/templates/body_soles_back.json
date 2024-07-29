@@ -4,6 +4,8 @@
 			584,
 			1447
 		],
+		"mirror": true,
+		"pointType": "body_l",
 		"transforms": [
 			{
 				"type": "shift",
@@ -35,15 +37,15 @@
 				"bone": "leg_l",
 				"value": 1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_l"
+		]
 	},
 	{
 		"pos": [
 			507,
 			1449
 		],
+		"mirror": true,
+		"pointType": "body_l",
 		"transforms": [
 			{
 				"type": "shift",
@@ -75,15 +77,15 @@
 				"bone": "leg_l",
 				"value": 1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_l"
+		]
 	},
 	{
 		"pos": [
 			501,
 			1258
 		],
+		"mirror": true,
+		"pointType": "body_l",
 		"transforms": [
 			{
 				"type": "shift",
@@ -115,15 +117,15 @@
 				"bone": "leg_l",
 				"value": 1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_l"
+		]
 	},
 	{
 		"pos": [
 			600,
 			1264
 		],
+		"mirror": true,
+		"pointType": "body_l",
 		"transforms": [
 			{
 				"type": "shift",
@@ -155,15 +157,15 @@
 				"bone": "leg_l",
 				"value": 1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_l"
+		]
 	},
 	{
 		"pos": [
 			507,
 			1324
 		],
+		"mirror": true,
+		"pointType": "body_l",
 		"transforms": [
 			{
 				"type": "shift",
@@ -195,8 +197,6 @@
 				"bone": "leg_l",
 				"value": 1
 			}
-		],
-		"mirror": true,
-		"pointType": "body_l"
+		]
 	}
 ]

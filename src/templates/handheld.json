@@ -4,6 +4,8 @@
 			852,
 			964
 		],
+		"mirror": true,
+		"pointType": "handheld_l",
 		"transforms": [
 			{
 				"type": "rotate",
@@ -15,15 +17,15 @@
 				"bone": "arm_l",
 				"value": 1
 			}
-		],
-		"mirror": true,
-		"pointType": "handheld_l"
+		]
 	},
 	{
 		"pos": [
 			1250,
 			964
 		],
+		"mirror": true,
+		"pointType": "handheld_l",
 		"transforms": [
 			{
 				"type": "rotate",
@@ -35,15 +37,15 @@
 				"bone": "arm_l",
 				"value": 1
 			}
-		],
-		"mirror": true,
-		"pointType": "handheld_l"
+		]
 	},
 	{
 		"pos": [
 			876,
 			408
 		],
+		"mirror": true,
+		"pointType": "handheld_l",
 		"transforms": [
 			{
 				"type": "shift",
@@ -63,15 +65,15 @@
 				"bone": "arm_l",
 				"value": 1
 			}
-		],
-		"mirror": true,
-		"pointType": "handheld_l"
+		]
 	},
 	{
 		"pos": [
 			938,
 			365
 		],
+		"mirror": true,
+		"pointType": "handheld_l",
 		"transforms": [
 			{
 				"type": "shift",
@@ -91,15 +93,15 @@
 				"bone": "arm_l",
 				"value": 1
 			}
-		],
-		"mirror": true,
-		"pointType": "handheld_l"
+		]
 	},
 	{
 		"pos": [
 			999,
 			408
 		],
+		"mirror": true,
+		"pointType": "handheld_l",
 		"transforms": [
 			{
 				"type": "shift",
@@ -119,15 +121,15 @@
 				"bone": "arm_l",
 				"value": 1
 			}
-		],
-		"mirror": true,
-		"pointType": "handheld_l"
+		]
 	},
 	{
 		"pos": [
 			999,
 			462
 		],
+		"mirror": true,
+		"pointType": "handheld_l",
 		"transforms": [
 			{
 				"type": "shift",
@@ -147,15 +149,15 @@
 				"bone": "arm_l",
 				"value": 1
 			}
-		],
-		"mirror": true,
-		"pointType": "handheld_l"
+		]
 	},
 	{
 		"pos": [
 			938,
 			514
 		],
+		"mirror": true,
+		"pointType": "handheld_l",
 		"transforms": [
 			{
 				"type": "shift",
@@ -175,15 +177,15 @@
 				"bone": "arm_l",
 				"value": 1
 			}
-		],
-		"mirror": true,
-		"pointType": "handheld_l"
+		]
 	},
 	{
 		"pos": [
 			876,
 			462
 		],
+		"mirror": true,
+		"pointType": "handheld_l",
 		"transforms": [
 			{
 				"type": "shift",
@@ -203,15 +205,15 @@
 				"bone": "arm_l",
 				"value": 1
 			}
-		],
-		"mirror": true,
-		"pointType": "handheld_l"
+		]
 	},
 	{
 		"pos": [
 			852,
 			1
 		],
+		"mirror": true,
+		"pointType": "handheld_l",
 		"transforms": [
 			{
 				"type": "rotate",
@@ -223,15 +225,15 @@
 				"bone": "arm_l",
 				"value": 1
 			}
-		],
-		"mirror": true,
-		"pointType": "handheld_l"
+		]
 	},
 	{
 		"pos": [
 			1250,
 			1
 		],
+		"mirror": true,
+		"pointType": "handheld_l",
 		"transforms": [
 			{
 				"type": "rotate",
@@ -243,8 +245,6 @@
 				"bone": "arm_l",
 				"value": 1
 			}
-		],
-		"mirror": true,
-		"pointType": "handheld_l"
+		]
 	}
 ]

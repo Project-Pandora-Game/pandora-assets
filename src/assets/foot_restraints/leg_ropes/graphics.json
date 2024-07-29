@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "legs front",
 			"priority": "ABOVE_BODY",
 			"points": "horizontal_limbs_width",
 			"mirror": 0,
@@ -68,14 +69,14 @@
 						]
 					}
 				]
-			},
-			"name": "legs front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "legs back",
 			"priority": "BELOW_BODY",
 			"points": "horizontal_limbs_width",
 			"mirror": 0,
@@ -138,8 +139,7 @@
 						]
 					}
 				]
-			},
-			"name": "legs back"
+			}
 		}
 	]
 }

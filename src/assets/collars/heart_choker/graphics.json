@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "choker front",
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -13,14 +14,14 @@
 			"image": {
 				"image": "choker.png",
 				"overrides": []
-			},
-			"name": "choker front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "choker heart",
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -28,14 +29,14 @@
 			"image": {
 				"image": "choker_heart.png",
 				"overrides": []
-			},
-			"name": "choker heart"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "choker rivets front",
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -43,14 +44,14 @@
 			"image": {
 				"image": "choker_rivets.png",
 				"overrides": []
-			},
-			"name": "choker rivets front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "choker back",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -58,14 +59,14 @@
 			"image": {
 				"image": "choker_back.png",
 				"overrides": []
-			},
-			"name": "choker back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "choker rivets back",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -73,8 +74,7 @@
 			"image": {
 				"image": "choker_rivets_back.png",
 				"overrides": []
-			},
-			"name": "choker rivets back"
+			}
 		}
 	]
 }

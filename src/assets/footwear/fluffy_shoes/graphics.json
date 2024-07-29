@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -24,14 +25,14 @@
 						]
 					}
 				]
-			},
-			"name": "front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front belts",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -50,14 +51,14 @@
 						]
 					}
 				]
-			},
-			"name": "front belts"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -76,14 +77,14 @@
 						]
 					}
 				]
-			},
-			"name": "back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back belts",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -102,14 +103,14 @@
 						]
 					}
 				]
-			},
-			"name": "back belts"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "soles kneeling sole",
 			"priority": "BELOW_BODY_SOLES",
 			"points": "body_soles_back",
 			"mirror": 0,
@@ -131,8 +132,7 @@
 						]
 					}
 				]
-			},
-			"name": "soles kneeling sole"
+			}
 		}
 	]
 }

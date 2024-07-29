@@ -6,8 +6,12 @@
 			"y": 0,
 			"width": 1400,
 			"height": 1500,
+			"name": "handle hand overlay",
 			"priority": "ABOVE_ARM_RIGHT",
 			"points": "handheld",
+			"pointType": [
+				"handheld_r"
+			],
 			"mirror": 0,
 			"image": {
 				"image": "",
@@ -55,19 +59,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"handheld_r"
-			],
-			"name": "handle hand overlay"
+			}
 		},
 		{
 			"x": -200,
 			"y": 0,
 			"width": 1400,
 			"height": 1500,
+			"name": "handle",
 			"priority": "BELOW_ARM_RIGHT",
 			"points": "handheld",
+			"pointType": [
+				"handheld_r"
+			],
 			"mirror": 0,
 			"image": {
 				"image": "",
@@ -157,19 +161,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"handheld_r"
-			],
-			"name": "handle"
+			}
 		},
 		{
 			"x": -200,
 			"y": 0,
 			"width": 1400,
 			"height": 1500,
+			"name": "handle hand overlay",
 			"priority": "BELOW_ARM_RIGHT",
 			"points": "handheld",
+			"pointType": [
+				"handheld_r"
+			],
 			"mirror": 0,
 			"image": {
 				"image": "",
@@ -217,19 +221,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"handheld_r"
-			],
-			"name": "handle hand overlay"
+			}
 		},
 		{
 			"x": -200,
 			"y": 0,
 			"width": 1400,
 			"height": 1500,
+			"name": "handle back",
 			"priority": "ABOVE_ARM_RIGHT",
 			"points": "handheld",
+			"pointType": [
+				"handheld_r"
+			],
 			"mirror": 0,
 			"image": {
 				"image": "",
@@ -319,19 +323,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"handheld_r"
-			],
-			"name": "handle back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "box modern",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "static",
+			"pointType": [
+				"static_l"
+			],
 			"mirror": 0,
 			"colorizationKey": "box_m",
 			"image": {
@@ -350,19 +354,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"static_l"
-			],
-			"name": "box modern"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "box modern handle front",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "static",
+			"pointType": [
+				"static_l"
+			],
 			"mirror": 0,
 			"image": {
 				"image": "construction_tool_handle_front.png",
@@ -385,19 +389,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"static_l"
-			],
-			"name": "box modern handle front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "box modern handle back",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "static",
+			"pointType": [
+				"static_l"
+			],
 			"mirror": 0,
 			"image": {
 				"image": "construction_tool_handle_back.png",
@@ -420,21 +424,21 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"static_l"
-			],
-			"name": "box modern handle back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "box wooden front",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "static",
-			"colorizationKey": "box_w",
+			"pointType": [
+				"static_l"
+			],
 			"mirror": 0,
+			"colorizationKey": "box_w",
 			"image": {
 				"image": "construction_tools_box_wood.png",
 				"overrides": [
@@ -456,21 +460,21 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"static_l"
-			],
-			"name": "box wooden front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "box wooden back",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "static",
-			"colorizationKey": "box_w",
+			"pointType": [
+				"static_l"
+			],
 			"mirror": 0,
+			"colorizationKey": "box_w",
 			"image": {
 				"image": "construction_tools_box_wood.png",
 				"overrides": [
@@ -492,11 +496,7 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"static_l"
-			],
-			"name": "box wooden back"
+			}
 		}
 	]
 }

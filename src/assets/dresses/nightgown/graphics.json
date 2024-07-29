@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "straps front",
 			"priority": "ABOVE_BODY",
 			"points": "shirt",
 			"mirror": 0,
@@ -13,14 +14,14 @@
 			"image": {
 				"image": "nightgown_straps_front.png",
 				"overrides": []
-			},
-			"name": "straps front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front",
 			"priority": "ABOVE_BODY",
 			"points": "skirt_long",
 			"mirror": 0,
@@ -29,7 +30,6 @@
 				"image": "nightgown_front_medium.png",
 				"overrides": []
 			},
-			"name": "front",
 			"scaling": {
 				"scaleBone": "breasts",
 				"stops": [
@@ -55,6 +55,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front behind breasts",
 			"priority": "BELOW_BREASTS",
 			"points": "skirt_long",
 			"mirror": 0,
@@ -63,7 +64,6 @@
 				"image": "nightgown_front_medium.png",
 				"overrides": []
 			},
-			"name": "front behind breasts",
 			"scaling": {
 				"scaleBone": "breasts",
 				"stops": [
@@ -89,6 +89,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "straps back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -96,14 +97,14 @@
 			"image": {
 				"image": "nightgown_straps_back.png",
 				"overrides": []
-			},
-			"name": "straps back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back",
 			"priority": "BELOW_BODY",
 			"points": "skirt_long_static_breasts",
 			"mirror": 0,
@@ -111,8 +112,7 @@
 			"image": {
 				"image": "nightgown_back.png",
 				"overrides": []
-			},
-			"name": "back"
+			}
 		}
 	]
 }

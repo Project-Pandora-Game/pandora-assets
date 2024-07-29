@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "hood",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -13,14 +14,14 @@
 			"image": {
 				"image": "hood.png",
 				"overrides": []
-			},
-			"name": "hood"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "eye cover",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -41,14 +42,14 @@
 						]
 					}
 				]
-			},
-			"name": "eye cover"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "mouth cover",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -69,14 +70,14 @@
 						]
 					}
 				]
-			},
-			"name": "mouth cover"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "hood back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -84,14 +85,14 @@
 			"image": {
 				"image": "hood_back.png",
 				"overrides": []
-			},
-			"name": "hood back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "hood back zipper",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -99,8 +100,7 @@
 			"image": {
 				"image": "hood_zipper.png",
 				"overrides": []
-			},
-			"name": "hood back zipper"
+			}
 		}
 	]
 }

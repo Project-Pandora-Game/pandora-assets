@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "jeans back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -14,14 +15,14 @@
 				"image": "jeans_back.png",
 				"overrides": [],
 				"alphaImage": "Alpha_jeans_shorts.png"
-			},
-			"name": "jeans back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "jeans front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -30,14 +31,14 @@
 				"image": "jeans.png",
 				"overrides": [],
 				"alphaImage": "Alpha_jeans_shorts.png"
-			},
-			"name": "jeans front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "jeans button",
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -45,8 +46,7 @@
 			"image": {
 				"image": "Button.png",
 				"overrides": []
-			},
-			"name": "jeans button"
+			}
 		}
 	]
 }
