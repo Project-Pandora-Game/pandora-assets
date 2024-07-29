@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front",
 			"priority": "ABOVE_BODY",
 			"points": "shirt",
 			"pointType": [
@@ -18,7 +19,6 @@
 				"image": "leather_jacket_medium.png",
 				"overrides": []
 			},
-			"name": "front",
 			"scaling": {
 				"scaleBone": "breasts",
 				"stops": [
@@ -44,6 +44,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "arms",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "shirt",
 			"pointType": [
@@ -56,7 +57,6 @@
 				"image": "leather_jacket_medium.png",
 				"overrides": []
 			},
-			"name": "arms",
 			"scaling": {
 				"scaleBone": "breasts",
 				"stops": [
@@ -82,6 +82,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front behind breasts",
 			"priority": "BELOW_BREASTS",
 			"points": "shirt",
 			"pointType": [
@@ -94,7 +95,6 @@
 				"image": "leather_jacket_medium.png",
 				"overrides": []
 			},
-			"name": "front behind breasts",
 			"scaling": {
 				"scaleBone": "breasts",
 				"stops": [
@@ -120,6 +120,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"pointType": [
@@ -131,14 +132,14 @@
 			"image": {
 				"image": "leather_jacket_back.png",
 				"overrides": []
-			},
-			"name": "back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back helper",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"pointType": [
@@ -150,14 +151,14 @@
 			"image": {
 				"image": "leather_jacket_back_helper.png",
 				"overrides": []
-			},
-			"name": "back helper"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "arms back",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "body",
 			"pointType": [
@@ -169,8 +170,7 @@
 			"image": {
 				"image": "leather_jacket_back.png",
 				"overrides": []
-			},
-			"name": "arms back"
+			}
 		}
 	]
 }

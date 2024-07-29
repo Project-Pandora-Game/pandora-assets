@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Shorts",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -24,14 +25,14 @@
 						]
 					}
 				]
-			},
-			"name": "Shorts"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Shorts_Back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -50,14 +51,14 @@
 						]
 					}
 				]
-			},
-			"name": "Shorts_Back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Waistband",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -76,14 +77,14 @@
 						]
 					}
 				]
-			},
-			"name": "Waistband"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Waistband_Back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -102,8 +103,7 @@
 						]
 					}
 				]
-			},
-			"name": "Waistband_Back"
+			}
 		}
 	]
 }

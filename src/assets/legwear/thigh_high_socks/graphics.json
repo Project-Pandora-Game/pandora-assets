@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -24,14 +25,14 @@
 						]
 					}
 				]
-			},
-			"name": "front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "stripe 1 front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -52,14 +53,14 @@
 						]
 					}
 				]
-			},
-			"name": "stripe 1 front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "stripe 2 front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -87,14 +88,14 @@
 						]
 					}
 				]
-			},
-			"name": "stripe 2 front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "stripe 3 front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -115,14 +116,14 @@
 						]
 					}
 				]
-			},
-			"name": "stripe 3 front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -141,14 +142,14 @@
 						]
 					}
 				]
-			},
-			"name": "back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "stripe 1 back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -169,14 +170,14 @@
 						]
 					}
 				]
-			},
-			"name": "stripe 1 back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "stripe 2 back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -204,14 +205,14 @@
 						]
 					}
 				]
-			},
-			"name": "stripe 2 back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "stripe 3 back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -232,14 +233,14 @@
 						]
 					}
 				]
-			},
-			"name": "stripe 3 back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "soles",
 			"priority": "BELOW_BODY_SOLES",
 			"points": "body_soles_back",
 			"mirror": 0,
@@ -261,8 +262,7 @@
 						]
 					}
 				]
-			},
-			"name": "soles"
+			}
 		}
 	]
 }

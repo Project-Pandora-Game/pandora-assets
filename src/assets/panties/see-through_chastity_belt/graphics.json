@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Crotch cover Front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"pointType": [
@@ -48,14 +49,14 @@
 						]
 					}
 				]
-			},
-			"name": "Crotch cover Front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Crotch cover Back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"pointType": [
@@ -91,14 +92,14 @@
 						]
 					}
 				]
-			},
-			"name": "Crotch cover Back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "belt front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"pointType": [
@@ -122,14 +123,14 @@
 						]
 					}
 				]
-			},
-			"name": "belt front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "belt back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"pointType": [
@@ -140,14 +141,14 @@
 			"image": {
 				"image": "belt_back.png",
 				"overrides": []
-			},
-			"name": "belt back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Buckle",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"pointType": [
@@ -158,8 +159,7 @@
 			"image": {
 				"image": "belt_closing.png",
 				"overrides": []
-			},
-			"name": "Buckle"
+			}
 		}
 	]
 }

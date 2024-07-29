@@ -6,20 +6,21 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "rings",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
 			"image": {
 				"image": "pluggag_rings.png",
 				"overrides": []
-			},
-			"name": "rings"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "straps",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -27,14 +28,14 @@
 			"image": {
 				"image": "pluggag_straps.png",
 				"overrides": []
-			},
-			"name": "straps"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "harness straps",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -55,14 +56,14 @@
 						]
 					}
 				]
-			},
-			"name": "harness straps"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "gag",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -70,28 +71,28 @@
 			"image": {
 				"image": "pluggag_gag.png",
 				"overrides": []
-			},
-			"name": "gag"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "gag ring",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
 			"image": {
 				"image": "pluggag_gagring.png",
 				"overrides": []
-			},
-			"name": "gag ring"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "plug",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -112,14 +113,14 @@
 						]
 					}
 				]
-			},
-			"name": "plug"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "straps back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -127,22 +128,21 @@
 			"image": {
 				"image": "pluggag_straps_back.png",
 				"overrides": []
-			},
-			"name": "straps back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "buckle",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
 			"image": {
 				"image": "pluggag_buckle_back.png",
 				"overrides": []
-			},
-			"name": "buckle"
+			}
 		}
 	]
 }

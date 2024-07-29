@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "body mask",
 			"priority": "BODY",
 			"points": "body",
 			"mirror": 0,
@@ -26,14 +27,14 @@
 						]
 					}
 				]
-			},
-			"name": "body mask"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -77,14 +78,14 @@
 						]
 					}
 				]
-			},
-			"name": "front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "rings",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -105,14 +106,14 @@
 						]
 					}
 				]
-			},
-			"name": "rings"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "strings",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -133,14 +134,14 @@
 						]
 					}
 				]
-			},
-			"name": "strings"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -184,14 +185,14 @@
 						]
 					}
 				]
-			},
-			"name": "back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "soles back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -210,14 +211,14 @@
 						]
 					}
 				]
-			},
-			"name": "soles back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "soles kneeling sole",
 			"priority": "BELOW_BODY_SOLES",
 			"points": "body_soles_back",
 			"mirror": 0,
@@ -239,14 +240,14 @@
 						]
 					}
 				]
-			},
-			"name": "soles kneeling sole"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "soles kneeling sides",
 			"priority": "BELOW_BODY_SOLES",
 			"points": "body_soles_back",
 			"mirror": 0,
@@ -268,8 +269,7 @@
 						]
 					}
 				]
-			},
-			"name": "soles kneeling sides"
+			}
 		}
 	]
 }

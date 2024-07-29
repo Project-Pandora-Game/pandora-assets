@@ -82,6 +82,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front skirt",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -102,16 +103,20 @@
 						]
 					}
 				]
-			},
-			"name": "front skirt"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back",
 			"priority": "BELOW_BODY",
 			"points": "custom_latex_dress",
+			"pointType": [
+				"body",
+				"bodyarm"
+			],
 			"mirror": 0,
 			"colorizationKey": "dress",
 			"image": {
@@ -129,18 +134,14 @@
 						}
 					]
 				]
-			},
-			"name": "back",
-			"pointType": [
-				"body",
-				"bodyarm"
-			]
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back_shoulders",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "custom_latex_dress",
 			"pointType": [
@@ -164,14 +165,14 @@
 						}
 					]
 				]
-			},
-			"name": "back_shoulders"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back skirt",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -192,8 +193,7 @@
 						]
 					}
 				]
-			},
-			"name": "back skirt"
+			}
 		}
 	]
 }

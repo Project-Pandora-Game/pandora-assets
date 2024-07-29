@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "large ring",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -13,14 +14,14 @@
 			"image": {
 				"image": "leatheranklecuffs_large_ring.png",
 				"overrides": []
-			},
-			"name": "large ring"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "chain",
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -149,14 +150,14 @@
 						]
 					}
 				]
-			},
-			"name": "chain"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "cuffs",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -164,14 +165,14 @@
 			"image": {
 				"image": "leatheranklecuffs_cuff.png",
 				"overrides": []
-			},
-			"name": "cuffs"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "belts",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -179,14 +180,14 @@
 			"image": {
 				"image": "leatheranklecuffs_belt.png",
 				"overrides": []
-			},
-			"name": "belts"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "rings",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -194,14 +195,14 @@
 			"image": {
 				"image": "leatheranklecuffs_rings.png",
 				"overrides": []
-			},
-			"name": "rings"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "cuff back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -209,14 +210,14 @@
 			"image": {
 				"image": "leatheranklecuffs_cuff.png",
 				"overrides": []
-			},
-			"name": "cuff back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "belt back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -224,14 +225,14 @@
 			"image": {
 				"image": "leatheranklecuffs_belt.png",
 				"overrides": []
-			},
-			"name": "belt back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "ring back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -239,14 +240,14 @@
 			"image": {
 				"image": "leatheranklecuffs_rings.png",
 				"overrides": []
-			},
-			"name": "ring back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "chain kneeling",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -388,8 +389,7 @@
 						]
 					}
 				]
-			},
-			"name": "chain kneeling"
+			}
 		}
 	]
 }

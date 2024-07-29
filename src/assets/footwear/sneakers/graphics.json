@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -24,14 +25,14 @@
 						]
 					}
 				]
-			},
-			"name": "front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "laces",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -50,14 +51,14 @@
 						]
 					}
 				]
-			},
-			"name": "laces"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "soles front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -76,14 +77,14 @@
 						]
 					}
 				]
-			},
-			"name": "soles front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -102,14 +103,14 @@
 						]
 					}
 				]
-			},
-			"name": "back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "soles back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -128,14 +129,14 @@
 						]
 					}
 				]
-			},
-			"name": "soles back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "soles kneeling sides",
 			"priority": "BELOW_BODY_SOLES",
 			"points": "body_soles_back",
 			"mirror": 0,
@@ -157,14 +158,14 @@
 						]
 					}
 				]
-			},
-			"name": "soles kneeling sides"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "soles kneeling sole",
 			"priority": "BELOW_BODY_SOLES",
 			"points": "body_soles_back",
 			"mirror": 0,
@@ -186,8 +187,7 @@
 						]
 					}
 				]
-			},
-			"name": "soles kneeling sole"
+			}
 		}
 	]
 }

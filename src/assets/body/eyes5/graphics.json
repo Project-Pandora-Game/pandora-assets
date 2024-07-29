@@ -2,13 +2,16 @@
 {
 	"layers": [
 		{
-			"name": "Sclera",
 			"x": 436,
 			"y": 257,
 			"width": 128,
 			"height": 64,
+			"name": "Sclera",
 			"priority": "BODY",
 			"points": "static",
+			"pointType": [
+				"static_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "sclera",
 			"image": {
@@ -39,19 +42,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"static_l"
-			]
+			}
 		},
 		{
-			"name": "Iris",
 			"x": 436,
 			"y": 257,
 			"width": 128,
 			"height": 64,
+			"name": "Iris",
 			"priority": "BODY",
 			"points": "static",
+			"pointType": [
+				"static_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "iris",
 			"image": {
@@ -262,19 +265,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"static_l"
-			]
+			}
 		},
 		{
-			"name": "Pupil",
 			"x": 436,
 			"y": 257,
 			"width": 128,
 			"height": 64,
+			"name": "Pupil",
 			"priority": "BODY",
 			"points": "static",
+			"pointType": [
+				"static_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "pupil",
 			"image": {
@@ -485,19 +488,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"static_l"
-			]
+			}
 		},
 		{
-			"name": "Reflection",
 			"x": 436,
 			"y": 257,
 			"width": 128,
 			"height": 64,
+			"name": "Reflection",
 			"priority": "BODY",
 			"points": "static",
+			"pointType": [
+				"static_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "reflections",
 			"image": {
@@ -516,19 +519,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"static_l"
-			]
+			}
 		},
 		{
-			"name": "Shadow",
 			"x": 436,
 			"y": 257,
 			"width": 128,
 			"height": 64,
+			"name": "Shadow",
 			"priority": "BODY",
 			"points": "static",
+			"pointType": [
+				"static_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "shadow",
 			"image": {
@@ -547,19 +550,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"static_l"
-			]
+			}
 		},
 		{
-			"name": "Eyelashes",
 			"x": 436,
 			"y": 257,
 			"width": 128,
 			"height": 64,
+			"name": "Eyelashes",
 			"priority": "BODY",
 			"points": "static",
+			"pointType": [
+				"static_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "lashes",
 			"image": {
@@ -602,11 +605,7 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"static_l"
-			]
+			}
 		}
 	]
 }
-

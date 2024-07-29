@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Front",
 			"priority": "ABOVE_BODY",
 			"points": "skirt_long",
 			"mirror": 0,
@@ -14,14 +15,14 @@
 				"image": "long_flowy_skirt_front.png",
 				"overrides": [],
 				"alphaImage": "alpha_long_flowy_skirt.png"
-			},
-			"name": "Front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Back",
 			"priority": "BELOW_BODY",
 			"points": "skirt_long_static_breasts",
 			"mirror": 0,
@@ -30,8 +31,7 @@
 				"image": "long_flowy_skirt_back.png",
 				"overrides": [],
 				"alphaImage": "alpha_long_flowy_skirt.png"
-			},
-			"name": "Back"
+			}
 		}
 	]
 }
