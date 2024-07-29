@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "glass low",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -26,14 +27,14 @@
 						]
 					}
 				]
-			},
-			"name": "glass low"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "frame low",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -54,14 +55,14 @@
 						]
 					}
 				]
-			},
-			"name": "frame low"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "base low",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -81,14 +82,14 @@
 						]
 					}
 				]
-			},
-			"name": "base low"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "glass",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -109,14 +110,14 @@
 						]
 					}
 				]
-			},
-			"name": "glass"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "frame",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -137,14 +138,14 @@
 						]
 					}
 				]
-			},
-			"name": "frame"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "base",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -164,14 +165,14 @@
 						]
 					}
 				]
-			},
-			"name": "base"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "frame back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -179,8 +180,7 @@
 			"image": {
 				"image": "frame_back.png",
 				"overrides": []
-			},
-			"name": "frame back"
+			}
 		}
 	]
 }

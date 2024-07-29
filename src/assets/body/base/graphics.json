@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Soles",
 			"priority": "BODY_SOLES",
 			"points": "body_soles_back",
 			"mirror": 0,
@@ -27,8 +28,7 @@
 						]
 					}
 				]
-			},
-			"name": "Soles"
+			}
 		},
 		{
 			"x": 0,
@@ -371,9 +371,16 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Body shadow",
 			"priority": "BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"bodyarm",
+				"arm"
+			],
 			"mirror": 0,
+			"colorizationKey": "skin",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -412,22 +419,20 @@
 						]
 					}
 				]
-			},
-			"name": "Body shadow",
-			"colorizationKey": "skin",
-			"pointType": [
-				"body",
-				"bodyarm",
-				"arm"
-			]
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Body shadow back",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"bodyarm"
+			],
 			"mirror": 0,
 			"colorizationKey": "skin",
 			"image": {
@@ -444,12 +449,7 @@
 						]
 					}
 				]
-			},
-			"name": "Body shadow back",
-			"pointType": [
-				"body",
-				"bodyarm"
-			]
+			}
 		},
 		{
 			"x": 0,
@@ -499,8 +499,12 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Breasts shadow",
 			"priority": "BREASTS",
 			"points": "breasts",
+			"pointType": [
+				"breasts"
+			],
 			"mirror": 0,
 			"colorizationKey": "skin",
 			"image": {
@@ -531,11 +535,7 @@
 						]
 					}
 				]
-			},
-			"name": "Breasts shadow",
-			"pointType": [
-				"breasts"
-			]
+			}
 		},
 		{
 			"x": 0,

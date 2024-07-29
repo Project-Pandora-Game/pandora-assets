@@ -81,6 +81,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "breast",
 			"priority": "BREASTS",
 			"points": "breasts",
 			"mirror": 0,
@@ -101,14 +102,14 @@
 						]
 					}
 				]
-			},
-			"name": "breast"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "breasts back",
 			"priority": "BELOW_BODY",
 			"points": "breasts",
 			"mirror": 0,
@@ -116,8 +117,7 @@
 			"image": {
 				"image": "breast_back.png",
 				"overrides": []
-			},
-			"name": "breasts back"
+			}
 		}
 	]
 }

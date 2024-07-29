@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "straps",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -13,28 +14,28 @@
 			"image": {
 				"image": "blindfold_straps.png",
 				"overrides": []
-			},
-			"name": "straps"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "base",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
 			"image": {
 				"image": "blindfold_base.png",
 				"overrides": []
-			},
-			"name": "base"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "base",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -42,14 +43,14 @@
 			"image": {
 				"image": "blindfold_cover.png",
 				"overrides": []
-			},
-			"name": "base"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "straps back",
 			"priority": "BELOW_BACK_HAIR",
 			"points": "body",
 			"mirror": 0,
@@ -57,22 +58,21 @@
 			"image": {
 				"image": "blindfold_straps_back.png",
 				"overrides": []
-			},
-			"name": "straps back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "buckle",
 			"priority": "BELOW_BACK_HAIR",
 			"points": "body",
 			"mirror": 0,
 			"image": {
 				"image": "blindfold_buckle_back.png",
 				"overrides": []
-			},
-			"name": "buckle"
+			}
 		}
 	]
 }

@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front pulled down",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -26,14 +27,14 @@
 						]
 					}
 				]
-			},
-			"name": "front pulled down"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front pulled down frills",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -54,14 +55,14 @@
 						]
 					}
 				]
-			},
-			"name": "front pulled down frills"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -83,7 +84,6 @@
 					}
 				]
 			},
-			"name": "front",
 			"scaling": {
 				"scaleBone": "breasts",
 				"stops": [
@@ -135,6 +135,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front frills",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -156,7 +157,6 @@
 					}
 				]
 			},
-			"name": "front frills",
 			"scaling": {
 				"scaleBone": "breasts",
 				"stops": [
@@ -208,6 +208,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front skirt",
 			"priority": "ABOVE_BODY",
 			"points": "skirt_short",
 			"mirror": 0,
@@ -228,14 +229,14 @@
 						]
 					}
 				]
-			},
-			"name": "front skirt"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front skirt frills",
 			"priority": "ABOVE_BODY",
 			"points": "skirt_short",
 			"mirror": 0,
@@ -256,14 +257,14 @@
 						]
 					}
 				]
-			},
-			"name": "front skirt frills"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front breasts",
 			"priority": "ABOVE_BODY",
 			"points": "breasts",
 			"mirror": 0,
@@ -284,14 +285,14 @@
 						]
 					}
 				]
-			},
-			"name": "front breasts"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front frills breasts",
 			"priority": "ABOVE_BODY",
 			"points": "breasts",
 			"mirror": 0,
@@ -312,14 +313,14 @@
 						]
 					}
 				]
-			},
-			"name": "front frills breasts"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "buttons",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -347,14 +348,14 @@
 						]
 					}
 				]
-			},
-			"name": "buttons"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -375,14 +376,14 @@
 						]
 					}
 				]
-			},
-			"name": "back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back frills",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -403,14 +404,14 @@
 						]
 					}
 				]
-			},
-			"name": "back frills"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back skirt",
 			"priority": "BELOW_BODY",
 			"points": "skirt_short",
 			"mirror": 0,
@@ -431,14 +432,14 @@
 						]
 					}
 				]
-			},
-			"name": "back skirt"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back skirt frills",
 			"priority": "BELOW_BODY",
 			"points": "skirt_short",
 			"mirror": 0,
@@ -459,14 +460,14 @@
 						]
 					}
 				]
-			},
-			"name": "back skirt frills"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "ribbon back frills front cover",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -487,14 +488,14 @@
 						]
 					}
 				]
-			},
-			"name": "ribbon back frills front cover"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "ribbon back",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -515,14 +516,14 @@
 						]
 					}
 				]
-			},
-			"name": "ribbon back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "ribbon back frills",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -543,14 +544,14 @@
 						]
 					}
 				]
-			},
-			"name": "ribbon back frills"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back 2",
 			"priority": "BELOW_BREASTS",
 			"points": "body",
 			"mirror": 0,
@@ -572,7 +573,6 @@
 					}
 				]
 			},
-			"name": "back 2",
 			"scaling": {
 				"scaleBone": "breasts",
 				"stops": [
@@ -624,6 +624,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back 2 frills",
 			"priority": "BELOW_BREASTS",
 			"points": "body",
 			"mirror": 0,
@@ -645,7 +646,6 @@
 					}
 				]
 			},
-			"name": "back 2 frills",
 			"scaling": {
 				"scaleBone": "breasts",
 				"stops": [

@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front nylon",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"pointType": [
@@ -30,14 +31,14 @@
 						]
 					}
 				]
-			},
-			"name": "front nylon"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"pointType": [
@@ -75,7 +76,6 @@
 					}
 				]
 			},
-			"name": "front",
 			"scaling": {
 				"scaleBone": "breasts",
 				"stops": []
@@ -86,6 +86,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front shadow",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"pointType": [
@@ -98,7 +99,6 @@
 				"image": "net_top_shadow_large.png",
 				"overrides": []
 			},
-			"name": "front shadow",
 			"scaling": {
 				"scaleBone": "breasts",
 				"stops": [
@@ -131,6 +131,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "arms",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "body",
 			"pointType": [
@@ -143,7 +144,6 @@
 				"image": "net_top_base_front.png",
 				"overrides": []
 			},
-			"name": "arms",
 			"scaling": {
 				"scaleBone": "breasts",
 				"stops": [
@@ -176,6 +176,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front behind breasts",
 			"priority": "BELOW_BREASTS",
 			"points": "body",
 			"pointType": [
@@ -188,7 +189,6 @@
 				"image": "net_top_base_front.png",
 				"overrides": []
 			},
-			"name": "front behind breasts",
 			"scaling": {
 				"scaleBone": "breasts",
 				"stops": [
@@ -221,6 +221,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back nylon",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"pointType": [
@@ -245,14 +246,14 @@
 						]
 					}
 				]
-			},
-			"name": "back nylon"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"pointType": [
@@ -264,14 +265,14 @@
 			"image": {
 				"image": "net_top_base_back.png",
 				"overrides": []
-			},
-			"name": "back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back arms",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "body",
 			"pointType": [
@@ -283,14 +284,14 @@
 			"image": {
 				"image": "net_top_base_back.png",
 				"overrides": []
-			},
-			"name": "back arms"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "bust",
 			"priority": "OVERLAY",
 			"points": "breasts",
 			"mirror": 0,
@@ -323,14 +324,14 @@
 						]
 					}
 				]
-			},
-			"name": "bust"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "bust back",
 			"priority": "BELOW_BREASTS",
 			"points": "breasts",
 			"mirror": 0,
@@ -363,8 +364,7 @@
 						]
 					}
 				]
-			},
-			"name": "bust back"
+			}
 		}
 	]
 }

@@ -6,6 +6,7 @@
 			"y": -260,
 			"width": 1777,
 			"height": 1810,
+			"name": "Ankles rope",
 			"priority": "BACKGROUND",
 			"points": "static",
 			"mirror": 0,
@@ -39,14 +40,14 @@
 						]
 					}
 				]
-			},
-			"name": "Ankles rope"
+			}
 		},
 		{
 			"x": -708,
 			"y": -260,
 			"width": 1777,
 			"height": 1810,
+			"name": "Ankles wrap",
 			"priority": "OVERLAY",
 			"points": "static",
 			"mirror": 0,
@@ -80,14 +81,14 @@
 						]
 					}
 				]
-			},
-			"name": "Ankles wrap"
+			}
 		},
 		{
 			"x": -708,
 			"y": -260,
 			"width": 1777,
 			"height": 1810,
+			"name": "Wrists rope",
 			"priority": "BACKGROUND",
 			"points": "static",
 			"mirror": 0,
@@ -121,14 +122,14 @@
 						]
 					}
 				]
-			},
-			"name": "Wrists rope"
+			}
 		},
 		{
 			"x": -708,
 			"y": -260,
 			"width": 1777,
 			"height": 1810,
+			"name": "Wrists wrap",
 			"priority": "OVERLAY",
 			"points": "static",
 			"mirror": 0,
@@ -162,14 +163,14 @@
 						]
 					}
 				]
-			},
-			"name": "Wrists wrap"
+			}
 		},
 		{
 			"x": -708,
 			"y": -260,
 			"width": 1777,
 			"height": 1810,
+			"name": "Ankles rope",
 			"priority": "OVERLAY",
 			"points": "static",
 			"mirror": 0,
@@ -203,14 +204,14 @@
 						]
 					}
 				]
-			},
-			"name": "Ankles rope"
+			}
 		},
 		{
 			"x": -708,
 			"y": -260,
 			"width": 1777,
 			"height": 1810,
+			"name": "Ankles wrap",
 			"priority": "BACKGROUND",
 			"points": "static",
 			"mirror": 0,
@@ -244,14 +245,14 @@
 						]
 					}
 				]
-			},
-			"name": "Ankles wrap"
+			}
 		},
 		{
 			"x": -708,
 			"y": -260,
 			"width": 1777,
 			"height": 1810,
+			"name": "Wrists rope",
 			"priority": "OVERLAY",
 			"points": "static",
 			"mirror": 0,
@@ -285,14 +286,14 @@
 						]
 					}
 				]
-			},
-			"name": "Wrists rope"
+			}
 		},
 		{
 			"x": -708,
 			"y": -260,
 			"width": 1777,
 			"height": 1810,
+			"name": "Wrists wrap",
 			"priority": "BACKGROUND",
 			"points": "static",
 			"mirror": 0,
@@ -326,8 +327,7 @@
 						]
 					}
 				]
-			},
-			"name": "Wrists wrap"
+			}
 		}
 	]
 }

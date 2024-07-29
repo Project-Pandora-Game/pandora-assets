@@ -6,8 +6,12 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "sex",
 			"priority": "BODY",
 			"points": "body",
+			"pointType": [
+				"body"
+			],
 			"mirror": 0,
 			"colorizationKey": "mark",
 			"image": {
@@ -38,19 +42,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"body"
-			],
-			"name": "sex"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "breasts",
 			"priority": "BREASTS",
 			"points": "breasts",
+			"pointType": [
+				"breasts_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "mark",
 			"image": {
@@ -81,19 +85,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"breasts_l"
-			],
-			"name": "breasts"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "thighs front",
 			"priority": "BODY",
 			"points": "body",
+			"pointType": [
+				"body_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "mark",
 			"image": {
@@ -124,19 +128,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"body_l"
-			],
-			"name": "thighs front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "thighs back",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "mark",
 			"image": {
@@ -167,19 +171,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"body_l"
-			],
-			"name": "thighs back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "butt",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "mark",
 			"image": {
@@ -210,19 +214,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"body_l"
-			],
-			"name": "butt"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body"
+			],
 			"mirror": 0,
 			"colorizationKey": "mark",
 			"image": {
@@ -253,11 +257,7 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"body"
-			],
-			"name": "back"
+			}
 		}
 	]
 }

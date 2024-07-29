@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "jeans back breasts",
 			"priority": "BELOW_BODY",
 			"points": "custom_tops_jeans_jacket_breasts",
 			"mirror": 0,
@@ -13,14 +14,14 @@
 			"image": {
 				"image": "jj_back.png",
 				"overrides": []
-			},
-			"name": "jeans back breasts"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "jeans back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"pointType": [
@@ -32,14 +33,14 @@
 			"image": {
 				"image": "jj_back.png",
 				"overrides": []
-			},
-			"name": "jeans back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "jeans back",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "body",
 			"pointType": [
@@ -51,14 +52,14 @@
 			"image": {
 				"image": "jj_back.png",
 				"overrides": []
-			},
-			"name": "jeans back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "jeans sleeves",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "body",
 			"pointType": [
@@ -83,14 +84,14 @@
 						]
 					}
 				]
-			},
-			"name": "jeans sleeves"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "jeans sleeves",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "body",
 			"pointType": [
@@ -115,14 +116,14 @@
 						]
 					}
 				]
-			},
-			"name": "jeans sleeves"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "jeans breasts",
 			"priority": "ABOVE_BODY",
 			"points": "custom_tops_jeans_jacket_breasts",
 			"mirror": 0,
@@ -130,14 +131,14 @@
 			"image": {
 				"image": "jj.png",
 				"overrides": []
-			},
-			"name": "jeans breasts"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "jeans front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"pointType": [
@@ -149,14 +150,14 @@
 			"image": {
 				"image": "jj.png",
 				"overrides": []
-			},
-			"name": "jeans front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "jeans front sleeves part",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "body",
 			"pointType": [
@@ -168,8 +169,7 @@
 			"image": {
 				"image": "jj.png",
 				"overrides": []
-			},
-			"name": "jeans front sleeves part"
+			}
 		}
 	]
 }

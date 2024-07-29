@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Panties Front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -26,14 +27,14 @@
 						]
 					}
 				]
-			},
-			"name": "Panties Front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Small",
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -61,14 +62,14 @@
 						]
 					}
 				]
-			},
-			"name": "Small"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Large",
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -96,14 +97,14 @@
 						]
 					}
 				]
-			},
-			"name": "Large"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Huge",
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -124,14 +125,14 @@
 						]
 					}
 				]
-			},
-			"name": "Huge"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Panties Back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -152,8 +153,7 @@
 						]
 					}
 				]
-			},
-			"name": "Panties Back"
+			}
 		}
 	]
 }
