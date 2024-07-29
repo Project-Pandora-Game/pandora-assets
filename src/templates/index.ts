@@ -1,7 +1,7 @@
-import { GetLogger, ModuleNameSchema, PointTemplate, PointTemplateSchema, SCHEME_OVERRIDE } from 'pandora-common';
-import { join } from 'path';
-import { readFileSync } from 'fs';
-import { SRC_DIR } from '../constants';
+import { readFileSync, writeFileSync } from 'fs';
+import { CanonizePointTemplate, GetLogger, ModuleNameSchema, PointTemplate, PointTemplateSchema, SCHEME_OVERRIDE } from 'pandora-common';
+import { join, relative } from 'path';
+import { SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../constants';
 import { GraphicsDatabase } from '../tools/graphicsDatabase';
 import { WatchFile } from '../tools/watch';
 
@@ -19,6 +19,8 @@ const templateList: string[] = [
 	'skirt_short_static_breasts',
 	'skirt_long',
 	'skirt_long_static_breasts',
+	// Custom templates
+	'custom_latex_dress',
 ];
 
 export function LoadTemplates() {
@@ -29,16 +31,21 @@ export function LoadTemplates() {
 }
 
 export function LoadTemplate(name: string): PointTemplate {
+	const logger = GetLogger('TemplateValidation');
+
 	const path = join(SRC_DIR, 'templates', `${name}.json`);
+	const usrPath = relative(SRC_DIR, path);
 
 	WatchFile(path);
 
-	const template = JSON.parse(
-		readFileSync(path, { encoding: 'utf-8' })
+	const rawTemplate = readFileSync(path, { encoding: 'utf-8' });
+
+	const template: unknown = JSON.parse(
+		rawTemplate
 			.split('\n')
 			.filter((line) => !line.trimStart().startsWith('//'))
 			.join('\n'),
-	) as PointTemplate;
+	);
 
 	ModuleNameSchema[SCHEME_OVERRIDE]((_module, ctx) => {
 		ctx.addIssue({
@@ -49,11 +56,17 @@ export function LoadTemplate(name: string): PointTemplate {
 
 	const parseResult = PointTemplateSchema.safeParse(template);
 	if (!parseResult.success) {
-		GetLogger('TemplateValidation').error(
-			`Template in '${path}' is not PointTemplateSchema:\n`,
-			parseResult.error.toString(),
-		);
-		throw new Error(`Graphics in '${path}' is not PointTemplateSchema`);
+		logger.error(`Template in '${usrPath}' is not PointTemplateSchema:\n`, parseResult.error.toString());
+		throw new Error(`Graphics in '${usrPath}' is not PointTemplateSchema`);
+	}
+
+	const canonizedExport = JSON.stringify(CanonizePointTemplate(parseResult.data), undefined, '\t').trim() + '\n';
+	if (canonizedExport !== rawTemplate) {
+		logger.warning(`Template in '${usrPath}' is not in its canonic form. Please use editor to correct this.`);
+		if (TRY_AUTOCORRECT_WARNINGS) {
+			writeFileSync(path, canonizedExport, { encoding: 'utf-8' });
+			logger.info('The above warning has been auto-corrected; re-run to check if successful.');
+		}
 	}
 
 	return parseResult.data;

@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "collar front",
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -13,14 +14,14 @@
 			"image": {
 				"image": "yoke_metal_collar.png",
 				"overrides": []
-			},
-			"name": "collar front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "ring",
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -41,14 +42,14 @@
 						]
 					}
 				]
-			},
-			"name": "ring"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "cuffs front",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "body",
 			"pointType": [
@@ -60,14 +61,14 @@
 			"image": {
 				"image": "yoke_metal_cuffs.png",
 				"overrides": []
-			},
-			"name": "cuffs front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "bar",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "static",
 			"mirror": 0,
@@ -100,14 +101,14 @@
 						]
 					}
 				]
-			},
-			"name": "bar"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "collar back",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -115,14 +116,14 @@
 			"image": {
 				"image": "yoke_metal_collar.png",
 				"overrides": []
-			},
-			"name": "collar back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "cuffs back",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "body",
 			"pointType": [
@@ -134,8 +135,7 @@
 			"image": {
 				"image": "yoke_metal_cuffs.png",
 				"overrides": []
-			},
-			"name": "cuffs back"
+			}
 		}
 	]
 }

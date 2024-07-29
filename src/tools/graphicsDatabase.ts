@@ -1,4 +1,5 @@
-import { GetLogger, AssetId, AssetGraphicsDefinition, PointTemplate, AssetsGraphicsDefinitionFile } from 'pandora-common';
+import { Immutable } from 'immer';
+import { AssetGraphicsDefinition, AssetId, AssetsGraphicsDefinitionFile, GetLogger, PointTemplate } from 'pandora-common';
 import { GENERATE_AVIF } from '../constants';
 import { AVIF_SUFFIX } from './resources';
 
@@ -6,7 +7,11 @@ const logger = GetLogger('GraphicsDatabase');
 
 export const GraphicsDatabase = new class GraphicsDatabase {
 	private assets: Map<AssetId, AssetGraphicsDefinition> = new Map();
-	private templates: Map<string, PointTemplate> = new Map();
+	private _templates: Map<string, PointTemplate> = new Map();
+
+	public get templates(): ReadonlyMap<string, Immutable<PointTemplate>> {
+		return this._templates;
+	}
 
 	public registerAsset(id: AssetId, asset: AssetGraphicsDefinition, allowOverride: boolean = false): void {
 		if (this.assets.has(id) && !allowOverride) {
@@ -18,21 +23,21 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 	}
 
 	public registerPointTemplate(name: string, template: PointTemplate): void {
-		if (this.templates.has(name)) {
+		if (this._templates.has(name)) {
 			throw new Error(`Duplicate template definition, template '${name}' already exists`);
 		}
 
-		this.templates.set(name, template);
+		this._templates.set(name, template);
 		logger.debug('Registered point template', name);
 	}
 
 	public hasPointTemplate(name: string): boolean {
-		return this.templates.has(name);
+		return this._templates.has(name);
 	}
 
 	public export(): AssetsGraphicsDefinitionFile {
 		const pointTemplates: Record<string, PointTemplate> = {};
-		for (const [name, template] of this.templates.entries()) {
+		for (const [name, template] of this._templates.entries()) {
 			pointTemplates[name] = template;
 		}
 		const assets: Record<AssetId, AssetGraphicsDefinition> = {};
@@ -52,6 +57,6 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 
 	public clear(): void {
 		this.assets.clear();
-		this.templates.clear();
+		this._templates.clear();
 	}
 };

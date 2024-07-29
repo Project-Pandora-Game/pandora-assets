@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "clamps",
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -13,14 +14,14 @@
 			"image": {
 				"image": "clamps.png",
 				"overrides": []
-			},
-			"name": "clamps"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "addons",
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -101,8 +102,7 @@
 						]
 					}
 				]
-			},
-			"name": "addons"
+			}
 		}
 	]
 }

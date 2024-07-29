@@ -6,6 +6,7 @@
 			"y": 86,
 			"width": 1000,
 			"height": 1500,
+			"name": "Top front",
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -29,14 +30,14 @@
 						]
 					}
 				]
-			},
-			"name": "Top front"
+			}
 		},
 		{
 			"x": -42,
 			"y": 86,
 			"width": 1000,
 			"height": 1500,
+			"name": "Frame front",
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -60,14 +61,14 @@
 						]
 					}
 				]
-			},
-			"name": "Frame front"
+			}
 		},
 		{
 			"x": -42,
 			"y": 86,
 			"width": 1000,
 			"height": 1500,
+			"name": "Metal front",
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -91,14 +92,14 @@
 						]
 					}
 				]
-			},
-			"name": "Metal front"
+			}
 		},
 		{
 			"x": -38,
 			"y": 88,
 			"width": 1000,
 			"height": 1500,
+			"name": "Top back",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -122,8 +123,7 @@
 						]
 					}
 				]
-			},
-			"name": "Top back"
+			}
 		}
 	]
 }

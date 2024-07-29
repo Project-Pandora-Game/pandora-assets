@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Waistband_Front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -13,14 +14,14 @@
 			"image": {
 				"image": "waistband.png",
 				"overrides": []
-			},
-			"name": "Waistband_Front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Waistband_Back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -28,14 +29,14 @@
 			"image": {
 				"image": "waistband.png",
 				"overrides": []
-			},
-			"name": "Waistband_Back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Crotchplate_Front",
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -56,14 +57,14 @@
 						]
 					}
 				]
-			},
-			"name": "Crotchplate_Front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Crotchplate_Front_Open",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -84,14 +85,14 @@
 						]
 					}
 				]
-			},
-			"name": "Crotchplate_Front_Open"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Crotchplate_Back_And_Open",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -112,14 +113,14 @@
 						]
 					}
 				]
-			},
-			"name": "Crotchplate_Back_And_Open"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Heartplate_Front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -127,14 +128,14 @@
 			"image": {
 				"image": "heartplate.png",
 				"overrides": []
-			},
-			"name": "Heartplate_Front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Heartplate_Back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -142,14 +143,14 @@
 			"image": {
 				"image": "heartplate.png",
 				"overrides": []
-			},
-			"name": "Heartplate_Back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Lock",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -157,8 +158,7 @@
 			"image": {
 				"image": "lock.png",
 				"overrides": []
-			},
-			"name": "Lock"
+			}
 		}
 	]
 }

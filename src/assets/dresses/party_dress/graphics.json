@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front",
 			"priority": "ABOVE_BODY",
 			"points": "skirt_short",
 			"pointType": [
@@ -18,7 +19,6 @@
 				"image": "party_dress_medium.png",
 				"overrides": []
 			},
-			"name": "front",
 			"scaling": {
 				"scaleBone": "breasts",
 				"stops": [
@@ -44,6 +44,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "skirt_short",
 			"pointType": [
@@ -55,14 +56,14 @@
 			"image": {
 				"image": "party_dress_medium.png",
 				"overrides": []
-			},
-			"name": "front"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "front behind breasts",
 			"priority": "BELOW_BREASTS",
 			"points": "skirt_short",
 			"pointType": [
@@ -75,7 +76,6 @@
 				"image": "party_dress_medium.png",
 				"overrides": []
 			},
-			"name": "front behind breasts",
 			"scaling": {
 				"scaleBone": "breasts",
 				"stops": [
@@ -101,6 +101,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back",
 			"priority": "BELOW_BODY",
 			"points": "skirt_short_static_breasts",
 			"pointType": [
@@ -112,14 +113,14 @@
 			"image": {
 				"image": "party_dress_back.png",
 				"overrides": []
-			},
-			"name": "back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "skirt_short_static_breasts",
 			"pointType": [
@@ -131,8 +132,7 @@
 			"image": {
 				"image": "party_dress_back.png",
 				"overrides": []
-			},
-			"name": "back"
+			}
 		}
 	]
 }

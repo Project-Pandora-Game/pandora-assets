@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "large ring",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "body",
 			"pointType": [
@@ -17,14 +18,14 @@
 			"image": {
 				"image": "leathercuffs_large_ring.png",
 				"overrides": []
-			},
-			"name": "large ring"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "chain",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "static",
 			"mirror": 0,
@@ -91,14 +92,14 @@
 						]
 					}
 				]
-			},
-			"name": "chain"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "cuffs",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "body",
 			"pointType": [
@@ -110,14 +111,14 @@
 			"image": {
 				"image": "leathercuffs_cuff.png",
 				"overrides": []
-			},
-			"name": "cuffs"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "belts",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "body",
 			"pointType": [
@@ -129,14 +130,14 @@
 			"image": {
 				"image": "leathercuffs_belt.png",
 				"overrides": []
-			},
-			"name": "belts"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "rings",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "body",
 			"pointType": [
@@ -148,14 +149,14 @@
 			"image": {
 				"image": "leathercuffs_rings.png",
 				"overrides": []
-			},
-			"name": "rings"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "cuff back",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "body",
 			"pointType": [
@@ -167,14 +168,14 @@
 			"image": {
 				"image": "leathercuffs_cuff.png",
 				"overrides": []
-			},
-			"name": "cuff back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "belt back",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "body",
 			"pointType": [
@@ -186,14 +187,14 @@
 			"image": {
 				"image": "leathercuffs_belt.png",
 				"overrides": []
-			},
-			"name": "belt back"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "ring back",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "body",
 			"pointType": [
@@ -205,8 +206,7 @@
 			"image": {
 				"image": "leathercuffs_rings.png",
 				"overrides": []
-			},
-			"name": "ring back"
+			}
 		}
 	]
 }

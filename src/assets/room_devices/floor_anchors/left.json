@@ -6,6 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "chain front-facing",
 			"priority": "OVERLAY",
 			"points": "static",
 			"mirror": 0,
@@ -65,14 +66,14 @@
 						]
 					}
 				]
-			},
-			"name": "chain front-facing"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "chain back-facing",
 			"priority": "OVERLAY",
 			"points": "static",
 			"mirror": 0,
@@ -132,8 +133,7 @@
 						]
 					}
 				]
-			},
-			"name": "chain back-facing"
+			}
 		}
 	]
 }

@@ -2,11 +2,11 @@
 {
 	"layers": [
 		{
-			"name": "Eyebrows",
 			"x": 436,
 			"y": 257,
 			"width": 128,
 			"height": 64,
+			"name": "Eyebrows",
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 0,

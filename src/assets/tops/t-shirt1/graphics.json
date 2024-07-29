@@ -120,8 +120,13 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back",
 			"priority": "BELOW_BODY",
 			"points": "shirt",
+			"pointType": [
+				"body",
+				"bodyarm"
+			],
 			"mirror": 0,
 			"colorizationKey": "shirt",
 			"image": {
@@ -140,20 +145,20 @@
 						]
 					}
 				]
-			},
-			"name": "back",
-			"pointType": [
-				"body",
-				"bodyarm"
-			]
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "back_arms",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "shirt",
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "shirt",
 			"image": {
@@ -172,18 +177,14 @@
 						]
 					}
 				]
-			},
-			"name": "back_arms",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			]
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "print",
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -276,8 +277,7 @@
 						]
 					}
 				]
-			},
-			"name": "print"
+			}
 		}
 	]
 }

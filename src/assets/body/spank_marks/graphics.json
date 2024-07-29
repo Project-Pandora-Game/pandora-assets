@@ -6,8 +6,12 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "sex",
 			"priority": "BODY",
 			"points": "body",
+			"pointType": [
+				"body"
+			],
 			"mirror": 0,
 			"colorizationKey": "blush",
 			"image": {
@@ -26,19 +30,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"body"
-			],
-			"name": "sex"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "breasts",
 			"priority": "BREASTS",
 			"points": "breasts",
+			"pointType": [
+				"breasts_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "blush",
 			"image": {
@@ -57,19 +61,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"breasts_l"
-			],
-			"name": "breasts"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "butt",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "blush",
 			"image": {
@@ -124,19 +128,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"body_l"
-			],
-			"name": "butt"
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "butt hand prints",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "print",
 			"image": {
@@ -167,11 +171,7 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"body_l"
-			],
-			"name": "butt hand prints"
+			}
 		}
 	]
 }

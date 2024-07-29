@@ -8,6 +8,9 @@
 			"height": 1500,
 			"priority": "BODY",
 			"points": "static",
+			"pointType": [
+				"static_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "eyeBackground",
 			"image": {
@@ -26,10 +29,7 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"static_l"
-			]
+			}
 		},
 		{
 			"x": 0,
@@ -38,6 +38,9 @@
 			"height": 1500,
 			"priority": "BODY",
 			"points": "static",
+			"pointType": [
+				"static_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "eyeColor",
 			"image": {
@@ -56,10 +59,7 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"static_l"
-			]
+			}
 		},
 		{
 			"x": 0,
@@ -68,6 +68,9 @@
 			"height": 1500,
 			"priority": "BODY",
 			"points": "static",
+			"pointType": [
+				"static_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "lashes",
 			"image": {
@@ -86,10 +89,7 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"static_l"
-			]
+			}
 		},
 		{
 			"x": 0,
@@ -98,6 +98,9 @@
 			"height": 1500,
 			"priority": "BODY",
 			"points": "static",
+			"pointType": [
+				"static_l"
+			],
 			"mirror": 1,
 			"colorizationKey": "shine",
 			"image": {
@@ -116,10 +119,7 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"static_l"
-			]
+			}
 		},
 		{
 			"x": 0,
@@ -128,6 +128,9 @@
 			"height": 1500,
 			"priority": "BODY",
 			"points": "static",
+			"pointType": [
+				"static_l"
+			],
 			"mirror": 1,
 			"image": {
 				"image": "pupils2.png",
@@ -193,10 +196,7 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"static_l"
-			]
+			}
 		}
 	]
 }

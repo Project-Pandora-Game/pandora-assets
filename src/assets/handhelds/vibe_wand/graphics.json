@@ -6,8 +6,12 @@
 			"y": 0,
 			"width": 1400,
 			"height": 1500,
+			"name": "handle hand overlay",
 			"priority": "ABOVE_ARM_RIGHT",
 			"points": "handheld",
+			"pointType": [
+				"handheld_r"
+			],
 			"mirror": 1,
 			"colorizationKey": "handle",
 			"image": {
@@ -35,19 +39,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"handheld_r"
-			],
-			"name": "handle hand overlay"
+			}
 		},
 		{
 			"x": -200,
 			"y": 0,
 			"width": 1400,
 			"height": 1500,
+			"name": "wand",
 			"priority": "BELOW_ARM_RIGHT",
 			"points": "handheld",
+			"pointType": [
+				"handheld_r"
+			],
 			"mirror": 1,
 			"colorizationKey": "wand",
 			"image": {
@@ -90,19 +94,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"handheld_r"
-			],
-			"name": "wand"
+			}
 		},
 		{
 			"x": -200,
 			"y": 0,
 			"width": 1400,
 			"height": 1500,
+			"name": "handle",
 			"priority": "BELOW_ARM_RIGHT",
 			"points": "handheld",
+			"pointType": [
+				"handheld_r"
+			],
 			"mirror": 1,
 			"colorizationKey": "handle",
 			"image": {
@@ -151,19 +155,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"handheld_r"
-			],
-			"name": "handle"
+			}
 		},
 		{
 			"x": -200,
 			"y": 0,
 			"width": 1400,
 			"height": 1500,
+			"name": "handle hand overlay",
 			"priority": "BELOW_ARM_RIGHT",
 			"points": "handheld",
+			"pointType": [
+				"handheld_r"
+			],
 			"mirror": 1,
 			"colorizationKey": "handle",
 			"image": {
@@ -191,19 +195,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"handheld_r"
-			],
-			"name": "handle hand overlay"
+			}
 		},
 		{
 			"x": -200,
 			"y": 0,
 			"width": 1400,
 			"height": 1500,
+			"name": "handle back",
 			"priority": "ABOVE_ARM_RIGHT",
 			"points": "handheld",
+			"pointType": [
+				"handheld_r"
+			],
 			"mirror": 1,
 			"colorizationKey": "handle",
 			"image": {
@@ -252,11 +256,7 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"handheld_r"
-			],
-			"name": "handle back"
+			}
 		}
 	]
 }

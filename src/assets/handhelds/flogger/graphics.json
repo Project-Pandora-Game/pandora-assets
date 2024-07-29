@@ -6,8 +6,12 @@
 			"y": 0,
 			"width": 1450,
 			"height": 1500,
+			"name": "slapper",
 			"priority": "BELOW_ARM_RIGHT",
 			"points": "handheld",
+			"pointType": [
+				"handheld_r"
+			],
 			"mirror": 1,
 			"colorizationKey": "slapper",
 			"image": {
@@ -50,19 +54,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"handheld_r"
-			],
-			"name": "slapper"
+			}
 		},
 		{
 			"x": -225,
 			"y": 0,
 			"width": 1450,
 			"height": 1500,
+			"name": "handle hand overlay",
 			"priority": "ABOVE_ARM_RIGHT",
 			"points": "handheld",
+			"pointType": [
+				"handheld_r"
+			],
 			"mirror": 1,
 			"colorizationKey": "handle",
 			"image": {
@@ -90,19 +94,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"handheld_r"
-			],
-			"name": "handle hand overlay"
+			}
 		},
 		{
 			"x": -225,
 			"y": 0,
 			"width": 1450,
 			"height": 1500,
+			"name": "handle cc",
 			"priority": "ABOVE_ARM_RIGHT",
 			"points": "handheld",
+			"pointType": [
+				"handheld_r"
+			],
 			"mirror": 1,
 			"image": {
 				"image": "",
@@ -129,19 +133,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"handheld_r"
-			],
-			"name": "handle cc"
+			}
 		},
 		{
 			"x": -225,
 			"y": 0,
 			"width": 1450,
 			"height": 1500,
+			"name": "handle",
 			"priority": "BELOW_ARM_RIGHT",
 			"points": "handheld",
+			"pointType": [
+				"handheld_r"
+			],
 			"mirror": 1,
 			"colorizationKey": "handle",
 			"image": {
@@ -190,19 +194,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"handheld_r"
-			],
-			"name": "handle"
+			}
 		},
 		{
 			"x": -225,
 			"y": 0,
 			"width": 1450,
 			"height": 1500,
+			"name": "handle hand overlay",
 			"priority": "BELOW_ARM_RIGHT",
 			"points": "handheld",
+			"pointType": [
+				"handheld_r"
+			],
 			"mirror": 1,
 			"colorizationKey": "handle",
 			"image": {
@@ -230,19 +234,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"handheld_r"
-			],
-			"name": "handle hand overlay"
+			}
 		},
 		{
 			"x": -225,
 			"y": 0,
 			"width": 1450,
 			"height": 1500,
+			"name": "handle cc",
 			"priority": "BELOW_ARM_RIGHT",
 			"points": "handheld",
+			"pointType": [
+				"handheld_r"
+			],
 			"mirror": 1,
 			"image": {
 				"image": "",
@@ -269,19 +273,19 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"handheld_r"
-			],
-			"name": "handle cc"
+			}
 		},
 		{
 			"x": -225,
 			"y": 0,
 			"width": 1450,
 			"height": 1500,
+			"name": "handle back",
 			"priority": "ABOVE_ARM_RIGHT",
 			"points": "handheld",
+			"pointType": [
+				"handheld_r"
+			],
 			"mirror": 1,
 			"colorizationKey": "handle",
 			"image": {
@@ -330,11 +334,7 @@
 						]
 					}
 				]
-			},
-			"pointType": [
-				"handheld_r"
-			],
-			"name": "handle back"
+			}
 		}
 	]
 }
