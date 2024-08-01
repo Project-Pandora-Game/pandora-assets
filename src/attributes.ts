@@ -613,6 +613,15 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		},
 		icon: 'lock',
 	},
+	// Connectors
+	Wrist_cuffs_chainable: {
+		name: 'Wrist_cuffs_chainable',
+		description: 'A cuff that is chainable to another item',
+	},
+	Belt_chainable: {
+		name: 'Belt_chainable',
+		description: 'A belt that is chainable to another item',
+	},
 } as const satisfies Record<string, AssetRepoAttributeDefinition>;
 
 //#endregion
