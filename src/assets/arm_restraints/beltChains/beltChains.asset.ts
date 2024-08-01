@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Belt chain',
+	name: 'Belt chains',
 	size: 'small',
 	graphics: 'graphics.json',
 	colorization: {
@@ -8,6 +8,7 @@ DefineAsset({
 			default: '#DDDDDD',
 		},
 	},
+	// size:240, y:569, centered
 	preview: 'preview.png',
 	poseLimits: {
 		bones: {
@@ -37,7 +38,7 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER connects the cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE belt with a short chain.',
+		actionAdd: 'SOURCE_CHARACTER connects the cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE belt with short chains.',
 		actionRemove: 'SOURCE_CHARACTER detaches the cuffs from TARGET_CHARACTER_DYNAMIC_POSSESSIVE belt.',
 	},
 	ownership: {

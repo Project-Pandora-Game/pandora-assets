@@ -12,7 +12,7 @@
 			"mirror": 0,
 			"colorizationKey": "Chains",
 			"image": {
-				"image": "belt_chain.png",
+				"image": "belt_chains.png",
 				"overrides": []
 			}
 		}
