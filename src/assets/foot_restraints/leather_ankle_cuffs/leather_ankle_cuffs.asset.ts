@@ -129,6 +129,9 @@ DefineAsset({
 								leg_l: -10,
 							},
 						},
+						stateFlags: {
+							provides: ['bar'],
+						},
 					},
 				},
 				{
@@ -140,6 +143,9 @@ DefineAsset({
 								leg_r: -18,
 								leg_l: -18,
 							},
+						},
+						stateFlags: {
+							provides: ['bar'],
 						},
 					},
 				},
@@ -153,6 +159,9 @@ DefineAsset({
 								leg_l: -30,
 							},
 							legs: 'standing',
+						},
+						stateFlags: {
+							provides: ['bar'],
 						},
 					},
 				},
