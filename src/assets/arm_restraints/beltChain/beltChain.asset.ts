@@ -36,10 +36,8 @@ DefineAsset({
 			},
 		},
 	},
-	// Info about who owns the asset(s)
 	ownership: {
-		// Same as the author of git commits present in PR, has responsibility for this asset
-		responsibleContributor: 'Sandrine <g118102950+SandrinePDR@users.noreply.github.com',
+		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
 		credits: ['SandrinePDR'],
 		modificationPolicy: 'Fixes and New uses, otherwise ask',
 		reusePolicy: 'Ask first',
@@ -47,7 +45,7 @@ DefineAsset({
 			{
 				source: 'Self-Made',
 				copyrightHolder: 'ClaudiaMia',
-				editedBy: 'Sandrine',
+				editedBy: 'SandrinePDR',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
