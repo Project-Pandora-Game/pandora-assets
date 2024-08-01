@@ -8,7 +8,7 @@ DefineAsset({
 			default: '#DDDDDD',
 		},
 	},
-	// size:240, y:569, centered
+	// size:400, y:550, centered
 	preview: 'preview.png',
 	poseLimits: {
 		bones: {
