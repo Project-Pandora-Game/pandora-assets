@@ -3,7 +3,7 @@ DefineAsset({
 	size: 'small',
 	graphics: 'graphics.json',
 	colorization: {
-		chains: {
+		Chains: {
 			name: 'Chains',
 			default: '#DDDDDD',
 		},
@@ -19,6 +19,7 @@ DefineAsset({
 	},
 	attributes: {
 		provides: [
+			'Restraint',
 			'Restraint_arms',
 		],
 		requires: [
@@ -38,7 +39,7 @@ DefineAsset({
 	// Info about who owns the asset(s)
 	ownership: {
 		// Same as the author of git commits present in PR, has responsibility for this asset
-		responsibleContributor: 'gitName <gitEmail@example.com>',
+		responsibleContributor: 'SandrinePDR <g118102950+SandrinePDR@users.noreply.github.com',
 		credits: ['Sandrine'],
 		modificationPolicy: 'Fixes and New uses, otherwise ask',
 		reusePolicy: 'Ask first',
