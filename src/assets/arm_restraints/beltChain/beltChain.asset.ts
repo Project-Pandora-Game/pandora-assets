@@ -36,6 +36,10 @@ DefineAsset({
 			},
 		},
 	},
+	chat: {
+		actionAdd: 'SOURCE_CHARACTER connects the cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE belt with a short chain.',
+		actionRemove: 'SOURCE_CHARACTER detaches the cuffs from TARGET_CHARACTER_DYNAMIC_POSSESSIVE belt.',
+	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
 		credits: ['SandrinePDR'],
