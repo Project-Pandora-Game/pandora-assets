@@ -263,7 +263,6 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"name": "cuffs",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
@@ -516,6 +515,24 @@
 							[
 								{
 									"legs": "kneeling"
+								},
+								{
+									"module": "barWidth",
+									"operator": "=",
+									"value": "narrow"
+								},
+								{
+									"view": "front"
+								}
+							],
+							[
+								{
+									"legs": "kneeling"
+								},
+								{
+									"module": "barWidth",
+									"operator": "=",
+									"value": "normal"
 								},
 								{
 									"view": "front"
