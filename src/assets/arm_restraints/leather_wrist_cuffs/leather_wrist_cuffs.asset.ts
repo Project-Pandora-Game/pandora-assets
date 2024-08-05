@@ -173,9 +173,6 @@ DefineAsset({
 						stateFlags: {
 							provides: ['chain'],
 						},
-						effects: {
-							blockHands: true,
-						},
 					},
 				},
 			],
