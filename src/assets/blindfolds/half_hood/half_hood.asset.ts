@@ -26,6 +26,7 @@ DefineAsset({
 		hides: [
 			'Hair',
 			'Ears',
+			'Fantasy_ears',
 		],
 		covers: [
 			'Ear_item',
