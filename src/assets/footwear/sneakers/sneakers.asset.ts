@@ -4,12 +4,12 @@ DefineAsset({
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: {
-		sneakers: {
-			name: 'Sneakers',
+		primary: {
+			name: 'Sneakers Primary',
 			default: '#006DDB',
 		},
-		soles: {
-			name: 'Soles',
+		secondary: {
+			name: 'Sneakers Secondary',
 			default: '#FFFFFF',
 		},
 		shoelaces: {
