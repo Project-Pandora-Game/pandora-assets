@@ -169,7 +169,7 @@
 			"priority": "BELOW_BODY_SOLES",
 			"points": "body_soles_back",
 			"mirror": 0,
-			"colorizationKey": "sneakers",
+			"colorizationKey": "soles",
 			"image": {
 				"image": "",
 				"overrides": [
