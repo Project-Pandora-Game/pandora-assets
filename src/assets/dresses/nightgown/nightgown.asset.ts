@@ -6,7 +6,8 @@ DefineAsset({
 	colorization: {
 		nightgown: {
 			name: 'Nightgown',
-			default: '#E72020',
+			default: '#E72020FB',
+			minAlpha: 0.1,
 		},
 	},
 	// size:780, y:378, centered
