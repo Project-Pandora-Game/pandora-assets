@@ -7,7 +7,8 @@ DefineAsset({
 	colorization: {
 		skin: {
 			name: 'Nose',
-			default: '#ECBFA8',
+			default: '#ECBDACCC',
+			minAlpha: 0.1,
 		},
 	},
 	attributes: {
