@@ -1,4 +1,0 @@
-[submodule "pandora"]
-	path = pandora
-	url = ../../Project-Pandora-Game/pandora.git
-	branch = master

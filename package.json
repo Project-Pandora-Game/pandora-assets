@@ -27,7 +27,7 @@
 		"ignore": "5.3.1",
 		"jimp": "0.22.12",
 		"lodash": "4.17.21",
-		"pandora-common": "file:pandora/pandora-common",
+		"pandora-common": "github:Project-Pandora-Game/pandora#master&path:pandora-common",
 		"rimraf": "6.0.1",
 		"sharp": "0.33.4",
 		"simple-git": "3.25.0",
