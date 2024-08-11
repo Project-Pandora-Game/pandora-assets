@@ -5,16 +5,7 @@
 			469
 		],
 		"mirror": true,
-		"transforms": [
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": 7,
-					"y": 0
-				}
-			}
-		]
+		"transforms": []
 	},
 	{
 		"pos": [
@@ -22,16 +13,7 @@
 			599
 		],
 		"mirror": true,
-		"transforms": [
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": 7,
-					"y": 0
-				}
-			}
-		]
+		"transforms": []
 	},
 	{
 		"pos": [
@@ -39,16 +21,7 @@
 			681
 		],
 		"mirror": true,
-		"transforms": [
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": 7,
-					"y": 0
-				}
-			}
-		]
+		"transforms": []
 	},
 	{
 		"pos": [
@@ -56,42 +29,7 @@
 			736
 		],
 		"mirror": true,
-		"transforms": [
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": 3,
-					"y": 0
-				},
-				"condition": [
-					[
-						{
-							"bone": "chest_width",
-							"operator": "<",
-							"value": 0
-						}
-					]
-				]
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": 7,
-					"y": 0
-				},
-				"condition": [
-					[
-						{
-							"bone": "chest_width",
-							"operator": ">",
-							"value": 0
-						}
-					]
-				]
-			}
-		]
+		"transforms": []
 	},
 	{
 		"pos": [
@@ -99,42 +37,7 @@
 			779
 		],
 		"mirror": true,
-		"transforms": [
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -16,
-					"y": 0
-				},
-				"condition": [
-					[
-						{
-							"bone": "chest_width",
-							"operator": "<",
-							"value": 0
-						}
-					]
-				]
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": 7,
-					"y": 0
-				},
-				"condition": [
-					[
-						{
-							"bone": "chest_width",
-							"operator": ">",
-							"value": 0
-						}
-					]
-				]
-			}
-		]
+		"transforms": []
 	},
 	{
 		"pos": [

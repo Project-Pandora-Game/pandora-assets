@@ -23,23 +23,6 @@
 						}
 					]
 				]
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": 2,
-					"y": 8
-				},
-				"condition": [
-					[
-						{
-							"bone": "chest_width",
-							"operator": ">",
-							"value": 0
-						}
-					]
-				]
 			}
 		]
 	},
@@ -94,23 +77,6 @@
 						}
 					]
 				]
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -10,
-					"y": 10
-				},
-				"condition": [
-					[
-						{
-							"bone": "chest_width",
-							"operator": ">",
-							"value": 0
-						}
-					]
-				]
 			}
 		]
 	},
@@ -138,40 +104,6 @@
 						}
 					]
 				]
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -10,
-					"y": 0
-				},
-				"condition": [
-					[
-						{
-							"bone": "chest_width",
-							"operator": ">",
-							"value": 0
-						}
-					]
-				]
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -5,
-					"y": 0
-				},
-				"condition": [
-					[
-						{
-							"bone": "chest_width",
-							"operator": "<",
-							"value": 0
-						}
-					]
-				]
 			}
 		]
 	},
@@ -195,40 +127,6 @@
 						{
 							"bone": "breasts",
 							"operator": ">",
-							"value": 0
-						}
-					]
-				]
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -10,
-					"y": 2
-				},
-				"condition": [
-					[
-						{
-							"bone": "chest_width",
-							"operator": ">",
-							"value": 0
-						}
-					]
-				]
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -2,
-					"y": 0
-				},
-				"condition": [
-					[
-						{
-							"bone": "chest_width",
-							"operator": "<",
 							"value": 0
 						}
 					]
@@ -270,41 +168,6 @@
 		],
 		"mirror": true,
 		"pointType": "breasts_r",
-		"transforms": [
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -10,
-					"y": 0
-				},
-				"condition": [
-					[
-						{
-							"bone": "chest_width",
-							"operator": ">",
-							"value": 0
-						}
-					]
-				]
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -5,
-					"y": 0
-				},
-				"condition": [
-					[
-						{
-							"bone": "chest_width",
-							"operator": "<",
-							"value": 0
-						}
-					]
-				]
-			}
-		]
+		"transforms": []
 	}
 ]

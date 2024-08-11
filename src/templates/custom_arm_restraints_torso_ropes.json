@@ -70,14 +70,6 @@
 			},
 			{
 				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
-			},
-			{
-				"type": "shift",
 				"bone": "arm_r",
 				"value": {
 					"x": -36,
@@ -122,14 +114,6 @@
 				"value": {
 					"x": 0,
 					"y": 4
-				}
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
 				}
 			},
 			{
@@ -191,14 +175,6 @@
 			},
 			{
 				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
-			},
-			{
-				"type": "shift",
 				"bone": "arm_r",
 				"value": {
 					"x": -10,
@@ -253,14 +229,6 @@
 				"type": "rotate",
 				"bone": "arm_r",
 				"value": -0.9
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			},
 			{
 				"type": "shift",
@@ -346,14 +314,6 @@
 				"type": "rotate",
 				"bone": "arm_r",
 				"value": -1
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -405,14 +365,6 @@
 				"type": "rotate",
 				"bone": "arm_r",
 				"value": -1
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -464,14 +416,6 @@
 				"type": "rotate",
 				"bone": "arm_r",
 				"value": -1
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -523,14 +467,6 @@
 				"type": "rotate",
 				"bone": "arm_r",
 				"value": -1
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -582,14 +518,6 @@
 				"type": "rotate",
 				"bone": "arm_r",
 				"value": -1
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -618,14 +546,6 @@
 				"type": "rotate",
 				"bone": "arm_r",
 				"value": -1
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -654,14 +574,6 @@
 				"type": "rotate",
 				"bone": "arm_r",
 				"value": -1
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -690,14 +602,6 @@
 				"type": "rotate",
 				"bone": "arm_r",
 				"value": -1
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -726,14 +630,6 @@
 				"type": "rotate",
 				"bone": "arm_r",
 				"value": -1
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -762,14 +658,6 @@
 				"type": "rotate",
 				"bone": "arm_r",
 				"value": -1
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -798,14 +686,6 @@
 				"type": "rotate",
 				"bone": "arm_r",
 				"value": -1
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -857,14 +737,6 @@
 				"type": "rotate",
 				"bone": "arm_r",
 				"value": -1
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -916,14 +788,6 @@
 				"type": "rotate",
 				"bone": "arm_r",
 				"value": -1
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -975,14 +839,6 @@
 				"type": "rotate",
 				"bone": "arm_r",
 				"value": -1
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -1034,14 +890,6 @@
 				"type": "rotate",
 				"bone": "arm_r",
 				"value": -1
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -1093,14 +941,6 @@
 				"type": "rotate",
 				"bone": "arm_r",
 				"value": -1
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -1116,14 +956,6 @@
 				"type": "rotate",
 				"bone": "arm_r",
 				"value": -1
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -1159,14 +991,6 @@
 					"x": 0,
 					"y": 5
 				}
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -1184,14 +1008,6 @@
 				"value": {
 					"x": 0,
 					"y": 5
-				}
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
 				}
 			}
 		]
@@ -1216,14 +1032,6 @@
 					"x": -1,
 					"y": -19
 				}
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -1240,14 +1048,6 @@
 				"bone": "waist",
 				"value": {
 					"x": -2,
-					"y": 0
-				}
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
 					"y": 0
 				}
 			}
@@ -2212,14 +2012,6 @@
 						}
 					]
 				]
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -2255,14 +2047,6 @@
 						}
 					]
 				]
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -6,
-					"y": 0
-				}
 			},
 			{
 				"type": "rotate",
@@ -2694,14 +2478,6 @@
 						}
 					]
 				]
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			},
 			{
 				"type": "shift",
@@ -5072,14 +4848,6 @@
 						}
 					]
 				]
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -5,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -5124,14 +4892,6 @@
 						}
 					]
 				]
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -8,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -5167,14 +4927,6 @@
 						}
 					]
 				]
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -6,
-					"y": 0
-				}
 			}
 		]
 	},
@@ -5252,14 +5004,6 @@
 				"value": {
 					"x": 0,
 					"y": -2
-				}
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
 				}
 			},
 			{
@@ -5367,14 +5111,6 @@
 			},
 			{
 				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
-			},
-			{
-				"type": "shift",
 				"bone": "arm_r",
 				"value": {
 					"x": -10,
@@ -5429,14 +5165,6 @@
 				"type": "rotate",
 				"bone": "arm_r",
 				"value": -0.6
-			},
-			{
-				"type": "shift",
-				"bone": "chest_width",
-				"value": {
-					"x": -7,
-					"y": 0
-				}
 			},
 			{
 				"type": "shift",
