@@ -23,6 +23,7 @@ const boneDefinitionImpl = {
 	},
 	arm_width: { type: 'body' },
 	leg_width: { type: 'body' },
+	chest_width: { type: 'body' },
 	breasts: { type: 'body' },
 	waist: { type: 'body' },
 	hips: { type: 'body' },

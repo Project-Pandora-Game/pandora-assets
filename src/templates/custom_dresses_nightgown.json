@@ -1194,6 +1194,23 @@
 					"x": 2,
 					"y": 0
 				}
+			},
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": 9,
+					"y": 0
+				},
+				"condition": [
+					[
+						{
+							"bone": "chest_width",
+							"operator": ">",
+							"value": 0
+						}
+					]
+				]
 			}
 		]
 	},
@@ -1212,6 +1229,23 @@
 					"x": 4,
 					"y": 0
 				}
+			},
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": 4,
+					"y": 0
+				},
+				"condition": [
+					[
+						{
+							"bone": "chest_width",
+							"operator": ">",
+							"value": 0
+						}
+					]
+				]
 			},
 			{
 				"type": "shift",
@@ -1247,6 +1281,23 @@
 					"x": 4,
 					"y": 0
 				}
+			},
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": 2,
+					"y": 0
+				},
+				"condition": [
+					[
+						{
+							"bone": "chest_width",
+							"operator": ">",
+							"value": 0
+						}
+					]
+				]
 			},
 			{
 				"type": "shift",
@@ -1481,6 +1532,23 @@
 						{
 							"bone": "waist",
 							"operator": "<",
+							"value": 0
+						}
+					]
+				]
+			},
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": 9,
+					"y": 0
+				},
+				"condition": [
+					[
+						{
+							"bone": "chest_width",
+							"operator": ">",
 							"value": 0
 						}
 					]

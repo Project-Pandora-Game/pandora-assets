@@ -40,6 +40,40 @@
 						}
 					]
 				]
+			},
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": -5,
+					"y": 10
+				},
+				"condition": [
+					[
+						{
+							"bone": "chest_width",
+							"operator": ">",
+							"value": 0
+						}
+					]
+				]
+			},
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": 0,
+					"y": 0
+				},
+				"condition": [
+					[
+						{
+							"bone": "chest_width",
+							"operator": "<",
+							"value": 0
+						}
+					]
+				]
 			}
 		]
 	},
@@ -81,6 +115,40 @@
 							"bone": "breasts",
 							"operator": ">",
 							"value": 50
+						}
+					]
+				]
+			},
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": -5,
+					"y": 10
+				},
+				"condition": [
+					[
+						{
+							"bone": "chest_width",
+							"operator": ">",
+							"value": 0
+						}
+					]
+				]
+			},
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": 0,
+					"y": 0
+				},
+				"condition": [
+					[
+						{
+							"bone": "chest_width",
+							"operator": "<",
+							"value": 0
 						}
 					]
 				]
@@ -128,6 +196,40 @@
 						}
 					]
 				]
+			},
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": -5,
+					"y": 10
+				},
+				"condition": [
+					[
+						{
+							"bone": "chest_width",
+							"operator": ">",
+							"value": 0
+						}
+					]
+				]
+			},
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": 0,
+					"y": 0
+				},
+				"condition": [
+					[
+						{
+							"bone": "chest_width",
+							"operator": "<",
+							"value": 0
+						}
+					]
+				]
 			}
 		]
 	},
@@ -169,6 +271,40 @@
 							"bone": "breasts",
 							"operator": ">",
 							"value": 50
+						}
+					]
+				]
+			},
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": -10,
+					"y": 10
+				},
+				"condition": [
+					[
+						{
+							"bone": "chest_width",
+							"operator": ">",
+							"value": 0
+						}
+					]
+				]
+			},
+			{
+				"type": "shift",
+				"bone": "chest_width",
+				"value": {
+					"x": 0,
+					"y": 0
+				},
+				"condition": [
+					[
+						{
+							"bone": "chest_width",
+							"operator": "<",
+							"value": 0
 						}
 					]
 				]
