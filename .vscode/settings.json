@@ -12,8 +12,11 @@
 	"files.trimTrailingWhitespace": true,
 	"files.eol": "\n",
 	"files.encoding": "utf8",
-	"files.exclude": {
-		"pandora": true
+	"files.readonlyInclude": {
+		"node_modules/**": true,
+		"coverage/**": true,
+		"dist/**": true,
+		"out/**": true
 	},
 	"git.rebaseWhenSync": true,
 	"git.detectSubmodules": false,

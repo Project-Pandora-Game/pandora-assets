@@ -133,6 +133,7 @@ async function Run() {
 			try {
 				const moduleName = join(assetDestPath, `${asset}.asset`);
 				delete require.cache[require.resolve(moduleName)];
+				// eslint-disable-next-line @typescript-eslint/no-require-imports
 				await require(moduleName);
 			} catch (error) {
 				logger.error(`Error while importing assets/${category}/${asset}\n`, error);

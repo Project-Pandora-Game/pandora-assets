@@ -26,6 +26,7 @@ DefineAsset({
 		provides: [
 			'Restraint',
 			'Chastity',
+			'Belt_chainable',
 		],
 	},
 	modules: {

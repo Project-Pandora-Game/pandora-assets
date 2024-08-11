@@ -90,6 +90,18 @@
 								}
 							]
 						]
+					},
+					{
+						"image": "leathercuffs_chain_collar.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "chained_collar"
+								}
+							]
+						]
 					}
 				]
 			}

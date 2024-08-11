@@ -23,6 +23,10 @@ DefineAsset({
 			name: 'Chains',
 			default: '#FFFFFF',
 		},
+		bar: {
+			name: 'Spreader-bar',
+			default: '#FFFFFF',
+		},
 	},
 	// size:350, y:1013, centered
 	preview: 'preview.png',
@@ -49,6 +53,18 @@ DefineAsset({
 				stateFlags: {
 					requires: {
 						chain: 'Locking requires a chain to lock.',
+					},
+				},
+			},
+		},
+		lockBar: {
+			type: 'lockSlot',
+			name: 'Lock for bar width',
+			occupiedProperties: {
+				blockModules: ['barWidth'],
+				stateFlags: {
+					requires: {
+						bar: 'Locking requires a bar to lock.',
 					},
 				},
 			},
@@ -95,6 +111,62 @@ DefineAsset({
 				},
 			],
 		},
+		barWidth: {
+			type: 'typed',
+			name: 'Bar width',
+			variants: [
+				{
+					id: 'unbarred',
+					name: 'No Bar',
+				},
+				{
+					id: 'narrow',
+					name: 'Narrow',
+					properties: {
+						poseLimits: {
+							bones: {
+								leg_r: -10,
+								leg_l: -10,
+							},
+						},
+						stateFlags: {
+							provides: ['bar'],
+						},
+					},
+				},
+				{
+					id: 'normal',
+					name: 'Normal',
+					properties: {
+						poseLimits: {
+							bones: {
+								leg_r: -18,
+								leg_l: -18,
+							},
+						},
+						stateFlags: {
+							provides: ['bar'],
+						},
+					},
+				},
+				{
+					id: 'wide',
+					name: 'Wide (no kneeling)',
+					properties: {
+						poseLimits: {
+							bones: {
+								leg_r: -30,
+								leg_l: -30,
+							},
+							legs: 'standing',
+						},
+						stateFlags: {
+							provides: ['bar'],
+						},
+					},
+				},
+			],
+		},
 	},
 	chat: {
 		actionAdd: 'SOURCE_CHARACTER fastened the leather cuffs around TARGET_CHARACTER_DYNAMIC_POSSESSIVE ankles.',
@@ -110,6 +182,13 @@ DefineAsset({
 				source: 'Self-Made',
 				copyrightHolder: 'ClaudiaMia',
 				editedBy: 'ClaudiaMia',
+				license: 'Pandora-Use-Only-v1-or-later',
+			},
+			{
+				part: 'Spreader-Bar',
+				source: 'Self-Made',
+				copyrightHolder: 'ClaudiaMia',
+				editedBy: 'Sandrine',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],

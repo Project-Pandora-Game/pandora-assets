@@ -1,3 +1,0 @@
-packages:
-  # exclude packages in submodule
-  - '!pandora/**'
