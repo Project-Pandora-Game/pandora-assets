@@ -37,12 +37,6 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		icon: 'body',
 		useAsAssetPreference: false,
 	},
-	Face: {
-		name: 'Face texture',
-		description: 'A face texture',
-		icon: 'body',
-		useAsAssetPreference: false,
-	},
 	Blush: {
 		name: 'Blush',
 		description: 'A facial reddening',

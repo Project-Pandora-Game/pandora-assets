@@ -4,7 +4,6 @@ export const BODYPART_ORDER = [
 	'base',
 	'head',
 	'ears',
-	'face',
 	'nose',
 	'blush',
 	'bodymarks',
@@ -26,7 +25,6 @@ const BODYPART_DEFINITIONS: Record<BodypartName, Partial<Omit<AssetBodyPart, 'na
 	ears: {
 		required: true,
 	},
-	face: {},
 	nose: {
 		required: true,
 	},
