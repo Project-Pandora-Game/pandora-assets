@@ -376,8 +376,7 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm",
-				"arm"
+				"bodyarm"
 			],
 			"mirror": 0,
 			"colorizationKey": "skin",
