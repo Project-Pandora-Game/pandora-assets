@@ -46,13 +46,41 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "bra underbust above body",
+			"priority": "ABOVE_BODY",
+			"points": "body",
+			"mirror": 0,
+			"colorizationKey": "bra",
+			"image": {
+				"image": "latex_corset_underbust.png",
+				"overrides": [
+					{
+						"image": "latex_corset_underbust_bright.png",
+						"condition": [
+							[
+								{
+									"module": "color",
+									"operator": "=",
+									"value": "white"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+				{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"name": "bra breasts above body",
-			"priority": "BREASTS",
+			"priority": "ABOVE_BODY",
 			"points": "breasts",
 			"mirror": 0,
 			"colorizationKey": "bra",
 			"image": {
-				"image": "",
+				"image": "latex_corset.png",
 				"overrides": [
 					{
 						"image": "",
@@ -73,7 +101,7 @@
 								{
 									"bone": "breasts",
 									"operator": "<=",
-									"value": -150
+									"value": -35
 								},
 								{
 									"module": "color",
@@ -84,65 +112,9 @@
 						]
 					},
 					{
-						"image": "latex_corset_medium_bright.png",
+						"image": "latex_corset_bright.png",
 						"condition": [
 							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": -70
-								},
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_large_bright.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 0
-								},
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_huge_bright.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 100
-								},
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_extreme_bright.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 180
-								},
 								{
 									"module": "color",
 									"operator": "=",
@@ -158,187 +130,7 @@
 								{
 									"bone": "breasts",
 									"operator": "<=",
-									"value": -150
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_medium.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": -70
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_large.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 0
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_huge.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 100
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_extreme.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 180
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"name": "bra underbust above body",
-			"priority": "BELOW_BREASTS",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "bra",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "latex_corset_underbust_medium_bright.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": -70
-								},
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_underbust_large_bright.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 0
-								},
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_underbust_huge_bright.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 100
-								},
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_underbust_extreme_bright.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 180
-								},
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_underbust_medium.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": -70
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_underbust_large.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 0
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_underbust_huge.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 100
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_underbust_extreme.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 180
+									"value": -35
 								}
 							]
 						]
@@ -353,11 +145,11 @@
 			"height": 1500,
 			"name": "bra breasts behind",
 			"priority": "BELOW_BREASTS",
-			"points": "body",
+			"points": "breasts",
 			"mirror": 0,
 			"colorizationKey": "bra",
 			"image": {
-				"image": "",
+				"image": "latex_corset.png",
 				"overrides": [
 					{
 						"image": "",
@@ -378,7 +170,7 @@
 								{
 									"bone": "breasts",
 									"operator": "<=",
-									"value": -150
+									"value": -35
 								},
 								{
 									"module": "color",
@@ -389,65 +181,9 @@
 						]
 					},
 					{
-						"image": "latex_corset_medium_bright.png",
+						"image": "latex_corset_bright.png",
 						"condition": [
 							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": -70
-								},
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_large_bright.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 0
-								},
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_huge_bright.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 100
-								},
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_extreme_bright.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 180
-								},
 								{
 									"module": "color",
 									"operator": "=",
@@ -463,55 +199,7 @@
 								{
 									"bone": "breasts",
 									"operator": "<=",
-									"value": -150
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_medium.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": -70
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_large.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 0
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_huge.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 100
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_extreme.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 180
+									"value": -35
 								}
 							]
 						]
@@ -525,7 +213,7 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "bra back view",
-			"priority": "BODY_SOLES",
+			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "bra",
@@ -553,7 +241,7 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "bra back bottom",
-			"priority": "BODY_SOLES",
+			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "bra",
@@ -593,7 +281,7 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "bra back lacing",
-			"priority": "BELOW_BODY_SOLES",
+			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "laces",
