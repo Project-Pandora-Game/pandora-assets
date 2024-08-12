@@ -292,7 +292,7 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "bust",
-			"priority": "OVERLAY",
+			"priority": "ABOVE_BODY",
 			"points": "breasts",
 			"mirror": 0,
 			"colorizationKey": "top",
