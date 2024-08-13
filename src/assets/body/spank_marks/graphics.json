@@ -49,6 +49,23 @@
 				"image": "",
 				"overrides": [
 					{
+						"image": "breast_color_flat.png",
+						"condition": [
+							[
+								{
+									"module": "breastColor_l",
+									"operator": "=",
+									"value": "medium"
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -170
+								}
+							]
+						]
+					},
+					{
 						"image": "breast_color.png",
 						"condition": [
 							[
