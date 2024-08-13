@@ -63,7 +63,7 @@
 				"type": "shift",
 				"bone": "breasts",
 				"value": {
-					"x": -13,
+					"x": -20,
 					"y": 0
 				},
 				"condition": [
@@ -80,8 +80,8 @@
 				"type": "shift",
 				"bone": "breasts",
 				"value": {
-					"x": -5,
-					"y": 0
+					"x": -6,
+					"y": 6
 				},
 				"condition": [
 					[
@@ -105,8 +105,8 @@
 				"type": "shift",
 				"bone": "breasts",
 				"value": {
-					"x": 0,
-					"y": 15
+					"x": 10,
+					"y": 25
 				},
 				"condition": [
 					[
@@ -175,8 +175,8 @@
 				"type": "shift",
 				"bone": "breasts",
 				"value": {
-					"x": 0,
-					"y": 15
+					"x": 1,
+					"y": 25
 				},
 				"condition": [
 					[
