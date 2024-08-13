@@ -66,6 +66,23 @@
 						]
 					},
 					{
+						"image": "breast_color_small.png",
+						"condition": [
+							[
+								{
+									"module": "breastColor_l",
+									"operator": "=",
+									"value": "medium"
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -35
+								}
+							]
+						]
+					},
+					{
 						"image": "breast_color.png",
 						"condition": [
 							[
