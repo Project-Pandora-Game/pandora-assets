@@ -65,8 +65,8 @@
 				"type": "shift",
 				"bone": "breasts",
 				"value": {
-					"x": -6,
-					"y": 10
+					"x": -3,
+					"y": 16
 				},
 				"condition": [
 					[
@@ -119,7 +119,7 @@
 				"type": "shift",
 				"bone": "breasts",
 				"value": {
-					"x": -7,
+					"x": -6,
 					"y": 3
 				},
 				"condition": [
