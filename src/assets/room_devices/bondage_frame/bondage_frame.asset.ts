@@ -473,6 +473,13 @@ DefineRoomDeviceAsset({
 						],
 					],
 				},
+			],
+		},
+		{
+			type: 'sprite',
+			image: '',
+			colorizationKey: 'chains',
+			imageOverrides: [
 				{
 					image: 'frame_chains_right_top_attached.png',
 					condition: [
