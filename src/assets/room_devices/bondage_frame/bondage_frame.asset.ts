@@ -319,7 +319,6 @@ DefineRoomDeviceAsset({
 										elbow_r: -43,
 										character_rotation: 0,
 									},
-									view: 'front',
 								},
 								effects: {
 									blockHands: true,
@@ -398,7 +397,6 @@ DefineRoomDeviceAsset({
 										elbow_r: -43,
 										character_rotation: 0,
 									},
-									view: 'front',
 								},
 								effects: {
 									blockHands: true,
@@ -657,6 +655,24 @@ DefineRoomDeviceAsset({
 				offsetX: -520,
 				offsetY: 35,
 			},
+			characterPositionOverrides: [
+				{
+					position: {
+						offsetX: -520,
+						offsetY: 35,
+						disablePoseOffset: true,
+					},
+					condition: [
+						[
+							{
+								module: 'frame_left',
+								operator: '=',
+								value: 'tied_left_up',
+							},
+						],
+					],
+				},
+			],
 		},
 		{
 			type: 'slot',
@@ -665,6 +681,25 @@ DefineRoomDeviceAsset({
 				offsetX: 520,
 				offsetY: 35,
 			},
+			characterPositionOverrides: [
+				{
+					position: {
+						offsetX: 520,
+						offsetY: 35,
+						disablePoseOffset: true,
+					},
+					condition: [
+						[
+							{
+								module: 'frame_right',
+								operator: '=',
+								value: 'tied_right_up',
+							},
+						],
+					],
+				},
+			],
+
 		},
 	],
 	ownership: {
