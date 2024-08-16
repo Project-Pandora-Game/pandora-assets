@@ -12,7 +12,7 @@
 			"mirror": 0,
 			"colorizationKey": "bra",
 			"image": {
-				"image": "bra_front_extreme.png",
+				"image": "bra_front.png",
 				"overrides": [
 					{
 						"image": "",
@@ -21,55 +21,7 @@
 								{
 									"bone": "breasts",
 									"operator": "<=",
-									"value": -170
-								}
-							]
-						]
-					},
-					{
-						"image": "bra_front_small.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": -150
-								}
-							]
-						]
-					},
-					{
-						"image": "bra_front_medium.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": -70
-								}
-							]
-						]
-					},
-					{
-						"image": "bra_front_large.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 0
-								}
-							]
-						]
-					},
-					{
-						"image": "bra_front_huge.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 100
+									"value": -165
 								}
 							]
 						]
@@ -88,7 +40,7 @@
 			"mirror": 0,
 			"colorizationKey": "bra",
 			"image": {
-				"image": "bra_front_extreme.png",
+				"image": "bra_breasts.png",
 				"overrides": [
 					{
 						"image": "",
@@ -97,55 +49,19 @@
 								{
 									"bone": "breasts",
 									"operator": "<=",
-									"value": -170
+									"value": -165
 								}
 							]
 						]
 					},
 					{
-						"image": "bra_front_small.png",
+						"image": "bra_breasts_small.png",
 						"condition": [
 							[
 								{
 									"bone": "breasts",
 									"operator": "<=",
-									"value": -150
-								}
-							]
-						]
-					},
-					{
-						"image": "bra_front_medium.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": -70
-								}
-							]
-						]
-					},
-					{
-						"image": "bra_front_large.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 0
-								}
-							]
-						]
-					},
-					{
-						"image": "bra_front_huge.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": 100
+									"value": -35
 								}
 							]
 						]
@@ -188,7 +104,7 @@
 			"height": 1500,
 			"name": "breasts",
 			"priority": "ABOVE_BODY",
-			"points": "custom_bras_style1_breasts",
+			"points": "breasts",
 			"mirror": 0,
 			"colorizationKey": "bra",
 			"image": {
