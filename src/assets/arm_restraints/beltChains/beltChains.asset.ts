@@ -11,11 +11,14 @@ DefineAsset({
 	// size:400, y:550, centered
 	preview: 'preview.png',
 	poseLimits: {
+		arms: {
+			position: 'back',
+		},
 		bones: {
-			arm_l: 40,
-			elbow_l: 75,
-			arm_r: 40,
-			elbow_r: 75,
+			arm_l: 70,
+			elbow_l: 20,
+			arm_r: 70,
+			elbow_r: 20,
 		},
 	},
 	attributes: {
