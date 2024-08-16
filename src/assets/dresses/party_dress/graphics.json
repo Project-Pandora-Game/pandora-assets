@@ -16,7 +16,7 @@
 			"mirror": 0,
 			"colorizationKey": "partydress",
 			"image": {
-				"image": "party_dress_medium.png",
+				"image": "party_dress_front.png",
 				"overrides": []
 			},
 			"scaling": {
@@ -26,13 +26,6 @@
 						-150,
 						{
 							"image": "party_dress_back.png",
-							"overrides": []
-						}
-					],
-					[
-						180,
-						{
-							"image": "party_dress_extreme.png",
 							"overrides": []
 						}
 					]
@@ -54,7 +47,7 @@
 			"mirror": 1,
 			"colorizationKey": "partydress",
 			"image": {
-				"image": "party_dress_medium.png",
+				"image": "party_dress_front.png",
 				"overrides": []
 			}
 		},
@@ -73,7 +66,7 @@
 			"mirror": 0,
 			"colorizationKey": "partydress",
 			"image": {
-				"image": "party_dress_medium.png",
+				"image": "party_dress_front.png",
 				"overrides": []
 			},
 			"scaling": {
@@ -83,13 +76,6 @@
 						-150,
 						{
 							"image": "party_dress_back.png",
-							"overrides": []
-						}
-					],
-					[
-						180,
-						{
-							"image": "party_dress_extreme.png",
 							"overrides": []
 						}
 					]
