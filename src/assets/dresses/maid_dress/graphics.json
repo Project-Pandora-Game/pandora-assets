@@ -553,11 +553,11 @@
 			"height": 1500,
 			"name": "back 2",
 			"priority": "BELOW_BREASTS",
-			"points": "body",
+			"points": "breasts",
 			"mirror": 0,
 			"colorizationKey": "frills",
 			"image": {
-				"image": "maid_f_large.png",
+				"image": "maid_b_breasts.png",
 				"overrides": [
 					{
 						"image": "",
@@ -571,51 +571,6 @@
 							]
 						]
 					}
-				]
-			},
-			"scaling": {
-				"scaleBone": "breasts",
-				"stops": [
-					[
-						-150,
-						{
-							"image": "maid_f_small.png",
-							"overrides": [
-								{
-									"image": "",
-									"condition": [
-										[
-											{
-												"module": "bossomState",
-												"operator": "=",
-												"value": "down"
-											}
-										]
-									]
-								}
-							]
-						}
-					],
-					[
-						180,
-						{
-							"image": "maid_f_extreme.png",
-							"overrides": [
-								{
-									"image": "",
-									"condition": [
-										[
-											{
-												"module": "bossomState",
-												"operator": "=",
-												"value": "down"
-											}
-										]
-									]
-								}
-							]
-						}
-					]
 				]
 			}
 		},
@@ -626,11 +581,11 @@
 			"height": 1500,
 			"name": "back 2 frills",
 			"priority": "BELOW_BREASTS",
-			"points": "body",
+			"points": "breasts",
 			"mirror": 0,
 			"colorizationKey": "dress",
 			"image": {
-				"image": "maid_f_large_l2.png",
+				"image": "maid_b_l2_breasts.png",
 				"overrides": [
 					{
 						"image": "",
@@ -644,51 +599,6 @@
 							]
 						]
 					}
-				]
-			},
-			"scaling": {
-				"scaleBone": "breasts",
-				"stops": [
-					[
-						-150,
-						{
-							"image": "maid_f_small_l2.png",
-							"overrides": [
-								{
-									"image": "",
-									"condition": [
-										[
-											{
-												"module": "bossomState",
-												"operator": "=",
-												"value": "down"
-											}
-										]
-									]
-								}
-							]
-						}
-					],
-					[
-						180,
-						{
-							"image": "maid_f_extreme_l2.png",
-							"overrides": [
-								{
-									"image": "",
-									"condition": [
-										[
-											{
-												"module": "bossomState",
-												"operator": "=",
-												"value": "down"
-											}
-										]
-									]
-								}
-							]
-						}
-					]
 				]
 			}
 		}
