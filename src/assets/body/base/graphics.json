@@ -305,12 +305,6 @@
 									"view": "back"
 								},
 								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
 									"armType": "fingers",
 									"side": "left",
 									"operator": "=",
