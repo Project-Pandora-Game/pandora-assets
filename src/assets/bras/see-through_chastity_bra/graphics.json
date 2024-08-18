@@ -40,7 +40,7 @@
 			}
 		},
 		{
-			"x": 0,
+			"x": -1,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
@@ -66,12 +66,24 @@
 								}
 							]
 						]
+					},
+					{
+						"image": "bra_cover_small.png",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -35
+								}
+							]
+						]
 					}
 				]
 			}
 		},
 		{
-			"x": 0,
+			"x": -1,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
@@ -85,14 +97,27 @@
 			"colorizationKey": "bra",
 			"image": {
 				"image": "bra_front.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "bra_front_small.png",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -35
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
-			"x": 0,
-			"y": 0,
+			"x": -1,
+			"y": -57,
 			"width": 1000,
-			"height": 1500,
+			"height": 1660,
 			"name": "bra covers front backside",
 			"priority": "BELOW_BREASTS",
 			"points": "breasts",
@@ -103,14 +128,27 @@
 			"colorizationKey": "cover",
 			"image": {
 				"image": "bra_cover.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -35
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
-			"x": 0,
-			"y": 0,
+			"x": -1,
+			"y": -57,
 			"width": 1000,
-			"height": 1500,
+			"height": 1660,
 			"name": "bra frame front backside",
 			"priority": "BELOW_BREASTS",
 			"points": "breasts",
@@ -121,11 +159,24 @@
 			"colorizationKey": "bra",
 			"image": {
 				"image": "bra_front.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -35
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
-			"x": 0,
+			"x": 1,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
