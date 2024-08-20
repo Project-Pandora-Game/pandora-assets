@@ -31,31 +31,6 @@
 						]
 					}
 				]
-			},
-			"scaling": {
-				"scaleBone": "breasts",
-				"stops": [
-					[
-						-150,
-						{
-							"image": "t-shirt.png",
-							"overrides": [
-								{
-									"image": "t-shirt_long.png",
-									"condition": [
-										[
-											{
-												"module": "sleeves",
-												"operator": "=",
-												"value": "long"
-											}
-										]
-									]
-								}
-							]
-						}
-					]
-				]
 			}
 		},
 		{
@@ -77,8 +52,20 @@
 							[
 								{
 									"bone": "breasts",
-									"operator": "<",
-									"value": -34
+									"operator": "<=",
+									"value": -165
+								}
+							]
+						]
+					},
+					{
+						"image": "t-shirt_bust_small.png",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -35
 								}
 							]
 						]
@@ -105,8 +92,20 @@
 							[
 								{
 									"bone": "breasts",
-									"operator": "<",
-									"value": -34
+									"operator": "<=",
+									"value": -165
+								}
+							]
+						]
+					},
+					{
+						"image": "t-shirt_bust_small.png",
+						"condition": [
+							[
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -35
 								}
 							]
 						]
@@ -143,31 +142,6 @@
 							]
 						]
 					}
-				]
-			},
-			"scaling": {
-				"scaleBone": "breasts",
-				"stops": [
-					[
-						-150,
-						{
-							"image": "t-shirt.png",
-							"overrides": [
-								{
-									"image": "t-shirt_long.png",
-									"condition": [
-										[
-											{
-												"module": "sleeves",
-												"operator": "=",
-												"value": "long"
-											}
-										]
-									]
-								}
-							]
-						}
-					]
 				]
 			}
 		},
