@@ -332,6 +332,29 @@ DefineRoomDeviceAsset({
 						},
 					},
 				},
+				{
+					id: 'tied_left_feet',
+					name: 'Feet chained to frame',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_left'],
+						slotProperties: {
+							character_slot_left: {
+								poseLimits: {
+									bones: {
+										leg_l: [[-3, 2]],
+										leg_r: [[-3, 2]],
+										character_rotation: 0,
+									},
+								},
+								attributes: {
+									requires: [
+										'Ankle_cuffs',
+									],
+								},
+							},
+						},
+					},
+				},
 			],
 		},
 		lock_left: {
@@ -410,6 +433,29 @@ DefineRoomDeviceAsset({
 						},
 					},
 				},
+				{
+					id: 'tied_right_feet',
+					name: 'Feet chained to frame',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_right'],
+						slotProperties: {
+							character_slot_left: {
+								poseLimits: {
+									bones: {
+										leg_l: [[-3, 2]],
+										leg_r: [[-3, 2]],
+										character_rotation: 0,
+									},
+								},
+								attributes: {
+									requires: [
+										'Ankle_cuffs',
+									],
+								},
+							},
+						},
+					},
+				},
 			],
 		},
 		lock_right: {
@@ -481,6 +527,25 @@ DefineRoomDeviceAsset({
 			colorizationKey: 'chains',
 			imageOverrides: [
 				{
+					image: 'frame_chains_left_low_attached.png',
+					condition: [
+						[
+							{
+								module: 'frame_left',
+								operator: '=',
+								value: 'tied_left_feet',
+							},
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'sprite',
+			image: '',
+			colorizationKey: 'chains',
+			imageOverrides: [
+				{
 					image: 'frame_chains_right_top_attached.png',
 					condition: [
 						[
@@ -495,6 +560,26 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		{
+			type: 'sprite',
+			image: '',
+			colorizationKey: 'chains',
+			imageOverrides: [
+				{
+					image: 'frame_chains_right_low_attached.png',
+					condition: [
+						[
+							{
+								module: 'frame_right',
+								operator: '=',
+								value: 'tied_right_feet',
+							},
+						],
+					],
+				},
+			],
+		},
+
 		{
 			type: 'sprite',
 			image: 'frame_chains_top_hanging.png',
@@ -677,6 +762,13 @@ DefineRoomDeviceAsset({
 								value: 'tied_left_up',
 							},
 						],
+						[
+							{
+								module: 'frame_left',
+								operator: '=',
+								value: 'tied_left_feet',
+							},
+						],
 					],
 				},
 			],
@@ -701,6 +793,13 @@ DefineRoomDeviceAsset({
 								module: 'frame_right',
 								operator: '=',
 								value: 'tied_right_up',
+							},
+						],
+						[
+							{
+								module: 'frame_right',
+								operator: '=',
+								value: 'tied_right_feet',
 							},
 						],
 					],
