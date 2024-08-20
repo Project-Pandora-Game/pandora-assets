@@ -19,7 +19,7 @@
 				"image": "t-shirt.png",
 				"overrides": [
 					{
-						"image": "t-shirt_combined_long.png",
+						"image": "t-shirt_long.png",
 						"condition": [
 							[
 								{
@@ -132,7 +132,7 @@
 				"image": "t-shirt.png",
 				"overrides": [
 					{
-						"image": "t-shirt_combined_long.png",
+						"image": "t-shirt_long.png",
 						"condition": [
 							[
 								{
