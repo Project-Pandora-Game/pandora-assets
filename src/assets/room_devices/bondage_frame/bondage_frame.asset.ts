@@ -22,8 +22,8 @@ DefineRoomDeviceAsset({
 	staticAttributes: ['Play_furniture'],
 	preview: 'frame_preview.png',
 	slots: {
-		character_slot: {
-			name: 'Under the frame',
+		character_slot_left: {
+			name: 'In front of the left frame',
 			asset: {
 				name: 'Bondage Frame',
 				size: 'huge',
@@ -32,8 +32,8 @@ DefineRoomDeviceAsset({
 				},
 			},
 		},
-		character_slot_left: {
-			name: 'In front of the left frame',
+		character_slot: {
+			name: 'Under the frame',
 			asset: {
 				name: 'Bondage Frame',
 				size: 'huge',
@@ -301,6 +301,37 @@ DefineRoomDeviceAsset({
 						},
 					},
 				},
+				{
+					id: 'tied_left_up',
+					name: 'Tied to the frame, arms overhead',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_left'],
+						slotProperties: {
+							character_slot_left: {
+								poseLimits: {
+									arms: {
+										position: 'front',
+									},
+									bones: {
+										arm_l: -74,
+										arm_r: -74,
+										elbow_l: -43,
+										elbow_r: -43,
+										character_rotation: 0,
+									},
+								},
+								effects: {
+									blockHands: true,
+								},
+								attributes: {
+									requires: [
+										'Wrist_cuffs',
+									],
+								},
+							},
+						},
+					},
+				},
 			],
 		},
 		lock_left: {
@@ -348,6 +379,37 @@ DefineRoomDeviceAsset({
 						},
 					},
 				},
+				{
+					id: 'tied_right_up',
+					name: 'Tied to the frame, arms overhead',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_right'],
+						slotProperties: {
+							character_slot_right: {
+								poseLimits: {
+									arms: {
+										position: 'front',
+									},
+									bones: {
+										arm_l: -74,
+										arm_r: -74,
+										elbow_l: -43,
+										elbow_r: -43,
+										character_rotation: 0,
+									},
+								},
+								effects: {
+									blockHands: true,
+								},
+								attributes: {
+									requires: [
+										'Wrist_cuffs',
+									],
+								},
+							},
+						},
+					},
+				},
 			],
 		},
 		lock_right: {
@@ -376,6 +438,16 @@ DefineRoomDeviceAsset({
 		},
 		{
 			type: 'sprite',
+			image: 'frame_ring_left.png',
+			colorizationKey: 'rings',
+		},
+		{
+			type: 'sprite',
+			image: 'frame_ring_right.png',
+			colorizationKey: 'rings',
+		},
+		{
+			type: 'sprite',
 			image: 'frame_sockets.png',
 			colorizationKey: 'sockets',
 		},
@@ -383,6 +455,45 @@ DefineRoomDeviceAsset({
 			type: 'sprite',
 			image: 'frame_rings_top.png',
 			colorizationKey: 'rings',
+		},
+		{
+			type: 'sprite',
+			image: '',
+			colorizationKey: 'chains',
+			imageOverrides: [
+				{
+					image: 'frame_chains_left_top_attached.png',
+					condition: [
+						[
+							{
+								module: 'frame_left',
+								operator: '=',
+								value: 'tied_left_up',
+							},
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'sprite',
+			image: '',
+			colorizationKey: 'chains',
+			imageOverrides: [
+				{
+					image: 'frame_chains_right_top_attached.png',
+					condition: [
+						[
+							{
+								module: 'frame_right',
+								operator: '=',
+								value: 'tied_right_up',
+							},
+
+						],
+					],
+				},
+			],
 		},
 		{
 			type: 'sprite',
@@ -551,6 +662,24 @@ DefineRoomDeviceAsset({
 				offsetX: -520,
 				offsetY: 35,
 			},
+			characterPositionOverrides: [
+				{
+					position: {
+						offsetX: -520,
+						offsetY: 35,
+						disablePoseOffset: true,
+					},
+					condition: [
+						[
+							{
+								module: 'frame_left',
+								operator: '=',
+								value: 'tied_left_up',
+							},
+						],
+					],
+				},
+			],
 		},
 		{
 			type: 'slot',
@@ -559,11 +688,30 @@ DefineRoomDeviceAsset({
 				offsetX: 520,
 				offsetY: 35,
 			},
+			characterPositionOverrides: [
+				{
+					position: {
+						offsetX: 520,
+						offsetY: 35,
+						disablePoseOffset: true,
+					},
+					condition: [
+						[
+							{
+								module: 'frame_right',
+								operator: '=',
+								value: 'tied_right_up',
+							},
+						],
+					],
+				},
+			],
+
 		},
 	],
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-		credits: ['ClaudiaMia', 'Angela-BC'],
+		credits: ['ClaudiaMia', 'Angela-BC', 'SandrinePDR'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
@@ -577,3 +725,4 @@ DefineRoomDeviceAsset({
 		],
 	},
 });
+

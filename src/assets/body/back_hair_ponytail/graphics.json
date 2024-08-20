@@ -11,8 +11,21 @@
 			"mirror": 0,
 			"colorizationKey": "hair",
 			"image": {
-				"image": "bhair1.png",
-				"overrides": []
+				"image": "ponytail_left.png",
+				"overrides": [
+					{
+						"image": "ponytail_right.png",
+						"condition": [
+							[
+								{
+									"module": "direction",
+									"operator": "=",
+									"value": "right"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
@@ -25,16 +38,38 @@
 			"mirror": 0,
 			"colorizationKey": "hairShine",
 			"image": {
-				"image": "bhair1_shine.png",
+				"image": "",
 				"overrides": [
 					{
-						"image": "",
+						"image": "ponytail_left_shine.png",
 						"condition": [
 							[
 								{
 									"module": "shine",
 									"operator": "=",
-									"value": "hide"
+									"value": "show"
+								},
+								{
+									"module": "direction",
+									"operator": "=",
+									"value": "left"
+								}
+							]
+						]
+					},
+					{
+						"image": "ponytail_right_shine.png",
+						"condition": [
+							[
+								{
+									"module": "shine",
+									"operator": "=",
+									"value": "show"
+								},
+								{
+									"module": "direction",
+									"operator": "=",
+									"value": "right"
 								}
 							]
 						]
