@@ -1,3 +1,5 @@
+import { ItemInteractionType } from 'pandora-common';
+
 DefineAsset({
 	name: 'Base body',
 	size: 'bodypart',
@@ -24,6 +26,24 @@ DefineAsset({
 		provides: [
 			'Body_base',
 		],
+	},
+	modules: {
+		muscleType: {
+			type: 'typed',
+			name: 'Stomach muscles',
+			interactionType: ItemInteractionType.STYLING,
+			variants: [
+				{
+					id: 'standard',
+					name: 'Standard',
+					default: true,
+				},
+				{
+					id: 'muscular',
+					name: 'Muscular',
+				},
+			],
+		},
 	},
 	ownership: {
 		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',

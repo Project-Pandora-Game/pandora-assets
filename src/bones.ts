@@ -26,7 +26,6 @@ const boneDefinitionImpl = {
 	breasts: { type: 'body' },
 	waist: { type: 'body' },
 	hips: { type: 'body' },
-	muscle_width: { type: 'body' },
 	tiptoeing: { type: 'pose' },
 	character_rotation: { type: 'pose' },
 } as const satisfies Immutable<Record<string, BoneDefinitionCompressed>>;

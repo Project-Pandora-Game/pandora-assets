@@ -392,9 +392,9 @@
 						"condition": [
 							[
 								{
-									"bone": "muscle_width",
-									"operator": "<=",
-									"value": 0
+									"module": "muscleType",
+									"operator": "=",
+									"value": "standard"
 								}
 							]
 						]
@@ -404,9 +404,9 @@
 						"condition": [
 							[
 								{
-									"bone": "muscle_width",
-									"operator": ">",
-									"value": 0
+									"module": "muscleType",
+									"operator": "=",
+									"value": "muscular"
 								}
 							]
 						]
