@@ -470,7 +470,7 @@ DefineRoomDeviceAsset({
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_right'],
 						slotProperties: {
-							character_slot_left: {
+							character_slot_right: {
 								poseLimits: {
 									bones: {
 										leg_l: [[-3, 2]],
@@ -493,7 +493,7 @@ DefineRoomDeviceAsset({
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_right'],
 						slotProperties: {
-							character_slot_left: {
+							character_slot_right: {
 								poseLimits: {
 									bones: {
 										arm_l: -74,
