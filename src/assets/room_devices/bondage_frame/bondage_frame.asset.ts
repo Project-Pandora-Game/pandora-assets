@@ -505,9 +505,13 @@ DefineRoomDeviceAsset({
 										character_rotation: 0,
 									},
 								},
+								effects: {
+									blockHands: true,
+								},
 								attributes: {
 									requires: [
 										'Ankle_cuffs',
+										'Wrist_cuffs',
 									],
 								},
 							},
