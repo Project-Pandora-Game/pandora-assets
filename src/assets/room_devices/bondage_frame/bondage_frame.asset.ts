@@ -276,7 +276,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'tied_left',
-					name: 'Tied to the frame',
+					name: 'Tied (Arms behind)',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_left'],
 						slotProperties: {
@@ -303,7 +303,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'tied_left_up',
-					name: 'Arms tied overhead',
+					name: 'Chained (Arms overhead)',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_left'],
 						slotProperties: {
@@ -334,7 +334,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'tied_left_feet',
-					name: 'Feet chained to frame',
+					name: 'Chained (Legs)',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_left'],
 						slotProperties: {
@@ -357,7 +357,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'tied_left_both',
-					name: 'Arms above and feet chained to frame',
+					name: 'Chained (Arms & Legs)',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_left'],
 						slotProperties: {
@@ -408,7 +408,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'tied_right',
-					name: 'Tied to the frame',
+					name: 'Tied (Arms behind)',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_right'],
 						slotProperties: {
@@ -435,7 +435,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'tied_right_up',
-					name: 'Arms tied overhead',
+					name: 'Chained (Arms overhead)',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_right'],
 						slotProperties: {
@@ -466,7 +466,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'tied_right_feet',
-					name: 'Feet chained to frame',
+					name: 'Chained (Legs)',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_right'],
 						slotProperties: {
@@ -489,7 +489,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'tied_right_both',
-					name: 'Arms above and feet chained to frame',
+					name: 'Chained (Arms & Legs)',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_right'],
 						slotProperties: {
