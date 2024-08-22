@@ -148,21 +148,7 @@
 			"colorizationKey": "cuffs",
 			"image": {
 				"image": "bar_cuffs.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"legs": "kneeling"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
+				"overrides": []
 			}
 		},
 		{
@@ -211,58 +197,6 @@
 					},
 					{
 						"image": "bar_kneeling_narrow.png",
-						"condition": [
-							[
-								{
-									"legs": "kneeling"
-								},
-								{
-									"module": "barWidth",
-									"operator": "=",
-									"value": "narrow"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"name": "cuffs kneeling",
-			"priority": "BELOW_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "cuffs",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "bar_cuffs_kneeling.png",
-						"condition": [
-							[
-								{
-									"legs": "kneeling"
-								},
-								{
-									"module": "barWidth",
-									"operator": "=",
-									"value": "normal"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "bar_cuffs_kneeling_narrow.png",
 						"condition": [
 							[
 								{
