@@ -1455,7 +1455,14 @@
 				"value": {
 					"x": -3,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "const-shift",
@@ -1526,7 +1533,14 @@
 				"value": {
 					"x": -2,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "const-shift",
@@ -1614,7 +1628,14 @@
 				"value": {
 					"x": 2,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "const-shift",
@@ -1739,7 +1760,29 @@
 				"value": {
 					"x": 6,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
+			},
+			{
+				"type": "shift",
+				"bone": "leg_width",
+				"value": {
+					"x": 7,
+					"y": 0
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "const-shift",
@@ -1810,7 +1853,14 @@
 				"value": {
 					"x": -5,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "shift",
@@ -1825,6 +1875,9 @@
 							"bone": "leg_width",
 							"operator": "<",
 							"value": 0
+						},
+						{
+							"legs": "!kneeling"
 						}
 					]
 				]
@@ -1898,7 +1951,14 @@
 				"value": {
 					"x": 4,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "const-shift",
@@ -2275,7 +2335,14 @@
 				"value": {
 					"x": 2,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "const-shift",
@@ -2383,7 +2450,14 @@
 				"value": {
 					"x": -2,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "const-shift",
@@ -2454,7 +2528,14 @@
 				"value": {
 					"x": 2,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "const-shift",
@@ -3571,7 +3652,29 @@
 				"value": {
 					"x": 3,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
+			},
+			{
+				"type": "shift",
+				"bone": "leg_width",
+				"value": {
+					"x": 7,
+					"y": 0
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "const-shift",
@@ -3642,7 +3745,14 @@
 				"value": {
 					"x": 3,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "const-shift",
@@ -3794,7 +3904,29 @@
 				"value": {
 					"x": 4,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
+			},
+			{
+				"type": "shift",
+				"bone": "leg_width",
+				"value": {
+					"x": 7,
+					"y": 0
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "const-shift",
@@ -3865,7 +3997,14 @@
 				"value": {
 					"x": 2,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "shift",
@@ -3880,6 +4019,9 @@
 							"bone": "leg_width",
 							"operator": "<",
 							"value": 0
+						},
+						{
+							"legs": "!kneeling"
 						}
 					]
 				]
@@ -3953,7 +4095,29 @@
 				"value": {
 					"x": 2,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
+			},
+			{
+				"type": "shift",
+				"bone": "leg_width",
+				"value": {
+					"x": 7,
+					"y": 0
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "shift",
@@ -3968,6 +4132,9 @@
 							"bone": "leg_width",
 							"operator": "<",
 							"value": 0
+						},
+						{
+							"legs": "!kneeling"
 						}
 					]
 				]
@@ -4041,7 +4208,14 @@
 				"value": {
 					"x": 2,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "shift",
@@ -4056,6 +4230,9 @@
 							"bone": "leg_width",
 							"operator": "<",
 							"value": 0
+						},
+						{
+							"legs": "!kneeling"
 						}
 					]
 				]
@@ -4129,7 +4306,14 @@
 				"value": {
 					"x": -4,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "shift",
@@ -4144,6 +4328,9 @@
 							"bone": "leg_width",
 							"operator": "<",
 							"value": 0
+						},
+						{
+							"legs": "!kneeling"
 						}
 					]
 				]
@@ -4217,7 +4404,14 @@
 				"value": {
 					"x": -10,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "shift",
@@ -4232,6 +4426,9 @@
 							"bone": "leg_width",
 							"operator": "<",
 							"value": 0
+						},
+						{
+							"legs": "!kneeling"
 						}
 					]
 				]
@@ -4305,7 +4502,14 @@
 				"value": {
 					"x": -4,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "shift",
@@ -4320,6 +4524,9 @@
 							"bone": "leg_width",
 							"operator": "<",
 							"value": 0
+						},
+						{
+							"legs": "!kneeling"
 						}
 					]
 				]
@@ -4391,9 +4598,16 @@
 				"type": "shift",
 				"bone": "leg_width",
 				"value": {
-					"x": -9,
+					"x": -8,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "shift",
@@ -4408,6 +4622,9 @@
 							"bone": "leg_width",
 							"operator": "<",
 							"value": 0
+						},
+						{
+							"legs": "!kneeling"
 						}
 					]
 				]
@@ -4481,7 +4698,14 @@
 				"value": {
 					"x": -4,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "const-shift",
@@ -4552,7 +4776,14 @@
 				"value": {
 					"x": -2,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "shift",
@@ -4567,6 +4798,9 @@
 							"bone": "leg_width",
 							"operator": "<",
 							"value": 0
+						},
+						{
+							"legs": "!kneeling"
 						}
 					]
 				]
@@ -4640,7 +4874,14 @@
 				"value": {
 					"x": 2,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "const-shift",
@@ -4711,7 +4952,29 @@
 				"value": {
 					"x": 3,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
+			},
+			{
+				"type": "shift",
+				"bone": "leg_width",
+				"value": {
+					"x": 7,
+					"y": 0
+				},
+				"condition": [
+					[
+						{
+							"legs": "kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "shift",
@@ -4726,6 +4989,9 @@
 							"bone": "leg_width",
 							"operator": "<",
 							"value": 0
+						},
+						{
+							"legs": "!kneeling"
 						}
 					]
 				]
@@ -4799,7 +5065,14 @@
 				"value": {
 					"x": -2,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "const-shift",
@@ -5328,7 +5601,14 @@
 				"value": {
 					"x": -2,
 					"y": 0
-				}
+				},
+				"condition": [
+					[
+						{
+							"legs": "!kneeling"
+						}
+					]
+				]
 			},
 			{
 				"type": "const-shift",
