@@ -44,6 +44,42 @@ DefineAsset({
 				},
 			],
 		},
+		poseLimitingLegs: {
+			type: 'typed',
+			name: 'Body posing limits: Legs',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
+			variants: [
+				{
+					id: 'default',
+					name: 'Default',
+					default: true,
+					properties: {
+						poseLimits: {
+							options: [
+								{
+									legs: ['standing', 'kneeling'],
+									bones: {
+										leg_l: [[-100, 80]],
+										leg_r: [[-100, 80]],
+									},
+								},
+								{
+									legs: ['sitting'],
+									bones: {
+										leg_l: [[-50, 50]],
+										leg_r: [[-50, 50]],
+									},
+								},
+							],
+						},
+					},
+				},
+				{
+					id: 'unlimited',
+					name: 'Not limited',
+				},
+			],
+		},
 	},
 	ownership: {
 		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',

@@ -16,7 +16,7 @@ const boneDefinitionImpl = {
 		type: 'pose',
 	},
 	leg_l: {
-		pos: [533, 707],
+		pos: [521, 735],
 		mirror: 'leg_r',
 		baseRotation: 90,
 		type: 'pose',
