@@ -1608,6 +1608,9 @@
 							"bone": "tiptoeing",
 							"operator": ">",
 							"value": 0
+						},
+						{
+							"legs": "!kneeling"
 						}
 					]
 				]
@@ -1703,6 +1706,9 @@
 							"bone": "tiptoeing",
 							"operator": ">",
 							"value": 0
+						},
+						{
+							"legs": "!kneeling"
 						}
 					]
 				]
@@ -2603,6 +2609,9 @@
 							"bone": "tiptoeing",
 							"operator": ">",
 							"value": 0
+						},
+						{
+							"legs": "!kneeling"
 						}
 					]
 				]
