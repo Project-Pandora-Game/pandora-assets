@@ -1,14 +1,18 @@
 DefineAsset({
-	name: 'Spreader Bar',
-	size: 'medium',
+	name: 'Steel Ankle Cuffs',
+	size: 'small',
 	graphics: 'graphics.json',
 	colorization: {
+		cuffs: {
+			name: 'Cuffs',
+			default: '#FFFFFF',
+		},
 		bar: {
 			name: 'Bar',
 			default: '#FFFFFF',
 		},
-		cuffs: {
-			name: 'Cuffs',
+		chains: {
+			name: 'Chains',
 			default: '#FFFFFF',
 		},
 	},
@@ -28,19 +32,82 @@ DefineAsset({
 				blockAddRemove: true,
 			},
 		},
-		lockChain: {
+		lockBar: {
 			type: 'lockSlot',
 			name: 'Lock for bar width',
 			occupiedProperties: {
 				blockModules: ['barWidth'],
+				stateFlags: {
+					requires: {
+						chain: 'Locking requires a bar to lock.',
+					},
+				},
 			},
+		},
+		lockChain: {
+			type: 'lockSlot',
+			name: 'Lock for cuff chain',
+			occupiedProperties: {
+				blockModules: ['cuffState'],
+				stateFlags: {
+					requires: {
+						chain: 'Locking requires a chain to lock.',
+					},
+				},
+			},
+		},
+		cuffState: {
+			type: 'typed',
+			name: 'Cuff states',
+			variants: [
+				{
+					id: 'unchained',
+					name: 'No Chain',
+					default: true,
+				},
+				{
+					id: 'chainNormal',
+					name: 'Chained',
+					properties: {
+						poseLimits: {
+							options: [
+								{
+									bones: {
+										leg_r: 0,
+										leg_l: 0,
+									},
+								},
+								{
+									bones: {
+										leg_r: -3,
+										leg_l: -3,
+									},
+								},
+								{
+									bones: {
+										leg_r: [[2, 6]],
+										leg_l: [[2, 6]],
+									},
+								},
+							],
+						},
+						stateFlags: {
+							provides: ['chain'],
+						},
+					},
+				},
+			],
 		},
 		barWidth: {
 			type: 'typed',
 			name: 'Bar Width',
 			variants: [
 				{
-					id: 'narrow',
+					id: 'unbarred',
+					name: 'No bar',
+				},
+				{
+					id: 'barNarrow',
 					name: 'Narrow',
 					properties: {
 						poseLimits: {
@@ -52,9 +119,8 @@ DefineAsset({
 					},
 				},
 				{
-					id: 'normal',
+					id: 'barNormal',
 					name: 'Normal',
-					default: true,
 					properties: {
 						poseLimits: {
 							bones: {
@@ -65,7 +131,7 @@ DefineAsset({
 					},
 				},
 				{
-					id: 'wide',
+					id: 'barWide',
 					name: 'Wide (no kneeling)',
 					properties: {
 						poseLimits: {
@@ -81,8 +147,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER fastened the spreader bar around TARGET_CHARACTER_DYNAMIC_POSSESSIVE ankles.',
-		actionRemove: 'SOURCE_CHARACTER removed the spreader bar from TARGET_CHARACTER_DYNAMIC_POSSESSIVE ankles.',
+		actionAdd: 'SOURCE_CHARACTER fastened the steel cuffs around TARGET_CHARACTER_DYNAMIC_POSSESSIVE ankles.',
+		actionRemove: 'SOURCE_CHARACTER removed the steel cuffs from TARGET_CHARACTER_DYNAMIC_POSSESSIVE ankles.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
