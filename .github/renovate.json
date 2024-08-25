@@ -7,24 +7,15 @@
 		":rebaseStalePrs",
 		":automergeMinor"
 	],
-	"autoApprove": true,
 	"automergeType": "branch",
-	"automergeStrategy": "squash",
-	"platformAutomerge": true,
+	"autoApprove": true,
 	"rangeStrategy": "pin",
-	"onboardingPrTitle": "[DEV] Configure Renovate",
 	"semanticCommits": "disabled",
 	"commitMessagePrefix": "[CHORE]",
 	"configMigration": true,
-	"cloneSubmodules": true,
 	"labels": [
 		"Component: Tooling"
 	],
-	"git-submodules": {
-		"enabled": true,
-		"automerge": true,
-		"prCreation": "status-success"
-	},
 	"packageRules": [
 		{
 			"matchDepTypes": [
