@@ -276,7 +276,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'tied_left',
-					name: 'Tied to the frame',
+					name: 'Tied (Arms behind)',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_left'],
 						slotProperties: {
@@ -303,7 +303,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'tied_left_up',
-					name: 'Tied to the frame, arms overhead',
+					name: 'Chained (Arms overhead)',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_left'],
 						slotProperties: {
@@ -332,6 +332,60 @@ DefineRoomDeviceAsset({
 						},
 					},
 				},
+				{
+					id: 'tied_left_feet',
+					name: 'Chained (Legs)',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_left'],
+						slotProperties: {
+							character_slot_left: {
+								poseLimits: {
+									bones: {
+										leg_l: [[-3, 2]],
+										leg_r: [[-3, 2]],
+										character_rotation: 0,
+									},
+								},
+								attributes: {
+									requires: [
+										'Ankle_cuffs',
+									],
+								},
+							},
+						},
+					},
+				},
+				{
+					id: 'tied_left_both',
+					name: 'Chained (Arms & Legs)',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_left'],
+						slotProperties: {
+							character_slot_left: {
+								poseLimits: {
+									bones: {
+										arm_l: -74,
+										arm_r: -74,
+										elbow_l: -43,
+										elbow_r: -43,
+										leg_l: [[-3, 2]],
+										leg_r: [[-3, 2]],
+										character_rotation: 0,
+									},
+								},
+								effects: {
+									blockHands: true,
+								},
+								attributes: {
+									requires: [
+										'Wrist_cuffs',
+										'Ankle_cuffs',
+									],
+								},
+							},
+						},
+					},
+				},
 			],
 		},
 		lock_left: {
@@ -354,7 +408,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'tied_right',
-					name: 'Tied to the frame',
+					name: 'Tied (Arms behind)',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_right'],
 						slotProperties: {
@@ -381,7 +435,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'tied_right_up',
-					name: 'Tied to the frame, arms overhead',
+					name: 'Chained (Arms overhead)',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot_right'],
 						slotProperties: {
@@ -403,6 +457,60 @@ DefineRoomDeviceAsset({
 								},
 								attributes: {
 									requires: [
+										'Wrist_cuffs',
+									],
+								},
+							},
+						},
+					},
+				},
+				{
+					id: 'tied_right_feet',
+					name: 'Chained (Legs)',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_right'],
+						slotProperties: {
+							character_slot_right: {
+								poseLimits: {
+									bones: {
+										leg_l: [[-3, 2]],
+										leg_r: [[-3, 2]],
+										character_rotation: 0,
+									},
+								},
+								attributes: {
+									requires: [
+										'Ankle_cuffs',
+									],
+								},
+							},
+						},
+					},
+				},
+				{
+					id: 'tied_right_both',
+					name: 'Chained (Arms & Legs)',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_right'],
+						slotProperties: {
+							character_slot_right: {
+								poseLimits: {
+									bones: {
+										arm_l: -74,
+										arm_r: -74,
+										elbow_l: -43,
+										elbow_r: -43,
+										leg_l: [[-3, 2]],
+										leg_r: [[-3, 2]],
+										character_rotation: 0,
+									},
+								},
+								effects: {
+									blockHands: true,
+								},
+								attributes: {
+									requires: [
+										'Ankle_cuffs',
 										'Wrist_cuffs',
 									],
 								},
@@ -471,6 +579,39 @@ DefineRoomDeviceAsset({
 								value: 'tied_left_up',
 							},
 						],
+						[
+							{
+								module: 'frame_left',
+								operator: '=',
+								value: 'tied_left_both',
+							},
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'sprite',
+			image: '',
+			colorizationKey: 'chains',
+			imageOverrides: [
+				{
+					image: 'frame_chains_left_low_attached.png',
+					condition: [
+						[
+							{
+								module: 'frame_left',
+								operator: '=',
+								value: 'tied_left_feet',
+							},
+						],
+						[
+							{
+								module: 'frame_left',
+								operator: '=',
+								value: 'tied_left_both',
+							},
+						],
 					],
 				},
 			],
@@ -489,7 +630,39 @@ DefineRoomDeviceAsset({
 								operator: '=',
 								value: 'tied_right_up',
 							},
-
+						],
+						[
+							{
+								module: 'frame_right',
+								operator: '=',
+								value: 'tied_right_both',
+							},
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'sprite',
+			image: '',
+			colorizationKey: 'chains',
+			imageOverrides: [
+				{
+					image: 'frame_chains_right_low_attached.png',
+					condition: [
+						[
+							{
+								module: 'frame_right',
+								operator: '=',
+								value: 'tied_right_feet',
+							},
+						],
+						[
+							{
+								module: 'frame_right',
+								operator: '=',
+								value: 'tied_right_both',
+							},
 						],
 					],
 				},
@@ -677,6 +850,20 @@ DefineRoomDeviceAsset({
 								value: 'tied_left_up',
 							},
 						],
+						[
+							{
+								module: 'frame_left',
+								operator: '=',
+								value: 'tied_left_feet',
+							},
+						],
+						[
+							{
+								module: 'frame_left',
+								operator: '=',
+								value: 'tied_left_both',
+							},
+						],
 					],
 				},
 			],
@@ -701,6 +888,20 @@ DefineRoomDeviceAsset({
 								module: 'frame_right',
 								operator: '=',
 								value: 'tied_right_up',
+							},
+						],
+						[
+							{
+								module: 'frame_right',
+								operator: '=',
+								value: 'tied_right_feet',
+							},
+						],
+						[
+							{
+								module: 'frame_right',
+								operator: '=',
+								value: 'tied_right_both',
 							},
 						],
 					],
