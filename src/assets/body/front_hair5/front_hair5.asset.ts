@@ -19,14 +19,14 @@ DefineAsset({
 	modules,
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-		credits: ['ClaudiaMia'],
+		credits: ['ClaudiaMia', 'Echo'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
 				source: 'Self-Made',
 				copyrightHolder: 'ClaudiaMia',
-				editedBy: 'ClaudiaMia',
+				editedBy: 'Echo',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],

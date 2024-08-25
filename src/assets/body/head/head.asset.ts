@@ -17,15 +17,15 @@ DefineAsset({
 		],
 	},
 	ownership: {
-		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-		credits: ['Titania', 'Jomshir', 'ClaudiaMia'],
+		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',
+		credits: ['Echo'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
 				source: 'Private',
-				copyrightHolder: 'QueenTita',
-				editedBy: 'ClaudiaMia',
+				copyrightHolder: 'Echo',
+				editedBy: 'Jomshir',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
