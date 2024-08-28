@@ -9,7 +9,7 @@ DefineAsset({
 	colorization: {
 		skin: {
 			name: 'Skin',
-			group: 'skin',
+			default: '#ECD5CC',
 		},
 		nipples: {
 			name: 'Nipples',
@@ -19,7 +19,8 @@ DefineAsset({
 	preview: null,
 	poseLimits: {
 		bones: {
-			breasts: [[-180, -180], [-150, -150], [-70, -70], [0, 0], [100, 100], [180, 180]],
+			breasts: [[-180, -180], [-70, -70], [0, 0], [100, 100], [180, 180]],
+			tiptoeing: [[0, 180]],
 		},
 	},
 	attributes: {

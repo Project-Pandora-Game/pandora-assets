@@ -6,7 +6,7 @@ DefineAsset({
 	graphics: 'graphics.json',
 	colorization: {
 		skin: {
-			name: null,
+			name: 'Skin',
 			group: 'skin',
 		},
 	},
