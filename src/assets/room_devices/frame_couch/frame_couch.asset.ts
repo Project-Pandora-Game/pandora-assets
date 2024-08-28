@@ -27,7 +27,7 @@ DefineRoomDeviceAsset({
 					bones: {
 						character_rotation: -90,
 					},
-					legs: 'standing',
+					legs: ['standing', 'kneeling'],
 				},
 			},
 		},
@@ -129,6 +129,7 @@ DefineRoomDeviceAsset({
 										leg_l: 2,
 										leg_r: 2,
 									},
+									legs: 'standing',
 								},
 							},
 						},
@@ -150,6 +151,7 @@ DefineRoomDeviceAsset({
 										leg_l: 2,
 										leg_r: 2,
 									},
+									legs: 'standing',
 									arms: {
 										rotation: 'up',
 										position: 'back',
