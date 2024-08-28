@@ -9,7 +9,7 @@ DefineAsset({
 	colorization: {
 		skin: {
 			name: 'Skin',
-			default: '#ECD5CC',
+			group: 'skin',
 		},
 		nipples: {
 			name: 'Nipples',
