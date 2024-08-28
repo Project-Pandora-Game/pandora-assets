@@ -57,7 +57,7 @@
 								{
 									"bone": "breasts",
 									"operator": "<=",
-									"value": -165
+									"value": -180
 								}
 							]
 						]
@@ -69,7 +69,7 @@
 								{
 									"bone": "breasts",
 									"operator": "<=",
-									"value": -35
+									"value": -70
 								}
 							]
 						]
@@ -306,7 +306,7 @@
 								{
 									"bone": "breasts",
 									"operator": "<=",
-									"value": -165
+									"value": -180
 								}
 							]
 						]
@@ -318,7 +318,7 @@
 								{
 									"bone": "breasts",
 									"operator": "<=",
-									"value": -35
+									"value": -70
 								}
 							]
 						]
@@ -346,7 +346,7 @@
 								{
 									"bone": "breasts",
 									"operator": "<=",
-									"value": -165
+									"value": -180
 								}
 							]
 						]
@@ -358,7 +358,7 @@
 								{
 									"bone": "breasts",
 									"operator": "<=",
-									"value": -35
+									"value": -70
 								}
 							]
 						]

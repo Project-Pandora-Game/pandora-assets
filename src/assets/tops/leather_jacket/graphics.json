@@ -192,7 +192,7 @@
 								{
 									"bone": "breasts",
 									"operator": "<=",
-									"value": -35
+									"value": -70
 								}
 							]
 						]
@@ -220,7 +220,7 @@
 								{
 									"bone": "breasts",
 									"operator": "<=",
-									"value": -35
+									"value": -70
 								}
 							]
 						]
