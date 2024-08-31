@@ -236,12 +236,46 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		position: {
+			type: 'typed',
+			name: 'Ankle cuffs position',
+			staticConfig: { slotName: 'character_slot_middle' },
+			variants: [
+				{
+					id: 'front',
+					name: 'Front-facing',
+					default: true,
+					properties: {
+						slotProperties: {
+							character_slot_middle: {
+								poseLimits: {
+									view: 'front',
+								},
+							},
+						},
+					},
+				},
+				{
+					id: 'back',
+					name: 'Back-facing',
+					properties: {
+						slotProperties: {
+							character_slot_middle: {
+								poseLimits: {
+									view: 'back',
+								},
+							},
+						},
+					},
+				},
+			],
+		},
 		lockCenterChain: {
 			type: 'lockSlot',
 			name: 'Lock for ankle cuff chains',
 			staticConfig: { slotName: 'character_slot_middle' },
 			occupiedProperties: {
-				blockModules: ['center'],
+				blockModules: ['center', 'position'],
 				stateFlags: {
 					requires: {
 						chain_center: 'Locking requires a chain to lock.',
