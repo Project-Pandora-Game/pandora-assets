@@ -81,8 +81,8 @@ DefineAsset({
 									bones: {
 										arm_r: -74,
 										arm_l: -74,
-										elbow_r: -43,
-										elbow_l: -43,
+										elbow_r: -46,
+										elbow_l: -47,
 									},
 								},
 								{
@@ -93,8 +93,8 @@ DefineAsset({
 									bones: {
 										arm_r: -74,
 										arm_l: -74,
-										elbow_r: -43,
-										elbow_l: -43,
+										elbow_r: -46,
+										elbow_l: -47,
 									},
 								},
 							],
