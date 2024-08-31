@@ -616,6 +616,14 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Belt_chainable',
 		description: 'A belt that is chainable to another item',
 	},
+	Ankle_cuffs_chainable: {
+		name: 'Ankle_cuffs_chainable',
+		description: 'A cuff that is chainable to another item',
+	},
+	Armbinder_chainable: {
+		name: 'Armbinder_chainable',
+		description: 'An armbinder that is chainable to another item',
+	},
 } as const satisfies Record<string, AssetRepoAttributeDefinition>;
 
 //#endregion

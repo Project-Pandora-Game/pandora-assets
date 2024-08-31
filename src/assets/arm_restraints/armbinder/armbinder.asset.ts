@@ -52,6 +52,13 @@ DefineAsset({
 				{
 					id: 'ring',
 					name: 'Ring At Glove End',
+					properties: {
+						attributes: {
+							provides: [
+								'Armbinder_chainable',
+							],
+						},
+					},
 				},
 			],
 		},
