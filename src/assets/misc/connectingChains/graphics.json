@@ -34,7 +34,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"name": "Armbinder chain left",
+			"name": "Armbinder chain left back",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -46,6 +46,9 @@
 						"image": "armbinder_chains_r_closed.png",
 						"condition": [
 							[
+								{
+									"view": "back"
+								},
 								{
 									"module": "chains",
 									"operator": "=",
@@ -69,6 +72,9 @@
 						"condition": [
 							[
 								{
+									"view": "back"
+								},
+								{
 									"module": "chains",
 									"operator": "=",
 									"value": "armbinderChain"
@@ -90,6 +96,9 @@
 						"image": "armbinder_chains_r_spread_slightly.png",
 						"condition": [
 							[
+								{
+									"view": "back"
+								},
 								{
 									"module": "chains",
 									"operator": "=",
@@ -113,6 +122,9 @@
 						"condition": [
 							[
 								{
+									"view": "back"
+								},
+								{
 									"module": "chains",
 									"operator": "=",
 									"value": "armbinderChain"
@@ -134,6 +146,9 @@
 						"image": "armbinder_chains_r_spread_wide.png",
 						"condition": [
 							[
+								{
+									"view": "back"
+								},
 								{
 									"module": "chains",
 									"operator": "=",
@@ -160,7 +175,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"name": "Armbinder chain right",
+			"name": "Armbinder chain right back",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -172,6 +187,9 @@
 						"image": "armbinder_chains_l_closed.png",
 						"condition": [
 							[
+								{
+									"view": "back"
+								},
 								{
 									"module": "chains",
 									"operator": "=",
@@ -195,6 +213,9 @@
 						"condition": [
 							[
 								{
+									"view": "back"
+								},
+								{
 									"module": "chains",
 									"operator": "=",
 									"value": "armbinderChain"
@@ -216,6 +237,9 @@
 						"image": "armbinder_chains_l_spread_slightly.png",
 						"condition": [
 							[
+								{
+									"view": "back"
+								},
 								{
 									"module": "chains",
 									"operator": "=",
@@ -239,6 +263,9 @@
 						"condition": [
 							[
 								{
+									"view": "back"
+								},
+								{
 									"module": "chains",
 									"operator": "=",
 									"value": "armbinderChain"
@@ -261,6 +288,9 @@
 						"condition": [
 							[
 								{
+									"view": "back"
+								},
+								{
 									"module": "chains",
 									"operator": "=",
 									"value": "armbinderChain"
@@ -269,6 +299,138 @@
 									"bone": "leg_r",
 									"operator": "<=",
 									"value": -21
+								},
+								{
+									"bone": "leg_r",
+									"operator": ">",
+									"value": -28
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Armbinder chain left front",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "Chains",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "armbinder_chains_lf_normal.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "armbinderChain"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<=",
+									"value": 5
+								},
+								{
+									"bone": "leg_l",
+									"operator": ">",
+									"value": -7
+								}
+							]
+						]
+					},
+					{
+						"image": "armbinder_chains_lf_spread_wide.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "armbinderChain"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<=",
+									"value": -7
+								},
+								{
+									"bone": "leg_l",
+									"operator": ">",
+									"value": -28
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Armbinder chain right front",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "Chains",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "armbinder_chains_rf_normal.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "armbinderChain"
+								},
+								{
+									"bone": "leg_r",
+									"operator": "<=",
+									"value": 5
+								},
+								{
+									"bone": "leg_r",
+									"operator": ">",
+									"value": -7
+								}
+							]
+						]
+					},
+					{
+						"image": "armbinder_chains_rf_spread_wide.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "armbinderChain"
+								},
+								{
+									"bone": "leg_r",
+									"operator": "<=",
+									"value": -7
 								},
 								{
 									"bone": "leg_r",

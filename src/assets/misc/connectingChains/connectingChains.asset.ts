@@ -67,8 +67,8 @@ DefineAsset({
 							legs: 'kneeling',
 							bones:
 								{
-									leg_l: [[-28, 5]],
-									leg_r: [[-28, 5]],
+									leg_l: [[-27, 5]],
+									leg_r: [[-27, 5]],
 								},
 						},
 						attributes: {
@@ -85,10 +85,6 @@ DefineAsset({
 				},
 			],
 		},
-	},
-	chat: {
-		actionAdd: 'SOURCE_CHARACTER connects the cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE belt with short chains.',
-		actionRemove: 'SOURCE_CHARACTER detaches the cuffs from TARGET_CHARACTER_DYNAMIC_POSSESSIVE belt.',
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
