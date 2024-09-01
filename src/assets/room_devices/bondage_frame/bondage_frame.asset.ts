@@ -114,8 +114,8 @@ DefineRoomDeviceAsset({
 							character_slot: {
 								poseLimits: {
 									bones: {
-										leg_r: -30,
-										leg_l: -30,
+										leg_r: -33,
+										leg_l: -33,
 										character_rotation: 0,
 									},
 								},
@@ -143,8 +143,8 @@ DefineRoomDeviceAsset({
 										arm_r: -70,
 										elbow_l: -20,
 										elbow_r: -20,
-										leg_r: -30,
-										leg_l: -30,
+										leg_r: -33,
+										leg_l: -33,
 										character_rotation: 0,
 									},
 								},
@@ -719,6 +719,44 @@ DefineRoomDeviceAsset({
 			colorizationKey: 'chains',
 		},
 		{
+			type: 'sprite',
+			image: 'frame_chains_bottom_hanging.png',
+			imageOverrides: [
+				{
+					image: 'frame_chains_bottom_long_attached.png',
+					condition: [
+						[
+							{
+								module: 'chains',
+								operator: '=',
+								value: 'standing_legs',
+							},
+						],
+						[
+							{
+								module: 'chains',
+								operator: '=',
+								value: 'standing_arms_legs',
+							},
+						],
+					],
+				},
+				{
+					image: 'frame_chains_bottom_attached.png',
+					condition: [
+						[
+							{
+								module: 'chains',
+								operator: '=',
+								value: 'hanging_and_legs',
+							},
+						],
+					],
+				},
+			],
+			colorizationKey: 'chains',
+		},
+		{
 			type: 'slot',
 			slot: 'character_slot',
 			characterPosition: {
@@ -789,44 +827,6 @@ DefineRoomDeviceAsset({
 					],
 				},
 			],
-		},
-		{
-			type: 'sprite',
-			image: 'frame_chains_bottom_hanging.png',
-			imageOverrides: [
-				{
-					image: 'frame_chains_bottom_long_attached.png',
-					condition: [
-						[
-							{
-								module: 'chains',
-								operator: '=',
-								value: 'standing_legs',
-							},
-						],
-						[
-							{
-								module: 'chains',
-								operator: '=',
-								value: 'standing_arms_legs',
-							},
-						],
-					],
-				},
-				{
-					image: 'frame_chains_bottom_attached.png',
-					condition: [
-						[
-							{
-								module: 'chains',
-								operator: '=',
-								value: 'hanging_and_legs',
-							},
-						],
-					],
-				},
-			],
-			colorizationKey: 'chains',
 		},
 		{
 			type: 'slot',

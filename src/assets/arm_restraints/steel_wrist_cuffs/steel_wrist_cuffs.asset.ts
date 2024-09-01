@@ -1,18 +1,10 @@
 DefineAsset({
-	name: 'Leather Wrist Cuffs',
+	name: 'Steel Wrist Cuffs',
 	size: 'small',
 	graphics: 'graphics.json',
 	colorization: {
 		cuff: {
 			name: 'Cuff',
-			default: '#222222',
-		},
-		belt: {
-			name: 'Belt',
-			default: '#000000',
-		},
-		smallRings: {
-			name: 'Eyelets',
 			default: '#FFFFFF',
 		},
 		largeRings: {
@@ -89,8 +81,8 @@ DefineAsset({
 									bones: {
 										arm_r: -74,
 										arm_l: -74,
-										elbow_r: -45,
-										elbow_l: -46,
+										elbow_r: -46,
+										elbow_l: -47,
 									},
 								},
 								{
@@ -101,8 +93,8 @@ DefineAsset({
 									bones: {
 										arm_r: -74,
 										arm_l: -74,
-										elbow_r: -45,
-										elbow_l: -46,
+										elbow_r: -46,
+										elbow_l: -47,
 									},
 								},
 							],
@@ -182,19 +174,19 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER fastened the leather cuffs around TARGET_CHARACTER_DYNAMIC_POSSESSIVE wrists.',
-		actionRemove: 'SOURCE_CHARACTER loosened and slipped off the leather cuffs from TARGET_CHARACTER_DYNAMIC_POSSESSIVE wrists.',
+		actionAdd: 'SOURCE_CHARACTER fastened the steel cuffs around TARGET_CHARACTER_DYNAMIC_POSSESSIVE wrists.',
+		actionRemove: 'SOURCE_CHARACTER opened and slipped off the steel cuffs from TARGET_CHARACTER_DYNAMIC_POSSESSIVE wrists.',
 	},
 	ownership: {
-		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-		credits: ['ClaudiaMia'],
+		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
+		credits: ['SandrinePDR'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
 				source: 'Self-Made',
 				copyrightHolder: 'ClaudiaMia',
-				editedBy: 'ClaudiaMia',
+				editedBy: 'SandrinePDR',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 			{
