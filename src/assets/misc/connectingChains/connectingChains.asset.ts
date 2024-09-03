@@ -31,9 +31,44 @@ DefineAsset({
 					default: true,
 				},
 				{
+					id: 'chained_collar',
+					name: 'Wrists chained to a collar',
+					switchMessage: 'SOURCE_CHARACTER connected the cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE collar with short chains.',
+					properties: {
+						attributes: {
+							requires: [
+								'Collar_front_ring',
+								'Wrist_cuffs_chainable',
+							],
+						},
+						poseLimits: {
+							arms: {
+								position: 'front',
+								rotation: 'down',
+								fingers: 'fist',
+							},
+							bones: {
+								arm_r: 95,
+								arm_l: 95,
+								elbow_r: 128,
+								elbow_l: 128,
+							},
+						},
+						stateFlags: {
+							provides: [
+								'Restraint',
+								'Restraint_arms',
+							],
+						},
+						effects: {
+							blockHands: true,
+						},
+					},
+				},
+				{
 					id: 'beltChain',
 					name: 'Belt Chains',
-					switchMessage: 'SOURCE_CHARACTER connects the cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE belt with short chains.',
+					switchMessage: 'SOURCE_CHARACTER connected the cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE belt with short chains.',
 					properties: {
 						poseLimits: {
 							arms: {
@@ -61,7 +96,7 @@ DefineAsset({
 				{
 					id: 'armbinderChain',
 					name: 'Kneeling Chains',
-					switchMessage: 'SOURCE_CHARACTER connects the cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE armbinder with short chains.',
+					switchMessage: 'SOURCE_CHARACTER connected the cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE armbinder with short chains.',
 					properties: {
 						poseLimits: {
 							legs: 'kneeling',
@@ -79,6 +114,38 @@ DefineAsset({
 							requires: [
 								'Ankle_cuffs_chainable',
 								'Armbinder_chainable',
+							],
+						},
+					},
+				},
+				{
+					id: 'wristToAnkles',
+					name: 'Wrists chained to ankles',
+					switchMessage: 'SOURCE_CHARACTER chained the wrist cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE ankles with short chains.',
+					properties: {
+						poseLimits: {
+							arms: {
+								position: 'back',
+							},
+							legs: 'kneeling',
+							bones: {
+								arm_l: 90,
+								arm_r: 90,
+								elbow_l: 0,
+								elbow_r: 0,
+								leg_l: [[-25, 5]],
+								leg_r: [[-25, 5]],
+							},
+						},
+						attributes: {
+							provides: [
+								'Restraint',
+								'Restraint_arms',
+								'Restraint_legs',
+							],
+							requires: [
+								'Wrist_cuffs_chainable',
+								'Ankle_cuffs_chainable',
 							],
 						},
 					},
