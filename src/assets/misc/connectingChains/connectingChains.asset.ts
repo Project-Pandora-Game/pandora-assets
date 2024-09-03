@@ -31,6 +31,41 @@ DefineAsset({
 					default: true,
 				},
 				{
+					id: 'chained_collar',
+					name: 'Wrists chained to a collar',
+					switchMessage: 'SOURCE_CHARACTER connected the cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE collar with short chains.',
+					properties: {
+						attributes: {
+							requires: [
+								'Collar_front_ring',
+								'Wrist_cuffs_chainable',
+							],
+						},
+						poseLimits: {
+							arms: {
+								position: 'front',
+								rotation: 'down',
+								fingers: 'fist',
+							},
+							bones: {
+								arm_r: 95,
+								arm_l: 95,
+								elbow_r: 128,
+								elbow_l: 128,
+							},
+						},
+						stateFlags: {
+							provides: [
+								'Restraint',
+								'Restraint_arms',
+							],
+						},
+						effects: {
+							blockHands: true,
+						},
+					},
+				},
+				{
 					id: 'beltChain',
 					name: 'Belt Chains',
 					switchMessage: 'SOURCE_CHARACTER connected the cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE belt with short chains.',

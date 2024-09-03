@@ -34,6 +34,34 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Collar Chains",
+			"priority": "ABOVE_ARM_LEFT",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "Chains",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "cuffs_chain_collar.png",
+						"condition": [
+							[
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "chained_collar"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"name": "Armbinder chain left back",
 			"priority": "BELOW_BODY",
 			"points": "static",
