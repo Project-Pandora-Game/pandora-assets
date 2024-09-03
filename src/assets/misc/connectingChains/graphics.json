@@ -34,6 +34,34 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "Collar Chains",
+			"priority": "ABOVE_ARM_LEFT",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "Chains",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "cuffs_chain_collar.png",
+						"condition": [
+							[
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "chained_collar"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"name": "Armbinder chain left back",
 			"priority": "BELOW_BODY",
 			"points": "static",
@@ -436,6 +464,495 @@
 									"bone": "leg_r",
 									"operator": ">",
 									"value": -28
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Wrist ankle chain left back",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "Chains",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "wrist_chains_ankles_r_closed.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "wristToAnkles"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<=",
+									"value": 5
+								},
+								{
+									"bone": "leg_l",
+									"operator": ">",
+									"value": -1
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_chains_ankles_r_spread_slightly.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "wristToAnkles"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<=",
+									"value": -1
+								},
+								{
+									"bone": "leg_l",
+									"operator": ">",
+									"value": -8
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_chains_ankles_r_spread.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "wristToAnkles"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<=",
+									"value": -8
+								},
+								{
+									"bone": "leg_l",
+									"operator": ">",
+									"value": -17
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_chains_ankles_r_spread_wide.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "wristToAnkles"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<=",
+									"value": -17
+								},
+								{
+									"bone": "leg_l",
+									"operator": ">",
+									"value": -26
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_chains_ankles_r_closed.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "wristToAnkles"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<=",
+									"value": 5
+								},
+								{
+									"bone": "leg_l",
+									"operator": ">",
+									"value": -1
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Wrist ankle chain right back",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "Chains",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "wrist_chains_ankles_l_closed.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "wristToAnkles"
+								},
+								{
+									"bone": "leg_r",
+									"operator": "<=",
+									"value": 5
+								},
+								{
+									"bone": "leg_r",
+									"operator": ">",
+									"value": -1
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_chains_ankles_l_spread_slightly.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "wristToAnkles"
+								},
+								{
+									"bone": "leg_r",
+									"operator": "<=",
+									"value": -1
+								},
+								{
+									"bone": "leg_r",
+									"operator": ">",
+									"value": -8
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_chains_ankles_l_spread.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "wristToAnkles"
+								},
+								{
+									"bone": "leg_r",
+									"operator": "<=",
+									"value": -8
+								},
+								{
+									"bone": "leg_r",
+									"operator": ">",
+									"value": -17
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_chains_ankles_l_spread_wide.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "wristToAnkles"
+								},
+								{
+									"bone": "leg_r",
+									"operator": "<=",
+									"value": -17
+								},
+								{
+									"bone": "leg_r",
+									"operator": ">",
+									"value": -26
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Wrist ankle chain left front",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "Chains",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "wrist_chains_ankles_lf_closed.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "wristToAnkles"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<=",
+									"value": 5
+								},
+								{
+									"bone": "leg_l",
+									"operator": ">",
+									"value": -1
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_chains_ankles_lf_spread_slightly.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "wristToAnkles"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<=",
+									"value": -1
+								},
+								{
+									"bone": "leg_l",
+									"operator": ">",
+									"value": -8
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_chains_ankles_lf_spread.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "wristToAnkles"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<=",
+									"value": -8
+								},
+								{
+									"bone": "leg_l",
+									"operator": ">",
+									"value": -17
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_chains_ankles_lf_spread_wide.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "wristToAnkles"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<=",
+									"value": -17
+								},
+								{
+									"bone": "leg_l",
+									"operator": ">",
+									"value": -26
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Wrist ankle chain right front",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "Chains",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "wrist_chains_ankles_rf_closed.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "wristToAnkles"
+								},
+								{
+									"bone": "leg_r",
+									"operator": "<=",
+									"value": 5
+								},
+								{
+									"bone": "leg_r",
+									"operator": ">",
+									"value": -1
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_chains_ankles_rf_spread_slightly.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "wristToAnkles"
+								},
+								{
+									"bone": "leg_r",
+									"operator": "<=",
+									"value": -1
+								},
+								{
+									"bone": "leg_r",
+									"operator": ">",
+									"value": -8
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_chains_ankles_rf_spread.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "wristToAnkles"
+								},
+								{
+									"bone": "leg_r",
+									"operator": "<=",
+									"value": -8
+								},
+								{
+									"bone": "leg_r",
+									"operator": ">",
+									"value": -17
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_chains_ankles_rf_spread_wide.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "wristToAnkles"
+								},
+								{
+									"bone": "leg_r",
+									"operator": "<=",
+									"value": -17
+								},
+								{
+									"bone": "leg_r",
+									"operator": ">",
+									"value": -26
 								}
 							]
 						]

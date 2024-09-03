@@ -148,36 +148,6 @@ DefineAsset({
 						},
 					},
 				},
-				{
-					id: 'chained_collar',
-					name: 'Chained to a collar',
-					properties: {
-						attributes: {
-							requires: [
-								'Collar_front_ring',
-							],
-						},
-						poseLimits: {
-							arms: {
-								position: 'front',
-								rotation: 'down',
-								fingers: 'fist',
-							},
-							bones: {
-								arm_r: 95,
-								arm_l: 95,
-								elbow_r: 128,
-								elbow_l: 128,
-							},
-						},
-						stateFlags: {
-							provides: ['chain'],
-						},
-						effects: {
-							blockHands: true,
-						},
-					},
-				},
 			],
 		},
 	},
@@ -197,14 +167,6 @@ DefineAsset({
 				editedBy: 'ClaudiaMia',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
-			{
-				part: 'Collar chain',
-				source: 'Self-Made',
-				copyrightHolder: 'Sandrine',
-				editedBy: 'Sandrine',
-				license: 'Pandora-Use-Only-v1-or-later',
-			},
-
 		],
 	},
 });
