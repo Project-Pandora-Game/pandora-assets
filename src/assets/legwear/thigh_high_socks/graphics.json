@@ -23,6 +23,21 @@
 								}
 							]
 						]
+					},
+					{
+						"image": "socks_footless.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "feet",
+									"operator": "=",
+									"value": "footless"
+								}
+							]
+						]
 					}
 				]
 			}
@@ -137,6 +152,21 @@
 							[
 								{
 									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "socks_back_footless.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "feet",
+									"operator": "=",
+									"value": "footless"
 								}
 							]
 						]
@@ -257,6 +287,11 @@
 								},
 								{
 									"view": "back"
+								},
+								{
+									"module": "feet",
+									"operator": "=",
+									"value": "standard"
 								}
 							]
 						]

@@ -8,6 +8,23 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
+	modules: {
+		feet: {
+			type: 'typed',
+			name: 'Feet',
+			variants: [
+				{
+					id: 'standard',
+					name: 'Standard',
+					default: true,
+				},
+				{
+					id: 'footless',
+					name: 'Footless',
+				},
+			],
+		},
+	},
 	// size:600, y:763, centered
 	preview: 'preview.png',
 	attributes: {
