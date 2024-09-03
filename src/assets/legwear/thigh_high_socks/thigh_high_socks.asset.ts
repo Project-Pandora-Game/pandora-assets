@@ -53,6 +53,21 @@ DefineAsset({
 				},
 			],
 		},
+		feet: {
+			type: 'typed',
+			name: 'Feet',
+			variants: [
+				{
+					id: 'standard',
+					name: 'Standard',
+					default: true,
+				},
+				{
+					id: 'footless',
+					name: 'Footless',
+				},
+			],
+		},
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
@@ -66,6 +81,13 @@ DefineAsset({
 				copyrightHolder: 'Izzie Button',
 				editedBy: 'ClaudiaMia',
 				license: 'CC BY-SA',
+			},
+			{
+				part: 'feet',
+				source: 'https://www.flickr.com/photos/48385543@N02/25662412406',
+				copyrightHolder: 'Izzi Button',
+				editedBy: 'Sandrine',
+				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
 	},
