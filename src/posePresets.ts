@@ -594,7 +594,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					},
 					arms: {
 						position: 'front',
-						rotation: 'forward',
+						rotation: 'up',
 						fingers: 'fist',
 					},
 				},
