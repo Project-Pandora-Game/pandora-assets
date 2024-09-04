@@ -13,7 +13,7 @@ DefineAsset({
 	attributes: {
 		provides: [
 			'Clothing',
-			'Legwear',
+			'Clothing_lower',
 		],
 	},
 	modules: {
