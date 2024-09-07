@@ -43,13 +43,69 @@
 				"image": "",
 				"overrides": [
 					{
-						"image": "cuffs_chain_collar.png",
+						"image": "wrist_chains_collar.png",
 						"condition": [
 							[
 								{
 									"module": "chains",
 									"operator": "=",
 									"value": "chained_collar"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Reverse prayer front",
+			"priority": "ABOVE_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "Chains",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "wrist_chains_collar_prayer_front.png",
+						"condition": [
+							[
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "reverse_prayer"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Reverse prayer back",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "Chains",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "wrist_chains_collar_prayer_back.png",
+						"condition": [
+							[
+								{
+									"module": "chains",
+									"operator": "=",
+									"value": "reverse_prayer"
 								}
 							]
 						]

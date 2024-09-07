@@ -66,6 +66,41 @@ DefineAsset({
 					},
 				},
 				{
+					id: 'reverse_prayer',
+					name: 'Reverse prayer',
+					switchMessage: 'SOURCE_CHARACTER chains the cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE collar in a strict reverse prayer position.',
+					properties: {
+						attributes: {
+							requires: [
+								'Collar_front_ring',
+								'Wrist_cuffs_chainable',
+							],
+						},
+						poseLimits: {
+							arms: {
+								position: 'back',
+								rotation: 'forward',
+								fingers: 'fist',
+							},
+							bones: {
+								arm_l: 100,
+								arm_r: 100,
+								elbow_l: 150,
+								elbow_r: 151,
+							},
+						},
+						stateFlags: {
+							provides: [
+								'Restraint',
+								'Restraint_arms',
+							],
+						},
+						effects: {
+							blockHands: true,
+						},
+					},
+				},
+				{
 					id: 'beltChain',
 					name: 'Belt Chains',
 					switchMessage: 'SOURCE_CHARACTER connected the cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE belt with short chains.',

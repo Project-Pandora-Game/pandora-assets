@@ -148,6 +148,29 @@ DefineAsset({
 						},
 					},
 				},
+				{
+					id: 'reverse_prayer',
+					name: 'Reverse prayer',
+					properties: {
+						effects: {
+							blockHands: true,
+						},
+						poseLimits: {
+							arms: {
+								position: 'back',
+							},
+							bones: {
+								arm_r: 100,
+								arm_l: 100,
+								elbow_r: 130,
+								elbow_l: 130,
+							},
+						},
+						stateFlags: {
+							provides: ['chain'],
+						},
+					},
+				},
 			],
 		},
 	},

@@ -90,6 +90,18 @@
 								}
 							]
 						]
+					},
+					{
+						"image": "leathercuffs_chain_reverse_prayer.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "reverse_prayer"
+								}
+							]
+						]
 					}
 				]
 			}
