@@ -74,9 +74,9 @@ DefineAsset({
 				},
 			],
 		},
-		bossomState: {
+		bustState: {
 			type: 'typed',
-			name: 'Bossom State',
+			name: 'Bust State',
 			variants: [
 				{
 					id: 'normal',
