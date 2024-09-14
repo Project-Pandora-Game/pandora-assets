@@ -17,6 +17,7 @@ const boneDefinitionImpl = {
 	},
 	leg_l: {
 		pos: [521, 735],
+		uiPositionOffset: [24, -28],
 		mirror: 'leg_r',
 		baseRotation: 90,
 		type: 'pose',
@@ -27,7 +28,10 @@ const boneDefinitionImpl = {
 	waist: { type: 'body' },
 	hips: { type: 'body' },
 	tiptoeing: { type: 'pose' },
-	character_rotation: { type: 'pose' },
+	character_rotation: {
+		baseRotation: -90,
+		type: 'pose',
+	},
 } as const satisfies Immutable<Record<string, BoneDefinitionCompressed>>;
 
 type Key = keyof typeof boneDefinitionImpl;
