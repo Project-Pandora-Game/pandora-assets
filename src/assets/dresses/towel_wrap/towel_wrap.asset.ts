@@ -6,7 +6,7 @@ DefineAsset({
 	colorization: {
 		towel: {
 			name: 'Towel',
-			default: '#222222',
+			default: '#EEEEEE',
 		},
 	},
 	// size:370, y:556, centered
