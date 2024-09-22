@@ -12,7 +12,7 @@
 			"mirror": 0,
 			"colorizationKey": "towel",
 			"image": {
-				"image": "towel_wrap_front.png",
+				"image": "",
 				"overrides": [
 					{
 						"image": "towel_wrap_front_pulled_up.png",
@@ -22,6 +22,62 @@
 									"module": "towelStateFront",
 									"operator": "=",
 									"value": "up"
+								},
+								{
+									"bone": "breasts",
+									"operator": "<",
+									"value": 70
+								}
+							]
+						]
+					},
+					{
+						"image": "towel_wrap_front_pulled_up_xl.png",
+						"condition": [
+							[
+								{
+									"module": "towelStateFront",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">=",
+									"value": 70
+								}
+							]
+						]
+					},
+					{
+						"image": "towel_wrap_front_xl.png",
+						"condition": [
+							[
+								{
+									"module": "towelStateFront",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">=",
+									"value": 70
+								}
+							]
+						]
+					},
+					{
+						"image": "towel_wrap_front.png",
+						"condition": [
+							[
+								{
+									"module": "towelStateFront",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"bone": "breasts",
+									"operator": "<",
+									"value": 70
 								}
 							]
 						]
@@ -40,7 +96,7 @@
 			"mirror": 0,
 			"colorizationKey": "towel",
 			"image": {
-				"image": "towel_wrap_back.png",
+				"image": "",
 				"overrides": [
 					{
 						"image": "towel_wrap_back_pulled_up.png",
@@ -50,6 +106,62 @@
 									"module": "towelStateBack",
 									"operator": "=",
 									"value": "up"
+								},
+								{
+									"bone": "breasts",
+									"operator": "<",
+									"value": 70
+								}
+							]
+						]
+					},
+					{
+						"image": "towel_wrap_back_pulled_up_xl.png",
+						"condition": [
+							[
+								{
+									"module": "towelStateBack",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">=",
+									"value": 70
+								}
+							]
+						]
+					},
+					{
+						"image": "towel_wrap_back_xl.png",
+						"condition": [
+							[
+								{
+									"module": "towelStateBack",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">=",
+									"value": 70
+								}
+							]
+						]
+					},
+					{
+						"image": "towel_wrap_back.png",
+						"condition": [
+							[
+								{
+									"module": "towelStateBack",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"bone": "breasts",
+									"operator": "<",
+									"value": 70
 								}
 							]
 						]
