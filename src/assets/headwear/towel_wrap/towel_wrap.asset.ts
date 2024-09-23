@@ -30,7 +30,7 @@ DefineAsset({
 			{
 				part: 'towel',
 				source: 'Self-Made',
-				copyrightHolder: 'Tajo',
+				copyrightHolder: 'Taja',
 				editedBy: 'Sandrine',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
