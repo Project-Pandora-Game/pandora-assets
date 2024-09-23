@@ -7,8 +7,12 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "front",
-			"priority": "ABOVE_ARM_LEFT",
+			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"bodyarm"
+			],
 			"mirror": 0,
 			"colorizationKey": "suit",
 			"image": {
@@ -21,9 +25,32 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"name": "border front",
+			"name": "front",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "body",
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "suit",
+			"image": {
+				"image": "latex_catsuit_base_front.png",
+				"overrides": []
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "border front",
+			"priority": "ABOVE_BODY",
+			"points": "body",
+			"pointType": [
+				"body",
+				"bodyarm"
+			],
 			"mirror": 0,
 			"colorizationKey": "border",
 			"image": {
@@ -36,10 +63,52 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "border front",
+			"priority": "ABOVE_ARM_LEFT",
+			"points": "body",
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "border",
+			"image": {
+				"image": "latex_catsuit_border_front.png",
+				"overrides": []
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "shine front",
+			"priority": "ABOVE_BODY",
+			"points": "body",
+			"pointType": [
+				"body",
+				"bodyarm"
+			],
+			"mirror": 0,
+			"colorizationKey": "shine",
+			"image": {
+				"image": "latex_catsuit_highlights_front.png",
+				"overrides": []
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"name": "shine front",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "body",
-			"mirror": 0,
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "shine",
 			"image": {
 				"image": "latex_catsuit_highlights_front.png",
