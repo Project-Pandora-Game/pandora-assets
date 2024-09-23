@@ -25,11 +25,10 @@ DefineAsset({
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
-				part: 'textures',
-				source: 'https://www.flickr.com/photos/48385543@N02/25662412406',
-				copyrightHolder: 'Izzie Button',
+				source: 'Self-Made',
+				copyrightHolder: 'ClaudiaMia',
 				editedBy: 'SandrinePDR',
-				license: 'CC BY-SA',
+				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
 	},
