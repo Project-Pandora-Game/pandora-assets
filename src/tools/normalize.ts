@@ -100,6 +100,11 @@ async function Run() {
 		}
 	}
 
+	if (maxR === 0xFF && maxG === 0xFF && maxB === 0xFF) {
+		logger.warning('The image(s) cannot be whitened further without loosing color precision. Nothing to do.');
+		return;
+	}
+
 	logger.alert('');
 	logger.alert(`Tint: ${ColorsToTint(maxR, maxG, maxB)}`);
 	logger.alert('');
