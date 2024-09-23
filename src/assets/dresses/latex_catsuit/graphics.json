@@ -54,6 +54,10 @@
 			"name": "back",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"bodyarm"
+			],
 			"mirror": 0,
 			"colorizationKey": "suit",
 			"image": {
@@ -67,12 +71,16 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "back",
-			"priority": "BELOW_BODY",
+			"priority": "BELOW_ARM_LEFT",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "border",
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "suit",
 			"image": {
-				"image": "latex_catsuit_deep_back.png",
+				"image": "latex_catsuit_base_back.png",
 				"overrides": []
 			}
 		},
@@ -84,7 +92,30 @@
 			"name": "border back",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"bodyarm"
+			],
 			"mirror": 0,
+			"colorizationKey": "border",
+			"image": {
+				"image": "latex_catsuit_border_back.png",
+				"overrides": []
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "border back",
+			"priority": "BELOW_ARM_LEFT",
+			"points": "body",
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "border",
 			"image": {
 				"image": "latex_catsuit_border_back.png",
@@ -99,7 +130,30 @@
 			"name": "shine back",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"bodyarm"
+			],
 			"mirror": 0,
+			"colorizationKey": "shine",
+			"image": {
+				"image": "latex_catsuit_highlights_back.png",
+				"overrides": []
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "shine back",
+			"priority": "BELOW_ARM_LEFT",
+			"points": "body",
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "shine",
 			"image": {
 				"image": "latex_catsuit_highlights_back.png",

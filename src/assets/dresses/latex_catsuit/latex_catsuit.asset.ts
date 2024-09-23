@@ -21,7 +21,8 @@ DefineAsset({
 		},
 	},
 	// size:460, y:364, centered
-	// preview: 'preview.png',
+	//preview: 'preview.png',
+	preview: null,
 	attributes: {
 		provides: [
 			'Clothing',
@@ -37,7 +38,6 @@ DefineAsset({
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
-				part: 'rug',
 				source: 'Self-Made',
 				copyrightHolder: 'Curry',
 				editedBy: 'SandrinePDR',
