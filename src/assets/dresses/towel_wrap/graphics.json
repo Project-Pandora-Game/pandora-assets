@@ -7,7 +7,7 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "breasts",
-			"priority": "BELOW_BREASTS",
+			"priority": "ABOVE_BODY",
 			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "towel",
