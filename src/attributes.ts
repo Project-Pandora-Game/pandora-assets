@@ -360,6 +360,11 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		description: 'A pair of ankle cuffs',
 		parentAttributes: ['Restraint_legs'],
 	},
+	Thigh_cuffs: {
+		name: 'Thigh cuffs',
+		description: 'A pair of thigh cuffs',
+		parentAttributes: ['Restraint_legs'],
+	},
 	Restraint_eyes: {
 		name: 'Sight restraint',
 		description: 'An item that decreases the ability to see',
