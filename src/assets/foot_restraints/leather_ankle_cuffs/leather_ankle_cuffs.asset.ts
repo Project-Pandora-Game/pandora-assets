@@ -110,6 +110,55 @@ DefineAsset({
 						},
 					},
 				},
+				{
+					id: 'short',
+					name: 'Short Chain',
+					properties: {
+						poseLimits: {
+							bones: {
+								leg_r: [[0, 2]],
+								leg_l: [[0, 2]],
+							},
+						},
+						stateFlags: {
+							provides: ['chain'],
+						},
+					},
+				},
+				{
+					id: 'clipped',
+					name: 'Clipped together',
+					properties: {
+						poseLimits: {
+							options: [
+								{
+									legs: 'standing',
+									bones: {
+										leg_r: 2,
+										leg_l: 2,
+									},
+								},
+								{
+									legs: 'sitting',
+									bones: {
+										leg_r: 2,
+										leg_l: 2,
+									},
+								},
+								{
+									legs: 'kneeling',
+									bones: {
+										leg_r: 6,
+										leg_l: 6,
+									},
+								},
+							],
+						},
+						stateFlags: {
+							provides: ['chain'],
+						},
+					},
+				},
 			],
 		},
 		barWidth: {
