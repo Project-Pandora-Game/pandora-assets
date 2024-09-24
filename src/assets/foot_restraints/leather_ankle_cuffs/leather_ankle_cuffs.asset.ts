@@ -139,6 +139,13 @@ DefineAsset({
 									},
 								},
 								{
+									legs: 'sitting',
+									bones: {
+										leg_r: 2,
+										leg_l: 2,
+									},
+								},
+								{
 									legs: 'kneeling',
 									bones: {
 										leg_r: 6,
