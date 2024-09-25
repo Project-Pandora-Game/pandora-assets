@@ -176,21 +176,6 @@
 									"operator": "=",
 									"value": 0
 								}
-							],
-							[
-								{
-									"legs": "kneeling"
-								},
-								{
-									"module": "cuffState",
-									"operator": "=",
-									"value": "normal"
-								},
-								{
-									"bone": "leg_l",
-									"operator": "=",
-									"value": -7
-								}
 							]
 						]
 					},
@@ -280,6 +265,26 @@
 									"bone": "leg_l",
 									"operator": "=",
 									"value": 4
+								}
+							]
+						]
+					},
+					{
+						"image": "leatherthighcuffs_chain_kneeling_short.png",
+						"condition": [
+							[
+								{
+									"legs": "kneeling"
+								},
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "=",
+									"value": -7
 								}
 							]
 						]
