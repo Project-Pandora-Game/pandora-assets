@@ -69,12 +69,20 @@ DefineAsset({
 						poseLimits: {
 							options: [
 								{
+									legs: 'sitting',
+									bones: {
+										leg_l: 4,
+										leg_r: 4,
+									},
+								},
+								{
 									bones: {
 										leg_r: 0,
 										leg_l: 0,
 									},
 								},
 								{
+									legs: 'standing',
 									bones: {
 										leg_r: -3,
 										leg_l: -3,
@@ -102,6 +110,7 @@ DefineAsset({
 									},
 								},
 								{
+									legs: 'standing',
 									bones: {
 										leg_r: [[2, 6]],
 										leg_l: [[2, 6]],
