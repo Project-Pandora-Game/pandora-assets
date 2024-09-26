@@ -6,13 +6,13 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"name": "Panties",
+			"name": "NecklaceFront",
 			"priority": "ABOVE_BODY",
-			"points": "body",
+			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "pearls",
 			"image": {
-				"image": "pearl_panties_front.png",
+				"image": "pearl_necklace_front.png",
 				"overrides": []
 			}
 		},
@@ -21,13 +21,13 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"name": "PantiesBack",
+			"name": "NecklaceBack",
 			"priority": "BELOW_BODY",
-			"points": "body",
+			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "pearls",
 			"image": {
-				"image": "pearl_panties_back.png",
+				"image": "pearl_necklace_back.png",
 				"overrides": []
 			}
 		},
@@ -36,13 +36,28 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"name": "LargePearls",
+			"name": "LargePearlsFront",
 			"priority": "ABOVE_BODY",
-			"points": "body",
+			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "largePearls",
 			"image": {
-				"image": "pearl_panties_front_large.png",
+				"image": "pearl_necklace_front_large.png",
+				"overrides": []
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "LargePearlsBack",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "largePearls",
+			"image": {
+				"image": "pearl_necklace_back_large.png",
 				"overrides": []
 			}
 		}
