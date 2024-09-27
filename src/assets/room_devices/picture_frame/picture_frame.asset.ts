@@ -73,10 +73,6 @@ DefineRoomDeviceAsset({
 					id: 'anime1',
 					name: 'Anime A',
 				},
-				{
-					id: 'tandt',
-					name: 'Towel & Towel',
-				},
 			],
 		},
 		size: {
