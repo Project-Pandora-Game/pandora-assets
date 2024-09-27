@@ -13,7 +13,7 @@ DefineAsset({
 		},
 	},
 	// size:320, y:583, centered
-	preview: null, //'preview.png',
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Restraint',
