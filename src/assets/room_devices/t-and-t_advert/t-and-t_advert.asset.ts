@@ -4,7 +4,7 @@ DefineRoomDeviceAsset({
 	colorization: {
 		passe_partout: {
 			name: 'Passe-partout',
-			default: '#ffffff',
+			default: '#FFFFFF',
 		},
 		background: {
 			name: 'Background',
@@ -25,7 +25,7 @@ DefineRoomDeviceAsset({
 	modules: {
 		size: {
 			type: 'typed',
-			name: 'Frame size',
+			name: 'Advert size',
 			staticConfig: { slotName: null },
 			variants: [
 				{
