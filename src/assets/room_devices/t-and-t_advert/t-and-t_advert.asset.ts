@@ -12,7 +12,7 @@ DefineRoomDeviceAsset({
 		},
 		slogan: {
 			name: 'Slogan',
-			default: '#EF9A9A',
+			default: '#AD3B3B',
 		},
 		worship: {
 			name: 'Worship sponsors',
