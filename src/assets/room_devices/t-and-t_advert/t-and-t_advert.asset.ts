@@ -1,84 +1,28 @@
 DefineRoomDeviceAsset({
-	name: 'Picture Frame',
+	name: 'Towel & Towel advertisement',
 	size: 'large',
 	colorization: {
-		frame: {
-			name: 'Frame',
-			default: '#ffffff',
-		},
 		passe_partout: {
 			name: 'Passe-partout',
 			default: '#ffffff',
 		},
+		background: {
+			name: 'Background',
+			default: '#FEF9F3',
+		},
+		slogan: {
+			name: 'Slogan',
+			default: '#EF9A9A',
+		},
+		worship: {
+			name: 'Worship sponsors',
+			default: '#283593',
+		},
 	},
 	staticAttributes: ['Wall'],
-	preview: 'picture_preview.png',
+	preview: 'advert_preview.png',
 	slots: {},
 	modules: {
-		frame: {
-			type: 'typed',
-			name: 'Frame',
-			staticConfig: { slotName: null },
-			variants: [
-				{
-					id: 'frame1',
-					name: 'Frame A',
-					default: true,
-				},
-				{
-					id: 'frame2',
-					name: 'Frame B',
-				},
-			],
-		},
-		pp: {
-			type: 'typed',
-			name: 'Passe-partout',
-			staticConfig: { slotName: null },
-			variants: [
-				{
-					id: 'pp1',
-					name: 'Small',
-					default: true,
-				},
-				{
-					id: 'pp2',
-					name: 'Medium',
-				},
-			],
-		},
-		picture: {
-			type: 'typed',
-			name: 'Picture',
-			staticConfig: { slotName: null },
-			variants: [
-				{
-					id: 'pandora',
-					name: 'Pandora',
-					default: true,
-				},
-				{
-					id: 'mistress',
-					name: 'Mistress',
-				},
-				{
-					id: 'heel',
-					name: 'Heel',
-				},
-				{
-					id: 'fruit',
-					name: 'Fruit',
-				},
-				{
-					id: 'anime1',
-					name: 'Anime A',
-				},
-				{
-					id: 'tandt',
-					name: 'Towel & Towel',
-				},
-			],
-		},
 		size: {
 			type: 'typed',
 			name: 'Frame size',
@@ -108,16 +52,12 @@ DefineRoomDeviceAsset({
 		{
 			type: 'sprite',
 			image: '',
+			colorizationKey: 'background',
 			imageOverrides: [
 				{
 					image: 't-and-t_background.png',
 					condition: [
 						[
-							{
-								module: 'picture',
-								operator: '=',
-								value: 'tandt',
-							},
 							{
 								module: 'size',
 								operator: '=',
@@ -131,11 +71,6 @@ DefineRoomDeviceAsset({
 					condition: [
 						[
 							{
-								module: 'picture',
-								operator: '=',
-								value: 'tandt',
-							},
-							{
 								module: 'size',
 								operator: '=',
 								value: 'medium',
@@ -148,10 +83,19 @@ DefineRoomDeviceAsset({
 					condition: [
 						[
 							{
-								module: 'picture',
+								module: 'size',
 								operator: '=',
-								value: 'tandt',
+								value: 'small',
 							},
+						],
+					],
+				},
+			],
+			offsetOverrides: [
+				{
+					offset: { x: 525, y: 300 },
+					condition: [
+						[
 							{
 								module: 'size',
 								operator: '=',
@@ -161,14 +105,27 @@ DefineRoomDeviceAsset({
 					],
 				},
 				{
-					image: 't-and-t_towel.png',
+					offset: { x: 350, y: 150 },
 					condition: [
 						[
 							{
-								module: 'picture',
+								module: 'size',
 								operator: '=',
-								value: 'tandt',
+								value: 'medium',
 							},
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'sprite',
+			image: '',
+			imageOverrides: [
+				{
+					image: 't-and-t_towel.png',
+					condition: [
+						[
 							{
 								module: 'size',
 								operator: '=',
@@ -182,11 +139,6 @@ DefineRoomDeviceAsset({
 					condition: [
 						[
 							{
-								module: 'picture',
-								operator: '=',
-								value: 'tandt',
-							},
-							{
 								module: 'size',
 								operator: '=',
 								value: 'medium',
@@ -199,10 +151,19 @@ DefineRoomDeviceAsset({
 					condition: [
 						[
 							{
-								module: 'picture',
+								module: 'size',
 								operator: '=',
-								value: 'tandt',
+								value: 'small',
 							},
+						],
+					],
+				},
+			],
+			offsetOverrides: [
+				{
+					offset: { x: 525, y: 300 },
+					condition: [
+						[
 							{
 								module: 'size',
 								operator: '=',
@@ -212,14 +173,28 @@ DefineRoomDeviceAsset({
 					],
 				},
 				{
-					image: 'pandora.png',
+					offset: { x: 350, y: 150 },
 					condition: [
 						[
 							{
-								module: 'picture',
+								module: 'size',
 								operator: '=',
-								value: 'pandora',
+								value: 'medium',
 							},
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'sprite',
+			image: '',
+			colorizationKey: 'slogan',
+			imageOverrides: [
+				{
+					image: 't-and-t_slogan.png',
+					condition: [
+						[
 							{
 								module: 'size',
 								operator: '=',
@@ -229,14 +204,9 @@ DefineRoomDeviceAsset({
 					],
 				},
 				{
-					image: 'pandora.png@700x1000',
+					image: 't-and-t_slogan.png@700x1000',
 					condition: [
 						[
-							{
-								module: 'picture',
-								operator: '=',
-								value: 'pandora',
-							},
 							{
 								module: 'size',
 								operator: '=',
@@ -246,14 +216,23 @@ DefineRoomDeviceAsset({
 					],
 				},
 				{
-					image: 'pandora.png@350x500',
+					image: 't-and-t_slogan.png@350x500',
 					condition: [
 						[
 							{
-								module: 'picture',
+								module: 'size',
 								operator: '=',
-								value: 'pandora',
+								value: 'small',
 							},
+						],
+					],
+				},
+			],
+			offsetOverrides: [
+				{
+					offset: { x: 525, y: 300 },
+					condition: [
+						[
 							{
 								module: 'size',
 								operator: '=',
@@ -263,14 +242,28 @@ DefineRoomDeviceAsset({
 					],
 				},
 				{
-					image: 'mistress.png',
+					offset: { x: 350, y: 150 },
 					condition: [
 						[
 							{
-								module: 'picture',
+								module: 'size',
 								operator: '=',
-								value: 'mistress',
+								value: 'medium',
 							},
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'sprite',
+			image: '',
+			colorizationKey: 'worship',
+			imageOverrides: [
+				{
+					image: 't-and-t_worship.png',
+					condition: [
+						[
 							{
 								module: 'size',
 								operator: '=',
@@ -280,14 +273,9 @@ DefineRoomDeviceAsset({
 					],
 				},
 				{
-					image: 'mistress.png@700x1000',
+					image: 't-and-t_worship.png@700x1000',
 					condition: [
 						[
-							{
-								module: 'picture',
-								operator: '=',
-								value: 'mistress',
-							},
 							{
 								module: 'size',
 								operator: '=',
@@ -297,167 +285,9 @@ DefineRoomDeviceAsset({
 					],
 				},
 				{
-					image: 'mistress.png@350x500',
+					image: 't-and-t_worship.png@350x500',
 					condition: [
 						[
-							{
-								module: 'picture',
-								operator: '=',
-								value: 'mistress',
-							},
-							{
-								module: 'size',
-								operator: '=',
-								value: 'small',
-							},
-						],
-					],
-				},
-				{
-					image: 'heel.png',
-					condition: [
-						[
-							{
-								module: 'picture',
-								operator: '=',
-								value: 'heel',
-							},
-							{
-								module: 'size',
-								operator: '=',
-								value: 'large',
-							},
-						],
-					],
-				},
-				{
-					image: 'heel.png@700x1000',
-					condition: [
-						[
-							{
-								module: 'picture',
-								operator: '=',
-								value: 'heel',
-							},
-							{
-								module: 'size',
-								operator: '=',
-								value: 'medium',
-							},
-						],
-					],
-				},
-				{
-					image: 'heel.png@350x500',
-					condition: [
-						[
-							{
-								module: 'picture',
-								operator: '=',
-								value: 'heel',
-							},
-							{
-								module: 'size',
-								operator: '=',
-								value: 'small',
-							},
-						],
-					],
-				},
-				{
-					image: 'fruits.png',
-					condition: [
-						[
-							{
-								module: 'picture',
-								operator: '=',
-								value: 'fruit',
-							},
-							{
-								module: 'size',
-								operator: '=',
-								value: 'large',
-							},
-						],
-					],
-				},
-				{
-					image: 'fruits.png@700x1000',
-					condition: [
-						[
-							{
-								module: 'picture',
-								operator: '=',
-								value: 'fruit',
-							},
-							{
-								module: 'size',
-								operator: '=',
-								value: 'medium',
-							},
-						],
-					],
-				},
-				{
-					image: 'fruits.png@350x500',
-					condition: [
-						[
-							{
-								module: 'picture',
-								operator: '=',
-								value: 'fruit',
-							},
-							{
-								module: 'size',
-								operator: '=',
-								value: 'small',
-							},
-						],
-					],
-				},
-				{
-					image: 'anime.png',
-					condition: [
-						[
-							{
-								module: 'picture',
-								operator: '=',
-								value: 'anime1',
-							},
-							{
-								module: 'size',
-								operator: '=',
-								value: 'large',
-							},
-						],
-					],
-				},
-				{
-					image: 'anime.png@700x1000',
-					condition: [
-						[
-							{
-								module: 'picture',
-								operator: '=',
-								value: 'anime1',
-							},
-							{
-								module: 'size',
-								operator: '=',
-								value: 'medium',
-							},
-						],
-					],
-				},
-				{
-					image: 'anime.png@350x500',
-					condition: [
-						[
-							{
-								module: 'picture',
-								operator: '=',
-								value: 'anime1',
-							},
 							{
 								module: 'size',
 								operator: '=',
@@ -503,11 +333,6 @@ DefineRoomDeviceAsset({
 					condition: [
 						[
 							{
-								module: 'pp',
-								operator: '=',
-								value: 'pp1',
-							},
-							{
 								module: 'size',
 								operator: '=',
 								value: 'large',
@@ -520,11 +345,6 @@ DefineRoomDeviceAsset({
 					condition: [
 						[
 							{
-								module: 'pp',
-								operator: '=',
-								value: 'pp1',
-							},
-							{
 								module: 'size',
 								operator: '=',
 								value: 'medium',
@@ -536,62 +356,6 @@ DefineRoomDeviceAsset({
 					image: 'passepartout1.png@350x500',
 					condition: [
 						[
-							{
-								module: 'pp',
-								operator: '=',
-								value: 'pp1',
-							},
-							{
-								module: 'size',
-								operator: '=',
-								value: 'small',
-							},
-						],
-					],
-				},
-				{
-					image: 'passepartout2.png',
-					condition: [
-						[
-							{
-								module: 'pp',
-								operator: '=',
-								value: 'pp2',
-							},
-							{
-								module: 'size',
-								operator: '=',
-								value: 'large',
-							},
-						],
-					],
-				},
-				{
-					image: 'passepartout2.png@700x1000',
-					condition: [
-						[
-							{
-								module: 'pp',
-								operator: '=',
-								value: 'pp2',
-							},
-							{
-								module: 'size',
-								operator: '=',
-								value: 'medium',
-							},
-						],
-					],
-				},
-				{
-					image: 'passepartout2.png@350x500',
-					condition: [
-						[
-							{
-								module: 'pp',
-								operator: '=',
-								value: 'pp2',
-							},
 							{
 								module: 'size',
 								operator: '=',
@@ -629,182 +393,19 @@ DefineRoomDeviceAsset({
 			],
 			colorizationKey: 'passe_partout',
 		},
-		{
-			type: 'sprite',
-			image: '',
-			imageOverrides: [
-				{
-					image: 'pictureframe1.png',
-					condition: [
-						[
-							{
-								module: 'frame',
-								operator: '=',
-								value: 'frame1',
-							},
-							{
-								module: 'size',
-								operator: '=',
-								value: 'large',
-							},
-						],
-					],
-				},
-				{
-					image: 'pictureframe1.png@700x1000',
-					condition: [
-						[
-							{
-								module: 'frame',
-								operator: '=',
-								value: 'frame1',
-							},
-							{
-								module: 'size',
-								operator: '=',
-								value: 'medium',
-							},
-						],
-					],
-				},
-				{
-					image: 'pictureframe1.png@350x500',
-					condition: [
-						[
-							{
-								module: 'frame',
-								operator: '=',
-								value: 'frame1',
-							},
-							{
-								module: 'size',
-								operator: '=',
-								value: 'small',
-							},
-						],
-					],
-				},
-				{
-					image: 'pictureframe2.png',
-					condition: [
-						[
-							{
-								module: 'frame',
-								operator: '=',
-								value: 'frame2',
-							},
-							{
-								module: 'size',
-								operator: '=',
-								value: 'large',
-							},
-						],
-					],
-				},
-				{
-					image: 'pictureframe2.png@700x1000',
-					condition: [
-						[
-							{
-								module: 'frame',
-								operator: '=',
-								value: 'frame2',
-							},
-							{
-								module: 'size',
-								operator: '=',
-								value: 'medium',
-							},
-						],
-					],
-				},
-				{
-					image: 'pictureframe2.png@350x500',
-					condition: [
-						[
-							{
-								module: 'frame',
-								operator: '=',
-								value: 'frame2',
-							},
-							{
-								module: 'size',
-								operator: '=',
-								value: 'small',
-							},
-						],
-					],
-				},
-			],
-			offsetOverrides: [
-				{
-					offset: { x: 525, y: 300 },
-					condition: [
-						[
-							{
-								module: 'size',
-								operator: '=',
-								value: 'small',
-							},
-						],
-					],
-				},
-				{
-					offset: { x: 350, y: 150 },
-					condition: [
-						[
-							{
-								module: 'size',
-								operator: '=',
-								value: 'medium',
-							},
-						],
-					],
-				},
-			],
-			colorizationKey: 'frame',
-		},
 	],
 	ownership: {
-		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-		credits: ['ClaudiaMia'],
+		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
+		credits: ['Taja'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
-				part: 'pictures',
+				part: 'Advert',
 				source: 'Self-Made',
-				copyrightHolder: 'ClaudiaMia',
-				editedBy: 'ClaudiaMia',
+				copyrightHolder: 'Taja',
+				editedBy: 'Sandrine',
 				license: 'Pandora-Use-Only-v1-or-later',
-			},
-			{
-				part: 'mistress picture',
-				source: 'https://www.flickr.com/photos/99576374@N02/49016779026/',
-				copyrightHolder: 'Tom Marvel',
-				editedBy: 'ClaudiaMia',
-				license: 'CC BY',
-			},
-			{
-				part: 'heel picture',
-				source: 'https://www.flickr.com/photos/aroberts/3387826514',
-				copyrightHolder: 'Andy Roberts',
-				editedBy: 'ClaudiaMia',
-				license: 'CC BY',
-			},
-			{
-				part: 'anime picture',
-				source: 'https://www.flickr.com/photos/centella_x/8973612302/',
-				copyrightHolder: 'Centella.',
-				editedBy: 'ClaudiaMia',
-				license: 'CC BY',
-			},
-			{
-				part: 'picture frame2',
-				source: 'https://www.flickr.com/photos/34651674@N07/6350817003/',
-				copyrightHolder: 'Stephen.',
-				editedBy: 'ClaudiaMia',
-				license: 'CC BY',
 			},
 		],
 	},
