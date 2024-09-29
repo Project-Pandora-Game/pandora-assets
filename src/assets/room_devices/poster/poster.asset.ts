@@ -1,21 +1,21 @@
 DefineRoomDeviceAsset({
-	name: 'Towel & Towel advertisement',
+	name: 'Poster',
 	size: 'large',
 	colorization: {
 		passe_partout: {
 			name: 'Passe-partout',
 			default: '#FFFFFF',
 		},
-		background: {
-			name: 'Background',
+		background_1: {
+			name: 'Background 1',
 			default: '#FEF9F3',
 		},
-		slogan: {
-			name: 'Slogan',
+		color_1: {
+			name: 'Color 1',
 			default: '#AD3B3B',
 		},
-		worship: {
-			name: 'Worship sponsors',
+		color_2: {
+			name: 'Color 2',
 			default: '#283593',
 		},
 	},
@@ -25,7 +25,7 @@ DefineRoomDeviceAsset({
 	modules: {
 		size: {
 			type: 'typed',
-			name: 'Advert size',
+			name: 'Poster size',
 			staticConfig: { slotName: null },
 			variants: [
 				{
@@ -43,6 +43,18 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		posterType: {
+			type: 'typed',
+			name: 'Poster type',
+			staticConfig: { slotName: null },
+			variants: [
+				{
+					id: 'TowelAndTowelAdvert',
+					name: 'Towel and Towel advert',
+					default: true,
+				},
+			],
+		},
 	},
 	pivot: {
 		x: 700,
@@ -52,7 +64,7 @@ DefineRoomDeviceAsset({
 		{
 			type: 'sprite',
 			image: '',
-			colorizationKey: 'background',
+			colorizationKey: 'background_1',
 			imageOverrides: [
 				{
 					image: 't-and-t_background.png',
@@ -62,6 +74,11 @@ DefineRoomDeviceAsset({
 								module: 'size',
 								operator: '=',
 								value: 'large',
+							},
+							{
+								module: 'posterType',
+								operator: '=',
+								value: 'TowelAndTowelAdvert',
 							},
 						],
 					],
@@ -75,6 +92,11 @@ DefineRoomDeviceAsset({
 								operator: '=',
 								value: 'medium',
 							},
+							{
+								module: 'posterType',
+								operator: '=',
+								value: 'TowelAndTowelAdvert',
+							},
 						],
 					],
 				},
@@ -86,6 +108,11 @@ DefineRoomDeviceAsset({
 								module: 'size',
 								operator: '=',
 								value: 'small',
+							},
+							{
+								module: 'posterType',
+								operator: '=',
+								value: 'TowelAndTowelAdvert',
 							},
 						],
 					],
@@ -131,6 +158,11 @@ DefineRoomDeviceAsset({
 								operator: '=',
 								value: 'large',
 							},
+							{
+								module: 'posterType',
+								operator: '=',
+								value: 'TowelAndTowelAdvert',
+							},
 						],
 					],
 				},
@@ -142,6 +174,11 @@ DefineRoomDeviceAsset({
 								module: 'size',
 								operator: '=',
 								value: 'medium',
+							},
+							{
+								module: 'posterType',
+								operator: '=',
+								value: 'TowelAndTowelAdvert',
 							},
 						],
 					],
@@ -155,6 +192,11 @@ DefineRoomDeviceAsset({
 								operator: '=',
 								value: 'small',
 							},
+							{
+								module: 'posterType',
+								operator: '=',
+								value: 'TowelAndTowelAdvert',
+							},
 						],
 					],
 				},
@@ -189,7 +231,7 @@ DefineRoomDeviceAsset({
 		{
 			type: 'sprite',
 			image: '',
-			colorizationKey: 'slogan',
+			colorizationKey: 'color_1',
 			imageOverrides: [
 				{
 					image: 't-and-t_slogan.png',
@@ -199,6 +241,11 @@ DefineRoomDeviceAsset({
 								module: 'size',
 								operator: '=',
 								value: 'large',
+							},
+							{
+								module: 'posterType',
+								operator: '=',
+								value: 'TowelAndTowelAdvert',
 							},
 						],
 					],
@@ -212,6 +259,11 @@ DefineRoomDeviceAsset({
 								operator: '=',
 								value: 'medium',
 							},
+							{
+								module: 'posterType',
+								operator: '=',
+								value: 'TowelAndTowelAdvert',
+							},
 						],
 					],
 				},
@@ -223,6 +275,11 @@ DefineRoomDeviceAsset({
 								module: 'size',
 								operator: '=',
 								value: 'small',
+							},
+							{
+								module: 'posterType',
+								operator: '=',
+								value: 'TowelAndTowelAdvert',
 							},
 						],
 					],
@@ -258,7 +315,7 @@ DefineRoomDeviceAsset({
 		{
 			type: 'sprite',
 			image: '',
-			colorizationKey: 'worship',
+			colorizationKey: 'color_2',
 			imageOverrides: [
 				{
 					image: 't-and-t_worship.png',
@@ -268,6 +325,11 @@ DefineRoomDeviceAsset({
 								module: 'size',
 								operator: '=',
 								value: 'large',
+							},
+							{
+								module: 'posterType',
+								operator: '=',
+								value: 'TowelAndTowelAdvert',
 							},
 						],
 					],
@@ -281,6 +343,11 @@ DefineRoomDeviceAsset({
 								operator: '=',
 								value: 'medium',
 							},
+							{
+								module: 'posterType',
+								operator: '=',
+								value: 'TowelAndTowelAdvert',
+							},
 						],
 					],
 				},
@@ -292,6 +359,11 @@ DefineRoomDeviceAsset({
 								module: 'size',
 								operator: '=',
 								value: 'small',
+							},
+							{
+								module: 'posterType',
+								operator: '=',
+								value: 'TowelAndTowelAdvert',
 							},
 						],
 					],
