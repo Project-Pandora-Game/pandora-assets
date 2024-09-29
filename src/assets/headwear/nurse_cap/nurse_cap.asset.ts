@@ -7,12 +7,12 @@ DefineAsset({
 			name: 'Cap',
 			default: '#FFFFFF',
 		},
-		cross: {
-			name: 'Cross',
-			default: '#FFFFFF',
+		emblem: {
+			name: 'Emblem',
+			default: '#E60005',
 		},
 	},
-	// size:200, y:182, centered
+	// size:200, y:180, centered
 	preview: null, //'preview.png',
 	attributes: {
 		provides: [
@@ -21,18 +21,22 @@ DefineAsset({
 		],
 	},
 	modules: {
-		cross: {
+		emblemType: {
 			type: 'typed',
-			name: 'With cross emblem',
+			name: 'Emblem type',
 			variants: [
 				{
-					id: 'yes',
-					name: 'Yes',
+					id: 'no',
+					name: 'None',
+					default: true,
 				},
 				{
-					id: 'no',
-					name: 'No',
-					default: true,
+					id: 'cross',
+					name: 'Cross',
+				},
+				{
+					id: 'moon',
+					name: 'Moon',
 				},
 			],
 		},

@@ -36,22 +36,34 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"name": "Cross",
+			"name": "Emblem",
 			"priority": "ABOVE_FRONT_HAIR",
 			"points": "static",
 			"mirror": 0,
-			"colorizationKey": "cross",
+			"colorizationKey": "emblem",
 			"image": {
-				"image": "nurse_cap_front_cross.png",
+				"image": "",
 				"overrides": [
 					{
-						"image": "",
+						"image": "nurse_cap_front_cross.png",
 						"condition": [
 							[
 								{
-									"module": "cross",
+									"module": "emblemType",
 									"operator": "=",
-									"value": "no"
+									"value": "cross"
+								}
+							]
+						]
+					},
+					{
+						"image": "nurse_cap_front_moon.png",
+						"condition": [
+							[
+								{
+									"module": "emblemType",
+									"operator": "=",
+									"value": "moon"
 								}
 							]
 						]
