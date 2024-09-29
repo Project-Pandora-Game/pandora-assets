@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Steel Spheres',
+	name: 'Steel Mittens',
 	size: 'medium',
 	graphics: 'graphics.json',
 	colorization: {
