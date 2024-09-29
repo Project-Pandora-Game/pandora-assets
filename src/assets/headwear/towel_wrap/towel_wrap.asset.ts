@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Towel Wrap',
+	name: 'Towel Wrap (head)',
 	size: 'medium',
 	graphics: 'graphics.json',
 	colorization: {
