@@ -13,7 +13,7 @@ DefineAsset({
 		},
 	},
 	// size:200, y:180, centered
-	preview: null, //'preview.png',
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Clothing',
