@@ -8,7 +8,7 @@
 			"height": 1500,
 			"name": "SkirtFront",
 			"priority": "ABOVE_BODY",
-			"points": "skirt_short",
+			"points": "body",
 			"pointType": [
 				"body",
 				"bodyarm"
@@ -26,9 +26,39 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "SkirtFrontWrinkles",
+			"priority": "ABOVE_BODY",
+			"points": "body",
+			"pointType": [
+				"body",
+				"bodyarm"
+			],
+			"mirror": 0,
+			"colorizationKey": "skirt",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "nurse_skirt_front_wrinkles.png",
+						"condition": [
+							[
+								{
+									"legs": "sitting"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"name": "SkirtBack",
 			"priority": "BELOW_BODY",
-			"points": "skirt_short",
+			"points": "body",
 			"pointType": [
 				"body",
 				"bodyarm"
