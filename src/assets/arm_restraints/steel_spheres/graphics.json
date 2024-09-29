@@ -6,44 +6,6 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"name": "cuffsFront",
-			"priority": "ABOVE_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "cuffs",
-			"image": {
-				"image": "steel_spheres_cuffs.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"name": "cuffsBack",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "cuffs",
-			"image": {
-				"image": "steel_spheres_cuffs.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
 			"name": "spheresFront",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "body",
@@ -74,6 +36,44 @@
 			"colorizationKey": "spheres",
 			"image": {
 				"image": "steel_spheres_back.png",
+				"overrides": []
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "cuffsFront",
+			"priority": "ABOVE_ARM_LEFT",
+			"points": "body",
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "cuffs",
+			"image": {
+				"image": "steel_spheres_cuffs.png",
+				"overrides": []
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "cuffsBack",
+			"priority": "BELOW_ARM_LEFT",
+			"points": "body",
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "cuffs",
+			"image": {
+				"image": "steel_spheres_cuffs.png",
 				"overrides": []
 			}
 		}
