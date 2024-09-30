@@ -1,15 +1,19 @@
 DefineAsset({
-	name: 'Towel Wrap (dress)',
+	name: 'Nurse Dress',
 	size: 'medium',
 	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
 	colorization: {
-		towel: {
-			name: 'Towel',
+		dress: {
+			name: 'Dress',
 			default: '#EEEEEE',
 		},
+		emblem: {
+			name: 'Emblem',
+			default: '#E60005',
+		},
 	},
-	// size:460, y:400, centered
+	// size:450, y:380, centered
 	preview: 'preview.png',
 	attributes: {
 		provides: [
@@ -20,9 +24,28 @@ DefineAsset({
 		],
 	},
 	modules: {
-		towelStateFront: {
+		emblemType: {
 			type: 'typed',
-			name: 'Towel State Front',
+			name: 'Emblem type',
+			variants: [
+				{
+					id: 'no',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'cross',
+					name: 'Cross',
+				},
+				{
+					id: 'moon',
+					name: 'Moon',
+				},
+			],
+		},
+		dressStateFront: {
+			type: 'typed',
+			name: 'Dress State Front',
 			variants: [
 				{
 					id: 'normal',
@@ -35,9 +58,9 @@ DefineAsset({
 				},
 			],
 		},
-		towelStateBack: {
+		dressStateBack: {
 			type: 'typed',
-			name: 'Towel State Back',
+			name: 'Dress State Back',
 			variants: [
 				{
 					id: 'normal',
@@ -58,7 +81,7 @@ DefineAsset({
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
-				part: 'towel',
+				part: 'dress',
 				source: 'Self-Made',
 				copyrightHolder: 'Taja',
 				editedBy: 'Sandrine',
