@@ -1,52 +1,43 @@
 DefineAsset({
-	name: 'Towel Wrap (dress)',
-	size: 'medium',
+	name: 'Nurse Cap',
+	size: 'small',
 	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
 	colorization: {
-		towel: {
-			name: 'Towel',
-			default: '#EEEEEE',
+		cap: {
+			name: 'Cap',
+			default: '#FFFFFF',
+		},
+		emblem: {
+			name: 'Emblem',
+			default: '#E60005',
 		},
 	},
-	// size:460, y:400, centered
+	// size:200, y:180, centered
 	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Clothing',
-			'Clothing_upper',
-			'Clothing_lower',
-			'Clothing_large',
+			'Headgear',
 		],
 	},
 	modules: {
-		towelStateFront: {
+		emblemType: {
 			type: 'typed',
-			name: 'Towel State Front',
+			name: 'Emblem type',
 			variants: [
 				{
-					id: 'normal',
-					name: 'Normal',
+					id: 'no',
+					name: 'None',
 					default: true,
 				},
 				{
-					id: 'up',
-					name: 'Pulled Up',
-				},
-			],
-		},
-		towelStateBack: {
-			type: 'typed',
-			name: 'Towel State Back',
-			variants: [
-				{
-					id: 'normal',
-					name: 'Normal',
-					default: true,
+					id: 'cross',
+					name: 'Cross',
 				},
 				{
-					id: 'up',
-					name: 'Pulled up',
+					id: 'moon',
+					name: 'Moon',
 				},
 			],
 		},
@@ -58,7 +49,7 @@ DefineAsset({
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
-				part: 'towel',
+				part: 'Cap',
 				source: 'Self-Made',
 				copyrightHolder: 'Taja',
 				editedBy: 'Sandrine',
