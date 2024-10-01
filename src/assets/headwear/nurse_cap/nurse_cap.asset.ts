@@ -9,8 +9,12 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 		emblem: {
-			name: 'Emblem',
-			default: '#E60005',
+			name: null,
+			default: '#000000',
+			// We do not allow coloring this layer, as coloring it red can allow users to create symbol protected by the Geneva convention
+			// (both the red cross and red crescent)
+			// name: 'Emblem',
+			// default: '#E60005',
 		},
 	},
 	// size:200, y:180, centered
