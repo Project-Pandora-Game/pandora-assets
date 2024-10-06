@@ -1,3 +1,5 @@
+import { ItemInteractionType } from 'pandora-common';
+
 DefineAsset({
 	name: 'Posture Collar',
 	size: 'medium',
@@ -66,7 +68,7 @@ DefineAsset({
 			name: 'Collar Height',
 			variants: [
 				{
-					id: 'normal',
+					id: 'low',
 					name: 'Low',
 					default: true,
 				},
@@ -89,6 +91,22 @@ DefineAsset({
 							],
 						},
 					},
+				},
+			],
+		},
+		color: {
+			type: 'typed',
+			name: 'Collar Base Color',
+			interactionType: ItemInteractionType.STYLING,
+			variants: [
+				{
+					id: 'black',
+					name: 'Black Collar',
+					default: true,
+				},
+				{
+					id: 'white',
+					name: 'White Collar',
 				},
 			],
 		},

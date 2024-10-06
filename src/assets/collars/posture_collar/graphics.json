@@ -13,7 +13,20 @@
 			"colorizationKey": "collar",
 			"image": {
 				"image": "posture_collar_front.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "posture_collar_front_white.png",
+						"condition": [
+							[
+								{
+									"module": "color",
+									"operator": "=",
+									"value": "white"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
@@ -27,14 +40,59 @@
 			"mirror": 0,
 			"colorizationKey": "collar",
 			"image": {
-				"image": "posture_collar_chin_low.png",
+				"image": "",
 				"overrides": [
 					{
-						"image": "",
+						"image": "posture_collar_chin_low_white.png",
 						"condition": [
 							[
 								{
-									"view": "back"
+									"module": "collarType",
+									"operator": "=",
+									"value": "low"
+								},
+								{
+									"module": "color",
+									"operator": "=",
+									"value": "white"
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "posture_collar_chin_high_white.png",
+						"condition": [
+							[
+								{
+									"module": "collarType",
+									"operator": "=",
+									"value": "high"
+								},
+								{
+									"module": "color",
+									"operator": "=",
+									"value": "white"
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "posture_collar_chin_low.png",
+						"condition": [
+							[
+								{
+									"module": "collarType",
+									"operator": "=",
+									"value": "low"
+								},
+								{
+									"view": "front"
 								}
 							]
 						]
@@ -47,6 +105,9 @@
 									"module": "collarType",
 									"operator": "=",
 									"value": "high"
+								},
+								{
+									"view": "front"
 								}
 							]
 						]
@@ -106,7 +167,20 @@
 			"colorizationKey": "collar",
 			"image": {
 				"image": "posture_collar_back.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "posture_collar_back_white.png",
+						"condition": [
+							[
+								{
+									"module": "color",
+									"operator": "=",
+									"value": "white"
+								}
+							]
+						]
+					}
+				]
 			}
 		}
 	]
