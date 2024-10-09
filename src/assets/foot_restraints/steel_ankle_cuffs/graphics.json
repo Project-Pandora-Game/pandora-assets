@@ -176,16 +176,29 @@
 				"image": "",
 				"overrides": [
 					{
-						"image": "steelanklecuffs_bar_kneeling_normal.png",
+						"image": "steelanklecuffs_bar_kneeling_front.png",
 						"condition": [
 							[
 								{
 									"legs": "kneeling"
 								},
 								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "steelanklecuffs_bar_kneeling_normal.png",
+						"condition": [
+							[
+								{
 									"module": "barWidth",
 									"operator": "=",
 									"value": "barNormal"
+								},
+								{
+									"legs": "kneeling"
 								},
 								{
 									"view": "back"
