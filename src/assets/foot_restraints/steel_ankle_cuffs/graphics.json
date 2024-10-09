@@ -15,7 +15,7 @@
 				"image": "steelanklecuffs.png",
 				"overrides": [
 					{
-						"image": "steelanklecuffs_kneeling.png",
+						"image": "",
 						"condition": [
 							[
 								{
@@ -147,7 +147,7 @@
 				"image": "steelanklecuffs.png",
 				"overrides": [
 					{
-						"image": "",
+						"image": "steelanklecuffs.png",
 						"condition": [
 							[
 								{

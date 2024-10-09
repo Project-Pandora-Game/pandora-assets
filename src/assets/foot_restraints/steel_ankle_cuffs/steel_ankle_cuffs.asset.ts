@@ -139,7 +139,7 @@ DefineAsset({
 								leg_r: -30,
 								leg_l: -30,
 							},
-							legs: ['standing', 'sitting'],
+							legs: ['standing'],
 						},
 					},
 				},
@@ -159,7 +159,7 @@ DefineAsset({
 			{
 				source: 'Self-Made',
 				copyrightHolder: 'ClaudiaMia',
-				editedBy: 'ClaudiaMia',
+				editedBy: 'Sandrine',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
