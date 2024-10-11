@@ -180,6 +180,24 @@
 						"condition": [
 							[
 								{
+									"module": "barWidth",
+									"operator": "=",
+									"value": "barNormal"
+								},
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "front"
+								}
+							],
+							[
+								{
+									"module": "barWidth",
+									"operator": "=",
+									"value": "barNarrow"
+								},
+								{
 									"legs": "kneeling"
 								},
 								{
@@ -301,6 +319,80 @@
 						]
 					},
 					{
+						"image": "steelanklecuffs_chain_short.png",
+						"condition": [
+							[
+								{
+									"legs": "standing"
+								},
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "short"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<",
+									"value": 2
+								}
+							]
+						]
+					},
+					{
+						"image": "steelanklecuffs_chain_sitting_short.png",
+						"condition": [
+							[
+								{
+									"legs": "sitting"
+								},
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "short"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<",
+									"value": 2
+								}
+							]
+						]
+					},
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "short"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "=",
+									"value": 2
+								},
+								{
+									"bone": "leg_r",
+									"operator": "=",
+									"value": 2
+								}
+							]
+						]
+					},
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "clipped"
+								}
+							]
+						]
+					},
+					{
 						"image": "steelanklecuffs_chain_sitting_spread.png",
 						"condition": [
 							[
@@ -391,6 +483,19 @@
 								{
 									"view": "front"
 								}
+							],
+							[
+								{
+									"legs": "kneeling"
+								},
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "short"
+								},
+								{
+									"view": "front"
+								}
 							]
 						]
 					},
@@ -433,6 +538,29 @@
 									"bone": "leg_l",
 									"operator": "=",
 									"value": 0
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					},
+					{
+						"image": "steelanklecuffs_chain_kneeling_short.png",
+						"condition": [
+							[
+								{
+									"legs": "kneeling"
+								},
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "short"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<",
+									"value": 2
 								},
 								{
 									"view": "back"
