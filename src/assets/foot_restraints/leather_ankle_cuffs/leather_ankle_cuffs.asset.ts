@@ -157,6 +157,10 @@ DefineAsset({
 						stateFlags: {
 							provides: ['chain'],
 						},
+						effects: {
+							blockRoomLeave: true,
+							blockRoomMovement: true,
+						},
 					},
 				},
 			],
@@ -212,6 +216,10 @@ DefineAsset({
 						},
 						stateFlags: {
 							provides: ['bar'],
+						},
+						effects: {
+							blockRoomLeave: true,
+							blockRoomMovement: true,
 						},
 					},
 				},
