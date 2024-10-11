@@ -143,6 +143,10 @@ DefineAsset({
 						stateFlags: {
 							provides: ['chain'],
 						},
+						effects: {
+							blockRoomLeave: true,
+							blockRoomMovement: true,
+						},
 					},
 				},
 			],
@@ -189,6 +193,10 @@ DefineAsset({
 								leg_l: -30,
 							},
 							legs: ['standing'],
+						},
+						effects: {
+							blockRoomLeave: true,
+							blockRoomMovement: true,
 						},
 					},
 				},
