@@ -120,13 +120,13 @@ DefineAsset({
 					name: 'Complete',
 					properties: {
 						poseLimits: {
-								bones: {
-									leg_r: 2,
-									leg_l: 2,
-								},
-								legs: 'standing',
+							bones: {
+								leg_r: 2,
+								leg_l: 2,
 							},
+							legs: 'standing',
 						},
+					},
 				},
 			],
 		},

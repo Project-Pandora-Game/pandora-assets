@@ -8,12 +8,43 @@
 			"height": 1500,
 			"name": "calves front",
 			"priority": "ABOVE_BODY",
-			"points": "static",
+			"points": "custom_foot_restraints_duct_tape",
 			"mirror": 0,
 			"colorizationKey": "tape",
 			"image": {
 				"image": "",
 				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "legTies",
+									"operator": "=",
+									"value": "calves"
+								},
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "front"
+								}
+							],
+							[
+								{
+									"module": "legTies",
+									"operator": "=",
+									"value": "both"
+								},
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
 					{
 						"image": "duct_tape_calves.png",
 						"condition": [
@@ -22,9 +53,6 @@
 									"module": "legTies",
 									"operator": "=",
 									"value": "calves"
-								},
-								{
-									"legs": "standing"
 								}
 							],
 							[
@@ -32,34 +60,6 @@
 									"module": "legTies",
 									"operator": "=",
 									"value": "both"
-								},
-								{
-									"legs": "standing"
-								}
-							]
-						]
-					},
-					{
-						"image": "duct_tape_calves_sitting.png",
-						"condition": [
-							[
-								{
-									"module": "legTies",
-									"operator": "=",
-									"value": "calves"
-								},
-								{
-									"legs": "sitting"
-								}
-							],
-							[
-								{
-									"module": "legTies",
-									"operator": "=",
-									"value": "both"
-								},
-								{
-									"legs": "sitting"
 								}
 							]
 						]
@@ -74,7 +74,7 @@
 			"height": 1500,
 			"name": "thighs front",
 			"priority": "ABOVE_BODY",
-			"points": "static",
+			"points": "custom_foot_restraints_duct_tape",
 			"mirror": 0,
 			"colorizationKey": "tape",
 			"image": {
@@ -88,9 +88,6 @@
 									"module": "legTies",
 									"operator": "=",
 									"value": "thighs"
-								},
-								{
-									"legs": "standing"
 								}
 							],
 							[
@@ -98,9 +95,6 @@
 									"module": "legTies",
 									"operator": "=",
 									"value": "both"
-								},
-								{
-									"legs": "standing"
 								}
 							],
 							[
@@ -108,12 +102,6 @@
 									"module": "legTies",
 									"operator": "=",
 									"value": "thighs"
-								},
-								{
-									"legs": "kneeling"
-								},
-								{
-									"view": "front"
 								}
 							],
 							[
@@ -121,37 +109,6 @@
 									"module": "legTies",
 									"operator": "=",
 									"value": "both"
-								},
-								{
-									"legs": "kneeling"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "duct_tape_thighs_sitting.png",
-						"condition": [
-							[
-								{
-									"module": "legTies",
-									"operator": "=",
-									"value": "thighs"
-								},
-								{
-									"legs": "sitting"
-								}
-							],
-							[
-								{
-									"module": "legTies",
-									"operator": "=",
-									"value": "both"
-								},
-								{
-									"legs": "sitting"
 								}
 							]
 						]
@@ -166,7 +123,7 @@
 			"height": 1500,
 			"name": "legs front",
 			"priority": "ABOVE_BODY",
-			"points": "static",
+			"points": "custom_foot_restraints_duct_tape",
 			"mirror": 0,
 			"colorizationKey": "tape",
 			"image": {
@@ -194,12 +151,43 @@
 			"height": 1500,
 			"name": "calves back",
 			"priority": "BELOW_BODY",
-			"points": "static",
+			"points": "custom_foot_restraints_duct_tape",
 			"mirror": 0,
 			"colorizationKey": "tape",
 			"image": {
 				"image": "",
 				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "legTies",
+									"operator": "=",
+									"value": "calves"
+								},
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "front"
+								}
+							],
+							[
+								{
+									"module": "legTies",
+									"operator": "=",
+									"value": "both"
+								},
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
 					{
 						"image": "duct_tape_calves.png",
 						"condition": [
@@ -208,9 +196,6 @@
 									"module": "legTies",
 									"operator": "=",
 									"value": "calves"
-								},
-								{
-									"legs": "standing"
 								}
 							],
 							[
@@ -218,65 +203,6 @@
 									"module": "legTies",
 									"operator": "=",
 									"value": "both"
-								},
-								{
-									"legs": "standing"
-								}
-							]
-						]
-					},
-					{
-						"image": "duct_tape_calves_kneeling_back.png",
-						"condition": [
-							[
-								{
-									"module": "legTies",
-									"operator": "=",
-									"value": "calves"
-								},
-								{
-									"legs": "kneeling"
-								},
-								{
-									"view": "back"
-								}
-							],
-							[
-								{
-									"module": "legTies",
-									"operator": "=",
-									"value": "both"
-								},
-								{
-									"legs": "kneeling"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "duct_tape_calves_sitting.png",
-						"condition": [
-							[
-								{
-									"module": "legTies",
-									"operator": "=",
-									"value": "calves"
-								},
-								{
-									"legs": "sitting"
-								}
-							],
-							[
-								{
-									"module": "legTies",
-									"operator": "=",
-									"value": "both"
-								},
-								{
-									"legs": "sitting"
 								}
 							]
 						]
@@ -291,7 +217,7 @@
 			"height": 1500,
 			"name": "thighs back",
 			"priority": "BELOW_BODY",
-			"points": "static",
+			"points": "custom_foot_restraints_duct_tape",
 			"mirror": 0,
 			"colorizationKey": "tape",
 			"image": {
@@ -305,9 +231,6 @@
 									"module": "legTies",
 									"operator": "=",
 									"value": "thighs"
-								},
-								{
-									"legs": "standing"
 								}
 							],
 							[
@@ -315,59 +238,6 @@
 									"module": "legTies",
 									"operator": "=",
 									"value": "both"
-								},
-								{
-									"legs": "standing"
-								}
-							]
-						]
-					},
-					{
-						"image": "duct_tape_thighs_kneeling_back.png",
-						"condition": [
-							[
-								{
-									"module": "legTies",
-									"operator": "=",
-									"value": "thighs"
-								},
-								{
-									"legs": "kneeling"
-								}
-							],
-							[
-								{
-									"module": "legTies",
-									"operator": "=",
-									"value": "both"
-								},
-								{
-									"legs": "kneeling"
-								}
-							]
-						]
-					},
-					{
-						"image": "duct_tape_thighs_sitting.png",
-						"condition": [
-							[
-								{
-									"module": "legTies",
-									"operator": "=",
-									"value": "thighs"
-								},
-								{
-									"legs": "sitting"
-								}
-							],
-							[
-								{
-									"module": "legTies",
-									"operator": "=",
-									"value": "both"
-								},
-								{
-									"legs": "sitting"
 								}
 							]
 						]
@@ -382,7 +252,7 @@
 			"height": 1500,
 			"name": "legs back",
 			"priority": "BELOW_BODY",
-			"points": "static",
+			"points": "custom_foot_restraints_duct_tape",
 			"mirror": 0,
 			"colorizationKey": "tape",
 			"image": {
