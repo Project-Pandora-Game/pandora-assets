@@ -26,6 +26,11 @@ DefineAsset({
 					name: 'Calves',
 					default: true,
 					properties: {
+						attributes: {
+							hides: [
+								'Ankle_cuffs',
+							],
+						},
 						poseLimits: {
 							options: [
 								{
@@ -57,6 +62,11 @@ DefineAsset({
 					id: 'thighs',
 					name: 'Thighs',
 					properties: {
+						attributes: {
+							hides: [
+								'Thigh_cuffs',
+							],
+						},
 						poseLimits: {
 							options: [
 								{
@@ -88,6 +98,12 @@ DefineAsset({
 					id: 'both',
 					name: 'Calves and thighs',
 					properties: {
+						attributes: {
+							hides: [
+								'Thigh_cuffs',
+								'Ankle_cuffs',
+							],
+						},
 						poseLimits: {
 							options: [
 								{
@@ -119,6 +135,12 @@ DefineAsset({
 					id: 'complete',
 					name: 'Complete',
 					properties: {
+						attributes: {
+							hides: [
+								'Thigh_cuffs',
+								'Ankle_cuffs',
+							],
+						},
 						poseLimits: {
 							bones: {
 								leg_r: 2,
