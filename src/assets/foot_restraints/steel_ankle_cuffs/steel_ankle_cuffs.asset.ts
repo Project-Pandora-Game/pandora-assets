@@ -1,49 +1,47 @@
 DefineAsset({
-	name: 'Leather Ankle Cuffs',
+	name: 'Steel Ankle Cuffs',
 	size: 'small',
 	graphics: 'graphics.json',
 	colorization: {
-		cuff: {
-			name: 'Cuff',
-			default: '#222222',
-		},
-		belt: {
-			name: 'Belt',
-			default: '#000000',
-		},
-		smallRings: {
-			name: 'Eyelets',
+		cuffs: {
+			name: 'Cuffs',
 			default: '#FFFFFF',
 		},
-		largeRings: {
-			name: 'D-Rings',
+		bar: {
+			name: 'Bar',
 			default: '#FFFFFF',
 		},
 		chains: {
 			name: 'Chains',
 			default: '#FFFFFF',
 		},
-		bar: {
-			name: 'Spreader-bar',
-			default: '#FFFFFF',
-		},
 	},
-	// size:350, y:1013, centered
+	// size:560, y:808, centered
 	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Restraint',
 			'Restraint_legs',
-			'Ankle_cuffs',
-			'Ankle_cuffs_chainable',
 		],
 	},
 	modules: {
 		lock: {
 			type: 'lockSlot',
-			name: 'Lock cuffs',
+			name: 'Lock',
 			occupiedProperties: {
 				blockAddRemove: true,
+			},
+		},
+		lockBar: {
+			type: 'lockSlot',
+			name: 'Lock for bar width',
+			occupiedProperties: {
+				blockModules: ['barWidth'],
+				stateFlags: {
+					requires: {
+						chain: 'Locking requires a bar to lock.',
+					},
+				},
 			},
 		},
 		lockChain: {
@@ -58,18 +56,6 @@ DefineAsset({
 				},
 			},
 		},
-		lockBar: {
-			type: 'lockSlot',
-			name: 'Lock for bar width',
-			occupiedProperties: {
-				blockModules: ['barWidth'],
-				stateFlags: {
-					requires: {
-						bar: 'Locking requires a bar to lock.',
-					},
-				},
-			},
-		},
 		cuffState: {
 			type: 'typed',
 			name: 'Cuff states',
@@ -80,7 +66,7 @@ DefineAsset({
 					default: true,
 				},
 				{
-					id: 'normal',
+					id: 'chainNormal',
 					name: 'Chained',
 					properties: {
 						poseLimits: {
@@ -167,14 +153,14 @@ DefineAsset({
 		},
 		barWidth: {
 			type: 'typed',
-			name: 'Bar width',
+			name: 'Bar Width',
 			variants: [
 				{
 					id: 'unbarred',
-					name: 'No Bar',
+					name: 'No bar',
 				},
 				{
-					id: 'narrow',
+					id: 'barNarrow',
 					name: 'Narrow',
 					properties: {
 						poseLimits: {
@@ -189,7 +175,7 @@ DefineAsset({
 					},
 				},
 				{
-					id: 'normal',
+					id: 'barNormal',
 					name: 'Normal',
 					properties: {
 						poseLimits: {
@@ -204,7 +190,7 @@ DefineAsset({
 					},
 				},
 				{
-					id: 'wide',
+					id: 'barWide',
 					name: 'Wide (no kneeling)',
 					properties: {
 						poseLimits: {
@@ -212,7 +198,7 @@ DefineAsset({
 								leg_r: -30,
 								leg_l: -30,
 							},
-							legs: 'standing',
+							legs: ['standing'],
 						},
 						stateFlags: {
 							provides: ['bar'],
@@ -227,8 +213,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER fastened the leather cuffs around TARGET_CHARACTER_DYNAMIC_POSSESSIVE ankles.',
-		actionRemove: 'SOURCE_CHARACTER loosened and slipped off the leather cuffs from TARGET_CHARACTER_DYNAMIC_POSSESSIVE ankles.',
+		actionAdd: 'SOURCE_CHARACTER fastened the steel cuffs around TARGET_CHARACTER_DYNAMIC_POSSESSIVE ankles.',
+		actionRemove: 'SOURCE_CHARACTER removed the steel cuffs from TARGET_CHARACTER_DYNAMIC_POSSESSIVE ankles.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
@@ -237,13 +223,6 @@ DefineAsset({
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
-				source: 'Self-Made',
-				copyrightHolder: 'ClaudiaMia',
-				editedBy: 'ClaudiaMia',
-				license: 'Pandora-Use-Only-v1-or-later',
-			},
-			{
-				part: 'Spreader-Bar',
 				source: 'Self-Made',
 				copyrightHolder: 'ClaudiaMia',
 				editedBy: 'Sandrine',
