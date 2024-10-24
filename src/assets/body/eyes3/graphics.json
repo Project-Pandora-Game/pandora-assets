@@ -25,6 +25,11 @@
 									"operator": "=",
 									"value": "closed"
 								}
+							],
+							[
+								{
+									"blinking": true
+								}
 							]
 						]
 					}
@@ -54,6 +59,11 @@
 									"module": "eyeState_l",
 									"operator": "=",
 									"value": "closed"
+								}
+							],
+							[
+								{
+									"blinking": true
 								}
 							]
 						]
@@ -85,6 +95,11 @@
 									"operator": "=",
 									"value": "closed"
 								}
+							],
+							[
+								{
+									"blinking": true
+								}
 							]
 						]
 					}
@@ -115,6 +130,11 @@
 									"operator": "=",
 									"value": "closed"
 								}
+							],
+							[
+								{
+									"blinking": true
+								}
 							]
 						]
 					}
@@ -143,6 +163,11 @@
 									"module": "eyeState_l",
 									"operator": "=",
 									"value": "closed"
+								}
+							],
+							[
+								{
+									"blinking": true
 								}
 							]
 						]
