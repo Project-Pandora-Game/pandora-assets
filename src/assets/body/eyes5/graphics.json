@@ -18,6 +18,16 @@
 				"image": "",
 				"overrides": [
 					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"blinking": true
+								}
+							]
+						]
+					},
+					{
 						"image": "eyes_normal/sclera_normal.png",
 						"condition": [
 							[
@@ -60,6 +70,16 @@
 			"image": {
 				"image": "",
 				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"blinking": true
+								}
+							]
+						]
+					},
 					{
 						"image": "eyes_normal/iris_normal_straight.png",
 						"condition": [
@@ -283,6 +303,16 @@
 			"image": {
 				"image": "",
 				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"blinking": true
+								}
+							]
+						]
+					},
 					{
 						"image": "eyes_normal/pupil_normal_straight.png",
 						"condition": [
@@ -515,6 +545,11 @@
 									"operator": "=",
 									"value": "closed"
 								}
+							],
+							[
+								{
+									"blinking": true
+								}
 							]
 						]
 					}
@@ -546,6 +581,11 @@
 									"operator": "=",
 									"value": "closed"
 								}
+							],
+							[
+								{
+									"blinking": true
+								}
 							]
 						]
 					}
@@ -568,6 +608,16 @@
 			"image": {
 				"image": "",
 				"overrides": [
+					{
+						"image": "eyes_closed/eyelashes_closed.png",
+						"condition": [
+							[
+								{
+									"blinking": true
+								}
+							]
+						]
+					},
 					{
 						"image": "eyes_normal/eyelashes_normal.png",
 						"condition": [
