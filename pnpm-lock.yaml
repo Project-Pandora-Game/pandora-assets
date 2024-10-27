@@ -21,8 +21,8 @@ importers:
         specifier: 4.17.21
         version: 4.17.21
       pandora-common:
-        specifier: github:Project-Pandora-Game/pandora#master&path:pandora-common
-        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/a3da868b09d7c3898acc26078653fa92f1806e41#path:pandora-common
+        specifier: github:Project-Pandora-Game/pandora#feature/random-blinking&path:pandora-common
+        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/90305fe755dafa8a9e739de7686c07deb303541d#path:pandora-common
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -768,6 +768,9 @@ packages:
 
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+
+  '@types/lodash@4.17.10':
+    resolution: {integrity: sha512-YpS0zzoduEhuOWjAotS6A5AVCva7X4lVlYLF0FYHAY9sdraBfnatttHItlWeZdGhuEkf+OzMNg2ZYAx8t+52uQ==}
 
   '@types/lodash@4.17.12':
     resolution: {integrity: sha512-sviUmCE8AYdaF/KIHLDJBQgeYzPBI0vf/17NaYehBJfYD1j6/L95Slh07NlyK2iNyBNaEkb3En2jRt+a8y3xZQ==}
@@ -2311,8 +2314,8 @@ packages:
   pako@1.0.11:
     resolution: {integrity: sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/a3da868b09d7c3898acc26078653fa92f1806e41#path:pandora-common:
-    resolution: {path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/a3da868b09d7c3898acc26078653fa92f1806e41}
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/90305fe755dafa8a9e739de7686c07deb303541d#path:pandora-common:
+    resolution: {path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/90305fe755dafa8a9e739de7686c07deb303541d}
     version: 0.1.0
     engines: {node: '>=20.x'}
 
@@ -3809,6 +3812,8 @@ snapshots:
   '@types/json-diff@1.0.3': {}
 
   '@types/json5@0.0.29': {}
+
+  '@types/lodash@4.17.10': {}
 
   '@types/lodash@4.17.12': {}
 
@@ -5717,10 +5722,10 @@ snapshots:
 
   pako@1.0.11: {}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/a3da868b09d7c3898acc26078653fa92f1806e41#path:pandora-common:
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/90305fe755dafa8a9e739de7686c07deb303541d#path:pandora-common:
     dependencies:
       '@types/async-lock': 1.4.2
-      '@types/lodash': 4.17.12
+      '@types/lodash': 4.17.10
       '@types/node': 20.16.11
       async-lock: 1.4.1
       immer: 10.1.1
