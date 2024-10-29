@@ -27,7 +27,7 @@
 		"ignore": "6.0.2",
 		"jimp": "0.22.12",
 		"lodash": "4.17.21",
-		"pandora-common": "github:Project-Pandora-Game/pandora#feature/random-blinking&path:pandora-common",
+		"pandora-common": "github:Project-Pandora-Game/pandora#master&path:pandora-common",
 		"rimraf": "6.0.1",
 		"sharp": "0.33.5",
 		"simple-git": "3.27.0",
