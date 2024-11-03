@@ -1,15 +1,23 @@
 import { readFileSync, writeFileSync } from 'fs';
+import { Immutable } from 'immer';
 import { diffString } from 'json-diff';
 import { isEqual } from 'lodash';
 import {
 	Assert,
 	AssetGraphicsDefinition,
 	AssetGraphicsDefinitionSchema,
+	CloneDeepMutable,
 	GetLogger,
 	LayerDefinition,
 	LayerImageOverride,
 	LayerImageSetting,
+	LayerMirror,
+	Logger,
+	MakeMirroredPoints,
+	MirrorBoneLike,
 	ModuleNameSchema,
+	PointDefinitionCalculated,
+	PointMatchesPointType,
 	SCHEME_OVERRIDE,
 } from 'pandora-common';
 import { relative } from 'path';
@@ -73,12 +81,18 @@ export function LoadAssetsGraphics(path: string, assetModules: readonly string[]
 	AssetGraphicsValidate(parseResult.data, logger);
 
 	return {
-		layers: parseResult.data.layers.map(LoadAssetLayer),
+		layers: parseResult.data.layers.map((l) => LoadAssetLayer(l, logger)),
 	};
 }
 
-function LoadLayerImage(image: string): string {
-	const resource = DefineImageResource(image, 'asset', 'png');
+type LayerImageTrimArea = [left: number, top: number, right: number, bottom: number] | null;
+
+function LoadLayerImage(image: string, imageTrimArea: LayerImageTrimArea): string {
+	let resource = DefineImageResource(image, 'asset', 'png');
+
+	if (imageTrimArea != null) {
+		resource = resource.addCutImageRelative(imageTrimArea[0], imageTrimArea[1], imageTrimArea[2], imageTrimArea[3]);
+	}
 
 	for (const resolution of GENERATED_RESOLUTIONS) {
 		resource.addDownscaledImage(resolution);
@@ -87,36 +101,124 @@ function LoadLayerImage(image: string): string {
 	return resource.resultName;
 }
 
-function LoadLayerImageSetting(setting: LayerImageSetting): LayerImageSetting {
+function LoadLayerImageSetting(setting: LayerImageSetting, imageTrimArea: LayerImageTrimArea): LayerImageSetting {
 	const overrides: LayerImageOverride[] = setting.overrides
 		.map((override) => ({
 			...override,
-			image: override.image && LoadLayerImage(override.image),
+			image: override.image && LoadLayerImage(override.image, imageTrimArea),
 		}));
 	const alphaOverrides: LayerImageOverride[] | undefined = setting.alphaOverrides
 		?.map((override) => ({
 			...override,
-			image: override.image && LoadLayerImage(override.image),
+			image: override.image && LoadLayerImage(override.image, imageTrimArea),
 		}));
 	return {
 		...setting,
-		image: setting.image && LoadLayerImage(setting.image),
-		alphaImage: setting.alphaImage && LoadLayerImage(setting.alphaImage),
+		image: setting.image && LoadLayerImage(setting.image, imageTrimArea),
+		alphaImage: setting.alphaImage && LoadLayerImage(setting.alphaImage, imageTrimArea),
 		overrides,
 		alphaOverrides,
 	};
 }
 
-function LoadAssetLayer(layer: LayerDefinition): LayerDefinition {
-	if (typeof layer.points === 'string' && !GraphicsDatabase.hasPointTemplate(layer.points)) {
+function LoadAssetLayer(layer: LayerDefinition, logger: Logger): LayerDefinition {
+	logger = logger.prefixMessages(`[Layer ${layer.name ?? '[unnamed]'}]`);
+
+	const pointTemplate = GraphicsDatabase.getPointTemplate(layer.points);
+
+	if (pointTemplate == null) {
 		throw new Error(`Layer ${layer.name ?? '[unnamed]'} refers to unknown template '${layer.points}'`);
 	}
-	return {
+
+	// Check if the image has any UV pose manipulation or not
+	let hasUvManipulation: boolean = false;
+	if (layer.scaling != null) {
+		hasUvManipulation = true;
+	}
+	if (layer.image.uvPose != null) {
+		hasUvManipulation = true;
+	}
+	for (const imageOverride of [...layer.image.overrides, ...(layer.image.alphaOverrides ?? [])]) {
+		if (imageOverride.uvPose != null) {
+			hasUvManipulation = true;
+		}
+	}
+	let imageTrimArea: LayerImageTrimArea = null;
+	if (hasUvManipulation) {
+		logger.debug('Layer has UV manipulation, skipping image trimming');
+	} else {
+		// Inverse values by default, as we go through points
+		imageTrimArea = [1, 1, 0, 0];
+
+		// Calculate the actual points first (such as resolving mirrored points)
+		const calculatedPoints: Immutable<PointDefinitionCalculated[]> = pointTemplate
+			.map((point, index): PointDefinitionCalculated => ({
+				...CloneDeepMutable(point),
+				index,
+				isMirror: false,
+			}))
+			.flatMap(MakeMirroredPoints);
+
+		// Calculate layer's point types (including mirrored ones)
+		let pointTypes = layer.pointType;
+		if (layer.mirror !== LayerMirror.NONE && pointTypes != null) {
+			pointTypes = [
+				...pointTypes,
+				...pointTypes.map(MirrorBoneLike),
+			];
+		}
+
+		for (const point of calculatedPoints) {
+			// Filter points based on point types
+			if (!PointMatchesPointType(point, pointTypes))
+				continue;
+
+			let [x, y] = point.pos;
+			// Remap point to layerspace
+			x = (x - (layer.x)) / (layer.width);
+			y = (y - (layer.y)) / (layer.height);
+			// Recalculate minimums and maximums found
+			imageTrimArea[0] = Math.min(imageTrimArea[0], x); // left
+			imageTrimArea[1] = Math.min(imageTrimArea[1], y); // top
+			imageTrimArea[2] = Math.max(imageTrimArea[2], x); // right
+			imageTrimArea[3] = Math.max(imageTrimArea[3], y); // bottom
+		}
+		// Check against bad conditions
+		Assert(imageTrimArea[0] <= 1);
+		Assert(imageTrimArea[1] <= 1);
+		Assert(imageTrimArea[2] >= 0);
+		Assert(imageTrimArea[3] >= 0);
+
+		if (!(imageTrimArea[0] < imageTrimArea[2])) {
+			logger.warning('Trim area has non-positive width. Does the layer have no useful triangles?');
+			imageTrimArea = null;
+		} else if (!(imageTrimArea[1] < imageTrimArea[3])) {
+			logger.warning('Trim area has non-positive height. Does the layer have no useful triangles?');
+			imageTrimArea = null;
+		} else if (imageTrimArea[0] < 0 || imageTrimArea[1] < 0 || imageTrimArea[2] > 1 || imageTrimArea[3] > 1) {
+			// TODO: Un-silence this once current problems are fixed
+			// logger.warning('Layer does not cover the used part of the mesh. This might cause graphical glitches.\n\t', imageTrimArea.map((v) => v.toFixed(2)).join(', '));
+			imageTrimArea = null;
+		}
+	}
+
+	const result: LayerDefinition = {
 		...layer,
-		image: LoadLayerImageSetting(layer.image),
+		image: LoadLayerImageSetting(layer.image, imageTrimArea),
 		scaling: layer.scaling && {
 			scaleBone: layer.scaling.scaleBone,
-			stops: layer.scaling.stops.map((stop) => [stop[0], LoadLayerImageSetting(stop[1])]),
+			stops: layer.scaling.stops.map((stop) => [stop[0], LoadLayerImageSetting(stop[1], imageTrimArea)]),
 		},
 	};
+	// Adjust layer size of we trimmed it down
+	if (imageTrimArea != null) {
+		const left = Math.floor(result.width * imageTrimArea[0]);
+		const top = Math.floor(result.height * imageTrimArea[1]);
+		result.x += left;
+		result.y += top;
+		result.width = Math.ceil(result.width * (imageTrimArea[2] - imageTrimArea[0]));
+		result.height = Math.ceil(result.height * (imageTrimArea[3] - imageTrimArea[1]));
+	}
+
+	return result;
 }

@@ -76,6 +76,11 @@ export abstract class Resource {
 }
 
 export interface IImageResource extends Resource {
+	/**
+	 * Cut part of the image. Coordinates should be passed in range [0, 1] and will be sized relative to the image size.
+	 */
+	addCutImageRelative(left: number, top: number, right: number, bottom: number): IImageResource;
+
 	addResizedImage(maxWidth: number, maxHeight: number, suffix: string): IImageResource;
 	addDownscaledImage(resolution: number): string;
 	addSizeCheck(exactWidth: number, exactHeight: number): void;
@@ -151,18 +156,44 @@ class ImageResource extends FileResource implements IImageResource {
 		this._addAVIFConversion('', (s) => s);
 	}
 
+	public addCutImageRelative(left: number, top: number, right: number, bottom: number): IImageResource {
+		const suffix = `_${left.toFixed(2).replace(/^0\./, '')}` +
+			`_${top.toFixed(2).replace(/^0\./, '')}` +
+			`_${right.toFixed(2).replace(/^0\./, '')}` +
+			`_${bottom.toFixed(2).replace(/^0\./, '')}`;
+
+		return new GeneratedImageResource(this, suffix, async (s) => {
+			const { info } = await s.toBuffer({ resolveWithObject: true });
+
+			const resultLeft = Math.floor(info.width * left);
+			const resultTop = Math.floor(info.height * top);
+			const resultWidth = Math.ceil(info.width * right) - resultLeft;
+			const resultHeight = Math.ceil(info.height * bottom) - resultTop;
+
+			return s.extract({
+				left: resultLeft,
+				top: resultTop,
+				width: resultWidth,
+				height: resultHeight,
+			});
+		});
+	}
+
 	public addResizedImage(maxWidth: number, maxHeight: number, suffix: string): IImageResource {
 		return new GeneratedImageResource(this, `_${suffix}`, (s) => s.resize(maxWidth, maxHeight));
 	}
 
 	public addDownscaledImage(resolution: number): string {
-		const process: SharpImageGenerator = async (s) => {
-			const meta = await s.metadata();
-			Assert(meta.width != null, 'Failed to get image width');
-			Assert(meta.height != null, 'Failed to get image height');
+		const generator = async (s: Sharp): Promise<Sharp> => {
+			// Skip downscaling in CI to speed things up by a lot.
+			if (process.env.CI_SKIP_DOWNSCALE === 'true') {
+				return s;
+			}
+
+			const { info } = await s.toBuffer({ resolveWithObject: true });
 
 			return s
-				.resize(Math.ceil(resolution * meta.width), Math.ceil(resolution * meta.height), {
+				.resize(Math.ceil(resolution * info.width), Math.ceil(resolution * info.height), {
 					fit: 'fill',
 					kernel: 'lanczos3',
 					fastShrinkOnLoad: false,
@@ -170,7 +201,7 @@ class ImageResource extends FileResource implements IImageResource {
 				.sharpen();
 		};
 
-		this._addAVIFConversion(`_r${resolution}`, process);
+		this._addAVIFConversion(`_r${resolution}`, generator);
 
 		const name = `${this.baseName}_r${resolution}.${this.extension}`;
 		if (resourceFiles.has(name))
@@ -184,7 +215,7 @@ class ImageResource extends FileResource implements IImageResource {
 			if (await IsFile(dest))
 				return;
 
-			await (await process(this.loadImageSharp()))
+			await (await generator(this.loadImageSharp()))
 				.toFile(dest);
 		});
 		return name;
@@ -229,7 +260,7 @@ class GeneratedImageResource extends Resource implements IImageResource {
 	private readonly _generator: SharpImageGenerator;
 
 	constructor(baseImage: IImageResource, suffix: string, generator: SharpImageGenerator) {
-		super(baseImage.baseName + suffix + baseImage.extension, baseImage.size, baseImage.hash);
+		super(baseImage.baseName + suffix + '.' + baseImage.extension, baseImage.size, baseImage.hash);
 		this._baseImage = baseImage;
 		this._generator = generator;
 
@@ -244,12 +275,30 @@ class GeneratedImageResource extends Resource implements IImageResource {
 				if (await IsFile(dest))
 					return;
 
-				const result = await generator(await this.loadImageSharp());
+				const result = await this.loadImageSharp();
 				await result.toFile(dest);
 			});
 		}
 
 		this._addAVIFConversion('', (s) => s);
+	}
+
+	public addCutImageRelative(left: number, top: number, right: number, bottom: number): IImageResource {
+		return new GeneratedImageResource(this, `_${left}_${top}_${right}_${bottom}`, async (s) => {
+			const { info } = await s.toBuffer({ resolveWithObject: true });
+
+			const resultLeft = Math.floor(info.width * left);
+			const resultTop = Math.floor(info.height * top);
+			const resultWidth = Math.ceil(info.width * right) - resultLeft;
+			const resultHeight = Math.ceil(info.height * bottom) - resultTop;
+
+			return s.extract({
+				left: resultLeft,
+				top: resultTop,
+				width: resultWidth,
+				height: resultHeight,
+			});
+		});
 	}
 
 	public addResizedImage(maxWidth: number, maxHeight: number, suffix: string): IImageResource {
@@ -258,17 +307,15 @@ class GeneratedImageResource extends Resource implements IImageResource {
 
 	public addDownscaledImage(resolution: number): string {
 		const generator = async (s: Sharp): Promise<Sharp> => {
-			const meta = await s.metadata();
-			Assert(meta.width != null, 'Failed to get image width');
-			Assert(meta.height != null, 'Failed to get image height');
-
 			// Skip downscaling in CI to speed things up by a lot.
 			if (process.env.CI_SKIP_DOWNSCALE === 'true') {
 				return s;
 			}
 
+			const { info } = await s.toBuffer({ resolveWithObject: true });
+
 			return s
-				.resize(Math.ceil(resolution * meta.width), Math.ceil(resolution * meta.height), {
+				.resize(Math.ceil(resolution * info.width), Math.ceil(resolution * info.height), {
 					fit: 'fill',
 					kernel: 'lanczos3',
 					fastShrinkOnLoad: false,

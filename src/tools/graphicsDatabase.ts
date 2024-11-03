@@ -31,6 +31,10 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 		logger.debug('Registered point template', name);
 	}
 
+	public getPointTemplate(name: string): Immutable<PointTemplate> | undefined {
+		return this._templates.get(name);
+	}
+
 	public hasPointTemplate(name: string): boolean {
 		return this._templates.has(name);
 	}
