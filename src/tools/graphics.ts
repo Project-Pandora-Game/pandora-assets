@@ -186,6 +186,7 @@ async function LoadAssetLayer(layer: LayerDefinition, logger: Logger): Promise<L
 			...ListLayerImageSettingImages(layer.image),
 			...(layer.scaling ? layer.scaling.stops.flatMap((stop) => ListLayerImageSettingImages(stop[1])) : []),
 		]));
+		logger.debug('Image set:', images.map((i) => i.baseName).join(', '));
 		const boundingBoxes = await Promise.all(images.map((i) => i.getContentBoundingBox()));
 		// Calculate total image bounding boxes
 		const imageBoundingBox = [1, 1, 0, 0]; // left, top, rightExclusive, bottomExclusive
@@ -252,6 +253,7 @@ async function LoadAssetLayer(layer: LayerDefinition, logger: Logger): Promise<L
 			const y1 = Math.floor(layer.y + imageBoundingBox[1] * layer.height);
 			const x2 = Math.ceil(layer.x + imageBoundingBox[2] * layer.width) - 1;
 			const y2 = Math.ceil(layer.y + imageBoundingBox[3] * layer.height) - 1;
+			logger.debug(`Bounding rectangle: x: ${x1}  y: ${y1}  w: ${x2 - x1 + 1}  h: ${y2 - y1 + 1}`);
 
 			// For each triangle determinate if it has intersection with the rectangle
 			for (const [a, b, c] of triangles) {
@@ -282,7 +284,7 @@ async function LoadAssetLayer(layer: LayerDefinition, logger: Logger): Promise<L
 
 		// Calculate bounding box of remaining points
 		// Inverse values by default, as we go through points
-		imageTrimArea = [1, 1, 0, 0]; // left, top, rightExclusive, bottomExclusive
+		imageTrimArea = [layer.width, layer.height, 0, 0]; // left, top, rightExclusive, bottomExclusive
 
 		for (let i = 0; i < calculatedPoints.length; i++) {
 			const point = calculatedPoints[i];
@@ -291,19 +293,17 @@ async function LoadAssetLayer(layer: LayerDefinition, logger: Logger): Promise<L
 				continue;
 
 			// Remap point to layerspace
-			const x = (point.pos[0] - (layer.x)) / (layer.width);
-			const x2 = (point.pos[0] + 1 - (layer.x)) / (layer.width);
-			const y = (point.pos[1] - (layer.y)) / (layer.height);
-			const y2 = (point.pos[1] + 1 - (layer.y)) / (layer.height);
+			const x = (point.pos[0] - (layer.x));
+			const y = (point.pos[1] - (layer.y));
 			// Recalculate minimums and maximums found
 			imageTrimArea[0] = Math.min(imageTrimArea[0], x); // left
 			imageTrimArea[1] = Math.min(imageTrimArea[1], y); // top
-			imageTrimArea[2] = Math.max(imageTrimArea[2], x2); // right
-			imageTrimArea[3] = Math.max(imageTrimArea[3], y2); // bottom
+			imageTrimArea[2] = Math.max(imageTrimArea[2], x); // right
+			imageTrimArea[3] = Math.max(imageTrimArea[3], y); // bottom
 		}
 		// Check against bad conditions
-		Assert(imageTrimArea[0] <= 1);
-		Assert(imageTrimArea[1] <= 1);
+		Assert(imageTrimArea[0] <= layer.width);
+		Assert(imageTrimArea[1] <= layer.height);
 		Assert(imageTrimArea[2] >= 0);
 		Assert(imageTrimArea[3] >= 0);
 
@@ -313,31 +313,45 @@ async function LoadAssetLayer(layer: LayerDefinition, logger: Logger): Promise<L
 		} else if (!(imageTrimArea[1] < imageTrimArea[3])) {
 			logger.warning('Trim area has non-positive height. Does the layer have no useful triangles?');
 			imageTrimArea = null;
-		} else if (imageTrimArea[0] < 0 || imageTrimArea[1] < 0 || imageTrimArea[2] > 1 || imageTrimArea[3] > 1) {
+		} else if (imageTrimArea[0] < 0 || imageTrimArea[1] < 0 || imageTrimArea[2] > layer.width || imageTrimArea[3] > layer.height) {
 			// TODO: Un-silence this once current problems are fixed
-			// logger.warning('Layer does not cover the used part of the mesh. This might cause graphical glitches.\n\t', imageTrimArea.map((v) => v.toFixed(2)).join(', '));
+			// logger.warning(
+			//    'Layer does not cover the used part of the mesh. This might cause graphical glitches.\n' +
+			//    '\tOverflow:\n' +
+			//    (imageTrimArea[0] < 0 ? `\t\tLeft: ${-imageTrimArea[0]}\n` : '') +
+			//    (imageTrimArea[1] < 0 ? `\t\tTop: ${-imageTrimArea[1]}\n` : '') +
+			//    (imageTrimArea[2] > layer.width ? `\t\tRight: ${(imageTrimArea[2] - layer.width)}\n` : '') +
+			//    (imageTrimArea[3] > layer.height ? `\t\tBottom: ${(imageTrimArea[3] - layer.height)}\n` : ''),
+			// );
 			imageTrimArea = null;
 		}
 	}
 
+	const normalizedImageTrimArea: LayerImageTrimArea = imageTrimArea != null ? [
+		imageTrimArea[0] / layer.width,
+		imageTrimArea[1] / layer.height,
+		imageTrimArea[2] / layer.width,
+		imageTrimArea[3] / layer.height,
+	] : null;
+
 	const result: LayerDefinition = {
 		...layer,
 		pointFilterMask: layerPointFilterMask,
-		image: LoadLayerImageSetting(layer.image, imageTrimArea),
+		image: LoadLayerImageSetting(layer.image, normalizedImageTrimArea),
 		scaling: layer.scaling && {
 			scaleBone: layer.scaling.scaleBone,
-			stops: layer.scaling.stops.map((stop) => [stop[0], LoadLayerImageSetting(stop[1], imageTrimArea)]),
+			stops: layer.scaling.stops.map((stop) => [stop[0], LoadLayerImageSetting(stop[1], normalizedImageTrimArea)]),
 		},
 	};
 	// Adjust layer size of we trimmed it down
 	if (imageTrimArea != null) {
-		const left = Math.floor(result.width * imageTrimArea[0]);
-		const top = Math.floor(result.height * imageTrimArea[1]);
+		const left = imageTrimArea[0];
+		const top = imageTrimArea[1];
 		result.x += left;
 		result.y += top;
 
-		result.width = Math.ceil(result.width * imageTrimArea[2]) - left;
-		result.height = Math.ceil(result.height * imageTrimArea[3]) - top;
+		result.width = imageTrimArea[2] - left;
+		result.height = imageTrimArea[3] - top;
 	}
 
 	return result;
