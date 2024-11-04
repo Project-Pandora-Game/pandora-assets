@@ -163,20 +163,29 @@ type SharpImageGenerator = (sharp: Sharp) => Sharp | Promise<Sharp>;
 
 class ImageManipulators {
 	public static addCutImageRelative(baseImage: IImageResource, left: number, top: number, right: number, bottom: number): IImageResource {
+		Assert(left >= 0);
+		Assert(top >= 0);
+		Assert(right <= 1);
+		Assert(bottom <= 1);
+		Assert(left < right);
+		Assert(top < bottom);
+
 		const suffix = `_${Math.round(100 * left)}` +
 			`_${Math.round(100 * top)}` +
 			`_${Math.round(100 * right)}` +
 			`_${Math.round(100 * bottom)}`;
 
 		return new GeneratedImageResource(baseImage, suffix, async (s) => {
-			const { info } = await s.toBuffer({ resolveWithObject: true });
+			const { info, data } = await s.toBuffer({ resolveWithObject: true });
 
 			const resultLeft = Math.floor(info.width * left);
 			const resultTop = Math.floor(info.height * top);
 			const resultWidth = Math.ceil(info.width * right) - resultLeft;
 			const resultHeight = Math.ceil(info.height * bottom) - resultTop;
 
-			return s.extract({
+			// We need to export to buffer and start the chain again from the buffer
+			// in order to avoid the limitations of sharp operation chaining
+			return sharp(data).extract({
 				left: resultLeft,
 				top: resultTop,
 				width: resultWidth,
