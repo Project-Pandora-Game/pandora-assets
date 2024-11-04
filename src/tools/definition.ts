@@ -1,15 +1,15 @@
+import { pick } from 'lodash-es';
 import { AssetId, GetLogger, PersonalAssetDefinition } from 'pandora-common';
+import { join } from 'path';
 import { AssetDatabase } from './assetDatabase.js';
-import { AssetSourcePath, DefaultId } from './context.js';
+import { AssetSourcePath, DefaultId, RegisterProcess } from './context.js';
 import { LoadAssetsGraphics } from './graphics.js';
 import { GraphicsDatabase } from './graphicsDatabase.js';
-import { join } from 'path';
-import { pick } from 'lodash-es';
-import { LoadAssetColorization } from './load_helpers/color.js';
 import { ValidateOwnershipData } from './licensing.js';
-import { PropertiesValidationMetadata, ValidateAssetProperties } from './validation/properties.js';
-import { ValidateAllModules } from './validation/modules.js';
+import { LoadAssetColorization } from './load_helpers/color.js';
 import { DefinePngResource, PREVIEW_SIZE } from './resources.js';
+import { ValidateAllModules } from './validation/modules.js';
+import { PropertiesValidationMetadata, ValidateAssetProperties } from './validation/properties.js';
 
 const DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Properties
@@ -39,6 +39,10 @@ const DEFINITION_FALLTHROUGH_PROPERTIES = [
 export type AssetDefinitionFallthroughProperties = (typeof DEFINITION_FALLTHROUGH_PROPERTIES)[number] & string;
 
 export function GlobalDefineAsset(def: IntermediatePersonalAssetDefinition): void {
+	RegisterProcess(GlobalDefineAssetProcess(def));
+}
+
+async function GlobalDefineAssetProcess(def: IntermediatePersonalAssetDefinition): Promise<void> {
 	const id: AssetId = `a/${def.id ?? DefaultId()}` as const;
 
 	const logger = GetLogger('DefineAsset', `[Asset ${id}]`);
@@ -102,7 +106,7 @@ export function GlobalDefineAsset(def: IntermediatePersonalAssetDefinition): voi
 
 	// Load and verify graphics
 	if (def.graphics) {
-		const graphics = LoadAssetsGraphics(join(AssetSourcePath, def.graphics), Object.keys(asset.modules ?? {}));
+		const graphics = await LoadAssetsGraphics(join(AssetSourcePath, def.graphics), Object.keys(asset.modules ?? {}));
 
 		const loggerGraphics = logger.prefixMessages('[Graphics]');
 

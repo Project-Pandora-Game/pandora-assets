@@ -75,6 +75,15 @@ export abstract class Resource {
 	}
 }
 
+export interface ImageBoundingBox {
+	left: number;
+	top: number;
+	rightExclusive: number;
+	bottomExclusive: number;
+	width: number;
+	height: number;
+}
+
 export interface IImageResource extends Resource {
 	/**
 	 * Cut part of the image. Coordinates should be passed in range [0, 1] and will be sized relative to the image size.
@@ -84,6 +93,9 @@ export interface IImageResource extends Resource {
 	addResizedImage(maxWidth: number, maxHeight: number, suffix: string): IImageResource;
 	addDownscaledImage(resolution: number): IImageResource;
 	addSizeCheck(exactWidth: number, exactHeight: number): void;
+
+	getContentBoundingBox(): Promise<ImageBoundingBox>;
+
 	loadImageSharp(): Sharp | Promise<Sharp>;
 }
 
@@ -151,10 +163,10 @@ type SharpImageGenerator = (sharp: Sharp) => Sharp | Promise<Sharp>;
 
 class ImageManipulators {
 	public static addCutImageRelative(baseImage: IImageResource, left: number, top: number, right: number, bottom: number): IImageResource {
-		const suffix = `_${left.toFixed(2).replace(/^0\./, '')}` +
-			`_${top.toFixed(2).replace(/^0\./, '')}` +
-			`_${right.toFixed(2).replace(/^0\./, '')}` +
-			`_${bottom.toFixed(2).replace(/^0\./, '')}`;
+		const suffix = `_${Math.round(100 * left)}` +
+			`_${Math.round(100 * top)}` +
+			`_${Math.round(100 * right)}` +
+			`_${Math.round(100 * bottom)}`;
 
 		return new GeneratedImageResource(baseImage, suffix, async (s) => {
 			const { info } = await s.toBuffer({ resolveWithObject: true });
@@ -197,6 +209,59 @@ class ImageManipulators {
 
 		return new GeneratedImageResource(baseImage, `_r${resolution}`, generator);
 	}
+
+	public static async getContentBoundingBox(imageResource: IImageResource): Promise<ImageBoundingBox> {
+		const image = await imageResource.loadImageSharp();
+		const { data, info } = await image
+			.ensureAlpha(1)
+			.extractChannel('alpha')
+			.raw()
+			.toBuffer({ resolveWithObject: true });
+
+		Assert(data.length === (info.width * info.height));
+
+		let left = info.width - 1;
+		let top = info.height - 1;
+		let rightExclusive = 0;
+		let bottomExclusive = 0;
+
+		for (let y = 0; y < info.height; y++) {
+			for (let x = 0; x < info.width; x++) {
+				const i = y * info.width + x;
+
+				// Check if the pixel is non-transparent
+				if (data[i] > 0) {
+					left = Math.min(left, x);
+					top = Math.min(top, y);
+					rightExclusive = Math.max(rightExclusive, x + 1);
+					bottomExclusive = Math.max(bottomExclusive, y + 1);
+				}
+			}
+		}
+
+		// Special case if the image is empty
+		if (left === (info.width - 1) && top === (info.height - 1) && rightExclusive === 0 && bottomExclusive === 0) {
+			return {
+				left: 0,
+				top: 0,
+				rightExclusive: 0,
+				bottomExclusive: 0,
+				width: info.width,
+				height: info.height,
+			};
+		}
+
+		Assert(left < rightExclusive);
+		Assert(top < bottomExclusive);
+		return {
+			left,
+			top,
+			rightExclusive,
+			bottomExclusive,
+			width: info.width,
+			height: info.height,
+		};
+	}
 }
 
 class ImageResource extends FileResource implements IImageResource {
@@ -216,6 +281,10 @@ class ImageResource extends FileResource implements IImageResource {
 
 	public addDownscaledImage(resolution: number): IImageResource {
 		return ImageManipulators.addDownscaledImage(this, resolution);
+	}
+
+	public getContentBoundingBox(): Promise<ImageBoundingBox> {
+		return ImageManipulators.getContentBoundingBox(this);
 	}
 
 	public addSizeCheck(exactWidth: number, exactHeight: number): void {
@@ -290,6 +359,10 @@ class GeneratedImageResource extends Resource implements IImageResource {
 
 	public addDownscaledImage(resolution: number): IImageResource {
 		return ImageManipulators.addDownscaledImage(this, resolution);
+	}
+
+	public getContentBoundingBox(): Promise<ImageBoundingBox> {
+		return ImageManipulators.getContentBoundingBox(this);
 	}
 
 	public addSizeCheck(exactWidth: number, exactHeight: number): void {

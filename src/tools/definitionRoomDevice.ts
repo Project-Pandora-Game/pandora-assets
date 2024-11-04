@@ -2,7 +2,7 @@ import { pick } from 'lodash-es';
 import { AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition } from 'pandora-common';
 import { join } from 'path';
 import { AssetDatabase } from './assetDatabase.js';
-import { AssetSourcePath, DefaultId } from './context.js';
+import { AssetSourcePath, DefaultId, RegisterProcess } from './context.js';
 import { GENERATED_RESOLUTIONS, LoadAssetsGraphics } from './graphics.js';
 import { GraphicsDatabase } from './graphicsDatabase.js';
 import { ValidateOwnershipData } from './licensing.js';
@@ -56,14 +56,14 @@ const ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES = [
 
 export type AssetRoomDeviceDefinitionFallthroughProperties = (typeof ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES)[number] & string;
 
-function DefineRoomDeviceWearablePart(
+async function DefineRoomDeviceWearablePart(
 	baseId: AssetId,
 	slot: string,
 	def: IntermediateRoomDeviceWearablePartDefinition,
 	colorizationKeys: ReadonlySet<string>,
 	propertiesValidationMetadata: RoomDevicePropertiesValidationMetadata,
 	preview: string | null,
-): AssetId | null {
+): Promise<AssetId | null> {
 	const id: AssetId = `${baseId}/${slot}` as const;
 
 	const logger = GetLogger('RoomDeviceWearablePart', `[Asset ${id}]`);
@@ -104,7 +104,7 @@ function DefineRoomDeviceWearablePart(
 
 	// Load and verify graphics
 	if (def.graphics) {
-		const graphics = LoadAssetsGraphics(join(AssetSourcePath, def.graphics), propertiesValidationMetadata.getModuleNames());
+		const graphics = await LoadAssetsGraphics(join(AssetSourcePath, def.graphics), propertiesValidationMetadata.getModuleNames());
 
 		const loggerGraphics = logger.prefixMessages('[Graphics]');
 
@@ -124,6 +124,10 @@ function DefineRoomDeviceWearablePart(
 }
 
 export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinition): void {
+	RegisterProcess(GlobalDefineRoomDeviceAssetProcess(def));
+}
+
+async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDefinition): Promise<void> {
 	const id: AssetId = `a/${def.id ?? DefaultId()}` as const;
 
 	const logger = GetLogger('DefineRoomDeviceAsset', `[Asset ${id}]`);
@@ -151,7 +155,7 @@ export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinitio
 	for (const [k, v] of Object.entries(def.slots)) {
 		slotIds.add(k);
 
-		const slotWearableId = DefineRoomDeviceWearablePart(id, k, v.asset, colorizationKeys, propertiesValidationMetadata, preview);
+		const slotWearableId = await DefineRoomDeviceWearablePart(id, k, v.asset, colorizationKeys, propertiesValidationMetadata, preview);
 		if (slotWearableId == null) {
 			definitionValid = false;
 			logger.error(`Failed to process asset for slot '${k}'`);

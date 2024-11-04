@@ -6,6 +6,7 @@ import {
 	Assert,
 	AssetGraphicsDefinition,
 	AssetGraphicsDefinitionSchema,
+	BitField,
 	CloneDeepMutable,
 	GetLogger,
 	LayerDefinition,
@@ -24,13 +25,15 @@ import { relative } from 'path';
 import { z } from 'zod';
 import { SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../constants.js';
 import { GraphicsDatabase } from './graphicsDatabase.js';
-import { DefineImageResource } from './resources.js';
+import { TriangleRectangleOverlap } from './math/intersections.js';
+import { CalculatePointsTriangles } from './math/triangulation.js';
+import { DefineImageResource, IImageResource } from './resources.js';
 import { AssetGraphicsValidate } from './validation/assetGraphics.js';
 import { WatchFile } from './watch.js';
 
 export const GENERATED_RESOLUTIONS: readonly number[] = [0.5, 0.25];
 
-export function LoadAssetsGraphics(path: string, assetModules: readonly string[]): AssetGraphicsDefinition {
+export async function LoadAssetsGraphics(path: string, assetModules: readonly string[]): Promise<AssetGraphicsDefinition> {
 	const logger = GetLogger('GraphicsValidation').prefixMessages(`Graphics definition '${relative(SRC_DIR, path)}':\n\t`);
 
 	WatchFile(path);
@@ -81,14 +84,18 @@ export function LoadAssetsGraphics(path: string, assetModules: readonly string[]
 	AssetGraphicsValidate(parseResult.data, logger);
 
 	return {
-		layers: parseResult.data.layers.map((l) => LoadAssetLayer(l, logger)),
+		layers: await Promise.all(parseResult.data.layers.map((l) => LoadAssetLayer(l, logger))),
 	};
 }
 
 type LayerImageTrimArea = [left: number, top: number, right: number, bottom: number] | null;
 
+function LoadLayerImageResource(image: string): IImageResource {
+	return DefineImageResource(image, 'asset', 'png');
+}
+
 function LoadLayerImage(image: string, imageTrimArea: LayerImageTrimArea): string {
-	let resource = DefineImageResource(image, 'asset', 'png');
+	let resource = LoadLayerImageResource(image);
 
 	if (imageTrimArea != null) {
 		resource = resource.addCutImageRelative(imageTrimArea[0], imageTrimArea[1], imageTrimArea[2], imageTrimArea[3]);
@@ -99,6 +106,31 @@ function LoadLayerImage(image: string, imageTrimArea: LayerImageTrimArea): strin
 	}
 
 	return resource.resultName;
+}
+
+function ListLayerImageSettingImages(setting: LayerImageSetting): IImageResource[] {
+	const resources = new Set<IImageResource>();
+
+	setting.overrides.forEach(({ image }) => {
+		if (image) {
+			resources.add(LoadLayerImageResource(image));
+		}
+	});
+
+	setting.alphaOverrides?.forEach(({ image }) => {
+		if (image) {
+			resources.add(LoadLayerImageResource(image));
+		}
+	});
+
+	if (setting.image) {
+		resources.add(LoadLayerImageResource(setting.image));
+	}
+	if (setting.alphaImage) {
+		resources.add(LoadLayerImageResource(setting.alphaImage));
+	}
+
+	return Array.from(resources);
 }
 
 function LoadLayerImageSetting(setting: LayerImageSetting, imageTrimArea: LayerImageTrimArea): LayerImageSetting {
@@ -121,7 +153,7 @@ function LoadLayerImageSetting(setting: LayerImageSetting, imageTrimArea: LayerI
 	};
 }
 
-function LoadAssetLayer(layer: LayerDefinition, logger: Logger): LayerDefinition {
+async function LoadAssetLayer(layer: LayerDefinition, logger: Logger): Promise<LayerDefinition> {
 	logger = logger.prefixMessages(`[Layer ${layer.name ?? '[unnamed]'}]`);
 
 	const pointTemplate = GraphicsDatabase.getPointTemplate(layer.points);
@@ -147,8 +179,28 @@ function LoadAssetLayer(layer: LayerDefinition, logger: Logger): LayerDefinition
 	if (hasUvManipulation) {
 		logger.debug('Layer has UV manipulation, skipping image trimming');
 	} else {
-		// Inverse values by default, as we go through points
-		imageTrimArea = [1, 1, 0, 0];
+		// Get all the images and their bounding boxes for this layer
+		const images = Array.from(new Set([
+			...ListLayerImageSettingImages(layer.image),
+			...(layer.scaling ? layer.scaling.stops.flatMap((stop) => ListLayerImageSettingImages(stop[1])) : []),
+		]));
+		const boundingBoxes = await Promise.all(images.map((i) => i.getContentBoundingBox()));
+		// Calculate total image bounding boxes
+		const imageBoundingBox = [1, 1, 0, 0]; // left, top, rightExclusive, bottomExclusive
+		for (const image of boundingBoxes) {
+			if (image.width === 0 || image.height === 0)
+				continue;
+			imageBoundingBox[0] = Math.min(imageBoundingBox[0], image.left / image.width);
+			imageBoundingBox[1] = Math.min(imageBoundingBox[1], image.top / image.height);
+			imageBoundingBox[2] = Math.max(imageBoundingBox[2], image.rightExclusive / image.width);
+			imageBoundingBox[3] = Math.max(imageBoundingBox[3], image.bottomExclusive / image.height);
+		}
+
+		if (!(imageBoundingBox[0] < imageBoundingBox[2]) || !(imageBoundingBox[1] < imageBoundingBox[3])) {
+			logger.warning('All layer\'s images are empty. This will produce empty mesh.');
+			imageBoundingBox[0] = 0;
+			imageBoundingBox[1] = 0;
+		}
 
 		// Calculate the actual points first (such as resolving mirrored points)
 		const calculatedPoints: Immutable<PointDefinitionCalculated[]> = pointTemplate
@@ -168,20 +220,54 @@ function LoadAssetLayer(layer: LayerDefinition, logger: Logger): LayerDefinition
 			];
 		}
 
-		for (const point of calculatedPoints) {
-			// Filter points based on point types
-			if (!PointMatchesPointType(point, pointTypes))
+		// Calculate point type filter
+		const pointTypeFilter = new BitField(calculatedPoints.length);
+		for (let i = 0; i < calculatedPoints.length; i++) {
+			pointTypeFilter.set(i, PointMatchesPointType(calculatedPoints[i], pointTypes));
+		}
+
+		// Generate the mesh triangles
+		const triangles = CalculatePointsTriangles(calculatedPoints, pointTypeFilter);
+
+		// Calculate which points are relevant to the image, excluding those that aren't
+		const pointFilter = new BitField(calculatedPoints.length);
+		{
+			// Rectangle corners for nicer calculation
+			const x1 = Math.floor(layer.x + imageBoundingBox[0] * layer.width);
+			const y1 = Math.floor(layer.y + imageBoundingBox[1] * layer.height);
+			const x2 = Math.ceil(layer.x + imageBoundingBox[2] * layer.width) - 1;
+			const y2 = Math.ceil(layer.y + imageBoundingBox[3] * layer.height) - 1;
+
+			// For each triangle determinate if it has intersection with the rectangle
+			for (const [a, b, c] of triangles) {
+				if (TriangleRectangleOverlap([calculatedPoints[a].pos, calculatedPoints[b].pos, calculatedPoints[c].pos], [x1, y1, x2, y2])) {
+					pointFilter.set(a, true);
+					pointFilter.set(b, true);
+					pointFilter.set(c, true);
+				}
+			}
+		}
+
+		// Calculate bounding box of remaining points
+		// Inverse values by default, as we go through points
+		imageTrimArea = [1, 1, 0, 0]; // left, top, rightExclusive, bottomExclusive
+
+		for (let i = 0; i < calculatedPoints.length; i++) {
+			const point = calculatedPoints[i];
+			// Filter points based on previous findings
+			if (!pointFilter.get(i))
 				continue;
 
-			let [x, y] = point.pos;
 			// Remap point to layerspace
-			x = (x - (layer.x)) / (layer.width);
-			y = (y - (layer.y)) / (layer.height);
+			const x = (point.pos[0] - (layer.x)) / (layer.width);
+			const x2 = (point.pos[0] + 1 - (layer.x)) / (layer.width);
+			const y = (point.pos[1] - (layer.y)) / (layer.height);
+			const y2 = (point.pos[1] + 1 - (layer.y)) / (layer.height);
 			// Recalculate minimums and maximums found
 			imageTrimArea[0] = Math.min(imageTrimArea[0], x); // left
 			imageTrimArea[1] = Math.min(imageTrimArea[1], y); // top
-			imageTrimArea[2] = Math.max(imageTrimArea[2], x); // right
-			imageTrimArea[3] = Math.max(imageTrimArea[3], y); // bottom
+			imageTrimArea[2] = Math.max(imageTrimArea[2], x2); // right
+			imageTrimArea[3] = Math.max(imageTrimArea[3], y2); // bottom
 		}
 		// Check against bad conditions
 		Assert(imageTrimArea[0] <= 1);
@@ -216,8 +302,9 @@ function LoadAssetLayer(layer: LayerDefinition, logger: Logger): LayerDefinition
 		const top = Math.floor(result.height * imageTrimArea[1]);
 		result.x += left;
 		result.y += top;
-		result.width = Math.ceil(result.width * (imageTrimArea[2] - imageTrimArea[0]));
-		result.height = Math.ceil(result.height * (imageTrimArea[3] - imageTrimArea[1]));
+
+		result.width = Math.ceil(result.width * imageTrimArea[2]) - left;
+		result.height = Math.ceil(result.height * imageTrimArea[3]) - top;
 	}
 
 	return result;

@@ -1,24 +1,24 @@
 import * as fs from 'fs';
-import { join, relative } from 'path';
 import ignore from 'ignore';
-import { GetLogger, SetConsoleOutput, LogLevel, AssetsDefinitionFile, AssetsGraphicsDefinitionFile, logConfig } from 'pandora-common';
-import { GlobalDefineAsset, SetCurrentContext } from './tools/index.js';
-import { AssetDatabase } from './tools/assetDatabase.js';
-import { CleanOldResources, ClearAllResources, DefineResourceInline, ExportAllResources, SetResourceDestinationDirectory } from './tools/resources.js';
-import { RunDev } from './tools/watch.js';
-import { LoadBoneNameValidation, boneDefinition } from './bones.js';
-import { GraphicsDatabase } from './tools/graphicsDatabase.js';
-import { BODYPARTS, ValidateBodyparts } from './bodyparts.js';
-import { ASSET_DEST_DIR, ASSET_SRC_DIR, OUT_DIR, IS_PRODUCTION_BUILD, BASE_DIR } from './constants.js';
-import { LoadTemplates } from './templates/index.js';
-import { POSE_PRESETS } from './posePresets.js';
-import { LoadGitData } from './tools/git.js';
-import { RoomDatabase } from './tools/roomDatabase.js';
-import { LoadBackgroundTags, LoadBackgrounds } from './backgrounds/backgrounds.js';
+import { AssetsDefinitionFile, AssetsGraphicsDefinitionFile, GetLogger, LogLevel, SetConsoleOutput, logConfig } from 'pandora-common';
+import { join, relative } from 'path';
 import { LoadAttributeNameValidation, LoadAttributes } from './attributes.js';
+import { LoadBackgroundTags, LoadBackgrounds } from './backgrounds/backgrounds.js';
+import { BODYPARTS, ValidateBodyparts } from './bodyparts.js';
+import { LoadBoneNameValidation, boneDefinition } from './bones.js';
+import { ASSET_DEST_DIR, ASSET_SRC_DIR, BASE_DIR, IS_PRODUCTION_BUILD, OUT_DIR } from './constants.js';
+import { POSE_PRESETS } from './posePresets.js';
 import { APPEARANCE_RANDOMIZATION_CONFIG } from './presets.js';
-import { GlobalDefineRoomDeviceAsset } from './tools/definitionRoomDevice.js';
+import { LoadTemplates } from './templates/index.js';
+import { AssetDatabase } from './tools/assetDatabase.js';
 import { GlobalDefineLockAsset } from './tools/definitionLock.js';
+import { GlobalDefineRoomDeviceAsset } from './tools/definitionRoomDevice.js';
+import { LoadGitData } from './tools/git.js';
+import { GraphicsDatabase } from './tools/graphicsDatabase.js';
+import { AwaitPendingProcesses, GlobalDefineAsset, SetCurrentContext } from './tools/index.js';
+import { CleanOldResources, ClearAllResources, DefineResourceInline, ExportAllResources, SetResourceDestinationDirectory } from './tools/resources.js';
+import { RoomDatabase } from './tools/roomDatabase.js';
+import { RunDev } from './tools/watch.js';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.VERBOSE);
@@ -136,6 +136,8 @@ async function Run() {
 			} catch (error) {
 				logger.error(`Error while importing assets/${category}/${asset}\n`, error);
 			}
+
+			await AwaitPendingProcesses();
 		}
 	}
 
