@@ -166,6 +166,9 @@ async function LoadAssetLayer(layer: LayerDefinition, logger: Logger): Promise<L
 	let hasUvManipulation: boolean = false;
 	if (layer.scaling != null) {
 		hasUvManipulation = true;
+		if (layer.scaling.stops.length === 0) {
+			logger.warning(`Has scaling enabled, but no scaling stops. Disable the scaling altogether if it isn't needed`);
+		}
 	}
 	if (layer.image.uvPose != null) {
 		hasUvManipulation = true;
