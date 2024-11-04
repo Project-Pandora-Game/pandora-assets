@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { Immutable } from 'immer';
 import { diffString } from 'json-diff';
-import { isEqual } from 'lodash';
+import { isEqual } from 'lodash-es';
 import {
 	Assert,
 	AssetGraphicsDefinition,
@@ -22,11 +22,11 @@ import {
 } from 'pandora-common';
 import { relative } from 'path';
 import { z } from 'zod';
-import { SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../constants';
-import { GraphicsDatabase } from './graphicsDatabase';
-import { DefineImageResource } from './resources';
-import { AssetGraphicsValidate } from './validation/assetGraphics';
-import { WatchFile } from './watch';
+import { SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../constants.js';
+import { GraphicsDatabase } from './graphicsDatabase.js';
+import { DefineImageResource } from './resources.js';
+import { AssetGraphicsValidate } from './validation/assetGraphics.js';
+import { WatchFile } from './watch.js';
 
 export const GENERATED_RESOLUTIONS: readonly number[] = [0.5, 0.25];
 

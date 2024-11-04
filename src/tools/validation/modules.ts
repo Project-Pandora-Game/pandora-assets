@@ -7,9 +7,9 @@ import {
 	IsObject,
 	Logger,
 } from 'pandora-common';
-import { IModuleConfigLockSlot } from 'pandora-common/dist/assets/modules/lockSlot';
-import { IModuleConfigStorage } from 'pandora-common/dist/assets/modules/storage';
-import { IModuleConfigTyped } from 'pandora-common/dist/assets/modules/typed';
+import { IModuleConfigLockSlot } from 'pandora-common/dist/assets/modules/lockSlot.js';
+import { IModuleConfigStorage } from 'pandora-common/dist/assets/modules/storage.js';
+import { IModuleConfigTyped } from 'pandora-common/dist/assets/modules/typed.js';
 
 interface ModuleValidationMetadata<TProperties, TPropertiesValidationMetadata> {
 	baseAssetDefinition: AssetBaseDefinition<AssetType, AssetRepoExtraArgs>;

@@ -2,7 +2,7 @@ type RectangleCompressed = import('pandora-common').RectangleCompressed;
 type CoordinatesCompressed = import('pandora-common').CoordinatesCompressed;
 type LayerPriority = import('pandora-common').LayerPriority;
 type LayerMirror = import('pandora-common').LayerMirror;
-type AllBones = import('./bones').AllBones;
+type AllBones = import('./bones.ts').AllBones;
 
 // Globals available to all assets
 declare function DefineAsset(def: IntermediatePersonalAssetDefinition): void;
@@ -11,9 +11,9 @@ declare function DefineLockAsset(def: IntermediateLockAssetDefinition): void;
 
 interface AssetRepoExtraArgs {
 	bones: AllBones;
-	bodyparts: import('./bodyparts').BodypartName;
-	attributes: import('./attributes').AttributeNames;
-	colorGroups: import('./colorGroups').ColorGroupNames;
+	bodyparts: import('./bodyparts.ts').BodypartName;
+	attributes: import('./attributes.ts').AttributeNames;
+	colorGroups: import('./colorGroups.ts').ColorGroupNames;
 }
 
 type AssetColorization = import('pandora-common').AssetColorization<AssetRepoExtraArgs>;
@@ -50,7 +50,7 @@ type AssetOwnershipData = {
 	licensing: LicensingInfo[];
 };
 
-interface IntermediatePersonalAssetDefinition extends Pick<import('pandora-common').PersonalAssetDefinition<AssetRepoExtraArgs>, import('./tools/definition').AssetDefinitionFallthroughProperties> {
+interface IntermediatePersonalAssetDefinition extends Pick<import('pandora-common').PersonalAssetDefinition<AssetRepoExtraArgs>, import('./tools/definition.ts').AssetDefinitionFallthroughProperties> {
 	id?: string;
 	graphics?: string;
 	/** Info about who owns the asset(s) */
@@ -58,7 +58,7 @@ interface IntermediatePersonalAssetDefinition extends Pick<import('pandora-commo
 	colorization?: Record<string, IntermediateAssetColorization>;
 }
 
-interface IntermediateRoomDeviceWearablePartDefinition extends Pick<import('pandora-common').RoomDeviceWearablePartAssetDefinition<AssetRepoExtraArgs>, import('./tools/definitionRoomDevice').RoomDeviceWearablePartAssetDefinitionFallthroughProperties> {
+interface IntermediateRoomDeviceWearablePartDefinition extends Pick<import('pandora-common').RoomDeviceWearablePartAssetDefinition<AssetRepoExtraArgs>, import('./tools/definitionRoomDevice.ts').RoomDeviceWearablePartAssetDefinitionFallthroughProperties> {
 	graphics?: string;
 }
 
@@ -67,14 +67,14 @@ interface IntermediateRoomDeviceSlotDefinition {
 	asset: IntermediateRoomDeviceWearablePartDefinition;
 }
 
-interface IntermediateRoomDeviceDefinition extends Pick<import('pandora-common').RoomDeviceAssetDefinition<AssetRepoExtraArgs>, import('./tools/definitionRoomDevice').AssetRoomDeviceDefinitionFallthroughProperties> {
+interface IntermediateRoomDeviceDefinition extends Pick<import('pandora-common').RoomDeviceAssetDefinition<AssetRepoExtraArgs>, import('./tools/definitionRoomDevice.ts').AssetRoomDeviceDefinitionFallthroughProperties> {
 	id?: string;
 	slots: Record<string, IntermediateRoomDeviceSlotDefinition>;
 	/** Info about who owns the asset(s) */
 	ownership: AssetOwnershipData;
 }
 
-interface IntermediateLockAssetDefinition extends Pick<import('pandora-common').LockAssetDefinition, import('./tools/definitionLock').LockAssetDefinitionFallthroughProperties> {
+interface IntermediateLockAssetDefinition extends Pick<import('pandora-common').LockAssetDefinition, import('./tools/definitionLock.ts').LockAssetDefinitionFallthroughProperties> {
 	id?: string;
 	/** Info about who owns the asset(s) */
 	ownership: AssetOwnershipData;
@@ -86,7 +86,7 @@ interface IntermediateRoomBackgroundDefinition extends Pick<import('pandora-comm
 > {
 	/** The background image of the chat room; must be in `jpg` format */
 	image: `${string}.jpg`;
-	tags: import('./backgrounds/backgrounds').BackgroundTagNames[];
+	tags: import('./backgrounds/backgrounds.ts').BackgroundTagNames[];
 	/** Data needed for correctly positioning characters and room devices inside the room */
 	calibration: import('pandora-common').RoomBackgroundCalibrationData;
 	/** Info about who owns the asset(s) */

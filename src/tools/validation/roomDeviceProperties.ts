@@ -2,7 +2,7 @@ import {
 	Logger,
 	RoomDeviceProperties,
 } from 'pandora-common';
-import { PropertiesValidationMetadata, ValidateAssetProperties } from './properties';
+import { PropertiesValidationMetadata, ValidateAssetProperties } from './properties.js';
 
 export interface RoomDevicePropertiesValidationMetadata extends PropertiesValidationMetadata {
 	getSlotNames: () => readonly string[];

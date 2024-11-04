@@ -1,6 +1,6 @@
 import type { Logger } from 'pandora-common';
-import { GitValidateResponsibleContributor } from './git';
-import { AssetSourcePath } from './context';
+import { GitValidateResponsibleContributor } from './git.js';
+import { AssetSourcePath } from './context.js';
 import { join } from 'path';
 import * as fs from 'fs';
 

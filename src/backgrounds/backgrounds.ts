@@ -1,4 +1,4 @@
-import { DefineRoomBackground } from '../tools/roomDefinition';
+import { DefineRoomBackground } from '../tools/roomDefinition.js';
 import { RoomBackgroundTagDefinition } from 'pandora-common';
 
 type CategoryDefinition = {

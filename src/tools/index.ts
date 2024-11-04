@@ -1,2 +1,2 @@
-export * from './definition';
-export * from './context';
+export * from './definition.js';
+export * from './context.js';

@@ -1,5 +1,5 @@
 import { AssetsPosePresets } from 'pandora-common';
-import { AllBones } from './bones';
+import { AllBones } from './bones.js';
 
 export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 	[

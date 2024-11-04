@@ -3,7 +3,7 @@
  * https://jestjs.io/docs/configuration
  * @type { import('ts-jest').JestConfigWithTsJest }
  */
-module.exports = {
+export default {
 	testPathIgnorePatterns: ['/node_modules/', '<rootDir>/dist/', '<rootDir>/pandora/'],
 	clearMocks: true,
 	collectCoverageFrom: ['src/**/*.ts', 'src/**/*.tsx'],

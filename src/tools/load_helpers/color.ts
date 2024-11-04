@@ -1,5 +1,5 @@
 import { HexRGBAColorStringSchema, Logger } from 'pandora-common';
-import { COLOR_GROUP_DEFINITION } from '../../colorGroups';
+import { COLOR_GROUP_DEFINITION } from '../../colorGroups.js';
 
 function ParseMinAlpha(logger: Logger, key: string, inputMinAlpha: number | `${number}%` | undefined): {
 	minAlpha: number | undefined;

@@ -1,4 +1,4 @@
-import { CreateHairColor } from '../../../helpers/hair_base';
+import { CreateHairColor } from '../../../helpers/hair_base.js';
 const { colorization, modules } = CreateHairColor(false);
 
 DefineAsset({

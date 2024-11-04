@@ -2,23 +2,23 @@ import * as fs from 'fs';
 import { join, relative } from 'path';
 import ignore from 'ignore';
 import { GetLogger, SetConsoleOutput, LogLevel, AssetsDefinitionFile, AssetsGraphicsDefinitionFile, logConfig } from 'pandora-common';
-import { GlobalDefineAsset, SetCurrentContext } from './tools';
-import { AssetDatabase } from './tools/assetDatabase';
-import { CleanOldResources, ClearAllResources, DefineResourceInline, ExportAllResources, SetResourceDestinationDirectory } from './tools/resources';
-import { RunDev } from './tools/watch';
-import { LoadBoneNameValidation, boneDefinition } from './bones';
-import { GraphicsDatabase } from './tools/graphicsDatabase';
-import { BODYPARTS, ValidateBodyparts } from './bodyparts';
-import { ASSET_DEST_DIR, ASSET_SRC_DIR, OUT_DIR, IS_PRODUCTION_BUILD, BASE_DIR } from './constants';
-import { LoadTemplates } from './templates';
-import { POSE_PRESETS } from './posePresets';
-import { LoadGitData } from './tools/git';
-import { RoomDatabase } from './tools/roomDatabase';
-import { LoadBackgroundTags, LoadBackgrounds } from './backgrounds/backgrounds';
-import { LoadAttributeNameValidation, LoadAttributes } from './attributes';
-import { APPEARANCE_RANDOMIZATION_CONFIG } from './presets';
-import { GlobalDefineRoomDeviceAsset } from './tools/definitionRoomDevice';
-import { GlobalDefineLockAsset } from './tools/definitionLock';
+import { GlobalDefineAsset, SetCurrentContext } from './tools/index.js';
+import { AssetDatabase } from './tools/assetDatabase.js';
+import { CleanOldResources, ClearAllResources, DefineResourceInline, ExportAllResources, SetResourceDestinationDirectory } from './tools/resources.js';
+import { RunDev } from './tools/watch.js';
+import { LoadBoneNameValidation, boneDefinition } from './bones.js';
+import { GraphicsDatabase } from './tools/graphicsDatabase.js';
+import { BODYPARTS, ValidateBodyparts } from './bodyparts.js';
+import { ASSET_DEST_DIR, ASSET_SRC_DIR, OUT_DIR, IS_PRODUCTION_BUILD, BASE_DIR } from './constants.js';
+import { LoadTemplates } from './templates/index.js';
+import { POSE_PRESETS } from './posePresets.js';
+import { LoadGitData } from './tools/git.js';
+import { RoomDatabase } from './tools/roomDatabase.js';
+import { LoadBackgroundTags, LoadBackgrounds } from './backgrounds/backgrounds.js';
+import { LoadAttributeNameValidation, LoadAttributes } from './attributes.js';
+import { APPEARANCE_RANDOMIZATION_CONFIG } from './presets.js';
+import { GlobalDefineRoomDeviceAsset } from './tools/definitionRoomDevice.js';
+import { GlobalDefineLockAsset } from './tools/definitionLock.js';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.VERBOSE);
@@ -59,7 +59,7 @@ function CheckErrors(printWarnings: boolean = true) {
 async function Run() {
 	logger.info('Building...');
 
-	const ig = ignore();
+	const ig = ignore.default();
 	ig.add(fs.readFileSync(join(BASE_DIR, '.gitignore'), 'utf-8'));
 
 	// Setup environment
@@ -131,10 +131,8 @@ async function Run() {
 			logger.verbose(`Processing assets/${category}/${asset}...`);
 
 			try {
-				const moduleName = join(assetDestPath, `${asset}.asset`);
-				delete require.cache[require.resolve(moduleName)];
-				// eslint-disable-next-line @typescript-eslint/no-require-imports
-				await require(moduleName);
+				const moduleName = join(assetDestPath, `${asset}.asset.js`);
+				await import(moduleName);
 			} catch (error) {
 				logger.error(`Error while importing assets/${category}/${asset}\n`, error);
 			}

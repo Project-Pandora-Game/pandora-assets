@@ -4,7 +4,9 @@
 		"types": [
 			"@types/node",
 			"@types/jest"
-		]
+		],
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext"
 	},
 	"include": [
 		"../src/**/*.d.ts",

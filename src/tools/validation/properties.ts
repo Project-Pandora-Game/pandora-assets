@@ -6,7 +6,7 @@ import {
 	BONE_MAX,
 	Logger,
 } from 'pandora-common';
-import { ATTRIBUTES_DEFINITION, AttributeNames } from '../../attributes';
+import { ATTRIBUTES_DEFINITION, AttributeNames } from '../../attributes.js';
 
 export interface PropertiesValidationMetadata {
 	getModuleNames: () => readonly string[];

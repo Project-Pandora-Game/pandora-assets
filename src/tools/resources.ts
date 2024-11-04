@@ -5,9 +5,9 @@ import { availableParallelism } from 'os';
 import { Assert, GetLogger, SplitStringFirstOccurrence } from 'pandora-common';
 import { basename, join } from 'path';
 import sharp, { type AvifOptions, type Sharp } from 'sharp';
-import { GENERATE_AVIF } from '../constants';
-import { AssetSourcePath } from './context';
-import { WatchFile } from './watch';
+import { GENERATE_AVIF } from '../constants.js';
+import { AssetSourcePath } from './context.js';
+import { WatchFile } from './watch.js';
 
 export type ImageCategory = 'asset' | 'roomDevice' | 'background' | 'preview';
 

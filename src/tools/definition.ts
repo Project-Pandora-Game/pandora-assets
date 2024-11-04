@@ -1,15 +1,15 @@
 import { AssetId, GetLogger, PersonalAssetDefinition } from 'pandora-common';
-import { AssetDatabase } from './assetDatabase';
-import { AssetSourcePath, DefaultId } from './context';
-import { LoadAssetsGraphics } from './graphics';
-import { GraphicsDatabase } from './graphicsDatabase';
+import { AssetDatabase } from './assetDatabase.js';
+import { AssetSourcePath, DefaultId } from './context.js';
+import { LoadAssetsGraphics } from './graphics.js';
+import { GraphicsDatabase } from './graphicsDatabase.js';
 import { join } from 'path';
-import { pick } from 'lodash';
-import { LoadAssetColorization } from './load_helpers/color';
-import { ValidateOwnershipData } from './licensing';
-import { PropertiesValidationMetadata, ValidateAssetProperties } from './validation/properties';
-import { ValidateAllModules } from './validation/modules';
-import { DefinePngResource, PREVIEW_SIZE } from './resources';
+import { pick } from 'lodash-es';
+import { LoadAssetColorization } from './load_helpers/color.js';
+import { ValidateOwnershipData } from './licensing.js';
+import { PropertiesValidationMetadata, ValidateAssetProperties } from './validation/properties.js';
+import { ValidateAllModules } from './validation/modules.js';
+import { DefinePngResource, PREVIEW_SIZE } from './resources.js';
 
 const DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Properties

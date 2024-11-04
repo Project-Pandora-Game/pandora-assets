@@ -1,9 +1,9 @@
 import { AssetId, GetLogger, LockAssetDefinition } from 'pandora-common';
-import { DefaultId } from './context';
-import { pick } from 'lodash';
-import { AssetDatabase } from './assetDatabase';
-import { ValidateOwnershipData } from './licensing';
-import { DefinePngResource, PREVIEW_SIZE } from './resources';
+import { DefaultId } from './context.js';
+import { pick } from 'lodash-es';
+import { AssetDatabase } from './assetDatabase.js';
+import { ValidateOwnershipData } from './licensing.js';
+import { DefinePngResource, PREVIEW_SIZE } from './resources.js';
 
 const LOCK_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Asset definition

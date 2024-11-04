@@ -4,6 +4,8 @@
 		"types": [
 			"@types/node"
 		],
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
 		"noEmit": false,
 		"outDir": "./dist"
 	},

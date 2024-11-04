@@ -2,8 +2,8 @@ import { GetLogger } from 'pandora-common';
 import { Server as HttpServer } from 'http';
 import { Server as HttpsServer } from 'https';
 import * as fs from 'fs';
-import express from 'express';
-import { SERVER_PORT, SERVER_BIND, SERVER_HTTPS_CERT, SERVER_HTTPS_KEY, OUT_DIR } from '../constants';
+import * as express from 'express';
+import { SERVER_PORT, SERVER_BIND, SERVER_HTTPS_CERT, SERVER_HTTPS_KEY, OUT_DIR } from '../constants.js';
 
 const logger = GetLogger('Server');
 
@@ -29,7 +29,7 @@ export function StartHttpServer(): Promise<void> {
 	}
 
 	// Setup Express application
-	const expressApp = express()
+	const expressApp = express.default()
 		.disable('x-powered-by');
 
 	expressApp.use(function (req, res, next) {

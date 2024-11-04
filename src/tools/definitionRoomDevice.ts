@@ -1,16 +1,16 @@
-import { pick } from 'lodash';
+import { pick } from 'lodash-es';
 import { AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition } from 'pandora-common';
 import { join } from 'path';
-import { AssetDatabase } from './assetDatabase';
-import { AssetSourcePath, DefaultId } from './context';
-import { GENERATED_RESOLUTIONS, LoadAssetsGraphics } from './graphics';
-import { GraphicsDatabase } from './graphicsDatabase';
-import { ValidateOwnershipData } from './licensing';
-import { LoadRoomDeviceColorization } from './load_helpers/color';
-import { DefineImageResource, DefinePngResource, PREVIEW_SIZE } from './resources';
-import { ValidateAllModules } from './validation/modules';
-import { ValidateAssetProperties } from './validation/properties';
-import { RoomDevicePropertiesValidationMetadata, ValidateRoomDeviceProperties } from './validation/roomDeviceProperties';
+import { AssetDatabase } from './assetDatabase.js';
+import { AssetSourcePath, DefaultId } from './context.js';
+import { GENERATED_RESOLUTIONS, LoadAssetsGraphics } from './graphics.js';
+import { GraphicsDatabase } from './graphicsDatabase.js';
+import { ValidateOwnershipData } from './licensing.js';
+import { LoadRoomDeviceColorization } from './load_helpers/color.js';
+import { DefineImageResource, DefinePngResource, PREVIEW_SIZE } from './resources.js';
+import { ValidateAllModules } from './validation/modules.js';
+import { ValidateAssetProperties } from './validation/properties.js';
+import { RoomDevicePropertiesValidationMetadata, ValidateRoomDeviceProperties } from './validation/roomDeviceProperties.js';
 
 const ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Properties
