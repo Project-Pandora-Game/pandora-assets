@@ -10,8 +10,8 @@
 	},
 	{
 		"pos": [
-			0,
-			1500
+			250,
+			0
 		],
 		"mirror": true,
 		"pointType": "static_r",
@@ -24,6 +24,159 @@
 		],
 		"mirror": false,
 		"pointType": "static",
+		"transforms": []
+	},
+	{
+		"pos": [
+			0,
+			250
+		],
+		"mirror": true,
+		"pointType": "static_r",
+		"transforms": []
+	},
+	{
+		"pos": [
+			250,
+			250
+		],
+		"mirror": true,
+		"pointType": "static_r",
+		"transforms": []
+	},
+	{
+		"pos": [
+			500,
+			250
+		],
+		"mirror": false,
+		"pointType": "static",
+		"transforms": []
+	},
+	{
+		"pos": [
+			0,
+			500
+		],
+		"mirror": true,
+		"pointType": "static_r",
+		"transforms": []
+	},
+	{
+		"pos": [
+			250,
+			500
+		],
+		"mirror": true,
+		"pointType": "static_r",
+		"transforms": []
+	},
+	{
+		"pos": [
+			500,
+			500
+		],
+		"mirror": false,
+		"pointType": "static",
+		"transforms": []
+	},
+	{
+		"pos": [
+			0,
+			750
+		],
+		"mirror": true,
+		"pointType": "static_r",
+		"transforms": []
+	},
+	{
+		"pos": [
+			250,
+			750
+		],
+		"mirror": true,
+		"pointType": "static_r",
+		"transforms": []
+	},
+	{
+		"pos": [
+			500,
+			750
+		],
+		"mirror": false,
+		"pointType": "static",
+		"transforms": []
+	},
+	{
+		"pos": [
+			0,
+			1000
+		],
+		"mirror": true,
+		"pointType": "static_r",
+		"transforms": []
+	},
+	{
+		"pos": [
+			250,
+			1000
+		],
+		"mirror": true,
+		"pointType": "static_r",
+		"transforms": []
+	},
+	{
+		"pos": [
+			500,
+			1000
+		],
+		"mirror": false,
+		"pointType": "static",
+		"transforms": []
+	},
+	{
+		"pos": [
+			0,
+			1250
+		],
+		"mirror": true,
+		"pointType": "static_r",
+		"transforms": []
+	},
+	{
+		"pos": [
+			250,
+			1250
+		],
+		"mirror": true,
+		"pointType": "static_r",
+		"transforms": []
+	},
+	{
+		"pos": [
+			500,
+			1250
+		],
+		"mirror": false,
+		"pointType": "static",
+		"transforms": []
+	},
+	{
+		"pos": [
+			0,
+			1500
+		],
+		"mirror": true,
+		"pointType": "static_r",
+		"transforms": []
+	},
+	{
+		"pos": [
+			250,
+			1500
+		],
+		"mirror": true,
+		"pointType": "static_r",
 		"transforms": []
 	},
 	{
