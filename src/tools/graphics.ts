@@ -175,6 +175,8 @@ async function LoadAssetLayer(layer: LayerDefinition, logger: Logger): Promise<L
 			hasUvManipulation = true;
 		}
 	}
+
+	let layerPointFilterMask = layer.pointFilterMask;
 	let imageTrimArea: LayerImageTrimArea = null;
 	if (hasUvManipulation) {
 		logger.debug('Layer has UV manipulation, skipping image trimming');
@@ -225,6 +227,19 @@ async function LoadAssetLayer(layer: LayerDefinition, logger: Logger): Promise<L
 		for (let i = 0; i < calculatedPoints.length; i++) {
 			pointTypeFilter.set(i, PointMatchesPointType(calculatedPoints[i], pointTypes));
 		}
+		// Apply existing point filter mask
+		if (layerPointFilterMask != null) {
+			const existingMask = new BitField(new Uint8Array(Buffer.from(layerPointFilterMask, 'base64')));
+			if (existingMask.length < calculatedPoints.length) {
+				logger.error(`Invalid pointFilterMask specified: Length ${existingMask.length} is smaller than point count (${calculatedPoints.length})`);
+			} else {
+				for (let i = 0; i < calculatedPoints.length; i++) {
+					if (!existingMask.get(i)) {
+						pointTypeFilter.set(i, false);
+					}
+				}
+			}
+		}
 
 		// Generate the mesh triangles
 		const triangles = CalculatePointsTriangles(calculatedPoints, pointTypeFilter);
@@ -244,8 +259,25 @@ async function LoadAssetLayer(layer: LayerDefinition, logger: Logger): Promise<L
 					pointFilter.set(a, true);
 					pointFilter.set(b, true);
 					pointFilter.set(c, true);
+
+					// All the points above should have already passed point type filter to reach this place
+					Assert(pointTypeFilter.get(a));
+					Assert(pointTypeFilter.get(b));
+					Assert(pointTypeFilter.get(c));
 				}
 			}
+		}
+
+		// Check if the point filter needs to be saved
+		let layerPointFilterMaskNeedsSave = false;
+		for (let i = 0; i < calculatedPoints.length; i++) {
+			if (pointTypeFilter.get(i) !== pointFilter.get(i)) {
+				layerPointFilterMaskNeedsSave = true;
+				break;
+			}
+		}
+		if (layerPointFilterMaskNeedsSave) {
+			layerPointFilterMask = Buffer.from(pointFilter.buffer).toString('base64');
 		}
 
 		// Calculate bounding box of remaining points
@@ -290,6 +322,7 @@ async function LoadAssetLayer(layer: LayerDefinition, logger: Logger): Promise<L
 
 	const result: LayerDefinition = {
 		...layer,
+		pointFilterMask: layerPointFilterMask,
 		image: LoadLayerImageSetting(layer.image, imageTrimArea),
 		scaling: layer.scaling && {
 			scaleBone: layer.scaling.scaleBone,
