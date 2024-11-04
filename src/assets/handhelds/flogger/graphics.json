@@ -2,9 +2,9 @@
 {
 	"layers": [
 		{
-			"x": -225,
+			"x": -250,
 			"y": 0,
-			"width": 1450,
+			"width": 1500,
 			"height": 1500,
 			"name": "slapper",
 			"priority": "BELOW_ARM_RIGHT",
@@ -57,9 +57,9 @@
 			}
 		},
 		{
-			"x": -225,
+			"x": -250,
 			"y": 0,
-			"width": 1450,
+			"width": 1500,
 			"height": 1500,
 			"name": "handle hand overlay",
 			"priority": "ABOVE_ARM_RIGHT",
@@ -97,9 +97,9 @@
 			}
 		},
 		{
-			"x": -225,
+			"x": -250,
 			"y": 0,
-			"width": 1450,
+			"width": 1500,
 			"height": 1500,
 			"name": "handle hand overlay back",
 			"priority": "BELOW_ARM_RIGHT",
@@ -137,9 +137,9 @@
 			}
 		},
 		{
-			"x": -225,
+			"x": -250,
 			"y": 0,
-			"width": 1450,
+			"width": 1500,
 			"height": 1500,
 			"name": "handle cc",
 			"priority": "ABOVE_ARM_RIGHT",
@@ -176,9 +176,9 @@
 			}
 		},
 		{
-			"x": -225,
+			"x": -250,
 			"y": 0,
-			"width": 1450,
+			"width": 1500,
 			"height": 1500,
 			"name": "handle",
 			"priority": "BELOW_ARM_RIGHT",
@@ -237,9 +237,9 @@
 			}
 		},
 		{
-			"x": -225,
+			"x": -250,
 			"y": 0,
-			"width": 1450,
+			"width": 1500,
 			"height": 1500,
 			"name": "handle hand overlay down",
 			"priority": "BELOW_ARM_RIGHT",
@@ -277,9 +277,9 @@
 			}
 		},
 		{
-			"x": -225,
+			"x": -250,
 			"y": 0,
-			"width": 1450,
+			"width": 1500,
 			"height": 1500,
 			"name": "handle hand overlay back down",
 			"priority": "ABOVE_ARM_RIGHT",
@@ -317,9 +317,9 @@
 			}
 		},
 		{
-			"x": -225,
+			"x": -250,
 			"y": 0,
-			"width": 1450,
+			"width": 1500,
 			"height": 1500,
 			"name": "handle cc",
 			"priority": "BELOW_ARM_RIGHT",
@@ -356,9 +356,9 @@
 			}
 		},
 		{
-			"x": -225,
+			"x": -250,
 			"y": 0,
-			"width": 1450,
+			"width": 1500,
 			"height": 1500,
 			"name": "handle back",
 			"priority": "ABOVE_ARM_RIGHT",

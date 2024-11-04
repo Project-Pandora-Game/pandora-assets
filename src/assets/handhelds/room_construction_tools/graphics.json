@@ -62,9 +62,9 @@
 			}
 		},
 		{
-			"x": -200,
+			"x": -250,
 			"y": 0,
-			"width": 1400,
+			"width": 1500,
 			"height": 1500,
 			"name": "handle",
 			"priority": "BELOW_ARM_RIGHT",
@@ -224,9 +224,9 @@
 			}
 		},
 		{
-			"x": -200,
+			"x": -250,
 			"y": 0,
-			"width": 1400,
+			"width": 1500,
 			"height": 1500,
 			"name": "handle back",
 			"priority": "ABOVE_ARM_RIGHT",
