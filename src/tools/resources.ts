@@ -82,7 +82,7 @@ export interface IImageResource extends Resource {
 	addCutImageRelative(left: number, top: number, right: number, bottom: number): IImageResource;
 
 	addResizedImage(maxWidth: number, maxHeight: number, suffix: string): IImageResource;
-	addDownscaledImage(resolution: number): string;
+	addDownscaledImage(resolution: number): IImageResource;
 	addSizeCheck(exactWidth: number, exactHeight: number): void;
 	loadImageSharp(): Sharp | Promise<Sharp>;
 }
@@ -149,20 +149,14 @@ class InlineResource extends Resource {
 
 type SharpImageGenerator = (sharp: Sharp) => Sharp | Promise<Sharp>;
 
-class ImageResource extends FileResource implements IImageResource {
-	constructor(path: string, category: ImageCategory) {
-		super(path);
-		CheckMaxSize(this, path, category);
-		this._addAVIFConversion('', (s) => s);
-	}
-
-	public addCutImageRelative(left: number, top: number, right: number, bottom: number): IImageResource {
+class ImageManipulators {
+	public static addCutImageRelative(baseImage: IImageResource, left: number, top: number, right: number, bottom: number): IImageResource {
 		const suffix = `_${left.toFixed(2).replace(/^0\./, '')}` +
 			`_${top.toFixed(2).replace(/^0\./, '')}` +
 			`_${right.toFixed(2).replace(/^0\./, '')}` +
 			`_${bottom.toFixed(2).replace(/^0\./, '')}`;
 
-		return new GeneratedImageResource(this, suffix, async (s) => {
+		return new GeneratedImageResource(baseImage, suffix, async (s) => {
 			const { info } = await s.toBuffer({ resolveWithObject: true });
 
 			const resultLeft = Math.floor(info.width * left);
@@ -179,11 +173,11 @@ class ImageResource extends FileResource implements IImageResource {
 		});
 	}
 
-	public addResizedImage(maxWidth: number, maxHeight: number, suffix: string): IImageResource {
-		return new GeneratedImageResource(this, `_${suffix}`, (s) => s.resize(maxWidth, maxHeight));
+	public static addResizedImage(baseImage: IImageResource, maxWidth: number, maxHeight: number, suffix: string): IImageResource {
+		return new GeneratedImageResource(baseImage, `_${suffix}`, (s) => s.resize(maxWidth, maxHeight));
 	}
 
-	public addDownscaledImage(resolution: number): string {
+	public static addDownscaledImage(baseImage: IImageResource, resolution: number): IImageResource {
 		const generator = async (s: Sharp): Promise<Sharp> => {
 			// Skip downscaling in CI to speed things up by a lot.
 			if (process.env.CI_SKIP_DOWNSCALE === 'true') {
@@ -201,24 +195,27 @@ class ImageResource extends FileResource implements IImageResource {
 				.sharpen();
 		};
 
-		this._addAVIFConversion(`_r${resolution}`, generator);
+		return new GeneratedImageResource(baseImage, `_r${resolution}`, generator);
+	}
+}
 
-		const name = `${this.baseName}_r${resolution}.${this.extension}`;
-		if (resourceFiles.has(name))
-			return name;
+class ImageResource extends FileResource implements IImageResource {
+	constructor(path: string, category: ImageCategory) {
+		super(path);
+		CheckMaxSize(this, path, category);
+		this._addAVIFConversion();
+	}
 
-		// Prevent the generated source from being deleted
-		resourceFiles.add(name);
+	public addCutImageRelative(left: number, top: number, right: number, bottom: number): IImageResource {
+		return ImageManipulators.addCutImageRelative(this, left, top, right, bottom);
+	}
 
-		this.addProcess(async () => {
-			const dest = join(destinationDirectory, name);
-			if (await IsFile(dest))
-				return;
+	public addResizedImage(maxWidth: number, maxHeight: number, suffix: string): IImageResource {
+		return ImageManipulators.addResizedImage(this, maxWidth, maxHeight, suffix);
+	}
 
-			await (await generator(this.loadImageSharp()))
-				.toFile(dest);
-		});
-		return name;
+	public addDownscaledImage(resolution: number): IImageResource {
+		return ImageManipulators.addDownscaledImage(this, resolution);
 	}
 
 	public addSizeCheck(exactWidth: number, exactHeight: number): void {
@@ -230,11 +227,11 @@ class ImageResource extends FileResource implements IImageResource {
 		});
 	}
 
-	private _addAVIFConversion(suffix: string, process: SharpImageGenerator): void {
+	private _addAVIFConversion(): void {
 		if (!GENERATE_AVIF)
 			return;
 
-		const name = `${this.baseName}${suffix}_${AVIF_SUFFIX}.avif`;
+		const name = `${this.baseName}_${AVIF_SUFFIX}.avif`;
 		if (resourceFiles.has(name))
 			return;
 
@@ -244,7 +241,7 @@ class ImageResource extends FileResource implements IImageResource {
 			if (await IsFile(dest))
 				return;
 
-			await (await process(this.loadImageSharp()))
+			await (this.loadImageSharp())
 				.toFormat('avif', AVIF_OPTIONS)
 				.toFile(dest);
 		});
@@ -280,67 +277,19 @@ class GeneratedImageResource extends Resource implements IImageResource {
 			});
 		}
 
-		this._addAVIFConversion('', (s) => s);
+		this._addAVIFConversion();
 	}
 
 	public addCutImageRelative(left: number, top: number, right: number, bottom: number): IImageResource {
-		return new GeneratedImageResource(this, `_${left}_${top}_${right}_${bottom}`, async (s) => {
-			const { info } = await s.toBuffer({ resolveWithObject: true });
-
-			const resultLeft = Math.floor(info.width * left);
-			const resultTop = Math.floor(info.height * top);
-			const resultWidth = Math.ceil(info.width * right) - resultLeft;
-			const resultHeight = Math.ceil(info.height * bottom) - resultTop;
-
-			return s.extract({
-				left: resultLeft,
-				top: resultTop,
-				width: resultWidth,
-				height: resultHeight,
-			});
-		});
+		return ImageManipulators.addCutImageRelative(this, left, top, right, bottom);
 	}
 
 	public addResizedImage(maxWidth: number, maxHeight: number, suffix: string): IImageResource {
-		return new GeneratedImageResource(this, `_${suffix}`, (s) => s.resize(maxWidth, maxHeight));
+		return ImageManipulators.addResizedImage(this, maxWidth, maxHeight, suffix);
 	}
 
-	public addDownscaledImage(resolution: number): string {
-		const generator = async (s: Sharp): Promise<Sharp> => {
-			// Skip downscaling in CI to speed things up by a lot.
-			if (process.env.CI_SKIP_DOWNSCALE === 'true') {
-				return s;
-			}
-
-			const { info } = await s.toBuffer({ resolveWithObject: true });
-
-			return s
-				.resize(Math.ceil(resolution * info.width), Math.ceil(resolution * info.height), {
-					fit: 'fill',
-					kernel: 'lanczos3',
-					fastShrinkOnLoad: false,
-				})
-				.sharpen();
-		};
-
-		this._addAVIFConversion(`_r${resolution}`, generator);
-
-		const name = `${this.baseName}_r${resolution}.${this.extension}`;
-		if (resourceFiles.has(name))
-			return name;
-
-		// Prevent the generated source from being deleted
-		resourceFiles.add(name);
-
-		this.addProcess(async () => {
-			const dest = join(destinationDirectory, name);
-			if (await IsFile(dest))
-				return;
-
-			await (await generator(await this.loadImageSharp()))
-				.toFile(dest);
-		});
-		return name;
+	public addDownscaledImage(resolution: number): IImageResource {
+		return ImageManipulators.addDownscaledImage(this, resolution);
 	}
 
 	public addSizeCheck(exactWidth: number, exactHeight: number): void {
@@ -352,11 +301,11 @@ class GeneratedImageResource extends Resource implements IImageResource {
 		});
 	}
 
-	private _addAVIFConversion(suffix: string, process: SharpImageGenerator): void {
+	private _addAVIFConversion(): void {
 		if (!GENERATE_AVIF)
 			return;
 
-		const name = `${this.baseName}${suffix}_${AVIF_SUFFIX}.avif`;
+		const name = `${this.baseName}_${AVIF_SUFFIX}.avif`;
 		if (resourceFiles.has(name))
 			return;
 
@@ -366,7 +315,7 @@ class GeneratedImageResource extends Resource implements IImageResource {
 			if (await IsFile(dest))
 				return;
 
-			await (await process(await this.loadImageSharp()))
+			await (await this.loadImageSharp())
 				.toFormat('avif', AVIF_OPTIONS)
 				.toFile(dest);
 		});
