@@ -1,6 +1,7 @@
 import { pick } from 'lodash-es';
 import { Assert, AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition } from 'pandora-common';
 import { join } from 'path';
+import { OPTIMIZE_TEXTURES } from '../constants.js';
 import { AssetDatabase } from './assetDatabase.js';
 import { AssetSourcePath, DefaultId, RegisterProcess } from './context.js';
 import { GENERATED_RESOLUTIONS, LoadAssetsGraphics } from './graphics.js';
@@ -221,33 +222,38 @@ async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDef
 			let minX = Infinity;
 			let minY = Infinity;
 			const boundingBoxes = new Map<string, ImageBoundingBox>();
-			const boundingBoxesCalculation = await Promise.all(
-				images.map((i) => loadLayerImageResource(i).getContentBoundingBox().then((box) => [i, box] as const)),
-			);
-			for (const [image, boundingBox] of boundingBoxesCalculation) {
-				boundingBoxes.set(image, boundingBox);
+			if (OPTIMIZE_TEXTURES) {
+				const boundingBoxesCalculation = await Promise.all(
+					images.map((i) => loadLayerImageResource(i).getContentBoundingBox().then((box) => [i, box] as const)),
+				);
+				for (const [image, boundingBox] of boundingBoxesCalculation) {
+					boundingBoxes.set(image, boundingBox);
 
-				if (boundingBox.width === 0 || boundingBox.height === 0)
-					continue;
+					if (boundingBox.width === 0 || boundingBox.height === 0)
+						continue;
 
-				minX = Math.min(minX, boundingBox.left);
-				minY = Math.min(minY, boundingBox.top);
-			}
+					minX = Math.min(minX, boundingBox.left);
+					minY = Math.min(minY, boundingBox.top);
+				}
 
-			Assert(minX >= 0);
-			Assert(minY >= 0);
-			if (!Number.isFinite(minX) || !Number.isFinite(minY)) {
-				logger.warning('All layer\'s images are empty.');
+				Assert(minX >= 0);
+				Assert(minY >= 0);
+				if (!Number.isFinite(minX) || !Number.isFinite(minY)) {
+					logger.warning('All layer\'s images are empty.');
+					minX = 0;
+					minY = 0;
+				} else {
+					layer.offset ??= { x: 0, y: 0 };
+					layer.offset.x += minX;
+					layer.offset.y += minY;
+					for (const override of (layer.offsetOverrides ?? [])) {
+						override.offset.x += minX;
+						override.offset.y += minY;
+					}
+				}
+			} else {
 				minX = 0;
 				minY = 0;
-			} else {
-				layer.offset ??= { x: 0, y: 0 };
-				layer.offset.x += minX;
-				layer.offset.y += minY;
-				for (const override of (layer.offsetOverrides ?? [])) {
-					override.offset.x += minX;
-					override.offset.y += minY;
-				}
 			}
 
 			layer.image = layer.image && loadLayerImage(layer.image, minX, minY, boundingBoxes.get(layer.image));

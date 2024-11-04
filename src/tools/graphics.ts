@@ -23,7 +23,7 @@ import {
 } from 'pandora-common';
 import { relative } from 'path';
 import { z } from 'zod';
-import { SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../constants.js';
+import { OPTIMIZE_TEXTURES, SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../constants.js';
 import { GraphicsDatabase } from './graphicsDatabase.js';
 import { TriangleRectangleOverlap } from './math/intersections.js';
 import { CalculatePointsTriangles } from './math/triangulation.js';
@@ -181,15 +181,16 @@ async function LoadAssetLayer(layer: LayerDefinition, logger: Logger): Promise<L
 
 	let layerPointFilterMask = layer.pointFilterMask;
 	let imageTrimArea: LayerImageTrimArea = null;
-	if (hasUvManipulation) {
-		logger.debug('Layer has UV manipulation, skipping image trimming');
+	if (!OPTIMIZE_TEXTURES) {
+		// NOOP
+	} else if (hasUvManipulation) {
+		logger.debug('Layer has UV manipulation, skipping texture optimization');
 	} else {
 		// Get all the images and their bounding boxes for this layer
 		const images = Array.from(new Set([
 			...ListLayerImageSettingImages(layer.image),
 			...(layer.scaling ? layer.scaling.stops.flatMap((stop) => ListLayerImageSettingImages(stop[1])) : []),
 		]));
-		logger.debug('Image set:', images.map((i) => i.baseName).join(', '));
 		const boundingBoxes = await Promise.all(images.map((i) => i.getContentBoundingBox()));
 		// Calculate total image bounding boxes
 		const imageBoundingBox = [1, 1, 0, 0]; // left, top, rightExclusive, bottomExclusive
@@ -256,7 +257,6 @@ async function LoadAssetLayer(layer: LayerDefinition, logger: Logger): Promise<L
 			const y1 = Math.floor(layer.y + imageBoundingBox[1] * layer.height);
 			const x2 = Math.ceil(layer.x + imageBoundingBox[2] * layer.width) - 1;
 			const y2 = Math.ceil(layer.y + imageBoundingBox[3] * layer.height) - 1;
-			logger.debug(`Bounding rectangle: x: ${x1}  y: ${y1}  w: ${x2 - x1 + 1}  h: ${y2 - y1 + 1}`);
 
 			// For each triangle determinate if it has intersection with the rectangle
 			for (const [a, b, c] of triangles) {

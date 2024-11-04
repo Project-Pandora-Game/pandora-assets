@@ -12,6 +12,7 @@ export const SERVER_HTTPS_KEY = process.env.SERVER_HTTPS_KEY ?? '';
 //#endregion
 
 export const GENERATE_AVIF = process.env.GENERATE_AVIF === 'true';
+export const OPTIMIZE_TEXTURES = process.env.OPTIMIZE_TEXTURES === 'true';
 
 export const BASE_DIR = join(import.meta.dirname, '..');
 
