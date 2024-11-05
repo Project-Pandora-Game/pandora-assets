@@ -15,7 +15,8 @@ import { GlobalDefineLockAsset } from './tools/definitionLock.js';
 import { GlobalDefineRoomDeviceAsset } from './tools/definitionRoomDevice.js';
 import { LoadGitData } from './tools/git.js';
 import { GraphicsDatabase } from './tools/graphicsDatabase.js';
-import { AwaitPendingProcesses, GlobalDefineAsset, SetCurrentContext } from './tools/index.js';
+import { AssetImportContext, SetCurrentImportContext } from './tools/importContext.js';
+import { GlobalDefineAsset, SetCurrentContext } from './tools/index.js';
 import { CleanOldResources, ClearAllResources, DefineResourceInline, ExportAllResources, SetResourceDestinationDirectory } from './tools/resources.js';
 import { RoomDatabase } from './tools/roomDatabase.js';
 import { RunDev } from './tools/watch.js';
@@ -56,6 +57,8 @@ function CheckErrors(printWarnings: boolean = true) {
 	return true;
 }
 
+const assetProcesses: AssetImportContext[] = [];
+
 async function Run() {
 	logger.info('Building...');
 
@@ -93,51 +96,77 @@ async function Run() {
 	const tags = LoadBackgroundTags();
 	LoadBackgrounds();
 
-	logger.info('Loading assets...');
-	for (const category of fs.readdirSync(ASSET_SRC_DIR)) {
-		const categorySrcPath = join(ASSET_SRC_DIR, category);
-		const categoryDestPath = join(ASSET_DEST_DIR, category);
+	// Do not repeat the import phase on re-run
+	if (assetProcesses.length === 0) {
+		logger.info('Loading assets...');
+		for (const category of fs.readdirSync(ASSET_SRC_DIR)) {
+			const categorySrcPath = join(ASSET_SRC_DIR, category);
+			const categoryDestPath = join(ASSET_DEST_DIR, category);
 
-		// Ignore non-directories in assets
-		if (!IsDirectory(categorySrcPath))
-			continue;
+			// Ignore non-directories in assets
+			if (!IsDirectory(categorySrcPath))
+				continue;
 
-		if (!IsDirectory(categoryDestPath)) {
-			throw new Error(`assets/${category} is not directory`);
+			if (!IsDirectory(categoryDestPath)) {
+				throw new Error(`assets/${category} is not directory`);
+			}
+
+			for (const asset of fs.readdirSync(categorySrcPath)) {
+				const assetDestPath = join(categoryDestPath, asset);
+				const assetSrcPath = join(categorySrcPath, asset);
+
+				if (ig.ignores(relative(process.cwd(), assetSrcPath))) {
+					logger.verbose(`Ignoring assets/${category}/${asset}...`);
+					continue;
+				}
+				if (!IsDirectory(assetSrcPath)) {
+					logger.warning(`assets/${category}/${asset} is not directory`);
+					continue;
+				}
+				if (!IsFile(join(assetSrcPath, `${asset}.asset.ts`))) {
+					logger.error(`assets/${category}/${asset} expected asset file '${asset}.asset.ts' not found`);
+					continue;
+				}
+				if (!IsDirectory(assetDestPath)) {
+					throw new Error(`assets/${category}/${asset} is not directory`);
+				}
+
+				const assetContext: AssetImportContext = {
+					category,
+					asset,
+					assetSourcePath: assetSrcPath,
+					processes: [],
+				};
+
+				SetCurrentImportContext(assetContext);
+
+				try {
+					const moduleName = join(assetDestPath, `${asset}.asset.js`);
+					await import(moduleName);
+					assetProcesses.push(assetContext);
+				} catch (error) {
+					logger.error(`Error while importing assets/${category}/${asset}\n`, error);
+				}
+			}
 		}
+	}
 
-		for (const asset of fs.readdirSync(categorySrcPath)) {
-			const assetDestPath = join(categoryDestPath, asset);
-			const assetSrcPath = join(categorySrcPath, asset);
+	if (!CheckErrors(false))
+		return;
 
-			if (ig.ignores(relative(process.cwd(), assetSrcPath))) {
-				logger.verbose(`Ignoring assets/${category}/${asset}...`);
-				continue;
+	SetCurrentImportContext(null);
+
+	logger.info('Processing assets...');
+	for (const { category, asset, assetSourcePath, processes } of assetProcesses) {
+		logger.verbose(`Processing assets/${category}/${asset}...`);
+		SetCurrentContext(category, asset, assetSourcePath);
+
+		const pending = processes.map((p) => p());
+		const results = await Promise.allSettled(pending);
+		for (const result of results) {
+			if (result.status === 'rejected') {
+				GetLogger('Processing').error('Processing failed:\n', result.reason);
 			}
-			if (!IsDirectory(assetSrcPath)) {
-				logger.warning(`assets/${category}/${asset} is not directory`);
-				continue;
-			}
-			if (!IsFile(join(assetSrcPath, `${asset}.asset.ts`))) {
-				logger.error(`assets/${category}/${asset} expected asset file '${asset}.asset.ts' not found`);
-				continue;
-			}
-			if (!IsDirectory(assetDestPath)) {
-				throw new Error(`assets/${category}/${asset} is not directory`);
-			}
-
-			SetCurrentContext(category, asset, assetSrcPath);
-
-			logger.verbose(`Processing assets/${category}/${asset}...`);
-
-			try {
-				const moduleName = join(assetDestPath, `${asset}.asset.js`);
-				await import(moduleName);
-			} catch (error) {
-				logger.error(`Error while importing assets/${category}/${asset}\n`, error);
-			}
-
-			await AwaitPendingProcesses();
 		}
 	}
 

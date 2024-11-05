@@ -1,7 +1,8 @@
+import { cloneDeep, pick } from 'lodash-es';
 import { AssetId, GetLogger, LockAssetDefinition } from 'pandora-common';
-import { DefaultId } from './context.js';
-import { pick } from 'lodash-es';
 import { AssetDatabase } from './assetDatabase.js';
+import { DefaultId } from './context.js';
+import { RegisterImportContextProcess } from './importContext.js';
 import { ValidateOwnershipData } from './licensing.js';
 import { DefinePngResource, PREVIEW_SIZE } from './resources.js';
 
@@ -20,6 +21,11 @@ const LOCK_DEFINITION_FALLTHROUGH_PROPERTIES = [
 export type LockAssetDefinitionFallthroughProperties = typeof LOCK_DEFINITION_FALLTHROUGH_PROPERTIES[number];
 
 export function GlobalDefineLockAsset(def: IntermediateLockAssetDefinition): void {
+	RegisterImportContextProcess(() => GlobalDefineLockAssetProcess(cloneDeep(def)));
+}
+
+// eslint-disable-next-line @typescript-eslint/require-await
+async function GlobalDefineLockAssetProcess(def: IntermediateLockAssetDefinition): Promise<void> {
 	const id: AssetId = `a/${def.id ?? DefaultId()}` as const;
 
 	const logger = GetLogger(`DefineLockAsset`, `[Asset ${id}]`);

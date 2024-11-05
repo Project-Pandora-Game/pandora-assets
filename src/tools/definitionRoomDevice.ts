@@ -1,11 +1,12 @@
-import { pick } from 'lodash-es';
+import { cloneDeep, pick } from 'lodash-es';
 import { Assert, AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition } from 'pandora-common';
 import { join } from 'path';
 import { OPTIMIZE_TEXTURES } from '../constants.js';
 import { AssetDatabase } from './assetDatabase.js';
-import { AssetSourcePath, DefaultId, RegisterProcess } from './context.js';
+import { AssetSourcePath, DefaultId } from './context.js';
 import { GENERATED_RESOLUTIONS, LoadAssetsGraphics } from './graphics.js';
 import { GraphicsDatabase } from './graphicsDatabase.js';
+import { RegisterImportContextProcess } from './importContext.js';
 import { ValidateOwnershipData } from './licensing.js';
 import { LoadRoomDeviceColorization } from './load_helpers/color.js';
 import { DefineImageResource, DefinePngResource, IImageResource, ImageBoundingBox, PREVIEW_SIZE } from './resources.js';
@@ -125,7 +126,7 @@ async function DefineRoomDeviceWearablePart(
 }
 
 export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinition): void {
-	RegisterProcess(GlobalDefineRoomDeviceAssetProcess(def));
+	RegisterImportContextProcess(() => GlobalDefineRoomDeviceAssetProcess(cloneDeep(def)));
 }
 
 async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDefinition): Promise<void> {

@@ -1,10 +1,11 @@
-import { pick } from 'lodash-es';
+import { cloneDeep, pick } from 'lodash-es';
 import { AssetId, GetLogger, PersonalAssetDefinition } from 'pandora-common';
 import { join } from 'path';
 import { AssetDatabase } from './assetDatabase.js';
-import { AssetSourcePath, DefaultId, RegisterProcess } from './context.js';
+import { AssetSourcePath, DefaultId } from './context.js';
 import { LoadAssetsGraphics } from './graphics.js';
 import { GraphicsDatabase } from './graphicsDatabase.js';
+import { RegisterImportContextProcess } from './importContext.js';
 import { ValidateOwnershipData } from './licensing.js';
 import { LoadAssetColorization } from './load_helpers/color.js';
 import { DefinePngResource, PREVIEW_SIZE } from './resources.js';
@@ -39,7 +40,7 @@ const DEFINITION_FALLTHROUGH_PROPERTIES = [
 export type AssetDefinitionFallthroughProperties = (typeof DEFINITION_FALLTHROUGH_PROPERTIES)[number] & string;
 
 export function GlobalDefineAsset(def: IntermediatePersonalAssetDefinition): void {
-	RegisterProcess(GlobalDefineAssetProcess(def));
+	RegisterImportContextProcess(() => GlobalDefineAssetProcess(cloneDeep(def)));
 }
 
 async function GlobalDefineAssetProcess(def: IntermediatePersonalAssetDefinition): Promise<void> {
