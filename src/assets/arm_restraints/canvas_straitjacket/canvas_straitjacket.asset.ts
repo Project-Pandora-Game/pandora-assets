@@ -9,7 +9,7 @@ DefineAsset({
 		},
 		straps: {
 			name: 'Straps',
-			default: '#EDDCDC',
+			default: '#E7CEB5',
 		},
 	},
 	// size:425, y:370, centered
