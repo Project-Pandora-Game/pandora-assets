@@ -2,6 +2,7 @@ import * as fs from 'fs';
 import ignore from 'ignore';
 import { AssetsDefinitionFile, AssetsGraphicsDefinitionFile, GetLogger, LogLevel, SetConsoleOutput, logConfig } from 'pandora-common';
 import { join, relative } from 'path';
+import { pathToFileURL } from 'url';
 import { LoadAttributeNameValidation, LoadAttributes } from './attributes.js';
 import { LoadBackgroundTags, LoadBackgrounds } from './backgrounds/backgrounds.js';
 import { BODYPARTS, ValidateBodyparts } from './bodyparts.js';
@@ -141,7 +142,7 @@ async function Run() {
 				SetCurrentImportContext(assetContext);
 
 				try {
-					const moduleName = join(assetDestPath, `${asset}.asset.js`);
+					const moduleName = pathToFileURL(join(assetDestPath, `${asset}.asset.js`)).href;
 					await import(moduleName);
 					assetProcesses.push(assetContext);
 				} catch (error) {
