@@ -12,8 +12,8 @@ DefineAsset({
 			default: '#EDDCDC',
 		},
 	},
-	// size:310, y:368, centered
-	preview: null, // 'preview.png',
+	// size:425, y:370, centered
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Restraint',
