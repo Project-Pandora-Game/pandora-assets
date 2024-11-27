@@ -27,8 +27,39 @@
 			"mirror": 0,
 			"colorizationKey": "straps",
 			"image": {
-				"image": "canvas_straitjacket_straps_front.png",
-				"overrides": []
+				"image": "",
+				"overrides": [
+					{
+						"image": "canvas_straitjacket_straps_front_open.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "straps",
+									"operator": "=",
+									"value": "loose"
+								}
+							]
+						]
+					},
+					{
+						"image": "canvas_straitjacket_straps_front.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "straps",
+									"operator": "=",
+									"value": "tight"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
@@ -68,14 +99,34 @@
 			"mirror": 0,
 			"colorizationKey": "straps",
 			"image": {
-				"image": "canvas_straitjacket_straps_back.png",
+				"image": "",
 				"overrides": [
 					{
-						"image": "",
+						"image": "canvas_straitjacket_straps_back_open.png",
 						"condition": [
 							[
 								{
-									"view": "front"
+									"view": "back"
+								},
+								{
+									"module": "straps",
+									"operator": "=",
+									"value": "loose"
+								}
+							]
+						]
+					},
+					{
+						"image": "canvas_straitjacket_straps_back.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "straps",
+									"operator": "=",
+									"value": "tight"
 								}
 							]
 						]

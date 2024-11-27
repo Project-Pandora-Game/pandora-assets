@@ -18,20 +18,42 @@ DefineAsset({
 		provides: [
 			'Restraint',
 			'Restraint_arms',
-			'Vulva_cover',
-			'Anus_cover',
 		],
-		covers: [
-			'Vulva_item',
-			'Anus_item',
-		],
-		requires: [
-			'!Vulva_protruding',
-			'!Anus_protruding',
-		],
-		hides: ['Penis'],
 	},
 	modules: {
+		straps: {
+			type: 'typed',
+			name: 'Straps',
+			variants: [
+				{
+					id: 'loose',
+					name: 'Loose',
+					default: true,
+				},
+				{
+					id: 'tight',
+					name: 'Tight',
+					properties: {
+						attributes: {
+							provides: [
+								'Vulva_cover',
+								'Anus_cover',
+							],
+							covers: [
+								'Vulva_item',
+								'Anus_item',
+							],
+							requires: [
+								'!Vulva_protruding',
+								'!Anus_protruding',
+								'!Penis_erect',
+							],
+							hides: ['Penis'],
+						},
+					},
+				},
+			],
+		},
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
