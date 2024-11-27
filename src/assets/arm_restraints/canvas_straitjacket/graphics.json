@@ -43,7 +43,18 @@
 			"colorizationKey": "canvas",
 			"image": {
 				"image": "canvas_straitjacket_back.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"view": "front"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
@@ -58,7 +69,18 @@
 			"colorizationKey": "straps",
 			"image": {
 				"image": "canvas_straitjacket_straps_back.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"view": "front"
+								}
+							]
+						]
+					}
+				]
 			}
 		}
 	]

@@ -21,6 +21,15 @@ DefineAsset({
 			'Vulva_cover',
 			'Anus_cover',
 		],
+		covers: [
+			'Vulva_item',
+			'Anus_item',
+		],
+		requires: [
+			'!Vulva_protruding',
+			'!Anus_protruding',
+		],
+		hides: ['Penis'],
 	},
 	modules: {
 		lock: {
