@@ -3,14 +3,6 @@ DefineAsset({
 	size: 'large',
 	graphics: 'graphics.json',
 	colorization: {
-		frame: {
-			name: 'Tray frame',
-			default: '#FFBA7A',
-		},
-		bottom: {
-			name: 'Tray bottom',
-			default: '#FFD8AC',
-		},
 		chains: {
 			name: 'Chains',
 			default: '#FFFFFF',
