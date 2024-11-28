@@ -45,7 +45,7 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER placed a serviing tray over TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',
+		actionAdd: 'SOURCE_CHARACTER placed a serving tray over TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',
 		actionRemove: 'SOURCE_CHARACTER removed the tray from TARGET_CHARACTER_DYNAMIC_POSSESSIVE body.',
 	},
 	ownership: {
