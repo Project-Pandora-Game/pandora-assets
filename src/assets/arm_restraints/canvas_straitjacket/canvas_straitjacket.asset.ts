@@ -82,6 +82,10 @@ DefineAsset({
 			upper: 'right',
 		},
 	},
+	chat: {
+		actionAdd: 'SOURCE_CHARACTER pushed TARGET_CHARACTER_DYNAMIC_POSSESSIVE arms into rough canvas sleeves and tightly pulled them to TARGET_CHARACTER_DYNAMIC_POSSESSIVE back.',
+		actionRemove: 'SOURCE_CHARACTER loosened and then slipped off the canvas jacket from TARGET_CHARACTER_DYNAMIC_POSSESSIVE arms.',
+	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
 		credits: ['Taja'],
