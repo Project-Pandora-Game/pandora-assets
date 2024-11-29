@@ -7,13 +7,13 @@ DefineAsset({
 			name: 'China',
 			default: '#F2EEEE',
 		},
-		content: {
-			name: 'Content',
-			default: '#FEFCFC',
+		liquid: {
+			name: 'Liquid',
+			default: '#FFC38B',
 		},
 	},
-	// size:260, y:364, X:0
-	preview: null, //'preview.png',
+	// size:200, y:250, X:0
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Handheld',
@@ -23,54 +23,9 @@ DefineAsset({
 		],
 	},
 	modules: {
-		usage_l: {
+		handUsage_r: {
 			type: 'typed',
-			name: 'Left hand',
-			variants: [
-				{
-					id: 'no',
-					name: 'No cup',
-					default: true,
-				},
-				{
-					id: 'hold',
-					name: 'Holding',
-					properties: {
-						poseLimits: {
-							leftArm: {
-								fingers: 'fist',
-								rotation: 'up',
-								position: 'front',
-							},
-							bones: {
-								arm_l: 44,
-								elbow_l: 116,
-							},
-						},
-					},
-				},
-				{
-					id: 'sip',
-					name: 'Sipping',
-					properties: {
-						poseLimits: {
-							leftArm: {
-								fingers: 'fist',
-								rotation: 'up',
-								position: 'front',
-							},
-							bones: {
-								arm_l: -21,
-								elbow_l: -156,
-							},
-						},
-					},
-				},
-			],
-		},
-		usage_r: {
-			type: 'typed',
-			name: 'Left hand',
+			name: 'Right hand',
 			variants: [
 				{
 					id: 'no',
@@ -84,12 +39,12 @@ DefineAsset({
 						poseLimits: {
 							rightArm: {
 								fingers: 'fist',
-								rotation: 'up',
+								rotation: 'down',
 								position: 'front',
 							},
 							bones: {
 								arm_r: 44,
-								elbow_r: 116,
+								elbow_r: 136,
 							},
 						},
 					},
@@ -101,12 +56,57 @@ DefineAsset({
 						poseLimits: {
 							rightArm: {
 								fingers: 'fist',
-								rotation: 'up',
+								rotation: 'down',
 								position: 'front',
 							},
 							bones: {
 								arm_r: -21,
 								elbow_r: -156,
+							},
+						},
+					},
+				},
+			],
+		},
+		handUsage_l: {
+			type: 'typed',
+			name: 'Left hand',
+			variants: [
+				{
+					id: 'no',
+					name: 'No mug',
+					default: true,
+				},
+				{
+					id: 'hold',
+					name: 'Holding',
+					properties: {
+						poseLimits: {
+							leftArm: {
+								fingers: 'fist',
+								rotation: 'down',
+								position: 'front',
+							},
+							bones: {
+								arm_l: 44,
+								elbow_l: 136,
+							},
+						},
+					},
+				},
+				{
+					id: 'sip',
+					name: 'Sipping',
+					properties: {
+						poseLimits: {
+							leftArm: {
+								fingers: 'fist',
+								rotation: 'down',
+								position: 'front',
+							},
+							bones: {
+								arm_l: -21,
+								elbow_l: -156,
 							},
 						},
 					},

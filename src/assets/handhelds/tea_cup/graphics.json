@@ -6,7 +6,7 @@
 			"y": 0,
 			"width": 1400,
 			"height": 1500,
-			"name": "mug",
+			"name": "cup",
 			"priority": "ABOVE_ARM_RIGHT",
 			"points": "handheld",
 			"pointType": [
@@ -18,23 +18,56 @@
 				"image": "",
 				"overrides": [
 					{
-						"image": "tea_cup_hold.png",
+						"image": "tea_cup.png",
 						"condition": [
 							[
 								{
-									"module": "usage_r",
+									"module": "handUsage_r",
 									"operator": "=",
 									"value": "hold"
 								}
+							],
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "sip"
+								}
 							]
 						]
-					},
+					}
+				]
+			}
+		},
+		{
+			"x": -200,
+			"y": 0,
+			"width": 1400,
+			"height": 1500,
+			"name": "liquid",
+			"priority": "ABOVE_ARM_RIGHT",
+			"points": "handheld",
+			"pointType": [
+				"handheld_r"
+			],
+			"mirror": 1,
+			"colorizationKey": "liquid",
+			"image": {
+				"image": "",
+				"overrides": [
 					{
-						"image": "tea_cup_sip.png",
+						"image": "tea_cup_liquid.png",
 						"condition": [
 							[
 								{
-									"module": "usage_r",
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "hold"
+								}
+							],
+							[
+								{
+									"module": "handUsage_r",
 									"operator": "=",
 									"value": "sip"
 								}
