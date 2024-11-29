@@ -9,7 +9,7 @@ DefineAsset({
 		},
 	},
 	// size:260, y:364, X:0
-	preview: null, //'preview.png',
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Handheld',
@@ -19,7 +19,7 @@ DefineAsset({
 		],
 	},
 	modules: {
-		usage_r: {
+		handUsage_r: {
 			type: 'typed',
 			name: 'Right hand',
 			variants: [
@@ -40,7 +40,7 @@ DefineAsset({
 							},
 							bones: {
 								arm_r: 44,
-								elbow_r: 116,
+								elbow_r: 136,
 							},
 						},
 					},
@@ -64,7 +64,7 @@ DefineAsset({
 				},
 			],
 		},
-		usage_l: {
+		handUsage_l: {
 			type: 'typed',
 			name: 'Left hand',
 			variants: [
@@ -85,7 +85,7 @@ DefineAsset({
 							},
 							bones: {
 								arm_l: 44,
-								elbow_l: 116,
+								elbow_l: 136,
 							},
 						},
 					},
