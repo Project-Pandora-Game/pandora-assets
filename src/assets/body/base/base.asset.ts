@@ -86,7 +86,7 @@ DefineAsset({
 		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',
 		credits: ['Echo', 'Jomshir', 'ClaudiaMia'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
-		reusePolicy: 'Ask first',
+		reusePolicy: 'Free to use',
 		licensing: [
 			{
 				source: 'Private',

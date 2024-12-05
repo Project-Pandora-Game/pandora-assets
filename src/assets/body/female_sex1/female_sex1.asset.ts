@@ -77,7 +77,7 @@ DefineAsset({
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
-		reusePolicy: 'Ask first',
+		reusePolicy: 'Free to use',
 		licensing: [
 			{
 				source: 'Self-Made',
