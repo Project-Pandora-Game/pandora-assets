@@ -3,6 +3,7 @@ import { CanonizePointTemplate, GetLogger, ModuleNameSchema, PointTemplate, Poin
 import { join, relative } from 'path';
 import { SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../constants.js';
 import { GraphicsDatabase } from '../tools/graphicsDatabase.js';
+import { TemplateValidate } from '../tools/validation/templates.js';
 import { WatchFile } from '../tools/watch.js';
 
 const templateList: string[] = [
@@ -72,6 +73,8 @@ export function LoadTemplate(name: string): PointTemplate {
 			logger.info('The above warning has been auto-corrected; re-run to check if successful.');
 		}
 	}
+
+	TemplateValidate(parseResult.data, logger.prefixMessages(`Template '${usrPath}':\n\t`));
 
 	return parseResult.data;
 }
