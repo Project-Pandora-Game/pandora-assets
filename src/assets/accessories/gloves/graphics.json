@@ -674,6 +674,86 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "patternFront",
+			"priority": "ABOVE_ARM_LEFT",
+			"points": "body",
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "pattern",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "pattern_long_front_cow.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "pattern",
+									"operator": "=",
+									"value": "cow"
+								}
+							]
+						]
+					},
+					{
+						"image": "pattern_medium_front_cow.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "medium"
+								},
+								{
+									"module": "pattern",
+									"operator": "=",
+									"value": "cow"
+								}
+							]
+						]
+					},
+					{
+						"image": "pattern_short_front_cow.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								},
+								{
+									"module": "pattern",
+									"operator": "=",
+									"value": "cow"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"name": "glovesBack",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "body",
@@ -1411,6 +1491,86 @@
 									"module": "length",
 									"operator": "=",
 									"value": "short"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "patternBack",
+			"priority": "BELOW_ARM_LEFT",
+			"points": "body",
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "pattern",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "pattern_long_back_cow.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "pattern",
+									"operator": "=",
+									"value": "cow"
+								}
+							]
+						]
+					},
+					{
+						"image": "pattern_medium_back_cow.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "medium"
+								},
+								{
+									"module": "pattern",
+									"operator": "=",
+									"value": "cow"
+								}
+							]
+						]
+					},
+					{
+						"image": "pattern_short_back_cow.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								},
+								{
+									"module": "pattern",
+									"operator": "=",
+									"value": "cow"
 								}
 							]
 						]

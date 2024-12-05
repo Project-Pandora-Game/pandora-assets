@@ -7,8 +7,13 @@ DefineAsset({
 			name: 'Gloves',
 			default: '#FFFFFF',
 		},
+		pattern: {
+			name: 'Pattern',
+			default: '#202020',
+		},
 	},
-	preview: null, // 'preview.png',
+	// size: 300, y: 380, centered
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Accessory',
@@ -31,6 +36,21 @@ DefineAsset({
 				{
 					id: 'short',
 					name: 'Short gloves',
+				},
+			],
+		},
+		pattern: {
+			type: 'typed',
+			name: 'Pattern',
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'cow',
+					name: 'Cow print',
 				},
 			],
 		},
