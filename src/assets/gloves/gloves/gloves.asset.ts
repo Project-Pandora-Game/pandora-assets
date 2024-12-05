@@ -16,7 +16,7 @@ DefineAsset({
 	preview: 'preview.png',
 	attributes: {
 		provides: [
-			'Accessory',
+			'Gloves',
 		],
 	},
 	modules: {
