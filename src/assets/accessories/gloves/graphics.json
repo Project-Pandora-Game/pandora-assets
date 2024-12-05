@@ -73,6 +73,33 @@
 						]
 					},
 					{
+						"image": "gloves_long_front_fist_backward.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								}
+							]
+						]
+					},
+					{
 						"image": "gloves_long_front_fist_up.png",
 						"condition": [
 							[
@@ -144,6 +171,33 @@
 									"side": "left",
 									"operator": "=",
 									"value": "forward"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_long_front_spread_backward.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
 								},
 								{
 									"module": "length",
@@ -235,6 +289,33 @@
 						]
 					},
 					{
+						"image": "gloves_medium_front_fist_backward.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "medium"
+								}
+							]
+						]
+					},
+					{
 						"image": "gloves_medium_front_fist_up.png",
 						"condition": [
 							[
@@ -316,6 +397,33 @@
 						]
 					},
 					{
+						"image": "gloves_medium_front_spread_backward.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "medium"
+								}
+							]
+						]
+					},
+					{
 						"image": "gloves_medium_front_spread_up.png",
 						"condition": [
 							[
@@ -343,7 +451,7 @@
 						]
 					},
 					{
-						"image": "gloves_long_front_fist_down.png",
+						"image": "gloves_short_front_fist_down.png",
 						"condition": [
 							[
 								{
@@ -364,13 +472,13 @@
 								{
 									"module": "length",
 									"operator": "=",
-									"value": "long"
+									"value": "short"
 								}
 							]
 						]
 					},
 					{
-						"image": "gloves_long_front_fist_forward.png",
+						"image": "gloves_short_front_fist_forward.png",
 						"condition": [
 							[
 								{
@@ -391,13 +499,40 @@
 								{
 									"module": "length",
 									"operator": "=",
-									"value": "long"
+									"value": "short"
 								}
 							]
 						]
 					},
 					{
-						"image": "gloves_long_front_fist_up.png",
+						"image": "gloves_short_front_fist_backward.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_short_front_fist_up.png",
 						"condition": [
 							[
 								{
@@ -418,13 +553,13 @@
 								{
 									"module": "length",
 									"operator": "=",
-									"value": "long"
+									"value": "short"
 								}
 							]
 						]
 					},
 					{
-						"image": "gloves_long_front_spread_down.png",
+						"image": "gloves_short_front_spread_down.png",
 						"condition": [
 							[
 								{
@@ -445,13 +580,13 @@
 								{
 									"module": "length",
 									"operator": "=",
-									"value": "long"
+									"value": "short"
 								}
 							]
 						]
 					},
 					{
-						"image": "gloves_long_front_spread_forward.png",
+						"image": "gloves_short_front_spread_forward.png",
 						"condition": [
 							[
 								{
@@ -472,13 +607,40 @@
 								{
 									"module": "length",
 									"operator": "=",
-									"value": "long"
+									"value": "short"
 								}
 							]
 						]
 					},
 					{
-						"image": "gloves_long_front_spread_up.png",
+						"image": "gloves_short_front_spread_backward.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_short_front_spread_up.png",
 						"condition": [
 							[
 								{
@@ -499,7 +661,7 @@
 								{
 									"module": "length",
 									"operator": "=",
-									"value": "long"
+									"value": "short"
 								}
 							]
 						]
@@ -569,6 +731,33 @@
 									"side": "left",
 									"operator": "=",
 									"value": "forward"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_long_back_fist_backward.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
 								},
 								{
 									"module": "length",
@@ -687,6 +876,33 @@
 						]
 					},
 					{
+						"image": "gloves_long_back_spread_backward.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								}
+							]
+						]
+					},
+					{
 						"image": "gloves_long_back_spread_up.png",
 						"condition": [
 							[
@@ -758,6 +974,33 @@
 									"side": "left",
 									"operator": "=",
 									"value": "forward"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "medium"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_medium_back_fist_backward.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
 								},
 								{
 									"module": "length",
@@ -876,6 +1119,33 @@
 						]
 					},
 					{
+						"image": "gloves_medium_back_spread_backward.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "medium"
+								}
+							]
+						]
+					},
+					{
 						"image": "gloves_medium_back_spread_up.png",
 						"condition": [
 							[
@@ -947,6 +1217,33 @@
 									"side": "left",
 									"operator": "=",
 									"value": "forward"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_short_back_fist_backward.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
 								},
 								{
 									"module": "length",
@@ -1055,6 +1352,33 @@
 									"side": "left",
 									"operator": "=",
 									"value": "forward"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_short_back_spread_backward.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
 								},
 								{
 									"module": "length",
