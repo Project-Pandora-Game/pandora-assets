@@ -11,7 +11,7 @@ export function TemplateValidate(template: Immutable<PointTemplate>, logger: Log
 
 		// If some points have a point type, all points should have one
 		if (hasPointType && !point.pointType) {
-			pointLogger.warning('Point does not have a point type set. If any point of a layer defines a point type, then all points should.');
+			pointLogger.warning('Point does not have a point type set. If any point defines a point type, then all points should.');
 		}
 
 		// The point should not collide with any other point
