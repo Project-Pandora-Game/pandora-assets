@@ -996,7 +996,7 @@
 			784
 		],
 		"mirror": false,
-		"pointType": "body_r",
+		"pointType": "body",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -1020,7 +1020,7 @@
 			758
 		],
 		"mirror": false,
-		"pointType": "body_r",
+		"pointType": "body",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -1044,6 +1044,7 @@
 			765
 		],
 		"mirror": false,
+		"pointType": "body",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -1296,7 +1297,7 @@
 			818
 		],
 		"mirror": false,
-		"pointType": "body_r",
+		"pointType": "body",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -4266,6 +4267,7 @@
 			1252
 		],
 		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -4375,6 +4377,7 @@
 			963
 		],
 		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -4415,6 +4418,7 @@
 			900
 		],
 		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -4438,6 +4442,7 @@
 			857
 		],
 		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -4486,6 +4491,7 @@
 			810
 		],
 		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -4534,6 +4540,7 @@
 			1374
 		],
 		"mirror": false,
+		"pointType": "body",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -4611,6 +4618,7 @@
 			1295
 		],
 		"mirror": false,
+		"pointType": "body",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -4688,6 +4696,7 @@
 			1252
 		],
 		"mirror": false,
+		"pointType": "body",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -4745,6 +4754,7 @@
 			1183
 		],
 		"mirror": false,
+		"pointType": "body",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -4802,6 +4812,7 @@
 			1149
 		],
 		"mirror": false,
+		"pointType": "body",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -4859,6 +4870,7 @@
 			1107
 		],
 		"mirror": false,
+		"pointType": "body",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -4916,6 +4928,7 @@
 			1055
 		],
 		"mirror": false,
+		"pointType": "body",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -4973,6 +4986,7 @@
 			1005
 		],
 		"mirror": false,
+		"pointType": "body",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -5030,6 +5044,7 @@
 			961
 		],
 		"mirror": false,
+		"pointType": "body",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -5053,6 +5068,7 @@
 			926
 		],
 		"mirror": false,
+		"pointType": "body",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -5076,6 +5092,7 @@
 			891
 		],
 		"mirror": false,
+		"pointType": "body",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -5099,6 +5116,7 @@
 			857
 		],
 		"mirror": false,
+		"pointType": "body",
 		"transforms": [
 			{
 				"type": "const-shift",

@@ -40,6 +40,7 @@
 			562
 		],
 		"mirror": true,
+		"pointType": "body_r",
 		"transforms": [
 			{
 				"type": "shift",
