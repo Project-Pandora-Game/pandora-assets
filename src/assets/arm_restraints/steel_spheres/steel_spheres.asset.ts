@@ -21,6 +21,9 @@ DefineAsset({
 			'Gloves',
 			'Mittens',
 		],
+		requires: [
+			'!Handcover',
+		],
 	},
 	modules: {
 		lock: {
