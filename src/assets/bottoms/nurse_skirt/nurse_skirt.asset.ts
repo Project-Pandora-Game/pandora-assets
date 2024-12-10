@@ -16,6 +16,9 @@ DefineAsset({
 			'Clothing',
 			'Clothing_lower',
 		],
+		hides: [
+			'Thigh_cuffs',
+		],
 	},
 	poseLimits: {
 		bones: {
