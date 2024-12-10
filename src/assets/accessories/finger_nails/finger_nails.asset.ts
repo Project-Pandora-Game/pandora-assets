@@ -5,17 +5,18 @@ DefineAsset({
 	colorization: {
 		nails: {
 			name: 'Nails',
-			default: '#FF1111',
+			default: '#AC0909',
 		},
 	},
-	// size:200, y:250, X:0
-	preview: null, // 'preview.png',
+	// size:150, y:550, X:0
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Accessory',
 		],
 		requires: [
-			'!Mittens',
+			'!Handcover',
+			'!Gloves',
 		],
 	},
 	modules: {
