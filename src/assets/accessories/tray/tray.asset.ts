@@ -22,7 +22,7 @@ DefineAsset({
 		liquids: {
 			name: 'Liquids',
 			default: '#B98484',
-		}
+		},
 	},
 	// size:375, y:375, centered
 	preview: 'preview.png',
