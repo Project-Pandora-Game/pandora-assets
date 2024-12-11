@@ -99,6 +99,21 @@
 								}
 							]
 						]
+					},
+					{
+						"image": "tray_contents_service_liquid.png",
+						"condition": [
+							[
+								{
+									"module": "content",
+									"operator": "=",
+									"value": "teaService"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
 					}
 				]
 			}
@@ -154,6 +169,21 @@
 									"module": "content",
 									"operator": "=",
 									"value": "beverages"
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "tray_contents_service_liquid.png",
+						"condition": [
+							[
+								{
+									"module": "content",
+									"operator": "=",
+									"value": "teaService"
 								},
 								{
 									"view": "front"
