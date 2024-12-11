@@ -24,6 +24,9 @@ DefineAsset({
 		covers: [
 			'Hand_item',
 		],
+		hides: [
+			'Mittens',
+		],
 	},
 	modules: {
 		straps: {
