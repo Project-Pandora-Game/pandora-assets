@@ -13,10 +13,10 @@ DefineAsset({
 	attributes: {
 		provides: [
 			'Accessory',
+			'Hand_item',
 		],
 		requires: [
-			'!Handcover',
-			'!Gloves',
+			'!Hand_cover',
 		],
 	},
 	modules: {

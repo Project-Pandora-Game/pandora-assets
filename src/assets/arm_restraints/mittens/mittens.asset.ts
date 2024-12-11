@@ -27,11 +27,12 @@ DefineAsset({
 		provides: [
 			'Restraint',
 			'Restraint_arms',
+			'Hand_item',
 			'Gloves',
 			'Mittens',
 		],
-		requires: [
-			'!Handcover',
+		covers: [
+			'Hand_item',
 		],
 	},
 	modules: {

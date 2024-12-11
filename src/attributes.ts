@@ -625,9 +625,13 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Ankle_cuffs_chainable',
 		description: 'A cuff that is chainable to another item',
 	},
-	Handcover: {
-		name: 'Handcover',
-		description: 'A restraint that covers the wearer\'s hands',
+	Hand_cover: {
+		name: 'Hand_cover',
+		description: 'An item that covers the wearer\'s hands completely',
+	},
+	Hand_item: {
+		name: 'Hand_item',
+		description: 'An item that is used on the wearer\'s hands',
 	},
 	Armbinder_chainable: {
 		name: 'Armbinder_chainable',
