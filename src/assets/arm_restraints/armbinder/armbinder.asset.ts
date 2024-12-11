@@ -30,6 +30,14 @@ DefineAsset({
 		provides: [
 			'Restraint',
 			'Restraint_arms',
+			'Hand_item',
+			'Hand_cover',
+		],
+		covers: [
+			'Hand_item',
+		],
+		hides: [
+			'Mittens',
 		],
 	},
 	modules: {

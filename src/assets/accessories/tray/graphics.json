@@ -6,6 +6,37 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "liquids service (back)",
+			"priority": "ABOVE_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "liquids",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "tray_contents_service_liquid.png",
+						"condition": [
+							[
+								{
+									"module": "content",
+									"operator": "=",
+									"value": "teaService"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"name": "content (back)",
 			"priority": "ABOVE_BODY",
 			"points": "static",
@@ -15,13 +46,84 @@
 				"image": "",
 				"overrides": [
 					{
-						"image": "tray_service.png",
+						"image": "tray_contents_service.png",
 						"condition": [
 							[
 								{
 									"module": "content",
 									"operator": "=",
 									"value": "teaService"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					},
+					{
+						"image": "tray_contents_dildos.png",
+						"condition": [
+							[
+								{
+									"module": "content",
+									"operator": "=",
+									"value": "toys"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					},
+					{
+						"image": "tray_contents_decanter.png",
+						"condition": [
+							[
+								{
+									"module": "content",
+									"operator": "=",
+									"value": "decanter"
+								},
+								{
+									"view": "back"
+								}
+							],
+							[
+								{
+									"module": "content",
+									"operator": "=",
+									"value": "beverages"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "liquids decanter (back)",
+			"priority": "ABOVE_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "liquids",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "tray_contents_beverages.png",
+						"condition": [
+							[
+								{
+									"module": "content",
+									"operator": "=",
+									"value": "beverages"
 								},
 								{
 									"view": "back"
@@ -67,6 +169,37 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "liquids decanter",
+			"priority": "ABOVE_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "liquids",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "tray_contents_beverages.png",
+						"condition": [
+							[
+								{
+									"module": "content",
+									"operator": "=",
+									"value": "beverages"
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"name": "content",
 			"priority": "ABOVE_BODY",
 			"points": "static",
@@ -76,7 +209,78 @@
 				"image": "",
 				"overrides": [
 					{
-						"image": "tray_service.png",
+						"image": "tray_contents_service.png",
+						"condition": [
+							[
+								{
+									"module": "content",
+									"operator": "=",
+									"value": "teaService"
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "tray_contents_dildos.png",
+						"condition": [
+							[
+								{
+									"module": "content",
+									"operator": "=",
+									"value": "toys"
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "tray_contents_decanter.png",
+						"condition": [
+							[
+								{
+									"module": "content",
+									"operator": "=",
+									"value": "decanter"
+								},
+								{
+									"view": "front"
+								}
+							],
+							[
+								{
+									"module": "content",
+									"operator": "=",
+									"value": "beverages"
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "liquids service",
+			"priority": "ABOVE_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "liquids",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "tray_contents_service_liquid.png",
 						"condition": [
 							[
 								{
