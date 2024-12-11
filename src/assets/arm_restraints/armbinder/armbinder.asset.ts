@@ -38,7 +38,7 @@ DefineAsset({
 		],
 		hides: [
 			'Mittens',
-		]
+		],
 	},
 	modules: {
 		lock: {
