@@ -19,6 +19,10 @@ DefineAsset({
 			name: 'Content',
 			default: '#FFFFFF',
 		},
+		liquids: {
+			name: 'Liquids',
+			default: '#B98484',
+		},
 	},
 	// size:375, y:375, centered
 	preview: 'preview.png',
@@ -40,6 +44,18 @@ DefineAsset({
 				{
 					id: 'teaService',
 					name: 'Tea service',
+				},
+				{
+					id: 'decanter',
+					name: 'Decanter',
+				},
+				{
+					id: 'beverages',
+					name: 'Beverages',
+				},
+				{
+					id: 'toys',
+					name: 'Sex toys',
 				},
 			],
 		},
@@ -63,6 +79,20 @@ DefineAsset({
 			},
 			{
 				part: 'service',
+				source: 'Self-Made',
+				copyrightHolder: 'Taja',
+				editedBy: 'Sandrine',
+				license: 'Pandora-Use-Only-v1-or-later',
+			},
+			{
+				part: 'toys',
+				source: 'Self-Made',
+				copyrightHolder: 'Taja',
+				editedBy: 'Sandrine',
+				license: 'Pandora-Use-Only-v1-or-later',
+			},
+			{
+				part: 'beverages',
 				source: 'Self-Made',
 				copyrightHolder: 'Taja',
 				editedBy: 'Sandrine',
