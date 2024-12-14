@@ -25,6 +25,18 @@ DefineAsset({
 		],
 	},
 	modules: {
+		lock: {
+			type: 'lockSlot',
+			name: 'Lock',
+			occupiedProperties: {
+				blockAddRemove: true,
+				blockSelfModules: [
+					'length',
+					'variants',
+					'addons',
+				],
+			},
+		},
 		length: {
 			type: 'typed',
 			name: 'Length',
@@ -75,6 +87,7 @@ DefineAsset({
 					name: 'No',
 					default: true,
 				},
+				/** For later use
 				{
 					id: 'gloves',
 					name: 'Gloves',
@@ -103,6 +116,7 @@ DefineAsset({
 						},
 					},
 				},
+				*/
 			],
 		},
 	},
