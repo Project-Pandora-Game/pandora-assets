@@ -134,7 +134,7 @@
 						]
 					},
 					{
-						"image": "latex_catsuit_front_short_open.png",
+						"image": "latex_catsuit_front_short_open_size_0.png",
 						"condition": [
 							[
 								{
@@ -144,6 +144,106 @@
 									"module": "variants",
 									"operator": "=",
 									"value": "open"
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -180
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_short_open_size_1.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "open"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": -180
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -70
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_short_open_size_2.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "open"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": -70
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_short_open_size_3.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "open"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": 0
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": 100
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_short_open_size_4.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "open"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": 100
 								}
 							]
 						]
@@ -266,67 +366,6 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"name": "breasts",
-			"priority": "ABOVE_BODY",
-			"points": "breasts",
-			"mirror": 0,
-			"colorizationKey": "catsuit",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "latex_catsuit_front_bust_big_open.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "variants",
-									"operator": "=",
-									"value": "open"
-								},
-								{
-									"bone": "breasts",
-									"operator": ">",
-									"value": -70
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_catsuit_front_bust_small_open.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "variants",
-									"operator": "=",
-									"value": "open"
-								},
-								{
-									"bone": "breasts",
-									"operator": ">",
-									"value": -180
-								},
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": -70
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
 			"name": "catsuit legs",
 			"priority": "ABOVE_BODY",
 			"points": "body",
@@ -340,7 +379,7 @@
 						"condition": [
 							[
 								{
-									"view":"front"
+									"view": "front"
 								},
 								{
 									"module": "length",
@@ -873,6 +912,11 @@
 							[
 								{
 									"view": "back"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
 								}
 							]
 						]

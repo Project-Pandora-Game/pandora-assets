@@ -33,7 +33,7 @@ DefineAsset({
 				blockSelfModules: [
 					'length',
 					'variants',
-					'addons',
+					'addOns',
 				],
 			},
 		},
