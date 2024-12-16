@@ -11,7 +11,7 @@
 				"type": "shift",
 				"bone": "arm_width",
 				"value": {
-					"x": 0,
+					"x": -3,
 					"y": -5
 				}
 			},
@@ -80,8 +80,8 @@
 				"type": "shift",
 				"bone": "arm_width",
 				"value": {
-					"x": 0,
-					"y": 3
+					"x": -4,
+					"y": 5
 				}
 			},
 			{
@@ -94,7 +94,7 @@
 	{
 		"pos": [
 			410,
-			489
+			492
 		],
 		"mirror": true,
 		"pointType": "arm_r",
@@ -104,7 +104,7 @@
 				"bone": "arm_width",
 				"value": {
 					"x": 0,
-					"y": 3
+					"y": 1
 				}
 			},
 			{
