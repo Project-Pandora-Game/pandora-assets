@@ -64,8 +64,38 @@ DefineRoomDeviceAsset({
 				],
 			},
 		},
-		character_slot_kneeling: {
-			name: 'Kneeling before the throne',
+		character_slot_kneeling_left: {
+			name: 'Kneeling before the throne (left)',
+			asset: {
+				name: 'Heart Throne',
+				size: 'huge',
+				poseLimits: {
+					bones: {
+						leg_r: [[-30, 10]],
+						leg_l: [[-30, 10]],
+						character_rotation: 0,
+					},
+					legs: 'kneeling',
+				},
+			},
+		},
+		character_slot_kneeling_middle: {
+			name: 'Kneeling before the throne (middle)',
+			asset: {
+				name: 'Heart Throne',
+				size: 'huge',
+				poseLimits: {
+					bones: {
+						leg_r: [[-30, 10]],
+						leg_l: [[-30, 10]],
+						character_rotation: 0,
+					},
+					legs: 'kneeling',
+				},
+			},
+		},
+		character_slot_kneeling_right: {
+			name: 'Kneeling before the throne (right)',
 			asset: {
 				name: 'Heart Throne',
 				size: 'huge',
@@ -110,11 +140,29 @@ DefineRoomDeviceAsset({
 		},
 		{
 			type: 'slot',
-			slot: 'character_slot_kneeling',
+			slot: 'character_slot_kneeling_left',
+			characterPosition: {
+				offsetX: -360,
+				offsetY: 220,
+				relativeScale: 1.15,
+			},
+		},
+		{
+			type: 'slot',
+			slot: 'character_slot_kneeling_right',
+			characterPosition: {
+				offsetX: 360,
+				offsetY: 220,
+				relativeScale: 1.19,
+			},
+		},
+		{
+			type: 'slot',
+			slot: 'character_slot_kneeling_middle',
 			characterPosition: {
 				offsetX: 0,
 				offsetY: 240,
-				relativeScale: 1.16,
+				relativeScale: 1.19,
 			},
 		},
 	],
