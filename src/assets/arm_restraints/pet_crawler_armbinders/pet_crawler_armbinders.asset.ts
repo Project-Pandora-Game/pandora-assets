@@ -39,13 +39,26 @@ DefineAsset({
 		},
 	},
 	poseLimits: {
-		arms: {
-			position: 'back',
-		},
-		bones: {
-			elbow_r: -160,
-			elbow_l: -160,
-		},
+		options: [
+			{
+				arms: {
+					rotation: 'up',
+				},
+				bones: {
+					elbow_r: -160,
+					elbow_l: -160,
+				},
+			},
+			{
+				arms: {
+					rotation: 'backward',
+				},
+				bones: {
+					elbow_r: -160,
+					elbow_l: -160,
+				},
+			},
+		],
 	},
 	effects: {
 		blockHands: true,
