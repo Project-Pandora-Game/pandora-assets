@@ -31,6 +31,7 @@ const DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'allowRandomizerUsage',
 	'size',
 	'chat',
+	'posePresets',
 	'bodypart',
 	'modules',
 	'preview',
