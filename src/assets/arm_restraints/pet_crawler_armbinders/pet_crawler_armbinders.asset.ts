@@ -1,3 +1,5 @@
+import { ItemInteractionType } from 'pandora-common';
+
 DefineAsset({
 	name: 'Pet Crawler Armbinders',
 	size: 'medium',
@@ -22,6 +24,7 @@ DefineAsset({
 			default: '#cccccc',
 		},
 	},
+	// size:280, y:370, centered
 	preview: 'preview.png',
 	attributes: {
 		provides: [
@@ -37,6 +40,38 @@ DefineAsset({
 				blockAddRemove: true,
 			},
 		},
+		position: {
+			type: 'typed',
+			name: 'Arms position',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
+			variants: [
+				{
+					id: 'inwards',
+					name: 'Inwards',
+					default: true,
+					properties: {
+						poseLimits: {
+							bones: {
+								elbow_r: 168,
+								elbow_l: 168,
+							},
+						},
+					},
+				},
+				{
+					id: 'outwards',
+					name: 'Outwards',
+					properties: {
+						poseLimits: {
+							bones: {
+								elbow_r: -160,
+								elbow_l: -160,
+							},
+						},
+					},
+				},
+			],
+		},
 	},
 	poseLimits: {
 		options: [
@@ -44,18 +79,10 @@ DefineAsset({
 				arms: {
 					rotation: 'up',
 				},
-				bones: {
-					elbow_r: -160,
-					elbow_l: -160,
-				},
 			},
 			{
 				arms: {
 					rotation: 'backward',
-				},
-				bones: {
-					elbow_r: -160,
-					elbow_l: -160,
 				},
 			},
 		],

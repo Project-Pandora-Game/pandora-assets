@@ -8,7 +8,7 @@
 			"height": 1500,
 			"name": "Binder",
 			"priority": "ABOVE_ARM_LEFT",
-			"points": "custom_arm_restraints_pet_crawler_armbinders",
+			"points": "custom_arm_restraints_pet_crawler_armbinders_outwards",
 			"pointType": [
 				"arm_l"
 			],
@@ -16,7 +16,20 @@
 			"colorizationKey": "binders",
 			"image": {
 				"image": "pc_binder_base.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "position",
+									"operator": "=",
+									"value": "inwards"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
@@ -26,7 +39,7 @@
 			"height": 1500,
 			"name": "Belts",
 			"priority": "ABOVE_ARM_LEFT",
-			"points": "custom_arm_restraints_pet_crawler_armbinders",
+			"points": "custom_arm_restraints_pet_crawler_armbinders_outwards",
 			"pointType": [
 				"arm_l"
 			],
@@ -34,7 +47,20 @@
 			"colorizationKey": "belts",
 			"image": {
 				"image": "pc_binder_belts.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "position",
+									"operator": "=",
+									"value": "inwards"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
@@ -44,7 +70,7 @@
 			"height": 1500,
 			"name": "Shine",
 			"priority": "ABOVE_ARM_LEFT",
-			"points": "custom_arm_restraints_pet_crawler_armbinders",
+			"points": "custom_arm_restraints_pet_crawler_armbinders_outwards",
 			"pointType": [
 				"arm_l"
 			],
@@ -52,7 +78,20 @@
 			"colorizationKey": "shine",
 			"image": {
 				"image": "pc_binder_shine.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "position",
+									"operator": "=",
+									"value": "inwards"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
@@ -62,7 +101,7 @@
 			"height": 1500,
 			"name": "Metal",
 			"priority": "ABOVE_ARM_LEFT",
-			"points": "custom_arm_restraints_pet_crawler_armbinders",
+			"points": "custom_arm_restraints_pet_crawler_armbinders_outwards",
 			"pointType": [
 				"arm_l"
 			],
@@ -70,7 +109,20 @@
 			"colorizationKey": "rings",
 			"image": {
 				"image": "pc_binder_metal.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "position",
+									"operator": "=",
+									"value": "inwards"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
@@ -80,7 +132,7 @@
 			"height": 1500,
 			"name": "Binder",
 			"priority": "BELOW_ARM_LEFT",
-			"points": "custom_arm_restraints_pet_crawler_armbinders",
+			"points": "custom_arm_restraints_pet_crawler_armbinders_outwards",
 			"pointType": [
 				"arm_l"
 			],
@@ -88,7 +140,20 @@
 			"colorizationKey": "binders",
 			"image": {
 				"image": "pc_binder_base.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "position",
+									"operator": "=",
+									"value": "inwards"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
@@ -98,7 +163,7 @@
 			"height": 1500,
 			"name": "Belts",
 			"priority": "BELOW_ARM_LEFT",
-			"points": "custom_arm_restraints_pet_crawler_armbinders",
+			"points": "custom_arm_restraints_pet_crawler_armbinders_outwards",
 			"pointType": [
 				"arm_l"
 			],
@@ -106,7 +171,20 @@
 			"colorizationKey": "belts",
 			"image": {
 				"image": "pc_binder_belts.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "position",
+									"operator": "=",
+									"value": "inwards"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
@@ -116,7 +194,7 @@
 			"height": 1500,
 			"name": "Shine",
 			"priority": "BELOW_ARM_LEFT",
-			"points": "custom_arm_restraints_pet_crawler_armbinders",
+			"points": "custom_arm_restraints_pet_crawler_armbinders_outwards",
 			"pointType": [
 				"arm_l"
 			],
@@ -124,7 +202,20 @@
 			"colorizationKey": "shine",
 			"image": {
 				"image": "pc_binder_shine.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "position",
+									"operator": "=",
+									"value": "inwards"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
@@ -134,7 +225,7 @@
 			"height": 1500,
 			"name": "Metal",
 			"priority": "BELOW_ARM_LEFT",
-			"points": "custom_arm_restraints_pet_crawler_armbinders",
+			"points": "custom_arm_restraints_pet_crawler_armbinders_outwards",
 			"pointType": [
 				"arm_l"
 			],
@@ -142,7 +233,268 @@
 			"colorizationKey": "rings",
 			"image": {
 				"image": "pc_binder_metal.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "position",
+									"operator": "=",
+									"value": "inwards"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Binder",
+			"priority": "ABOVE_ARM_LEFT",
+			"points": "custom_arm_restraints_pet_crawler_armbinders_inwards",
+			"pointType": [
+				"arm_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "binders",
+			"image": {
+				"image": "pc_binder_base_inner.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "position",
+									"operator": "=",
+									"value": "outwards"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Belts",
+			"priority": "ABOVE_ARM_LEFT",
+			"points": "custom_arm_restraints_pet_crawler_armbinders_inwards",
+			"pointType": [
+				"arm_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "belts",
+			"image": {
+				"image": "pc_binder_belts_inner.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "position",
+									"operator": "=",
+									"value": "outwards"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Shine",
+			"priority": "ABOVE_ARM_LEFT",
+			"points": "custom_arm_restraints_pet_crawler_armbinders_inwards",
+			"pointType": [
+				"arm_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "shine",
+			"image": {
+				"image": "pc_binder_shine_inner.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "position",
+									"operator": "=",
+									"value": "outwards"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Metal",
+			"priority": "ABOVE_ARM_LEFT",
+			"points": "custom_arm_restraints_pet_crawler_armbinders_inwards",
+			"pointType": [
+				"arm_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "rings",
+			"image": {
+				"image": "pc_binder_metal_inner.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "position",
+									"operator": "=",
+									"value": "outwards"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Binder",
+			"priority": "BELOW_ARM_LEFT",
+			"points": "custom_arm_restraints_pet_crawler_armbinders_inwards",
+			"pointType": [
+				"arm_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "binders",
+			"image": {
+				"image": "pc_binder_base_inner.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "position",
+									"operator": "=",
+									"value": "outwards"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Belts",
+			"priority": "BELOW_ARM_LEFT",
+			"points": "custom_arm_restraints_pet_crawler_armbinders_inwards",
+			"pointType": [
+				"arm_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "belts",
+			"image": {
+				"image": "pc_binder_belts_inner.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "position",
+									"operator": "=",
+									"value": "outwards"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Shine",
+			"priority": "BELOW_ARM_LEFT",
+			"points": "custom_arm_restraints_pet_crawler_armbinders_inwards",
+			"pointType": [
+				"arm_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "shine",
+			"image": {
+				"image": "pc_binder_shine_inner.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "position",
+									"operator": "=",
+									"value": "outwards"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Metal",
+			"priority": "BELOW_ARM_LEFT",
+			"points": "custom_arm_restraints_pet_crawler_armbinders_inwards",
+			"pointType": [
+				"arm_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "rings",
+			"image": {
+				"image": "pc_binder_metal_inner.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "position",
+									"operator": "=",
+									"value": "outwards"
+								}
+							]
+						]
+					}
+				]
 			}
 		}
 	]
