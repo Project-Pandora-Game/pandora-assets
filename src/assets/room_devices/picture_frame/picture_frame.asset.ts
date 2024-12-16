@@ -761,7 +761,7 @@ DefineRoomDeviceAsset({
 				copyrightHolder: 'Creazilla',
 				editedBy: 'Sandrine',
 				license: 'CC0',
-			}
+			},
 		],
 	},
 });
