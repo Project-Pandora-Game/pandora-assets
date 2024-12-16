@@ -1,5 +1,3 @@
-import { ItemInteractionType } from 'pandora-common';
-
 DefineAsset({
 	name: 'Pet Crawler Armbinders',
 	size: 'medium',
@@ -40,53 +38,73 @@ DefineAsset({
 				blockAddRemove: true,
 			},
 		},
-		position: {
-			type: 'typed',
-			name: 'Arms position',
-			interactionType: ItemInteractionType.ACCESS_ONLY,
-			variants: [
+	},
+	posePresets: [
+		{
+			name: 'Arms inwards',
+			arms: {
+				rotation: 'down',
+			},
+			bones: {
+				elbow_l: 168,
+				elbow_r: 168,
+			},
+		},
+		{
+			name: 'Arms outwards',
+			arms: {
+				rotation: 'up',
+			},
+			bones: {
+				elbow_l: -160,
+				elbow_r: -160,
+			},
+		},
+	],
+	poseLimits: [
+		// Left arm
+		{
+			options: [
 				{
-					id: 'inwards',
-					name: 'Inwards',
-					default: true,
-					properties: {
-						poseLimits: {
-							bones: {
-								elbow_r: 168,
-								elbow_l: 168,
-							},
-						},
+					leftArm: {
+						rotation: ['up', 'backward'],
+					},
+					bones: {
+						elbow_l: -160,
 					},
 				},
 				{
-					id: 'outwards',
-					name: 'Outwards',
-					properties: {
-						poseLimits: {
-							bones: {
-								elbow_r: -160,
-								elbow_l: -160,
-							},
-						},
+					leftArm: {
+						rotation: ['down', 'forward'],
+					},
+					bones: {
+						elbow_l: 168,
 					},
 				},
 			],
 		},
-	},
-	poseLimits: {
-		options: [
-			{
-				arms: {
-					rotation: 'up',
+		// Right arm
+		{
+			options: [
+				{
+					rightArm: {
+						rotation: ['up', 'backward'],
+					},
+					bones: {
+						elbow_r: -160,
+					},
 				},
-			},
-			{
-				arms: {
-					rotation: 'backward',
+				{
+					rightArm: {
+						rotation: ['down', 'forward'],
+					},
+					bones: {
+						elbow_r: 168,
+					},
 				},
-			},
-		],
-	},
+			],
+		},
+	],
 	effects: {
 		blockHands: true,
 	},

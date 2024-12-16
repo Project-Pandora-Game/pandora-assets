@@ -6,7 +6,7 @@
 			"y": 2,
 			"width": 1000,
 			"height": 1500,
-			"name": "Binder",
+			"name": "[outer] Binder",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "custom_arm_restraints_pet_crawler_armbinders_outwards",
 			"pointType": [
@@ -22,9 +22,9 @@
 						"condition": [
 							[
 								{
-									"module": "position",
-									"operator": "=",
-									"value": "inwards"
+									"bone": "elbow_l",
+									"operator": "!=",
+									"value": -160
 								}
 							]
 						]
@@ -37,7 +37,7 @@
 			"y": 2,
 			"width": 1000,
 			"height": 1500,
-			"name": "Belts",
+			"name": "[outer] Belts",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "custom_arm_restraints_pet_crawler_armbinders_outwards",
 			"pointType": [
@@ -53,9 +53,9 @@
 						"condition": [
 							[
 								{
-									"module": "position",
-									"operator": "=",
-									"value": "inwards"
+									"bone": "elbow_l",
+									"operator": "!=",
+									"value": -160
 								}
 							]
 						]
@@ -68,7 +68,7 @@
 			"y": 2,
 			"width": 1000,
 			"height": 1500,
-			"name": "Shine",
+			"name": "[outer] Shine",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "custom_arm_restraints_pet_crawler_armbinders_outwards",
 			"pointType": [
@@ -84,9 +84,9 @@
 						"condition": [
 							[
 								{
-									"module": "position",
-									"operator": "=",
-									"value": "inwards"
+									"bone": "elbow_l",
+									"operator": "!=",
+									"value": -160
 								}
 							]
 						]
@@ -99,7 +99,7 @@
 			"y": 2,
 			"width": 1000,
 			"height": 1500,
-			"name": "Metal",
+			"name": "[outer] Metal",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "custom_arm_restraints_pet_crawler_armbinders_outwards",
 			"pointType": [
@@ -115,9 +115,9 @@
 						"condition": [
 							[
 								{
-									"module": "position",
-									"operator": "=",
-									"value": "inwards"
+									"bone": "elbow_l",
+									"operator": "!=",
+									"value": -160
 								}
 							]
 						]
@@ -130,7 +130,7 @@
 			"y": 2,
 			"width": 1000,
 			"height": 1500,
-			"name": "Binder",
+			"name": "[outer] Binder",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "custom_arm_restraints_pet_crawler_armbinders_outwards",
 			"pointType": [
@@ -146,9 +146,9 @@
 						"condition": [
 							[
 								{
-									"module": "position",
-									"operator": "=",
-									"value": "inwards"
+									"bone": "elbow_l",
+									"operator": "!=",
+									"value": -160
 								}
 							]
 						]
@@ -161,7 +161,7 @@
 			"y": 2,
 			"width": 1000,
 			"height": 1500,
-			"name": "Belts",
+			"name": "[outer] Belts",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "custom_arm_restraints_pet_crawler_armbinders_outwards",
 			"pointType": [
@@ -177,9 +177,9 @@
 						"condition": [
 							[
 								{
-									"module": "position",
-									"operator": "=",
-									"value": "inwards"
+									"bone": "elbow_l",
+									"operator": "!=",
+									"value": -160
 								}
 							]
 						]
@@ -192,7 +192,7 @@
 			"y": 2,
 			"width": 1000,
 			"height": 1500,
-			"name": "Shine",
+			"name": "[outer] Shine",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "custom_arm_restraints_pet_crawler_armbinders_outwards",
 			"pointType": [
@@ -208,9 +208,9 @@
 						"condition": [
 							[
 								{
-									"module": "position",
-									"operator": "=",
-									"value": "inwards"
+									"bone": "elbow_l",
+									"operator": "!=",
+									"value": -160
 								}
 							]
 						]
@@ -223,7 +223,7 @@
 			"y": 2,
 			"width": 1000,
 			"height": 1500,
-			"name": "Metal",
+			"name": "[outer] Metal",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "custom_arm_restraints_pet_crawler_armbinders_outwards",
 			"pointType": [
@@ -239,9 +239,9 @@
 						"condition": [
 							[
 								{
-									"module": "position",
-									"operator": "=",
-									"value": "inwards"
+									"bone": "elbow_l",
+									"operator": "!=",
+									"value": -160
 								}
 							]
 						]
@@ -254,7 +254,7 @@
 			"y": 1,
 			"width": 1000,
 			"height": 1500,
-			"name": "Binder",
+			"name": "[inner] Binder",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "custom_arm_restraints_pet_crawler_armbinders_inwards",
 			"pointType": [
@@ -270,9 +270,9 @@
 						"condition": [
 							[
 								{
-									"module": "position",
-									"operator": "=",
-									"value": "outwards"
+									"bone": "elbow_l",
+									"operator": "!=",
+									"value": 168
 								}
 							]
 						]
@@ -285,7 +285,7 @@
 			"y": 1,
 			"width": 1000,
 			"height": 1500,
-			"name": "Belts",
+			"name": "[inner] Belts",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "custom_arm_restraints_pet_crawler_armbinders_inwards",
 			"pointType": [
@@ -301,9 +301,9 @@
 						"condition": [
 							[
 								{
-									"module": "position",
-									"operator": "=",
-									"value": "outwards"
+									"bone": "elbow_l",
+									"operator": "!=",
+									"value": 168
 								}
 							]
 						]
@@ -316,7 +316,7 @@
 			"y": 1,
 			"width": 1000,
 			"height": 1500,
-			"name": "Shine",
+			"name": "[inner] Shine",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "custom_arm_restraints_pet_crawler_armbinders_inwards",
 			"pointType": [
@@ -332,9 +332,9 @@
 						"condition": [
 							[
 								{
-									"module": "position",
-									"operator": "=",
-									"value": "outwards"
+									"bone": "elbow_l",
+									"operator": "!=",
+									"value": 168
 								}
 							]
 						]
@@ -347,7 +347,7 @@
 			"y": 1,
 			"width": 1000,
 			"height": 1500,
-			"name": "Metal",
+			"name": "[inner] Metal",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "custom_arm_restraints_pet_crawler_armbinders_inwards",
 			"pointType": [
@@ -363,9 +363,9 @@
 						"condition": [
 							[
 								{
-									"module": "position",
-									"operator": "=",
-									"value": "outwards"
+									"bone": "elbow_l",
+									"operator": "!=",
+									"value": 168
 								}
 							]
 						]
@@ -378,7 +378,7 @@
 			"y": 1,
 			"width": 1000,
 			"height": 1500,
-			"name": "Binder",
+			"name": "[inner] Binder",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "custom_arm_restraints_pet_crawler_armbinders_inwards",
 			"pointType": [
@@ -394,9 +394,9 @@
 						"condition": [
 							[
 								{
-									"module": "position",
-									"operator": "=",
-									"value": "outwards"
+									"bone": "elbow_l",
+									"operator": "!=",
+									"value": 168
 								}
 							]
 						]
@@ -409,7 +409,7 @@
 			"y": 1,
 			"width": 1000,
 			"height": 1500,
-			"name": "Belts",
+			"name": "[inner] Belts",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "custom_arm_restraints_pet_crawler_armbinders_inwards",
 			"pointType": [
@@ -425,9 +425,9 @@
 						"condition": [
 							[
 								{
-									"module": "position",
-									"operator": "=",
-									"value": "outwards"
+									"bone": "elbow_l",
+									"operator": "!=",
+									"value": 168
 								}
 							]
 						]
@@ -440,7 +440,7 @@
 			"y": 1,
 			"width": 1000,
 			"height": 1500,
-			"name": "Shine",
+			"name": "[inner] Shine",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "custom_arm_restraints_pet_crawler_armbinders_inwards",
 			"pointType": [
@@ -456,9 +456,9 @@
 						"condition": [
 							[
 								{
-									"module": "position",
-									"operator": "=",
-									"value": "outwards"
+									"bone": "elbow_l",
+									"operator": "!=",
+									"value": 168
 								}
 							]
 						]
@@ -471,7 +471,7 @@
 			"y": 1,
 			"width": 1000,
 			"height": 1500,
-			"name": "Metal",
+			"name": "[inner] Metal",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "custom_arm_restraints_pet_crawler_armbinders_inwards",
 			"pointType": [
@@ -487,9 +487,9 @@
 						"condition": [
 							[
 								{
-									"module": "position",
-									"operator": "=",
-									"value": "outwards"
+									"bone": "elbow_l",
+									"operator": "!=",
+									"value": 168
 								}
 							]
 						]
