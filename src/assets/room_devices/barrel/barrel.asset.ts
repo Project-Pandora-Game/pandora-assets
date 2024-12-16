@@ -76,7 +76,10 @@ DefineRoomDeviceAsset({
 			name: 'Lid lock',
 			staticConfig: { slotName: 'character_slot_inside' },
 			lockedProperties: {
-				blockModules: ['lid'],
+				blockModules: [
+					'lid',
+					'storage',
+				],
 			},
 		},
 		storage: {
