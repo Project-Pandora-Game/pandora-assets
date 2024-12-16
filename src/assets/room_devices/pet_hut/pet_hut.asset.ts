@@ -53,6 +53,22 @@ DefineRoomDeviceAsset({
 		},
 	},
 	modules: {
+		ears: {
+			type: 'typed',
+			name: 'Hut Ears',
+			staticConfig: { slotName: null },
+			variants: [
+				{
+					id: 'yes',
+					name: 'Yes',
+					default: true,
+				},
+				{
+					id: 'no',
+					name: 'No',
+				},
+			],
+		},
 		storage: {
 			type: 'storage',
 			name: `Hut's floor`,
@@ -98,6 +114,25 @@ DefineRoomDeviceAsset({
 				offsetY: 10,
 				relativeScale: 0.98,
 			},
+		},
+		{
+			type: 'sprite',
+			image: 'hut_front_ears.png',
+			imageOverrides: [
+				{
+					image: '',
+					condition: [
+						[
+							{
+								module: 'ears',
+								operator: '=',
+								value: 'no',
+							},
+						],
+					],
+				},
+			],
+			colorizationKey: 'outside',
 		},
 		{
 			type: 'sprite',
