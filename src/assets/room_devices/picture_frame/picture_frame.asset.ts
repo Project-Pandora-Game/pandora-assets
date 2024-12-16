@@ -755,6 +755,13 @@ DefineRoomDeviceAsset({
 				editedBy: 'ClaudiaMia',
 				license: 'CC BY',
 			},
+			{
+				part: 'mirror',
+				source: 'https://creazilla.com/de/media/clipart/69930/spiegel',
+				copyrightHolder: 'Creazilla',
+				editedBy: 'Sandrine',
+				license: 'CC0',
+			}
 		],
 	},
 });
