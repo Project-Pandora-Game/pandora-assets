@@ -78,6 +78,7 @@ DefineAsset({
 						rotation: ['down', 'forward'],
 					},
 					bones: {
+						arm_l: [[0, 130]],
 						elbow_l: 168,
 					},
 				},
@@ -99,6 +100,7 @@ DefineAsset({
 						rotation: ['down', 'forward'],
 					},
 					bones: {
+						arm_r: [[0, 130]],
 						elbow_r: 168,
 					},
 				},
