@@ -10,12 +10,12 @@ DefineAsset({
 		bottle: {
 			name: 'Bottle',
 			default: '#FFFFFF',
-			minAlpha: 0.8
+			minAlpha: 0.8,
 		},
 		lotion: {
 			name: 'Lotion',
 			default: '#F180CC',
-			minAlpha: 0.5
+			minAlpha: 0.5,
 		},
 	},
 	// size:200, y:475, X:500
@@ -84,7 +84,7 @@ DefineAsset({
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
-		credits: ['Taja'],
+		credits: ['Sandrine'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
