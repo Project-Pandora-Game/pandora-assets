@@ -18,7 +18,6 @@ DefineAsset({
 		provides: ['Handheld'],
 		requires: [
 			'!Mittens',
-			'!Hand_cover',
 		],
 		hides: ['Handheld'],
 	},
