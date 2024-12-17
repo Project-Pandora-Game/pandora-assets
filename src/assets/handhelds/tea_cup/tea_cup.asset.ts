@@ -20,6 +20,7 @@ DefineAsset({
 		],
 		requires: [
 			'!Mittens',
+			'!Hand_cover',
 		],
 	},
 	modules: {
