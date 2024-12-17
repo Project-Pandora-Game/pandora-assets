@@ -16,7 +16,9 @@ DefineAsset({
 	preview: 'preview.png',
 	attributes: {
 		provides: ['Handheld'],
-		requires: ['!Mittens'],
+		requires: [
+			'!Mittens',
+		],
 		hides: ['Handheld'],
 	},
 	modules: {
