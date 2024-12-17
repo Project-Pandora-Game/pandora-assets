@@ -11,7 +11,7 @@
 				"type": "shift",
 				"bone": "arm_width",
 				"value": {
-					"x": 0,
+					"x": -2,
 					"y": -3
 				}
 			},
@@ -58,7 +58,7 @@
 				"bone": "arm_width",
 				"value": {
 					"x": 0,
-					"y": -3
+					"y": -2
 				}
 			},
 			{
@@ -80,7 +80,7 @@
 				"type": "shift",
 				"bone": "arm_width",
 				"value": {
-					"x": 0,
+					"x": -2,
 					"y": 5
 				}
 			},
