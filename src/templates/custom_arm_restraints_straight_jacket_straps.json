@@ -1051,7 +1051,7 @@
 			727
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -1117,7 +1117,7 @@
 			705
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -1222,7 +1222,7 @@
 			734
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -1330,7 +1330,7 @@
 			760
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -1418,7 +1418,7 @@
 			956
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -1447,7 +1447,7 @@
 			1016
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -1525,7 +1525,7 @@
 			1351
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -1623,7 +1623,7 @@
 			1374
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -1721,7 +1721,7 @@
 			962
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -1758,7 +1758,7 @@
 			1008
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -1851,7 +1851,7 @@
 			1050
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -1949,7 +1949,7 @@
 			1034
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -2027,7 +2027,7 @@
 			784
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -2064,7 +2064,7 @@
 			758
 		],
 		"mirror": false,
-		"pointType": "body_r",
+		"pointType": "bodyleg",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -2088,7 +2088,7 @@
 			765
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -2123,6 +2123,15 @@
 		"pos": [
 			500,
 			687
+		],
+		"mirror": false,
+		"pointType": "body",
+		"transforms": []
+	},
+	{
+		"pos": [
+			500,
+			747
 		],
 		"mirror": false,
 		"pointType": "body",
@@ -2300,7 +2309,7 @@
 			646
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "bodyleg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -2343,7 +2352,7 @@
 			1252
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -2421,7 +2430,7 @@
 			818
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -2458,7 +2467,7 @@
 			1290
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -2536,7 +2545,7 @@
 			1295
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -2714,7 +2723,7 @@
 			864
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -2751,7 +2760,7 @@
 			890
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -2788,7 +2797,7 @@
 			766
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -2867,7 +2876,7 @@
 			810
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -2921,7 +2930,7 @@
 			787
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -2992,7 +3001,7 @@
 			803
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -3029,7 +3038,7 @@
 			750
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -3058,7 +3067,7 @@
 			817
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -3132,7 +3141,7 @@
 			837
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -3186,7 +3195,7 @@
 			839
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -3223,7 +3232,7 @@
 			856
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -3260,7 +3269,7 @@
 			689
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "bodyleg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -3300,7 +3309,7 @@
 			724
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "bodyleg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -3329,7 +3338,7 @@
 			857
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -3383,7 +3392,7 @@
 			882
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -3420,7 +3429,7 @@
 			874
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -3457,7 +3466,7 @@
 			900
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -3486,7 +3495,7 @@
 			906
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -3523,7 +3532,7 @@
 			925
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -3560,7 +3569,7 @@
 			918
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -3597,7 +3606,7 @@
 			910
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -3634,7 +3643,7 @@
 			938
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -3663,7 +3672,7 @@
 			1149
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -3756,7 +3765,7 @@
 			1165
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -3834,7 +3843,7 @@
 			747
 		],
 		"mirror": true,
-		"pointType": "body",
+		"pointType": "bodyleg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -3852,7 +3861,7 @@
 			996
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -3915,7 +3924,7 @@
 			1057
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -4008,7 +4017,7 @@
 			1079
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -4106,7 +4115,7 @@
 			1106
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -4219,7 +4228,7 @@
 			1123
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -4317,7 +4326,7 @@
 			1100
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -4415,7 +4424,7 @@
 			1079
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -4513,7 +4522,7 @@
 			1144
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -4611,7 +4620,7 @@
 			1128
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -4709,7 +4718,7 @@
 			1168
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -4787,7 +4796,7 @@
 			1183
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -4885,7 +4894,7 @@
 			1206
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -4963,7 +4972,7 @@
 			1185
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -5076,7 +5085,7 @@
 			1218
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -5154,7 +5163,7 @@
 			747
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -5191,7 +5200,7 @@
 			770
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -5437,7 +5446,7 @@
 			995
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -5614,7 +5623,7 @@
 			1252
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -5692,7 +5701,7 @@
 			963
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -5738,7 +5747,7 @@
 			900
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -5767,7 +5776,7 @@
 			857
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -5821,7 +5830,7 @@
 			810
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "shift",
@@ -5875,7 +5884,7 @@
 			1374
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -5958,7 +5967,7 @@
 			1295
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -6041,7 +6050,7 @@
 			1252
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -6104,7 +6113,7 @@
 			1183
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -6167,7 +6176,7 @@
 			1149
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -6230,7 +6239,7 @@
 			1107
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -6293,7 +6302,7 @@
 			1055
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -6356,7 +6365,7 @@
 			1005
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -6419,7 +6428,7 @@
 			961
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -6448,7 +6457,7 @@
 			926
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -6477,7 +6486,7 @@
 			891
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",
@@ -6506,7 +6515,7 @@
 			857
 		],
 		"mirror": true,
-		"pointType": "body_r",
+		"pointType": "leg_r",
 		"transforms": [
 			{
 				"type": "const-shift",

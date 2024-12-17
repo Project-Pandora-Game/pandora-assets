@@ -10,7 +10,9 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"pointType": [
-				"body"
+				"body",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "cover",
@@ -60,7 +62,9 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"pointType": [
-				"body"
+				"body",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "cover",
@@ -103,7 +107,9 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"pointType": [
-				"body"
+				"body",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "belt",
@@ -134,7 +140,9 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"pointType": [
-				"body"
+				"body",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "belt",
@@ -152,7 +160,9 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"pointType": [
-				"body"
+				"body",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "buckle",
