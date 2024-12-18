@@ -1,6 +1,5 @@
-DefineAsset({
+DefineBodypart({
 	name: 'Lips 2',
-	size: 'bodypart',
 	bodypart: 'lips',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',

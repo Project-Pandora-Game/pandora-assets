@@ -1,5 +1,5 @@
 import { cloneDeep, pick } from 'lodash-es';
-import { AssetId, GetLogger, PersonalAssetDefinition } from 'pandora-common';
+import { AssetId, BodypartAssetDefinition, GetLogger } from 'pandora-common';
 import { join } from 'path';
 import { AssetDatabase } from './assetDatabase.js';
 import { AssetSourcePath, DefaultId } from './context.js';
@@ -12,7 +12,7 @@ import { DefinePngResource, PREVIEW_SIZE } from './resources.js';
 import { ValidateAllModules } from './validation/modules.js';
 import { PropertiesValidationMetadata, ValidateAssetProperties } from './validation/properties.js';
 
-const DEFINITION_FALLTHROUGH_PROPERTIES = [
+const BODYPART_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Properties
 	'poseLimits',
 	'effects',
@@ -27,37 +27,27 @@ const DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'colorRibbonGroup',
 	// Asset definition
 	'name',
-	'wearable',
+	'bodypart',
 	'allowRandomizerUsage',
-	'size',
 	'chat',
 	'posePresets',
-	'bodypart',
 	'modules',
 	'preview',
 	'assetPreferenceDefault',
-] as const satisfies readonly (keyof PersonalAssetDefinition)[];
+] as const satisfies readonly (keyof BodypartAssetDefinition)[];
 
-export type AssetDefinitionFallthroughProperties = (typeof DEFINITION_FALLTHROUGH_PROPERTIES)[number] & string;
+export type BodypartDefinitionFallthroughProperties = (typeof BODYPART_DEFINITION_FALLTHROUGH_PROPERTIES)[number] & string;
 
-export function GlobalDefineAsset(def: IntermediatePersonalAssetDefinition): void {
-	RegisterImportContextProcess(() => GlobalDefineAssetProcess(cloneDeep(def)));
+export function GlobalDefineBodypart(def: IntermediateBodypartAssetDefinition): void {
+	RegisterImportContextProcess(() => GlobalDefineBodypartProcess(cloneDeep(def)));
 }
 
-async function GlobalDefineAssetProcess(def: IntermediatePersonalAssetDefinition): Promise<void> {
+async function GlobalDefineBodypartProcess(def: IntermediateBodypartAssetDefinition): Promise<void> {
 	const id: AssetId = `a/${def.id ?? DefaultId()}` as const;
 
 	const logger = GetLogger('DefineAsset', `[Asset ${id}]`);
 
 	let definitionValid = true;
-
-	if (def.bodypart != null && def.size !== 'bodypart') {
-		definitionValid = false;
-		logger.error(`Invalid size: Bodyparts must use the 'bodypart' size`);
-	} else if (def.size === 'bodypart' && def.bodypart == null) {
-		definitionValid = false;
-		logger.error(`Invalid size: Only bodyparts can use the 'bodypart' size`);
-	}
 
 	const {
 		colorization,
@@ -79,9 +69,10 @@ async function GlobalDefineAssetProcess(def: IntermediatePersonalAssetDefinition
 		logger.warning(`Missing preview. It should be a ${PREVIEW_SIZE}x${PREVIEW_SIZE} png image or \`null\` if the asset shouldn't have one.`);
 	}
 
-	const asset: PersonalAssetDefinition<AssetRepoExtraArgs> = {
-		...pick(def, DEFINITION_FALLTHROUGH_PROPERTIES),
-		type: 'personal',
+	const asset: BodypartAssetDefinition<AssetRepoExtraArgs> = {
+		...pick(def, BODYPART_DEFINITION_FALLTHROUGH_PROPERTIES),
+		type: 'bodypart',
+		size: 'bodypart',
 		id,
 		preview: def.preview != null ? DefinePngResource(def.preview, 'preview') : null,
 		colorization,

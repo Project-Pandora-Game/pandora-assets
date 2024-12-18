@@ -1,8 +1,7 @@
 import { ItemInteractionType } from 'pandora-common';
 
-DefineAsset({
+DefineBodypart({
 	name: 'Whip Marks',
-	size: 'bodypart',
 	bodypart: 'bodymarks',
 	allowRandomizerUsage: false,
 	graphics: 'graphics.json',

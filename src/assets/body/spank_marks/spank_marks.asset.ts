@@ -1,8 +1,7 @@
 import { ItemInteractionType } from 'pandora-common';
 
-DefineAsset({
+DefineBodypart({
 	name: 'Spank Marks',
-	size: 'bodypart',
 	bodypart: 'bodymarks',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
