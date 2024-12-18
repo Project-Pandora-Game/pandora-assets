@@ -1,9 +1,8 @@
 import { ItemInteractionType } from 'pandora-common';
 
-DefineAsset({
+DefineBodypart({
 	name: 'Male Sex 1',
 	bodypart: 'sex',
-	size: 'bodypart',
 	graphics: 'graphics.json',
 	colorization: {
 		penis: {

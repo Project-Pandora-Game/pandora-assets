@@ -1,8 +1,7 @@
 import { ItemInteractionType } from 'pandora-common';
 
-DefineAsset({
+DefineBodypart({
 	name: 'Base body',
-	size: 'bodypart',
 	bodypart: 'base',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
