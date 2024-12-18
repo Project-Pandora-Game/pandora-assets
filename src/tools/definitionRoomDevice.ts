@@ -47,13 +47,13 @@ const ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'posePresets',
 	'preview',
 	'assetPreferenceDefault',
+	'requireFreeHandsToUseDefault',
 
 	// Graphics definition
 	'colorization',
 	'colorRibbonGroup',
 	'pivot',
 	'graphicsLayers',
-	'assetPreferenceDefault',
 ] as const satisfies readonly (keyof RoomDeviceAssetDefinition)[];
 
 export type AssetRoomDeviceDefinitionFallthroughProperties = (typeof ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES)[number] & string;
