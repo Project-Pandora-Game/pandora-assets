@@ -2,9 +2,8 @@ import { ItemInteractionType } from 'pandora-common';
 import { CreateHairColor } from '../../../helpers/hair_base.js';
 const { colorization, modules } = CreateHairColor(false);
 
-DefineAsset({
+DefineBodypart({
 	name: 'Female Sex 1',
-	size: 'bodypart',
 	bodypart: 'sex',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
