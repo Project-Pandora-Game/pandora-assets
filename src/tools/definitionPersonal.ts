@@ -35,6 +35,7 @@ const PERSONAL_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'modules',
 	'preview',
 	'assetPreferenceDefault',
+	'requireFreeHandsToUseDefault',
 ] as const satisfies readonly (keyof PersonalAssetDefinition)[];
 
 export type PersonalAssetDefinitionFallthroughProperties = (typeof PERSONAL_DEFINITION_FALLTHROUGH_PROPERTIES)[number] & string;
