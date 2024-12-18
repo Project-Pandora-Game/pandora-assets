@@ -19,12 +19,13 @@ DefineAsset({
 			'Restraint',
 			'Restraint_arms',
 			'Hand_item',
-			'Hand_cover',
+			'Hand_restricting_cover',
 			'Gloves',
 			'Mittens',
 		],
 		covers: [
 			'Hand_item',
+			'Handheld',
 		],
 		hides: [
 			'Mittens',

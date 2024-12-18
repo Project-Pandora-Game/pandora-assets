@@ -15,7 +15,7 @@ DefineAsset({
 			'Handheld',
 		],
 		requires: [
-			'!Mittens',
+			'!Hand_restricting_cover',
 		],
 	},
 	modules: {

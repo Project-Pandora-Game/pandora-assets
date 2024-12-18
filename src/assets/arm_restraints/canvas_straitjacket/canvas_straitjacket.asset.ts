@@ -23,9 +23,12 @@ DefineAsset({
 		],
 		covers: [
 			'Hand_item',
+			'Handheld',
+			'Wrist_cuffs',
 		],
 		hides: [
-			'Mittens',
+			'Hand_item',
+			'Wrist_cuffs',
 		],
 	},
 	modules: {
