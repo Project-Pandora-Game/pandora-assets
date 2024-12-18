@@ -12,8 +12,7 @@
 			"pointType": [
 				"body",
 				"bodyarm",
-				"bodyleg",
-				"leg"
+				"bodyleg"
 			],
 			"mirror": 0,
 			"colorizationKey": "catsuit",
@@ -258,6 +257,81 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "catsuit legs",
+			"priority": "ABOVE_BODY",
+			"points": "body",
+			"pointType": [
+				"bodyleg",
+				"leg"
+			],
+			"mirror": 0,
+			"colorizationKey": "catsuit",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "latex_catsuit_front_long_legs.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_short_closed_size_0.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "closed"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_short_open_size_0.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "open"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"name": "shine front suit",
 			"priority": "ABOVE_BODY",
 			"points": "body",
@@ -370,40 +444,15 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"name": "catsuit legs",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "catsuit",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "latex_catsuit_long_legs.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
 			"name": "catsuit legs shine",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"bodyarm",
+				"bodyleg",
+				"leg"
+			],
 			"mirror": 0,
 			"colorizationKey": "reflection",
 			"image": {
@@ -442,36 +491,6 @@
 				"image": "",
 				"overrides": [
 					{
-						"image": "latex_catsuit_front_short_arms.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"name": "catsuit arms long front",
-			"priority": "ABOVE_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "catsuit",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
 						"image": "latex_catsuit_long_arms.png",
 						"condition": [
 							[
@@ -482,6 +501,16 @@
 									"module": "length",
 									"operator": "=",
 									"value": "long"
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_short_arms.png",
+						"condition": [
+							[
+								{
+									"view": "front"
 								}
 							]
 						]
@@ -647,8 +676,7 @@
 			"pointType": [
 				"body",
 				"bodyarm",
-				"bodyleg",
-				"leg"
+				"bodyleg"
 			],
 			"mirror": 0,
 			"colorizationKey": "catsuit",
@@ -706,31 +734,26 @@
 				"image": "",
 				"overrides": [
 					{
-						"image": "latex_catsuit_back_short_closed.png",
+						"image": "latex_catsuit_long_arms.png",
 						"condition": [
 							[
 								{
 									"view": "back"
 								},
 								{
-									"module": "variants",
+									"module": "length",
 									"operator": "=",
-									"value": "closed"
+									"value": "long"
 								}
 							]
 						]
 					},
 					{
-						"image": "latex_catsuit_back_short_open.png",
+						"image": "latex_catsuit_short_arms.png",
 						"condition": [
 							[
 								{
 									"view": "back"
-								},
-								{
-									"module": "variants",
-									"operator": "=",
-									"value": "open"
 								}
 							]
 						]
@@ -761,73 +784,6 @@
 							[
 								{
 									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"name": "shine back suit",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"bodyarm",
-				"bodyleg",
-				"leg"
-			],
-			"mirror": 0,
-			"colorizationKey": "reflection",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "latex_catsuit_back_short_reflection.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"name": "catsuit arms long front",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "catsuit",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "latex_catsuit_long_arms.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
 								}
 							]
 						]
@@ -878,13 +834,17 @@
 			"name": "catsuit legs",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"bodyleg",
+				"leg"
+			],
 			"mirror": 0,
 			"colorizationKey": "catsuit",
 			"image": {
 				"image": "",
 				"overrides": [
 					{
-						"image": "latex_catsuit_long_legs.png",
+						"image": "latex_catsuit_back_long_legs.png",
 						"condition": [
 							[
 								{
@@ -894,6 +854,46 @@
 									"module": "length",
 									"operator": "=",
 									"value": "long"
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_back_short_closed.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "closed"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_back_short_open.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "open"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
 								}
 							]
 						]
@@ -909,6 +909,42 @@
 			"name": "shine back suit",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"bodyarm",
+				"bodyleg",
+				"leg"
+			],
+			"mirror": 0,
+			"colorizationKey": "reflection",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "latex_catsuit_back_short_reflection.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "shine back suit",
+			"priority": "BELOW_BODY",
+			"points": "body",
+			"pointType": [
+				"bodyleg",
+				"leg"
+			],
 			"mirror": 0,
 			"colorizationKey": "reflection",
 			"image": {
