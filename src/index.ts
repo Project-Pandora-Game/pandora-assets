@@ -12,6 +12,7 @@ import { POSE_PRESETS } from './posePresets.js';
 import { APPEARANCE_RANDOMIZATION_CONFIG } from './presets.js';
 import { LoadTemplates } from './templates/index.js';
 import { AssetDatabase } from './tools/assetDatabase.js';
+import { GlobalDefineBodypart } from './tools/definitionBodypart.js';
 import { GlobalDefineLockAsset } from './tools/definitionLock.js';
 import { GlobalDefineRoomDeviceAsset } from './tools/definitionRoomDevice.js';
 import { LoadGitData } from './tools/git.js';
@@ -68,6 +69,7 @@ async function Run() {
 
 	// Setup environment
 	globalThis.DefineAsset = GlobalDefineAsset;
+	globalThis.DefineBodypart = GlobalDefineBodypart;
 	globalThis.DefineRoomDeviceAsset = GlobalDefineRoomDeviceAsset;
 	globalThis.DefineLockAsset = GlobalDefineLockAsset;
 	SetResourceDestinationDirectory(OUT_DIR);

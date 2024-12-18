@@ -1,14 +1,14 @@
 export function CreateHairColor(withShine: boolean): {
-	colorization: NonNullable<IntermediatePersonalAssetDefinition['colorization']>;
-	modules: NonNullable<IntermediatePersonalAssetDefinition['modules']>;
+	colorization: NonNullable<IntermediateBodypartAssetDefinition['colorization']>;
+	modules: NonNullable<IntermediateBodypartAssetDefinition['modules']>;
 } {
-	const colorization: NonNullable<IntermediatePersonalAssetDefinition['colorization']> = {
+	const colorization: NonNullable<IntermediateBodypartAssetDefinition['colorization']> = {
 		hair: {
 			name: 'Hair',
 			group: 'hair',
 		},
 	};
-	const modules: NonNullable<IntermediatePersonalAssetDefinition['modules']> = {
+	const modules: NonNullable<IntermediateBodypartAssetDefinition['modules']> = {
 		colorGroupHair: {
 			type: 'typed',
 			name: 'Group Hair Color',
