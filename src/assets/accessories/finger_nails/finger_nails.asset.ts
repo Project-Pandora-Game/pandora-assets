@@ -17,6 +17,7 @@ DefineAsset({
 		],
 		requires: [
 			'!Hand_cover',
+			'!Hand_restricting_cover',
 		],
 	},
 	modules: {
