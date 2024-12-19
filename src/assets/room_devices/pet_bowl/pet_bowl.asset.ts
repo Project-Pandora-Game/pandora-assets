@@ -3,11 +3,11 @@ DefineRoomDeviceAsset({
 	size: 'medium',
 	colorization: {
 		bowl: {
-			name: 'Pet bowl',
+			name: 'Pet Bowl',
 			default: '#FFFFFF',
 		},
 		interior: {
-			name: 'Pet bowl interior',
+			name: 'Pet Bowl Interior',
 			default: '#FEF9F3',
 		},
 	},
@@ -15,8 +15,8 @@ DefineRoomDeviceAsset({
 	preview: 'pet_bowl_preview.png',
 	slots: {},
 	pivot: {
-		x: 0,
-		y: 0,
+		x: 125,
+		y: 50,
 	},
 	graphicsLayers: [
 		{
