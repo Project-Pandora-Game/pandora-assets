@@ -39,9 +39,9 @@ DefineRoomDeviceAsset({
 			{
 				part: 'Christmas present base image',
 				source: 'https://sketchfab.com/3d-models/game-ready-free-christmas-gifts-ad99e7faf07c45d9b57324b4a0e94c53',
-				copyrightHolder: 'Creative Commons: https://creativecommons.org/licenses/by/4.0/',
+				copyrightHolder: 'Saritasa: https://creativecommons.org/licenses/by/4.0/',
 				editedBy: 'Sandrine',
-				license: 'CC BY-SA',
+				license: 'CC BY',
 			},
 		],
 	},
