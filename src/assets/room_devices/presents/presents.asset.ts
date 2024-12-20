@@ -15,6 +15,7 @@ DefineRoomDeviceAsset({
 			default: '#EF5151',
 		},
 	},
+
 	staticAttributes: ['Floor'],
 	preview: 'preview.png',
 	slots: {},
