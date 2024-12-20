@@ -7,11 +7,12 @@ DefineAsset({
 		stocking: {
 			name: 'Stockings',
 			default: '#584747',
-			minAlpha: 0.6,
+			minAlpha: 0.3,
 		},
 		seams: {
 			name: 'Seams',
 			default: '#766060',
+			minAlpha: 0.2,
 		},
 	},
 	// size:600, y:763, centered
@@ -34,6 +35,10 @@ DefineAsset({
 				{
 					id: 'seam',
 					name: 'Seams on the back',
+				},
+				{
+					id: 'stripes',
+					name: 'Stripes pattern',
 				},
 			],
 		},
