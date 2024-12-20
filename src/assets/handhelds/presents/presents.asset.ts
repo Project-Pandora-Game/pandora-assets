@@ -90,14 +90,14 @@ DefineAsset({
 			{
 				part: 'Christmas present base image',
 				source: 'https://sketchfab.com/3d-models/game-ready-free-christmas-gifts-ad99e7faf07c45d9b57324b4a0e94c53',
-				copyrightHolder: 'Saritasa: https://creativecommons.org/licenses/by/4.0/',
+				copyrightHolder: 'Saritasa',
 				editedBy: 'Sandrine',
 				license: 'CC BY',
 			},
 			{
 				part: 'Plain present base image',
 				source: 'https://sketchfab.com/3d-models/gift-box-with-a-bow-97002ea6846c4b0ebfe72e9f946d9295',
-				copyrightHolder: 'AlbertVictory: https://creativecommons.org/licenses/by/4.0/',
+				copyrightHolder: 'AlbertVictory',
 				editedBy: 'Sandrine',
 				license: 'CC BY',
 			},

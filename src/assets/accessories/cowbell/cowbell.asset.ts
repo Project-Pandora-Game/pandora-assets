@@ -46,9 +46,9 @@ DefineAsset({
 			{
 				part: 'bell base image',
 				source: 'https://creazilla.com/media/emoji/48691/bell',
-				copyrightHolder: 'Creazilla: https://creativecommons.org/licenses/by/4.0/',
+				copyrightHolder: 'JoyPixels',
 				editedBy: 'Sandrine',
-				license: 'CC BY-SA',
+				license: 'CC BY',
 			},
 		],
 	},
