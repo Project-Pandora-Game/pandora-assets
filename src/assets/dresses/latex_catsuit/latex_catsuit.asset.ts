@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Latex catsuit',
+	name: 'Latex Catsuit',
 	size: 'medium',
 	allowRandomizerUsage: false,
 	graphics: 'graphics.json',

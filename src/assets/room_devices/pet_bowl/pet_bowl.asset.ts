@@ -1,5 +1,5 @@
 DefineRoomDeviceAsset({
-	name: 'Pet bowl',
+	name: 'Pet Bowl',
 	size: 'medium',
 	colorization: {
 		bowl: {
