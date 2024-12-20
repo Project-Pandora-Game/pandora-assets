@@ -1,20 +1,6 @@
 DefineRoomDeviceAsset({
 	name: 'Christmas Presents',
 	size: 'huge',
-	colorization: {
-		color_1: {
-			name: 'Color 1',
-			default: '#FFFFFF',
-		},
-		color_2: {
-			name: 'Color 2',
-			default: '#33922C',
-		},
-		color_3: {
-			name: 'Color 3',
-			default: '#EF5151',
-		},
-	},
 	staticAttributes: ['Floor'],
 	preview: 'preview.png',
 	slots: {},
@@ -28,24 +14,13 @@ DefineRoomDeviceAsset({
 		},
 	},
 	pivot: {
-		x: 660,
+		x: 350,
 		y: 400,
 	},
 	graphicsLayers: [
 		{
 			type: 'sprite',
-			image: 'presents_color_1.png',
-			colorizationKey: 'color_1',
-		},
-		{
-			type: 'sprite',
-			image: 'presents_color_2.png',
-			colorizationKey: 'color_2',
-		},
-		{
-			type: 'sprite',
-			image: 'presents_color_3.png',
-			colorizationKey: 'color_3',
+			image: 'presents.png',
 		},
 	],
 	ownership: {
