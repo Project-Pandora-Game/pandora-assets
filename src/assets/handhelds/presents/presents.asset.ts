@@ -5,15 +5,15 @@ DefineAsset({
 	colorization: {
 		color_1: {
 			name: 'Color 1',
-			default: '#FF6E6E',
+			default: '#FFFFFF',
 		},
 		color_2: {
 			name: 'Color 2',
-			default: '#F2BA3A',
+			default: '#FF4E4E',
 		},
 		color_3: {
 			name: 'Color 3',
-			default: '#FFFFFF',
+			default: '#258C46',
 		},
 	},
 	// size:300, y:500, centered
@@ -35,7 +35,7 @@ DefineAsset({
 			name: 'Kind of present',
 			variants: [
 				{
-					id: 'christmnas',
+					id: 'christmas',
 					name: 'Christmas present',
 					default: true,
 					properties: {
@@ -45,10 +45,28 @@ DefineAsset({
 								rotation: 'forward',
 							},
 							bones: {
-								arm_l: 45,
-								arm_r: 45,
-								elbow_l: 64,
-								elbow_r: 64,
+								arm_l: 21,
+								arm_r: 33,
+								elbow_l: 90,
+								elbow_r: 78,
+							},
+						},
+					},
+				},
+				{
+					id: 'plain',
+					name: 'Ordinary present',
+					properties: {
+						poseLimits: {
+							arms: {
+								position: 'front',
+								rotation: 'forward',
+							},
+							bones: {
+								arm_l: 54,
+								arm_r: 54,
+								elbow_l: 61,
+								elbow_r: 61,
 							},
 						},
 					},
@@ -63,6 +81,7 @@ DefineAsset({
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
+				part: 'Present',
 				source: 'Self-Made',
 				copyrightHolder: 'Sandrine',
 				editedBy: 'Sandrine',
@@ -71,10 +90,19 @@ DefineAsset({
 			{
 				part: 'Christmas present base image',
 				source: 'https://creazilla.com/media/clipart/7813296/present',
-				copyrightHolder: 'Creazilla: https://creativecommons.org/licenses/by/4.0/',
+				copyrightHolder: 'Creative Commons: https://creativecommons.org/licenses/by/4.0/',
+				editedBy: 'Sandrine',
+				license: 'CC BY-SA',
+			},
+			{
+				part: 'Plain present base image',
+				source: 'https://sketchfab.com/3d-models/gift-box-with-a-bow-97002ea6846c4b0ebfe72e9f946d9295',
+				copyrightHolder: 'Creative Commons: https://creativecommons.org/licenses/by/4.0/',
 				editedBy: 'Sandrine',
 				license: 'CC BY-SA',
 			},
 		],
 	},
 });
+
+
