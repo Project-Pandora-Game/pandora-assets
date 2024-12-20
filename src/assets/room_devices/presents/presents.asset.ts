@@ -23,7 +23,7 @@ DefineRoomDeviceAsset({
 			type: 'storage',
 			name: 'Gifts',
 			staticConfig: { slotName: null },
-			maxCount: 3,
+			maxCount: 7,
 			maxAcceptedSize: 'large',
 		},
 	},
