@@ -459,6 +459,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 	Hand_restricting_cover: {
 		name: 'An item covering hands and restricting their usage',
 		description: 'An item that covers and restricts the wearer\'s hands so they cannot be used to hold something with one hand',
+		parentAttributes: ['Hand_cover'],
 	},
 	//#endregion
 
