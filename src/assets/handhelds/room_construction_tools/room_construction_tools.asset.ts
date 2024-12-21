@@ -17,7 +17,7 @@ DefineAsset({
 	attributes: {
 		provides: ['Handheld'],
 		requires: [
-			'!Mittens',
+			'!Hand_restricting_cover',
 		],
 		hides: ['Handheld'],
 	},

@@ -32,12 +32,16 @@ DefineAsset({
 			'Restraint_arms',
 			'Hand_item',
 			'Hand_cover',
+			'Hand_restricting_cover',
 		],
 		covers: [
 			'Hand_item',
+			'Handheld',
+			'Wrist_cuffs',
 		],
 		hides: [
-			'Mittens',
+			'Hand_item',
+			'Wrist_cuffs',
 		],
 	},
 	modules: {
