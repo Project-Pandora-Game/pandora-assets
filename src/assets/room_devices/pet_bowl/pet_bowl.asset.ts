@@ -14,6 +14,24 @@ DefineRoomDeviceAsset({
 	staticAttributes: ['Floor'],
 	preview: 'pet_bowl_preview.png',
 	slots: {},
+	modules: {
+		size: {
+			type: 'typed',
+			name: 'Bowl size',
+			staticConfig: { slotName: null },
+			variants: [
+				{
+					id: 'large',
+					name: 'Large',
+					default: true,
+				},
+				{
+					id: 'small',
+					name: 'Small',
+				},
+			],
+		},
+	},
 	pivot: {
 		x: 125,
 		y: 50,
@@ -21,12 +39,96 @@ DefineRoomDeviceAsset({
 	graphicsLayers: [
 		{
 			type: 'sprite',
-			image: 'pet_bowl.png',
+			image: '',
+			imageOverrides: [
+				{
+					image: 'pet_bowl.png',
+					condition: [
+						[
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+
+					],
+				},
+				{
+					image: 'pet_bowl.png@187x72',
+					condition: [
+						[
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+
+					],
+				},
+			],
+			offsetOverrides: [
+				{
+					offset: { x: 40, y: 30 },
+					condition: [
+						[
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+					],
+				},
+			],
 			colorizationKey: 'bowl',
 		},
 		{
 			type: 'sprite',
-			image: 'pet_bowl_interior.png',
+			image: '',
+			imageOverrides: [
+				{
+					image: 'pet_bowl_interior.png',
+					condition: [
+						[
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+
+					],
+				},
+				{
+					image: 'pet_bowl_interior.png@187x72',
+					condition: [
+						[
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+
+					],
+				},
+			],
+			offsetOverrides: [
+				{
+					offset: { x: 40, y: 30 },
+					condition: [
+						[
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+					],
+				},
+			],
 			colorizationKey: 'interior',
 		},
 	],
