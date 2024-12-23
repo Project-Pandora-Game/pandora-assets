@@ -4,7 +4,7 @@ DefineRoomDeviceAsset({
 	colorization: {
 		tree: {
 			name: 'Tree',
-			default: '#81BE65',
+			default: '#354E25',
 		},
 		accent: {
 			name: 'Accent color',
