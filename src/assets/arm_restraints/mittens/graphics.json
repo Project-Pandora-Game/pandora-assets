@@ -27,6 +27,9 @@
 									"side": "left",
 									"operator": "=",
 									"value": "up"
+								},
+								{
+									"view": "front"
 								}
 							]
 						]
@@ -40,6 +43,9 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
+								},
+								{
+									"view": "front"
 								}
 							]
 						]
@@ -211,6 +217,9 @@
 									"side": "left",
 									"operator": "=",
 									"value": "up"
+								},
+								{
+									"view": "back"
 								}
 							]
 						]
@@ -224,6 +233,9 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
+								},
+								{
+									"view": "back"
 								}
 							]
 						]
