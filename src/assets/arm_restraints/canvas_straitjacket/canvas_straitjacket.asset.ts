@@ -1,6 +1,6 @@
 DefineAsset({
 	name: 'Canvas Straitjacket',
-	size: 'large',
+	size: 'medium',
 	graphics: 'graphics.json',
 	colorization: {
 		canvas: {
