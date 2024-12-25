@@ -1,6 +1,7 @@
 DefineAsset({
 	name: 'Inflatable Sleeping Bag',
 	size: 'medium',
+	assetPreferenceDefault: 'maybe',
 	graphics: 'graphics.json',
 	colorization: {
 		bag: {
