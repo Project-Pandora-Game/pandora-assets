@@ -1,7 +1,6 @@
 DefineAsset({
 	name: 'Inflatable Sleeping Bag',
 	size: 'medium',
-	assetPreferenceDefault: 'maybe',
 	graphics: 'graphics.json',
 	colorization: {
 		bag: {
@@ -34,17 +33,19 @@ DefineAsset({
 			'Hand_cover',
 			'Anus_cover',
 			'Vulva_cover',
+			'Breast_cover',
 		],
 		covers: [
 			'Clothing_upper',
 			'Clothing_lower',
 			'Clothing_large',
+			'Hand_item',
+			'Handheld',
+			'Restraint_arms',
+			'Restraint_legs',
 			'Anus_item',
 			'Vulva_item',
 			'Breast_item',
-			'Hand_item',
-			'Handheld',
-			'Wrist_cuffs',
 		],
 		hides: [
 			'Clothing_upper',
@@ -104,8 +105,10 @@ DefineAsset({
 	},
 	blockSelfAddRemove: true,
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER trapped TARGET_CHARACTER_DYNAMIC_POSSESSIVE in an inflatable sleeping bag by closing its zipper.',
-		actionRemove: 'SOURCE_CHARACTER freed TARGET_CHARACTER_DYNAMIC_POSSESSIVE from the sleeping bag by deflating it fully and opening the zipper.',
+		actionAdd: 'SOURCE_CHARACTER trapped TARGET_CHARACTER_DYNAMIC_REFLEXIVE in an ITEM_ASSET_NAME.',
+		actionAddCreate: 'SOURCE_CHARACTER created an ITEM_ASSET_NAME and trapped TARGET_CHARACTER_DYNAMIC_REFLEXIVE in it.',
+		actionRemove: 'SOURCE_CHARACTER freed TARGET_CHARACTER_DYNAMIC_REFLEXIVE from the ITEM_ASSET_NAME.',
+		actionRemoveDelete: 'SOURCE_CHARACTER freed TARGET_CHARACTER_DYNAMIC_REFLEXIVE from the ITEM_ASSET_NAME and deleted it.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
