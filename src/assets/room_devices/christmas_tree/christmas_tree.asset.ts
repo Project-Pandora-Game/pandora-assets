@@ -1,23 +1,23 @@
 DefineRoomDeviceAsset({
-	name: 'Pet Bowl',
-	size: 'medium',
+	name: 'Christmas Tree',
+	size: 'huge',
 	colorization: {
-		bowl: {
-			name: 'Pet Bowl',
-			default: '#FFFFFF',
+		tree: {
+			name: 'Tree',
+			default: '#354E25',
 		},
-		interior: {
-			name: 'Pet Bowl Interior',
-			default: '#FEF9F3',
+		accent: {
+			name: 'Accent color',
+			default: '#D1CA9B',
 		},
 	},
 	staticAttributes: ['Floor'],
-	preview: 'pet_bowl_preview.png',
+	preview: 'tree_preview.png',
 	slots: {},
 	modules: {
 		size: {
 			type: 'typed',
-			name: 'Bowl size',
+			name: 'Tree size',
 			staticConfig: { slotName: null },
 			variants: [
 				{
@@ -33,8 +33,8 @@ DefineRoomDeviceAsset({
 		},
 	},
 	pivot: {
-		x: 125,
-		y: 50,
+		x: 673,
+		y: 1790,
 	},
 	graphicsLayers: [
 		{
@@ -42,7 +42,7 @@ DefineRoomDeviceAsset({
 			image: '',
 			imageOverrides: [
 				{
-					image: 'pet_bowl.png',
+					image: 'tree_base.png',
 					condition: [
 						[
 							{
@@ -55,7 +55,7 @@ DefineRoomDeviceAsset({
 					],
 				},
 				{
-					image: 'pet_bowl.png@187x72',
+					image: 'tree_base.png@797x1229',
 					condition: [
 						[
 							{
@@ -70,7 +70,7 @@ DefineRoomDeviceAsset({
 			],
 			offsetOverrides: [
 				{
-					offset: { x: 40, y: 30 },
+					offset: { x: 260, y: 735 },
 					condition: [
 						[
 							{
@@ -82,14 +82,14 @@ DefineRoomDeviceAsset({
 					],
 				},
 			],
-			colorizationKey: 'bowl',
+			colorizationKey: 'tree',
 		},
 		{
 			type: 'sprite',
 			image: '',
 			imageOverrides: [
 				{
-					image: 'pet_bowl_interior.png',
+					image: 'tree_accent.png',
 					condition: [
 						[
 							{
@@ -102,7 +102,7 @@ DefineRoomDeviceAsset({
 					],
 				},
 				{
-					image: 'pet_bowl_interior.png@187x72',
+					image: 'tree_accent.png@797x1229',
 					condition: [
 						[
 							{
@@ -117,7 +117,7 @@ DefineRoomDeviceAsset({
 			],
 			offsetOverrides: [
 				{
-					offset: { x: 40, y: 30 },
+					offset: { x: 260, y: 735 },
 					condition: [
 						[
 							{
@@ -129,19 +129,27 @@ DefineRoomDeviceAsset({
 					],
 				},
 			],
-			colorizationKey: 'interior',
+			colorizationKey: 'accent',
 		},
 	],
 	ownership: {
-		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
-		credits: ['Sandrine'],
+		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+		credits: ['ClaudiaMia'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
-				part: 'Bowl',
+				part: 'used 3D model',
+				source: 'https://skfb.ly/oBNuB',
+				copyrightHolder: 'anybody',
+				editedBy: 'ClaudiaMia',
+				license: 'CC BY',
+			},
+			{
+				part: 'images',
 				source: 'Self-Made',
-				copyrightHolder: 'Sandrine',
+				copyrightHolder: 'ClaudiaMia',
+				editedBy: 'ClaudiaMia',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
