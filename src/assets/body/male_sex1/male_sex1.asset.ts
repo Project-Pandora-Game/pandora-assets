@@ -48,6 +48,15 @@ DefineAsset({
 						},
 					},
 				},
+				{
+					id: 'erect_overlay',
+					name: 'Erect (overlaid on top of items)',
+					properties: {
+						attributes: {
+							provides: ['Penis_erect'],
+						},
+					},
+				},
 			],
 		},
 	},
