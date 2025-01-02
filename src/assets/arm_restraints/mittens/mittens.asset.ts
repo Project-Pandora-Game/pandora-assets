@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Bondage Mittens',
 	size: 'small',
 	graphics: 'graphics.json',
+	requireFreeHandsToUseDefault: false,
 	colorization: {
 		mittens: {
 			name: 'Mitten',

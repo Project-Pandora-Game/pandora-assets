@@ -1,6 +1,7 @@
 DefineAsset({
 	name: 'Strong Ear Plugs',
 	size: 'small',
+	requireFreeHandsToUseDefault: true,
 	graphics: undefined,
 	colorization: undefined,
 	assetPreferenceDefault: 'maybe',

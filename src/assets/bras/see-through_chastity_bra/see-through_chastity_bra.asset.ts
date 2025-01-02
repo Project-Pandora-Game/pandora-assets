@@ -1,6 +1,7 @@
 DefineAsset({
 	name: 'See-through Chastity Bra',
 	size: 'medium',
+	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
 		bra: {

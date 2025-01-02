@@ -1,6 +1,7 @@
 DefineAsset({
 	name: 'Chain Leash',
 	size: 'small',
+	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
 		chains: {

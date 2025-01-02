@@ -3,6 +3,7 @@ import { ItemInteractionType } from 'pandora-common';
 DefineAsset({
 	name: 'Ring Gag',
 	size: 'small',
+	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
 		ring: {

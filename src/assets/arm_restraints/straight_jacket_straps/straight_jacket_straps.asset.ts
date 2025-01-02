@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Straitjacket Straps',
 	size: 'medium',
 	graphics: 'graphics.json',
+	requireFreeHandsToUseDefault: true,
 	colorization: {
 		straps: {
 			name: 'Straps',

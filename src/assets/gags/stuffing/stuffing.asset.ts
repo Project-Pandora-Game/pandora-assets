@@ -1,6 +1,7 @@
 DefineAsset({
 	name: 'Stuffing',
 	size: 'small',
+	requireFreeHandsToUseDefault: false,
 	graphics: 'graphics.json',
 	colorization: {
 		cloth: {

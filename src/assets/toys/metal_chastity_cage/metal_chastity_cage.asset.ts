@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Metal Chastity Cage',
 	size: 'small',
 	graphics: 'graphics.json',
+	requireFreeHandsToUseDefault: false,
 	colorization: {
 		cage: {
 			name: 'Cage',

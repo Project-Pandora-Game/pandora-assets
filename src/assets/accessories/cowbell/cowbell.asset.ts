@@ -1,6 +1,7 @@
 DefineAsset({
 	name: 'Cowbell',
 	size: 'small',
+	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
 		metal: {

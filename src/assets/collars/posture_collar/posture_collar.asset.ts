@@ -4,6 +4,7 @@ DefineAsset({
 	name: 'Posture Collar',
 	size: 'medium',
 	graphics: 'graphics.json',
+	requireFreeHandsToUseDefault: true,
 	colorization: {
 		collar: {
 			name: 'Collar',

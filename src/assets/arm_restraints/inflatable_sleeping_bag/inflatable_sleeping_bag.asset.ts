@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Inflatable Sleeping Bag',
 	size: 'medium',
 	graphics: 'graphics.json',
+	requireFreeHandsToUseDefault: true,
 	colorization: {
 		bag: {
 			name: 'Bag',

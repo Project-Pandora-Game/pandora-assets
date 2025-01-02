@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Armbinder',
 	size: 'medium',
 	graphics: 'graphics.json',
+	requireFreeHandsToUseDefault: true,
 	colorization: {
 		glove: {
 			name: 'Glove',

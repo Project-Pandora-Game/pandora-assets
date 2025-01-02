@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Pet Crawler Armbinders',
 	size: 'medium',
 	graphics: 'graphics.json',
+	requireFreeHandsToUseDefault: false,
 	colorization: {
 		binders: {
 			name: 'Binders',

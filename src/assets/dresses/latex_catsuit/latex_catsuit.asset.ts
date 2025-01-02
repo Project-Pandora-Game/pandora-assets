@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Latex Catsuit',
 	size: 'medium',
 	allowRandomizerUsage: false,
+	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
 		catsuit: {

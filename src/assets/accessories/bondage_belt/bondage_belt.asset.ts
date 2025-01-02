@@ -1,6 +1,7 @@
 DefineAsset({
 	name: 'Bondage Belt',
 	size: 'medium',
+	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
 		cuff: {

@@ -1,6 +1,7 @@
 DefineAsset({
 	name: 'Steel Ankle Cuffs',
 	size: 'small',
+	requireFreeHandsToUseDefault: false,
 	graphics: 'graphics.json',
 	colorization: {
 		cuffs: {

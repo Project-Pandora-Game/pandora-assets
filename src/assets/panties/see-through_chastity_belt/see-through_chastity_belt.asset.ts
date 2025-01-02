@@ -4,6 +4,7 @@ DefineAsset({
 	name: 'See-through Chastity Belt',
 	size: 'medium',
 	graphics: 'graphics.json',
+	requireFreeHandsToUseDefault: true,
 	colorization: {
 		belt: {
 			name: 'Belt Frame',

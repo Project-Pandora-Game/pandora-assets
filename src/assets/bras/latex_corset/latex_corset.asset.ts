@@ -3,6 +3,7 @@ import { ItemInteractionType } from 'pandora-common';
 DefineAsset({
 	name: 'Latex Corset',
 	size: 'medium',
+	requireFreeHandsToUseDefault: true,
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: {
