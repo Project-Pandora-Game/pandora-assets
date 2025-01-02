@@ -649,7 +649,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 			],
 		},
 		{
-			category: 'Legs (straight)',
+			category: 'Legs (standing)',
 			poses: [
 				{
 					name: 'Normal',
@@ -734,7 +734,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 			],
 		},
 		{
-			category: 'Legs (kneeling) [experimental]',
+			category: 'Legs (kneeling)',
 			poses: [
 				{
 					name: 'Kneeling',
@@ -779,7 +779,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 			],
 		},
 		{
-			category: 'Legs (sitting) [experimental]',
+			category: 'Legs (sitting)',
 			poses: [
 				{
 					name: 'Sitting',
@@ -824,7 +824,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 			],
 		},
 		{
-			category: 'Toes [experimental]',
+			category: 'Toes',
 			poses: [
 				{
 					name: 'No tiptoeing',
