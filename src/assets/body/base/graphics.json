@@ -124,6 +124,28 @@
 						]
 					},
 					{
+						"image": "body_armsback.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								}
+							]
+						]
+					},
+					{
 						"image": "body_armsup_fists.png",
 						"condition": [
 							[
@@ -311,6 +333,34 @@
 									"side": "left",
 									"operator": "=",
 									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "forward"
+								}
+							]
+						]
+					},
+					{
+						"image": "body_back_armsback.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
 								}
 							]
 						]
