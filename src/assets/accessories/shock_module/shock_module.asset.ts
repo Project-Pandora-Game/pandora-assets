@@ -1,6 +1,7 @@
 DefineAsset({
 	name: 'Shock Module',
 	size: 'small',
+	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
 		module: {

@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Steel Hood',
 	size: 'large',
 	graphics: 'graphics.json',
+	requireFreeHandsToUseDefault: true,
 	colorization: {
 		sphere: {
 			name: 'Sphere',

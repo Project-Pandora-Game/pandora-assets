@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Steel Mittens',
 	size: 'medium',
 	graphics: 'graphics.json',
+	requireFreeHandsToUseDefault: false,
 	colorization: {
 		spheres: {
 			name: 'Spheres',

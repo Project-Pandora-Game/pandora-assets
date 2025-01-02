@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Canvas Straitjacket',
 	size: 'medium',
 	graphics: 'graphics.json',
+	requireFreeHandsToUseDefault: true,
 	colorization: {
 		canvas: {
 			name: 'Canvas',

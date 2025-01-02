@@ -1,6 +1,7 @@
 DefineAsset({
 	name: 'Full Hood',
 	size: 'medium',
+	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
 		hood: {

@@ -1,6 +1,7 @@
 DefineAsset({
 	name: 'Bit Gag',
 	size: 'medium',
+	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
 		bit: {

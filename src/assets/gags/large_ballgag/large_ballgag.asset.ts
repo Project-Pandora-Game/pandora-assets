@@ -3,6 +3,7 @@ import { ItemInteractionType } from 'pandora-common';
 DefineAsset({
 	name: 'Large Ball Gag',
 	size: 'medium',
+	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
 		ball: {

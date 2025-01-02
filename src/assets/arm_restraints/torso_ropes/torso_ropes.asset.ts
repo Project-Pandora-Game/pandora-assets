@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Torso Ropes',
 	size: 'small',
 	graphics: 'graphics.json',
+	requireFreeHandsToUseDefault: false,
 	colorization: {
 		rope: {
 			name: 'Rope',

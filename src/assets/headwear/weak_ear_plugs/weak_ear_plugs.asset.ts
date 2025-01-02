@@ -1,6 +1,7 @@
 DefineAsset({
 	name: 'Weak Ear Plugs',
 	size: 'small',
+	requireFreeHandsToUseDefault: true,
 	graphics: undefined,
 	colorization: undefined,
 	preview: 'preview.png',

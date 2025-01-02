@@ -4,6 +4,7 @@ DefineAsset({
 	name: 'Yoke',
 	size: 'medium',
 	graphics: 'graphics.json',
+	requireFreeHandsToUseDefault: true,
 	colorization: {
 		collar: {
 			name: 'Collar',
