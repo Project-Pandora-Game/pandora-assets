@@ -1,6 +1,7 @@
 DefineRoomDeviceAsset({
 	name: 'Floor anchors',
 	size: 'huge',
+	requireFreeHandsToUseDefault: false,
 	colorization: {
 		sockets: {
 			name: 'Sockets',

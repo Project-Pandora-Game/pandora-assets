@@ -1,6 +1,7 @@
 DefineRoomDeviceAsset({
 	name: 'Barrel',
 	size: 'huge',
+	requireFreeHandsToUseDefault: false,
 	colorization: {
 		barrel: {
 			name: 'Barrel',

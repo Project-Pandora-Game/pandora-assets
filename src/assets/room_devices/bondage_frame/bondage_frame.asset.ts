@@ -1,6 +1,7 @@
 DefineRoomDeviceAsset({
 	name: 'Bondage Frame',
 	size: 'huge',
+	requireFreeHandsToUseDefault: true,
 	colorization: {
 		frame: {
 			name: 'Frame',

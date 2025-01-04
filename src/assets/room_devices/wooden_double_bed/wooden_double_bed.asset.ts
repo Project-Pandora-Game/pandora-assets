@@ -1,6 +1,7 @@
 DefineRoomDeviceAsset({
 	name: 'Wooden Double Bed',
 	size: 'huge',
+	requireFreeHandsToUseDefault: false,
 	colorization: {
 		bed_frame: {
 			name: 'Bed frame',

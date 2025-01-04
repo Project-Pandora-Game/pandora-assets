@@ -1,6 +1,7 @@
 DefineRoomDeviceAsset({
 	name: 'Frame Couch',
 	size: 'huge',
+	requireFreeHandsToUseDefault: false,
 	colorization: {
 		frame: {
 			name: 'Frame',

@@ -1,6 +1,7 @@
 DefineRoomDeviceAsset({
 	name: 'Large Cage',
 	size: 'huge',
+	requireFreeHandsToUseDefault: false,
 	colorization: {
 		cage: {
 			name: 'Cage',
