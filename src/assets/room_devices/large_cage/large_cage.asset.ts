@@ -239,7 +239,7 @@ DefineRoomDeviceAsset({
 			characterPositionOverrides: [
 				{
 					position: {
-						offsetX: -180,
+						offsetX: 180,
 						offsetY: -190,
 						relativeScale: 0.87,
 					},
