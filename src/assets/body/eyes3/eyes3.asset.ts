@@ -18,7 +18,8 @@ DefineBodypart({
 		},
 		shine: {
 			name: 'Shine',
-			default: '#FFFFFF',
+			default: '#FFFFFF88',
+			minAlpha: 0,
 		},
 	},
 	// size:200, y:195, centered
@@ -86,6 +87,39 @@ DefineBodypart({
 				{
 					id: 'closed',
 					name: 'Closed',
+				},
+			],
+		},
+		eyeDirection: {
+			type: 'typed',
+			name: 'Eyes direction',
+			expression: 'Eyes direction',
+			variants: [
+				{
+					id: 'straight',
+					name: 'Straight',
+					default: true,
+				},
+				// Left<->Right is intentionally swapped for user to match the character's POV
+				{
+					id: 'left',
+					name: 'Right',
+				},
+				{
+					id: 'right',
+					name: 'Left',
+				},
+				{
+					id: 'down',
+					name: 'Down',
+				},
+				{
+					id: 'up',
+					name: 'Up',
+				},
+				{
+					id: 'rolled',
+					name: 'Rolled',
 				},
 			],
 		},
