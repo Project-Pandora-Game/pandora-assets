@@ -33,7 +33,6 @@ DefineBodypart({
 		pupilType: {
 			type: 'typed',
 			name: 'Pupil Types',
-			expression: 'Eye Pupil Types',
 			variants: [
 				{
 					id: 'largePupils',
@@ -92,8 +91,8 @@ DefineBodypart({
 		},
 		eyeDirection: {
 			type: 'typed',
-			name: 'Eyes direction',
-			expression: 'Eyes direction',
+			name: 'Eye Variants',
+			expression: 'Eye Variants',
 			variants: [
 				{
 					id: 'straight',
@@ -120,6 +119,14 @@ DefineBodypart({
 				{
 					id: 'rolled',
 					name: 'Rolled',
+				},
+				{
+					id: 'wideBig',
+					name: 'Wide (Big)',
+				},
+				{
+					id: 'wideSmall',
+					name: 'Wide (Small)',
 				},
 			],
 		},

@@ -32,6 +32,30 @@
 								}
 							]
 						]
+					},
+					{
+						"image": "eyebase_wide.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "wideBig"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyebase_wide.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "wideSmall"
+								}
+							]
+						]
 					}
 				]
 			}
@@ -139,6 +163,30 @@
 								}
 							]
 						]
+					},
+					{
+						"image": "cornea_big.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "wideBig"
+								}
+							]
+						]
+					},
+					{
+						"image": "cornea_small.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "wideSmall"
+								}
+							]
+						]
 					}
 				]
 			}
@@ -171,6 +219,30 @@
 							[
 								{
 									"blinking": true
+								}
+							]
+						]
+					},
+					{
+						"image": "eyelashes_wide.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "wideBig"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyelashes_wide.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "wideSmall"
 								}
 							]
 						]
@@ -240,74 +312,6 @@
 							[
 								{
 									"blinking": true
-								}
-							]
-						]
-					},
-					{
-						"image": "pupils.png",
-						"condition": [
-							[
-								{
-									"module": "pupilType",
-									"operator": "=",
-									"value": "smallPupils"
-								},
-								{
-									"module": "eyeDirection",
-									"operator": "=",
-									"value": "straight"
-								}
-							]
-						]
-					},
-					{
-						"image": "pupils2.png",
-						"condition": [
-							[
-								{
-									"module": "pupilType",
-									"operator": "=",
-									"value": "largePupils"
-								},
-								{
-									"module": "eyeDirection",
-									"operator": "=",
-									"value": "straight"
-								}
-							]
-						]
-					},
-					{
-						"image": "pupils3.png",
-						"condition": [
-							[
-								{
-									"module": "pupilType",
-									"operator": "=",
-									"value": "starPupils"
-								},
-								{
-									"module": "eyeDirection",
-									"operator": "=",
-									"value": "straight"
-								}
-							]
-						]
-					},
-					{
-						"image": "pupils4.png",
-						"condition": [
-							[
-								{
-									"module": "pupilType",
-									"operator": "=",
-									"value": "crossPupils"
-								},
-								{
-									"module": "eyeDirection",
-									"operator": "=",
-									"value": "straight"
 								}
 							]
 						]
@@ -648,6 +652,54 @@
 									"module": "eyeDirection",
 									"operator": "=",
 									"value": "rolled"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupils.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "smallPupils"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupils2.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "largePupils"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupils3.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "starPupils"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupils4.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "crossPupils"
 								}
 							]
 						]
