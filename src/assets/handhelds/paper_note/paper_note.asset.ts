@@ -10,14 +10,6 @@ DefineAsset({
 	},
 	// size:200, y:304, X:153
 	preview: 'preview.png',
-	attributes: {
-		provides: [
-			'Handheld',
-		],
-		requires: [
-			'!Hand_restricting_cover',
-		],
-	},
 	modules: {
 		location: {
 			type: 'typed',
@@ -39,6 +31,14 @@ DefineAsset({
 								rotation: ['up', 'down'],
 							},
 						},
+						attributes: {
+							provides: [
+								'Handheld',
+							],
+							requires: [
+								'!Hand_restricting_cover',
+							],
+						},
 					},
 				},
 				{
@@ -50,6 +50,14 @@ DefineAsset({
 								fingers: 'fist',
 								rotation: ['up', 'down'],
 							},
+						},
+						attributes: {
+							provides: [
+								'Handheld',
+							],
+							requires: [
+								'!Hand_restricting_cover',
+							],
 						},
 					},
 				},
