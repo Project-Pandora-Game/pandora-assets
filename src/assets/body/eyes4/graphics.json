@@ -281,6 +281,66 @@
 								}
 							]
 						]
+					},
+					{
+						"image": "shine_left.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "left"
+								}
+							]
+						]
+					},
+					{
+						"image": "shine_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "right"
+								}
+							]
+						]
+					},
+					{
+						"image": "shine_down.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					},
+					{
+						"image": "shine_up.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "up"
+								}
+							]
+						]
+					},
+					{
+						"image": "shine_rolled.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "rolled"
+								}
+							]
+						]
 					}
 				]
 			}

@@ -18,7 +18,7 @@ DefineBodypart({
 		},
 		shine: {
 			name: 'Shine',
-			default: '#FFFFFF88',
+			default: '#FFFFFFCC',
 			minAlpha: 0,
 		},
 	},
