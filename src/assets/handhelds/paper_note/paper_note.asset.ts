@@ -32,7 +32,6 @@ DefineAsset({
 				{
 					id: 'right',
 					name: 'Held in the right hand',
-					default: true,
 					properties: {
 						poseLimits: {
 							rightArm: {
