@@ -56,10 +56,6 @@ DefineAsset({
 			],
 		},
 	},
-	chat: {
-		actionAdd: 'SOURCE_CHARACTER put a paper note into TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
-		actionRemove: 'SOURCE_CHARACTER removed the paper note from TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
-	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],
