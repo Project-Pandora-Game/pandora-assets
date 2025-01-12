@@ -6,7 +6,7 @@ DefineBodypart({
 	colorization: {
 		eyeColor: {
 			name: 'Eye color',
-			default: '#7e6ae0',
+			default: '#2D589B',
 		},
 		lashes: {
 			name: 'Lashes',
@@ -18,7 +18,7 @@ DefineBodypart({
 		},
 		shine: {
 			name: 'Shine',
-			default: '#FFFFFF88',
+			default: '#A8CEE4CC',
 			minAlpha: 0,
 		},
 	},
