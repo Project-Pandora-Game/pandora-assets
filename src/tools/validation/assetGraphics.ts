@@ -1,8 +1,11 @@
 import { Immutable } from 'immer';
 import {
 	AssetGraphicsDefinition,
+	CloneDeepMutable,
 	Logger,
+	MakeMirroredPoints,
 	MirrorBoneLike,
+	PointDefinitionCalculated,
 	PointMatchesPointType,
 	PointTemplate,
 	PointTemplateDiff,
@@ -20,6 +23,15 @@ export function AssetGraphicsValidate(definition: AssetGraphicsDefinition, logge
 			continue;
 		}
 
+		// Calculate the actual points first (such as resolving mirrored points)
+		const calculatedPoints: Immutable<PointDefinitionCalculated[]> = pointTemplate
+			.map((point, index): PointDefinitionCalculated => ({
+				...CloneDeepMutable(point),
+				index,
+				isMirror: false,
+			}))
+			.flatMap(MakeMirroredPoints);
+
 		if (layer.pointType != null) {
 			// Layer should only use point types that are mentioned in the template
 			for (const pointType of layer.pointType) {
@@ -28,7 +40,7 @@ export function AssetGraphicsValidate(definition: AssetGraphicsDefinition, logge
 					matchingPointTypes.push(pointType + '_r', pointType + '_l');
 				}
 
-				if (!pointTemplate.some((p) => (
+				if (!calculatedPoints.some((p) => (
 					p.pointType != null && (
 						matchingPointTypes.includes(p.pointType) ||
 						p.mirror && matchingPointTypes.includes(MirrorBoneLike(p.pointType))
@@ -39,7 +51,7 @@ export function AssetGraphicsValidate(definition: AssetGraphicsDefinition, logge
 			}
 
 			// Layer shouldn't define point types if all points match
-			if (pointTemplate.every((p) => PointMatchesPointType(p, layer.pointType))) {
+			if (calculatedPoints.every((p) => PointMatchesPointType(p, layer.pointType))) {
 				layerLogger.warning(`Layer filters for point types, but all points match anyway. Remove the unnecessary filter.`);
 			}
 		}
