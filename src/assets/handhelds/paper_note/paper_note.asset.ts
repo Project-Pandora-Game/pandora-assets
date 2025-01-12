@@ -36,19 +36,8 @@ DefineAsset({
 						poseLimits: {
 							rightArm: {
 								fingers: 'fist',
+								rotation: ['up', 'down'],
 							},
-							options: [
-								{
-									rightArm: {
-										rotation: 'up',
-									},
-								},
-								{
-									rightArm: {
-										rotation: 'down',
-									},
-								},
-							],
 						},
 					},
 				},
@@ -59,19 +48,8 @@ DefineAsset({
 						poseLimits: {
 							leftArm: {
 								fingers: 'fist',
+								rotation: ['up', 'down'],
 							},
-							options: [
-								{
-									leftArm: {
-										rotation: 'up',
-									},
-								},
-								{
-									leftArm: {
-										rotation: 'down',
-									},
-								},
-							],
 						},
 					},
 				},
@@ -81,8 +59,6 @@ DefineAsset({
 	chat: {
 		actionAdd: 'SOURCE_CHARACTER put a paper note into TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
 		actionRemove: 'SOURCE_CHARACTER removed the paper note from TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
-		actionAddCreate: 'SOURCE_CHARACTER took out a paper note.',
-		actionRemoveDelete: 'SOURCE_CHARACTER disposed of the paper note.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
