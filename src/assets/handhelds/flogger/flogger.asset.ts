@@ -35,19 +35,8 @@ DefineAsset({
 						poseLimits: {
 							rightArm: {
 								fingers: 'fist',
+								rotation: ['up', 'down'],
 							},
-							options: [
-								{
-									rightArm: {
-										rotation: 'up',
-									},
-								},
-								{
-									rightArm: {
-										rotation: 'down',
-									},
-								},
-							],
 						},
 					},
 				},
@@ -94,10 +83,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER picked up the flogger.',
-		actionRemove: 'SOURCE_CHARACTER put down the flogger.',
-		actionAddCreate: 'SOURCE_CHARACTER took out a flogger.',
-		actionRemoveDelete: 'SOURCE_CHARACTER put the flogger away.',
+		actionAdd: 'SOURCE_CHARACTER put a flogger into TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
+		actionRemove: 'SOURCE_CHARACTER removed the flogger from TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

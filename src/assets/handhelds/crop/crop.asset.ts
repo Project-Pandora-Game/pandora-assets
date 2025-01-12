@@ -54,19 +54,8 @@ DefineAsset({
 						poseLimits: {
 							rightArm: {
 								fingers: 'fist',
+								rotation: ['up', 'down'],
 							},
-							options: [
-								{
-									rightArm: {
-										rotation: 'up',
-									},
-								},
-								{
-									rightArm: {
-										rotation: 'down',
-									},
-								},
-							],
 						},
 					},
 				},
@@ -87,19 +76,8 @@ DefineAsset({
 						poseLimits: {
 							leftArm: {
 								fingers: 'fist',
+								rotation: ['up', 'down'],
 							},
-							options: [
-								{
-									leftArm: {
-										rotation: 'up',
-									},
-								},
-								{
-									leftArm: {
-										rotation: 'down',
-									},
-								},
-							],
 						},
 					},
 				},
@@ -113,10 +91,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER picked up the crop.',
-		actionRemove: 'SOURCE_CHARACTER put down the crop.',
-		actionAddCreate: 'SOURCE_CHARACTER took out a crop.',
-		actionRemoveDelete: 'SOURCE_CHARACTER put the crop away.',
+		actionAdd: 'SOURCE_CHARACTER put a crop into TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
+		actionRemove: 'SOURCE_CHARACTER removed the crop from TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

@@ -111,8 +111,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER picked up the mug.',
-		actionRemove: 'SOURCE_CHARACTER put down the mug.',
+		actionAdd: 'SOURCE_CHARACTER put a mug into TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
+		actionRemove: 'SOURCE_CHARACTER removed the mug from TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',

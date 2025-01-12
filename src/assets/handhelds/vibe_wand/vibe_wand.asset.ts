@@ -35,19 +35,8 @@ DefineAsset({
 						poseLimits: {
 							rightArm: {
 								fingers: 'fist',
+								rotation: ['up', 'down'],
 							},
-							options: [
-								{
-									rightArm: {
-										rotation: 'up',
-									},
-								},
-								{
-									rightArm: {
-										rotation: 'down',
-									},
-								},
-							],
 						},
 					},
 				},
@@ -68,19 +57,8 @@ DefineAsset({
 						poseLimits: {
 							leftArm: {
 								fingers: 'fist',
+								rotation: ['up', 'down'],
 							},
-							options: [
-								{
-									leftArm: {
-										rotation: 'up',
-									},
-								},
-								{
-									leftArm: {
-										rotation: 'down',
-									},
-								},
-							],
 						},
 					},
 				},
@@ -94,10 +72,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER picked up the vibe wand.',
-		actionRemove: 'SOURCE_CHARACTER put down the vibe wand.',
-		actionAddCreate: 'SOURCE_CHARACTER took out a vibe wand.',
-		actionRemoveDelete: 'SOURCE_CHARACTER put the vibe wand away.',
+		actionAdd: 'SOURCE_CHARACTER put a vibe wand into TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
+		actionRemove: 'SOURCE_CHARACTER removed the vibe wand from TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

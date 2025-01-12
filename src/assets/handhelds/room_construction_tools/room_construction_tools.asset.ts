@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Room Construction Tools',
+	name: 'Toolbox',
 	size: 'medium',
 	graphics: 'graphics.json',
 	colorization: {
@@ -46,29 +46,16 @@ DefineAsset({
 		},
 		rightArm: {
 			fingers: 'fist',
+			rotation: ['up', 'down'],
 		},
-		options: [
-			{
-				rightArm: {
-					rotation: 'up',
-				},
-			},
-			{
-				rightArm: {
-					rotation: 'down',
-				},
-			},
-		],
 		bones: {
 			arm_l: 66,
 			elbow_l: 15,
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER picked up the room construction tools.',
-		actionRemove: 'SOURCE_CHARACTER put down the room construction tools.',
-		actionAddCreate: 'SOURCE_CHARACTER took out some room construction tools.',
-		actionRemoveDelete: 'SOURCE_CHARACTER put the room construction tools away.',
+		actionAdd: 'SOURCE_CHARACTER put a toolbox into TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
+		actionRemove: 'SOURCE_CHARACTER removed the toolbox from TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

@@ -78,8 +78,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER picked up the bottle of lotion.',
-		actionRemove: 'SOURCE_CHARACTER put the bottle down.',
+		actionAdd: 'SOURCE_CHARACTER put a bottle with lotion into TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
+		actionRemove: 'SOURCE_CHARACTER removed the lotion bottle from TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
