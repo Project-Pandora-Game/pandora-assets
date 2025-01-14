@@ -13,7 +13,20 @@
 			"colorizationKey": "penis",
 			"image": {
 				"image": "balls.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "penis",
+									"operator": "=",
+									"value": "erect_overlay"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
@@ -37,6 +50,18 @@
 									"module": "penis",
 									"operator": "=",
 									"value": "erect"
+								}
+							]
+						]
+					},
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "penis",
+									"operator": "=",
+									"value": "erect_overlay"
 								}
 							]
 						]
@@ -65,6 +90,102 @@
 									"module": "penis",
 									"operator": "=",
 									"value": "erect"
+								}
+							]
+						]
+					},
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "penis",
+									"operator": "=",
+									"value": "erect_overlay"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Balls (overlay)",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "penis",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "balls.png",
+						"condition": [
+							[
+								{
+									"module": "penis",
+									"operator": "=",
+									"value": "erect_overlay"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Glans (overlay)",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "glans",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "glans_erect.png",
+						"condition": [
+							[
+								{
+									"module": "penis",
+									"operator": "=",
+									"value": "erect_overlay"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Shaft (overlay)",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "penis",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "shaft_erect.png",
+						"condition": [
+							[
+								{
+									"module": "penis",
+									"operator": "=",
+									"value": "erect_overlay"
 								}
 							]
 						]

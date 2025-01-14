@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Steel Mittens',
 	size: 'medium',
 	graphics: 'graphics.json',
+	requireFreeHandsToUseDefault: false,
 	colorization: {
 		spheres: {
 			name: 'Spheres',
@@ -20,11 +21,13 @@ DefineAsset({
 			'Restraint_arms',
 			'Hand_item',
 			'Hand_cover',
+			'Hand_restricting_cover',
 			'Gloves',
 			'Mittens',
 		],
 		covers: [
 			'Hand_item',
+			'Handheld',
 		],
 		hides: [
 			'Mittens',

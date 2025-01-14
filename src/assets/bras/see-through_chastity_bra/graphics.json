@@ -11,7 +11,9 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm"
+				"bodyarm",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "bra",
@@ -30,7 +32,9 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm"
+				"bodyarm",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "chains",
@@ -47,9 +51,6 @@
 			"name": "bra covers front",
 			"priority": "ABOVE_BODY",
 			"points": "breasts",
-			"pointType": [
-				"breasts"
-			],
 			"mirror": 0,
 			"colorizationKey": "cover",
 			"image": {
@@ -90,9 +91,6 @@
 			"name": "bra frame front",
 			"priority": "ABOVE_BODY",
 			"points": "breasts",
-			"pointType": [
-				"breasts"
-			],
 			"mirror": 0,
 			"colorizationKey": "bra",
 			"image": {
@@ -121,9 +119,6 @@
 			"name": "bra covers front backside",
 			"priority": "BELOW_BREASTS",
 			"points": "breasts",
-			"pointType": [
-				"breasts"
-			],
 			"mirror": 0,
 			"colorizationKey": "cover",
 			"image": {
@@ -152,9 +147,6 @@
 			"name": "bra frame front backside",
 			"priority": "BELOW_BREASTS",
 			"points": "breasts",
-			"pointType": [
-				"breasts"
-			],
 			"mirror": 0,
 			"colorizationKey": "bra",
 			"image": {
@@ -185,7 +177,9 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm"
+				"bodyarm",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "bra",
@@ -204,7 +198,9 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm"
+				"bodyarm",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "chains",

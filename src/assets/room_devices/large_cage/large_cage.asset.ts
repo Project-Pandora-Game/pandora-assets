@@ -1,6 +1,7 @@
 DefineRoomDeviceAsset({
 	name: 'Large Cage',
 	size: 'huge',
+	requireFreeHandsToUseDefault: false,
 	colorization: {
 		cage: {
 			name: 'Cage',
@@ -238,7 +239,7 @@ DefineRoomDeviceAsset({
 			characterPositionOverrides: [
 				{
 					position: {
-						offsetX: -180,
+						offsetX: 180,
 						offsetY: -190,
 						relativeScale: 0.87,
 					},

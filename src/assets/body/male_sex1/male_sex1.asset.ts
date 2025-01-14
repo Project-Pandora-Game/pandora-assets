@@ -1,9 +1,8 @@
 import { ItemInteractionType } from 'pandora-common';
 
-DefineAsset({
+DefineBodypart({
 	name: 'Male Sex 1',
 	bodypart: 'sex',
-	size: 'bodypart',
 	graphics: 'graphics.json',
 	colorization: {
 		penis: {
@@ -42,6 +41,15 @@ DefineAsset({
 				{
 					id: 'erect',
 					name: 'Erect',
+					properties: {
+						attributes: {
+							provides: ['Penis_erect'],
+						},
+					},
+				},
+				{
+					id: 'erect_overlay',
+					name: 'Erect (overlaid on top of items)',
 					properties: {
 						attributes: {
 							provides: ['Penis_erect'],

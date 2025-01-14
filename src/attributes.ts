@@ -445,7 +445,22 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'An item covering the mouth',
 		description: 'An item that is covering the mouth',
 	},
+	//#endregion
 
+	//#region Hands items
+	Hand_item: {
+		name: 'An item used on the hands',
+		description: 'An item that is used on the wearer\'s hands',
+	},
+	Hand_cover: {
+		name: 'An item covering hands',
+		description: 'An item that covers the wearer\'s hands without restricting them',
+	},
+	Hand_restricting_cover: {
+		name: 'An item covering hands and restricting their usage',
+		description: 'An item that covers and restricts the wearer\'s hands so they cannot be used to hold something with one hand',
+		parentAttributes: ['Hand_cover'],
+	},
 	//#endregion
 
 	//#region Breasts items
@@ -614,27 +629,19 @@ const ATTRIBUTES_DEFINITION_BASE = {
 	},
 	// Connectors
 	Wrist_cuffs_chainable: {
-		name: 'Wrist_cuffs_chainable',
+		name: 'Chainable wrist cuffs',
 		description: 'A cuff that is chainable to another item',
 	},
 	Belt_chainable: {
-		name: 'Belt_chainable',
+		name: 'A chainable belt',
 		description: 'A belt that is chainable to another item',
 	},
 	Ankle_cuffs_chainable: {
-		name: 'Ankle_cuffs_chainable',
+		name: 'Chainable ankle cuffs',
 		description: 'A cuff that is chainable to another item',
 	},
-	Hand_cover: {
-		name: 'Hand_cover',
-		description: 'An item that covers the wearer\'s hands completely',
-	},
-	Hand_item: {
-		name: 'Hand_item',
-		description: 'An item that is used on the wearer\'s hands',
-	},
 	Armbinder_chainable: {
-		name: 'Armbinder_chainable',
+		name: 'A chainable armbinder',
 		description: 'An armbinder that is chainable to another item',
 	},
 } as const satisfies Record<string, AssetRepoAttributeDefinition>;

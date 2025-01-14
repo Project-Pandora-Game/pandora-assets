@@ -11,7 +11,9 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm"
+				"bodyarm",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "skirt",
@@ -30,7 +32,9 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm"
+				"bodyarm",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "skirt",
@@ -60,7 +64,9 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm"
+				"bodyarm",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "skirt",

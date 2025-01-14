@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Artificial finger nails',
+	name: 'Artificial Finger Nails',
 	size: 'small',
 	graphics: 'graphics.json',
 	colorization: {

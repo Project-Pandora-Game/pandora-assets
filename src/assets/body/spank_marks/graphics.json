@@ -10,7 +10,9 @@
 			"priority": "BODY",
 			"points": "body",
 			"pointType": [
-				"body"
+				"body",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "blush",
@@ -106,7 +108,9 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"pointType": [
-				"body_l"
+				"body_l",
+				"bodyleg_l",
+				"leg_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "blush",
@@ -173,7 +177,9 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"pointType": [
-				"body_l"
+				"body_l",
+				"bodyleg_l",
+				"leg_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "print",

@@ -6,6 +6,7 @@ type AllBones = import('./bones.ts').AllBones;
 
 // Globals available to all assets
 declare function DefineAsset(def: IntermediatePersonalAssetDefinition): void;
+declare function DefineBodypart(def: IntermediateBodypartAssetDefinition): void;
 declare function DefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinition): void;
 declare function DefineLockAsset(def: IntermediateLockAssetDefinition): void;
 
@@ -50,7 +51,15 @@ type AssetOwnershipData = {
 	licensing: LicensingInfo[];
 };
 
-interface IntermediatePersonalAssetDefinition extends Pick<import('pandora-common').PersonalAssetDefinition<AssetRepoExtraArgs>, import('./tools/definition.ts').AssetDefinitionFallthroughProperties> {
+interface IntermediateBodypartAssetDefinition extends Pick<import('pandora-common').BodypartAssetDefinition<AssetRepoExtraArgs>, import('./tools/definitionBodypart.ts').BodypartDefinitionFallthroughProperties> {
+	id?: string;
+	graphics?: string;
+	/** Info about who owns the asset(s) */
+	ownership: AssetOwnershipData;
+	colorization?: Record<string, IntermediateAssetColorization>;
+}
+
+interface IntermediatePersonalAssetDefinition extends Pick<import('pandora-common').PersonalAssetDefinition<AssetRepoExtraArgs>, import('./tools/definitionPersonal.ts').PersonalAssetDefinitionFallthroughProperties> {
 	id?: string;
 	graphics?: string;
 	/** Info about who owns the asset(s) */

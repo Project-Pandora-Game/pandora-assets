@@ -1,9 +1,8 @@
 import { CreateHairColor } from '../../../helpers/hair_base.js';
 const { colorization, modules } = CreateHairColor(false);
 
-DefineAsset({
+DefineBodypart({
 	name: 'Twintails',
-	size: 'bodypart',
 	bodypart: 'backhair',
 	graphics: 'graphics.json',
 	colorization,

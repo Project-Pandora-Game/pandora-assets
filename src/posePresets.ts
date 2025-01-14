@@ -130,6 +130,22 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					},
 				},
 				{
+					name: 'Touching cheeks',
+					bones: {
+						arm_r: 102,
+						arm_l: 102,
+						elbow_r: 163,
+						elbow_l: 163,
+					},
+					optional: {
+						arms: {
+							position: 'front',
+							rotation: 'down',
+							fingers: 'spread',
+						},
+					},
+				},
+				{
 					name: 'Touching neck',
 					bones: {
 						arm_r: 79,
@@ -649,7 +665,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 			],
 		},
 		{
-			category: 'Legs (straight)',
+			category: 'Legs (standing)',
 			poses: [
 				{
 					name: 'Normal',
@@ -734,7 +750,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 			],
 		},
 		{
-			category: 'Legs (kneeling) [experimental]',
+			category: 'Legs (kneeling)',
 			poses: [
 				{
 					name: 'Kneeling',
@@ -779,7 +795,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 			],
 		},
 		{
-			category: 'Legs (sitting) [experimental]',
+			category: 'Legs (sitting)',
 			poses: [
 				{
 					name: 'Sitting',
@@ -824,7 +840,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 			],
 		},
 		{
-			category: 'Toes [experimental]',
+			category: 'Toes',
 			poses: [
 				{
 					name: 'No tiptoeing',

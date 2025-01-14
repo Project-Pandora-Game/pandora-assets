@@ -1,6 +1,7 @@
 DefineAsset({
 	name: 'Anal plug',
 	size: 'small',
+	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
 		plug: {

@@ -32,6 +32,34 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "patterns front",
+			"priority": "ABOVE_BODY",
+			"points": "body",
+			"mirror": 0,
+			"colorizationKey": "seams",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "stocking_f_stripes.png",
+						"condition": [
+							[
+								{
+									"module": "stockingState",
+									"operator": "=",
+									"value": "stripes"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"name": "back",
 			"priority": "BELOW_BODY",
 			"points": "body",
@@ -87,22 +115,34 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"name": "seams",
+			"name": "patterns back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "seams",
 			"image": {
-				"image": "stocking_b_seam.png",
+				"image": "",
 				"overrides": [
 					{
-						"image": "",
+						"image": "stocking_b_seam.png",
 						"condition": [
 							[
 								{
 									"module": "stockingState",
-									"operator": "!=",
+									"operator": "=",
 									"value": "seam"
+								}
+							]
+						]
+					},
+					{
+						"image": "stocking_b_stripes.png",
+						"condition": [
+							[
+								{
+									"module": "stockingState",
+									"operator": "=",
+									"value": "stripes"
 								}
 							]
 						]

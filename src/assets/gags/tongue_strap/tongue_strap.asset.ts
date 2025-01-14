@@ -3,6 +3,7 @@ import { ItemInteractionType } from 'pandora-common';
 DefineAsset({
 	name: 'Tongue Strap',
 	size: 'small',
+	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
 		straps: {

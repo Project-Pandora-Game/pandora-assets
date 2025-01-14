@@ -1,6 +1,7 @@
 DefineRoomDeviceAsset({
 	name: 'Wooden Horse',
 	size: 'huge',
+	requireFreeHandsToUseDefault: true,
 	colorization: {
 		frame: {
 			name: 'Frame',

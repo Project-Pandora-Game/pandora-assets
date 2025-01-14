@@ -40,7 +40,9 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm"
+				"bodyarm",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "skin",
@@ -420,7 +422,9 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm"
+				"bodyarm",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "skin",
@@ -474,7 +478,9 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm"
+				"bodyarm",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "skin",
@@ -502,9 +508,6 @@
 			"name": "Breasts",
 			"priority": "BREASTS",
 			"points": "breasts",
-			"pointType": [
-				"breasts"
-			],
 			"mirror": 0,
 			"colorizationKey": "skin",
 			"image": {
@@ -545,9 +548,6 @@
 			"name": "Breasts shadow",
 			"priority": "BREASTS",
 			"points": "breasts",
-			"pointType": [
-				"breasts"
-			],
 			"mirror": 0,
 			"colorizationKey": "skin",
 			"image": {
@@ -588,9 +588,6 @@
 			"name": "Nipples",
 			"priority": "BREASTS",
 			"points": "custom_body_nipples",
-			"pointType": [
-				"breasts"
-			],
 			"mirror": 0,
 			"colorizationKey": "nipples",
 			"image": {

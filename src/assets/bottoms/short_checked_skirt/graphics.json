@@ -9,10 +9,6 @@
 			"name": "Front",
 			"priority": "ABOVE_BODY",
 			"points": "skirt_short",
-			"pointType": [
-				"body",
-				"bodyarm"
-			],
 			"mirror": 0,
 			"colorizationKey": "skirt",
 			"image": {
@@ -42,10 +38,6 @@
 			"name": "Back",
 			"priority": "BELOW_BODY",
 			"points": "skirt_short",
-			"pointType": [
-				"body",
-				"bodyarm"
-			],
 			"mirror": 0,
 			"colorizationKey": "skirt",
 			"image": {

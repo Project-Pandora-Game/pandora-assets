@@ -1,6 +1,7 @@
 DefineAsset({
 	name: 'Steel Wrist Cuffs',
 	size: 'small',
+	requireFreeHandsToUseDefault: false,
 	graphics: 'graphics.json',
 	colorization: {
 		cuff: {

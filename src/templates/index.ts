@@ -17,6 +17,8 @@ const templateList: string[] = [
 	'skirt_long',
 	// Custom templates
 	'custom_arm_restraints_armbinder_glove',
+	'custom_arm_restraints_pet_crawler_armbinders_outwards',
+	'custom_arm_restraints_pet_crawler_armbinders_inwards',
 	'custom_arm_restraints_straight_jacket_straps', // Based on body, small edits
 	'custom_arm_restraints_torso_ropes', // Based on body, small edits
 	'custom_body_nipples',

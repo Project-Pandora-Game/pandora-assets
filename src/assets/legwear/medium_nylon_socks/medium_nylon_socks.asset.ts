@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Knee-high nylon socks',
+	name: 'Knee-high Nylon Socks',
 	size: 'small',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',

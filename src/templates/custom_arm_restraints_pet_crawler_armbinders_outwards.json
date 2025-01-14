@@ -1,0 +1,132 @@
+[
+	{
+		"pos": [
+			243,
+			412
+		],
+		"mirror": true,
+		"pointType": "arm_r",
+		"transforms": [
+			{
+				"type": "shift",
+				"bone": "arm_width",
+				"value": {
+					"x": -2,
+					"y": -3
+				}
+			},
+			{
+				"type": "rotate",
+				"bone": "arm_r",
+				"value": -1
+			}
+		]
+	},
+	{
+		"pos": [
+			331,
+			377
+		],
+		"mirror": true,
+		"pointType": "arm_r",
+		"transforms": [
+			{
+				"type": "shift",
+				"bone": "arm_width",
+				"value": {
+					"x": 0,
+					"y": -3
+				}
+			},
+			{
+				"type": "rotate",
+				"bone": "arm_r",
+				"value": -1
+			}
+		]
+	},
+	{
+		"pos": [
+			411,
+			363
+		],
+		"mirror": true,
+		"pointType": "arm_r",
+		"transforms": [
+			{
+				"type": "shift",
+				"bone": "arm_width",
+				"value": {
+					"x": 0,
+					"y": -2
+				}
+			},
+			{
+				"type": "rotate",
+				"bone": "arm_r",
+				"value": -1
+			}
+		]
+	},
+	{
+		"pos": [
+			246,
+			456
+		],
+		"mirror": true,
+		"pointType": "arm_r",
+		"transforms": [
+			{
+				"type": "shift",
+				"bone": "arm_width",
+				"value": {
+					"x": -2,
+					"y": 5
+				}
+			},
+			{
+				"type": "rotate",
+				"bone": "arm_r",
+				"value": -1
+			}
+		]
+	},
+	{
+		"pos": [
+			413,
+			465
+		],
+		"mirror": true,
+		"pointType": "arm_r",
+		"transforms": [
+			{
+				"type": "shift",
+				"bone": "arm_width",
+				"value": {
+					"x": 0,
+					"y": 5
+				}
+			},
+			{
+				"type": "rotate",
+				"bone": "arm_r",
+				"value": -1
+			}
+		]
+	},
+	{
+		"pos": [
+			418,
+			413
+		],
+		"mirror": true,
+		"pointType": "arm_r",
+		"transforms": [
+			{
+				"type": "rotate",
+				"bone": "arm_r",
+				"value": -1
+			}
+		]
+	}
+]

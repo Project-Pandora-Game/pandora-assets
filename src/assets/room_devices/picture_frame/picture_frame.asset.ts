@@ -73,6 +73,10 @@ DefineRoomDeviceAsset({
 					id: 'anime1',
 					name: 'Anime A',
 				},
+				{
+					id: 'mirror',
+					name: 'Mirror',
+				},
 			],
 		},
 		size: {
@@ -351,6 +355,57 @@ DefineRoomDeviceAsset({
 								module: 'picture',
 								operator: '=',
 								value: 'anime1',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+					],
+				},
+				{
+					image: 'mirror.png',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'mirror',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+					],
+				},
+				{
+					image: 'mirror.png@700x1000',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'mirror',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'medium',
+							},
+						],
+					],
+				},
+				{
+					image: 'mirror.png@350x500',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'mirror',
 							},
 							{
 								module: 'size',
@@ -699,6 +754,13 @@ DefineRoomDeviceAsset({
 				copyrightHolder: 'Stephen.',
 				editedBy: 'ClaudiaMia',
 				license: 'CC BY',
+			},
+			{
+				part: 'mirror',
+				source: 'https://creazilla.com/de/media/clipart/69930/spiegel',
+				copyrightHolder: 'Creazilla',
+				editedBy: 'Sandrine',
+				license: 'CC0',
 			},
 		],
 	},

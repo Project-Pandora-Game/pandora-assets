@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Bondage Mittens',
 	size: 'small',
 	graphics: 'graphics.json',
+	requireFreeHandsToUseDefault: false,
 	colorization: {
 		mittens: {
 			name: 'Mitten',
@@ -29,11 +30,13 @@ DefineAsset({
 			'Restraint_arms',
 			'Hand_item',
 			'Hand_cover',
+			'Hand_restricting_cover',
 			'Gloves',
 			'Mittens',
 		],
 		covers: [
 			'Hand_item',
+			'Handheld',
 		],
 	},
 	modules: {

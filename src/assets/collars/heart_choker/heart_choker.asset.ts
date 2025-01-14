@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Heart Choker',
 	size: 'small',
 	graphics: 'graphics.json',
+	requireFreeHandsToUseDefault: true,
 	colorization: {
 		choker: {
 			name: 'Choker',

@@ -1,6 +1,7 @@
 DefineRoomDeviceAsset({
 	name: 'Barrel',
 	size: 'huge',
+	requireFreeHandsToUseDefault: false,
 	colorization: {
 		barrel: {
 			name: 'Barrel',
@@ -76,7 +77,10 @@ DefineRoomDeviceAsset({
 			name: 'Lid lock',
 			staticConfig: { slotName: 'character_slot_inside' },
 			lockedProperties: {
-				blockModules: ['lid'],
+				blockModules: [
+					'lid',
+					'storage',
+				],
 			},
 		},
 		storage: {

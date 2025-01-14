@@ -5,6 +5,7 @@ import {
 	BONE_MIN,
 	BONE_MAX,
 	Logger,
+	IsReadonlyArray,
 } from 'pandora-common';
 import { ATTRIBUTES_DEFINITION, AttributeNames } from '../../attributes.js';
 
@@ -19,8 +20,15 @@ export function ValidateAssetProperties(
 	metadata: PropertiesValidationMetadata,
 	properties: AssetProperties<AssetRepoExtraArgs>,
 ): void {
-	if (properties.poseLimits) {
-		ValidateAssetDefinitionPoseLimits(logger, `${context}.poseLimits`, properties.poseLimits);
+	if (properties.poseLimits != null) {
+		if (IsReadonlyArray(properties.poseLimits)) {
+			for (let i = 0; i < properties.poseLimits.length; i++) {
+				const limit = properties.poseLimits[i];
+				ValidateAssetDefinitionPoseLimits(logger, `${context}.poseLimits[${i}]`, limit);
+			}
+		} else {
+			ValidateAssetDefinitionPoseLimits(logger, `${context}.poseLimits`, properties.poseLimits);
+		}
 	}
 
 	if (properties.attributes) {

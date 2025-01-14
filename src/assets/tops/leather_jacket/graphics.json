@@ -11,7 +11,9 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm"
+				"bodyarm",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "jacket",
@@ -87,7 +89,9 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm"
+				"bodyarm",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "jacket",
@@ -125,7 +129,9 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm"
+				"bodyarm",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "jacket",
@@ -144,7 +150,9 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm"
+				"bodyarm",
+				"bodyleg",
+				"leg"
 			],
 			"mirror": 0,
 			"colorizationKey": "jacket",

@@ -2,6 +2,7 @@ DefineAsset({
 	name: 'Duct tape',
 	size: 'small',
 	graphics: 'graphics.json',
+	requireFreeHandsToUseDefault: true,
 	colorization: {
 		tape: {
 			name: 'Tape',

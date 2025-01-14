@@ -1,6 +1,5 @@
-DefineAsset({
+DefineBodypart({
 	name: 'Eyes 4',
-	size: 'bodypart',
 	bodypart: 'eyes',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
@@ -19,7 +18,8 @@ DefineAsset({
 		},
 		shine: {
 			name: 'Shine',
-			default: '#FFFFFF',
+			default: '#FFFFFFCC',
+			minAlpha: 0,
 		},
 	},
 	// size:200, y:195, centered
@@ -33,7 +33,6 @@ DefineAsset({
 		pupilType: {
 			type: 'typed',
 			name: 'Pupil Types',
-			expression: 'Eye Pupil Types',
 			variants: [
 				{
 					id: 'largePupils',
@@ -55,26 +54,6 @@ DefineAsset({
 				{
 					id: 'noPupils',
 					name: 'No Pupils',
-				},
-			],
-		},
-		eyeVariant: {
-			type: 'typed',
-			name: 'Eye Variants',
-			expression: 'Eye Variants',
-			variants: [
-				{
-					id: 'default',
-					name: 'Normal',
-					default: true,
-				},
-				{
-					id: 'wideBig',
-					name: 'Wide Eyes (Big)',
-				},
-				{
-					id: 'wideSmall',
-					name: 'Wide Eyes (Small)',
 				},
 			],
 		},
@@ -107,6 +86,47 @@ DefineAsset({
 				{
 					id: 'closed',
 					name: 'Closed',
+				},
+			],
+		},
+		eyeDirection: {
+			type: 'typed',
+			name: 'Eye Variants',
+			expression: 'Eye Variants',
+			variants: [
+				{
+					id: 'straight',
+					name: 'Straight',
+					default: true,
+				},
+				// Left<->Right is intentionally swapped for user to match the character's POV
+				{
+					id: 'left',
+					name: 'Right',
+				},
+				{
+					id: 'right',
+					name: 'Left',
+				},
+				{
+					id: 'down',
+					name: 'Down',
+				},
+				{
+					id: 'up',
+					name: 'Up',
+				},
+				{
+					id: 'rolled',
+					name: 'Rolled',
+				},
+				{
+					id: 'wideBig',
+					name: 'Wide (Big)',
+				},
+				{
+					id: 'wideSmall',
+					name: 'Wide (Small)',
 				},
 			],
 		},

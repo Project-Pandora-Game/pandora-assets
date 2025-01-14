@@ -1,7 +1,8 @@
 DefineAsset({
 	name: 'Canvas Straitjacket',
-	size: 'large',
+	size: 'medium',
 	graphics: 'graphics.json',
+	requireFreeHandsToUseDefault: true,
 	colorization: {
 		canvas: {
 			name: 'Canvas',
@@ -23,9 +24,12 @@ DefineAsset({
 		],
 		covers: [
 			'Hand_item',
+			'Handheld',
+			'Wrist_cuffs',
 		],
 		hides: [
-			'Mittens',
+			'Hand_item',
+			'Wrist_cuffs',
 		],
 	},
 	modules: {
