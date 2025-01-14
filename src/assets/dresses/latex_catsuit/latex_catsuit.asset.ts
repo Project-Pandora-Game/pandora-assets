@@ -88,7 +88,11 @@ DefineAsset({
 					name: 'No',
 					default: true,
 				},
-				/** For later use
+				{
+					id: 'socks',
+					name: 'Socks',
+				},
+				/**  For later use
 				{
 					id: 'gloves',
 					name: 'Gloves',
@@ -102,10 +106,6 @@ DefineAsset({
 					},
 				},
 				{
-					id: 'socks',
-					name: 'Socks',
-				},
-				{
 					id: 'both',
 					name: 'Gloves + Socks',
 					properties: {
@@ -117,7 +117,7 @@ DefineAsset({
 						},
 					},
 				},
-				*/
+				**/
 			],
 		},
 	},
