@@ -1144,10 +1144,38 @@
 						"condition": [
 							[
 								{
+									"view": "back"
+								},
+								{
 									"legs": "kneeling"
 								},
 								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "socks"
+								}
+							],
+							[
+								{
 									"view": "back"
+								},
+								{
+									"legs": "kneeling"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "both"
 								}
 							]
 						]
@@ -1173,10 +1201,38 @@
 						"condition": [
 							[
 								{
+									"view": "back"
+								},
+								{
+									"legs": "kneeling"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "socks"
+								}
+							],
+							[
+								{
 									"legs": "kneeling"
 								},
 								{
 									"view": "back"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "both"
 								}
 							]
 						]
