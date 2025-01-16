@@ -49,8 +49,28 @@ DefineAsset({
 					},
 				},
 				{
+					id: 'knees',
+					name: 'Pulled Around Knees',
+					properties: {
+						poseLimits: {
+							bones: {
+								leg_r: [[-3, 2]],
+								leg_l: [[-3, 2]],
+							},
+						},
+					},
+				},
+				{
 					id: 'fully',
 					name: 'Pulled Down Fully',
+					properties: {
+						poseLimits: {
+							bones: {
+								leg_r: [[-3, 2]],
+								leg_l: [[-3, 2]],
+							},
+						},
+					},
 				},
 			],
 		},
