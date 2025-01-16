@@ -70,6 +70,20 @@ DefineBodypart({
 				{
 					id: 'closed',
 					name: 'Closed',
+					properties: {
+						stateFlags: {
+							provides: ['eyeClosed'],
+						},
+					},
+				},
+				{
+					id: 'blind',
+					name: 'Closed with blind effect',
+					properties: {
+						stateFlags: {
+							provides: ['eyeClosed'],
+						},
+					},
 				},
 			],
 		},
@@ -86,6 +100,20 @@ DefineBodypart({
 				{
 					id: 'closed',
 					name: 'Closed',
+				},
+				{
+					id: 'blind',
+					name: 'Closed with blind effect',
+					properties: {
+						effects: {
+							blind: 9.98,
+						},
+						stateFlags: {
+							requires: {
+								eyeClosed: 'It is required to change the other eye first.',
+							},
+						},
+					},
 				},
 			],
 		},
