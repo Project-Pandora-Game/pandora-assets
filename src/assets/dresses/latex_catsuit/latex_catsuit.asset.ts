@@ -13,6 +13,7 @@ DefineAsset({
 		reflection: {
 			name: 'Reflection',
 			default: '#FFFFFF',
+			minAlpha: 0,
 		},
 	},
 	// size:376, y:400, centered
@@ -88,7 +89,11 @@ DefineAsset({
 					name: 'No',
 					default: true,
 				},
-				/** For later use
+				{
+					id: 'socks',
+					name: 'Socks',
+				},
+				/**  For later use
 				{
 					id: 'gloves',
 					name: 'Gloves',
@@ -102,10 +107,6 @@ DefineAsset({
 					},
 				},
 				{
-					id: 'socks',
-					name: 'Socks',
-				},
-				{
 					id: 'both',
 					name: 'Gloves + Socks',
 					properties: {
@@ -117,7 +118,7 @@ DefineAsset({
 						},
 					},
 				},
-				*/
+				**/
 			],
 		},
 	},

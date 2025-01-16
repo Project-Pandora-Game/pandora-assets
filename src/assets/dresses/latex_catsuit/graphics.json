@@ -280,6 +280,46 @@
 									"module": "length",
 									"operator": "=",
 									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "none"
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_legs_feet.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "socks"
+								}
+							],
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "both"
 								}
 							]
 						]
@@ -459,13 +499,56 @@
 				"image": "",
 				"overrides": [
 					{
-						"image": "latex_catsuit_long_legs_front_reflection.png",
+						"image": "latex_catsuit_front_long_legs_reflection.png",
 						"condition": [
 							[
+								{
+									"view": "front"
+								},
 								{
 									"module": "length",
 									"operator": "=",
 									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "none"
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_legs_feet_reflection.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "socks"
+								}
+							],
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "both"
 								}
 							]
 						]
@@ -854,6 +937,46 @@
 									"module": "length",
 									"operator": "=",
 									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "none"
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_back_long_legs_feet.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "socks"
+								}
+							],
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "both"
 								}
 							]
 						]
@@ -951,7 +1074,7 @@
 				"image": "",
 				"overrides": [
 					{
-						"image": "latex_catsuit_long_legs_back_reflection.png",
+						"image": "latex_catsuit_back_long_legs_reflection.png",
 						"condition": [
 							[
 								{
@@ -961,6 +1084,155 @@
 									"module": "length",
 									"operator": "=",
 									"value": "long"
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_back_long_legs_feet_reflection.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "socks"
+								}
+							],
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "both"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "soles",
+			"priority": "BELOW_BODY_SOLES",
+			"points": "body_soles_back",
+			"mirror": 0,
+			"colorizationKey": "catsuit",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "latex_catsuit_back_long_soles.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"legs": "kneeling"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "socks"
+								}
+							],
+							[
+								{
+									"view": "back"
+								},
+								{
+									"legs": "kneeling"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "both"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "soles shine",
+			"priority": "BELOW_BODY_SOLES",
+			"points": "body_soles_back",
+			"mirror": 0,
+			"colorizationKey": "reflection",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "latex_catsuit_back_long_soles_reflection.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"legs": "kneeling"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "socks"
+								}
+							],
+							[
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "back"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "both"
 								}
 							]
 						]
