@@ -71,6 +71,15 @@ DefineBodypart({
 					id: 'closed',
 					name: 'Closed',
 				},
+				{
+					id: 'blind',
+					name: 'Closed with blind effect',
+					properties: {
+						effects: {
+							blind: 4.99,
+						},
+					},
+				},
 			],
 		},
 		eyeState_r: {
@@ -86,6 +95,15 @@ DefineBodypart({
 				{
 					id: 'closed',
 					name: 'Closed',
+				},
+				{
+					id: 'blind',
+					name: 'Closed with blind effect',
+					properties: {
+						effects: {
+							blind: 4.99,
+						},
+					},
 				},
 			],
 		},

@@ -548,6 +548,13 @@
 							],
 							[
 								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "blind"
+								}
+							],
+							[
+								{
 									"blinking": true
 								}
 							]
@@ -580,6 +587,13 @@
 									"module": "eyeState_l",
 									"operator": "=",
 									"value": "closed"
+								}
+							],
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "blind"
 								}
 							],
 							[
@@ -650,6 +664,13 @@
 									"module": "eyeState_l",
 									"operator": "=",
 									"value": "closed"
+								}
+							],
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "blind"
 								}
 							]
 						]
