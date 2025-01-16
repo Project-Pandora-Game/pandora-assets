@@ -13,6 +13,7 @@ DefineAsset({
 		reflection: {
 			name: 'Reflection',
 			default: '#FFFFFF',
+			minAlpha: 0,
 		},
 	},
 	// size:376, y:400, centered

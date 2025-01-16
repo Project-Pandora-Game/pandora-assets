@@ -12,6 +12,7 @@ DefineAsset({
 		shine: {
 			name: 'Reflection',
 			default: '#FFFFFF',
+			minAlpha: 0,
 		},
 	},
 	// size:420, y:350, centered
@@ -21,9 +22,10 @@ DefineAsset({
 			'Clothing',
 			'Clothing_upper',
 			'Clothing_lower',
-			'Anus_cover',
-			'Vulva_cover',
 		],
+		hides: [
+			'Penis',
+		]
 	},
 	modules: {
 		lock: {
