@@ -25,7 +25,7 @@ DefineAsset({
 		],
 		hides: [
 			'Penis',
-		]
+		],
 	},
 	modules: {
 		lock: {
