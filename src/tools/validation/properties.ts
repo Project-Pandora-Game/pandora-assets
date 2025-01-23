@@ -6,8 +6,20 @@ import {
 	BONE_MAX,
 	Logger,
 	IsReadonlyArray,
+	CharacterViewSchema,
+	LegsPoseSchema,
+	Assert,
+	AssetDefinitionArmOrderPoseLimit,
+	ArmSegmentOrderSchema,
+	AssetDefinitionArmPoseLimit,
+	ArmPoseSchema,
+	ArmRotationSchema,
+	ArmFingersSchema,
 } from 'pandora-common';
 import { ATTRIBUTES_DEFINITION, AttributeNames } from '../../attributes.js';
+import { ZodEnum } from 'zod';
+import { isEqual } from 'lodash-es';
+import { Immutable } from 'immer';
 
 export interface PropertiesValidationMetadata {
 	getModuleNames: () => readonly string[];
@@ -68,7 +80,7 @@ function ValidateAssetDefinitionPoseLimits(logger: Logger, context: string, limi
 	}
 }
 
-function ValidateAssetDefinitionPoseLimit(logger: Logger, context: string, { bones, arms, leftArm, rightArm }: AssetDefinitionPoseLimit): void {
+function ValidateAssetDefinitionPoseLimit(logger: Logger, context: string, { bones, arms, leftArm, rightArm, armsOrder, legs, view }: AssetDefinitionPoseLimit): void {
 	for (const [name, range] of Object.entries(bones ?? {})) {
 		if (typeof range === 'number') {
 			if (range < BONE_MIN || range > BONE_MAX) {
@@ -113,6 +125,65 @@ function ValidateAssetDefinitionPoseLimit(logger: Logger, context: string, { bon
 			logger.error(`Invalid pose limit:\n\t${context}.arms.${key} and ${context}.rightArm.${key} are both defined`);
 		}
 	}
+	ValidateAssetDefinitionArmLimit(logger, `${context}.arms`, arms);
+	ValidateAssetDefinitionArmLimit(logger, `${context}.leftArm`, leftArm);
+	ValidateAssetDefinitionArmLimit(logger, `${context}.rightArm`, rightArm);
+	ValidateAssetDefinitionArmsOrderLimit(logger, `${context}.armsOrder`, armsOrder);
+	ValidateAssetDefinitionEnumPoseLimit(logger, `${context}.view`, CharacterViewSchema, view);
+	ValidateAssetDefinitionEnumPoseLimit(logger, `${context}.legs`, LegsPoseSchema, legs);
 }
+
+function ValidateAssetDefinitionArmLimit(logger: Logger, context: string, { position, rotation, fingers }: Immutable<AssetDefinitionArmPoseLimit> = {}): void {
+	ValidateAssetDefinitionEnumPoseLimit(logger, `${context}.position`, ArmPoseSchema, position);
+	ValidateAssetDefinitionEnumPoseLimit(logger, `${context}.rotation`, ArmRotationSchema, rotation);
+	ValidateAssetDefinitionEnumPoseLimit(logger, `${context}.fingers`, ArmFingersSchema, fingers);
+}
+
+function ValidateAssetDefinitionArmsOrderLimit(logger: Logger, context: string, { upper }: Immutable<AssetDefinitionArmOrderPoseLimit> = {}): void {
+	ValidateAssetDefinitionEnumPoseLimit(logger, `${context}.upper`, ArmSegmentOrderSchema, upper);
+}
+
+function ValidateAssetDefinitionEnumPoseLimit<E extends [string, ...string[]]>(logger: Logger, context: string, schema: ZodEnum<E>, value: E[number] | readonly (E[number])[] | undefined): void {
+	if (value != null) {
+		if (IsReadonlyArray(value)) {
+			const uniqueValues = new Set(value);
+			if (uniqueValues.size !== value.length) {
+				logger.error(`Invalid pose limit:\n\t${context} contains duplicate values`);
+			}
+			if (value.length === 0) {
+				logger.warning(`Invalid pose limit:\n\t${context} is empty (empty listing has no effect and can be removed)`);
+			} else if (value.length < 2) {
+				logger.warning(`Invalid pose limit:\n\t${context} uses an array without multiple values - use a single value instead of list`);
+			}
+
+			const numeric: number[] = value.map((v) => EnumToIndex(schema, v));
+			const sorted = numeric.slice().sort((a, b) => a - b);
+			if (!isEqual(numeric, sorted)) {
+				logger.warning(`Invalid pose limit:\n\t${context} is not canonically ordered. Use:`, sorted.map((v) => IndexToEnum(schema, v)));
+			}
+		} else {
+			// Single property is okay
+		}
+	}
+}
+
+function EnumToIndex<E extends [string, ...string[]]>(schema: ZodEnum<E>, value: E[number]): number {
+	const index = schema.options.indexOf(value);
+	Assert(index >= 0, `Got invalid enum value: '${value}'`);
+
+	return index;
+}
+
+function IndexToEnum<E extends [string, ...string[]]>(schema: ZodEnum<E>, index: number | undefined): E[number] | null {
+	if (index == null)
+		return null;
+
+	const value = schema.options[index];
+	if (value == null)
+		return null;
+
+	return value;
+}
+
 //#endregion
 
