@@ -7,6 +7,11 @@ DefineAsset({
 			name: 'Gloves',
 			default: '#FFFFFF',
 		},
+		shine: {
+			name: 'Shine',
+			default: '#FFFFFF00',
+			minAlpha: 0,
+		},
 		pattern: {
 			name: 'Pattern',
 			default: '#202020',
