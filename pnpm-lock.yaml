@@ -33,8 +33,8 @@ importers:
         specifier: 4.17.21
         version: 4.17.21
       pandora-common:
-        specifier: github:Project-Pandora-Game/pandora#dev/tooling-update-node-22&path:pandora-common
-        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/bad9509d55e28b0157a9f92845069d83de2974aa#path:pandora-common
+        specifier: github:Project-Pandora-Game/pandora#master&path:pandora-common
+        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/448433036c93e7627826dd9027675e6529ff6d2d#path:pandora-common
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -776,9 +776,6 @@ packages:
   '@types/lodash-es@4.17.12':
     resolution: {integrity: sha512-0NgftHUcV4v34VhXm8QBSftKVXtbkBG3ViCjs6+eJ5a6y6Mi/jiFGPc1sC7QK+9BFhWrURE3EOggmWaSxL9OzQ==}
 
-  '@types/lodash@4.17.13':
-    resolution: {integrity: sha512-lfx+dftrEZcdBPczf9d0Qv0x+j/rfNCMuC6OcfXmO8gkfeNAY88PgKUbvG56whcN23gc27yenwF6oJZXGFpYxg==}
-
   '@types/lodash@4.17.14':
     resolution: {integrity: sha512-jsxagdikDiDBeIRaPYtArcT8my4tN1og7MtMRquFT3XNA6axxyHDRUemqDz/taRDdOUn0GnGHRCuff4q48sW9A==}
 
@@ -787,6 +784,9 @@ packages:
 
   '@types/node@16.9.1':
     resolution: {integrity: sha512-QpLcX9ZSsq3YYUUnD3nFDY8H7wctAhQj/TFKL8Ya8v5fMm3CFXxo8zStsLAl780ltoYoo1WvKUVGBQK+1ifr7g==}
+
+  '@types/node@22.10.10':
+    resolution: {integrity: sha512-X47y/mPNzxviAGY5TcYPtYL8JsY3kAq2n8fMmKoRCxq/c4v4pyGNCzM2R6+M5/umG4ZfHuT+sgqDYqWc9rJ6ww==}
 
   '@types/node@22.10.9':
     resolution: {integrity: sha512-Ir6hwgsKyNESl/gLOcEz3krR4CBGgliDqBQ2ma4wIhEx0w+xnoeTq3tdrNw15kU3SxogDjOgv9sqdtLW8mIHaw==}
@@ -2366,8 +2366,8 @@ packages:
   pako@1.0.11:
     resolution: {integrity: sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/bad9509d55e28b0157a9f92845069d83de2974aa#path:pandora-common:
-    resolution: {path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/bad9509d55e28b0157a9f92845069d83de2974aa}
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/448433036c93e7627826dd9027675e6529ff6d2d#path:pandora-common:
+    resolution: {path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/448433036c93e7627826dd9027675e6529ff6d2d}
     version: 0.1.0
     engines: {node: '>=22.x'}
 
@@ -2889,8 +2889,8 @@ packages:
     resolution: {integrity: sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==}
     engines: {node: '>=10'}
 
-  type-fest@4.31.0:
-    resolution: {integrity: sha512-yCxltHW07Nkhv/1F6wWBr8kz+5BGMfP+RbRSYFnegVb0qV/UMT0G0ElBloPVerqn4M2ZV80Ir1FtCcYv1cT6vQ==}
+  type-fest@4.33.0:
+    resolution: {integrity: sha512-s6zVrxuyKbbAsSAD5ZPTB77q4YIdRctkTbJ2/Dqlinwz+8ooH2gd+YA7VA6Pa93KML9GockVvoxjZ2vHP+mu8g==}
     engines: {node: '>=16'}
 
   type-is@1.6.18:
@@ -3903,13 +3903,15 @@ snapshots:
     dependencies:
       '@types/lodash': 4.17.14
 
-  '@types/lodash@4.17.13': {}
-
   '@types/lodash@4.17.14': {}
 
   '@types/mime@1.3.5': {}
 
   '@types/node@16.9.1': {}
+
+  '@types/node@22.10.10':
+    dependencies:
+      undici-types: 6.20.0
 
   '@types/node@22.10.9':
     dependencies:
@@ -5896,16 +5898,16 @@ snapshots:
 
   pako@1.0.11: {}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/bad9509d55e28b0157a9f92845069d83de2974aa#path:pandora-common:
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/448433036c93e7627826dd9027675e6529ff6d2d#path:pandora-common:
     dependencies:
       '@types/async-lock': 1.4.2
-      '@types/lodash': 4.17.13
-      '@types/node': 22.10.9
+      '@types/lodash': 4.17.14
+      '@types/node': 22.10.10
       async-lock: 1.4.1
       immer: 10.1.1
       lodash: 4.17.21
       nanoid: 3.3.8
-      type-fest: 4.31.0
+      type-fest: 4.33.0
       zod: 3.24.1
 
   parent-module@1.0.1:
@@ -6448,7 +6450,7 @@ snapshots:
 
   type-fest@0.21.3: {}
 
-  type-fest@4.31.0: {}
+  type-fest@4.33.0: {}
 
   type-is@1.6.18:
     dependencies:

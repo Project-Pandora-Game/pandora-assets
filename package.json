@@ -35,7 +35,7 @@
 		"jimp": "0.22.12",
 		"json-diff": "1.0.6",
 		"lodash-es": "4.17.21",
-		"pandora-common": "github:Project-Pandora-Game/pandora#dev/tooling-update-node-22&path:pandora-common",
+		"pandora-common": "github:Project-Pandora-Game/pandora#master&path:pandora-common",
 		"rimraf": "6.0.1",
 		"sharp": "0.33.5",
 		"simple-git": "3.27.0",
