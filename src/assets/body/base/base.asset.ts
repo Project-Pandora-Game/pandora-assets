@@ -64,7 +64,7 @@ DefineBodypart({
 									},
 								},
 								{
-									legs: ['sitting'],
+									legs: 'sitting',
 									bones: {
 										leg_l: [[-50, 50]],
 										leg_r: [[-50, 50]],
