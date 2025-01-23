@@ -8,7 +8,6 @@ import {
 	IsReadonlyArray,
 	CharacterViewSchema,
 	LegsPoseSchema,
-	Assert,
 	AssetDefinitionArmOrderPoseLimit,
 	ArmSegmentOrderSchema,
 	AssetDefinitionArmPoseLimit,
@@ -18,7 +17,6 @@ import {
 } from 'pandora-common';
 import { ATTRIBUTES_DEFINITION, AttributeNames } from '../../attributes.js';
 import { ZodEnum } from 'zod';
-import { isEqual } from 'lodash-es';
 import { Immutable } from 'immer';
 
 export interface PropertiesValidationMetadata {
@@ -143,7 +141,7 @@ function ValidateAssetDefinitionArmsOrderLimit(logger: Logger, context: string, 
 	ValidateAssetDefinitionEnumPoseLimit(logger, `${context}.upper`, ArmSegmentOrderSchema, upper);
 }
 
-function ValidateAssetDefinitionEnumPoseLimit<E extends [string, ...string[]]>(logger: Logger, context: string, schema: ZodEnum<E>, value: E[number] | readonly (E[number])[] | undefined): void {
+function ValidateAssetDefinitionEnumPoseLimit<E extends [string, ...string[]]>(logger: Logger, context: string, _schema: ZodEnum<E>, value: E[number] | readonly (E[number])[] | undefined): void {
 	if (value != null) {
 		if (IsReadonlyArray(value)) {
 			const uniqueValues = new Set(value);
@@ -155,34 +153,10 @@ function ValidateAssetDefinitionEnumPoseLimit<E extends [string, ...string[]]>(l
 			} else if (value.length < 2) {
 				logger.warning(`Invalid pose limit:\n\t${context} uses an array without multiple values - use a single value instead of list`);
 			}
-
-			const numeric: number[] = value.map((v) => EnumToIndex(schema, v));
-			const sorted = numeric.slice().sort((a, b) => a - b);
-			if (!isEqual(numeric, sorted)) {
-				logger.warning(`Invalid pose limit:\n\t${context} is not canonically ordered. Use:`, sorted.map((v) => IndexToEnum(schema, v)));
-			}
 		} else {
 			// Single property is okay
 		}
 	}
-}
-
-function EnumToIndex<E extends [string, ...string[]]>(schema: ZodEnum<E>, value: E[number]): number {
-	const index = schema.options.indexOf(value);
-	Assert(index >= 0, `Got invalid enum value: '${value}'`);
-
-	return index;
-}
-
-function IndexToEnum<E extends [string, ...string[]]>(schema: ZodEnum<E>, index: number | undefined): E[number] | null {
-	if (index == null)
-		return null;
-
-	const value = schema.options[index];
-	if (value == null)
-		return null;
-
-	return value;
 }
 
 //#endregion
