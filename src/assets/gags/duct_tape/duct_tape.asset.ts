@@ -6,7 +6,7 @@ DefineAsset({
 	requireFreeHandsToUseDefault: false,
 	graphics: 'graphics.json',
 	colorization: {
-		cloth: {
+		tape: {
 			name: 'Tape',
 			default: '#FFFFFF',
 		},
