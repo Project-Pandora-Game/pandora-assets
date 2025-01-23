@@ -3,6 +3,9 @@
 	"version": "0.1.0",
 	"private": true,
 	"packageManager": "pnpm@9.15.3",
+	"engines": {
+		"node": ">=22.x"
+	},
 	"repository": "git@github.com:Project-Pandora-Game/tooling-template.git",
 	"license": "MIT",
 	"type": "module",
