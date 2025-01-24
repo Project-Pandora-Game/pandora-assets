@@ -199,7 +199,7 @@ DefineAsset({
 								leg_r: -30,
 								leg_l: -30,
 							},
-							legs: ['standing'],
+							legs: 'standing',
 						},
 						stateFlags: {
 							provides: ['bar'],

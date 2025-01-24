@@ -64,7 +64,7 @@ const assetProcesses: AssetImportContext[] = [];
 async function Run() {
 	logger.info('Building...');
 
-	const ig = ignore.default();
+	const ig = ignore();
 	ig.add(fs.readFileSync(join(BASE_DIR, '.gitignore'), 'utf-8'));
 
 	// Setup environment

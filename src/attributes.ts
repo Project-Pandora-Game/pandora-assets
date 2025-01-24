@@ -644,6 +644,19 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'A chainable armbinder',
 		description: 'An armbinder that is chainable to another item',
 	},
+	// Rope
+	Rope_waist: {
+		name: 'Rope around waist',
+		description: 'A rope around the waist',
+	},
+	Rope_vulva_anchor_point: {
+		name: 'Crotch rope',
+		description: 'A crotch rope to which a connecting rope can be tied',
+	},
+	Rope_thighs_anchor_point: {
+		name: 'Thighs rope',
+		description: 'A rope over thighs to which a connecting rope can be tied',
+	},
 } as const satisfies Record<string, AssetRepoAttributeDefinition>;
 
 //#endregion
@@ -680,6 +693,10 @@ export function LoadAttributeNameValidation() {
 	const attributes: readonly string[] = Object.keys(ATTRIBUTES_DEFINITION);
 
 	AttributeNameSchema[SCHEME_OVERRIDE]((attribute, ctx) => {
+		// Allow for negation of attribute to be used as well
+		if (attribute.startsWith('!')) {
+			attribute = attribute.substring(1);
+		}
 		if (!attributes.includes(attribute)) {
 			ctx.addIssue({
 				code: ZodIssueCode.custom,
