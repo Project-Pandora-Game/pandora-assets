@@ -803,7 +803,7 @@
 				"image": "",
 				"overrides": [
 					{
-						"image": "gloves_cuffs_long.png",
+						"image": "gloves_front_cuffs_long.png",
 						"condition": [
 							[
 								{
@@ -818,7 +818,7 @@
 						]
 					},
 					{
-						"image": "gloves_cuffs_medium.png",
+						"image": "gloves_front_cuffs_medium.png",
 						"condition": [
 							[
 								{
@@ -853,7 +853,7 @@
 				"image": "",
 				"overrides": [
 					{
-						"image": "gloves_cuffs_long.png",
+						"image": "gloves_back_cuffs_long.png",
 						"condition": [
 							[
 								{
@@ -868,7 +868,7 @@
 						]
 					},
 					{
-						"image": "gloves_cuffs_medium.png",
+						"image": "gloves_back_cuffs_medium.png",
 						"condition": [
 							[
 								{
@@ -950,7 +950,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"name": "cowBack",
+			"name": "patternBack",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "body",
 			"pointType": [
@@ -1098,126 +1098,6 @@
 									"module": "length",
 									"operator": "=",
 									"value": "medium"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"name": "patternFront",
-			"priority": "ABOVE_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "pattern",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "pattern_cow_long.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
-									"module": "pattern",
-									"operator": "=",
-									"value": "cow"
-								}
-							]
-						]
-					},
-					{
-						"image": "pattern_cow_medium.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "medium"
-								},
-								{
-									"module": "pattern",
-									"operator": "=",
-									"value": "cow"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"name": "cowBack",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "pattern",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "pattern_cow_long.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
-									"module": "pattern",
-									"operator": "=",
-									"value": "cow"
-								}
-							]
-						]
-					},
-					{
-						"image": "pattern_cow_medium.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "medium"
-								},
-								{
-									"module": "pattern",
-									"operator": "=",
-									"value": "cow"
 								}
 							]
 						]
