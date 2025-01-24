@@ -6,6 +6,7 @@ DefineAsset({
 		gloves: {
 			name: 'Gloves',
 			default: '#FFFFFF',
+			minAlpha: 0.3,
 		},
 		shine: {
 			name: 'Shine',
