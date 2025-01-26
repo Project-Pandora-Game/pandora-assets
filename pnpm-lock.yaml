@@ -34,7 +34,7 @@ importers:
         version: 4.17.21
       pandora-common:
         specifier: github:Project-Pandora-Game/pandora#master&path:pandora-common
-        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/d3f371c829d5f2af33f46f2d6acab6f3642f3536#path:pandora-common
+        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/154643c4480cc1fc17bed5b89ba527870131eb7b#path:pandora-common
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -2365,8 +2365,8 @@ packages:
   pako@1.0.11:
     resolution: {integrity: sha512-4hLB8Py4zZce5s4yd9XzopqwVv/yGNhV1Bl8NTmCq1763HeK2+EwVTv+leGeL13Dnh2wfbqowVPXCIO0z4taYw==}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/d3f371c829d5f2af33f46f2d6acab6f3642f3536#path:pandora-common:
-    resolution: {path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/d3f371c829d5f2af33f46f2d6acab6f3642f3536}
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/154643c4480cc1fc17bed5b89ba527870131eb7b#path:pandora-common:
+    resolution: {path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/154643c4480cc1fc17bed5b89ba527870131eb7b}
     version: 0.1.0
     engines: {node: '>=22.x'}
 
@@ -5894,7 +5894,7 @@ snapshots:
 
   pako@1.0.11: {}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/d3f371c829d5f2af33f46f2d6acab6f3642f3536#path:pandora-common:
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/154643c4480cc1fc17bed5b89ba527870131eb7b#path:pandora-common:
     dependencies:
       '@types/async-lock': 1.4.2
       '@types/lodash': 4.17.14
