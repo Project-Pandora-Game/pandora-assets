@@ -8,6 +8,9 @@
 			"height": 1500,
 			"priority": "BODY",
 			"points": "static",
+			"previewOverrides": {
+				"color": 5461849
+			},
 			"mirror": 0,
 			"colorizationKey": "skin",
 			"image": {
