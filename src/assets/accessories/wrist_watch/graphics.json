@@ -166,6 +166,172 @@
 					}
 				]
 			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "watch",
+			"priority": "BELOW_ARM_RIGHT",
+			"points": "body",
+			"pointType": [
+				"bodyarm_r",
+				"arm_r"
+			],
+			"mirror": 1,
+			"colorizationKey": "watch",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "wrist_watch_up_forward.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "watch"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "forward"
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_watch_back_up.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "watch"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_watch_front_down.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "watch"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "up"
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_watch_down_backward.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "watch"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "backward"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "dial",
+			"priority": "BELOW_ARM_RIGHT",
+			"points": "body",
+			"pointType": [
+				"bodyarm_r",
+				"arm_r"
+			],
+			"mirror": 1,
+			"colorizationKey": "dial",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "wrist_watch_dial_up.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "watch"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "forward"
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_watch_dial_front.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "watch"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "up"
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_watch_dial_down.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "watch"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "backward"
+								}
+							]
+						]
+					}
+				]
+			}
 		}
 	]
 }
