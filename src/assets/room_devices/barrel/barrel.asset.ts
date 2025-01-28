@@ -35,7 +35,7 @@ DefineRoomDeviceAsset({
 						},
 						optional: {
 							arms: {
-								position: 'front',
+								position: 'front_above_hair',
 								rotation: 'up',
 								fingers: 'fist',
 							},

@@ -84,7 +84,6 @@ DefineAsset({
 								},
 								{
 									arms: {
-										position: 'front',
 										rotation: 'up',
 									},
 									bones: {
@@ -93,18 +92,12 @@ DefineAsset({
 										elbow_r: -45,
 										elbow_l: -46,
 									},
-								},
-								{
-									arms: {
-										position: 'back',
-										rotation: 'up',
-									},
-									bones: {
-										arm_r: -74,
-										arm_l: -74,
-										elbow_r: -45,
-										elbow_l: -46,
-									},
+									options: [
+										{ arms: { position: 'front_above_hair' } },
+										{ arms: { position: 'front' } },
+										{ arms: { position: 'back' } },
+										{ arms: { position: 'back_below_hair' } },
+									],
 								},
 							],
 						},
@@ -121,7 +114,6 @@ DefineAsset({
 							options: [
 								{
 									arms: {
-										position: 'back',
 										rotation: 'down',
 									},
 									bones: {
@@ -130,17 +122,22 @@ DefineAsset({
 										elbow_r: 43,
 										elbow_l: 43,
 									},
+									options: [
+										{ arms: { position: 'back' } },
+										{ arms: { position: 'back_below_hair' } },
+									],
 								},
 								{
-									arms: {
-										position: 'back',
-									},
 									bones: {
 										arm_r: 104,
 										arm_l: 104,
 										elbow_r: -4,
 										elbow_l: -4,
 									},
+									options: [
+										{ arms: { position: 'back' } },
+										{ arms: { position: 'back_below_hair' } },
+									],
 								},
 							],
 						},

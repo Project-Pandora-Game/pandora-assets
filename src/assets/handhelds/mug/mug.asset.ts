@@ -53,7 +53,7 @@ DefineAsset({
 							rightArm: {
 								fingers: 'fist',
 								rotation: 'down',
-								position: 'front',
+								position: 'front_above_hair',
 							},
 							bones: {
 								arm_r: -21,
@@ -98,7 +98,7 @@ DefineAsset({
 							leftArm: {
 								fingers: 'fist',
 								rotation: 'down',
-								position: 'front',
+								position: 'front_above_hair',
 							},
 							bones: {
 								arm_l: -21,
