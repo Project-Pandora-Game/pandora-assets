@@ -19,9 +19,6 @@
 		"out/**": true
 	},
 	"git.rebaseWhenSync": true,
-	"git.detectSubmodules": false,
-	"git.autoRepositoryDetection": false,
-	"git.repositoryScanMaxDepth": 0,
 	"git.branchProtection": [
 		"master"
 	],
@@ -39,8 +36,24 @@
 	"typescript.format.enable": true,
 	"typescript.format.semicolons": "insert",
 	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": true,
+	"typescript.preferences.preferTypeOnlyAutoImports": true,
 	"typescript.preferences.quoteStyle": "single",
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": "explicit"
-	}
+		"source.fixAll.eslint": "explicit",
+		"source.organizeImports": "explicit",
+	},
+	"eslint.useESLintClass": true,
+	"eslint.useFlatConfig": true,
+	"eslint.problems.shortenToSingleLine": true,
+	"eslint.rules.customizations": [
+		{
+			"rule": "*",
+			"severity": "warn"
+		},
+		{
+			"rule": "*",
+			"fixable": true,
+			"severity": "info"
+		}
+	],
 }
