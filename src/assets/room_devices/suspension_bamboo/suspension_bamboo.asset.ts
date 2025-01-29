@@ -113,8 +113,8 @@ DefineRoomDeviceAsset({
 									legs: ['kneeling'],
 									bones: {
 										character_rotation: 0,
-										leg_l: [[-25, 2]],
-										leg_r: [[-25, 2]],
+										leg_l: [[-25, 6]],
+										leg_r: [[-25, 6]],
 									}
 								},
 							},
@@ -159,7 +159,6 @@ DefineRoomDeviceAsset({
 					id: 'thigh_front_left',
 					name: 'Front-facing Left Thigh Tied',
 					properties: {
-						blockSlotsEnterLeave: ['under_bamboo'],
 						slotProperties: {
 							under_bamboo: {
 								attributes: {
@@ -187,7 +186,6 @@ DefineRoomDeviceAsset({
 					id: 'thigh_front_right',
 					name: 'Front-facing Right Thigh Tied',
 					properties: {
-						blockSlotsEnterLeave: ['under_bamboo'],
 						slotProperties: {
 							under_bamboo: {
 								attributes: {
@@ -215,7 +213,6 @@ DefineRoomDeviceAsset({
 					id: 'thigh_back_left',
 					name: 'Back-facing Left Thigh Tied',
 					properties: {
-						blockSlotsEnterLeave: ['under_bamboo'],
 						slotProperties: {
 							under_bamboo: {
 								attributes: {
@@ -243,7 +240,6 @@ DefineRoomDeviceAsset({
 					id: 'thigh_back_right',
 					name: 'Back-facing Right Thigh Tied',
 					properties: {
-						blockSlotsEnterLeave: ['under_bamboo'],
 						slotProperties: {
 							under_bamboo: {
 								attributes: {
@@ -283,7 +279,6 @@ DefineRoomDeviceAsset({
 					id: 'ankle_front_left',
 					name: 'Front-facing Left Ankle Tied',
 					properties: {
-						blockSlotsEnterLeave: ['under_bamboo'],
 						slotProperties: {
 							under_bamboo: {
 								attributes: {
@@ -312,7 +307,6 @@ DefineRoomDeviceAsset({
 					id: 'ankle_front_right',
 					name: 'Front-facing Right Ankle Tied',
 					properties: {
-						blockSlotsEnterLeave: ['under_bamboo'],
 						slotProperties: {
 							under_bamboo: {
 								attributes: {
@@ -341,7 +335,6 @@ DefineRoomDeviceAsset({
 					id: 'ankle_back_left',
 					name: 'Back-facing Left Ankle Tied',
 					properties: {
-						blockSlotsEnterLeave: ['under_bamboo'],
 						slotProperties: {
 							under_bamboo: {
 								attributes: {
@@ -370,7 +363,6 @@ DefineRoomDeviceAsset({
 					id: 'ankle_back_right',
 					name: 'Back-facing Right Ankle Tied',
 					properties: {
-						blockSlotsEnterLeave: ['under_bamboo'],
 						slotProperties: {
 							under_bamboo: {
 								attributes: {
@@ -395,8 +387,34 @@ DefineRoomDeviceAsset({
 						},
 					},
 				},
-			]
-		}
+				{
+					id: 'ankles_tied',
+					name: 'Attached to ankles',
+					properties: {
+						slotProperties: {
+							under_bamboo: {
+								attributes: {
+									requires: [
+										'Rope_ankles_anchor_point'
+									]
+								},
+								poseLimits: {
+									legs: ['standing'],
+									bones: {
+										character_rotation: -90,
+									}
+								},
+								stateFlags: {
+									requires: {
+										suspension_chest: 'Ankles cannot be tied without chest line suspended',
+									},
+								},
+							}
+						}
+					}
+				},
+			],
+		},
 	},
 	graphicsLayers: [
 		{
@@ -637,6 +655,11 @@ DefineRoomDeviceAsset({
 								operator: '=',
 								value: 'standing',
 							},
+							{
+								module: 'ankle_line',
+								operator: '!=',
+								value: 'ankles_tied',
+							},
 						],
 					],
 				},
@@ -741,6 +764,27 @@ DefineRoomDeviceAsset({
 				},
 				{
 					position: {
+						offsetX: 565,
+						offsetY: -800,
+						disablePoseOffset: true,
+					},
+					condition: [
+						[
+							{
+								module: 'chest_line',
+								operator: '=',
+								value: 'standing',
+							},
+							{
+								module: 'ankle_line',
+								operator: '=',
+								value: 'ankles_tied',
+							},
+						],
+					],
+				},
+				{
+					position: {
 						offsetX: 0,
 						offsetY: 0,
 						disablePoseOffset: true,
@@ -806,6 +850,13 @@ DefineRoomDeviceAsset({
 								value: 'ankle_back_right',
 							},
 						],
+						[
+							{
+								module: 'ankle_line',
+								operator: '=',
+								value: 'ankles_tied',
+							},
+						],
 					],
 				},
 				{
@@ -850,6 +901,11 @@ DefineRoomDeviceAsset({
 								module: 'chest_line',
 								operator: '=',
 								value: 'standing',
+							},
+							{
+								module: 'ankle_line',
+								operator: '!=',
+								value: 'ankles_tied',
 							},
 						],
 					],
@@ -981,6 +1037,25 @@ DefineRoomDeviceAsset({
 								module: 'ankle_line',
 								operator: '=',
 								value: 'ankle_back_left',
+							},
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'sprite',
+			image: '',
+			colorizationKey: 'rope',
+			imageOverrides: [
+				{
+					image: 'suspended_horizontal_ankles_left.png',
+					condition: [
+						[
+							{
+								module: 'ankle_line',
+								operator: '=',
+								value: 'ankles_tied',
 							},
 						],
 					],

@@ -661,6 +661,10 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Thighs rope',
 		description: 'A rope over thighs to which a connecting rope can be tied',
 	},
+	Rope_ankles_anchor_point: {
+		name: 'Ankle rope',
+		description: 'A rope over ankles to which a connecting rope can be tied',
+	},
 } as const satisfies Record<string, AssetRepoAttributeDefinition>;
 
 //#endregion

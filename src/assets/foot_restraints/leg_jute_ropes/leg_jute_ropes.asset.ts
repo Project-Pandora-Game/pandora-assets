@@ -169,6 +169,11 @@ DefineAsset({
 								},
 							],
 						},
+						attributes: {
+							provides: [
+								'Rope_ankles_anchor_point',
+							],
+						},
 					},
 					default: true,
 				},
@@ -199,6 +204,11 @@ DefineAsset({
 										leg_l: 5,
 									},
 								},
+							],
+						},
+						attributes: {
+							provides: [
+								'Rope_ankles_anchor_point',
 							],
 						},
 					},
@@ -232,6 +242,11 @@ DefineAsset({
 								},
 							],
 						},
+						attributes: {
+							provides: [
+								'Rope_ankles_anchor_point',
+							],
+						},
 					},
 				},
 				{
@@ -261,6 +276,11 @@ DefineAsset({
 										leg_l: 5,
 									},
 								},
+							],
+						},
+						attributes: {
+							provides: [
+								'Rope_ankles_anchor_point',
 							],
 						},
 					},
