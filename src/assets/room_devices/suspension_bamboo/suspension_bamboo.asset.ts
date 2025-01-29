@@ -146,7 +146,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'standing_front_left',
-					name: 'Front-facing Left Side',
+					name: 'Front-facing over Right Leg',
 					properties: {
 						blockSlotsEnterLeave: ['under_bamboo'],
 						slotProperties: {
@@ -154,14 +154,14 @@ DefineRoomDeviceAsset({
 								attributes: {
 									requires: [
 										'Back_knot_anchor_point'
-									]
+									],
 								},
 								poseLimits: {
 									legs: ['standing', 'kneeling'],
 									bones: {
 										character_rotation: -27,
 										leg_r: -27
-									}
+									},
 								},
 								stateFlags: {
 									provides: ['suspension_chest'],
@@ -175,7 +175,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'standing_front_right',
-					name: 'Front-facing Right',
+					name: 'Front-facing over Left Leg',
 					properties: {
 						blockSlotsEnterLeave: ['under_bamboo'],
 						slotProperties: {
@@ -183,7 +183,7 @@ DefineRoomDeviceAsset({
 								attributes: {
 									requires: [
 										'Back_knot_anchor_point'
-									]
+									],
 								},
 								poseLimits: {
 									legs: ['standing', 'kneeling'],
@@ -204,7 +204,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'standing_back_left',
-					name: 'Back-facing Left Side',
+					name: 'Back-facing over Left Leg',
 					properties: {
 						blockSlotsEnterLeave: ['under_bamboo'],
 						slotProperties: {
@@ -212,14 +212,14 @@ DefineRoomDeviceAsset({
 								attributes: {
 									requires: [
 										'Back_knot_anchor_point'
-									]
+									],
 								},
 								poseLimits: {
 									legs: ['standing', 'kneeling'],
 									bones: {
 										character_rotation: -27,
 										leg_l: -27
-									}
+									},
 								},
 								stateFlags: {
 									provides: ['suspension_chest'],
@@ -233,7 +233,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'standing_back_right',
-					name: 'Back-facing Right',
+					name: 'Back-facing over Right Leg',
 					properties: {
 						blockSlotsEnterLeave: ['under_bamboo'],
 						slotProperties: {
@@ -262,91 +262,6 @@ DefineRoomDeviceAsset({
 				},
 			]
 		},
-		/*
-		leg_right: {
-			type: 'typed',
-			name: 'Right Leg Line',
-			staticConfig: { slotName: 'under_bamboo' },
-			variants: [
-				{
-					id: 'none',
-					name: 'None',
-					default: true,
-					properties: {
-						blockSlotsEnterLeave: ['under_bamboo'],
-						slotProperties: {
-							under_bamboo: {
-
-								poseLimits: {
-									legs: ['standing', 'kneeling'],
-									bones: {
-									}
-								},
-							}
-						}
-					}
-				},
-				{
-					id: 'ankle_front',
-					name: 'Ankle Front View',
-					properties: {
-						blockSlotsEnterLeave: ['under_bamboo'],
-						slotProperties: {
-							under_bamboo: {
-								attributes: {
-									requires: [
-										'Back_knot_anchor_point'
-									]
-								},
-								poseLimits: {
-									legs: ['standing'],
-									bones: {
-										leg_r: -87,
-										leg_l: -27
-									}
-								},
-								stateFlags: {
-									requires: {
-										suspension_chest: 'Leg cannot be tied without chest line suspended',
-										front_view: 'Pose requires position front facing '
-									}
-								}
-							}
-						}
-					}
-				},
-				{
-					id: 'ankle_back',
-					name: 'Ankle Back View',
-					properties: {
-						blockSlotsEnterLeave: ['under_bamboo'],
-						slotProperties: {
-							under_bamboo: {
-								attributes: {
-									requires: [
-										'Back_knot_anchor_point'
-									]
-								},
-								poseLimits: {
-									legs: ['standing'],
-									bones: {
-										leg_r: -87,
-										leg_l: -27
-									}
-								},
-								stateFlags: {
-									requires: {
-										suspension_chest: 'Leg cannot be tied without chest line suspended',
-										back_view: 'Pose requires position back facing '
-									}
-								}
-							}
-						}
-					}
-				},
-			]
-		}
-		*/
 
 		leg_line: {
 			type: 'typed',
@@ -359,8 +274,8 @@ DefineRoomDeviceAsset({
 					default: true
 				},
 				{
-					id: 'ankle',
-					name: 'Ankle',
+					id: 'ankle_left',
+					name: 'Left Ankle Tied',
 					properties: {
 						blockSlotsEnterLeave: ['under_bamboo'],
 						slotProperties: {
@@ -373,14 +288,39 @@ DefineRoomDeviceAsset({
 								poseLimits: {
 									legs: ['standing'],
 									bones: {
-										leg_l: -27,
+										leg_l: -87,
+									}
+								},
+								stateFlags: {
+									requires: {
+										suspension_chest: 'Leg cannot be tied without chest line suspended',
+									}
+								}
+							}
+						}
+					}
+				},
+				{
+					id: 'ankle_right',
+					name: 'Right Ankle Tied',
+					properties: {
+						blockSlotsEnterLeave: ['under_bamboo'],
+						slotProperties: {
+							under_bamboo: {
+								attributes: {
+									requires: [
+										'Back_knot_anchor_point'
+									]
+								},
+								poseLimits: {
+									legs: ['standing'],
+									bones: {
 										leg_r: -87,
 									}
 								},
 								stateFlags: {
 									requires: {
 										suspension_chest: 'Leg cannot be tied without chest line suspended',
-										//back_view: 'Pose requires position back facing '
 									}
 								}
 							}
