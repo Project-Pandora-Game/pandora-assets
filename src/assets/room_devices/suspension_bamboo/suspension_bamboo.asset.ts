@@ -1104,6 +1104,25 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		{
+			type: 'sprite',
+			image: '',
+			colorizationKey: 'rope',
+			imageOverrides: [
+				{
+					image: 'split_thighs_65.png',
+					condition: [
+						[
+							{
+								module: 'ankle_line',
+								operator: '=',
+								value: 'split_65',
+							},
+						],
+					],
+				},
+			],
+		},
 	],
 	pivot: {
 		x: 750,
