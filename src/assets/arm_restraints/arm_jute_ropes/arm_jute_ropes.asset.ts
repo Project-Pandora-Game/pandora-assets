@@ -46,6 +46,9 @@ DefineAsset({
 							},
 						},
 						stateFlags: {
+							provides: [
+								'back_knot',
+							],
 							requires: {
 								wrists_unlinked_to_crotch: 'Box High pose cannot be used together with hands being tied to a crotch rope',
 							},
@@ -78,6 +81,9 @@ DefineAsset({
 							},
 						},
 						stateFlags: {
+							provides: [
+								'back_knot',
+							],
 							requires: {
 								wrists_unlinked_to_crotch: 'Box Normal pose cannot be used together with hands being tied to a crotch rope',
 							},
@@ -107,6 +113,11 @@ DefineAsset({
 							armsOrder: {
 								upper: 'right',
 							},
+						},
+						stateFlags: {
+							provides: [
+								'back_knot',
+							],
 						},
 					},
 				},
@@ -241,6 +252,36 @@ DefineAsset({
 							requires: [
 								'Rope_vulva_anchor_point',
 							],
+						},
+					},
+				},
+			],
+		},
+		hogtie: {
+			type: 'typed',
+			name: "Hogtie",
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'hogtie_arms',
+					name: 'Hogtied to arms',
+					properties: {
+						attributes: {
+							requires: [
+								'Rope_ankles_anchor_point',
+							],
+						},
+						poseLimits: {
+							legs: 'kneeling',
+						},
+						stateFlags: {
+							requires: {
+								back_knot: 'Legs cannot be hogtied without a knot on back from tied arms',
+							},
 						},
 					},
 				},
