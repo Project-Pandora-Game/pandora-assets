@@ -265,7 +265,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'split_65',
-					name: 'Split',
+					name: 'Split Wide',
 					properties: {
 						slotProperties: {
 							under_bamboo: {
@@ -412,7 +412,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'split_65',
-					name: 'Split',
+					name: 'Split Wide',
 					properties: {
 						slotProperties: {
 							under_bamboo: {
@@ -435,7 +435,7 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'ankles_tied',
-					name: 'Attached to ankles',
+					name: 'Horizontal Suspensión',
 					properties: {
 						slotProperties: {
 							under_bamboo: {
