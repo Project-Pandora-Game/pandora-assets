@@ -263,6 +263,29 @@ DefineRoomDeviceAsset({
 						},
 					},
 				},
+				{
+					id: 'split_65',
+					name: 'Split',
+					properties: {
+						slotProperties: {
+							under_bamboo: {
+								poseLimits: {
+									legs: ['standing', 'kneeling'],
+									bones: {
+										character_rotation: 0,
+										leg_l: -65,
+										leg_r: -65,
+									}
+								},
+								stateFlags: {
+									requires: {
+										suspension_chest: 'Thighs cannot be tied without chest line suspended',
+									},
+								},
+							}
+						}
+					}
+				},
 			],
 		},
 		ankle_line: {
@@ -1114,7 +1137,7 @@ DefineRoomDeviceAsset({
 					condition: [
 						[
 							{
-								module: 'ankle_line',
+								module: 'thigh_line',
 								operator: '=',
 								value: 'split_65',
 							},
