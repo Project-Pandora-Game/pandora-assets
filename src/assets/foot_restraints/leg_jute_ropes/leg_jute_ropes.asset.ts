@@ -302,6 +302,26 @@ DefineAsset({
 				},
 			],
 		},
+		frogtie: {
+			type: 'typed',
+			name: 'Frogtie',
+			variants: [
+				{
+					id: 'no',
+					name: 'No',
+					default: true,
+				},
+				{
+					id: 'yes',
+					name: 'Yes',
+					properties: {
+						poseLimits: {
+							legs: 'kneeling',
+						},
+					},
+				},
+			],
+		},
 	},
 	chat: {
 		actionAdd: 'SOURCE_CHARACTER tied Leg Jute Ropes around TARGET_CHARACTER_DYNAMIC_POSSESSIVE body.',

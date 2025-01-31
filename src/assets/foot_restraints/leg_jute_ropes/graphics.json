@@ -1202,6 +1202,90 @@
 					}
 				]
 			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "frogtie_front",
+			"priority": "ABOVE_BODY",
+			"points": "body",
+			"mirror": 0,
+			"colorizationKey": "rope",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "thighs_frogtie.png",
+						"condition": [
+							[
+								{
+									"module": "frogtie",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "frogtie_back",
+			"priority": "BELOW_BODY",
+			"points": "body",
+			"mirror": 0,
+			"colorizationKey": "rope",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "thighs_frogtie.png",
+						"condition": [
+							[
+								{
+									"module": "frogtie",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "frogtie_legs_back",
+			"priority": "BODY_SOLES",
+			"points": "body",
+			"mirror": 0,
+			"colorizationKey": "rope",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "legs_frogtie.png",
+						"condition": [
+							[
+								{
+									"module": "frogtie",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					}
+				]
+			}
 		}
 	]
 }
