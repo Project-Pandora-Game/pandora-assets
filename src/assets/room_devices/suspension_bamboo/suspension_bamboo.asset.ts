@@ -1,6 +1,7 @@
 DefineRoomDeviceAsset({
 	name: 'Suspension Bamboo',
 	size: 'huge',
+	preview: 'preview.png',
 	colorization: {
 		frame: {
 			name: 'Frame',
