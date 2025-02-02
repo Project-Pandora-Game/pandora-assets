@@ -19,9 +19,43 @@
 						"condition": [
 							[
 								{
-									"module": "harness",
+									"module": "chest",
 									"operator": "=",
 									"value": "basic"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">=",
+									"value": 0
+								},
+								{
+									"bone": "breasts",
+									"operator": "<",
+									"value": 60
+								}
+							],
+							[
+								{
+									"module": "chest",
+									"operator": "=",
+									"value": "chest"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">=",
+									"value": 0
+								},
+								{
+									"bone": "breasts",
+									"operator": "<",
+									"value": 60
+								}
+							],
+							[
+								{
+									"module": "chest",
+									"operator": "=",
+									"value": "crossed"
 								},
 								{
 									"bone": "breasts",
@@ -41,9 +75,43 @@
 						"condition": [
 							[
 								{
-									"module": "harness",
+									"module": "chest",
 									"operator": "=",
 									"value": "basic"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">=",
+									"value": 60
+								},
+								{
+									"bone": "breasts",
+									"operator": "<",
+									"value": 160
+								}
+							],
+							[
+								{
+									"module": "chest",
+									"operator": "=",
+									"value": "chest"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">=",
+									"value": 60
+								},
+								{
+									"bone": "breasts",
+									"operator": "<",
+									"value": 160
+								}
+							],
+							[
+								{
+									"module": "chest",
+									"operator": "=",
+									"value": "crossed"
 								},
 								{
 									"bone": "breasts",
@@ -63,9 +131,33 @@
 						"condition": [
 							[
 								{
-									"module": "harness",
+									"module": "chest",
 									"operator": "=",
 									"value": "basic"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": 160
+								}
+							],
+							[
+								{
+									"module": "chest",
+									"operator": "=",
+									"value": "chest"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": 160
+								}
+							],
+							[
+								{
+									"module": "chest",
+									"operator": "=",
+									"value": "crossed"
 								},
 								{
 									"bone": "breasts",
@@ -80,9 +172,23 @@
 						"condition": [
 							[
 								{
-									"module": "harness",
+									"module": "chest",
 									"operator": "=",
 									"value": "basic"
+								}
+							],
+							[
+								{
+									"module": "chest",
+									"operator": "=",
+									"value": "chest"
+								}
+							],
+							[
+								{
+									"module": "chest",
+									"operator": "=",
+									"value": "crossed"
 								}
 							]
 						]
@@ -103,15 +209,73 @@
 			"image": {
 				"image": "",
 				"overrides": [
-
 					{
 						"image": "basic_front_top.png",
 						"condition": [
 							[
 								{
-									"module": "harness",
+									"module": "chest",
 									"operator": "=",
 									"value": "basic"
+								}
+							]
+						]
+					},
+					{
+						"image": "chest_front_top.png",
+						"condition": [
+							[
+								{
+									"module": "chest",
+									"operator": "=",
+									"value": "chest"
+								}
+							]
+						]
+					},
+					{
+						"image": "crossed_front_top.png",
+						"condition": [
+							[
+								{
+									"module": "chest",
+									"operator": "=",
+									"value": "crossed"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "harness_back",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "rope",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "chest_back_top.png",
+						"condition": [
+							[
+								{
+									"module": "chest",
+									"operator": "=",
+									"value": "chest"
+								}
+							],
+							[
+								{
+									"module": "chest",
+									"operator": "=",
+									"value": "crossed"
 								}
 							]
 						]
@@ -137,9 +301,16 @@
 						"condition": [
 							[
 								{
-									"module": "harness",
+									"module": "chest",
 									"operator": "=",
 									"value": "basic"
+								}
+							],
+							[
+								{
+									"module": "chest",
+									"operator": "=",
+									"value": "chest"
 								}
 							]
 						]

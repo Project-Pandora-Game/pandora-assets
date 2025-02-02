@@ -17,7 +17,7 @@ DefineAsset({
 		],
 	},
 	modules: {
-		harness: {
+		chest: {
 			type: 'typed',
 			name: 'Harness',
 			variants: [
@@ -25,6 +25,28 @@ DefineAsset({
 					id: 'basic',
 					name: 'Basic',
 					default: true,
+					properties: {
+						attributes: {
+							provides: [
+								"Back_knot_anchor_point"
+							]
+						},
+					},
+				},
+				{
+					id: 'chest',
+					name: 'Chest',
+					properties: {
+						attributes: {
+							provides: [
+								"Back_knot_anchor_point"
+							]
+						},
+					},
+				},
+				{
+					id: 'crossed',
+					name: 'Crossed',
 					properties: {
 						attributes: {
 							provides: [
