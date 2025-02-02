@@ -28,8 +28,8 @@ DefineAsset({
 					properties: {
 						attributes: {
 							provides: [
-								"Back_knot_anchor_point"
-							]
+								'Back_knot_anchor_point',
+							],
 						},
 					},
 				},
@@ -39,8 +39,8 @@ DefineAsset({
 					properties: {
 						attributes: {
 							provides: [
-								"Back_knot_anchor_point"
-							]
+								'Back_knot_anchor_point',
+							],
 						},
 					},
 				},
@@ -50,8 +50,8 @@ DefineAsset({
 					properties: {
 						attributes: {
 							provides: [
-								"Back_knot_anchor_point"
-							]
+								'Back_knot_anchor_point',
+							],
 						},
 					},
 				},

@@ -27,8 +27,8 @@ DefineAsset({
 					properties: {
 						attributes: {
 							provides: [
-								"Back_knot_anchor_point"
-							]
+								'Back_knot_anchor_point',
+							],
 						},
 						poseLimits: {
 							arms: {
@@ -62,8 +62,8 @@ DefineAsset({
 					properties: {
 						attributes: {
 							provides: [
-								"Back_knot_anchor_point"
-							]
+								'Back_knot_anchor_point',
+							],
 						},
 						poseLimits: {
 							arms: {
@@ -96,8 +96,8 @@ DefineAsset({
 					properties: {
 						attributes: {
 							provides: [
-								"Back_knot_anchor_point"
-							]
+								'Back_knot_anchor_point',
+							],
 						},
 						poseLimits: {
 							arms: {
@@ -259,7 +259,7 @@ DefineAsset({
 		},
 		hogtie: {
 			type: 'typed',
-			name: "Hogtie",
+			name: 'Hogtie',
 			variants: [
 				{
 					id: 'none',

@@ -32,7 +32,7 @@ DefineRoomDeviceAsset({
 	modules: {
 		configuration: {
 			type: 'typed',
-			name: "Setup",
+			name: 'Setup',
 			staticConfig: { slotName: 'under_bamboo' },
 			variants: [
 				{
@@ -44,7 +44,7 @@ DefineRoomDeviceAsset({
 					id: 'hanging',
 					name: 'Tied from Ceiling',
 				},
-			]
+			],
 		},
 		position: {
 			type: 'typed',
@@ -60,10 +60,10 @@ DefineRoomDeviceAsset({
 							under_bamboo: {
 								poseLimits: {
 									view: 'front',
-									legs: ['standing', 'kneeling']
+									legs: ['standing', 'kneeling'],
 								},
 								stateFlags: {
-									provides: ['front_view']
+									provides: ['front_view'],
 								},
 							},
 						},
@@ -77,20 +77,20 @@ DefineRoomDeviceAsset({
 							under_bamboo: {
 								poseLimits: {
 									view: 'back',
-									legs: ['standing', 'kneeling']
+									legs: ['standing', 'kneeling'],
 								},
 								stateFlags: {
-									provides: ['back_view']
+									provides: ['back_view'],
 								},
 							},
 						},
 					},
 				},
-			]
+			],
 		},
 		chest_line: {
 			type: 'typed',
-			name: "Chest Line",
+			name: 'Chest Line',
 			staticConfig: { slotName: 'under_bamboo' },
 			variants: [
 				{
@@ -107,8 +107,8 @@ DefineRoomDeviceAsset({
 							under_bamboo: {
 								attributes: {
 									requires: [
-										'Back_knot_anchor_point'
-									]
+										'Back_knot_anchor_point',
+									],
 								},
 								poseLimits: {
 									legs: 'kneeling',
@@ -116,7 +116,7 @@ DefineRoomDeviceAsset({
 										character_rotation: 0,
 										leg_l: [[-25, 6]],
 										leg_r: [[-25, 6]],
-									}
+									},
 								},
 							},
 						},
@@ -131,8 +131,8 @@ DefineRoomDeviceAsset({
 							under_bamboo: {
 								attributes: {
 									requires: [
-										'Back_knot_anchor_point'
-									]
+										'Back_knot_anchor_point',
+									],
 								},
 								poseLimits: {
 									legs: ['standing', 'kneeling'],
@@ -140,11 +140,11 @@ DefineRoomDeviceAsset({
 								stateFlags: {
 									provides: ['suspension_chest'],
 								},
-							}
-						}
-					}
+							},
+						},
+					},
 				},
-			]
+			],
 		},
 		thigh_line: {
 			type: 'typed',
@@ -154,7 +154,7 @@ DefineRoomDeviceAsset({
 				{
 					id: 'none',
 					name: 'None',
-					default: true
+					default: true,
 				},
 				{
 					id: 'thigh_front_left',
@@ -164,7 +164,7 @@ DefineRoomDeviceAsset({
 							under_bamboo: {
 								attributes: {
 									requires: [
-										'Back_knot_anchor_point'
+										'Back_knot_anchor_point',
 									],
 								},
 								poseLimits: {
@@ -191,14 +191,14 @@ DefineRoomDeviceAsset({
 							under_bamboo: {
 								attributes: {
 									requires: [
-										'Back_knot_anchor_point'
-									]
+										'Back_knot_anchor_point',
+									],
 								},
 								poseLimits: {
 									bones: {
 										character_rotation: 27,
 										leg_r: -87,
-									}
+									},
 								},
 								stateFlags: {
 									requires: {
@@ -218,7 +218,7 @@ DefineRoomDeviceAsset({
 							under_bamboo: {
 								attributes: {
 									requires: [
-										'Back_knot_anchor_point'
+										'Back_knot_anchor_point',
 									],
 								},
 								poseLimits: {
@@ -245,14 +245,14 @@ DefineRoomDeviceAsset({
 							under_bamboo: {
 								attributes: {
 									requires: [
-										'Back_knot_anchor_point'
-									]
+										'Back_knot_anchor_point',
+									],
 								},
 								poseLimits: {
 									bones: {
 										character_rotation: -27,
 										leg_r: -87,
-									}
+									},
 								},
 								stateFlags: {
 									requires: {
@@ -276,16 +276,16 @@ DefineRoomDeviceAsset({
 										character_rotation: 0,
 										leg_l: -65,
 										leg_r: -65,
-									}
+									},
 								},
 								stateFlags: {
 									requires: {
 										suspension_chest: 'Thighs cannot be tied without chest line suspended',
 									},
 								},
-							}
-						}
-					}
+							},
+						},
+					},
 				},
 			],
 		},
@@ -297,7 +297,7 @@ DefineRoomDeviceAsset({
 				{
 					id: 'none',
 					name: 'None',
-					default: true
+					default: true,
 				},
 				{
 					id: 'ankle_front_left',
@@ -307,7 +307,7 @@ DefineRoomDeviceAsset({
 							under_bamboo: {
 								attributes: {
 									requires: [
-										'Back_knot_anchor_point'
+										'Back_knot_anchor_point',
 									],
 								},
 								poseLimits: {
@@ -335,15 +335,15 @@ DefineRoomDeviceAsset({
 							under_bamboo: {
 								attributes: {
 									requires: [
-										'Back_knot_anchor_point'
-									]
+										'Back_knot_anchor_point',
+									],
 								},
 								poseLimits: {
 									legs: 'standing',
 									bones: {
 										character_rotation: 27,
 										leg_r: -87,
-									}
+									},
 								},
 								stateFlags: {
 									requires: {
@@ -363,7 +363,7 @@ DefineRoomDeviceAsset({
 							under_bamboo: {
 								attributes: {
 									requires: [
-										'Back_knot_anchor_point'
+										'Back_knot_anchor_point',
 									],
 								},
 								poseLimits: {
@@ -391,15 +391,15 @@ DefineRoomDeviceAsset({
 							under_bamboo: {
 								attributes: {
 									requires: [
-										'Back_knot_anchor_point'
-									]
+										'Back_knot_anchor_point',
+									],
 								},
 								poseLimits: {
 									legs: 'standing',
 									bones: {
 										character_rotation: -27,
 										leg_r: -87,
-									}
+									},
 								},
 								stateFlags: {
 									requires: {
@@ -423,16 +423,16 @@ DefineRoomDeviceAsset({
 										character_rotation: 0,
 										leg_l: -65,
 										leg_r: -65,
-									}
+									},
 								},
 								stateFlags: {
 									requires: {
 										suspension_chest: 'Ankles cannot be tied without chest line suspended',
 									},
 								},
-							}
-						}
-					}
+							},
+						},
+					},
 				},
 				{
 					id: 'ankles_tied',
@@ -442,23 +442,23 @@ DefineRoomDeviceAsset({
 							under_bamboo: {
 								attributes: {
 									requires: [
-										'Rope_ankles_anchor_point'
-									]
+										'Rope_ankles_anchor_point',
+									],
 								},
 								poseLimits: {
 									legs: 'standing',
 									bones: {
 										character_rotation: -90,
-									}
+									},
 								},
 								stateFlags: {
 									requires: {
 										suspension_chest: 'Ankles cannot be tied without chest line suspended',
 									},
 								},
-							}
-						}
-					}
+							},
+						},
+					},
 				},
 			],
 		},
@@ -485,7 +485,7 @@ DefineRoomDeviceAsset({
 							},
 						],
 					],
-				}
+				},
 			],
 
 			offsetOverrides: [
@@ -519,7 +519,7 @@ DefineRoomDeviceAsset({
 							},
 						],
 					],
-				}
+				},
 			],
 			offsetOverrides: [
 				{
@@ -552,7 +552,7 @@ DefineRoomDeviceAsset({
 							},
 						],
 					],
-				}
+				},
 			],
 
 			offsetOverrides: [
@@ -586,7 +586,7 @@ DefineRoomDeviceAsset({
 							},
 						],
 					],
-				}
+				},
 			],
 			offsetOverrides: [
 				{
