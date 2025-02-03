@@ -37,6 +37,18 @@
 								}
 							]
 						]
+					},
+					{
+						"image": "tail_plug_puppy_tail.png",
+						"condition": [
+							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "puppy"
+								}
+							]
+						]
 					}
 				]
 			}

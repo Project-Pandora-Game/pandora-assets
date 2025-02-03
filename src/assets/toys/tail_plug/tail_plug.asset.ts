@@ -30,6 +30,16 @@ DefineAsset({
 			name: 'Tail Type',
 			variants: [
 				{
+					id: 'bunny',
+					name: 'Bunny Tail',
+					properties: {
+						attributes: {
+							provides: ['Anus_insert', 'Anus_insert_deep'],
+							requires: ['!Anus_cover'],
+						},
+					},
+				},
+				{
 					id: 'cat',
 					name: 'Cat Tail',
 					default: true,
@@ -41,8 +51,8 @@ DefineAsset({
 					},
 				},
 				{
-					id: 'bunny',
-					name: 'Bunny Tail',
+					id: 'puppy',
+					name: 'Puppy Tail',
 					properties: {
 						attributes: {
 							provides: ['Anus_insert', 'Anus_insert_deep'],
