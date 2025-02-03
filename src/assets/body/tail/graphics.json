@@ -15,9 +15,26 @@
 				"image": "",
 				"overrides": [
 					{
+						"image": "bunny_tail.png",
+						"condition": [
+							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "bunny"
+								}
+							]
+						]
+					},
+					{
 						"image": "cat_tail_down_left.png",
 						"condition": [
 							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
 								{
 									"module": "vertical",
 									"operator": "=",
@@ -36,6 +53,11 @@
 						"condition": [
 							[
 								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
+								{
 									"module": "vertical",
 									"operator": "=",
 									"value": "down"
@@ -52,6 +74,11 @@
 						"image": "cat_tail_up_left.png",
 						"condition": [
 							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
 								{
 									"module": "vertical",
 									"operator": "=",
@@ -70,6 +97,275 @@
 						"condition": [
 							[
 								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
+								{
+									"module": "vertical",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"module": "horizontal",
+									"operator": "=",
+									"value": "right"
+								}
+							]
+						]
+					},
+					{
+						"image": "thin_tail_down_left.png",
+						"condition": [
+							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "thin"
+								},
+								{
+									"module": "vertical",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"module": "horizontal",
+									"operator": "=",
+									"value": "left"
+								}
+							]
+						]
+					},
+					{
+						"image": "thin_tail_down_right.png",
+						"condition": [
+							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "thin"
+								},
+								{
+									"module": "vertical",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"module": "horizontal",
+									"operator": "=",
+									"value": "right"
+								}
+							]
+						]
+					},
+					{
+						"image": "thin_tail_up_left.png",
+						"condition": [
+							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "thin"
+								},
+								{
+									"module": "vertical",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"module": "horizontal",
+									"operator": "=",
+									"value": "left"
+								}
+							]
+						]
+					},
+					{
+						"image": "thin_tail_up_right.png",
+						"condition": [
+							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "thin"
+								},
+								{
+									"module": "vertical",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"module": "horizontal",
+									"operator": "=",
+									"value": "right"
+								}
+							]
+						]
+					},
+					{
+						"image": "normal_tail_down_left.png",
+						"condition": [
+							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"module": "vertical",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"module": "horizontal",
+									"operator": "=",
+									"value": "left"
+								}
+							]
+						]
+					},
+					{
+						"image": "normal_tail_down_right.png",
+						"condition": [
+							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"module": "vertical",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"module": "horizontal",
+									"operator": "=",
+									"value": "right"
+								}
+							]
+						]
+					},
+					{
+						"image": "normal_tail_up_left.png",
+						"condition": [
+							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"module": "vertical",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"module": "horizontal",
+									"operator": "=",
+									"value": "left"
+								}
+							]
+						]
+					},
+					{
+						"image": "normal_tail_up_right.png",
+						"condition": [
+							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"module": "vertical",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"module": "horizontal",
+									"operator": "=",
+									"value": "right"
+								}
+							]
+						]
+					},
+					{
+						"image": "thick_tail_down_left.png",
+						"condition": [
+							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "thick"
+								},
+								{
+									"module": "vertical",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"module": "horizontal",
+									"operator": "=",
+									"value": "left"
+								}
+							]
+						]
+					},
+					{
+						"image": "thick_tail_down_right.png",
+						"condition": [
+							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "thick"
+								},
+								{
+									"module": "vertical",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"module": "horizontal",
+									"operator": "=",
+									"value": "right"
+								}
+							]
+						]
+					},
+					{
+						"image": "thick_tail_up_left.png",
+						"condition": [
+							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "thick"
+								},
+								{
+									"module": "vertical",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"module": "horizontal",
+									"operator": "=",
+									"value": "left"
+								}
+							]
+						]
+					},
+					{
+						"image": "thick_tail_up_right.png",
+						"condition": [
+							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "thick"
+								},
+								{
 									"module": "vertical",
 									"operator": "=",
 									"value": "up"
@@ -103,6 +399,11 @@
 						"condition": [
 							[
 								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
+								{
 									"module": "vertical",
 									"operator": "=",
 									"value": "down"
@@ -124,6 +425,11 @@
 						"image": "cat_tail_down_right_stripes.png",
 						"condition": [
 							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
 								{
 									"module": "vertical",
 									"operator": "=",
@@ -147,6 +453,11 @@
 						"condition": [
 							[
 								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
+								{
 									"module": "vertical",
 									"operator": "=",
 									"value": "up"
@@ -168,6 +479,11 @@
 						"image": "cat_tail_up_right_stripes.png",
 						"condition": [
 							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
 								{
 									"module": "vertical",
 									"operator": "=",
@@ -207,6 +523,11 @@
 						"condition": [
 							[
 								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
+								{
 									"module": "vertical",
 									"operator": "=",
 									"value": "down"
@@ -228,6 +549,11 @@
 						"image": "cat_tail_down_right_tip.png",
 						"condition": [
 							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
 								{
 									"module": "vertical",
 									"operator": "=",
@@ -251,6 +577,11 @@
 						"condition": [
 							[
 								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
+								{
 									"module": "vertical",
 									"operator": "=",
 									"value": "up"
@@ -272,6 +603,11 @@
 						"image": "cat_tail_up_right_tip.png",
 						"condition": [
 							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
 								{
 									"module": "vertical",
 									"operator": "=",
@@ -311,6 +647,11 @@
 						"condition": [
 							[
 								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
+								{
 									"module": "vertical",
 									"operator": "=",
 									"value": "down"
@@ -332,6 +673,11 @@
 						"image": "cat_tail_down_right_stripes.png",
 						"condition": [
 							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
 								{
 									"module": "vertical",
 									"operator": "=",
@@ -355,6 +701,11 @@
 						"condition": [
 							[
 								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
+								{
 									"module": "vertical",
 									"operator": "=",
 									"value": "up"
@@ -376,6 +727,11 @@
 						"image": "cat_tail_up_right_stripes.png",
 						"condition": [
 							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
 								{
 									"module": "vertical",
 									"operator": "=",
@@ -415,6 +771,11 @@
 						"condition": [
 							[
 								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
+								{
 									"module": "vertical",
 									"operator": "=",
 									"value": "down"
@@ -436,6 +797,11 @@
 						"image": "cat_tail_down_right_tip.png",
 						"condition": [
 							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
 								{
 									"module": "vertical",
 									"operator": "=",
@@ -459,6 +825,11 @@
 						"condition": [
 							[
 								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
+								{
 									"module": "vertical",
 									"operator": "=",
 									"value": "up"
@@ -480,6 +851,11 @@
 						"image": "cat_tail_up_right_tip.png",
 						"condition": [
 							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								},
 								{
 									"module": "vertical",
 									"operator": "=",

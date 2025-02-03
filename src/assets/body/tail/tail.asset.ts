@@ -1,5 +1,5 @@
 DefineBodypart({
-	name: 'Cat Tail',
+	name: 'Tail',
 	bodypart: 'tails',
 	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
@@ -9,11 +9,11 @@ DefineBodypart({
 			default: '#666666',
 		},
 		stripes: {
-			name: 'Stripes',
+			name: 'Stripes (not for all types)',
 			default: '#020202',
 		},
 		tip: {
-			name: 'Tip',
+			name: 'Tip (not for all types)',
 			default: '#FFFFFF',
 		},
 	},
@@ -24,6 +24,33 @@ DefineBodypart({
 		],
 	},
 	modules: {
+		tailType: {
+			type: 'typed',
+			name: 'Tail Type',
+			variants: [
+				{
+					id: 'bunny',
+					name: 'Bunny',
+				},
+				{
+					id: 'cat',
+					name: 'Cat',
+				},
+				{
+					id: 'thin',
+					name: 'Thin',
+				},
+				{
+					id: 'normal',
+					name: 'Normal',
+					default: true,
+				},
+				{
+					id: 'thick',
+					name: 'Thick',
+				},
+			],
+		},
 		withStripes: {
 			type: 'typed',
 			name: 'With Stripes',
