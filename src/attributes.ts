@@ -176,7 +176,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		useAsWardrobeFilter: {
 			tabs: ['body'],
 		},
-		icon: 'fantasy',
+		icon: 'tail',
 		useAsAssetPreference: false,
 	},
 	// Items or attachment points from items
