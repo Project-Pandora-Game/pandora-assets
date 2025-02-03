@@ -170,6 +170,15 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		parentAttributes: ['Penis'],
 		useAsAssetPreference: false,
 	},
+	Tail: {
+		name: 'Tail',
+		description: 'A tail for not solely human characters',
+		useAsWardrobeFilter: {
+			tabs: ['body'],
+		},
+		icon: 'fantasy',
+		useAsAssetPreference: false,
+	},
 	// Items or attachment points from items
 	Clothing: {
 		name: 'Clothing',
