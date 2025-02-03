@@ -1,7 +1,7 @@
-DefineBodypart({
-	name: 'Cat Tail',
-	bodypart: 'tails',
-	allowRandomizerUsage: false,
+DefineAsset({
+	name: 'Tail Plug',
+	size: 'medium',
+	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
 		tail: {
@@ -17,70 +17,61 @@ DefineBodypart({
 			default: '#FFFFFF',
 		},
 	},
-	preview: null,
+	preview: 'preview.png',
 	attributes: {
 		provides: [
-			'Tail',
+			'Anus_item',
+			'Toy',
 		],
 	},
 	modules: {
-		withStripes: {
+		tailType: {
 			type: 'typed',
-			name: 'With Stripes',
+			name: 'Tail Type',
 			variants: [
 				{
-					id: 'no',
-					name: 'No',
+					id: 'cat',
+					name: 'Cat Tail',
 					default: true,
+					properties: {
+						attributes: {
+							provides: ['Anus_insert', 'Anus_insert_deep'],
+							requires: ['!Anus_cover'],
+						},
+					},
 				},
 				{
-					id: 'yes',
-					name: 'Yes',
+					id: 'bunny',
+					name: 'Bunny Tail',
+					properties: {
+						attributes: {
+							provides: ['Anus_insert', 'Anus_insert_deep'],
+							requires: ['!Anus_cover'],
+						},
+					},
 				},
 			],
 		},
-		withTip: {
+		decoration: {
 			type: 'typed',
-			name: 'With Tip',
+			name: 'Decoration (only for some tails)',
 			variants: [
 				{
-					id: 'no',
-					name: 'No',
+					id: 'plain',
+					name: 'Plain',
 					default: true,
 				},
 				{
-					id: 'yes',
-					name: 'Yes',
-				},
-			],
-		},
-		horizontal: {
-			type: 'typed',
-			name: 'Horizontal Alignment',
-			variants: [
-				{
-					id: 'left',
-					name: 'Left',
-					default: true,
+					id: 'stripes',
+					name: 'With Stripes',
 				},
 				{
-					id: 'right',
-					name: 'Right',
-				},
-			],
-		},
-		vertical: {
-			type: 'typed',
-			name: 'Vertical Alignment',
-			variants: [
-				{
-					id: 'up',
-					name: 'Up',
-					default: true,
+					id: 'tip',
+					name: 'With Tip',
 				},
 				{
-					id: 'down',
-					name: 'Down',
+					id: 'both',
+					name: 'Stripes & Tip',
 				},
 			],
 		},
