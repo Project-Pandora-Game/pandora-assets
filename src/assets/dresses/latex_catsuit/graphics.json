@@ -604,6 +604,11 @@
 							[
 								{
 									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "!=",
+									"value": "long"
 								}
 							]
 						]
