@@ -82,7 +82,7 @@ DefineAsset({
 		},
 		addOns: {
 			type: 'typed',
-			name: 'Add-Ons',
+			name: 'Add-Ons (only with long variant)',
 			variants: [
 				{
 					id: 'none',
@@ -93,7 +93,6 @@ DefineAsset({
 					id: 'socks',
 					name: 'Socks',
 				},
-				/**  For later use
 				{
 					id: 'gloves',
 					name: 'Gloves',
@@ -118,7 +117,6 @@ DefineAsset({
 						},
 					},
 				},
-				**/
 			],
 		},
 	},
