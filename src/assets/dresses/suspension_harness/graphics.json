@@ -312,6 +312,13 @@
 									"operator": "=",
 									"value": "chest"
 								}
+							],
+							[
+								{
+									"module": "chest",
+									"operator": "=",
+									"value": "crossed"
+								}
 							]
 						]
 					}
