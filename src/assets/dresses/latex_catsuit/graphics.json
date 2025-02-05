@@ -286,6 +286,21 @@
 									"operator": "=",
 									"value": "none"
 								}
+							],
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "gloves"
+								}
 							]
 						]
 					},
@@ -514,6 +529,21 @@
 									"module": "addOns",
 									"operator": "=",
 									"value": "none"
+								}
+							],
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "gloves"
 								}
 							]
 						]
@@ -2212,6 +2242,21 @@
 									"operator": "=",
 									"value": "none"
 								}
+							],
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "gloves"
+								}
 							]
 						]
 					},
@@ -2353,6 +2398,26 @@
 									"module": "length",
 									"operator": "=",
 									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "none"
+								}
+							],
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "=",
+									"value": "gloves"
 								}
 							]
 						]
