@@ -683,11 +683,6 @@
 									"value": "forward"
 								},
 								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
 									"module": "addOns",
 									"operator": "!=",
 									"value": "none"
@@ -718,11 +713,6 @@
 									"side": "left",
 									"operator": "=",
 									"value": "backward"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
 								},
 								{
 									"module": "addOns",
@@ -757,11 +747,6 @@
 									"value": "up"
 								},
 								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
 									"module": "addOns",
 									"operator": "!=",
 									"value": "none"
@@ -792,11 +777,6 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
 								},
 								{
 									"module": "addOns",
@@ -831,11 +811,6 @@
 									"value": "forward"
 								},
 								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
 									"module": "addOns",
 									"operator": "!=",
 									"value": "none"
@@ -866,11 +841,6 @@
 									"side": "left",
 									"operator": "=",
 									"value": "backward"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
 								},
 								{
 									"module": "addOns",
@@ -905,11 +875,6 @@
 									"value": "up"
 								},
 								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
 									"module": "addOns",
 									"operator": "!=",
 									"value": "none"
@@ -940,11 +905,6 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
 								},
 								{
 									"module": "addOns",
@@ -1054,11 +1014,6 @@
 									"value": "forward"
 								},
 								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
 									"module": "addOns",
 									"operator": "!=",
 									"value": "none"
@@ -1089,11 +1044,6 @@
 									"side": "left",
 									"operator": "=",
 									"value": "backward"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
 								},
 								{
 									"module": "addOns",
@@ -1128,11 +1078,6 @@
 									"value": "up"
 								},
 								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
 									"module": "addOns",
 									"operator": "!=",
 									"value": "none"
@@ -1163,11 +1108,6 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
 								},
 								{
 									"module": "addOns",
@@ -1202,11 +1142,6 @@
 									"value": "forward"
 								},
 								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
 									"module": "addOns",
 									"operator": "!=",
 									"value": "none"
@@ -1237,11 +1172,6 @@
 									"side": "left",
 									"operator": "=",
 									"value": "backward"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
 								},
 								{
 									"module": "addOns",
@@ -1276,11 +1206,6 @@
 									"value": "up"
 								},
 								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
 									"module": "addOns",
 									"operator": "!=",
 									"value": "none"
@@ -1311,11 +1236,6 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
 								},
 								{
 									"module": "addOns",
@@ -1558,11 +1478,6 @@
 									"value": "forward"
 								},
 								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
 									"module": "addOns",
 									"operator": "!=",
 									"value": "none"
@@ -1593,11 +1508,6 @@
 									"side": "left",
 									"operator": "=",
 									"value": "backward"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
 								},
 								{
 									"module": "addOns",
@@ -1632,11 +1542,6 @@
 									"value": "up"
 								},
 								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
 									"module": "addOns",
 									"operator": "!=",
 									"value": "none"
@@ -1667,11 +1572,6 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
 								},
 								{
 									"module": "addOns",
@@ -1706,11 +1606,6 @@
 									"value": "forward"
 								},
 								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
 									"module": "addOns",
 									"operator": "!=",
 									"value": "none"
@@ -1741,11 +1636,6 @@
 									"side": "left",
 									"operator": "=",
 									"value": "backward"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
 								},
 								{
 									"module": "addOns",
@@ -1780,11 +1670,6 @@
 									"value": "up"
 								},
 								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
 									"module": "addOns",
 									"operator": "!=",
 									"value": "none"
@@ -1815,11 +1700,6 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
 								},
 								{
 									"module": "addOns",
@@ -1929,11 +1809,6 @@
 									"value": "forward"
 								},
 								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
 									"module": "addOns",
 									"operator": "!=",
 									"value": "none"
@@ -1964,11 +1839,6 @@
 									"side": "left",
 									"operator": "=",
 									"value": "backward"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
 								},
 								{
 									"module": "addOns",
@@ -2003,11 +1873,6 @@
 									"value": "up"
 								},
 								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
 									"module": "addOns",
 									"operator": "!=",
 									"value": "none"
@@ -2038,11 +1903,6 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
 								},
 								{
 									"module": "addOns",
@@ -2077,11 +1937,6 @@
 									"value": "forward"
 								},
 								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
 									"module": "addOns",
 									"operator": "!=",
 									"value": "none"
@@ -2112,11 +1967,6 @@
 									"side": "left",
 									"operator": "=",
 									"value": "backward"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
 								},
 								{
 									"module": "addOns",
@@ -2151,11 +2001,6 @@
 									"value": "up"
 								},
 								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
 									"module": "addOns",
 									"operator": "!=",
 									"value": "none"
@@ -2186,11 +2031,6 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
 								},
 								{
 									"module": "addOns",

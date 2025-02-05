@@ -82,7 +82,7 @@ DefineAsset({
 		},
 		addOns: {
 			type: 'typed',
-			name: 'Add-Ons (only with long variant)',
+			name: 'Add-Ons (socks only with long variant)',
 			variants: [
 				{
 					id: 'none',
