@@ -9,6 +9,9 @@
 			"name": "Soles",
 			"priority": "BODY_SOLES",
 			"points": "body_soles_back",
+			"previewOverrides": {
+				"color": 5461849
+			},
 			"mirror": 0,
 			"colorizationKey": "skin",
 			"image": {
@@ -44,6 +47,9 @@
 				"bodyleg",
 				"leg"
 			],
+			"previewOverrides": {
+				"color": 5461849
+			},
 			"mirror": 0,
 			"colorizationKey": "skin",
 			"image": {
@@ -74,6 +80,9 @@
 				"bodyarm_l",
 				"arm_l"
 			],
+			"previewOverrides": {
+				"color": 5461849
+			},
 			"mirror": 1,
 			"colorizationKey": "skin",
 			"image": {
@@ -113,6 +122,28 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								}
+							]
+						]
+					},
+					{
+						"image": "body_armsback.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
 								},
 								{
 									"armType": "fingers",
@@ -311,6 +342,34 @@
 									"side": "left",
 									"operator": "=",
 									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "forward"
+								}
+							]
+						]
+					},
+					{
+						"image": "body_back_armsback.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
 								}
 							]
 						]
@@ -376,6 +435,9 @@
 				"bodyleg",
 				"leg"
 			],
+			"previewOverrides": {
+				"alpha": 0
+			},
 			"mirror": 0,
 			"colorizationKey": "skin",
 			"image": {
@@ -432,6 +494,9 @@
 				"bodyleg",
 				"leg"
 			],
+			"previewOverrides": {
+				"alpha": 0
+			},
 			"mirror": 0,
 			"colorizationKey": "skin",
 			"image": {
@@ -458,6 +523,9 @@
 			"name": "Breasts",
 			"priority": "BREASTS",
 			"points": "breasts",
+			"previewOverrides": {
+				"color": 5461849
+			},
 			"mirror": 0,
 			"colorizationKey": "skin",
 			"image": {
@@ -498,6 +566,9 @@
 			"name": "Breasts shadow",
 			"priority": "BREASTS",
 			"points": "breasts",
+			"previewOverrides": {
+				"alpha": 0
+			},
 			"mirror": 0,
 			"colorizationKey": "skin",
 			"image": {
@@ -538,6 +609,9 @@
 			"name": "Nipples",
 			"priority": "BREASTS",
 			"points": "custom_body_nipples",
+			"previewOverrides": {
+				"alpha": 0
+			},
 			"mirror": 0,
 			"colorizationKey": "nipples",
 			"image": {

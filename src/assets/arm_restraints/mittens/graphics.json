@@ -16,7 +16,7 @@
 			"mirror": 1,
 			"colorizationKey": "mittens",
 			"image": {
-				"image": "mittens_side.png",
+				"image": "",
 				"overrides": [
 					{
 						"image": "mittens_up.png",
@@ -43,6 +43,38 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "mittens_side.png",
+						"condition": [
+							[
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "forward"
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "mittens_side_backward.png",
+						"condition": [
+							[
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
 								},
 								{
 									"view": "front"
@@ -206,7 +238,7 @@
 			"mirror": 1,
 			"colorizationKey": "mittens",
 			"image": {
-				"image": "mittens_side.png",
+				"image": "",
 				"overrides": [
 					{
 						"image": "mittens_up.png",
@@ -233,6 +265,38 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					},
+					{
+						"image": "mittens_side.png",
+						"condition": [
+							[
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "forward"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					},
+					{
+						"image": "mittens_side_backward.png",
+						"condition": [
+							[
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
 								},
 								{
 									"view": "back"
