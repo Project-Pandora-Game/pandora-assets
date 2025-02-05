@@ -169,6 +169,11 @@ DefineAsset({
 								},
 							],
 						},
+						attributes: {
+							provides: [
+								'Rope_ankles_anchor_point',
+							],
+						},
 					},
 					default: true,
 				},
@@ -199,6 +204,11 @@ DefineAsset({
 										leg_l: 5,
 									},
 								},
+							],
+						},
+						attributes: {
+							provides: [
+								'Rope_ankles_anchor_point',
 							],
 						},
 					},
@@ -232,6 +242,11 @@ DefineAsset({
 								},
 							],
 						},
+						attributes: {
+							provides: [
+								'Rope_ankles_anchor_point',
+							],
+						},
 					},
 				},
 				{
@@ -263,6 +278,11 @@ DefineAsset({
 								},
 							],
 						},
+						attributes: {
+							provides: [
+								'Rope_ankles_anchor_point',
+							],
+						},
 					},
 				},
 			],
@@ -279,6 +299,26 @@ DefineAsset({
 				{
 					id: 'linked',
 					name: 'Linked',
+				},
+			],
+		},
+		frogtie: {
+			type: 'typed',
+			name: 'Frogtie',
+			variants: [
+				{
+					id: 'no',
+					name: 'No',
+					default: true,
+				},
+				{
+					id: 'yes',
+					name: 'Yes',
+					properties: {
+						poseLimits: {
+							legs: 'kneeling',
+						},
+					},
 				},
 			],
 		},

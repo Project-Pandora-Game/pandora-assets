@@ -1283,6 +1283,65 @@
 					}
 				]
 			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "hogtie_rope",
+			"priority": "BELOW_ARM_LEFT",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "rope",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "hogtie_rope.png",
+						"condition": [
+							[
+								{
+									"module": "hogtie",
+									"operator": "=",
+									"value": "hogtie_arms"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "hogtie_knot_back",
+			"priority": "BODY_SOLES",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "rope",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "hogtie_knot.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "hogtie",
+									"operator": "=",
+									"value": "hogtie_arms"
+								}
+							]
+						]
+					}
+				]
+			}
 		}
 	]
 }

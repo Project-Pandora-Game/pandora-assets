@@ -645,6 +645,10 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		description: 'An armbinder that is chainable to another item',
 	},
 	// Rope
+	Back_knot_anchor_point: {
+		name: 'Back knot',
+		description: 'A knot on the back to which a connecting rope can be tied',
+	},
 	Rope_waist: {
 		name: 'Rope around waist',
 		description: 'A rope around the waist',
@@ -656,6 +660,10 @@ const ATTRIBUTES_DEFINITION_BASE = {
 	Rope_thighs_anchor_point: {
 		name: 'Thighs rope',
 		description: 'A rope over thighs to which a connecting rope can be tied',
+	},
+	Rope_ankles_anchor_point: {
+		name: 'Ankle rope',
+		description: 'A rope over ankles to which a connecting rope can be tied',
 	},
 } as const satisfies Record<string, AssetRepoAttributeDefinition>;
 
