@@ -6,58 +6,6 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"name": "Tail",
-			"priority": "BELOW_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "tail",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "tail_plug_cat_tail.png",
-						"condition": [
-							[
-								{
-									"module": "tailType",
-									"operator": "=",
-									"value": "cat"
-								}
-							]
-						]
-					},
-					{
-						"image": "tail_plug_bunny_tail.png",
-						"condition": [
-							[
-								{
-									"module": "tailType",
-									"operator": "=",
-									"value": "bunny"
-								}
-							]
-						]
-					},
-					{
-						"image": "tail_plug_puppy_tail.png",
-						"condition": [
-							[
-								{
-									"module": "tailType",
-									"operator": "=",
-									"value": "puppy"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
 			"name": "Stripes",
 			"priority": "BELOW_BODY",
 			"points": "static",
@@ -136,6 +84,58 @@
 									"module": "decoration",
 									"operator": "=",
 									"value": "both"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Tail",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "tail",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "tail_plug_cat_tail.png",
+						"condition": [
+							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "cat"
+								}
+							]
+						]
+					},
+					{
+						"image": "tail_plug_bunny_tail.png",
+						"condition": [
+							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "bunny"
+								}
+							]
+						]
+					},
+					{
+						"image": "tail_plug_puppy_tail.png",
+						"condition": [
+							[
+								{
+									"module": "tailType",
+									"operator": "=",
+									"value": "puppy"
 								}
 							]
 						]
