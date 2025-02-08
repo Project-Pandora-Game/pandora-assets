@@ -8,6 +8,12 @@
 	},
 	"repository": "git@github.com:Project-Pandora-Game/tooling-template.git",
 	"license": "MIT",
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"pandora-common",
+			"sharp"
+		]
+	},
 	"type": "module",
 	"scripts": {
 		"postinstall": "node .hooks/postinstall.cjs",
