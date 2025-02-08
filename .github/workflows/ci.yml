@@ -26,6 +26,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
+      - name: Update npm keys
+        run: |
+          echo COREPACK_INTEGRITY_KEYS="$(curl -s https://registry.npmjs.org/-/npm/v1/keys | jq -c '{npm: .keys}')" | tee -a "$GITHUB_ENV"
       - run: corepack enable
       - run: pnpm install --frozen-lockfile
       - run: pnpm run build --prod
@@ -41,6 +44,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
+      - name: Update npm keys
+        run: |
+          echo COREPACK_INTEGRITY_KEYS="$(curl -s https://registry.npmjs.org/-/npm/v1/keys | jq -c '{npm: .keys}')" | tee -a "$GITHUB_ENV"
       - run: corepack enable
       - run: pnpm install --frozen-lockfile
       - run: pnpm run lint
@@ -54,6 +60,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
+      - name: Update npm keys
+        run: |
+          echo COREPACK_INTEGRITY_KEYS="$(curl -s https://registry.npmjs.org/-/npm/v1/keys | jq -c '{npm: .keys}')" | tee -a "$GITHUB_ENV"
       - run: corepack enable
       - run: pnpm install --frozen-lockfile
       - run: pnpm run type-check:test

@@ -2,7 +2,7 @@
 	"name": "pandora-assets",
 	"version": "0.1.0",
 	"private": true,
-	"packageManager": "pnpm@9.15.4",
+	"packageManager": "pnpm@9.15.5+sha512.845196026aab1cc3f098a0474b64dfbab2afe7a1b4e91dd86895d8e4aa32a7a6d03049e2d0ad770bbe4de023a7122fb68c1a1d6e0d033c7076085f9d5d4800d4",
 	"engines": {
 		"node": ">=22.x"
 	},
@@ -42,15 +42,15 @@
 		"zod": "3.24.1"
 	},
 	"devDependencies": {
-		"@eslint/js": "9.19.0",
-		"@stylistic/eslint-plugin": "3.0.1",
+		"@eslint/js": "9.20.0",
+		"@stylistic/eslint-plugin": "3.1.0",
 		"@types/delaunator": "5.0.3",
 		"@types/express": "4.17.21",
 		"@types/jest": "29.5.14",
 		"@types/json-diff": "1.0.3",
 		"@types/lodash-es": "4.17.12",
-		"@types/node": "22.13.0",
-		"eslint": "9.19.0",
+		"@types/node": "22.13.1",
+		"eslint": "9.20.0",
 		"eslint-import-resolver-typescript": "3.7.0",
 		"eslint-plugin-import": "2.31.0",
 		"jest": "29.7.0",
@@ -59,6 +59,6 @@
 		"tsc-watch": "6.2.1",
 		"tslib": "2.8.1",
 		"typescript": "5.7.3",
-		"typescript-eslint": "8.22.0"
+		"typescript-eslint": "8.23.0"
 	}
 }
