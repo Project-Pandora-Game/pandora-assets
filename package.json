@@ -43,7 +43,7 @@
 	},
 	"devDependencies": {
 		"@eslint/js": "9.19.0",
-		"@stylistic/eslint-plugin": "3.0.1",
+		"@stylistic/eslint-plugin": "3.1.0",
 		"@types/delaunator": "5.0.3",
 		"@types/express": "4.17.21",
 		"@types/jest": "29.5.14",
