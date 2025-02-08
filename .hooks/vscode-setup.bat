@@ -15,6 +15,9 @@ if exist node_modules (
 	echo.
 	echo Running pnpm install...
 
+	rem Do not prompt for user confirmation if downloading new pnpm version
+	set COREPACK_ENABLE_DOWNLOAD_PROMPT=0
+
 	pnpm.cmd install --frozen-lockfile --prefer-offline
 )
 
