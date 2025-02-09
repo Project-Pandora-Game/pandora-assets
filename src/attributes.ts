@@ -330,11 +330,11 @@ const ATTRIBUTES_DEFINITION_BASE = {
 	},
 	Restraint: {
 		name: 'Restraint',
-		description: 'An item that restricts or restraints the character in some form',
+		description: 'An item that restricts or restrains the character in some form',
 	},
 	Restraint_arms: {
 		name: 'Arms restraint',
-		description: 'An item that restricts or restraints arms or hands',
+		description: 'An item that restricts or restrains arms or hands',
 		useAsWardrobeFilter: {
 			tabs: ['worn', 'storage'],
 		},
@@ -348,7 +348,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 	},
 	Restraint_torso: {
 		name: 'Torso restraint',
-		description: 'An item that restraints the body\'s torso',
+		description: 'An item that restrains the body\'s torso',
 		useAsWardrobeFilter: {
 			tabs: ['worn', 'storage'],
 		},
@@ -357,7 +357,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 	},
 	Restraint_legs: {
 		name: 'Leg restraint',
-		description: 'An item that restricts or restraints legs or feet',
+		description: 'An item that restricts or restrains legs or feet',
 		useAsWardrobeFilter: {
 			tabs: ['worn', 'storage'],
 		},
