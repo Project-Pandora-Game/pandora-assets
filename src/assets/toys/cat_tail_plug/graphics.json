@@ -19,22 +19,12 @@
 						"condition": [
 							[
 								{
-									"module": "tailType",
-									"operator": "=",
-									"value": "cat"
-								},
-								{
 									"module": "decoration",
 									"operator": "=",
 									"value": "stripes"
 								}
 							],
 							[
-								{
-									"module": "tailType",
-									"operator": "=",
-									"value": "cat"
-								},
 								{
 									"module": "decoration",
 									"operator": "=",
@@ -64,22 +54,12 @@
 						"condition": [
 							[
 								{
-									"module": "tailType",
-									"operator": "=",
-									"value": "cat"
-								},
-								{
 									"module": "decoration",
 									"operator": "=",
 									"value": "tip"
 								}
 							],
 							[
-								{
-									"module": "tailType",
-									"operator": "=",
-									"value": "cat"
-								},
 								{
 									"module": "decoration",
 									"operator": "=",
@@ -102,45 +82,8 @@
 			"mirror": 0,
 			"colorizationKey": "tail",
 			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "tail_plug_cat_tail.png",
-						"condition": [
-							[
-								{
-									"module": "tailType",
-									"operator": "=",
-									"value": "cat"
-								}
-							]
-						]
-					},
-					{
-						"image": "tail_plug_bunny_tail.png",
-						"condition": [
-							[
-								{
-									"module": "tailType",
-									"operator": "=",
-									"value": "bunny"
-								}
-							]
-						]
-					},
-					{
-						"image": "tail_plug_puppy_tail.png",
-						"condition": [
-							[
-								{
-									"module": "tailType",
-									"operator": "=",
-									"value": "puppy"
-								}
-							]
-						]
-					}
-				]
+				"image": "tail_plug_cat_tail.png",
+				"overrides": []
 			}
 		},
 		{
@@ -161,22 +104,12 @@
 						"condition": [
 							[
 								{
-									"module": "tailType",
-									"operator": "=",
-									"value": "cat"
-								},
-								{
 									"module": "decoration",
 									"operator": "=",
 									"value": "stripes"
 								}
 							],
 							[
-								{
-									"module": "tailType",
-									"operator": "=",
-									"value": "cat"
-								},
 								{
 									"module": "decoration",
 									"operator": "=",
@@ -206,22 +139,12 @@
 						"condition": [
 							[
 								{
-									"module": "tailType",
-									"operator": "=",
-									"value": "cat"
-								},
-								{
 									"module": "decoration",
 									"operator": "=",
 									"value": "tip"
 								}
 							],
 							[
-								{
-									"module": "tailType",
-									"operator": "=",
-									"value": "cat"
-								},
 								{
 									"module": "decoration",
 									"operator": "=",

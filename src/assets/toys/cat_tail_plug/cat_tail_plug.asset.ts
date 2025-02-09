@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Tail Plug',
+	name: 'Cat Tail Plug',
 	size: 'medium',
 	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
@@ -20,48 +20,18 @@ DefineAsset({
 	preview: 'preview.png',
 	attributes: {
 		provides: [
+			'Fantasy',
+			'Fantasy_tail',
 			'Anus_item',
+			'Anus_insert',
+			'Anus_insert_deep',
 			'Toy',
+		],
+		requires: [
+			'!Anus_cover',
 		],
 	},
 	modules: {
-		tailType: {
-			type: 'typed',
-			name: 'Tail Type',
-			variants: [
-				{
-					id: 'bunny',
-					name: 'Bunny Tail',
-					properties: {
-						attributes: {
-							provides: ['Anus_insert', 'Anus_insert_deep'],
-							requires: ['!Anus_cover'],
-						},
-					},
-				},
-				{
-					id: 'cat',
-					name: 'Cat Tail',
-					default: true,
-					properties: {
-						attributes: {
-							provides: ['Anus_insert', 'Anus_insert_deep'],
-							requires: ['!Anus_cover'],
-						},
-					},
-				},
-				{
-					id: 'puppy',
-					name: 'Puppy Tail',
-					properties: {
-						attributes: {
-							provides: ['Anus_insert', 'Anus_insert_deep'],
-							requires: ['!Anus_cover'],
-						},
-					},
-				},
-			],
-		},
 		decoration: {
 			type: 'typed',
 			name: 'Decoration (only for some tails)',

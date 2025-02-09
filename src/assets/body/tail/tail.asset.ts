@@ -1,6 +1,6 @@
 DefineBodypart({
 	name: 'Tail',
-	bodypart: 'tails',
+	bodypart: 'tail',
 	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
 	colorization: {
@@ -20,7 +20,8 @@ DefineBodypart({
 	preview: null,
 	attributes: {
 		provides: [
-			'Tail',
+			'Fantasy',
+			'Fantasy_tail',
 		],
 	},
 	modules: {
