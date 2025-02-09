@@ -21,6 +21,8 @@ DefineAsset({
 	attributes: {
 		provides: [
 			'Clothing',
+			'Restraint',
+			'Restraint_torso',
 			'Underwear',
 			'Underwear_corset',
 		],

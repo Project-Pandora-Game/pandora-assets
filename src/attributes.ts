@@ -346,6 +346,15 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		description: 'A pair of wrist cuffs',
 		parentAttributes: ['Restraint_arms'],
 	},
+	Restraint_torso: {
+		name: 'Torso restraint',
+		description: 'An item that restraints the body\'s torso',
+		useAsWardrobeFilter: {
+			tabs: ['worn', 'storage'],
+		},
+		icon: 'harness',
+		parentAttributes: ['Restraint'],
+	},
 	Restraint_legs: {
 		name: 'Leg restraint',
 		description: 'An item that restricts or restraints legs or feet',

@@ -22,6 +22,8 @@ DefineAsset({
 			'Clothing',
 			'Clothing_upper',
 			'Clothing_lower',
+			'Restraint',
+			'Restraint_torso',
 			'Anus_cover',
 			'Vulva_cover',
 		],

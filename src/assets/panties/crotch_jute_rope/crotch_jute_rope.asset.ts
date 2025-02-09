@@ -11,7 +11,7 @@ DefineAsset({
 	attributes: {
 		provides: [
 			'Restraint',
-			'Restraint_legs',
+			'Restraint_torso',
 			'Chastity',
 		],
 		requires: [

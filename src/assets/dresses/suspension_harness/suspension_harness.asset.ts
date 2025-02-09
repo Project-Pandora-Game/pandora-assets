@@ -13,6 +13,7 @@ DefineAsset({
 	attributes: {
 		provides: [
 			'Restraint',
+			'Restraint_torso',
 		],
 	},
 	modules: {

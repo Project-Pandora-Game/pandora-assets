@@ -30,6 +30,7 @@ DefineAsset({
 			'Restraint',
 			'Restraint_arms',
 			'Restraint_legs',
+			'Restraint_torso',
 			'Hand_item',
 			'Hand_cover',
 			'Anus_cover',
@@ -44,6 +45,7 @@ DefineAsset({
 			'Handheld',
 			'Restraint_arms',
 			'Restraint_legs',
+			'Restraint_torso',
 			'Anus_item',
 			'Vulva_item',
 			'Breast_item',
@@ -56,6 +58,7 @@ DefineAsset({
 			'Handheld',
 			'Restraint_arms',
 			'Restraint_legs',
+			'Restraint_torso',
 		],
 	},
 	modules: {
