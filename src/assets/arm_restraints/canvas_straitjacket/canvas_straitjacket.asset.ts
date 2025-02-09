@@ -19,6 +19,7 @@ DefineAsset({
 		provides: [
 			'Restraint',
 			'Restraint_arms',
+			'Restraint_torso',
 			'Hand_item',
 			'Hand_cover',
 		],

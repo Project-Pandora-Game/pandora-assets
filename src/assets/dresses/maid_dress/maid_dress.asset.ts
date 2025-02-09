@@ -34,6 +34,7 @@ DefineAsset({
 			'Clothing_lower',
 			'Clothing_large',
 			'Restraint',
+			'Restraint_torso',
 		],
 	},
 	modules: {

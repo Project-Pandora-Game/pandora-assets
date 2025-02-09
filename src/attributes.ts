@@ -330,11 +330,11 @@ const ATTRIBUTES_DEFINITION_BASE = {
 	},
 	Restraint: {
 		name: 'Restraint',
-		description: 'An item that restricts or restraints the character in some form',
+		description: 'An item that restricts or restrains the character in some form',
 	},
 	Restraint_arms: {
 		name: 'Arms restraint',
-		description: 'An item that restricts or restraints arms or hands',
+		description: 'An item that restricts or restrains arms or hands',
 		useAsWardrobeFilter: {
 			tabs: ['worn', 'storage'],
 		},
@@ -346,9 +346,18 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		description: 'A pair of wrist cuffs',
 		parentAttributes: ['Restraint_arms'],
 	},
+	Restraint_torso: {
+		name: 'Torso restraint',
+		description: 'An item that restrains the body\'s torso',
+		useAsWardrobeFilter: {
+			tabs: ['worn', 'storage'],
+		},
+		icon: 'harness',
+		parentAttributes: ['Restraint'],
+	},
 	Restraint_legs: {
 		name: 'Leg restraint',
-		description: 'An item that restricts or restraints legs or feet',
+		description: 'An item that restricts or restrains legs or feet',
 		useAsWardrobeFilter: {
 			tabs: ['worn', 'storage'],
 		},
@@ -645,6 +654,10 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		description: 'An armbinder that is chainable to another item',
 	},
 	// Rope
+	Back_knot_anchor_point: {
+		name: 'Back knot',
+		description: 'A knot on the back to which a connecting rope can be tied',
+	},
 	Rope_waist: {
 		name: 'Rope around waist',
 		description: 'A rope around the waist',
@@ -652,10 +665,17 @@ const ATTRIBUTES_DEFINITION_BASE = {
 	Rope_vulva_anchor_point: {
 		name: 'Crotch rope',
 		description: 'A crotch rope to which a connecting rope can be tied',
+		useAsAssetPreference: false,
 	},
 	Rope_thighs_anchor_point: {
 		name: 'Thighs rope',
 		description: 'A rope over thighs to which a connecting rope can be tied',
+		useAsAssetPreference: false,
+	},
+	Rope_ankles_anchor_point: {
+		name: 'Ankle rope',
+		description: 'A rope over ankles to which a connecting rope can be tied',
+		useAsAssetPreference: false,
 	},
 } as const satisfies Record<string, AssetRepoAttributeDefinition>;
 
