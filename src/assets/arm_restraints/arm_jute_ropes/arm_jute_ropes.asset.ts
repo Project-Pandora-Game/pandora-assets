@@ -25,6 +25,11 @@ DefineAsset({
 					id: 'wrists_high',
 					name: 'Box High',
 					properties: {
+						attributes: {
+							provides: [
+								'Back_knot_anchor_point',
+							],
+						},
 						poseLimits: {
 							arms: {
 								position: 'back',
@@ -40,8 +45,10 @@ DefineAsset({
 								upper: 'right',
 							},
 						},
-
 						stateFlags: {
+							provides: [
+								'back_knot',
+							],
 							requires: {
 								wrists_unlinked_to_crotch: 'Box High pose cannot be used together with hands being tied to a crotch rope',
 							},
@@ -53,6 +60,11 @@ DefineAsset({
 					name: 'Box Normal',
 					default: true,
 					properties: {
+						attributes: {
+							provides: [
+								'Back_knot_anchor_point',
+							],
+						},
 						poseLimits: {
 							arms: {
 								position: 'back',
@@ -69,6 +81,9 @@ DefineAsset({
 							},
 						},
 						stateFlags: {
+							provides: [
+								'back_knot',
+							],
 							requires: {
 								wrists_unlinked_to_crotch: 'Box Normal pose cannot be used together with hands being tied to a crotch rope',
 							},
@@ -79,6 +94,11 @@ DefineAsset({
 					id: 'wrists_low',
 					name: 'Box Low',
 					properties: {
+						attributes: {
+							provides: [
+								'Back_knot_anchor_point',
+							],
+						},
 						poseLimits: {
 							arms: {
 								position: 'back',
@@ -93,6 +113,11 @@ DefineAsset({
 							armsOrder: {
 								upper: 'right',
 							},
+						},
+						stateFlags: {
+							provides: [
+								'back_knot',
+							],
 						},
 					},
 				},
@@ -227,6 +252,36 @@ DefineAsset({
 							requires: [
 								'Rope_vulva_anchor_point',
 							],
+						},
+					},
+				},
+			],
+		},
+		hogtie: {
+			type: 'typed',
+			name: 'Hogtie',
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'hogtie_arms',
+					name: 'Hogtied to arms',
+					properties: {
+						attributes: {
+							requires: [
+								'Rope_ankles_anchor_point',
+							],
+						},
+						poseLimits: {
+							legs: 'kneeling',
+						},
+						stateFlags: {
+							requires: {
+								back_knot: 'Legs cannot be hogtied without a knot on back from tied arms',
+							},
 						},
 					},
 				},

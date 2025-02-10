@@ -49,8 +49,8 @@ DefineRoomDeviceAsset({
 							character_slot: {
 								poseLimits: {
 									bones: {
-										leg_r: [[-18, 10]],
-										leg_l: [[-18, 10]],
+										leg_r: [[-32, 10]],
+										leg_l: [[-32, 10]],
 										character_rotation: 0,
 									},
 								},
@@ -71,8 +71,8 @@ DefineRoomDeviceAsset({
 										arm_r: -44,
 										elbow_l: -21,
 										elbow_r: -21,
-										leg_r: -29.8,
-										leg_l: -29.6,
+										leg_r: -30,
+										leg_l: -30,
 										character_rotation: 0,
 									},
 									legs: 'standing',
@@ -104,8 +104,8 @@ DefineRoomDeviceAsset({
 										arm_r: -44,
 										elbow_l: -21,
 										elbow_r: -21,
-										leg_r: -29.8,
-										leg_l: -29.6,
+										leg_r: -30,
+										leg_l: -30,
 										character_rotation: 0,
 									},
 									legs: 'standing',

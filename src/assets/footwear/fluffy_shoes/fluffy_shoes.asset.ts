@@ -50,7 +50,16 @@ DefineAsset({
 					switchMessage: 'SOURCE_CHARACTER put uncomfortable insoles into TARGET_CHARACTER_DYNAMIC_POSSESSIVE fluffy shoes.',
 					properties: {
 						poseLimits: {
-							legs: ['sitting', 'kneeling'],
+							options: [
+								{
+									legs: ['sitting', 'kneeling'],
+								},
+								{
+									bones: {
+										character_rotation: [[-180, -55], [55, 180]],
+									},
+								},
+							],
 						},
 					},
 				},
@@ -60,7 +69,16 @@ DefineAsset({
 					switchMessage: 'SOURCE_CHARACTER put very uncomfortable insoles into TARGET_CHARACTER_DYNAMIC_POSSESSIVE fluffy shoes.',
 					properties: {
 						poseLimits: {
-							legs: 'kneeling',
+							options: [
+								{
+									legs: 'kneeling',
+								},
+								{
+									bones: {
+										character_rotation: [[-180, -55], [55, 180]],
+									},
+								},
+							],
 						},
 					},
 				},
