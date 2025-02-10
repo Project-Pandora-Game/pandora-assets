@@ -82,7 +82,7 @@ DefineAsset({
 		},
 		addOns: {
 			type: 'typed',
-			name: 'Add-Ons (socks only with long variant)',
+			name: 'Add-Ons',
 			variants: [
 				{
 					id: 'none',
@@ -92,6 +92,13 @@ DefineAsset({
 				{
 					id: 'socks',
 					name: 'Socks',
+					properties: {
+						stateFlags: {
+							requires: {
+								long: 'Socks require the long variant of the suit.',
+							},
+						},
+					},
 				},
 				{
 					id: 'gloves',
@@ -114,6 +121,11 @@ DefineAsset({
 								'Hand_item',
 								'Gloves',
 							],
+						},
+						stateFlags: {
+							requires: {
+								long: 'Socks require the long variant of the suit.',
+							},
 						},
 					},
 				},
