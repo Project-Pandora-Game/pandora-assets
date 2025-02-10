@@ -1,23 +1,15 @@
 DefineBodypart({
-	name: 'Tail',
+	name: 'Puppy Tail',
 	bodypart: 'tail',
 	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
 	colorization: {
 		tail: {
 			name: 'Tail',
-			default: '#666666',
-		},
-		stripes: {
-			name: 'Stripes (not for all types)',
-			default: '#020202',
-		},
-		tip: {
-			name: 'Tip (not for all types)',
-			default: '#FFFFFF',
+			default: '#785A2D',
 		},
 	},
-	preview: null,
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Fantasy',
@@ -25,18 +17,10 @@ DefineBodypart({
 		],
 	},
 	modules: {
-		tailType: {
+		thickness: {
 			type: 'typed',
-			name: 'Tail Type',
+			name: 'Tail Thickness',
 			variants: [
-				{
-					id: 'bunny',
-					name: 'Bunny',
-				},
-				{
-					id: 'cat',
-					name: 'Cat',
-				},
 				{
 					id: 'thin',
 					name: 'Thin',
@@ -48,37 +32,7 @@ DefineBodypart({
 				},
 				{
 					id: 'thick',
-					name: 'Thick',
-				},
-			],
-		},
-		withStripes: {
-			type: 'typed',
-			name: 'With Stripes',
-			variants: [
-				{
-					id: 'no',
-					name: 'No',
-					default: true,
-				},
-				{
-					id: 'yes',
-					name: 'Yes',
-				},
-			],
-		},
-		withTip: {
-			type: 'typed',
-			name: 'With Tip',
-			variants: [
-				{
-					id: 'no',
-					name: 'No',
-					default: true,
-				},
-				{
-					id: 'yes',
-					name: 'Yes',
+					name: 'Fluffy',
 				},
 			],
 		},
