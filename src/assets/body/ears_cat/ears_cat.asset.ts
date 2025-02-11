@@ -22,9 +22,11 @@ DefineAsset({
 	preview: 'preview.png',
 	attributes: {
 		provides: [
-			'Clothing',
 			'Fantasy',
 			'Fantasy_ears',
+		],
+		hides: [
+			'Ears',
 		],
 	},
 	modules: {
