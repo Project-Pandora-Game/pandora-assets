@@ -1,13 +1,17 @@
 import { ItemInteractionType } from 'pandora-common';
 
 DefineAsset({
-	name: 'Puppy Ears',
+	name: 'Artificial Puppy Ears',
 	size: 'small',
 	graphics: 'graphics.json',
 	colorization: {
 		ears: {
 			name: 'Ears',
 			default: '#935E29',
+		},
+		headband: {
+			name: 'Headband',
+			default: '#333333',
 		},
 	},
 	// size:200, y:150, centered

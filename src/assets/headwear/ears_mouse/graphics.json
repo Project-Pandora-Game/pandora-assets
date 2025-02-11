@@ -57,6 +57,21 @@
 			"x": 0,
 			"y": 0,
 			"width": 1000,
+			"height": 1525,
+			"name": "Headband",
+			"priority": "ABOVE_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "headband",
+			"image": {
+				"image": "ears_mouse_head_band.png",
+				"overrides": []
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
 			"height": 1500,
 			"name": "Ear Inner",
 			"priority": "ABOVE_BODY",
@@ -77,21 +92,6 @@
 						]
 					}
 				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"name": "Headband",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "headband",
-			"image": {
-				"image": "ears_mouse_head_band.png",
-				"overrides": []
 			}
 		}
 	]
