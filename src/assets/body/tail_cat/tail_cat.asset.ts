@@ -17,7 +17,7 @@ DefineBodypart({
 			default: '#FFFFFF',
 		},
 	},
-	preview: null,
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Fantasy',
@@ -25,21 +25,6 @@ DefineBodypart({
 		],
 	},
 	modules: {
-		withStripes: {
-			type: 'typed',
-			name: 'With Stripes',
-			variants: [
-				{
-					id: 'no',
-					name: 'No',
-					default: true,
-				},
-				{
-					id: 'yes',
-					name: 'Yes',
-				},
-			],
-		},
 		decoration: {
 			type: 'typed',
 			name: 'Tail Decorations',
