@@ -639,6 +639,11 @@
 									"module": "length",
 									"operator": "!=",
 									"value": "long"
+								},
+								{
+									"module": "addOns",
+									"operator": "!=",
+									"value": "gloves"
 								}
 							]
 						]
