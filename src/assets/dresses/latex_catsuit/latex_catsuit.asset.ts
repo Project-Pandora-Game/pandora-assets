@@ -53,6 +53,13 @@ DefineAsset({
 				{
 					id: 'long',
 					name: 'Long',
+					properties: {
+						stateFlags: {
+							provides: [
+								'long_legs',
+							],
+						},
+					},
 				},
 			],
 		},
@@ -97,7 +104,7 @@ DefineAsset({
 					properties: {
 						stateFlags: {
 							requires: {
-								long: 'Socks require the long variant of the suit.',
+								long_legs: 'Socks require the long variant of the suit.',
 							},
 						},
 					},
@@ -126,7 +133,7 @@ DefineAsset({
 						},
 						stateFlags: {
 							requires: {
-								long: 'Socks require the long variant of the suit.',
+								long_legs: 'Socks require the long variant of the suit.',
 							},
 						},
 					},
