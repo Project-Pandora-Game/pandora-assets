@@ -177,11 +177,6 @@ DefineAsset({
 				{
 					id: 'arms_only',
 					name: 'None',
-					properties: {
-						stateFlags: {
-							provides: ['untied_shoulder'],
-						},
-					},
 					default: true,
 				},
 				{

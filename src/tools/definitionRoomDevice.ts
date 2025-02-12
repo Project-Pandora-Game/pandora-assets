@@ -11,7 +11,7 @@ import { ValidateOwnershipData } from './licensing.js';
 import { LoadRoomDeviceColorization } from './load_helpers/color.js';
 import { DefineImageResource, DefinePngResource, IImageResource, ImageBoundingBox, PREVIEW_SIZE } from './resources.js';
 import { ValidateAllModules } from './validation/modules.js';
-import { ValidateAssetProperties } from './validation/properties.js';
+import { ValidateAssetProperties, ValidateAssetPropertiesFinalize } from './validation/properties.js';
 import { RoomDevicePropertiesValidationMetadata, ValidateRoomDeviceProperties } from './validation/roomDeviceProperties.js';
 
 const ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHROUGH_PROPERTIES = [
@@ -145,6 +145,9 @@ async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDef
 		getModuleNames: () => Object.keys(def.modules ?? {}),
 		getBaseAttributes: () => [],
 		getSlotNames: () => Object.keys(def.slots),
+		context: 'base',
+		providedStateFlags: new Set(),
+		requiredStateFlags: new Set(),
 	};
 
 	if (def.preview === undefined) {
@@ -293,6 +296,7 @@ async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDef
 	};
 
 	// Validate all modules
+	propertiesValidationMetadata.context = 'module';
 	ValidateAllModules<RoomDeviceProperties<AssetRepoExtraArgs>, RoomDeviceModuleStaticData, RoomDevicePropertiesValidationMetadata>(logger, '#.modules', {
 		baseAssetDefinition: asset,
 		validateProperties: ValidateRoomDeviceProperties,
@@ -307,6 +311,8 @@ async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDef
 			logger.error(`Module '${module.name}' references unknown slot '${module.staticConfig.slotName}'`);
 		}
 	}
+
+	ValidateAssetPropertiesFinalize(logger, propertiesValidationMetadata);
 
 	// Validate ownership data
 	ValidateOwnershipData(def.ownership, logger, true);

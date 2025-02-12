@@ -10,7 +10,7 @@ import { ValidateOwnershipData } from './licensing.js';
 import { LoadAssetColorization } from './load_helpers/color.js';
 import { DefinePngResource, PREVIEW_SIZE } from './resources.js';
 import { ValidateAllModules } from './validation/modules.js';
-import { PropertiesValidationMetadata, ValidateAssetProperties } from './validation/properties.js';
+import { PropertiesValidationMetadata, ValidateAssetProperties, ValidateAssetPropertiesFinalize } from './validation/properties.js';
 
 const BODYPART_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Properties
@@ -82,17 +82,23 @@ async function GlobalDefineBodypartProcess(def: IntermediateBodypartAssetDefinit
 	const propertiesValidationMetadata: PropertiesValidationMetadata = {
 		getModuleNames: () => Object.keys(def.modules ?? {}),
 		getBaseAttributes: () => (def.attributes?.provides ?? []),
+		context: 'base',
+		providedStateFlags: new Set(),
+		requiredStateFlags: new Set(),
 	};
 
 	// Validate base properties
 	ValidateAssetProperties(logger, '#', propertiesValidationMetadata, def);
 
 	// Validate all modules
+	propertiesValidationMetadata.context = 'module';
 	ValidateAllModules(logger, '#.modules', {
 		baseAssetDefinition: asset,
 		validateProperties: ValidateAssetProperties,
 		propertiesValidationMetadata,
 	}, def.modules);
+
+	ValidateAssetPropertiesFinalize(logger, propertiesValidationMetadata);
 
 	// Validate ownership data
 	ValidateOwnershipData(def.ownership, logger, def.graphics != null);
