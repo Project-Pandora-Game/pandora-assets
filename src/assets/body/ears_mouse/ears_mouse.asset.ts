@@ -1,6 +1,6 @@
-DefineAsset({
+DefineBodypart({
 	name: 'Mouse Ears',
-	size: 'small',
+	bodypart: 'ears',
 	graphics: 'graphics.json',
 	colorization: {
 		outer: {
