@@ -247,7 +247,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Fantasy',
 		description: 'A tail, pair of ears, or similar cosplay/fantasy item',
 		useAsWardrobeFilter: {
-			tabs: ['worn', 'storage'],
+			tabs: ['worn', 'storage', 'body'],
 		},
 		icon: 'fantasy',
 	},
