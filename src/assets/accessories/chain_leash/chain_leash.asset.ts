@@ -8,6 +8,10 @@ DefineAsset({
 			name: 'Chain',
 			default: '#FFFFFF',
 		},
+		handle: {
+			name: 'Handle',
+			default: '#202020',
+		},
 	},
 	preview: 'chain_preview.png',
 	attributes: {
@@ -33,16 +37,24 @@ DefineAsset({
 			variants: [
 				{
 					id: 'hanging',
-					name: 'Chain Leash Hanging',
+					name: 'Leash Hanging',
 					default: true,
 				},
 				{
 					id: 'left',
-					name: 'Chain Leash Held Left',
+					name: 'Leash Held Left',
 				},
 				{
 					id: 'right',
-					name: 'Chain Leash Held Right',
+					name: 'Leash Held Right',
+				},
+				{
+					id: 'left_up',
+					name: 'Leash Held High Left',
+				},
+				{
+					id: 'right_up',
+					name: 'Leash Held High Right',
 				},
 			],
 		},
@@ -61,6 +73,13 @@ DefineAsset({
 				source: 'Self-Made',
 				copyrightHolder: 'ClaudiaMia',
 				editedBy: 'ClaudiaMia',
+				license: 'Pandora-Use-Only-v1-or-later',
+			},
+			{
+				source: 'Self-Made',
+				part: 'New positions',
+				copyrightHolder: 'ClaudiaMia',
+				editedBy: 'Taja, Sandrione',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
