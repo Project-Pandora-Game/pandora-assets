@@ -55,12 +55,6 @@ DefineAsset({
 								elbow_l: 128,
 							},
 						},
-						stateFlags: {
-							provides: [
-								'Restraint',
-								'Restraint_arms',
-							],
-						},
 						effects: {
 							blockHands: true,
 						},
@@ -89,12 +83,6 @@ DefineAsset({
 								elbow_l: 150,
 								elbow_r: 151,
 							},
-						},
-						stateFlags: {
-							provides: [
-								'Restraint',
-								'Restraint_arms',
-							],
 						},
 						effects: {
 							blockHands: true,
