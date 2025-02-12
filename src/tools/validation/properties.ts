@@ -22,6 +22,9 @@ import { Immutable } from 'immer';
 export interface PropertiesValidationMetadata {
 	getModuleNames: () => readonly string[];
 	getBaseAttributes: () => readonly AttributeNames[];
+	context: 'base' | 'module';
+	providedStateFlags: Set<string>;
+	requiredStateFlags: Set<string>;
 }
 
 export function ValidateAssetProperties(
@@ -54,6 +57,14 @@ export function ValidateAssetProperties(
 		}
 	}
 
+	if (properties.stateFlags !== undefined) {
+		if (metadata.context === 'base') {
+			logger.warning(`[State flags] ${context}.stateFlags:\n\tState flags shouldn't be used directly on the asset.`);
+		}
+		properties.stateFlags.provides?.forEach((flag) => metadata.providedStateFlags.add(flag));
+		Object.keys(properties.stateFlags.requires ?? {}).forEach((flag) => metadata.requiredStateFlags.add(flag));
+	}
+
 	for (const moduleName of properties.blockModules ?? []) {
 		if (!metadata.getModuleNames().includes(moduleName)) {
 			logger.warning(`Invalid configuration: ${context}.blockModules:\n\tUnknown module '${moduleName}'`);
@@ -63,6 +74,23 @@ export function ValidateAssetProperties(
 	for (const moduleName of properties.blockSelfModules ?? []) {
 		if (!metadata.getModuleNames().includes(moduleName)) {
 			logger.warning(`Invalid configuration: ${context}.blockSelfModules:\n\tUnknown module '${moduleName}'`);
+		}
+	}
+}
+
+export function ValidateAssetPropertiesFinalize(
+	logger: Logger,
+	metadata: PropertiesValidationMetadata,
+): void {
+	for (const providedStateFlag of metadata.providedStateFlags) {
+		if (!metadata.requiredStateFlags.has(providedStateFlag)) {
+			logger.warning(`[State flags]:\n\tState flag '${providedStateFlag}' is provided in at least one configuration, but never required.`);
+		}
+	}
+
+	for (const requiredStateFlag of metadata.requiredStateFlags) {
+		if (!metadata.providedStateFlags.has(requiredStateFlag)) {
+			logger.warning(`[State flags]:\n\tState flag '${requiredStateFlag}' is required in at least one configuration, but never provided.`);
 		}
 	}
 }
