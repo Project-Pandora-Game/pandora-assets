@@ -6,7 +6,7 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"name": "chain",
+			"name": "chain body",
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -16,6 +16,34 @@
 				"overrides": [
 					{
 						"image": "chain_leash_hanging_chain.png",
+						"condition": [
+							[
+								{
+									"module": "collarConfig",
+									"operator": "=",
+									"value": "hanging"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "handle body",
+			"priority": "ABOVE_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "handle",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "chain_leash_hanging_handle.png",
 						"condition": [
 							[
 								{
@@ -106,18 +134,6 @@
 			"image": {
 				"image": "",
 				"overrides": [
-					{
-						"image": "chain_leash_hanging_handle.png",
-						"condition": [
-							[
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "hanging"
-								}
-							]
-						]
-					},
 					{
 						"image": "chain_leash_stand_stand_left_handle.png",
 						"condition": [
