@@ -1,8 +1,8 @@
 import { ItemInteractionType } from 'pandora-common';
 
-DefineAsset({
+DefineBodypart({
 	name: 'Cat Ears',
-	size: 'small',
+	bodypart: 'ears',
 	graphics: 'graphics.json',
 	colorization: {
 		outer: {
@@ -22,9 +22,11 @@ DefineAsset({
 	preview: 'preview.png',
 	attributes: {
 		provides: [
-			'Clothing',
 			'Fantasy',
 			'Fantasy_ears',
+		],
+		hides: [
+			'Ears',
 		],
 	},
 	modules: {
