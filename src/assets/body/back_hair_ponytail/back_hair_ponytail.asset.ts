@@ -1,3 +1,4 @@
+import { ItemInteractionType } from 'pandora-common';
 import { CreateHairColor } from '../../../helpers/hair_base.js';
 const { colorization, modules } = CreateHairColor(true);
 
@@ -22,6 +23,7 @@ DefineBodypart({
 		direction: {
 			type: 'typed',
 			name: 'Ponytail direction',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
 					id: 'left',
