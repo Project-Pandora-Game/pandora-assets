@@ -38,7 +38,6 @@
 		"express": "4.21.2",
 		"ignore": "7.0.3",
 		"immer": "10.1.1",
-		"jimp": "0.22.12",
 		"json-diff": "1.0.6",
 		"lodash-es": "4.17.21",
 		"pandora-common": "github:Project-Pandora-Game/pandora#master&path:pandora-common",

@@ -1,23 +1,35 @@
-import { GetLogger, SetConsoleOutput, LogLevel, logConfig } from 'pandora-common';
 import * as fs from 'fs';
-import Jimp from 'jimp';
+import { Assert, GetLogger, LogLevel, SetConsoleOutput, logConfig } from 'pandora-common';
+import sharp, { type PngOptions, type Sharp } from 'sharp';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.DEBUG);
 
-function CalculateMaxColors(image: Jimp): [number, number, number] {
+async function CalculateMaxColors(image: Sharp): Promise<[number, number, number]> {
 	let maxR = 1;
 	let maxG = 1;
 	let maxB = 1;
 
-	image.scanQuiet(0, 0, image.bitmap.width, image.bitmap.height, (_x, _y, index) => {
-		// Ignore pixels under certain opacity
-		if (image.bitmap.data[index + 3] < 64)
-			return;
-		maxR = Math.max(maxR, image.bitmap.data[index + 0]);
-		maxG = Math.max(maxG, image.bitmap.data[index + 1]);
-		maxB = Math.max(maxB, image.bitmap.data[index + 2]);
-	});
+	const { data, info } = await image
+		.ensureAlpha(1)
+		.raw()
+		.toBuffer({ resolveWithObject: true });
+
+	Assert(data.length === (info.width * info.height * 4));
+
+	for (let iy = 0; iy < info.height; iy++) {
+		for (let ix = 0; ix < info.width; ix++) {
+			const index = (iy * info.width + ix) * 4;
+
+			// Ignore pixels under certain opacity
+			if (data[index + 3] < 64)
+				continue;
+
+			maxR = Math.max(maxR, data[index + 0]);
+			maxG = Math.max(maxG, data[index + 1]);
+			maxB = Math.max(maxB, data[index + 2]);
+		}
+	}
 
 	return [maxR, maxG, maxB];
 }
@@ -26,30 +38,50 @@ function ColorsToTint(r: number, g: number, b: number): string {
 	return `#${(0x10000 * r + 0x100 * g + b).toString(16).padStart(6, '0').toUpperCase()}`;
 }
 
-function Normalize(image: Jimp, maxR: number, maxG: number, maxB: number): void {
+async function Normalize(image: Sharp, maxR: number, maxG: number, maxB: number): Promise<Sharp> {
 	const multiplierR = 0xFF / maxR;
 	const multiplierG = 0xFF / maxG;
 	const multiplierB = 0xFF / maxB;
 
 	// apply value transformations
-	image.scanQuiet(0, 0, image.bitmap.width, image.bitmap.height, (_x, _y, index) => {
-		// Just skip completely transparent pixels
-		if (image.bitmap.data[index + 3] < 1)
-			return;
-		const r = image.bitmap.data[index + 0] || 1;
-		const g = image.bitmap.data[index + 1] || 1;
-		const b = image.bitmap.data[index + 2] || 1;
+	const { data, info } = await image
+		.ensureAlpha(1)
+		.raw()
+		.toBuffer({ resolveWithObject: true });
 
-		image.bitmap.data[index + 0] = Math.min(255, Math.round(r * multiplierR));
-		image.bitmap.data[index + 1] = Math.min(255, Math.round(g * multiplierG));
-		image.bitmap.data[index + 2] = Math.min(255, Math.round(b * multiplierB));
+	Assert(data.length === (info.width * info.height * 4));
+
+	for (let iy = 0; iy < info.height; iy++) {
+		for (let ix = 0; ix < info.width; ix++) {
+			const index = (iy * info.width + ix) * 4;
+
+			// Just skip completely transparent pixels
+			if (data[index + 3] < 1)
+				continue;
+
+			const r = data[index + 0] || 1;
+			const g = data[index + 1] || 1;
+			const b = data[index + 2] || 1;
+
+			data[index + 0] = Math.min(255, Math.round(r * multiplierR));
+			data[index + 1] = Math.min(255, Math.round(g * multiplierG));
+			data[index + 2] = Math.min(255, Math.round(b * multiplierB));
+		}
+	}
+
+	return sharp(data, {
+		raw: {
+			channels: 4,
+			width: info.width,
+			height: info.height,
+		},
 	});
 }
 
 async function Run() {
 
 	const images: {
-		image: Jimp;
+		image: () => Sharp;
 		originalSize: number;
 		resultPath: string;
 	}[] = [];
@@ -78,7 +110,7 @@ async function Run() {
 			logger.info('Loading:', target);
 
 			const originalSize = fs.statSync(target).size;
-			const image = await Jimp.read(target);
+			const image = () => sharp(target);
 			const resultPath = target; //.replace(/\.[^.]+$|$/, (v) => `.processed${v}`);
 
 			images.push({
@@ -87,7 +119,7 @@ async function Run() {
 				resultPath,
 			});
 
-			const [r, g, b] = CalculateMaxColors(image);
+			const [r, g, b] = await CalculateMaxColors(image());
 			logger.debug(`\tMaxcolor: ${ColorsToTint(r, g, b)}`);
 
 			if (!isForced) {
@@ -114,12 +146,18 @@ async function Run() {
 
 			logger.info('Processing:', resultPath);
 
-			Normalize(image, maxR, maxG, maxB);
+			const normalizedImage = await Normalize(image(), maxR, maxG, maxB);
 
-			image.filterType(Jimp.PNG_FILTER_AUTO);
-			image.deflateStrategy(0);
-			image.deflateLevel(9);
-			await image.writeAsync(resultPath);
+			const PNG_OPTIONS: PngOptions = {
+				compressionLevel: 9,
+			};
+			await normalizedImage
+				.toFormat('png', PNG_OPTIONS)
+				.toFile(resultPath + '.tmp');
+
+			// We save to temporary file as sharp cannot overwrite in-place. Replace old file with new one afterwards.
+			fs.renameSync(resultPath + '.tmp', resultPath);
+
 			const resultSize = fs.statSync(resultPath).size;
 			logger.info(`\tDone; ${originalSize} -> ${resultSize}`);
 
