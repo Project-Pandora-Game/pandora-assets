@@ -36,6 +36,7 @@ DefineAsset({
 			'Anus_cover',
 			'Vulva_cover',
 			'Breast_cover',
+			'Latex',
 		],
 		covers: [
 			'Clothing_upper',

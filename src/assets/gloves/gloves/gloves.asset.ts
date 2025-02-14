@@ -23,6 +23,8 @@ DefineAsset({
 	attributes: {
 		provides: [
 			'Gloves',
+			'Latex',
+			'PetPlay',
 		],
 	},
 	modules: {

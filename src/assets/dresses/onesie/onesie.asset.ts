@@ -30,6 +30,7 @@ DefineAsset({
 			'Clothing_lower',
 			'Clothing_large',
 			'Vulva_cover',
+			'ABLD',
 		],
 		hides: [
 			'Penis',

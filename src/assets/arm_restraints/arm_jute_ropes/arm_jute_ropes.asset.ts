@@ -14,6 +14,7 @@ DefineAsset({
 		provides: [
 			'Restraint',
 			'Restraint_arms',
+			'Shibari',
 		],
 	},
 	modules: {

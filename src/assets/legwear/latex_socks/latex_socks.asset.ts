@@ -19,6 +19,7 @@ DefineAsset({
 		provides: [
 			'Clothing',
 			'Legwear',
+			'Latex',
 		],
 	},
 	ownership: {

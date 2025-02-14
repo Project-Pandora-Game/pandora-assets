@@ -16,7 +16,10 @@ DefineRoomDeviceAsset({
 			default: '#D7AC4D',
 		},
 	},
-	staticAttributes: ['Play_furniture'],
+	staticAttributes: [
+		'Play_furniture',
+		'Shibari',
+	],
 	slots: {
 		under_bamboo: {
 			name: 'Under the Bamboo',

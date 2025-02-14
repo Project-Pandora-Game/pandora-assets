@@ -13,6 +13,7 @@ DefineAsset({
 			'Restraint',
 			'Restraint_torso',
 			'Chastity',
+			'Shibari',
 		],
 		requires: [
 			'!Penis',

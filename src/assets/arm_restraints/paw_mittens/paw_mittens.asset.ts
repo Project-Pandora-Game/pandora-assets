@@ -37,6 +37,7 @@ DefineAsset({
 			'Hand_restricting_cover',
 			'Gloves',
 			'Mittens',
+			'PetPlay',
 		],
 		covers: [
 			'Hand_item',

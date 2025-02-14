@@ -682,6 +682,27 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		description: 'A fix point behind the head to which a gag can be secured',
 		useAsAssetPreference: false,
 	},
+	// Attributes for filtering
+	Latex: {
+		name: 'Latex',
+		description: 'An asset consisting of or possibly providing the look of latex',
+		useAsAssetPreference: false,
+	},
+	ABLD: {
+		name: 'ABDL',
+		description: 'An asset connect to age regression plays',
+		useAsAssetPreference: false,
+	},
+	PetPlay: {
+		name: 'Pet play',
+		description: 'An asset used for pet plays',
+		useAsAssetPreference: false,
+	},
+	Shibari: {
+		name: 'Shibari',
+		description: 'An asset closely connected to the ancient art of Shibari',
+		useAsAssetPreference: false,
+	},
 } as const satisfies Record<string, AssetRepoAttributeDefinition>;
 
 //#endregion

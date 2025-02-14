@@ -16,7 +16,10 @@ DefineRoomDeviceAsset({
 		},
 
 	},
-	staticAttributes: ['Furniture'],
+	staticAttributes: [
+		'Furniture',
+		'PetPlay',
+	],
 	preview: 'preview.png',
 	slots: {
 		character_slot_inside: {

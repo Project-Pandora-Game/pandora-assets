@@ -26,6 +26,7 @@ DefineAsset({
 			'Restraint_torso',
 			'Anus_cover',
 			'Vulva_cover',
+			'Latex',
 		],
 		hides: [
 			'Penis',

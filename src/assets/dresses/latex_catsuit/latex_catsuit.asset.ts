@@ -26,6 +26,7 @@ DefineAsset({
 			'Clothing_large',
 			'Restraint',
 			'Restraint_torso',
+			'Latex',
 		],
 	},
 	modules: {

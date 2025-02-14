@@ -11,7 +11,10 @@ DefineRoomDeviceAsset({
 			default: '#FEF9F3',
 		},
 	},
-	staticAttributes: ['Floor'],
+	staticAttributes: [
+		'Floor',
+		'PetPlay',
+	],
 	preview: 'pet_bowl_preview.png',
 	slots: {},
 	modules: {

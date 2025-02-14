@@ -14,6 +14,7 @@ DefineAsset({
 	attributes: {
 		provides: [
 			'Accessory',
+			'PetPlay',
 		],
 		requires: [
 			'Collar_front_ring',

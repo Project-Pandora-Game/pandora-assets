@@ -17,6 +17,7 @@ DefineAsset({
 			'Clothing_upper',
 			'Clothing_lower',
 			'Clothing_large',
+			'Latex',
 		],
 	},
 	modules: {

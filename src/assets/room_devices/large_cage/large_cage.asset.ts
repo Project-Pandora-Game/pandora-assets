@@ -12,7 +12,10 @@ DefineRoomDeviceAsset({
 			default: '#ffffff',
 		},
 	},
-	staticAttributes: ['Play_furniture'],
+	staticAttributes: [
+		'Play_furniture',
+		'PetPlay',
+	],
 	preview: 'cage_preview.png',
 	slots: {
 		character_slot_left: {

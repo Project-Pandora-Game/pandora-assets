@@ -18,6 +18,7 @@ DefineAsset({
 		provides: [
 			'Restraint',
 			'Restraint_arms',
+			'Shibari',
 		],
 	},
 	poseLimits: {

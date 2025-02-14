@@ -18,6 +18,7 @@ DefineAsset({
 		provides: [
 			'Restraint',
 			'Accessory',
+			'PetPlay',
 		],
 		requires: [
 			'Collar_front_ring',

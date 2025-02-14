@@ -23,6 +23,7 @@ DefineAsset({
 			'Clothing',
 			'Fantasy',
 			'Fantasy_ears',
+			'PetPlay',
 		],
 	},
 	ownership: {

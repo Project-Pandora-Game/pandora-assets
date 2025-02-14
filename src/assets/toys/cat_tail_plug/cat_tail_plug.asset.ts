@@ -26,6 +26,7 @@ DefineAsset({
 			'Anus_insert',
 			'Anus_insert_deep',
 			'Toy',
+			'PetPlay',
 		],
 		requires: [
 			'!Anus_cover',

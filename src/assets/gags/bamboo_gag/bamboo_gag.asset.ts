@@ -22,6 +22,7 @@ DefineAsset({
 			'Mouth_item',
 			'Mouth_insert',
 			'Mouth_cover',
+			'Shibari',
 		],
 		requires: [
 			'Mouth_open_wide',

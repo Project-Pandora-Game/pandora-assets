@@ -25,6 +25,7 @@ DefineAsset({
 			'Restraint_torso',
 			'Underwear',
 			'Underwear_corset',
+			'Latex',
 		],
 	},
 	modules: {
