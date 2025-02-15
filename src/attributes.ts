@@ -247,7 +247,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'Fantasy',
 		description: 'A tail, pair of ears, or similar cosplay/fantasy item',
 		useAsWardrobeFilter: {
-			tabs: ['worn', 'storage'],
+			tabs: ['worn', 'storage', 'body'],
 		},
 		icon: 'fantasy',
 	},
@@ -675,6 +675,11 @@ const ATTRIBUTES_DEFINITION_BASE = {
 	Rope_ankles_anchor_point: {
 		name: 'Ankle rope',
 		description: 'A rope over ankles to which a connecting rope can be tied',
+		useAsAssetPreference: false,
+	},
+	Gag_anchor_point: {
+		name: 'Ankle rope',
+		description: 'A fix point behind the head to which a gag can be secured',
 		useAsAssetPreference: false,
 	},
 } as const satisfies Record<string, AssetRepoAttributeDefinition>;

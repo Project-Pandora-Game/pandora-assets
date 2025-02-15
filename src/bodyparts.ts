@@ -5,6 +5,7 @@ export const BODYPART_ORDER = [
 	'head',
 	'ears',
 	'nose',
+	'tail',
 	'blush',
 	'bodymarks',
 	'eyes',
@@ -46,6 +47,9 @@ const BODYPART_DEFINITIONS: Record<BodypartName, Partial<Omit<AssetBodyPart, 'na
 	},
 	sex: {
 		required: true,
+	},
+	tail: {
+		allowMultiple: true,
 	},
 	backhair: {
 		allowMultiple: true,

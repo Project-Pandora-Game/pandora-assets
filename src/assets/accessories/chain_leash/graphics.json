@@ -6,8 +6,8 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"name": "chain",
-			"priority": "OVERLAY",
+			"name": "chain body",
+			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "chains",
@@ -15,7 +15,7 @@
 				"image": "",
 				"overrides": [
 					{
-						"image": "leash.png",
+						"image": "chain_leash_hanging_chain.png",
 						"condition": [
 							[
 								{
@@ -25,9 +25,53 @@
 								}
 							]
 						]
-					},
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "handle body",
+			"priority": "ABOVE_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "handle",
+			"image": {
+				"image": "",
+				"overrides": [
 					{
-						"image": "leash_left.png",
+						"image": "chain_leash_hanging_handle.png",
+						"condition": [
+							[
+								{
+									"module": "collarConfig",
+									"operator": "=",
+									"value": "hanging"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "chain",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "chains",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "chain_leash_stand_stand_left_chain.png",
 						"condition": [
 							[
 								{
@@ -39,13 +83,101 @@
 						]
 					},
 					{
-						"image": "leash_right.png",
+						"image": "chain_leash_stand_stand_right_chain.png",
 						"condition": [
 							[
 								{
 									"module": "collarConfig",
 									"operator": "=",
 									"value": "right"
+								}
+							]
+						]
+					},
+					{
+						"image": "chain_leash_stand_kneel_left_chain.png",
+						"condition": [
+							[
+								{
+									"module": "collarConfig",
+									"operator": "=",
+									"value": "left_up"
+								}
+							]
+						]
+					},
+					{
+						"image": "chain_leash_stand_kneel_right_chain.png",
+						"condition": [
+							[
+								{
+									"module": "collarConfig",
+									"operator": "=",
+									"value": "right_up"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "handle",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "handle",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "chain_leash_stand_stand_left_handle.png",
+						"condition": [
+							[
+								{
+									"module": "collarConfig",
+									"operator": "=",
+									"value": "left"
+								}
+							]
+						]
+					},
+					{
+						"image": "chain_leash_stand_stand_right_handle.png",
+						"condition": [
+							[
+								{
+									"module": "collarConfig",
+									"operator": "=",
+									"value": "right"
+								}
+							]
+						]
+					},
+					{
+						"image": "chain_leash_stand_kneel_left_handle.png",
+						"condition": [
+							[
+								{
+									"module": "collarConfig",
+									"operator": "=",
+									"value": "left_up"
+								}
+							]
+						]
+					},
+					{
+						"image": "chain_leash_stand_kneel_right_handle.png",
+						"condition": [
+							[
+								{
+									"module": "collarConfig",
+									"operator": "=",
+									"value": "right_up"
 								}
 							]
 						]
