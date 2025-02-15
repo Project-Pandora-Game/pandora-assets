@@ -1,5 +1,3 @@
-import { ItemInteractionType } from 'pandora-common';
-
 DefineBodypart({
 	name: 'Cat Tail',
 	bodypart: 'tail',
@@ -53,7 +51,7 @@ DefineBodypart({
 		horizontal: {
 			type: 'typed',
 			name: 'Horizontal Alignment',
-			interactionType: ItemInteractionType.ACCESS_ONLY,
+			expression: 'Horizontal Tail Direction',
 			variants: [
 				{
 					id: 'left',
@@ -69,7 +67,7 @@ DefineBodypart({
 		vertical: {
 			type: 'typed',
 			name: 'Vertical Alignment',
-			interactionType: ItemInteractionType.ACCESS_ONLY,
+			expression: 'Vertical Tail Direction',
 			variants: [
 				{
 					id: 'up',
