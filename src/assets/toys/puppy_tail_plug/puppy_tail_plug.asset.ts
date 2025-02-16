@@ -19,6 +19,9 @@ DefineAsset({
 			'Anus_insert_deep',
 			'Toy',
 		],
+		requires: [
+			'!Anus_insert',
+		],
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',

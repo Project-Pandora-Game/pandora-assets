@@ -27,6 +27,9 @@ DefineAsset({
 			'Anus_insert_deep',
 			'Toy',
 		],
+		requires: [
+			'!Anus_insert',
+		],
 	},
 	modules: {
 		decoration: {
