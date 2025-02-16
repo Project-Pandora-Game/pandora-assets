@@ -7,7 +7,7 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "front",
-			"priority": "ABOVE_ARM_RIGHT",
+			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "canvas",
@@ -21,8 +21,23 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"name": "straps_front",
+			"name": "front_arms_layer",
 			"priority": "ABOVE_ARM_RIGHT",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "canvas",
+			"image": {
+				"image": "canvas_straitjacket_front_arms.png",
+				"overrides": []
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "straps_front",
+			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "straps",
@@ -60,6 +75,21 @@
 						]
 					}
 				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "straps_front_arms_layer",
+			"priority": "ABOVE_ARM_RIGHT",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "straps",
+			"image": {
+				"image": "canvas_straitjacket_straps_front_arms.png",
+				"overrides": []
 			}
 		},
 		{
