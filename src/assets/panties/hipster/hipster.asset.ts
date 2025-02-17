@@ -8,6 +8,10 @@ DefineAsset({
 			name: 'Panties',
 			default: '#FA5F55',
 		},
+		wetness: {
+			name: 'Stain',
+			default: '#DFDFDF',
+		},
 	},
 	// size:240, y:570, centered
 	preview: 'preview.png',
@@ -61,6 +65,21 @@ DefineAsset({
 							},
 						},
 					},
+				},
+			],
+		},
+		wet: {
+			type: 'typed',
+			name: 'Visible Wet Spot',
+			variants: [
+				{
+					id: 'no',
+					name: 'Dry',
+					default: true,
+				},
+				{
+					id: 'wet',
+					name: 'Telltale Wetness',
 				},
 			],
 		},

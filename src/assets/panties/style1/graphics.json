@@ -85,6 +85,37 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"name": "wetness",
+			"priority": "ABOVE_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "wetness",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "wet_spot.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "wet",
+									"operator": "=",
+									"value": "wet"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"name": "back",
 			"priority": "BELOW_BODY",
 			"points": "body",
