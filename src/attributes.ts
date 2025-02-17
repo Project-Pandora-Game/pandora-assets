@@ -677,6 +677,11 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		description: 'A rope over ankles to which a connecting rope can be tied',
 		useAsAssetPreference: false,
 	},
+	Gag_anchor_point: {
+		name: 'Ankle rope',
+		description: 'A fix point behind the head to which a gag can be secured',
+		useAsAssetPreference: false,
+	},
 } as const satisfies Record<string, AssetRepoAttributeDefinition>;
 
 //#endregion

@@ -32,6 +32,30 @@ DefineAsset({
 			'Mouth_item',
 		],
 	},
+	modules: {
+		attach: {
+			type: 'typed',
+			name: 'Attached to',
+			variants: [
+				{
+					id: 'head',
+					name: 'Head',
+					default: true,
+				},
+				{
+					id: 'pole',
+					name: 'Pole',
+					properties: {
+						attributes: {
+							requires: [
+								'Gag_anchor_point',
+							],
+						},
+					},
+				},
+			],
+		},
+	},
 	effects: {
 		lipsTouch: 6,
 		jawMove: 3,

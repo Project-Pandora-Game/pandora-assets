@@ -39,6 +39,7 @@ DefineBodypart({
 		horizontal: {
 			type: 'typed',
 			name: 'Horizontal Alignment',
+			expression: 'Horizontal Tail Direction',
 			variants: [
 				{
 					id: 'left',
@@ -54,6 +55,7 @@ DefineBodypart({
 		vertical: {
 			type: 'typed',
 			name: 'Vertical Alignment',
+			expression: 'Vertical Tail Direction',
 			variants: [
 				{
 					id: 'up',

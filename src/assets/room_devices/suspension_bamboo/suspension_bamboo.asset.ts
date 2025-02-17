@@ -33,7 +33,7 @@ DefineRoomDeviceAsset({
 		configuration: {
 			type: 'typed',
 			name: 'Setup',
-			staticConfig: { slotName: 'under_bamboo' },
+			staticConfig: { slotName: null },
 			variants: [
 				{
 					id: 'frame',

@@ -192,6 +192,26 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		setup: {
+			type: 'typed',
+			name: 'Mounting setup',
+			staticConfig: { slotName: null },
+			variants: [
+				{
+					id: 'stand',
+					name: 'Stand',
+					default: true,
+				},
+				{
+					id: 'wall',
+					name: 'Wall-mounted',
+				},
+				{
+					id: 'hanging',
+					name: 'Hanging chains',
+				},
+			],
+		},
 		lock: {
 			type: 'lockSlot',
 			name: 'Chain locks',
@@ -210,6 +230,86 @@ DefineRoomDeviceAsset({
 			type: 'sprite',
 			image: 'frame.png',
 			colorizationKey: 'frame',
+			imageOverrides: [
+				{
+					image: '',
+					condition: [
+						[
+							{
+								module: 'setup',
+								operator: '!=',
+								value: 'stand',
+							},
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'sprite',
+			image: 'hanging_chain_1.png',
+			colorizationKey: 'chains',
+			imageOverrides: [
+				{
+					image: '',
+					condition: [
+						[
+							{
+								module: 'setup',
+								operator: '!=',
+								value: 'hanging',
+							},
+						],
+					],
+				},
+			],
+			offsetOverrides: [
+				{
+					offset: { x: 155, y: -1250 },
+					condition: [
+						[
+							{
+								module: 'setup',
+								operator: '=',
+								value: 'hanging',
+							},
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'sprite',
+			image: 'hanging_chain_2.png',
+			colorizationKey: 'chains',
+			imageOverrides: [
+				{
+					image: '',
+					condition: [
+						[
+							{
+								module: 'setup',
+								operator: '!=',
+								value: 'hanging',
+							},
+						],
+					],
+				},
+			],
+			offsetOverrides: [
+				{
+					offset: { x: 715, y: -1250 },
+					condition: [
+						[
+							{
+								module: 'setup',
+								operator: '=',
+								value: 'hanging',
+							},
+						],
+					],
+				},
+			],
 		},
 		{
 			type: 'sprite',

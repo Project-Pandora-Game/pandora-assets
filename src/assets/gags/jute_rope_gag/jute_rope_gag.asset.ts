@@ -91,6 +91,28 @@ DefineAsset({
 				},
 			],
 		},
+		attach: {
+			type: 'typed',
+			name: 'Attached to',
+			variants: [
+				{
+					id: 'head',
+					name: 'Head',
+					default: true,
+				},
+				{
+					id: 'pole',
+					name: 'Pole',
+					properties: {
+						attributes: {
+							requires: [
+								'Gag_anchor_point',
+							],
+						},
+					},
+				},
+			],
+		},
 	},
 	chat: {
 		actionAdd: 'SOURCE_CHARACTER tied a Rope Gag tightly between TARGET_CHARACTER_DYNAMIC_POSSESSIVE teeth.',
