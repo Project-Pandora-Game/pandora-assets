@@ -86,10 +86,10 @@ DefineAsset({
 			fingers: 'fist',
 		},
 		bones: {
-			arm_r: 80,
-			arm_l: 80,
-			elbow_r: 90,
-			elbow_l: 90,
+			arm_r: 75,
+			arm_l: 77,
+			elbow_r: 98,
+			elbow_l: 98,
 		},
 		armsOrder: {
 			upper: 'right',
