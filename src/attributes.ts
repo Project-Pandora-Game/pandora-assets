@@ -653,6 +653,10 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'A chainable armbinder',
 		description: 'An armbinder that is chainable to another item',
 	},
+	Piercing_chainable: {
+		name: 'A chainable piercing',
+		description: 'A piercing that is chainable to another item',
+	},
 	// Rope
 	Back_knot_anchor_point: {
 		name: 'Back knot',
