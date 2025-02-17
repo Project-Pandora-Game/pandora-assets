@@ -23,6 +23,8 @@ DefineAsset({
 		provides: [
 			'Restraint',
 			'Restraint_legs',
+			'Ankle_cuffs',
+			'Ankle_cuffs_chainable',
 		],
 	},
 	modules: {
