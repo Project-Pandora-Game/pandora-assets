@@ -23,6 +23,23 @@ DefineAsset({
 			'!Anus_cover',
 		],
 	},
+	modules: {
+		layering: {
+			type: 'typed',
+			name: 'Layering of the tail',
+			variants: [
+				{
+					id: 'normal',
+					name: 'Normal - according to wardrobe order',
+					default: true,
+				},
+				{
+					id: 'special',
+					name: 'Special - overlaid on top of all items',
+				},
+			],
+		},
+	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
 		credits: ['Taja'],
