@@ -24,15 +24,16 @@ DefineBodypart({
 		],
 	},
 	ownership: {
-		responsibleContributor: 'Livie53 <itsalive53.cr1mson@gmail.com>',
-		credits: ['Livie53'],
-		modificationPolicy: 'Free to change',
-		reusePolicy: 'Free to use',
+		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
+		credits: ['Taja'],
+		modificationPolicy: `Fixes and New uses, otherwise ask`,
+		reusePolicy: 'Ask first',
 		licensing: [
 			{
+				part: 'ears',
 				source: 'Self-Made',
-				copyrightHolder: 'Livie53',
-				editedBy: 'Livie53',
+				copyrightHolder: 'Taja',
+				editedBy: 'Sandrine',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
