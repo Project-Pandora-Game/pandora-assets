@@ -27,18 +27,6 @@
 						]
 					},
 					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "arms",
-									"operator": "=",
-									"value": "arms_high"
-								}
-							]
-						]
-					},
-					{
 						"image": "takate_kote_front_v2_b0.png",
 						"condition": [
 							[
@@ -639,8 +627,8 @@
 			}
 		},
 		{
-			"x": 0,
-			"y": 70,
+			"x": -5,
+			"y": 30,
 			"width": 1000,
 			"height": 1500,
 			"name": "rope_end_high_arms",
@@ -1010,47 +998,6 @@
 									"module": "arms",
 									"operator": "=",
 									"value": "armbinder"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"name": "waist arms high",
-			"priority": "ABOVE_BODY",
-			"points": "custom_arm_restraints_torso_ropes",
-			"pointType": [
-				"body",
-				"bodyarm",
-				"bodyleg"
-			],
-			"mirror": 0,
-			"colorizationKey": "rope",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "waist_front_arms_high.png",
-						"condition": [
-							[
-								{
-									"module": "arms",
-									"operator": "=",
-									"value": "arms_high"
-								},
-								{
-									"module": "wrists",
-									"operator": "!=",
-									"value": "linked"
-								},
-								{
-									"attribute": "!Rope_waist"
 								}
 							]
 						]
