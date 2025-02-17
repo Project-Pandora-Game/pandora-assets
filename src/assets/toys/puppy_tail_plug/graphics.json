@@ -7,7 +7,7 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "Tail",
-			"priority": "BELOW_BODY",
+			"priority": "BACKGROUND",
 			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "tail",
