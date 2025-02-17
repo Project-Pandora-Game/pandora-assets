@@ -86,6 +86,11 @@
 									"module": "wet",
 									"operator": "=",
 									"value": "wet"
+								},
+								{
+									"module": "pantiesState",
+									"operator": "=",
+									"value": "normal"
 								}
 							]
 						]
