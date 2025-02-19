@@ -10,8 +10,6 @@ const LOCK_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Asset definition
 	'name',
 	'chat',
-	'locked',
-	'unlocked',
 	'lockedText',
 	'lockSetup',
 	'preview',
