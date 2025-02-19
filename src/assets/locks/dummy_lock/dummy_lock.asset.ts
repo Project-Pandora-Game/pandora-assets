@@ -1,5 +1,6 @@
 DefineLockAsset({
 	name: 'Dummy Lock',
+	lockSetup: {},
 	chat: {
 		chatDescriptor: 'a dummy lock',
 		actionLock: 'SOURCE_CHARACTER clicked the dummy lock on ITEM_CONTAINER_SIMPLE_DYNAMIC shut.',

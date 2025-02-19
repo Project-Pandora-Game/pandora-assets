@@ -1,5 +1,6 @@
 DefineLockAsset({
 	name: 'Exclusive Lock',
+	lockSetup: {},
 	chat: {
 		chatDescriptor: 'an exclusive lock',
 		actionLock: 'SOURCE_CHARACTER clicked the exclusive lock on ITEM_CONTAINER_SIMPLE_DYNAMIC shut.',
