@@ -203,6 +203,23 @@
 				"image": "",
 				"overrides": [
 					{
+						"image": "waist_upper_open.png",
+						"condition": [
+							[
+								{
+									"module": "waist",
+									"operator": "=",
+									"value": "rope"
+								},
+								{
+									"module": "crotch",
+									"operator": "=",
+									"value": "open"
+								}
+							]
+						]
+					},
+					{
 						"image": "waist_upper.png",
 						"condition": [
 							[
@@ -272,6 +289,23 @@
 			"image": {
 				"image": "",
 				"overrides": [
+					{
+						"image": "waist_upper_open.png",
+						"condition": [
+							[
+								{
+									"module": "waist",
+									"operator": "=",
+									"value": "rope"
+								},
+								{
+									"module": "crotch",
+									"operator": "=",
+									"value": "open"
+								}
+							]
+						]
+					},
 					{
 						"image": "waist_upper.png",
 						"condition": [

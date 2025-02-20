@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Panties (style 1)',
+	name: 'Plain Panties',
 	size: 'small',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
@@ -7,6 +7,10 @@ DefineAsset({
 		panties: {
 			name: 'Panties',
 			default: '#FA5F55',
+		},
+		wetness: {
+			name: 'Stain',
+			default: '#B14848',
 		},
 	},
 	// size:240, y:570, centered
@@ -74,10 +78,25 @@ DefineAsset({
 				},
 			],
 		},
+		wet: {
+			type: 'typed',
+			name: 'Visible Wet Spot',
+			variants: [
+				{
+					id: 'no',
+					name: 'Dry',
+					default: true,
+				},
+				{
+					id: 'wet',
+					name: 'Telltale Wetness',
+				},
+			],
+		},
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-		credits: ['ClaudiaMia', 'Jomshir'],
+		credits: ['ClaudiaMia', 'Jomshir', 'Sandrine'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [

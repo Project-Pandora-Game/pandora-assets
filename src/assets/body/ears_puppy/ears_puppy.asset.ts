@@ -26,7 +26,7 @@ DefineBodypart({
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
-				part: 'catsuit',
+				part: 'ears',
 				source: 'Self-Made',
 				copyrightHolder: 'Taja',
 				editedBy: 'Sandrine',

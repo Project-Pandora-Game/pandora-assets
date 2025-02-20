@@ -7,13 +7,54 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "Tail",
+			"priority": "BACKGROUND",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "tail",
+			"image": {
+				"image": "tail_plug_puppy_tail.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "layering",
+									"operator": "=",
+									"value": "normal"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"name": "Tail",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "tail",
 			"image": {
 				"image": "tail_plug_puppy_tail.png",
-				"overrides": []
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "layering",
+									"operator": "=",
+									"value": "special"
+								}
+							]
+						]
+					}
+				]
 			}
 		}
 	]

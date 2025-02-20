@@ -18,6 +18,14 @@ DefineAsset({
 			'Restraint',
 			'Restraint_mouth',
 			'Mouth_item',
+			'Mouth_cover',
+		],
+		requires: [
+			'!Mouth_tongue_out',
+			'!Mouth_protruding',
+		],
+		covers: [
+			'Mouth_item',
 		],
 	},
 	modules: {
@@ -40,14 +48,6 @@ DefineAsset({
 							coherency: 0,
 							stimulus: 0,
 						},
-						attributes: {
-							covers: [
-								'Mouth_item',
-							],
-							requires: [
-								'!Mouth_protruding',
-							],
-						},
 					},
 				},
 				{
@@ -62,14 +62,6 @@ DefineAsset({
 							throatBreath: 0,
 							coherency: 0,
 							stimulus: 0,
-						},
-						attributes: {
-							covers: [
-								'Mouth_item',
-							],
-							requires: [
-								'!Mouth_protruding',
-							],
 						},
 					},
 				},

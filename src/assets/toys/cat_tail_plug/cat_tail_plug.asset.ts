@@ -32,6 +32,21 @@ DefineAsset({
 		],
 	},
 	modules: {
+		layering: {
+			type: 'typed',
+			name: 'Layering of the tail',
+			variants: [
+				{
+					id: 'normal',
+					name: 'Normal - according to wardrobe order',
+					default: true,
+				},
+				{
+					id: 'special',
+					name: 'Special - overlaid on top of all items',
+				},
+			],
+		},
 		decoration: {
 			type: 'typed',
 			name: 'Decoration (only for some tails)',
