@@ -137,9 +137,9 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		description: 'A mark on the body',
 		icon: 'body',
 	},
-	Body_modification: {
-		name: 'Body modification',
-		description: 'A tattoo or similar modification of the body',
+	Body_tattoo: {
+		name: 'Body tattoo',
+		description: 'A tattoo or similar body modification',
 		useAsWardrobeFilter: {
 			tabs: ['body'],
 		},
@@ -665,19 +665,23 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'A chainable armbinder',
 		description: 'An armbinder that is chainable to another item',
 	},
-	//TODO: Find a better way to deal with various "anchor points". Should be solved soon after final clarififation
 	Piercing_chainable: {
 		name: 'A chainable piercing',
 		description: 'A piercing that is chainable to another item',
+		// Do NOT rely on this attribute for attachment points.
+		// If any asset wants to be connectable to a specific piercing, that connection point should have a new attribute created.
+		// FIXME: Make attributes for piercing-based anchor points and standardize and document their locations
+		parentAttributes: ['Piercing'],
 	},
 	// Rope
-	Back_knot_anchor_point: {
-		name: 'Back knot',
-		description: 'A knot on the back to which a connecting rope can be tied',
-	},
 	Rope_waist: {
 		name: 'Rope around waist',
 		description: 'A rope around the waist',
+	},
+	Back_knot_anchor_point: {
+		name: 'Back knot',
+		description: 'A knot on the back to which a connecting rope can be tied',
+		useAsAssetPreference: false,
 	},
 	Rope_vulva_anchor_point: {
 		name: 'Crotch rope',
