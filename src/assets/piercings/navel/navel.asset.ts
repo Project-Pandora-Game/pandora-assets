@@ -11,8 +11,8 @@ DefineAsset({
 			default: '#BBBBBB',
 		},
 	},
-	// size:150, y:309, centered
-	preview: null, // 'preview.png',
+	// size:150, y:550, centered
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Piercing',
@@ -29,13 +29,21 @@ DefineAsset({
 			interactionType: ItemInteractionType.ADD_REMOVE,
 			variants: [
 				{
+					id: 'no',
+					name: 'None',
+					default: true,
+				},
+				{
 					id: 'vertical',
 					name: 'Vertical Bar',
-					default: true,
 				},
 				{
 					id: 'horizontal',
 					name: 'Horizontal Bar',
+				},
+				{
+					id: 'both',
+					name: 'Both',
 				},
 				{
 					id: 'ring',

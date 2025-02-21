@@ -11,8 +11,8 @@ DefineAsset({
 			default: '#BBBBBB',
 		},
 	},
-	// size:150, y:309, centered
-	preview: null, //'preview.png',
+	// size:100, y:265, centered
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Piercing',
@@ -23,23 +23,43 @@ DefineAsset({
 		]
 	},
 	modules: {
-		piercingType: {
+		studType: {
 			type: 'typed',
 			name: 'Piercing Type',
 			interactionType: ItemInteractionType.ADD_REMOVE,
 			variants: [
 				{
+					id: 'noStud',
+					name: 'None',
+					default: true,
+				},
+				{
 					id: 'left',
 					name: 'Left Stud',
-					default: true,
 				},
 				{
 					id: 'right',
 					name: 'Right Stud',
 				},
 				{
+					id: 'both',
+					name: 'Both Sides',
+				},
+			]
+		},
+		ring: {
+			type: 'typed',
+			name: 'Nose Ring',
+			interactionType: ItemInteractionType.ADD_REMOVE,
+			variants: [
+				{
+					id: 'noRing',
+					name: 'No',
+					default: true,
+				},
+				{
 					id: 'ring',
-					name: 'Nose Ring',
+					name: 'Yes',
 					properties: {
 						attributes: {
 							provides: [

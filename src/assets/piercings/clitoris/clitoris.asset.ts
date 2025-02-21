@@ -11,8 +11,8 @@ DefineAsset({
 			default: '#BBBBBB',
 		},
 	},
-	// size:150, y:309, centered
-	preview: null, // 'preview.png',
+	// size:100, y:700, centered
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Piercing',
@@ -23,23 +23,43 @@ DefineAsset({
 		],
 	},
 	modules: {
-		piercingType: {
+		studType: {
 			type: 'typed',
 			name: 'Piercing Type',
 			interactionType: ItemInteractionType.ADD_REMOVE,
 			variants: [
 				{
+					id: 'none',
+					name: 'None',
+					default: true
+				},
+				{
 					id: 'single',
 					name: 'Single Stud',
-					default: true,
 				},
 				{
 					id: 'double',
 					name: 'Double Stud',
 				},
 				{
+					id: 'both',
+					name: 'Single & Double Stud',
+				},
+			],
+		},
+		ring: {
+			type: 'typed',
+			name: 'Clitoris Ring',
+			interactionType: ItemInteractionType.ADD_REMOVE,
+			variants: [
+				{
+					id: 'none',
+					name: 'No',
+					default: true,
+				},
+				{
 					id: 'ring',
-					name: 'Clitoris Ring',
+					name: 'Yes',
 					properties: {
 						attributes: {
 							provides: [

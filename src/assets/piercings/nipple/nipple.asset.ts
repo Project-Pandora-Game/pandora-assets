@@ -11,8 +11,8 @@ DefineAsset({
 			default: '#BBBBBB',
 		},
 	},
-	// size:150, y:309, centered
-	preview: null, // 'preview.png',
+	// size:200, y:400, centered
+	preview: 'preview.png',
 	modules: {
 		left: {
 			type: 'typed',
