@@ -31,23 +31,6 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		icon: 'ear',
 		useAsAssetPreference: false,
 	},
-	Body_texture: {
-		name: 'Body texture',
-		description: 'A texture for the body',
-		icon: 'body',
-		useAsAssetPreference: false,
-	},
-	Blush: {
-		name: 'Blush',
-		description: 'A facial reddening',
-		icon: 'body',
-		useAsAssetPreference: false,
-	},
-	Bodymark: {
-		name: 'Bodymark',
-		description: 'A mark on the body',
-		icon: 'body',
-	},
 	Hair: {
 		name: 'Hair',
 		description: 'Hair',
@@ -136,6 +119,31 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		description: 'A wide open mouth with its tongue out',
 		parentAttributes: ['Mouth'],
 		useAsAssetPreference: false,
+	},
+	Body_texture: {
+		name: 'Body texture',
+		description: 'A texture for the body',
+		icon: 'body',
+		useAsAssetPreference: false,
+	},
+	Blush: {
+		name: 'Blush',
+		description: 'A facial reddening',
+		icon: 'body',
+		useAsAssetPreference: false,
+	},
+	Bodymark: {
+		name: 'Bodymark',
+		description: 'A mark on the body',
+		icon: 'body',
+	},
+	Body_modification: {
+		name: 'Body modification',
+		description: 'A tattoo or similar modification of the body',
+		useAsWardrobeFilter: {
+			tabs: ['body'],
+		},
+		icon: 'tattoo',
 	},
 	Sex: {
 		name: 'Sex',
@@ -540,10 +548,6 @@ const ATTRIBUTES_DEFINITION_BASE = {
 	},
 	//#endregion
 
-	Piercing: {
-		name: 'Piercing',
-		description: 'A body piercing',
-	},
 	Collar: {
 		name: 'Collar',
 		description: 'A Collar',
@@ -572,6 +576,14 @@ const ATTRIBUTES_DEFINITION_BASE = {
 			tabs: ['worn', 'storage'],
 		},
 		icon: 'handheld',
+	},
+	Piercing: {
+		name: 'Piercing',
+		description: 'A piercing or similar body modification',
+		useAsWardrobeFilter: {
+			tabs: ['worn', 'storage'],
+		},
+		icon: 'piercing',
 	},
 	// Room devices
 	Room_device: {

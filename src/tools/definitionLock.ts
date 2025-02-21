@@ -10,10 +10,8 @@ const LOCK_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Asset definition
 	'name',
 	'chat',
-	'locked',
-	'unlocked',
 	'lockedText',
-	'password',
+	'lockSetup',
 	'preview',
 	'assetPreferenceDefault',
 ] as const satisfies readonly (keyof LockAssetDefinition)[];

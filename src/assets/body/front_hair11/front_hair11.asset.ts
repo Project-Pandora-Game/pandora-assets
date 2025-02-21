@@ -2,7 +2,7 @@ import { CreateHairColor } from '../../../helpers/hair_base.js';
 const { colorization, modules } = CreateHairColor(true);
 
 DefineBodypart({
-	name: 'Front hair 10',
+	name: 'Front hair 11',
 	bodypart: 'fronthair',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
