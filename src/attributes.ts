@@ -665,7 +665,7 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		name: 'A chainable armbinder',
 		description: 'An armbinder that is chainable to another item',
 	},
-	//TODO: Find a better way to deal with various "anchor points". Should be solved 
+	//TODO: Find a better way to deal with various "anchor points". Should be solved soon after final clarififation
 	Piercing_chainable: {
 		name: 'A chainable piercing',
 		description: 'A piercing that is chainable to another item',
