@@ -13,6 +13,14 @@ DefineAsset({
 	},
 	// size:200, y:400, centered
 	preview: 'preview.png',
+	attributes: {
+		provides: [
+			'Piercing',
+		],
+		requires: [
+			'!Breast_cover',
+		],
+	},
 	modules: {
 		left: {
 			type: 'typed',
@@ -27,17 +35,6 @@ DefineAsset({
 				{
 					id: 'double',
 					name: 'Double Stud',
-					properties: {
-						attributes: {
-							provides: [
-								'Piercing',
-								'Accessory',
-							],
-							requires: [
-								'!Breast_cover',
-							],
-						},
-					},
 				},
 				{
 					id: 'ring',
@@ -45,12 +42,7 @@ DefineAsset({
 					properties: {
 						attributes: {
 							provides: [
-								'Piercing',
-								'Accessory',
 								'Piercing_chainable',
-							],
-							requires: [
-								'!Breast_cover',
 							],
 						},
 					},
@@ -70,17 +62,6 @@ DefineAsset({
 				{
 					id: 'double',
 					name: 'Double Stud',
-					properties: {
-						attributes: {
-							provides: [
-								'Piercing',
-								'Accessory',
-							],
-							requires: [
-								'!Breast_cover',
-							],
-						},
-					},
 				},
 				{
 					id: 'ring',
@@ -88,12 +69,7 @@ DefineAsset({
 					properties: {
 						attributes: {
 							provides: [
-								'Piercing',
-								'Accessory',
 								'Piercing_chainable',
-							],
-							requires: [
-								'!Breast_cover',
 							],
 						},
 					},

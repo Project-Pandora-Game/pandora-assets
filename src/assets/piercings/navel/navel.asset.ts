@@ -16,7 +16,6 @@ DefineAsset({
 	attributes: {
 		provides: [
 			'Piercing',
-			'Accessory',
 		],
 		requires: [
 			'!Underwear_corset',

@@ -16,10 +16,11 @@ DefineAsset({
 	attributes: {
 		provides: [
 			'Piercing',
-			'Accessory',
 		],
 		requires: [
 			'!Vulva_cover',
+			'Vulva',
+			'!Penis',
 		],
 	},
 	modules: {

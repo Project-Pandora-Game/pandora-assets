@@ -16,7 +16,6 @@ DefineAsset({
 	attributes: {
 		provides: [
 			'Piercing',
-			'Accessory',
 		],
 		requires: [
 			'!Facewear_mask',
