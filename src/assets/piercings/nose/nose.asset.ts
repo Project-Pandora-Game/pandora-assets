@@ -20,7 +20,7 @@ DefineAsset({
 		],
 		requires: [
 			'!Facewear_mask',
-		]
+		],
 	},
 	modules: {
 		studType: {
@@ -45,7 +45,7 @@ DefineAsset({
 					id: 'both',
 					name: 'Both Sides',
 				},
-			]
+			],
 		},
 		ring: {
 			type: 'typed',

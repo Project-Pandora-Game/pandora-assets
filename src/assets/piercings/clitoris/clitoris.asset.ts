@@ -31,7 +31,7 @@ DefineAsset({
 				{
 					id: 'none',
 					name: 'None',
-					default: true
+					default: true,
 				},
 				{
 					id: 'single',
