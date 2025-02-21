@@ -1265,7 +1265,7 @@
 			"width": 1000,
 			"height": 1500,
 			"name": "frogtie_legs_back",
-			"priority": "BODY_SOLES",
+			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "rope",

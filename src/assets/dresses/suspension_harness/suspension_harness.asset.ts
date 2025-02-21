@@ -31,6 +31,11 @@ DefineAsset({
 								'Back_knot_anchor_point',
 							],
 						},
+						stateFlags: {
+							provides: [
+								'back_knot',
+							],
+						},
 					},
 				},
 				{
@@ -40,6 +45,11 @@ DefineAsset({
 						attributes: {
 							provides: [
 								'Back_knot_anchor_point',
+							],
+						},
+						stateFlags: {
+							provides: [
+								'back_knot',
 							],
 						},
 					},
@@ -52,6 +62,41 @@ DefineAsset({
 							provides: [
 								'Back_knot_anchor_point',
 							],
+						},
+						stateFlags: {
+							provides: [
+								'back_knot',
+							],
+						},
+					},
+				},
+			],
+		},
+		hogtie: {
+			type: 'typed',
+			name: 'Hogtie',
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'hogtie_back',
+					name: 'Hogtied',
+					properties: {
+						attributes: {
+							requires: [
+								'Rope_ankles_anchor_point',
+							],
+						},
+						poseLimits: {
+							legs: 'kneeling',
+						},
+						stateFlags: {
+							requires: {
+								back_knot: 'Legs cannot be hogtied without a knot on back from chest harness',
+							},
 						},
 					},
 				},

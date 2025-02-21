@@ -22,49 +22,55 @@ DefineAsset({
 			name: 'Arms',
 			variants: [
 				{
-					id: 'wrists_high',
-					name: 'Box High',
+					id: 'hands_front',
+					name: 'Wrists Front',
 					properties: {
-						attributes: {
-							provides: [
-								'Back_knot_anchor_point',
-							],
-						},
 						poseLimits: {
 							arms: {
-								position: 'back',
+								position: 'front',
 								rotation: 'forward',
 							},
 							bones: {
 								arm_r: 90,
 								arm_l: 90,
-								elbow_r: 145,
-								elbow_l: 145,
-							},
-							armsOrder: {
-								upper: 'right',
-							},
-						},
-						stateFlags: {
-							provides: [
-								'back_knot',
-							],
-							requires: {
-								wrists_unlinked_to_crotch: 'Box High pose cannot be used together with hands being tied to a crotch rope',
+								elbow_r: 20,
+								elbow_l: 20,
 							},
 						},
 					},
 				},
 				{
-					id: 'wrists_normal',
-					name: 'Box Normal',
-					default: true,
+					id: 'arms_high',
+					name: 'Wrists High',
 					properties: {
-						attributes: {
+						poseLimits: {
+							arms: {
+								position: 'back',
+								rotation: 'forward',
+							},
+							bones: {
+								arm_r: -90,
+								arm_l: -90,
+								elbow_r: -150,
+								elbow_l: -150,
+							},
+							armsOrder: {
+								upper: 'right',
+							},
+						},
+						stateFlags: {
 							provides: [
-								'Back_knot_anchor_point',
+								'uncuffed_hands',
+								'hogtie_anchor_point',
 							],
 						},
+					},
+				},
+				{
+					id: 'hands_back',
+					name: 'Wrists Back',
+					default: true,
+					properties: {
 						poseLimits: {
 							arms: {
 								position: 'back',
@@ -73,20 +79,14 @@ DefineAsset({
 							bones: {
 								arm_r: 90,
 								arm_l: 90,
-								elbow_r: 90,
-								elbow_l: 90,
-							},
-							armsOrder: {
-								upper: 'right',
+								elbow_r: 35,
+								elbow_l: 35,
 							},
 						},
 						stateFlags: {
 							provides: [
-								'back_knot',
+								'hogtie_anchor_point',
 							],
-							requires: {
-								wrists_unlinked_to_crotch: 'Box Normal pose cannot be used together with hands being tied to a crotch rope',
-							},
 						},
 					},
 				},
@@ -116,33 +116,78 @@ DefineAsset({
 						},
 						stateFlags: {
 							provides: [
-								'back_knot',
+								'hogtie_anchor_point',
+								'uncuffed_hands',
 							],
 						},
 					},
 				},
 				{
-					id: 'arms_high',
-					name: 'Wrists Behind Neck',
+					id: 'wrists_normal',
+					name: 'Box Normal',
 					properties: {
+						attributes: {
+							provides: [
+								'Back_knot_anchor_point',
+							],
+						},
 						poseLimits: {
 							arms: {
 								position: 'back',
 								rotation: 'forward',
 							},
 							bones: {
-								arm_r: -90,
-								arm_l: -90,
-								elbow_r: -145,
-								elbow_l: -145,
+								arm_r: 90,
+								arm_l: 90,
+								elbow_r: 90,
+								elbow_l: 90,
 							},
 							armsOrder: {
 								upper: 'right',
 							},
 						},
 						stateFlags: {
+							provides: [
+								'hogtie_anchor_point',
+								'uncuffed_hands',
+							],
 							requires: {
-								uncinched: 'Wrists Behind Neck pose cannot be used together with cinched rope',
+								wrists_unlinked_to_crotch: 'Box Normal pose cannot be used together with hands being tied to a crotch rope',
+							},
+						},
+					},
+				},
+				{
+					id: 'wrists_high',
+					name: 'Box High',
+					properties: {
+						attributes: {
+							provides: [
+								'Back_knot_anchor_point',
+							],
+						},
+						poseLimits: {
+							arms: {
+								position: 'back',
+								rotation: 'forward',
+							},
+							bones: {
+								arm_r: 90,
+								arm_l: 90,
+								elbow_r: 145,
+								elbow_l: 145,
+							},
+							armsOrder: {
+								upper: 'right',
+							},
+						},
+						stateFlags: {
+							provides: [
+								'hogtie_anchor_point',
+								'uncuffed_hands',
+							],
+							requires: {
+								wrists_unlinked_to_crotch: 'Box High pose cannot be used together with hands being tied to a crotch rope',
 							},
 						},
 					},
@@ -166,6 +211,12 @@ DefineAsset({
 								upper: 'right',
 							},
 						},
+						stateFlags: {
+							provides: [
+								'uncuffed_hands',
+								'hogtie_anchor_point',
+							],
+						},
 					},
 				},
 			],
@@ -182,6 +233,13 @@ DefineAsset({
 				{
 					id: 'over_shoulder',
 					name: 'Over Shoulder',
+					properties: {
+						stateFlags: {
+							requires: {
+								uncuffed_hands: 'Over Shoulder pose cannot be used with tied wrists',
+							},
+						},
+					},
 				},
 			],
 		},
@@ -192,11 +250,6 @@ DefineAsset({
 				{
 					id: 'no',
 					name: 'No',
-					properties: {
-						stateFlags: {
-							provides: ['uncinched'],
-						},
-					},
 					default: true,
 				},
 				{
@@ -212,7 +265,6 @@ DefineAsset({
 				{
 					id: 'short',
 					name: 'Short',
-					default: true,
 				},
 				{
 					id: 'normal',
@@ -221,6 +273,7 @@ DefineAsset({
 				{
 					id: 'long',
 					name: 'Long',
+					default: true,
 				},
 			],
 		},
@@ -275,7 +328,7 @@ DefineAsset({
 						},
 						stateFlags: {
 							requires: {
-								back_knot: 'Legs cannot be hogtied without a knot on back from tied arms',
+								hogtie_anchor_point: 'Legs cannot be hogtied without a knot on back or wrist tied back',
 							},
 						},
 					},
