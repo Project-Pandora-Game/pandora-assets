@@ -340,8 +340,8 @@ DefineAsset({
 		blockHands: true,
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER tied Torso Jute Ropes around TARGET_CHARACTER_DYNAMIC_POSSESSIVE body.',
-		actionRemove: 'SOURCE_CHARACTER removed the Torso Jute Ropes from TARGET_CHARACTER_DYNAMIC_POSSESSIVE body.',
+		actionAdd: 'SOURCE_CHARACTER tied ITEM_ASSET_NAME around TARGET_CHARACTER_DYNAMIC_POSSESSIVE body.',
+		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE body.',
 	},
 	ownership: {
 		responsibleContributor: 'Shikifet <shikifet@gmail.com>',

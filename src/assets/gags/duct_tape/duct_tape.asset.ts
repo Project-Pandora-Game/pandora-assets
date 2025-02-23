@@ -69,8 +69,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER sealed TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth with duct tape.',
-		actionRemove: 'SOURCE_CHARACTER removed the tape from TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',
+		actionAdd: 'SOURCE_CHARACTER sealed TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth with ITEM_ASSET_NAME.',
+		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',

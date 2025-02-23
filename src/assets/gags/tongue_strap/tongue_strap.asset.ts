@@ -58,8 +58,8 @@ DefineAsset({
 		stimulus: 3,
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER strapped a Tongue Strap securely around TARGET_CHARACTER_DYNAMIC_POSSESSIVE tongue.',
-		actionRemove: 'SOURCE_CHARACTER loosened and then removed the Tongue Strap from TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',
+		actionAdd: 'SOURCE_CHARACTER strapped ITEM_ASSET_NAME securely around TARGET_CHARACTER_DYNAMIC_POSSESSIVE tongue.',
+		actionRemove: 'SOURCE_CHARACTER loosened and then removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

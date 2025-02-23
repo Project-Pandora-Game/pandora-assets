@@ -58,8 +58,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER strapped a Padded Blindfold around TARGET_CHARACTER_DYNAMIC_POSSESSIVE head, covering the eyes.',
-		actionRemove: 'SOURCE_CHARACTER removed the Padded Blindfold from TARGET_CHARACTER_DYNAMIC_POSSESSIVE head.',
+		actionAdd: 'SOURCE_CHARACTER strapped ITEM_ASSET_NAME around TARGET_CHARACTER_DYNAMIC_POSSESSIVE head, covering the eyes.',
+		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE head.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

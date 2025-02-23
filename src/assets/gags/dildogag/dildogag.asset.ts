@@ -70,8 +70,8 @@ DefineAsset({
 		stimulus: 6,
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER pushed a Dildo Gag into TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth, strapping it tight.',
-		actionRemove: 'SOURCE_CHARACTER loosened and then removed the Dildo Gag from TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',
+		actionAdd: 'SOURCE_CHARACTER pushed ITEM_ASSET_NAME into TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth, strapping it tight.',
+		actionRemove: 'SOURCE_CHARACTER loosened and then removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

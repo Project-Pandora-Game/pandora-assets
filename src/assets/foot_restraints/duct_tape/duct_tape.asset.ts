@@ -155,8 +155,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER wraps duct tape around TARGET_CHARACTER_DYNAMIC_POSSESSIVE legs.',
-		actionRemove: 'SOURCE_CHARACTER pulls the duct tape from TARGET_CHARACTER_DYNAMIC_POSSESSIVE legs.',
+		actionAdd: 'SOURCE_CHARACTER wraps ITEM_ASSET_NAME around TARGET_CHARACTER_DYNAMIC_POSSESSIVE legs.',
+		actionRemove: 'SOURCE_CHARACTER pulls ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE legs.',
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',

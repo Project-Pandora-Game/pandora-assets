@@ -113,8 +113,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER fitted a Posture Collar around TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',
-		actionRemove: 'SOURCE_CHARACTER opened and then removed the Posture Collar from TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',
+		actionAdd: 'SOURCE_CHARACTER fitted ITEM_ASSET_NAME around TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',
+		actionRemove: 'SOURCE_CHARACTER opened and then removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

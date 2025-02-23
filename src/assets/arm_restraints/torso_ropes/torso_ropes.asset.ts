@@ -155,8 +155,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER tied Torso Ropes around TARGET_CHARACTER_DYNAMIC_POSSESSIVE body.',
-		actionRemove: 'SOURCE_CHARACTER removed the Torso Ropes from TARGET_CHARACTER_DYNAMIC_POSSESSIVE body.',
+		actionAdd: 'SOURCE_CHARACTER tied ITEM_ASSET_NAME around TARGET_CHARACTER_DYNAMIC_POSSESSIVE body.',
+		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE body.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

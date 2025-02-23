@@ -58,8 +58,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER fitted and closed a Leather Choker around TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',
-		actionRemove: 'SOURCE_CHARACTER opened and then removed the Leather Choker from TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',
+		actionAdd: 'SOURCE_CHARACTER fitted and closed ITEM_ASSET_NAME around TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',
+		actionRemove: 'SOURCE_CHARACTER opened and then removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

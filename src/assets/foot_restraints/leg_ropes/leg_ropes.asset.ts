@@ -84,8 +84,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER tied Leg Ropes around TARGET_CHARACTER_DYNAMIC_POSSESSIVE legs.',
-		actionRemove: 'SOURCE_CHARACTER removed the Leg Ropes from TARGET_CHARACTER_DYNAMIC_POSSESSIVE legs.',
+		actionAdd: 'SOURCE_CHARACTER tied ITEM_ASSET_NAME around TARGET_CHARACTER_DYNAMIC_POSSESSIVE legs.',
+		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE legs.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
