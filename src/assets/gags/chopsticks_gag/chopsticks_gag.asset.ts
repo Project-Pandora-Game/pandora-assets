@@ -38,8 +38,8 @@ DefineAsset({
 		stimulus: 3,
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER tied some Chopsticks around TARGET_CHARACTER_DYNAMIC_POSSESSIVE tongue.',
-		actionRemove: 'SOURCE_CHARACTER removed the Chopsticks from TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',
+		actionAdd: 'SOURCE_CHARACTER tied some ITEM_ASSET_NAME around TARGET_CHARACTER_DYNAMIC_POSSESSIVE tongue.',
+		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',
 	},
 	ownership: {
 		responsibleContributor: 'Shikifet <shikifet@gmail.com>',

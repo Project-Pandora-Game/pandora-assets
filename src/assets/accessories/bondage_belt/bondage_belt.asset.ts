@@ -40,8 +40,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER fastened a bondage belt around TARGET_CHARACTER_DYNAMIC_POSSESSIVE waist.',
-		actionRemove: 'SOURCE_CHARACTER loosened and slipped off the bondage belt from TARGET_CHARACTER_DYNAMIC_POSSESSIVE waist.',
+		actionAdd: 'SOURCE_CHARACTER fastened ITEM_ASSET_NAME around TARGET_CHARACTER_DYNAMIC_POSSESSIVE waist.',
+		actionRemove: 'SOURCE_CHARACTER loosened and slipped off ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE waist.',
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',

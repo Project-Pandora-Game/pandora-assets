@@ -57,8 +57,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER attached Genital Clamps to TARGET_CHARACTER_DYNAMIC_POSSESSIVE genitals.',
-		actionRemove: 'SOURCE_CHARACTER removed the Genital Clamps from TARGET_CHARACTER_DYNAMIC_POSSESSIVE genitals.',
+		actionAdd: 'SOURCE_CHARACTER attached ITEM_ASSET_NAME to TARGET_CHARACTER_DYNAMIC_POSSESSIVE genitals.',
+		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE genitals.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
