@@ -223,8 +223,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER tied a bamboo stick between TARGET_CHARACTER_DYNAMIC_POSSESSIVE body and arms.',
-		actionRemove: 'SOURCE_CHARACTER removed the bamboo stick from TARGET_CHARACTER_DYNAMIC_POSSESSIVE body.',
+		actionAdd: 'SOURCE_CHARACTER tied ITEM_ASSET_NAME between TARGET_CHARACTER_DYNAMIC_POSSESSIVE body and arms.',
+		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE body.',
 	},
 	ownership: {
 		responsibleContributor: 'Shikifet <shikifet@gmail.com>',

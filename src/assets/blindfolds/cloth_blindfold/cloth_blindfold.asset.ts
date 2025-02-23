@@ -20,8 +20,8 @@ DefineAsset({
 		blind: 7,
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER wrapped a layer of cloth around TARGET_CHARACTER_DYNAMIC_POSSESSIVE head, covering the eyes.',
-		actionRemove: 'SOURCE_CHARACTER unwrapped the cloth blindfold from around TARGET_CHARACTER_DYNAMIC_POSSESSIVE head.',
+		actionAdd: 'SOURCE_CHARACTER wrapped ITEM_ASSET_NAME around TARGET_CHARACTER_DYNAMIC_POSSESSIVE head, covering the eyes.',
+		actionRemove: 'SOURCE_CHARACTER unwrapped ITEM_ASSET_NAME from around TARGET_CHARACTER_DYNAMIC_POSSESSIVE head.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

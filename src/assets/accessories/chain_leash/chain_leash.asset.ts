@@ -60,8 +60,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER hooked and closed a Chain Leash onto TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck ring.',
-		actionRemove: 'SOURCE_CHARACTER opened and then removed the Chain Leash from TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck ring.',
+		actionAdd: 'SOURCE_CHARACTER hooked and closed ITEM_ASSET_NAME onto TARGET_CHARACTER_DYNAMIC_POSSESSIVE ring.',
+		actionRemove: 'SOURCE_CHARACTER opened and then removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE ring.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
@@ -79,7 +79,7 @@ DefineAsset({
 				source: 'Self-Made',
 				part: 'New positions',
 				copyrightHolder: 'ClaudiaMia',
-				editedBy: 'Taja, Sandrione',
+				editedBy: 'Taja, Sandrine',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],

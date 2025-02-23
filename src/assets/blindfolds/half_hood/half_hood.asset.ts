@@ -46,8 +46,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER pulled a Half Hood over TARGET_CHARACTER_DYNAMIC_POSSESSIVE head, covering the head.',
-		actionRemove: 'SOURCE_CHARACTER removed the Half Hood from TARGET_CHARACTER_DYNAMIC_POSSESSIVE head.',
+		actionAdd: 'SOURCE_CHARACTER pulled ITEM_ASSET_NAME over TARGET_CHARACTER_DYNAMIC_POSSESSIVE head, covering the head.',
+		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE head.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

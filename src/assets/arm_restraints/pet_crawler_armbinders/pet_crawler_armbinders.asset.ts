@@ -112,8 +112,8 @@ DefineAsset({
 		blockHands: true,
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER slipped a pet crawler armbinder over each of TARGET_CHARACTER_DYNAMIC_POSSESSIVE arms and tightened them into pet leg position.',
-		actionRemove: 'SOURCE_CHARACTER loosened and then slipped off the pet crawler armbinders from TARGET_CHARACTER_DYNAMIC_POSSESSIVE arms.',
+		actionAdd: 'SOURCE_CHARACTER slipped ITEM_ASSET_NAME over each of TARGET_CHARACTER_DYNAMIC_POSSESSIVE arms and tightened them into pet leg position.',
+		actionRemove: 'SOURCE_CHARACTER loosened and then slipped off ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE arms.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

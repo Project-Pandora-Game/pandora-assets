@@ -72,8 +72,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER put a vibe wand into TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
-		actionRemove: 'SOURCE_CHARACTER removed the vibe wand from TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
+		actionAdd: 'SOURCE_CHARACTER put ITEM_ASSET_NAME into TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
+		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

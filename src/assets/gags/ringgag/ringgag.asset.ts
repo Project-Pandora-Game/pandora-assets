@@ -64,8 +64,8 @@ DefineAsset({
 		stimulus: 2,
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER strapped a Ring Gag tightly between TARGET_CHARACTER_DYNAMIC_POSSESSIVE teeth.',
-		actionRemove: 'SOURCE_CHARACTER loosened and then removed the Ring Gag from TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',
+		actionAdd: 'SOURCE_CHARACTER strapped ITEM_ASSET_NAME tightly between TARGET_CHARACTER_DYNAMIC_POSSESSIVE teeth.',
+		actionRemove: 'SOURCE_CHARACTER loosened and then removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
