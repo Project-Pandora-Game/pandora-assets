@@ -1,11 +1,12 @@
 import { freeze } from 'immer';
-import { cloneDeep, pick } from 'lodash-es';
+import { cloneDeep, omit, pick } from 'lodash-es';
 import { AssetId, GetLogger, LockAssetDefinition } from 'pandora-common';
 import { AssetDatabase } from './assetDatabase.js';
 import { DefaultId } from './context.js';
 import { RegisterImportContextProcess } from './importContext.js';
 import { ValidateOwnershipData } from './licensing.js';
 import { DefinePngResource, PREVIEW_SIZE } from './resources.js';
+import { ValidateAssetChatMessages } from './validation/chatMessages.js';
 
 const LOCK_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Asset definition
@@ -30,6 +31,9 @@ async function GlobalDefineLockAssetProcess(def: IntermediateLockAssetDefinition
 	const id: AssetId = `a/${def.id ?? DefaultId()}` as const;
 
 	const logger = GetLogger(`DefineLockAsset`, `[Asset ${id}]`);
+
+	// Validate properties
+	ValidateAssetChatMessages(logger, '#.chat', omit(def.chat, ['chatDescriptor']));
 
 	// Validate ownership data
 	ValidateOwnershipData(def.ownership, logger, false);
