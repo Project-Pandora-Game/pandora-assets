@@ -32,3 +32,37 @@ DefineBodypart({
 		],
 	},
 });
+
+DefineAsset({
+	id: 'body/front_hair10/wig',
+	name: 'Front wig 10',
+	size: 'small',
+	graphics: 'graphics.json',
+	colorization,
+	preview: 'preview.png',
+	attributes: {
+		provides: [
+			'Wig',
+			'Wig_front',
+		],
+		hides: [
+			'Hair_front',
+		],
+	},
+	modules,
+	ownership: {
+		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
+		credits: ['Taja'],
+		modificationPolicy: `Fixes and New uses, otherwise ask`,
+		reusePolicy: 'Ask first',
+		licensing: [
+			{
+				part: 'hairstyle',
+				source: 'Self-Made',
+				copyrightHolder: 'Taja',
+				editedBy: 'Sandrine',
+				license: 'Pandora-Use-Only-v1-or-later',
+			},
+		],
+	},
+});

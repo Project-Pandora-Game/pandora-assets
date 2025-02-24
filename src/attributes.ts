@@ -324,6 +324,24 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		description: 'A hood',
 		parentAttributes: ['Headgear'],
 	},
+	Wig: {
+		name: 'Wig',
+		description: 'Front and back wigs that hide the natural hair',
+		useAsWardrobeFilter: {
+			tabs: ['worn', 'storage'],
+		},
+		icon: 'hair_front',
+	},
+	Wig_front: {
+		name: 'Front wig',
+		description: 'A wig part on the front of the head',
+		parentAttributes: ['Wig'],
+	},
+	Wig_back: {
+		name: 'Back wig',
+		description: 'A wig part on the back of the head',
+		parentAttributes: ['Wig'],
+	},
 	Gloves: {
 		name: 'Gloves',
 		description: 'A pair of gloves',

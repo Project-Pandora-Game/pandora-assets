@@ -17,6 +17,7 @@ DefineAsset({
 		],
 		hides: [
 			'Hair',
+			'Wig',
 			'Ears',
 			'Fantasy_ears',
 		],
