@@ -71,7 +71,6 @@
 			"label": "Asset development server",
 			"type": "npm",
 			"script": "dev:inspect",
-			"hide": true,
 			"isBackground": true,
 			"promptOnClose": false,
 			"icon": {
