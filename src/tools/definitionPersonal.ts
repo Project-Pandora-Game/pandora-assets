@@ -1,3 +1,4 @@
+import { freeze } from 'immer';
 import { cloneDeep, pick } from 'lodash-es';
 import { AssetId, GetLogger, PersonalAssetDefinition } from 'pandora-common';
 import { join } from 'path';
@@ -40,8 +41,10 @@ const PERSONAL_DEFINITION_FALLTHROUGH_PROPERTIES = [
 
 export type PersonalAssetDefinitionFallthroughProperties = (typeof PERSONAL_DEFINITION_FALLTHROUGH_PROPERTIES)[number] & string;
 
-export function GlobalDefineAsset(def: IntermediatePersonalAssetDefinition): void {
+export function GlobalDefineAsset(def: IntermediatePersonalAssetDefinition): IntermediatePersonalAssetDefinition {
+	freeze(def, true);
 	RegisterImportContextProcess(() => GlobalDefineAssetProcess(cloneDeep(def)));
+	return def;
 }
 
 async function GlobalDefineAssetProcess(def: IntermediatePersonalAssetDefinition): Promise<void> {

@@ -5,10 +5,30 @@ type LayerMirror = import('pandora-common').LayerMirror;
 type AllBones = import('./bones.ts').AllBones;
 
 // Globals available to all assets
-declare function DefineAsset(def: IntermediatePersonalAssetDefinition): void;
-declare function DefineBodypart(def: IntermediateBodypartAssetDefinition): void;
-declare function DefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinition): void;
-declare function DefineLockAsset(def: IntermediateLockAssetDefinition): void;
+/**
+ * Define a new standard asset.
+ * @param def - The asset definition
+ * @returns The asset definition, for potential chaining
+ */
+declare function DefineAsset(def: IntermediatePersonalAssetDefinition): IntermediatePersonalAssetDefinition;
+/**
+ * Define a new bodypart asset.
+ * @param def - The asset definition
+ * @returns The asset definition, for potential chaining
+ */
+declare function DefineBodypart(def: IntermediateBodypartAssetDefinition): IntermediateBodypartAssetDefinition;
+/**
+ * Define a new room device asset.
+ * @param def - The asset definition
+ * @returns The asset definition, for potential chaining
+ */
+declare function DefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinition): IntermediateRoomDeviceDefinition;
+/**
+ * Define a new lock asset.
+ * @param def - The asset definition
+ * @returns The asset definition, for potential chaining
+ */
+declare function DefineLockAsset(def: IntermediateLockAssetDefinition): IntermediateLockAssetDefinition;
 
 interface AssetRepoExtraArgs {
 	bones: AllBones;

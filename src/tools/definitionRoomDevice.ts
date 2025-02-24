@@ -1,3 +1,4 @@
+import { freeze } from 'immer';
 import { cloneDeep, pick } from 'lodash-es';
 import { Assert, AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition } from 'pandora-common';
 import { join } from 'path';
@@ -125,8 +126,10 @@ async function DefineRoomDeviceWearablePart(
 	return id;
 }
 
-export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinition): void {
+export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinition): IntermediateRoomDeviceDefinition {
+	freeze(def, true);
 	RegisterImportContextProcess(() => GlobalDefineRoomDeviceAssetProcess(cloneDeep(def)));
+	return def;
 }
 
 async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDefinition): Promise<void> {

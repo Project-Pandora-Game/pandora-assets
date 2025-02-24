@@ -1,3 +1,4 @@
+import { freeze } from 'immer';
 import { cloneDeep, pick } from 'lodash-es';
 import { AssetId, GetLogger, LockAssetDefinition } from 'pandora-common';
 import { AssetDatabase } from './assetDatabase.js';
@@ -18,8 +19,10 @@ const LOCK_DEFINITION_FALLTHROUGH_PROPERTIES = [
 
 export type LockAssetDefinitionFallthroughProperties = typeof LOCK_DEFINITION_FALLTHROUGH_PROPERTIES[number];
 
-export function GlobalDefineLockAsset(def: IntermediateLockAssetDefinition): void {
+export function GlobalDefineLockAsset(def: IntermediateLockAssetDefinition): IntermediateLockAssetDefinition {
+	freeze(def, true);
 	RegisterImportContextProcess(() => GlobalDefineLockAssetProcess(cloneDeep(def)));
+	return def;
 }
 
 // eslint-disable-next-line @typescript-eslint/require-await

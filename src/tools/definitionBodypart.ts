@@ -1,3 +1,4 @@
+import { freeze } from 'immer';
 import { cloneDeep, pick } from 'lodash-es';
 import { AssetId, BodypartAssetDefinition, GetLogger } from 'pandora-common';
 import { join } from 'path';
@@ -38,8 +39,10 @@ const BODYPART_DEFINITION_FALLTHROUGH_PROPERTIES = [
 
 export type BodypartDefinitionFallthroughProperties = (typeof BODYPART_DEFINITION_FALLTHROUGH_PROPERTIES)[number] & string;
 
-export function GlobalDefineBodypart(def: IntermediateBodypartAssetDefinition): void {
+export function GlobalDefineBodypart(def: IntermediateBodypartAssetDefinition): IntermediateBodypartAssetDefinition {
+	freeze(def, true);
 	RegisterImportContextProcess(() => GlobalDefineBodypartProcess(cloneDeep(def)));
+	return def;
 }
 
 async function GlobalDefineBodypartProcess(def: IntermediateBodypartAssetDefinition): Promise<void> {
