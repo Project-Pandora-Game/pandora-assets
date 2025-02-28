@@ -1,5 +1,5 @@
 import { freeze } from 'immer';
-import { cloneDeep, pick } from 'lodash-es';
+import { cloneDeep, omit, pick } from 'lodash-es';
 import { AssetId, BodypartAssetDefinition, GetLogger } from 'pandora-common';
 import { join } from 'path';
 import { AssetDatabase } from './assetDatabase.js';
@@ -10,6 +10,7 @@ import { RegisterImportContextProcess } from './importContext.js';
 import { ValidateOwnershipData } from './licensing.js';
 import { LoadAssetColorization } from './load_helpers/color.js';
 import { DefinePngResource, PREVIEW_SIZE } from './resources.js';
+import { ValidateAssetChatMessages } from './validation/chatMessages.js';
 import { ValidateAllModules } from './validation/modules.js';
 import { PropertiesValidationMetadata, ValidateAssetProperties, ValidateAssetPropertiesFinalize } from './validation/properties.js';
 
@@ -92,6 +93,7 @@ async function GlobalDefineBodypartProcess(def: IntermediateBodypartAssetDefinit
 
 	// Validate base properties
 	ValidateAssetProperties(logger, '#', propertiesValidationMetadata, def);
+	ValidateAssetChatMessages(logger, '#.chat', omit(def.chat, ['chatDescriptor']));
 
 	// Validate all modules
 	propertiesValidationMetadata.context = 'module';

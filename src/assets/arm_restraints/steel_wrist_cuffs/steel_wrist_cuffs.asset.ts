@@ -165,8 +165,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER fastened the steel cuffs around TARGET_CHARACTER_DYNAMIC_POSSESSIVE wrists.',
-		actionRemove: 'SOURCE_CHARACTER opened and slipped off the steel cuffs from TARGET_CHARACTER_DYNAMIC_POSSESSIVE wrists.',
+		actionAdd: 'SOURCE_CHARACTER fastened ITEM_ASSET_NAME around TARGET_CHARACTER_DYNAMIC_POSSESSIVE wrists.',
+		actionRemove: 'SOURCE_CHARACTER opened and slipped off ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE wrists.',
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',

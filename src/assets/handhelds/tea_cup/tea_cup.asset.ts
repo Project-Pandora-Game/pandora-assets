@@ -115,8 +115,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER put a delicate cup into TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
-		actionRemove: 'SOURCE_CHARACTER removed the delicate cup from TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
+		actionAdd: 'SOURCE_CHARACTER put ITEM_ASSET_NAME into TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
+		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE hand.',
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',

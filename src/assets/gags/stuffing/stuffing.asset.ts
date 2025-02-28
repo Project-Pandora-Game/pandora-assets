@@ -33,8 +33,8 @@ DefineAsset({
 		stimulus: 1,
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER stuffed TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',
-		actionRemove: 'SOURCE_CHARACTER removed the stuffing in TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',
+		actionAdd: 'SOURCE_CHARACTER used ITEM_ASSET_NAME on TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',
+		actionRemove: 'SOURCE_CHARACTER removed the ITEM_ASSET_NAME in TARGET_CHARACTER_DYNAMIC_POSSESSIVE mouth.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

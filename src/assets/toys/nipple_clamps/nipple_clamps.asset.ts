@@ -62,8 +62,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER attached Nipple Clamps to both of TARGET_CHARACTER_DYNAMIC_POSSESSIVE nipples.',
-		actionRemove: 'SOURCE_CHARACTER removed the Nipple Clamps from TARGET_CHARACTER_DYNAMIC_POSSESSIVE nipples.',
+		actionAdd: 'SOURCE_CHARACTER attached ITEM_ASSET_NAME to both of TARGET_CHARACTER_DYNAMIC_POSSESSIVE nipples.',
+		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE nipples.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

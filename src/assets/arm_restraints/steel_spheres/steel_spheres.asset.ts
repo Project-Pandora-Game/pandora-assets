@@ -51,8 +51,8 @@ DefineAsset({
 		blockHands: true,
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER encases TARGET_CHARACTER_DYNAMIC_POSSESSIVE hands with shiny steel spheres.',
-		actionRemove: 'SOURCE_CHARACTER unscrews and then removes the spheres from TARGET_CHARACTER_DYNAMIC_POSSESSIVE hands.',
+		actionAdd: 'SOURCE_CHARACTER encases TARGET_CHARACTER_DYNAMIC_POSSESSIVE hands with ITEM_ASSET_NAME.',
+		actionRemove: 'SOURCE_CHARACTER unscrews and then removes ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE hands.',
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',

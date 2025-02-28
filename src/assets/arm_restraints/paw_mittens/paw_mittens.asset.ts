@@ -61,8 +61,8 @@ DefineAsset({
 		blockHands: true,
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER slipped paw mittens over TARGET_CHARACTER_DYNAMIC_POSSESSIVE hands and tightens them.',
-		actionRemove: 'SOURCE_CHARACTER loosened and then slipped off the paw mittens from TARGET_CHARACTER_DYNAMIC_POSSESSIVE hands.',
+		actionAdd: 'SOURCE_CHARACTER slipped ITEM_ASSET_NAME over TARGET_CHARACTER_DYNAMIC_POSSESSIVE hands and tightens them.',
+		actionRemove: 'SOURCE_CHARACTER loosened and then slipped off ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE hands.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

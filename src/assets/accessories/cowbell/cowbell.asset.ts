@@ -29,8 +29,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER attached a cowbell onto TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck ring.',
-		actionRemove: 'SOURCE_CHARACTER removed the cowbell from TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck ring.',
+		actionAdd: 'SOURCE_CHARACTER attached ITEM_ASSET_NAME onto TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck ring.',
+		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck ring.',
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',

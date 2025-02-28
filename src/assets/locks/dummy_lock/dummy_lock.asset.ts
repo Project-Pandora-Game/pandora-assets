@@ -3,8 +3,8 @@ DefineLockAsset({
 	lockSetup: {},
 	chat: {
 		chatDescriptor: 'a dummy lock',
-		actionLock: 'SOURCE_CHARACTER clicked the dummy lock on ITEM_CONTAINER_SIMPLE_DYNAMIC shut.',
-		actionUnlock: 'SOURCE_CHARACTER unlocked the dummy lock on ITEM_CONTAINER_SIMPLE_DYNAMIC.',
+		actionLock: 'SOURCE_CHARACTER clicked ITEM_ASSET_NAME on ITEM_CONTAINER_SIMPLE_DYNAMIC shut.',
+		actionUnlock: 'SOURCE_CHARACTER unlocked ITEM_ASSET_NAME on ITEM_CONTAINER_SIMPLE_DYNAMIC.',
 	},
 	ownership: {
 		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',

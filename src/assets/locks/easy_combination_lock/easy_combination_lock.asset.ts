@@ -9,8 +9,8 @@ DefineLockAsset({
 	},
 	chat: {
 		chatDescriptor: 'an easy combination lock',
-		actionLock: 'SOURCE_CHARACTER clicked the easy combination lock on ITEM_CONTAINER_SIMPLE_DYNAMIC shut.',
-		actionUnlock: 'SOURCE_CHARACTER unlocked the easy combination lock on ITEM_CONTAINER_SIMPLE_DYNAMIC.',
+		actionLock: 'SOURCE_CHARACTER clicked ITEM_ASSET_NAME on ITEM_CONTAINER_SIMPLE_DYNAMIC shut.',
+		actionUnlock: 'SOURCE_CHARACTER unlocked ITEM_ASSET_NAME on ITEM_CONTAINER_SIMPLE_DYNAMIC.',
 	},
 	ownership: {
 		responsibleContributor: 'Sekkmer <sekkmer@gmail.com>',

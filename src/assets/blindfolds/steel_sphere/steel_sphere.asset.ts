@@ -92,8 +92,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER closes a Steel Sphere around TARGET_CHARACTER_DYNAMIC_POSSESSIVE head, covering it completely.',
-		actionRemove: 'SOURCE_CHARACTER unscrews the Steel Sphere from TARGET_CHARACTER_DYNAMIC_POSSESSIVE head.',
+		actionAdd: 'SOURCE_CHARACTER closes ITEM_ASSET_NAME around TARGET_CHARACTER_DYNAMIC_POSSESSIVE head, covering it completely.',
+		actionRemove: 'SOURCE_CHARACTER removes ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE head.',
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',

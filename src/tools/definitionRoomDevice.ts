@@ -1,5 +1,5 @@
 import { freeze } from 'immer';
-import { cloneDeep, pick } from 'lodash-es';
+import { cloneDeep, omit, pick } from 'lodash-es';
 import { Assert, AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition } from 'pandora-common';
 import { join } from 'path';
 import { OPTIMIZE_TEXTURES } from '../constants.js';
@@ -11,6 +11,7 @@ import { RegisterImportContextProcess } from './importContext.js';
 import { ValidateOwnershipData } from './licensing.js';
 import { LoadRoomDeviceColorization } from './load_helpers/color.js';
 import { DefineImageResource, DefinePngResource, IImageResource, ImageBoundingBox, PREVIEW_SIZE } from './resources.js';
+import { ValidateAssetChatMessages } from './validation/chatMessages.js';
 import { ValidateAllModules } from './validation/modules.js';
 import { ValidateAssetProperties, ValidateAssetPropertiesFinalize } from './validation/properties.js';
 import { RoomDevicePropertiesValidationMetadata, ValidateRoomDeviceProperties } from './validation/roomDeviceProperties.js';
@@ -91,6 +92,7 @@ async function DefineRoomDeviceWearablePart(
 	};
 
 	ValidateAssetProperties(logger, '#', propertiesValidationMetadata, def);
+	ValidateAssetChatMessages(logger, '#.chat', omit(def.chat, ['chatDescriptor']));
 
 	if (!definitionValid) {
 		logger.error('Invalid asset definition, asset skipped');
@@ -297,6 +299,9 @@ async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDef
 		preview,
 		slots,
 	};
+
+	// Validate properties
+	ValidateAssetChatMessages(logger, '#.chat', omit(def.chat, ['chatDescriptor']));
 
 	// Validate all modules
 	propertiesValidationMetadata.context = 'module';
