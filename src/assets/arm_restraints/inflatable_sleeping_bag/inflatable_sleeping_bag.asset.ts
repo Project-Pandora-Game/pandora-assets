@@ -42,6 +42,7 @@ DefineAsset({
 			'Clothing_lower',
 			'Clothing_large',
 			'Hand_item',
+			'Hand_cover',
 			'Handheld',
 			'Restraint_arms',
 			'Restraint_legs',

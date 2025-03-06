@@ -115,8 +115,12 @@ DefineAsset({
 					properties: {
 						attributes: {
 							provides: [
-								'Hand_item',
+								'Hand_cover',
 								'Gloves',
+							],
+							covers: [
+								'Hand_item',
+								'Hand_cover',
 							],
 						},
 					},
@@ -127,8 +131,12 @@ DefineAsset({
 					properties: {
 						attributes: {
 							provides: [
-								'Hand_item',
+								'Hand_cover',
 								'Gloves',
+							],
+							covers: [
+								'Hand_item',
+								'Hand_cover',
 							],
 						},
 						stateFlags: {

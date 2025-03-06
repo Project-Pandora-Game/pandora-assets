@@ -23,6 +23,11 @@ DefineAsset({
 	attributes: {
 		provides: [
 			'Gloves',
+			'Hand_cover',
+		],
+		covers: [
+			'Hand_item',
+			'Hand_cover',
 		],
 	},
 	modules: {

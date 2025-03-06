@@ -27,6 +27,7 @@ DefineAsset({
 		],
 		covers: [
 			'Hand_item',
+			'Hand_cover',
 			'Handheld',
 		],
 		hides: [
