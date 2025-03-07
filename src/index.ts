@@ -174,6 +174,8 @@ async function Run() {
 		}
 	}
 
+	const characterModifierTemplates = LoadCharacterModifierTemplates();
+
 	if (!CheckErrors(false))
 		return;
 
@@ -192,7 +194,7 @@ async function Run() {
 		graphicsId: graphicsFile.hash,
 		attributes,
 		randomization: APPEARANCE_RANDOMIZATION_CONFIG,
-		characterModifierTemplates: LoadCharacterModifierTemplates(),
+		characterModifierTemplates,
 	};
 	// Check bodyparts are valid
 	ValidateBodyparts(definitions);

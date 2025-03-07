@@ -2,6 +2,7 @@ import { diffString } from 'json-diff';
 import { isEqual } from 'lodash-es';
 import {
 	Assert,
+	AssetIdSchema,
 	CHARACTER_MODIFIER_TYPE_DEFINITION,
 	CharacterModifierNameSchema,
 	GetLogger,
@@ -12,6 +13,7 @@ import {
 	type CharacterModifierType,
 	type Satisfies,
 } from 'pandora-common';
+import { AssetDatabase } from './tools/assetDatabase.js';
 
 //#region Character modifier template definitions
 
@@ -135,12 +137,26 @@ export function LoadCharacterModifierTemplates(): AssetSpecificCharacterModifier
 			const parsedConfig = modifierDefinition.configSchema.parse(template.config);
 			if (!isEqual(template.config, parsedConfig)) {
 				const diff = diffString(template.config, parsedConfig, { color: false });
-				logger.warning(`Template '${template.name}' for modifier type ${k} has invalid configuration. Following changes would happen at creation:\n`, diff);
+				logger.warning(`Template '${template.name}' for modifier type ${k} has invalid configuration.\n\tFollowing changes would happen at creation:\n`, diff);
 			}
 
 			if (template.conditions.length > 0) {
 				if (template.conditions[0].logic !== 'or') {
-					logger.warning(`Template '${template.name}' for modifier type ${k}: First condition should always specify logic as 'or'.`);
+					logger.warning(`Template '${template.name}' for modifier type ${k}:\n\tFirst condition should always specify logic as 'or'.`);
+				}
+			}
+
+			for (const { condition } of template.conditions) {
+				if (condition.type === 'hasItemOfAsset') {
+					const parsedId = AssetIdSchema.safeParse(condition.assetId);
+					if (!parsedId.success) {
+						logger.warning(`Template '${template.name}' for modifier type ${k}:\n\t'${condition.assetId}' is not a valid asset id:\n`, parsedId.error.toString());
+					} else {
+						const asset = AssetDatabase.assets.get(parsedId.data);
+						if (asset == null) {
+							logger.warning(`Template '${template.name}' for modifier type ${k}:\n\tUnknown asset '${condition.assetId}'`);
+						}
+					}
 				}
 			}
 		}
