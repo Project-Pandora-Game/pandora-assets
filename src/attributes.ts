@@ -603,6 +603,10 @@ const ATTRIBUTES_DEFINITION_BASE = DefineAttributes({
 		description: 'A front ring on a collar',
 		parentAttributes: ['Collar'],
 	},
+	Leash: {
+		name: 'Leash',
+		description: 'A leash, usually attached to a collar',
+	},
 	Chastity: {
 		name: 'Chastity',
 		description: 'An item, typically a bra or belt, used for chastity play',

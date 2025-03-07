@@ -19,7 +19,7 @@ const CHARACTER_MODIFIER_TEMPLATES: AssetSpecificCharacterModifierInbuiltTemplat
 	effect_blind: [
 		{
 			type: 'effect_blind',
-			name: 'Fully blind when wearing blindfold items',
+			name: 'Fully blind while wearing any blindfolding items',
 			config: {
 				intensity: 10,
 				intensityMax: 10,
@@ -32,6 +32,69 @@ const CHARACTER_MODIFIER_TEMPLATES: AssetSpecificCharacterModifierInbuiltTemplat
 						type: 'hasItemWithEffect',
 						effect: 'blind',
 						minStrength: 1,
+					},
+				},
+			],
+		},
+		{
+			type: 'effect_blind',
+			name: 'Fully blind while both eyes are closed',
+			config: {
+				intensity: 10,
+				intensityMax: 10,
+			},
+			conditions: [
+				{
+					logic: 'or',
+					invert: false,
+					condition: {
+						type: 'hasItemWithAttribute',
+						attribute: 'Eyes_left_closed',
+					},
+				},
+				{
+					logic: 'and',
+					invert: false,
+					condition: {
+						type: 'hasItemWithAttribute',
+						attribute: 'Eyes_right_closed',
+					},
+				},
+			],
+		},
+	],
+	effect_blur_vision: [
+		{
+			type: 'effect_blur_vision',
+			name: 'Blurred vision while not wearing glasses',
+			config: {
+				intensity: 4,
+				intensityMax: 16,
+			},
+			conditions: [
+				{
+					logic: 'or',
+					invert: true,
+					condition: {
+						type: 'hasItemWithAttribute',
+						attribute: 'Facewear_glasses',
+					},
+				},
+			],
+		},
+	],
+	effect_block_room_movement: [
+		{
+			type: 'effect_block_room_movement',
+			name: 'Block room movement while leashed',
+			config: {},
+			conditions: [
+				{
+					logic: 'or',
+					invert: false,
+					condition: {
+						type: 'hasItemWithAttribute',
+						attribute: 'Leash',
 					},
 				},
 			],
