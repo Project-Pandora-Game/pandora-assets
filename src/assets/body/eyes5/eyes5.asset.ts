@@ -47,14 +47,23 @@ DefineBodypart({
 					id: 'normal',
 					name: 'Open',
 					default: true,
+					properties: {
+						attributes: { provides: ['Eyes_left_open'] },
+					},
 				},
 				{
 					id: 'squint',
 					name: 'Squint',
+					properties: {
+						attributes: { provides: ['Eyes_left_open'] },
+					},
 				},
 				{
 					id: 'closed',
 					name: 'Closed',
+					properties: {
+						attributes: { provides: ['Eyes_left_closed'] },
+					},
 				},
 				{
 					id: 'blind',
@@ -63,6 +72,7 @@ DefineBodypart({
 						effects: {
 							blind: 4.99,
 						},
+						attributes: { provides: ['Eyes_left_closed'] },
 					},
 				},
 			],
@@ -76,14 +86,23 @@ DefineBodypart({
 					id: 'normal',
 					name: 'Open',
 					default: true,
+					properties: {
+						attributes: { provides: ['Eyes_right_open'] },
+					},
 				},
 				{
 					id: 'squint',
 					name: 'Squint',
+					properties: {
+						attributes: { provides: ['Eyes_right_open'] },
+					},
 				},
 				{
 					id: 'closed',
 					name: 'Closed',
+					properties: {
+						attributes: { provides: ['Eyes_right_closed'] },
+					},
 				},
 				{
 					id: 'blind',
@@ -92,6 +111,7 @@ DefineBodypart({
 						effects: {
 							blind: 4.99,
 						},
+						attributes: { provides: ['Eyes_right_closed'] },
 					},
 				},
 			],

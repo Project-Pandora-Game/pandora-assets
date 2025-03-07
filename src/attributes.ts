@@ -8,7 +8,7 @@ import { DefineResource } from './tools/resources.js';
 
 //#region Attribute definitions - an attribute defines a role
 
-const ATTRIBUTES_DEFINITION_BASE = {
+const ATTRIBUTES_DEFINITION_BASE = DefineAttributes({
 	// Bodypart attributes
 	Body_base: {
 		name: 'Base body',
@@ -83,6 +83,30 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		},
 		icon: 'eye',
 		useAsAssetPreference: false,
+	},
+	Eyes_right_open: {
+		name: 'Open right eye',
+		description: 'A right eye, that is open',
+		useAsAssetPreference: false,
+		parentAttributes: ['Eyes'],
+	},
+	Eyes_left_open: {
+		name: 'Open left eye',
+		description: 'A left eye, that is open',
+		useAsAssetPreference: false,
+		parentAttributes: ['Eyes'],
+	},
+	Eyes_right_closed: {
+		name: 'Closed right eye',
+		description: 'A right eye, that is closed',
+		useAsAssetPreference: false,
+		parentAttributes: ['Eyes'],
+	},
+	Eyes_left_closed: {
+		name: 'Closed left eye',
+		description: 'A left eye, that is closed',
+		useAsAssetPreference: false,
+		parentAttributes: ['Eyes'],
 	},
 	Nose: {
 		name: 'Nose',
@@ -721,21 +745,27 @@ const ATTRIBUTES_DEFINITION_BASE = {
 		description: 'A fix point behind the head to which a gag can be secured',
 		useAsAssetPreference: false,
 	},
-} as const satisfies Record<string, AssetRepoAttributeDefinition>;
+});
 
 //#endregion
 
-export type AttributeNames = (keyof typeof ATTRIBUTES_DEFINITION_BASE) & string;
-export const ATTRIBUTES_DEFINITION: Readonly<Record<AttributeNames, AssetRepoAttributeDefinition>> = ATTRIBUTES_DEFINITION_BASE;
+function DefineAttributes<const TAttributeName extends string>(
+	definitions: Record<TAttributeName, NoInfer<AssetRepoAttributeDefinition<TAttributeName>>>,
+): Readonly<Record<TAttributeName, AssetRepoAttributeDefinition<TAttributeName>>> {
+	return definitions;
+}
 
-type AssetRepoAttributeDefinition = AssetAttributeDefinition & {
-	parentAttributes?: readonly string[];
+export type AttributeNames = (keyof typeof ATTRIBUTES_DEFINITION_BASE) & string;
+export const ATTRIBUTES_DEFINITION: Readonly<Record<AttributeNames, AssetRepoAttributeDefinition<AttributeNames>>> = ATTRIBUTES_DEFINITION_BASE;
+
+type AssetRepoAttributeDefinition<TAttributes> = AssetAttributeDefinition & {
+	parentAttributes?: readonly TAttributes[];
 };
 
 export function LoadAttributes(): Record<AttributeNames, AssetAttributeDefinition> {
 	const logger = GetLogger('LoadAttributes');
-	const result: Record<AttributeNames, AssetRepoAttributeDefinition> = cloneDeep(ATTRIBUTES_DEFINITION);
-	const unknownAttributeLookup: Partial<Readonly<Record<string, AssetRepoAttributeDefinition>>> = result;
+	const result: Record<AttributeNames, AssetRepoAttributeDefinition<AttributeNames>> = cloneDeep(ATTRIBUTES_DEFINITION);
+	const unknownAttributeLookup: Partial<Readonly<Record<string, AssetRepoAttributeDefinition<AttributeNames>>>> = result;
 
 	for (const [id, attribute] of Object.entries(result)) {
 		for (const parentAttribute of (attribute.parentAttributes ?? [])) {
