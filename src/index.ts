@@ -7,6 +7,7 @@ import { LoadAttributeNameValidation, LoadAttributes } from './attributes.js';
 import { LoadBackgroundTags, LoadBackgrounds } from './backgrounds/backgrounds.js';
 import { BODYPARTS, ValidateBodyparts } from './bodyparts.js';
 import { LoadBoneNameValidation, boneDefinition } from './bones.js';
+import { LoadCharacterModifierTemplates } from './characterModifierTemplates.js';
 import { ASSET_DEST_DIR, ASSET_SRC_DIR, BASE_DIR, IS_PRODUCTION_BUILD, OUT_DIR } from './constants.js';
 import { POSE_PRESETS } from './posePresets.js';
 import { APPEARANCE_RANDOMIZATION_CONFIG } from './presets.js';
@@ -191,6 +192,7 @@ async function Run() {
 		graphicsId: graphicsFile.hash,
 		attributes,
 		randomization: APPEARANCE_RANDOMIZATION_CONFIG,
+		characterModifierTemplates: LoadCharacterModifierTemplates(),
 	};
 	// Check bodyparts are valid
 	ValidateBodyparts(definitions);
