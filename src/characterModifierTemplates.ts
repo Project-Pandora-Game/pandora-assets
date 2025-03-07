@@ -102,6 +102,42 @@ const CHARACTER_MODIFIER_TEMPLATES: AssetSpecificCharacterModifierInbuiltTemplat
 			],
 		},
 	],
+	effect_hearing: [
+		{
+			type: 'effect_hearing',
+			name: 'Impact hearing while wearing a hood',
+			config: {
+				intensity: 2,
+				intensityMax: 10,
+			},
+			conditions: [
+				{
+					logic: 'or',
+					invert: false,
+					condition: {
+						type: 'hasItemOfAsset',
+						assetId: 'a/blindfolds/steel_sphere',
+					},
+				},
+				{
+					logic: 'or',
+					invert: false,
+					condition: {
+						type: 'hasItemOfAsset',
+						assetId: 'a/blindfolds/full_hood',
+					},
+				},
+				{
+					logic: 'or',
+					invert: false,
+					condition: {
+						type: 'hasItemOfAsset',
+						assetId: 'a/blindfolds/half_hood',
+					},
+				},
+			],
+		},
+	],
 };
 
 //#endregion Character modifier template definitions
