@@ -3,7 +3,7 @@ DefineLockAsset({
 	assetPreferenceDefault: 'maybe',
 	lockSetup: {
 		timer: {
-			maxMinutes: 24 * 60,
+			maxDuration: 24 * 60 * 60 * 1000,
 		},
 	},
 	chat: {
