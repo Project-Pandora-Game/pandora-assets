@@ -138,6 +138,57 @@ const CHARACTER_MODIFIER_TEMPLATES: AssetSpecificCharacterModifierInbuiltTemplat
 			],
 		},
 	],
+	speech_faltering_voice: [
+		{
+			type: 'speech_faltering_voice',
+			name: 'Stuttering while fully naked',
+			config: {
+				addFillerSounds: false,
+			},
+			conditions: [
+				{
+					logic: 'or',
+					invert: true,
+					condition: {
+						type: 'hasItemWithAttribute',
+						attribute: 'Clothing_upper',
+					},
+				},
+				{
+					logic: 'and',
+					invert: true,
+					condition: {
+						type: 'hasItemWithAttribute',
+						attribute: 'Clothing_lower',
+					},
+				},
+				{
+					logic: 'and',
+					invert: true,
+					condition: {
+						type: 'hasItemWithAttribute',
+						attribute: 'Clothing_large',
+					},
+				},
+				{
+					logic: 'and',
+					invert: true,
+					condition: {
+						type: 'hasItemWithAttribute',
+						attribute: 'Clothing_outer',
+					},
+				},
+				{
+					logic: 'and',
+					invert: true,
+					condition: {
+						type: 'hasItemWithAttribute',
+						attribute: 'Underwear',
+					},
+				},
+			],
+		},
+	],
 };
 
 //#endregion Character modifier template definitions
