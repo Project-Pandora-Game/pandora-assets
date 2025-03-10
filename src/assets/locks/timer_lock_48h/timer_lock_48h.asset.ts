@@ -8,7 +8,7 @@ DefineLockAsset({
 		},
 	},
 	chat: {
-		chatDescriptor: 'a timer lock',
+		chatDescriptor: 'a 48 hours max timer lock',
 		actionLock: 'SOURCE_CHARACTER clicked ITEM_ASSET_NAME on ITEM_CONTAINER_SIMPLE_DYNAMIC shut.',
 		actionUnlock: 'SOURCE_CHARACTER unlocked ITEM_ASSET_NAME on ITEM_CONTAINER_SIMPLE_DYNAMIC.',
 	},
