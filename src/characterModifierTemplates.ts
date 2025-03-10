@@ -13,7 +13,7 @@ import {
 	type CharacterModifierType,
 	type Satisfies,
 } from 'pandora-common';
-import { AssetDatabase } from './tools/assetDatabase.js';
+import { AssetDatabase } from './tools/assetDatabase.ts';
 
 //#region Character modifier template definitions
 

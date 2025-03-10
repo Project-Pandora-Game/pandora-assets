@@ -1,5 +1,5 @@
 import { ItemInteractionType } from 'pandora-common';
-import { CreateHairColor } from '../../../helpers/hair_base.js';
+import { CreateHairColor } from '../../../helpers/hair_base.ts';
 const { colorization, modules } = CreateHairColor(true);
 
 DefineBodypart({

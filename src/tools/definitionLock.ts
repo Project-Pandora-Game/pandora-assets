@@ -1,12 +1,12 @@
 import { freeze } from 'immer';
 import { cloneDeep, omit, pick } from 'lodash-es';
 import { AssetId, GetLogger, LockAssetDefinition } from 'pandora-common';
-import { AssetDatabase } from './assetDatabase.js';
-import { DefaultId } from './context.js';
-import { RegisterImportContextProcess } from './importContext.js';
-import { ValidateOwnershipData } from './licensing.js';
-import { DefinePngResource, PREVIEW_SIZE } from './resources.js';
-import { ValidateAssetChatMessages } from './validation/chatMessages.js';
+import { AssetDatabase } from './assetDatabase.ts';
+import { DefaultId } from './context.ts';
+import { RegisterImportContextProcess } from './importContext.ts';
+import { ValidateOwnershipData } from './licensing.ts';
+import { DefinePngResource, PREVIEW_SIZE } from './resources.ts';
+import { ValidateAssetChatMessages } from './validation/chatMessages.ts';
 
 const LOCK_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Asset definition

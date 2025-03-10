@@ -1,6 +1,6 @@
 import { watchFile } from 'fs';
 import { GetLogger } from 'pandora-common';
-import { StartHttpServer } from './devServer.js';
+import { StartHttpServer } from './devServer.ts';
 
 let runner: (() => Promise<void>) | undefined;
 let hadChanges = false;

@@ -2,12 +2,12 @@ import * as fs from 'fs';
 import { isEqual } from 'lodash-es';
 import { Assert, CalculateBackgroundDataFromCalibrationData, GetLogger, RoomBackgroundCalibrationDataSchema, RoomBackgroundInfo } from 'pandora-common';
 import { join } from 'path';
-import { BACKGROUNDS_SRC_DIR } from '../constants.js';
-import { SetCurrentContext } from './context.js';
-import { GitValidateResponsibleContributor } from './git.js';
-import { GENERATED_RESOLUTIONS } from './graphics.js';
-import { DefineImageResource, DefineJpgResource } from './resources.js';
-import { RoomDatabase } from './roomDatabase.js';
+import { BACKGROUNDS_SRC_DIR } from '../constants.ts';
+import { SetCurrentContext } from './context.ts';
+import { GitValidateResponsibleContributor } from './git.ts';
+import { GENERATED_RESOLUTIONS } from './graphics.ts';
+import { DefineImageResource, DefineJpgResource } from './resources.ts';
+import { RoomDatabase } from './roomDatabase.ts';
 
 const PREVIEW_WIDTH = 200;
 const PREVIEW_HEIGHT = 100;

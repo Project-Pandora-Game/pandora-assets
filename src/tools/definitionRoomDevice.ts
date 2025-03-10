@@ -2,19 +2,19 @@ import { freeze } from 'immer';
 import { cloneDeep, omit, pick } from 'lodash-es';
 import { Assert, AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition } from 'pandora-common';
 import { join } from 'path';
-import { OPTIMIZE_TEXTURES } from '../constants.js';
-import { AssetDatabase } from './assetDatabase.js';
-import { AssetSourcePath, DefaultId } from './context.js';
-import { GENERATED_RESOLUTIONS, LoadAssetsGraphics } from './graphics.js';
-import { GraphicsDatabase } from './graphicsDatabase.js';
-import { RegisterImportContextProcess } from './importContext.js';
-import { ValidateOwnershipData } from './licensing.js';
-import { LoadRoomDeviceColorization } from './load_helpers/color.js';
-import { DefineImageResource, DefinePngResource, IImageResource, ImageBoundingBox, PREVIEW_SIZE } from './resources.js';
-import { ValidateAssetChatMessages } from './validation/chatMessages.js';
-import { ValidateAllModules } from './validation/modules.js';
-import { ValidateAssetProperties, ValidateAssetPropertiesFinalize } from './validation/properties.js';
-import { RoomDevicePropertiesValidationMetadata, ValidateRoomDeviceProperties } from './validation/roomDeviceProperties.js';
+import { OPTIMIZE_TEXTURES } from '../constants.ts';
+import { AssetDatabase } from './assetDatabase.ts';
+import { AssetSourcePath, DefaultId } from './context.ts';
+import { GENERATED_RESOLUTIONS, LoadAssetsGraphics } from './graphics.ts';
+import { GraphicsDatabase } from './graphicsDatabase.ts';
+import { RegisterImportContextProcess } from './importContext.ts';
+import { ValidateOwnershipData } from './licensing.ts';
+import { LoadRoomDeviceColorization } from './load_helpers/color.ts';
+import { DefineImageResource, DefinePngResource, IImageResource, ImageBoundingBox, PREVIEW_SIZE } from './resources.ts';
+import { ValidateAssetChatMessages } from './validation/chatMessages.ts';
+import { ValidateAllModules } from './validation/modules.ts';
+import { ValidateAssetProperties, ValidateAssetPropertiesFinalize } from './validation/properties.ts';
+import { RoomDevicePropertiesValidationMetadata, ValidateRoomDeviceProperties } from './validation/roomDeviceProperties.ts';
 
 const ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Properties

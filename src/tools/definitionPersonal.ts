@@ -2,17 +2,17 @@ import { freeze } from 'immer';
 import { cloneDeep, omit, pick } from 'lodash-es';
 import { AssetId, GetLogger, PersonalAssetDefinition } from 'pandora-common';
 import { join } from 'path';
-import { AssetDatabase } from './assetDatabase.js';
-import { AssetSourcePath, DefaultId } from './context.js';
-import { LoadAssetsGraphics } from './graphics.js';
-import { GraphicsDatabase } from './graphicsDatabase.js';
-import { RegisterImportContextProcess } from './importContext.js';
-import { ValidateOwnershipData } from './licensing.js';
-import { LoadAssetColorization } from './load_helpers/color.js';
-import { DefinePngResource, PREVIEW_SIZE } from './resources.js';
-import { ValidateAssetChatMessages } from './validation/chatMessages.js';
-import { ValidateAllModules } from './validation/modules.js';
-import { PropertiesValidationMetadata, ValidateAssetProperties, ValidateAssetPropertiesFinalize } from './validation/properties.js';
+import { AssetDatabase } from './assetDatabase.ts';
+import { AssetSourcePath, DefaultId } from './context.ts';
+import { LoadAssetsGraphics } from './graphics.ts';
+import { GraphicsDatabase } from './graphicsDatabase.ts';
+import { RegisterImportContextProcess } from './importContext.ts';
+import { ValidateOwnershipData } from './licensing.ts';
+import { LoadAssetColorization } from './load_helpers/color.ts';
+import { DefinePngResource, PREVIEW_SIZE } from './resources.ts';
+import { ValidateAssetChatMessages } from './validation/chatMessages.ts';
+import { ValidateAllModules } from './validation/modules.ts';
+import { PropertiesValidationMetadata, ValidateAssetProperties, ValidateAssetPropertiesFinalize } from './validation/properties.ts';
 
 const PERSONAL_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Properties

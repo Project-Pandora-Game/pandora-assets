@@ -2,11 +2,9 @@
 	"extends": "pandora-common/tsconfig.base.json",
 	"compilerOptions": {
 		"types": [
-			"@types/node",
-			"@types/jest"
+			"@types/node"
 		],
-		"module": "NodeNext",
-		"moduleResolution": "NodeNext"
+		"rootDir": ".."
 	},
 	"include": [
 		"../src/**/*.d.ts",

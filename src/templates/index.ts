@@ -1,10 +1,10 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { CanonizePointTemplate, GetLogger, ModuleNameSchema, PointTemplate, PointTemplateSchema, SCHEME_OVERRIDE } from 'pandora-common';
 import { join, relative } from 'path';
-import { SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../constants.js';
-import { GraphicsDatabase } from '../tools/graphicsDatabase.js';
-import { TemplateValidate } from '../tools/validation/templates.js';
-import { WatchFile } from '../tools/watch.js';
+import { SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../constants.ts';
+import { GraphicsDatabase } from '../tools/graphicsDatabase.ts';
+import { TemplateValidate } from '../tools/validation/templates.ts';
+import { WatchFile } from '../tools/watch.ts';
 
 const templateList: string[] = [
 	'static',

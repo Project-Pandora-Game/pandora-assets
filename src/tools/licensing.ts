@@ -1,8 +1,8 @@
-import type { Logger } from 'pandora-common';
-import { GitValidateResponsibleContributor } from './git.js';
-import { AssetSourcePath } from './context.js';
-import { join } from 'path';
 import * as fs from 'fs';
+import type { Logger } from 'pandora-common';
+import { join } from 'path';
+import { AssetSourcePath } from './context.ts';
+import { GitValidateResponsibleContributor } from './git.ts';
 
 export function ValidateOwnershipData(ownership: AssetOwnershipData, logger: Logger, requireLicensing: boolean): void {
 	// Validate responsible contributor

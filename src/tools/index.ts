@@ -1,3 +1,4 @@
-export * from './definitionPersonal.js';
-export * from './definitionBodypart.js';
-export * from './context.js';
+export * from './context.ts';
+export * from './definitionBodypart.ts';
+export * from './definitionPersonal.ts';
+
