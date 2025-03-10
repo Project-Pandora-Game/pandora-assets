@@ -67,6 +67,51 @@
 						]
 					}
 				]
+			},
+			"scaling": {
+				"scaleBone": "breasts",
+				"stops": [
+					[
+						100,
+						{
+							"image": "latex_corset_underbust_huge.png",
+							"overrides": [
+								{
+									"image": "latex_corset_underbust_bright_huge.png",
+									"condition": [
+										[
+											{
+												"module": "color",
+												"operator": "=",
+												"value": "white"
+											}
+										]
+									]
+								}
+							]
+						}
+					],
+					[
+						150,
+						{
+							"image": "latex_corset_underbust_extreme.png",
+							"overrides": [
+								{
+									"image": "latex_corset_underbust_bright_extreme.png",
+									"condition": [
+										[
+											{
+												"module": "color",
+												"operator": "=",
+												"value": "white"
+											}
+										]
+									]
+								}
+							]
+						}
+					]
+				]
 			}
 		},
 		{
