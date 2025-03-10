@@ -1,9 +1,10 @@
 DefineLockAsset({
-	name: 'Timer Lock',
+	id: 'a/locks/timer_lock', //different for backward compatibility reasons
+	name: 'Timer Lock (48h)',
 	assetPreferenceDefault: 'maybe',
 	lockSetup: {
 		timer: {
-			maxDuration: 24 * 60 * 60 * 1000,
+			maxDuration: 2 * 24 * 60 * 60 * 1000,
 		},
 	},
 	chat: {
