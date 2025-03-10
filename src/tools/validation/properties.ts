@@ -1,23 +1,23 @@
+import { Immutable } from 'immer';
 import {
+	ArmFingersSchema,
+	ArmPoseSchema,
+	ArmRotationSchema,
+	ArmSegmentOrderSchema,
+	AssetDefinitionArmOrderPoseLimit,
+	AssetDefinitionArmPoseLimit,
 	AssetDefinitionPoseLimit,
 	AssetDefinitionPoseLimits,
 	AssetProperties,
-	BONE_MIN,
 	BONE_MAX,
-	Logger,
-	IsReadonlyArray,
+	BONE_MIN,
 	CharacterViewSchema,
+	IsReadonlyArray,
 	LegsPoseSchema,
-	AssetDefinitionArmOrderPoseLimit,
-	ArmSegmentOrderSchema,
-	AssetDefinitionArmPoseLimit,
-	ArmPoseSchema,
-	ArmRotationSchema,
-	ArmFingersSchema,
+	Logger,
 } from 'pandora-common';
-import { ATTRIBUTES_DEFINITION, AttributeNames } from '../../attributes.js';
 import { ZodEnum } from 'zod';
-import { Immutable } from 'immer';
+import { ATTRIBUTES_DEFINITION, AttributeNames } from '../../attributes.ts';
 
 export interface PropertiesValidationMetadata {
 	getModuleNames: () => readonly string[];

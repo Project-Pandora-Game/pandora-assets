@@ -10,7 +10,7 @@ import {
 	PointTemplate,
 	PointTemplateDiff,
 } from 'pandora-common';
-import { GraphicsDatabase } from '../graphicsDatabase.js';
+import { GraphicsDatabase } from '../graphicsDatabase.ts';
 
 export function AssetGraphicsValidate(definition: AssetGraphicsDefinition, logger: Logger): void {
 	for (let layerIndex = 0; layerIndex < definition.layers.length; layerIndex++) {

@@ -23,13 +23,13 @@ import {
 } from 'pandora-common';
 import { relative } from 'path';
 import { z } from 'zod';
-import { OPTIMIZE_TEXTURES, SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../constants.js';
-import { GraphicsDatabase } from './graphicsDatabase.js';
-import { TriangleRectangleOverlap } from './math/intersections.js';
-import { CalculatePointsTriangles } from './math/triangulation.js';
-import { DefineImageResource, IImageResource } from './resources.js';
-import { AssetGraphicsValidate } from './validation/assetGraphics.js';
-import { WatchFile } from './watch.js';
+import { OPTIMIZE_TEXTURES, SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../constants.ts';
+import { GraphicsDatabase } from './graphicsDatabase.ts';
+import { TriangleRectangleOverlap } from './math/intersections.ts';
+import { CalculatePointsTriangles } from './math/triangulation.ts';
+import { DefineImageResource, IImageResource } from './resources.ts';
+import { AssetGraphicsValidate } from './validation/assetGraphics.ts';
+import { WatchFile } from './watch.ts';
 
 export const GENERATED_RESOLUTIONS: readonly number[] = [0.5, 0.25];
 

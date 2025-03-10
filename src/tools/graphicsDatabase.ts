@@ -1,7 +1,7 @@
 import { Immutable } from 'immer';
 import { AssetGraphicsDefinition, AssetId, AssetsGraphicsDefinitionFile, GetLogger, PointTemplate } from 'pandora-common';
-import { GENERATE_AVIF } from '../constants.js';
-import { AVIF_SUFFIX } from './resources.js';
+import { GENERATE_AVIF } from '../constants.ts';
+import { AVIF_SUFFIX } from './resources.ts';
 
 const logger = GetLogger('GraphicsDatabase');
 

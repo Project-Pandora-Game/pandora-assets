@@ -1,9 +1,9 @@
-import { GetLogger } from 'pandora-common';
+import * as express from 'express';
+import * as fs from 'fs';
 import { Server as HttpServer } from 'http';
 import { Server as HttpsServer } from 'https';
-import * as fs from 'fs';
-import * as express from 'express';
-import { SERVER_PORT, SERVER_BIND, SERVER_HTTPS_CERT, SERVER_HTTPS_KEY, OUT_DIR } from '../constants.js';
+import { GetLogger } from 'pandora-common';
+import { OUT_DIR, SERVER_BIND, SERVER_HTTPS_CERT, SERVER_HTTPS_KEY, SERVER_PORT } from '../constants.ts';
 
 const logger = GetLogger('Server');
 
