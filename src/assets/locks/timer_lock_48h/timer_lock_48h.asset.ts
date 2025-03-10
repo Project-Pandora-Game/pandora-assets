@@ -1,13 +1,14 @@
 DefineLockAsset({
-	name: 'Timer Lock',
+	id: 'a/locks/timer_lock', //different for backward compatibility reasons
+	name: 'Timer Lock (48h)',
 	assetPreferenceDefault: 'maybe',
 	lockSetup: {
 		timer: {
-			maxDuration: 24 * 60 * 60 * 1000,
+			maxDuration: 2 * 24 * 60 * 60 * 1000,
 		},
 	},
 	chat: {
-		chatDescriptor: 'a timer lock',
+		chatDescriptor: 'a 48 hours max timer lock',
 		actionLock: 'SOURCE_CHARACTER clicked ITEM_ASSET_NAME on ITEM_CONTAINER_SIMPLE_DYNAMIC shut.',
 		actionUnlock: 'SOURCE_CHARACTER unlocked ITEM_ASSET_NAME on ITEM_CONTAINER_SIMPLE_DYNAMIC.',
 	},
