@@ -5,7 +5,7 @@ import { join } from 'path';
 import { BACKGROUNDS_SRC_DIR } from '../constants.ts';
 import { SetCurrentContext } from './context.ts';
 import { GitValidateResponsibleContributor } from './git.ts';
-import { GENERATED_RESOLUTIONS } from './graphics.ts';
+import { GENERATED_RESOLUTIONS } from './graphicsConstants.ts';
 import { DefineImageResource, DefineJpgResource } from './resources.ts';
 import { RoomDatabase } from './roomDatabase.ts';
 
