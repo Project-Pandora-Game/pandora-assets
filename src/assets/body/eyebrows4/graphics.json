@@ -6,6 +6,7 @@
 			"y": 257,
 			"width": 128,
 			"height": 64,
+			"type": "mesh",
 			"name": "Eyebrows",
 			"priority": "BODY",
 			"points": "static",
