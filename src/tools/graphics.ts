@@ -4,14 +4,13 @@ import { diffString } from 'json-diff';
 import { isEqual } from 'lodash-es';
 import {
 	Assert,
+	AssertNever,
 	AssetGraphicsDefinition,
 	AssetGraphicsDefinitionSchema,
 	BitField,
 	CloneDeepMutable,
 	GetLogger,
 	LayerDefinition,
-	LayerImageOverride,
-	LayerImageSetting,
 	LayerMirror,
 	Logger,
 	MakeMirroredPoints,
@@ -20,20 +19,20 @@ import {
 	PointDefinitionCalculated,
 	PointMatchesPointType,
 	SCHEME_OVERRIDE,
+	type AlphaImageMeshLayerDefinition,
+	type MeshLayerDefinition,
 } from 'pandora-common';
 import { relative } from 'path';
 import { z } from 'zod';
 import { OPTIMIZE_TEXTURES, SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../constants.ts';
 import { GraphicsDatabase } from './graphicsDatabase.ts';
+import { ListLayerImageSettingImages, LoadLayerImageSetting, type LayerImageTrimArea } from './load_helpers/layer_common.ts';
 import { TriangleRectangleOverlap } from './math/intersections.ts';
 import { CalculatePointsTriangles } from './math/triangulation.ts';
-import { DefineImageResource, IImageResource } from './resources.ts';
 import { AssetGraphicsValidate } from './validation/assetGraphics.ts';
 import { WatchFile } from './watch.ts';
 
-export const GENERATED_RESOLUTIONS: readonly number[] = [0.5, 0.25];
-
-export async function LoadAssetsGraphics(path: string, assetModules: readonly string[]): Promise<AssetGraphicsDefinition> {
+export async function LoadAssetsGraphics(path: string, assetModules: readonly string[], colorizationKeys: ReadonlySet<string>): Promise<AssetGraphicsDefinition> {
 	const logger = GetLogger('GraphicsValidation').prefixMessages(`Graphics definition '${relative(SRC_DIR, path)}':\n\t`);
 
 	WatchFile(path);
@@ -81,79 +80,23 @@ export async function LoadAssetsGraphics(path: string, assetModules: readonly st
 		logger.info('The above warning has been auto-corrected; re-run to check if successful.');
 	}
 
-	AssetGraphicsValidate(parseResult.data, logger);
+	AssetGraphicsValidate(parseResult.data, logger, colorizationKeys);
 
 	return {
 		layers: await Promise.all(parseResult.data.layers.map((l) => LoadAssetLayer(l, logger))),
 	};
 }
 
-type LayerImageTrimArea = [left: number, top: number, right: number, bottom: number] | null;
-
-function LoadLayerImageResource(image: string): IImageResource {
-	return DefineImageResource(image, 'asset', 'png');
-}
-
-function LoadLayerImage(image: string, imageTrimArea: LayerImageTrimArea): string {
-	let resource = LoadLayerImageResource(image);
-
-	if (imageTrimArea != null) {
-		resource = resource.addCutImageRelative(imageTrimArea[0], imageTrimArea[1], imageTrimArea[2], imageTrimArea[3]);
-	}
-
-	for (const resolution of GENERATED_RESOLUTIONS) {
-		resource.addDownscaledImage(resolution);
-	}
-
-	return resource.resultName;
-}
-
-function ListLayerImageSettingImages(setting: LayerImageSetting): IImageResource[] {
-	const resources = new Set<IImageResource>();
-
-	setting.overrides.forEach(({ image }) => {
-		if (image) {
-			resources.add(LoadLayerImageResource(image));
-		}
-	});
-
-	setting.alphaOverrides?.forEach(({ image }) => {
-		if (image) {
-			resources.add(LoadLayerImageResource(image));
-		}
-	});
-
-	if (setting.image) {
-		resources.add(LoadLayerImageResource(setting.image));
-	}
-	if (setting.alphaImage) {
-		resources.add(LoadLayerImageResource(setting.alphaImage));
-	}
-
-	return Array.from(resources);
-}
-
-function LoadLayerImageSetting(setting: LayerImageSetting, imageTrimArea: LayerImageTrimArea): LayerImageSetting {
-	const overrides: LayerImageOverride[] = setting.overrides
-		.map((override) => ({
-			...override,
-			image: override.image && LoadLayerImage(override.image, imageTrimArea),
-		}));
-	const alphaOverrides: LayerImageOverride[] | undefined = setting.alphaOverrides
-		?.map((override) => ({
-			...override,
-			image: override.image && LoadLayerImage(override.image, imageTrimArea),
-		}));
-	return {
-		...setting,
-		image: setting.image && LoadLayerImage(setting.image, imageTrimArea),
-		alphaImage: setting.alphaImage && LoadLayerImage(setting.alphaImage, imageTrimArea),
-		overrides,
-		alphaOverrides,
-	};
-}
-
 async function LoadAssetLayer(layer: LayerDefinition, logger: Logger): Promise<LayerDefinition> {
+	switch (layer.type) {
+		case 'mesh':
+		case 'alphaImageMesh':
+			return await LoadAssetImageLayer(layer, logger);
+	}
+	AssertNever(layer);
+}
+
+async function LoadAssetImageLayer(layer: MeshLayerDefinition | AlphaImageMeshLayerDefinition, logger: Logger): Promise<MeshLayerDefinition | AlphaImageMeshLayerDefinition> {
 	logger = logger.prefixMessages(`[Layer ${layer.name ?? '[unnamed]'}]`);
 
 	const pointTemplate = GraphicsDatabase.getPointTemplate(layer.points);
@@ -173,7 +116,7 @@ async function LoadAssetLayer(layer: LayerDefinition, logger: Logger): Promise<L
 	if (layer.image.uvPose != null) {
 		hasUvManipulation = true;
 	}
-	for (const imageOverride of [...layer.image.overrides, ...(layer.image.alphaOverrides ?? [])]) {
+	for (const imageOverride of layer.image.overrides) {
 		if (imageOverride.uvPose != null) {
 			hasUvManipulation = true;
 		}
@@ -337,8 +280,9 @@ async function LoadAssetLayer(layer: LayerDefinition, logger: Logger): Promise<L
 		imageTrimArea[3] / layer.height,
 	] : null;
 
-	const result: LayerDefinition = {
+	const result: MeshLayerDefinition | AlphaImageMeshLayerDefinition = {
 		...layer,
+		type: layer.type,
 		pointFilterMask: layerPointFilterMask,
 		image: LoadLayerImageSetting(layer.image, normalizedImageTrimArea),
 		scaling: layer.scaling && {

@@ -6,6 +6,21 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"type": "alphaImageMesh",
+			"name": "jeans back",
+			"priority": "BELOW_BODY",
+			"points": "body",
+			"mirror": 0,
+			"image": {
+				"image": "Alpha_jeans_shorts.png",
+				"overrides": []
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "mesh",
 			"name": "jeans back",
 			"priority": "BELOW_BODY",
@@ -14,8 +29,22 @@
 			"colorizationKey": "pants",
 			"image": {
 				"image": "Jeans_Shorts_Back.png",
-				"overrides": [],
-				"alphaImage": "Alpha_jeans_shorts.png"
+				"overrides": []
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "alphaImageMesh",
+			"name": "jeans front",
+			"priority": "ABOVE_BODY",
+			"points": "body",
+			"mirror": 0,
+			"image": {
+				"image": "Alpha_jeans_shorts.png",
+				"overrides": []
 			}
 		},
 		{
@@ -31,8 +60,7 @@
 			"colorizationKey": "pants",
 			"image": {
 				"image": "Jeans_Shorts.png",
-				"overrides": [],
-				"alphaImage": "Alpha_jeans_shorts.png"
+				"overrides": []
 			}
 		},
 		{

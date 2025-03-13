@@ -6,6 +6,34 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"type": "alphaImageMesh",
+			"name": "front",
+			"priority": "ABOVE_BODY",
+			"points": "body",
+			"mirror": 0,
+			"image": {
+				"image": "alpha.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "pantiesState",
+									"operator": "=",
+									"value": "fully"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "mesh",
 			"name": "front",
 			"priority": "ABOVE_BODY",
@@ -63,21 +91,6 @@
 							]
 						]
 					}
-				],
-				"alphaImage": "alpha.png",
-				"alphaOverrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "fully"
-								}
-							]
-						]
-					}
 				]
 			}
 		},
@@ -111,6 +124,34 @@
 									"module": "pantiesState",
 									"operator": "=",
 									"value": "normal"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "alphaImageMesh",
+			"name": "back",
+			"priority": "BELOW_BODY",
+			"points": "body",
+			"mirror": 0,
+			"image": {
+				"image": "alpha.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "pantiesState",
+									"operator": "=",
+									"value": "fully"
 								}
 							]
 						]
@@ -174,21 +215,6 @@
 									"module": "pantiesState",
 									"operator": "=",
 									"value": "wedged"
-								}
-							]
-						]
-					}
-				],
-				"alphaImage": "alpha.png",
-				"alphaOverrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "fully"
 								}
 							]
 						]

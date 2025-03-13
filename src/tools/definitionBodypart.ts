@@ -110,18 +110,11 @@ async function GlobalDefineBodypartProcess(def: IntermediateBodypartAssetDefinit
 
 	// Load and verify graphics
 	if (def.graphics) {
-		const graphics = await LoadAssetsGraphics(join(AssetSourcePath, def.graphics), Object.keys(asset.modules ?? {}));
-
-		const loggerGraphics = logger.prefixMessages('[Graphics]');
-
-		for (let i = 0; i < graphics.layers.length; i++) {
-			const layer = graphics.layers[i];
-
-			if (layer.colorizationKey != null && colorization?.[layer.colorizationKey] == null) {
-				const colorizationKeys = new Set(Object.keys(colorization ?? {}));
-				loggerGraphics.warning(`Layer #${i} has colorizationKey ${layer.colorizationKey} outside of defined colorization keys [${[...colorizationKeys].join(', ')}]`);
-			}
-		}
+		const graphics = await LoadAssetsGraphics(
+			join(AssetSourcePath, def.graphics),
+			Object.keys(asset.modules ?? {}),
+			new Set(Object.keys(colorization ?? {})),
+		);
 
 		GraphicsDatabase.registerAsset(id, graphics);
 	}

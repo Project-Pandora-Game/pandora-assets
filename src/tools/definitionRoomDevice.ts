@@ -5,7 +5,8 @@ import { join } from 'path';
 import { OPTIMIZE_TEXTURES } from '../constants.ts';
 import { AssetDatabase } from './assetDatabase.ts';
 import { AssetSourcePath, DefaultId } from './context.ts';
-import { GENERATED_RESOLUTIONS, LoadAssetsGraphics } from './graphics.ts';
+import { LoadAssetsGraphics } from './graphics.ts';
+import { GENERATED_RESOLUTIONS } from './graphicsConstants.ts';
 import { GraphicsDatabase } from './graphicsDatabase.ts';
 import { RegisterImportContextProcess } from './importContext.ts';
 import { ValidateOwnershipData } from './licensing.ts';
@@ -109,17 +110,11 @@ async function DefineRoomDeviceWearablePart(
 
 	// Load and verify graphics
 	if (def.graphics) {
-		const graphics = await LoadAssetsGraphics(join(AssetSourcePath, def.graphics), propertiesValidationMetadata.getModuleNames());
-
-		const loggerGraphics = logger.prefixMessages('[Graphics]');
-
-		for (let i = 0; i < graphics.layers.length; i++) {
-			const layer = graphics.layers[i];
-
-			if (layer.colorizationKey != null && !colorizationKeys.has(layer.colorizationKey)) {
-				loggerGraphics.warning(`Layer #${i} has colorizationKey ${layer.colorizationKey} outside of defined colorization keys [${[...colorizationKeys].join(', ')}]`);
-			}
-		}
+		const graphics = await LoadAssetsGraphics(
+			join(AssetSourcePath, def.graphics),
+			propertiesValidationMetadata.getModuleNames(),
+			colorizationKeys,
+		);
 
 		GraphicsDatabase.registerAsset(id, graphics);
 	}

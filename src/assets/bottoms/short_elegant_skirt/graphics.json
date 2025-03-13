@@ -6,6 +6,21 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"type": "alphaImageMesh",
+			"name": "Front",
+			"priority": "ABOVE_BODY",
+			"points": "skirt_short",
+			"mirror": 0,
+			"image": {
+				"image": "alpha_short_elegant_skirt.png",
+				"overrides": []
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "mesh",
 			"name": "Front",
 			"priority": "ABOVE_BODY",
@@ -27,8 +42,22 @@
 							]
 						]
 					}
-				],
-				"alphaImage": "alpha_short_elegant_skirt.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "alphaImageMesh",
+			"name": "Back",
+			"priority": "BELOW_BODY",
+			"points": "skirt_short",
+			"mirror": 0,
+			"image": {
+				"image": "alpha_short_elegant_skirt.png",
+				"overrides": []
 			}
 		},
 		{
@@ -57,8 +86,7 @@
 							]
 						]
 					}
-				],
-				"alphaImage": "alpha_short_elegant_skirt.png"
+				]
 			}
 		}
 	]

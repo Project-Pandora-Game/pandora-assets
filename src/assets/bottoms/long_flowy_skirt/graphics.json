@@ -6,6 +6,21 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"type": "alphaImageMesh",
+			"name": "Front",
+			"priority": "ABOVE_BODY",
+			"points": "skirt_long",
+			"mirror": 0,
+			"image": {
+				"image": "alpha_long_flowy_skirt.png",
+				"overrides": []
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "mesh",
 			"name": "Front",
 			"priority": "ABOVE_BODY",
@@ -14,8 +29,22 @@
 			"colorizationKey": "skirt",
 			"image": {
 				"image": "long_flowy_skirt_front.png",
-				"overrides": [],
-				"alphaImage": "alpha_long_flowy_skirt.png"
+				"overrides": []
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "alphaImageMesh",
+			"name": "Back",
+			"priority": "BELOW_BODY",
+			"points": "skirt_long",
+			"mirror": 0,
+			"image": {
+				"image": "alpha_long_flowy_skirt.png",
+				"overrides": []
 			}
 		},
 		{
@@ -31,8 +60,7 @@
 			"colorizationKey": "skirt",
 			"image": {
 				"image": "long_flowy_skirt_back.png",
-				"overrides": [],
-				"alphaImage": "alpha_long_flowy_skirt.png"
+				"overrides": []
 			}
 		}
 	]

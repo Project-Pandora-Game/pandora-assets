@@ -6,19 +6,42 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "alphaImageMesh",
 			"name": "body mask",
 			"priority": "BODY",
 			"points": "body",
 			"mirror": 0,
-			"colorizationKey": "shoe",
 			"image": {
-				"image": "",
-				"overrides": [],
-				"alphaImage": "alpha_heels.png",
-				"alphaOverrides": [
+				"image": "alpha_heels.png",
+				"overrides": [
 					{
 						"image": "alpha_heels_back.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "alphaImageMesh",
+			"name": "front",
+			"priority": "ABOVE_BODY",
+			"points": "body",
+			"mirror": 0,
+			"image": {
+				"image": "alpha_heels.png",
+				"overrides": [
+					{
+						"image": "",
 						"condition": [
 							[
 								{
@@ -62,19 +85,6 @@
 									"module": "bootType",
 									"operator": "=",
 									"value": "thigh"
-								}
-							]
-						]
-					}
-				],
-				"alphaImage": "alpha_heels.png",
-				"alphaOverrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
 								}
 							]
 						]
@@ -145,6 +155,32 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"type": "alphaImageMesh",
+			"name": "back",
+			"priority": "BELOW_BODY",
+			"points": "body",
+			"mirror": 0,
+			"image": {
+				"image": "alpha_heels_back.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"view": "front"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "mesh",
 			"name": "back",
 			"priority": "BELOW_BODY",
@@ -172,19 +208,6 @@
 									"module": "bootType",
 									"operator": "=",
 									"value": "thigh"
-								}
-							]
-						]
-					}
-				],
-				"alphaImage": "alpha_heels_back.png",
-				"alphaOverrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
 								}
 							]
 						]
