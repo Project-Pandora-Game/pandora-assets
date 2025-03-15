@@ -56,6 +56,11 @@ DefineAsset({
 								},
 							],
 						},
+						attributes: {
+							provides: [
+								'Rope_above_knees_anchor_point',
+							],
+						},
 					},
 				},
 				{
@@ -89,6 +94,7 @@ DefineAsset({
 						},
 						attributes: {
 							provides: [
+								'Rope_above_knees_anchor_point',
 								'Rope_thighs_anchor_point',
 							],
 						},
@@ -125,6 +131,7 @@ DefineAsset({
 						},
 						attributes: {
 							provides: [
+								'Rope_above_knees_anchor_point',
 								'Rope_thighs_anchor_point',
 							],
 						},

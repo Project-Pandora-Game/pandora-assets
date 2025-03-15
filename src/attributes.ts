@@ -739,6 +739,11 @@ const ATTRIBUTES_DEFINITION_BASE = DefineAttributes({
 		description: 'A rope over thighs to which a connecting rope can be tied',
 		useAsAssetPreference: false,
 	},
+	Rope_above_knees_anchor_point: {
+		name: 'Above Knees rope',
+		description: 'A rope over knees to which a connecting rope can be tied',
+		useAsAssetPreference: false,
+	},
 	Rope_ankles_anchor_point: {
 		name: 'Ankle rope',
 		description: 'A rope over ankles to which a connecting rope can be tied',
