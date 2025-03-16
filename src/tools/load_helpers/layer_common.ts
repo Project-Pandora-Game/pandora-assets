@@ -1,6 +1,7 @@
-import type { LayerImageOverride, LayerImageSetting } from 'pandora-common';
-import { DefineImageResource, type IImageResource } from '../resources.ts';
+import type { Immutable } from 'immer';
+import { CloneDeepMutable, type LayerImageOverride, type LayerImageSetting } from 'pandora-common';
 import { GENERATED_RESOLUTIONS } from '../graphicsConstants.ts';
+import { DefineImageResource, type IImageResource } from '../resources.ts';
 
 export function LoadLayerImageResource(image: string): IImageResource {
 	return DefineImageResource(image, 'asset', 'png');
@@ -22,7 +23,7 @@ export function LoadLayerImage(image: string, imageTrimArea: LayerImageTrimArea)
 	return resource.resultName;
 }
 
-export function ListLayerImageSettingImages(setting: LayerImageSetting): IImageResource[] {
+export function ListLayerImageSettingImages(setting: Immutable<LayerImageSetting>): IImageResource[] {
 	const resources = new Set<IImageResource>();
 
 	setting.overrides.forEach(({ image }) => {
@@ -38,11 +39,12 @@ export function ListLayerImageSettingImages(setting: LayerImageSetting): IImageR
 	return Array.from(resources);
 }
 
-export function LoadLayerImageSetting(setting: LayerImageSetting, imageTrimArea: LayerImageTrimArea): LayerImageSetting {
+export function LoadLayerImageSetting(setting: Immutable<LayerImageSetting>, imageTrimArea: LayerImageTrimArea): LayerImageSetting {
 	const overrides: LayerImageOverride[] = setting.overrides
-		.map((override) => ({
-			...override,
+		.map((override): LayerImageOverride => ({
 			image: override.image && LoadLayerImage(override.image, imageTrimArea),
+			uvPose: override.uvPose,
+			condition: CloneDeepMutable(override.condition),
 		}));
 	return {
 		...setting,

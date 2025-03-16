@@ -7,6 +7,7 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
+			"name": "",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"previewOverrides": {
@@ -25,6 +26,7 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
+			"name": "",
 			"priority": "BODY",
 			"points": "static",
 			"previewOverrides": {
@@ -56,6 +58,7 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
+			"name": "",
 			"priority": "BODY",
 			"points": "static",
 			"previewOverrides": {

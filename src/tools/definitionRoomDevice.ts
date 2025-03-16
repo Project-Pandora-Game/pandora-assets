@@ -5,7 +5,7 @@ import { join } from 'path';
 import { OPTIMIZE_TEXTURES } from '../constants.ts';
 import { AssetDatabase } from './assetDatabase.ts';
 import { AssetSourcePath, DefaultId } from './context.ts';
-import { LoadAssetsGraphics } from './graphics.ts';
+import { LoadAssetGraphicsFile } from './graphics.ts';
 import { GENERATED_RESOLUTIONS } from './graphicsConstants.ts';
 import { GraphicsDatabase } from './graphicsDatabase.ts';
 import { RegisterImportContextProcess } from './importContext.ts';
@@ -110,13 +110,13 @@ async function DefineRoomDeviceWearablePart(
 
 	// Load and verify graphics
 	if (def.graphics) {
-		const graphics = await LoadAssetsGraphics(
+		const { graphics, graphicsSource } = await LoadAssetGraphicsFile(
 			join(AssetSourcePath, def.graphics),
 			propertiesValidationMetadata.getModuleNames(),
 			colorizationKeys,
 		);
 
-		GraphicsDatabase.registerAsset(id, graphics);
+		GraphicsDatabase.registerAssetGraphics(id, graphics, graphicsSource);
 	}
 	AssetDatabase.registerAsset(id, asset);
 

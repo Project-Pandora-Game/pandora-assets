@@ -1,6 +1,5 @@
 import { Immutable } from 'immer';
 import {
-	AssetGraphicsDefinition,
 	CloneDeepMutable,
 	Logger,
 	MakeMirroredPoints,
@@ -9,10 +8,11 @@ import {
 	PointMatchesPointType,
 	PointTemplate,
 	PointTemplateDiff,
+	type AssetSourceGraphicsDefinition,
 } from 'pandora-common';
 import { GraphicsDatabase } from '../graphicsDatabase.ts';
 
-export function AssetGraphicsValidate(definition: AssetGraphicsDefinition, logger: Logger, colorizationKeys: ReadonlySet<string>): void {
+export function AssetGraphicsValidate(definition: AssetSourceGraphicsDefinition, logger: Logger, colorizationKeys: ReadonlySet<string>): void {
 	for (let layerIndex = 0; layerIndex < definition.layers.length; layerIndex++) {
 		const layer = definition.layers[layerIndex];
 		const layerLogger = logger.prefixMessages(`Layer #${layerIndex} (${layer.name ?? '[UNNAMED]'}): `);

@@ -4,7 +4,7 @@ import { AssetId, GetLogger, PersonalAssetDefinition } from 'pandora-common';
 import { join } from 'path';
 import { AssetDatabase } from './assetDatabase.ts';
 import { AssetSourcePath, DefaultId } from './context.ts';
-import { LoadAssetsGraphics } from './graphics.ts';
+import { LoadAssetGraphicsFile } from './graphics.ts';
 import { GraphicsDatabase } from './graphicsDatabase.ts';
 import { RegisterImportContextProcess } from './importContext.ts';
 import { ValidateOwnershipData } from './licensing.ts';
@@ -116,13 +116,13 @@ async function GlobalDefineAssetProcess(def: IntermediatePersonalAssetDefinition
 
 	// Load and verify graphics
 	if (def.graphics) {
-		const graphics = await LoadAssetsGraphics(
+		const { graphics, graphicsSource } = await LoadAssetGraphicsFile(
 			join(AssetSourcePath, def.graphics),
 			Object.keys(asset.modules ?? {}),
 			new Set(Object.keys(colorization ?? {})),
 		);
 
-		GraphicsDatabase.registerAsset(id, graphics);
+		GraphicsDatabase.registerAssetGraphics(id, graphics, graphicsSource);
 	}
 	AssetDatabase.registerAsset(id, asset);
 }

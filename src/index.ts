@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import ignore from 'ignore';
-import { AssetsDefinitionFile, AssetsGraphicsDefinitionFile, GetLogger, LogLevel, SetConsoleOutput, logConfig } from 'pandora-common';
+import { AssetsDefinitionFile, GetLogger, LogLevel, SetConsoleOutput, logConfig, type GraphicsDefinitionFile, type GraphicsSourceDefinitionFile } from 'pandora-common';
 import { join, relative } from 'path';
 import { pathToFileURL } from 'url';
 import { LoadAttributeNameValidation, LoadAttributes } from './attributes.ts';
@@ -181,8 +181,11 @@ async function Run() {
 
 	logger.info('Exporting result...');
 
-	const graphics: AssetsGraphicsDefinitionFile = GraphicsDatabase.export();
+	const graphics: GraphicsDefinitionFile = GraphicsDatabase.export();
 	const graphicsFile = DefineResourceInline('graphics.json', JSON.stringify(graphics));
+
+	const graphicsSource: GraphicsSourceDefinitionFile = GraphicsDatabase.exportSource();
+	const graphicsSourceFile = DefineResourceInline('graphicsSource.json', JSON.stringify(graphicsSource));
 
 	const definitions: AssetsDefinitionFile = {
 		assets: AssetDatabase.export(),
@@ -192,6 +195,7 @@ async function Run() {
 		backgroundTags: tags,
 		backgrounds: RoomDatabase.export(),
 		graphicsId: graphicsFile.hash,
+		graphicsSourceId: graphicsSourceFile.hash,
 		attributes,
 		randomization: APPEARANCE_RANDOMIZATION_CONFIG,
 		characterModifierTemplates,
