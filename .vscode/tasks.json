@@ -65,6 +65,11 @@
 				"kind": "build",
 				"isDefault": true
 			},
+			"options": {
+				"env": {
+					"COREPACK_ENABLE_DOWNLOAD_PROMPT": "0"
+				}
+			},
 			"problemMatcher": "$tsc"
 		},
 		{
@@ -83,6 +88,11 @@
 				"panel": "shared",
 				"showReuseMessage": true,
 				"clear": true
+			},
+			"options": {
+				"env": {
+					"COREPACK_ENABLE_DOWNLOAD_PROMPT": "0"
+				}
 			},
 			"problemMatcher": {
 				"base": "$tsc",
