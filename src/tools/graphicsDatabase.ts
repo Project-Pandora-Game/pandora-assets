@@ -1,5 +1,5 @@
 import { Immutable } from 'immer';
-import { AssetGraphicsDefinition, AssetId, GetLogger, PointTemplate, type AssetSourceGraphicsDefinition, type GraphicsDefinitionFile, type GraphicsSourceDefinitionFile } from 'pandora-common';
+import { AssetGraphicsDefinition, AssetId, GetLogger, PointTemplate, type AssetSourceGraphicsInfo, type GraphicsDefinitionFile, type GraphicsSourceDefinitionFile } from 'pandora-common';
 import { GENERATE_AVIF } from '../constants.ts';
 import { AVIF_SUFFIX } from './resources.ts';
 
@@ -8,7 +8,7 @@ const logger = GetLogger('GraphicsDatabase');
 export const GraphicsDatabase = new class GraphicsDatabase {
 	private assets: Map<AssetId, {
 		graphics: AssetGraphicsDefinition;
-		graphicsSource: AssetSourceGraphicsDefinition;
+		graphicsSource: AssetSourceGraphicsInfo;
 	}> = new Map();
 	private _templates: Map<string, PointTemplate> = new Map();
 
@@ -16,7 +16,7 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 		return this._templates;
 	}
 
-	public registerAssetGraphics(id: AssetId, graphics: AssetGraphicsDefinition, graphicsSource: AssetSourceGraphicsDefinition): void {
+	public registerAssetGraphics(id: AssetId, graphics: AssetGraphicsDefinition, graphicsSource: AssetSourceGraphicsInfo): void {
 		if (this.assets.has(id)) {
 			throw new Error(`Duplicate asset definition, asset graphics '${id}' already exists`);
 		}
@@ -67,7 +67,7 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 		for (const [name, template] of this._templates.entries()) {
 			pointTemplates[name] = template;
 		}
-		const assets: Record<AssetId, AssetSourceGraphicsDefinition> = {};
+		const assets: Record<AssetId, AssetSourceGraphicsInfo> = {};
 		for (const [id, data] of this.assets.entries()) {
 			assets[id] = data.graphicsSource;
 		}

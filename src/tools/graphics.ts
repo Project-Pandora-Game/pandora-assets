@@ -12,6 +12,7 @@ import {
 	ModuleNameSchema,
 	SCHEME_OVERRIDE,
 	type AssetSourceGraphicsDefinition,
+	type AssetSourceGraphicsInfo,
 	type GraphicsBuildContext,
 } from 'pandora-common';
 import { relative } from 'path';
@@ -25,7 +26,7 @@ import { WatchFile } from './watch.ts';
 
 export async function LoadAssetGraphicsFile(path: string, assetModules: readonly string[], colorizationKeys: ReadonlySet<string>): Promise<{
 	graphics: AssetGraphicsDefinition;
-	graphicsSource: AssetSourceGraphicsDefinition;
+	graphicsSource: AssetSourceGraphicsInfo;
 }> {
 	const logger = GetLogger('GraphicsValidation').prefixMessages(`Graphics definition '${relative(SRC_DIR, path)}':\n\t`);
 
@@ -78,13 +79,23 @@ export async function LoadAssetGraphicsFile(path: string, assetModules: readonly
 
 	AssetGraphicsValidate(graphicsSource, logger, colorizationKeys);
 
+	const { graphics, originalImagesMap } = await LoadAssetGraphics(graphicsSource, logger);
+
 	return {
-		graphics: await LoadAssetGraphics(graphicsSource, logger),
-		graphicsSource,
+		graphics,
+		graphicsSource: {
+			definition: graphicsSource,
+			originalImagesMap,
+		},
 	};
 }
 
-async function LoadAssetGraphics(source: Immutable<AssetSourceGraphicsDefinition>, logger: Logger): Promise<AssetGraphicsDefinition> {
+async function LoadAssetGraphics(source: Immutable<AssetSourceGraphicsDefinition>, logger: Logger): Promise<{
+	graphics: AssetGraphicsDefinition;
+	originalImagesMap: Record<string, string>;
+}> {
+	const originalImagesMap: Record<string, string> = {};
+
 	const assetLoadContext: GraphicsBuildContext = {
 		generateOptimizedTextures: OPTIMIZE_TEXTURES,
 		generateResolutions: GENERATED_RESOLUTIONS,
@@ -94,10 +105,19 @@ async function LoadAssetGraphics(source: Immutable<AssetSourceGraphicsDefinition
 		bufferToBase64(buffer) {
 			return Buffer.from(buffer).toString('base64');
 		},
-		loadImage: LoadLayerImageResource,
+		loadImage(image) {
+			const resource = LoadLayerImageResource(image);
+			originalImagesMap[image] = resource.resultName;
+			return resource;
+		},
 	};
 
+	const layers = await Promise.all(source.layers.map((l) => LoadAssetLayer(l, assetLoadContext, logger)));
+
 	return {
-		layers: await Promise.all(source.layers.map((l) => LoadAssetLayer(l, assetLoadContext, logger))),
+		graphics: {
+			layers,
+		},
+		originalImagesMap,
 	};
 }
