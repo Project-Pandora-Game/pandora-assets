@@ -2,7 +2,7 @@ import { createHash } from 'crypto';
 import { readFileSync, statSync } from 'fs';
 import { copyFile, readdir, stat, unlink, writeFile } from 'fs/promises';
 import { availableParallelism } from 'os';
-import { Assert, GetLogger, SplitStringFirstOccurrence } from 'pandora-common';
+import { Assert, GetLogger, SplitStringFirstOccurrence, type GraphicsBuildImageResource, type ImageBoundingBox } from 'pandora-common';
 import { basename, join } from 'path';
 import sharp, { type AvifOptions, type Sharp } from 'sharp';
 import { GENERATE_AVIF } from '../constants.ts';
@@ -75,28 +75,12 @@ export abstract class Resource {
 	}
 }
 
-export interface ImageBoundingBox {
-	left: number;
-	top: number;
-	rightExclusive: number;
-	bottomExclusive: number;
-	width: number;
-	height: number;
-}
+export interface IImageResource extends Resource, GraphicsBuildImageResource {
+	loadImageSharp(): Sharp | Promise<Sharp>;
 
-export interface IImageResource extends Resource {
-	/**
-	 * Cut part of the image. Coordinates should be passed in range [0, 1] and will be sized relative to the image size.
-	 */
 	addCutImageRelative(left: number, top: number, right: number, bottom: number): IImageResource;
-
 	addResizedImage(maxWidth: number, maxHeight: number, suffix: string): IImageResource;
 	addDownscaledImage(resolution: number): IImageResource;
-	addSizeCheck(exactWidth: number, exactHeight: number): void;
-
-	getContentBoundingBox(): Promise<ImageBoundingBox>;
-
-	loadImageSharp(): Sharp | Promise<Sharp>;
 }
 
 class FileResource extends Resource {
