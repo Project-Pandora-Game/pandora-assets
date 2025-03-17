@@ -124,8 +124,7 @@ DefineAsset({
 					properties: {
 						poseLimits: {
 							legs: 'kneeling',
-							bones:
-							{
+							bones: {
 								leg_l: [[-27, 5]],
 								leg_r: [[-27, 5]],
 							},
