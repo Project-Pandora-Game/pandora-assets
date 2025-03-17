@@ -1,5 +1,6 @@
 import * as fs from 'fs';
 import ignore from 'ignore';
+import type { Immutable } from 'immer';
 import { AssetsDefinitionFile, GetLogger, LogLevel, SetConsoleOutput, logConfig, type GraphicsDefinitionFile, type GraphicsSourceDefinitionFile } from 'pandora-common';
 import { join, relative } from 'path';
 import { pathToFileURL } from 'url';
@@ -181,10 +182,10 @@ async function Run() {
 
 	logger.info('Exporting result...');
 
-	const graphics: GraphicsDefinitionFile = GraphicsDatabase.export();
+	const graphics: Immutable<GraphicsDefinitionFile> = GraphicsDatabase.export();
 	const graphicsFile = DefineResourceInline('graphics.json', JSON.stringify(graphics));
 
-	const graphicsSource: GraphicsSourceDefinitionFile = GraphicsDatabase.exportSource();
+	const graphicsSource: Immutable<GraphicsSourceDefinitionFile> = GraphicsDatabase.exportSource();
 	const graphicsSourceFile = DefineResourceInline('graphicsSource.json', JSON.stringify(graphicsSource));
 
 	const definitions: AssetsDefinitionFile = {

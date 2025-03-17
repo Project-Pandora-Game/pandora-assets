@@ -7,8 +7,8 @@ const logger = GetLogger('GraphicsDatabase');
 
 export const GraphicsDatabase = new class GraphicsDatabase {
 	private assets: Map<AssetId, {
-		graphics: AssetGraphicsDefinition;
-		graphicsSource: AssetSourceGraphicsInfo;
+		graphics: Immutable<AssetGraphicsDefinition>;
+		graphicsSource: Immutable<AssetSourceGraphicsInfo>;
 	}> = new Map();
 	private _templates: Map<string, PointTemplate> = new Map();
 
@@ -16,7 +16,11 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 		return this._templates;
 	}
 
-	public registerAssetGraphics(id: AssetId, graphics: AssetGraphicsDefinition, graphicsSource: AssetSourceGraphicsInfo): void {
+	public registerAssetGraphics(
+		id: AssetId,
+		graphics: Immutable<AssetGraphicsDefinition>,
+		graphicsSource: Immutable<AssetSourceGraphicsInfo>,
+	): void {
 		if (this.assets.has(id)) {
 			throw new Error(`Duplicate asset definition, asset graphics '${id}' already exists`);
 		}
@@ -42,12 +46,12 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 		return this._templates.has(name);
 	}
 
-	public export(): GraphicsDefinitionFile {
+	public export(): Immutable<GraphicsDefinitionFile> {
 		const pointTemplates: Record<string, PointTemplate> = {};
 		for (const [name, template] of this._templates.entries()) {
 			pointTemplates[name] = template;
 		}
-		const assets: Record<AssetId, AssetGraphicsDefinition> = {};
+		const assets: Record<AssetId, Immutable<AssetGraphicsDefinition>> = {};
 		for (const [id, data] of this.assets.entries()) {
 			assets[id] = data.graphics;
 		}
@@ -62,12 +66,12 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 		};
 	}
 
-	public exportSource(): GraphicsSourceDefinitionFile {
+	public exportSource(): Immutable<GraphicsSourceDefinitionFile> {
 		const pointTemplates: Record<string, PointTemplate> = {};
 		for (const [name, template] of this._templates.entries()) {
 			pointTemplates[name] = template;
 		}
-		const assets: Record<AssetId, AssetSourceGraphicsInfo> = {};
+		const assets: Record<AssetId, Immutable<AssetSourceGraphicsInfo>> = {};
 		for (const [id, data] of this.assets.entries()) {
 			assets[id] = data.graphicsSource;
 		}

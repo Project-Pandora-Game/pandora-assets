@@ -25,7 +25,7 @@ import { AssetGraphicsValidate } from './validation/assetGraphics.ts';
 import { WatchFile } from './watch.ts';
 
 export async function LoadAssetGraphicsFile(path: string, assetModules: readonly string[], colorizationKeys: ReadonlySet<string>): Promise<{
-	graphics: AssetGraphicsDefinition;
+	graphics: Immutable<AssetGraphicsDefinition>;
 	graphicsSource: AssetSourceGraphicsInfo;
 }> {
 	const logger = GetLogger('GraphicsValidation').prefixMessages(`Graphics definition '${relative(SRC_DIR, path)}':\n\t`);
@@ -91,7 +91,7 @@ export async function LoadAssetGraphicsFile(path: string, assetModules: readonly
 }
 
 async function LoadAssetGraphics(source: Immutable<AssetSourceGraphicsDefinition>, logger: Logger): Promise<{
-	graphics: AssetGraphicsDefinition;
+	graphics: Immutable<AssetGraphicsDefinition>;
 	originalImagesMap: Record<string, string>;
 }> {
 	const originalImagesMap: Record<string, string> = {};
@@ -112,7 +112,7 @@ async function LoadAssetGraphics(source: Immutable<AssetSourceGraphicsDefinition
 		},
 	};
 
-	const layers = await Promise.all(source.layers.map((l) => LoadAssetLayer(l, assetLoadContext, logger)));
+	const layers = (await Promise.all(source.layers.map((l) => LoadAssetLayer(l, assetLoadContext, logger)))).flat();
 
 	return {
 		graphics: {
