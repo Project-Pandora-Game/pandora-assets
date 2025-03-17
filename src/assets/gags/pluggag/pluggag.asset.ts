@@ -38,14 +38,14 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			occupiedProperties: {
+			lockedProperties: {
 				blockAddRemove: true,
 			},
 		},
 		lockPlug: {
 			type: 'lockSlot',
 			name: 'Lock for the plug',
-			occupiedProperties: {
+			lockedProperties: {
 				blockModules: ['plugState'],
 			},
 		},

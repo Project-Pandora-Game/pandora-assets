@@ -34,14 +34,14 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			occupiedProperties: {
+			lockedProperties: {
 				blockAddRemove: true,
 			},
 		},
 		lockPlate: {
 			type: 'lockSlot',
 			name: 'Lock for crotch plate',
-			occupiedProperties: {
+			lockedProperties: {
 				blockModules: ['crotchPlate'],
 			},
 		},

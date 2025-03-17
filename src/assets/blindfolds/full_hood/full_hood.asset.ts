@@ -45,14 +45,14 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			occupiedProperties: {
+			lockedProperties: {
 				blockAddRemove: true,
 			},
 		},
 		lockAddons: {
 			type: 'lockSlot',
 			name: 'Lock for hood covers',
-			occupiedProperties: {
+			lockedProperties: {
 				blockModules: [
 					'hoodEyeCover',
 					'hoodMouthCover',

@@ -43,14 +43,14 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock cuffs',
-			occupiedProperties: {
+			lockedProperties: {
 				blockAddRemove: true,
 			},
 		},
 		lockChain: {
 			type: 'lockSlot',
 			name: 'Lock for cuff chain',
-			occupiedProperties: {
+			lockedProperties: {
 				blockModules: ['cuffState'],
 				stateFlags: {
 					requires: {
@@ -62,7 +62,7 @@ DefineAsset({
 		lockBar: {
 			type: 'lockSlot',
 			name: 'Lock for bar width',
-			occupiedProperties: {
+			lockedProperties: {
 				blockModules: ['barWidth'],
 				stateFlags: {
 					requires: {

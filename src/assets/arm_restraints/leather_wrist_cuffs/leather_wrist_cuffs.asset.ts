@@ -39,14 +39,14 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock for cuffs',
-			occupiedProperties: {
+			lockedProperties: {
 				blockAddRemove: true,
 			},
 		},
 		lockChain: {
 			type: 'lockSlot',
 			name: 'Lock for cuff chains',
-			occupiedProperties: {
+			lockedProperties: {
 				blockModules: ['cuffState'],
 				stateFlags: {
 					requires: {

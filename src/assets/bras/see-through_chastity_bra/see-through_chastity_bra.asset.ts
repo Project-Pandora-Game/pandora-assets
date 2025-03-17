@@ -31,14 +31,14 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
-			occupiedProperties: {
+			lockedProperties: {
 				blockAddRemove: true,
 			},
 		},
 		lockCover: {
 			type: 'lockSlot',
 			name: 'Lock for bra cover',
-			occupiedProperties: {
+			lockedProperties: {
 				blockModules: ['cover'],
 			},
 		},

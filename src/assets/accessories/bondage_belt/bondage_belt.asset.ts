@@ -34,7 +34,7 @@ DefineAsset({
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock for belt',
-			occupiedProperties: {
+			lockedProperties: {
 				blockAddRemove: true,
 			},
 		},
