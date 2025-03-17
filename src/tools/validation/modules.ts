@@ -99,9 +99,6 @@ export function ValidateLockSlotModule<TProperties, TStaticData, TPropertiesVali
 	if (moduleDefinition.emptyProperties !== undefined) {
 		metadata.validateProperties(logger, `${context}.emptyProperties`, metadata.propertiesValidationMetadata, moduleDefinition.emptyProperties);
 	}
-	if (moduleDefinition.occupiedProperties !== undefined) {
-		metadata.validateProperties(logger, `${context}.occupiedProperties`, metadata.propertiesValidationMetadata, moduleDefinition.occupiedProperties);
-	}
 	if (moduleDefinition.lockedProperties !== undefined) {
 		metadata.validateProperties(logger, `${context}.lockedProperties`, metadata.propertiesValidationMetadata, moduleDefinition.lockedProperties);
 	}
