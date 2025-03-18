@@ -38,6 +38,10 @@ export function StartHttpServer(): Promise<void> {
 		res.header('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE');
 		res.header('Access-Control-Expose-Headers', 'Content-Length');
 		res.header('Access-Control-Allow-Headers', 'Accept, Authorization, Content-Type, X-Requested-With, Range');
+
+		// This is a development server - caching is not necessary or wanted
+		res.header('Cache-Control', 'no-store');
+
 		if (req.method === 'OPTIONS') {
 			return res.sendStatus(200);
 		} else {
