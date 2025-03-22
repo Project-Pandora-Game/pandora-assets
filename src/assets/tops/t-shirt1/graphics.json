@@ -6,33 +6,27 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "base",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"bodyarm",
-				"bodyleg",
-				"leg"
+			"type": "autoMesh",
+			"name": "Front",
+			"automeshTemplate": "bodyAbove",
+			"graphicalLayers": [
+				{
+					"name": "Front",
+					"colorizationKey": "shirt"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "shirt",
-			"image": {
-				"image": "t-shirt.png",
-				"overrides": [
-					{
-						"image": "t-shirt_long.png",
-						"condition": [
-							[
-								{
-									"module": "sleeves",
-									"operator": "=",
-									"value": "long"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "sleeves"
+				}
+			],
+			"imageMap": {
+				"short": [
+					"t-shirt.png"
+				],
+				"long": [
+					"t-shirt_long.png"
 				]
 			}
 		},
@@ -123,31 +117,27 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "arms",
-			"priority": "ABOVE_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"type": "autoMesh",
+			"name": "Back",
+			"automeshTemplate": "bodyBelow",
+			"graphicalLayers": [
+				{
+					"name": "Back",
+					"colorizationKey": "shirt"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "shirt",
-			"image": {
-				"image": "t-shirt.png",
-				"overrides": [
-					{
-						"image": "t-shirt_long.png",
-						"condition": [
-							[
-								{
-									"module": "sleeves",
-									"operator": "=",
-									"value": "long"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "sleeves"
+				}
+			],
+			"imageMap": {
+				"short": [
+					"t-shirt.png"
+				],
+				"long": [
+					"t-shirt_long.png"
 				]
 			}
 		},
@@ -156,167 +146,45 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"bodyarm",
-				"bodyleg",
-				"leg"
+			"type": "autoMesh",
+			"name": "Print",
+			"automeshTemplate": "staticAboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Print",
+					"colorizationKey": "print"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "shirt",
-			"image": {
-				"image": "t-shirt.png",
-				"overrides": [
-					{
-						"image": "t-shirt_long.png",
-						"condition": [
-							[
-								{
-									"module": "sleeves",
-									"operator": "=",
-									"value": "long"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "back_arms",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "prints"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "shirt",
-			"image": {
-				"image": "t-shirt.png",
-				"overrides": [
-					{
-						"image": "t-shirt_long.png",
-						"condition": [
-							[
-								{
-									"module": "sleeves",
-									"operator": "=",
-									"value": "long"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "print",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "print",
-			"image": {
-				"image": "t-shirt_print_kissing_smilie.png",
-				"overrides": [
-					{
-						"image": "t-shirt_print_crown.png",
-						"condition": [
-							[
-								{
-									"module": "prints",
-									"operator": "=",
-									"value": "crown"
-								}
-							]
-						]
-					},
-					{
-						"image": "t-shirt_print_afk.png",
-						"condition": [
-							[
-								{
-									"module": "prints",
-									"operator": "=",
-									"value": "afk"
-								}
-							]
-						]
-					},
-					{
-						"image": "t-shirt_print_cathead.png",
-						"condition": [
-							[
-								{
-									"module": "prints",
-									"operator": "=",
-									"value": "catHead"
-								}
-							]
-						]
-					},
-					{
-						"image": "t-shirt_print_cc.png",
-						"condition": [
-							[
-								{
-									"module": "prints",
-									"operator": "=",
-									"value": "cc"
-								}
-							]
-						]
-					},
-					{
-						"image": "t-shirt_print_flogger.png",
-						"condition": [
-							[
-								{
-									"module": "prints",
-									"operator": "=",
-									"value": "flogger"
-								}
-							]
-						]
-					},
-					{
-						"image": "t-shirt_print_sittingcat.png",
-						"condition": [
-							[
-								{
-									"module": "prints",
-									"operator": "=",
-									"value": "sittingCat"
-								}
-							]
-						]
-					},
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "prints",
-									"operator": "=",
-									"value": "noPrint"
-								}
-							]
-						]
-					}
+			"imageMap": {
+				"crown": [
+					"t-shirt_print_crown.png"
+				],
+				"kissingSmilie": [
+					"t-shirt_print_kissing_smilie.png"
+				],
+				"afk": [
+					"t-shirt_print_afk.png"
+				],
+				"cc": [
+					"t-shirt_print_cc.png"
+				],
+				"catHead": [
+					"t-shirt_print_cathead.png"
+				],
+				"sittingCat": [
+					"t-shirt_print_sittingcat.png"
+				],
+				"flogger": [
+					"t-shirt_print_flogger.png"
+				],
+				"noPrint": [
+					""
 				]
 			}
 		}

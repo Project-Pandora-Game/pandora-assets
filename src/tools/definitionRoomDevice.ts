@@ -1,6 +1,6 @@
 import { freeze } from 'immer';
 import { cloneDeep, omit, pick } from 'lodash-es';
-import { Assert, AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition, type ImageBoundingBox } from 'pandora-common';
+import { Assert, AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition, type AssetModuleDefinition, type ImageBoundingBox } from 'pandora-common';
 import { join } from 'path';
 import { OPTIMIZE_TEXTURES } from '../constants.ts';
 import { AssetDatabase } from './assetDatabase.ts';
@@ -65,6 +65,8 @@ async function DefineRoomDeviceWearablePart(
 	baseId: AssetId,
 	slot: string,
 	def: IntermediateRoomDeviceWearablePartDefinition,
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	modules: Record<string, AssetModuleDefinition<unknown, any>> | undefined,
 	colorizationKeys: ReadonlySet<string>,
 	propertiesValidationMetadata: RoomDevicePropertiesValidationMetadata,
 	preview: string | null,
@@ -112,7 +114,7 @@ async function DefineRoomDeviceWearablePart(
 	if (def.graphics) {
 		const { graphics, graphicsSource } = await LoadAssetGraphicsFile(
 			join(AssetSourcePath, def.graphics),
-			propertiesValidationMetadata.getModuleNames(),
+			modules,
 			colorizationKeys,
 		);
 
@@ -160,7 +162,7 @@ async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDef
 	for (const [k, v] of Object.entries(def.slots)) {
 		slotIds.add(k);
 
-		const slotWearableId = await DefineRoomDeviceWearablePart(id, k, v.asset, colorizationKeys, propertiesValidationMetadata, preview);
+		const slotWearableId = await DefineRoomDeviceWearablePart(id, k, v.asset, def.modules, colorizationKeys, propertiesValidationMetadata, preview);
 		if (slotWearableId == null) {
 			definitionValid = false;
 			logger.error(`Failed to process asset for slot '${k}'`);
