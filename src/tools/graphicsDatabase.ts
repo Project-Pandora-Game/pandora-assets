@@ -1,6 +1,7 @@
 import { Immutable } from 'immer';
 import { AssetGraphicsDefinition, AssetId, GetLogger, PointTemplate, type AssetSourceGraphicsInfo, type GraphicsDefinitionFile, type GraphicsSourceDefinitionFile } from 'pandora-common';
 import { GENERATE_AVIF } from '../constants.ts';
+import { AUTOMESH_TEMPLATES } from '../templates/automeshTemplates.ts';
 import { AVIF_SUFFIX } from './resources.ts';
 
 const logger = GetLogger('GraphicsDatabase');
@@ -78,6 +79,7 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 		return {
 			assets,
 			pointTemplates,
+			automeshTemplates: AUTOMESH_TEMPLATES,
 		};
 	}
 

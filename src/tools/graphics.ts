@@ -11,6 +11,7 @@ import {
 	Logger,
 	ModuleNameSchema,
 	SCHEME_OVERRIDE,
+	type AssetModuleDefinition,
 	type AssetSourceGraphicsDefinition,
 	type AssetSourceGraphicsInfo,
 	type GraphicsBuildContext,
@@ -18,16 +19,19 @@ import {
 import { relative } from 'path';
 import { z } from 'zod';
 import { OPTIMIZE_TEXTURES, SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../constants.ts';
+import { AUTOMESH_TEMPLATES } from '../templates/automeshTemplates.ts';
 import { GENERATED_RESOLUTIONS } from './graphicsConstants.ts';
 import { GraphicsDatabase } from './graphicsDatabase.ts';
 import { LoadLayerImageResource } from './load_helpers/layer_common.ts';
 import { AssetGraphicsValidate } from './validation/assetGraphics.ts';
 import { WatchFile } from './watch.ts';
 
-export async function LoadAssetGraphicsFile(path: string, assetModules: readonly string[], colorizationKeys: ReadonlySet<string>): Promise<{
-	graphics: Immutable<AssetGraphicsDefinition>;
-	graphicsSource: AssetSourceGraphicsInfo;
-}> {
+export async function LoadAssetGraphicsFile(
+	path: string,
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	modules: Record<string, AssetModuleDefinition<unknown, any>> | undefined,
+	colorizationKeys: ReadonlySet<string>,
+): Promise<{ graphics: Immutable<AssetGraphicsDefinition>; graphicsSource: AssetSourceGraphicsInfo; }> {
 	const logger = GetLogger('GraphicsValidation').prefixMessages(`Graphics definition '${relative(SRC_DIR, path)}':\n\t`);
 
 	WatchFile(path);
@@ -41,7 +45,7 @@ export async function LoadAssetGraphicsFile(path: string, assetModules: readonly
 	);
 
 	ModuleNameSchema[SCHEME_OVERRIDE]((module, ctx) => {
-		if (!assetModules.includes(module)) {
+		if (modules?.[module] == null) {
 			ctx.addIssue({
 				code: z.ZodIssueCode.custom,
 				message: `Module '${module}' is not a valid module name`,
@@ -79,7 +83,7 @@ export async function LoadAssetGraphicsFile(path: string, assetModules: readonly
 
 	AssetGraphicsValidate(graphicsSource, logger, colorizationKeys);
 
-	const { graphics, originalImagesMap } = await LoadAssetGraphics(graphicsSource, logger);
+	const { graphics, originalImagesMap } = await LoadAssetGraphics(graphicsSource, modules, logger);
 
 	return {
 		graphics,
@@ -90,10 +94,12 @@ export async function LoadAssetGraphicsFile(path: string, assetModules: readonly
 	};
 }
 
-async function LoadAssetGraphics(source: Immutable<AssetSourceGraphicsDefinition>, logger: Logger): Promise<{
-	graphics: Immutable<AssetGraphicsDefinition>;
-	originalImagesMap: Record<string, string>;
-}> {
+async function LoadAssetGraphics(
+	source: Immutable<AssetSourceGraphicsDefinition>,
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	modules: Record<string, AssetModuleDefinition<unknown, any>> | undefined,
+	logger: Logger,
+): Promise<{ graphics: Immutable<AssetGraphicsDefinition>; originalImagesMap: Record<string, string>; }> {
 	const originalImagesMap: Record<string, string> = {};
 
 	const assetLoadContext: GraphicsBuildContext = {
@@ -102,6 +108,9 @@ async function LoadAssetGraphics(source: Immutable<AssetSourceGraphicsDefinition
 		getPointTemplate(name) {
 			return GraphicsDatabase.getPointTemplate(name);
 		},
+		getAutomeshTemplate(name) {
+			return AUTOMESH_TEMPLATES[name];
+		},
 		bufferToBase64(buffer) {
 			return Buffer.from(buffer).toString('base64');
 		},
@@ -109,6 +118,9 @@ async function LoadAssetGraphics(source: Immutable<AssetSourceGraphicsDefinition
 			const resource = LoadLayerImageResource(image);
 			originalImagesMap[image] = resource.resultName;
 			return resource;
+		},
+		builtAssetData: {
+			modules,
 		},
 	};
 

@@ -118,7 +118,7 @@ async function GlobalDefineAssetProcess(def: IntermediatePersonalAssetDefinition
 	if (def.graphics) {
 		const { graphics, graphicsSource } = await LoadAssetGraphicsFile(
 			join(AssetSourcePath, def.graphics),
-			Object.keys(asset.modules ?? {}),
+			asset.modules,
 			new Set(Object.keys(colorization ?? {})),
 		);
 
