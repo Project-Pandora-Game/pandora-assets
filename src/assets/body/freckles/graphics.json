@@ -11,7 +11,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationKey" : "freckles",
+			"colorizationKey": "freckles",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -47,7 +47,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationKey" : "freckles",
+			"colorizationKey": "freckles",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -83,7 +83,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationKey" : "freckles",
+			"colorizationKey": "freckles",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -119,7 +119,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationKey" : "freckles",
+			"colorizationKey": "freckles",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -155,7 +155,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationKey" : "freckles",
+			"colorizationKey": "freckles",
 			"image": {
 				"image": "",
 				"overrides": [
