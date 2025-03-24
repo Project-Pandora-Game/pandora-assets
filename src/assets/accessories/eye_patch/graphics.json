@@ -29,6 +29,33 @@
 					}
 				]
 			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "patch_back",
+			"priority": "BELOW_BACK_HAIR",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "patch",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "eye_patch_back.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			}
 		}
 	]
 }
