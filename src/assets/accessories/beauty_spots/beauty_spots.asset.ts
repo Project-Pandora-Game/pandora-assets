@@ -3,7 +3,7 @@ DefineAsset({
 	size: 'small',
 	graphics: 'graphics.json',
 	colorization: {
-		nails: {
+		spots: {
 			name: 'Spots',
 			default: '#202020',
 		},
@@ -28,12 +28,10 @@ DefineAsset({
 				{
 					id: 'left',
 					name: 'Left',
-					default: true,
 				},
 				{
 					id: 'right',
 					name: 'Right',
-					default: true,
 				},
 			],
 		},
@@ -49,12 +47,10 @@ DefineAsset({
 				{
 					id: 'left',
 					name: 'Left',
-					default: true,
 				},
 				{
 					id: 'right',
 					name: 'Right',
-					default: true,
 				},
 			],
 		},
@@ -70,12 +66,10 @@ DefineAsset({
 				{
 					id: 'left',
 					name: 'Left',
-					default: true,
 				},
 				{
 					id: 'right',
 					name: 'Right',
-					default: true,
 				},
 			],
 		},
