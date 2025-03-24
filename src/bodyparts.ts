@@ -3,11 +3,11 @@ import { AssetBodyPart, AssetsDefinitionFile } from 'pandora-common';
 export const BODYPART_ORDER = [
 	'base',
 	'head',
+	'skin',
 	'ears',
 	'nose',
 	'tail',
 	'blush',
-	'freckles',
 	'bodymarks',
 	'eyes',
 	'eyebrows',
@@ -33,7 +33,9 @@ const BODYPART_DEFINITIONS: Record<BodypartName, Partial<Omit<AssetBodyPart, 'na
 	blush: {
 		required: true,
 	},
-	freckles: {},
+	skin: {
+		allowMultiple: true,
+	},
 	bodymarks: {
 		allowMultiple: true,
 		adjustable: true,

@@ -1,6 +1,6 @@
 DefineBodypart({
 	name: 'Freckles',
-	bodypart: 'freckles',
+	bodypart: 'skin',
 	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
 	colorization: {
