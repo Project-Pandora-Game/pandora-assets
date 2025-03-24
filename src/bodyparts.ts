@@ -7,6 +7,7 @@ export const BODYPART_ORDER = [
 	'nose',
 	'tail',
 	'blush',
+	'freckles',
 	'bodymarks',
 	'eyes',
 	'eyebrows',
@@ -32,6 +33,7 @@ const BODYPART_DEFINITIONS: Record<BodypartName, Partial<Omit<AssetBodyPart, 'na
 	blush: {
 		required: true,
 	},
+	freckles: {},
 	bodymarks: {
 		allowMultiple: true,
 		adjustable: true,
