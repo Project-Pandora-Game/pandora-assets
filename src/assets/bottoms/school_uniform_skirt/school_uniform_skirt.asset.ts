@@ -6,7 +6,7 @@ DefineAsset({
 	colorization: {
 		skirt: {
 			name: 'Skirt',
-			default: '#FFFFFF',
+			default: '#072C81',
 		},
 		application: {
 			name: 'Application',
@@ -14,7 +14,7 @@ DefineAsset({
 		},
 		tartan: {
 			name: 'Tartan',
-			default: '#FFFFFF',
+			default: '#FFFFFF00',
 			minAlpha: 0.6,
 		},
 	},
