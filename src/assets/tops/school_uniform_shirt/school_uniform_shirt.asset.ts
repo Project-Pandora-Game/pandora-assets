@@ -8,6 +8,10 @@ DefineAsset({
 			name: 'Shirt',
 			default: '#FFFFFF',
 		},
+		sweater: {
+			name: 'Sweater',
+			default: '#AAAAAA',
+		},
 		cuffs: {
 			name: 'Cuffs',
 			default: '#072C81',
@@ -61,6 +65,21 @@ DefineAsset({
 				{
 					id: 'sailor',
 					name: 'Sailor Style',
+				},
+			],
+		},
+		sweater: {
+			type: 'typed',
+			name: 'With Sweater',
+			variants: [
+				{
+					id: 'no',
+					name: 'No',
+					default: true,
+				},
+				{
+					id: 'yes',
+					name: 'Yes',
 				},
 			],
 		},

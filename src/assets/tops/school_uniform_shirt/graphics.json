@@ -26,6 +26,11 @@
 						"condition": [
 							[
 								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "no"
+								},
+								{
 									"module": "sleeves",
 									"operator": "=",
 									"value": "short"
@@ -47,6 +52,11 @@
 						"image": "school_uniform_shirt_front_short_M.png",
 						"condition": [
 							[
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "no"
+								},
 								{
 									"module": "sleeves",
 									"operator": "=",
@@ -70,6 +80,11 @@
 						"condition": [
 							[
 								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "no"
+								},
+								{
 									"module": "sleeves",
 									"operator": "=",
 									"value": "short"
@@ -92,6 +107,11 @@
 						"condition": [
 							[
 								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "no"
+								},
+								{
 									"module": "sleeves",
 									"operator": "=",
 									"value": "short"
@@ -108,6 +128,11 @@
 						"image": "school_uniform_shirt_front_long_S.png",
 						"condition": [
 							[
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "no"
+								},
 								{
 									"module": "sleeves",
 									"operator": "=",
@@ -131,6 +156,11 @@
 						"condition": [
 							[
 								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "no"
+								},
+								{
 									"module": "sleeves",
 									"operator": "=",
 									"value": "long"
@@ -152,6 +182,11 @@
 						"image": "school_uniform_shirt_front_long_L.png",
 						"condition": [
 							[
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "no"
+								},
 								{
 									"module": "sleeves",
 									"operator": "=",
@@ -175,6 +210,11 @@
 						"condition": [
 							[
 								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "no"
+								},
+								{
 									"module": "sleeves",
 									"operator": "=",
 									"value": "long"
@@ -191,6 +231,209 @@
 			}
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "SweaterFront",
+			"priority": "ABOVE_BODY",
+			"points": "body",
+			"pointType": [
+				"body",
+				"bodyarm",
+				"bodyleg",
+				"leg"
+			],
+			"mirror": 0,
+			"colorizationKey": "sweater",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "school_uniform_shirt_pullunder_front.png",
+						"condition": [
+							[
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "SweaterBustFront",
+			"priority": "ABOVE_BODY",
+			"points": "body",
+			"pointType": [
+				"body",
+				"bodyarm",
+				"bodyleg",
+				"leg"
+			],
+			"mirror": 0,
+			"colorizationKey": "sweater",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "school_uniform_shirt_pullunder_bust_front_M.png",
+						"condition": [
+							[
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "yes"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": -70
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "school_uniform_shirt_pullunder_bust_front_L.png",
+						"condition": [
+							[
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "yes"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": 0
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": 100
+								}
+							]
+						]
+					},
+					{
+						"image": "school_uniform_shirt_pullunder_bust_front_XL.png",
+						"condition": [
+							[
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "yes"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": 100
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "SweaterBustFront",
+			"priority": "BELOW_BREASTS",
+			"points": "body",
+			"pointType": [
+				"body",
+				"bodyarm",
+				"bodyleg",
+				"leg"
+			],
+			"mirror": 0,
+			"colorizationKey": "sweater",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "school_uniform_shirt_pullunder_bust_back_M.png",
+						"condition": [
+							[
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "yes"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": -70
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "school_uniform_shirt_pullunder_bust_back_L.png",
+						"condition": [
+							[
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "yes"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": 0
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": 100
+								}
+							]
+						]
+					},
+					{
+						"image": "school_uniform_shirt_pullunder_bust_back_XL.png",
+						"condition": [
+							[
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "yes"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": 100
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+			{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
@@ -251,6 +494,28 @@
 									"module": "collar",
 									"operator": "=",
 									"value": "classic"
+								},
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "no"
+								}
+							]
+						]
+					},
+					{
+						"image": "school_uniform_shirt_pullunder_collar_front.png",
+						"condition": [
+							[
+								{
+									"module": "collar",
+									"operator": "=",
+									"value": "classic"
+								},
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -367,6 +632,28 @@
 									"module": "collar",
 									"operator": "=",
 									"value": "classic"
+								},
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "no"
+								}
+							]
+						]
+					},
+					{
+						"image": "school_uniform_shirt_front_tie_pullunder.png",
+						"condition": [
+							[
+								{
+									"module": "collar",
+									"operator": "=",
+									"value": "classic"
+								},
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -498,6 +785,11 @@
 						"condition": [
 							[
 								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "no"
+								},
+								{
 									"module": "sleeves",
 									"operator": "=",
 									"value": "short"
@@ -519,6 +811,11 @@
 						"image": "school_uniform_shirt_back_short_M.png",
 						"condition": [
 							[
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "no"
+								},
 								{
 									"module": "sleeves",
 									"operator": "=",
@@ -542,6 +839,11 @@
 						"condition": [
 							[
 								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "no"
+								},
+								{
 									"module": "sleeves",
 									"operator": "=",
 									"value": "short"
@@ -564,6 +866,11 @@
 						"condition": [
 							[
 								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "no"
+								},
+								{
 									"module": "sleeves",
 									"operator": "=",
 									"value": "short"
@@ -580,6 +887,11 @@
 						"image": "school_uniform_shirt_back_long_S.png",
 						"condition": [
 							[
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "no"
+								},
 								{
 									"module": "sleeves",
 									"operator": "=",
@@ -603,6 +915,11 @@
 						"condition": [
 							[
 								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "no"
+								},
+								{
 									"module": "sleeves",
 									"operator": "=",
 									"value": "long"
@@ -624,6 +941,11 @@
 						"image": "school_uniform_shirt_back_long_L.png",
 						"condition": [
 							[
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "no"
+								},
 								{
 									"module": "sleeves",
 									"operator": "=",
@@ -647,6 +969,11 @@
 						"condition": [
 							[
 								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "no"
+								},
+								{
 									"module": "sleeves",
 									"operator": "=",
 									"value": "long"
@@ -655,6 +982,41 @@
 									"bone": "breasts",
 									"operator": ">",
 									"value": 100
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "SweaterBack",
+			"priority": "BELOW_BODY",
+			"points": "body",
+			"pointType": [
+				"body",
+				"bodyarm",
+				"bodyleg",
+				"leg"
+			],
+			"mirror": 0,
+			"colorizationKey": "sweater",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "school_uniform_shirt_pullunder_back.png",
+						"condition": [
+							[
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -816,6 +1178,28 @@
 									"module": "collar",
 									"operator": "=",
 									"value": "classic"
+								},
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "no"
+								}
+							]
+						]
+					},
+					{
+						"image": "school_uniform_shirt_pullunder_collar_back.png",
+						"condition": [
+							[
+								{
+									"module": "collar",
+									"operator": "=",
+									"value": "classic"
+								},
+								{
+									"module": "sweater",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
