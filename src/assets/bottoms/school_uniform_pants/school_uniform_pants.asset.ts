@@ -1,20 +1,28 @@
 DefineAsset({
-	name: 'Pullunder',
+	name: 'School Uniform Pants',
 	size: 'medium',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: {
-		sweater: {
-			name: 'Pullunder',
-			default: '#AAAAAA',
+		pants: {
+			name: 'Pants',
+			default: '#202020',
 		},
+		buttons: {
+			name: 'Buttons',
+			default: '#E6E6E6',
+		},
+		belt: {
+			name: 'Belt',
+			default: '#834C01',
+		}
 	},
-	// size:300, y:385, centered
+	// size:680, y:610, centered
 	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Clothing',
-			'Clothing_upper',
+			'Clothing_lower',
 		],
 	},
 	ownership: {
@@ -24,7 +32,7 @@ DefineAsset({
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
-				part: 'pullunder',
+				part: 'pants',
 				source: 'Self-Made',
 				copyrightHolder: 'Taja',
 				editedBy: 'Sandrine',
