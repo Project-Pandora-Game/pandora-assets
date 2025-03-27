@@ -61,6 +61,13 @@ DefineAsset({
 					id: 'classic',
 					name: 'Classic',
 					default: true,
+					properties: {
+						stateFlags: {
+							provides: [
+								'classic_collar',
+							],
+						},
+					},
 				},
 				{
 					id: 'sailor',
@@ -80,6 +87,13 @@ DefineAsset({
 				{
 					id: 'yes',
 					name: 'Yes',
+					properties: {
+						stateFlags: {
+							requires: {
+								classic_collar: 'The sweater must only be worn with a classic collar.',
+							},
+						},
+					},
 				},
 			],
 		},
