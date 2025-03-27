@@ -15,7 +15,7 @@ DefineAsset({
 		belt: {
 			name: 'Belt',
 			default: '#834C01',
-		}
+		},
 	},
 	// size:680, y:610, centered
 	preview: 'preview.png',
