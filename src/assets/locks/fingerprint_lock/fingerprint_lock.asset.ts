@@ -1,6 +1,6 @@
 DefineLockAsset({
 	name: 'Fingerprint Lock',
-	assetPreferenceDefault: 'maybe',
+	assetPreferenceDefault: 'prevent',
 	lockSetup: {
 		fingerprint: {
 			maxFingerprints: 10,
