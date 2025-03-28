@@ -3,7 +3,6 @@ import { AssetBodyPart, AssetsDefinitionFile } from 'pandora-common';
 export const BODYPART_ORDER = [
 	'base',
 	'head',
-	'skin',
 	'ears',
 	'nose',
 	'tail',
@@ -12,6 +11,7 @@ export const BODYPART_ORDER = [
 	'eyes',
 	'eyebrows',
 	'lips',
+	'skin',
 	'sex',
 	'backhair',
 	'fronthair',
