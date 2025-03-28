@@ -1,10 +1,10 @@
 DefineAsset({
-	name: 'Beauty Spots',
+	name: 'Beauty Marks',
 	size: 'small',
 	graphics: 'graphics.json',
 	colorization: {
 		spots: {
-			name: 'Spots',
+			name: 'Marks',
 			default: '#202020',
 		},
 	},
