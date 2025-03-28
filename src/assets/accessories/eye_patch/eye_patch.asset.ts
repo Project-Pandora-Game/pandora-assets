@@ -15,9 +15,6 @@ DefineAsset({
 			'Accessory',
 		],
 	},
-	effects: {
-		blind: 4,
-	},
 	modules: {
 		direction: {
 			type: 'typed',
@@ -31,6 +28,26 @@ DefineAsset({
 				{
 					id: 'right',
 					name: 'Right',
+				},
+			],
+		},
+		blindness: {
+			type: 'typed',
+			name: 'Add Blind Eeffect',
+			variants: [
+				{
+					id: 'no',
+					name: 'No',
+					default: true,
+				},
+				{
+					id: 'yes',
+					name: 'Yes',
+					properties: {
+						effects: {
+							blind: 3,
+						},
+					},
 				},
 			],
 		},
