@@ -33,7 +33,7 @@ DefineAsset({
 		},
 		blindness: {
 			type: 'typed',
-			name: 'Add Blind Eeffect',
+			name: 'Add Blind Effect',
 			variants: [
 				{
 					id: 'no',
