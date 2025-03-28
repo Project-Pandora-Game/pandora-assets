@@ -1,20 +1,16 @@
 DefineBodypart({
-	name: 'Wings',
+	name: 'Demon Wings',
 	bodypart: 'wings',
 	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
 	colorization: {
-		feathers: {
-			name: 'Feathers',
-			default: '#FFFFFF',
-		},
 		bones: {
 			name: 'Bones',
 			default: '#FAECBF',
 		},
 		membrane: {
 			name: 'Membrane',
-			default: '#CCBA7C00',
+			default: '#D50000B3',
 			minAlpha: 0.7,
 		},
 	},
@@ -26,20 +22,6 @@ DefineBodypart({
 		],
 	},
 	modules: {
-		wingsType: {
-			type: 'typed',
-			name: 'Wings Type',
-			variants: [
-				{
-					id: 'angel',
-					name: 'Angel',
-				},
-				{
-					id: 'demon',
-					name: 'Demon',
-				},
-			],
-		},
 		wingsState: {
 			type: 'typed',
 			name: 'Wings State',
