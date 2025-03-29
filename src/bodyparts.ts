@@ -6,11 +6,13 @@ export const BODYPART_ORDER = [
 	'ears',
 	'nose',
 	'tail',
+	'wings',
 	'blush',
 	'bodymarks',
 	'eyes',
 	'eyebrows',
 	'lips',
+	'skin',
 	'sex',
 	'backhair',
 	'fronthair',
@@ -32,6 +34,9 @@ const BODYPART_DEFINITIONS: Record<BodypartName, Partial<Omit<AssetBodyPart, 'na
 	blush: {
 		required: true,
 	},
+	skin: {
+		allowMultiple: true,
+	},
 	bodymarks: {
 		allowMultiple: true,
 		adjustable: true,
@@ -51,6 +56,7 @@ const BODYPART_DEFINITIONS: Record<BodypartName, Partial<Omit<AssetBodyPart, 'na
 	tail: {
 		allowMultiple: true,
 	},
+	wings: {},
 	backhair: {
 		allowMultiple: true,
 		adjustable: true,
