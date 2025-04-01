@@ -149,6 +149,9 @@ const ATTRIBUTES_DEFINITION_BASE = DefineAttributes({
 		description: 'A texture for the body',
 		icon: 'body',
 		useAsAssetPreference: false,
+		useAsWardrobeFilter: {
+			tabs: ['body'],
+		},
 	},
 	Blush: {
 		name: 'Blush',
