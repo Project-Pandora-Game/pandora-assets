@@ -1,13 +1,7 @@
 DefineAsset({
-	name: 'Hair Brush',
+	name: 'Ruler',
 	size: 'small',
 	graphics: 'graphics.json',
-	colorization: {
-		brush: {
-			name: 'Brush',
-			default: '#DBB68F',
-		},
-	},
 	// size:400, y:217, X:0
 	preview: null, // 'preview.png',
 	attributes: {
@@ -21,52 +15,40 @@ DefineAsset({
 	modules: {
 		handUsage_r: {
 			type: 'typed',
-			name: 'Right hand brush',
+			name: 'Right hand ruler',
 			variants: [
 				{
 					id: 'no',
-					name: 'No Brush',
+					name: 'No Ruler',
 				},
 				{
-					id: 'front',
-					name: 'Front',
+					id: 'metal',
+					name: 'Metal',
+					properties: {
+						poseLimits: {
+							rightArm: {
+								fingers: 'fist',
+								rotation: 'up',
+							},
+						},
+					},
+				},
+				{
+					id: 'acryl',
+					name: 'Acryl',
+					properties: {
+						poseLimits: {
+							rightArm: {
+								fingers: 'fist',
+								rotation: 'up',
+							},
+						},
+					},
+				},
+				{
+					id: 'wood',
+					name: 'Wood',
 					default: true,
-					properties: {
-						poseLimits: {
-							rightArm: {
-								fingers: 'fist',
-								rotation: 'up',
-							},
-						},
-					},
-				},
-				{
-					id: 'back',
-					name: 'Back',
-					properties: {
-						poseLimits: {
-							rightArm: {
-								fingers: 'fist',
-								rotation: 'up',
-							},
-						},
-					},
-				},
-				{
-					id: 'inwards',
-					name: 'Inwards',
-					properties: {
-						poseLimits: {
-							rightArm: {
-								fingers: 'fist',
-								rotation: 'up',
-							},
-						},
-					},
-				},
-				{
-					id: 'outwards',
-					name: 'Outwards',
 					properties: {
 						poseLimits: {
 							rightArm: {
@@ -80,19 +62,19 @@ DefineAsset({
 		},
 		handUsage_l: {
 			type: 'typed',
-			name: 'Left hand brush',
+			name: 'Left hand Ruler',
 			variants: [
 				{
 					id: 'no',
-					name: 'No Brush',
+					name: 'No Ruler',
 					default: true,
 				},
 				{
-					id: 'front',
-					name: 'Front',
+					id: 'metal',
+					name: 'Metal',
 					properties: {
 						poseLimits: {
-							leftArm: {
+							rightArm: {
 								fingers: 'fist',
 								rotation: 'up',
 							},
@@ -100,11 +82,11 @@ DefineAsset({
 					},
 				},
 				{
-					id: 'back',
-					name: 'Back',
+					id: 'acryl',
+					name: 'Acryl',
 					properties: {
 						poseLimits: {
-							leftArm: {
+							rightArm: {
 								fingers: 'fist',
 								rotation: 'up',
 							},
@@ -112,23 +94,11 @@ DefineAsset({
 					},
 				},
 				{
-					id: 'inwards',
-					name: 'Inwards',
+					id: 'wood',
+					name: 'Wood',
 					properties: {
 						poseLimits: {
-							leftArm: {
-								fingers: 'fist',
-								rotation: 'up',
-							},
-						},
-					},
-				},
-				{
-					id: 'outwards',
-					name: 'Outwards',
-					properties: {
-						poseLimits: {
-							leftArm: {
+							rightArm: {
 								fingers: 'fist',
 								rotation: 'up',
 							},
@@ -149,7 +119,7 @@ DefineAsset({
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
-				part: 'brush',
+				part: 'ruler',
 				source: 'Self-Made',
 				copyrightHolder: 'Taja',
 				editedBy: 'Sandrine',
