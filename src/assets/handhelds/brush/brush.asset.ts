@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Hair Brush',
+	name: 'Hairbrush',
 	size: 'small',
 	graphics: 'graphics.json',
 	colorization: {
