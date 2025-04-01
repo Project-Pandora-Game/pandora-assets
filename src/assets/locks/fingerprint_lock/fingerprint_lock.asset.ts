@@ -1,14 +1,13 @@
 DefineLockAsset({
-	id: 'a/locks/timer_lock', //different for backward compatibility reasons
-	name: 'Timer Lock (48h)',
-	assetPreferenceDefault: 'maybe',
+	name: 'Fingerprint Lock',
+	assetPreferenceDefault: 'prevent',
 	lockSetup: {
-		timer: {
-			maxDuration: 2 * 24 * 60 * 60 * 1000,
+		fingerprint: {
+			maxFingerprints: 10,
 		},
 	},
 	chat: {
-		chatDescriptor: 'a timer lock',
+		chatDescriptor: 'a fingerprint lock',
 	},
 	ownership: {
 		responsibleContributor: 'Livie53 <itsalive53.cr1mson@gmail.com>',
