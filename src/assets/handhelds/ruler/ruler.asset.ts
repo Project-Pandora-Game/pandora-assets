@@ -2,8 +2,8 @@ DefineAsset({
 	name: 'Ruler',
 	size: 'small',
 	graphics: 'graphics.json',
-	// size:400, y:217, X:0
-	preview: null, // 'preview.png',
+	// size:400, y:280, X:0
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Handheld',

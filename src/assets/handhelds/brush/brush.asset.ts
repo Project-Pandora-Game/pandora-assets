@@ -9,7 +9,7 @@ DefineAsset({
 		},
 	},
 	// size:400, y:217, X:0
-	preview: null, // 'preview.png',
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Handheld',
