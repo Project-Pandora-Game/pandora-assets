@@ -1,7 +1,6 @@
 DefineAsset({
 	name: 'Bunny Cuffs',
 	size: 'small',
-	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
 		cuffs: {
