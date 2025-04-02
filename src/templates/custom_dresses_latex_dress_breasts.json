@@ -1,4 +1,18 @@
 {
+	"pointTypes": {
+		"breasts_l": {
+			"allowedPriorities": [
+				"BELOW_BREASTS",
+				"ABOVE_BODY"
+			]
+		},
+		"breasts_r": {
+			"allowedPriorities": [
+				"BELOW_BREASTS",
+				"ABOVE_BODY"
+			]
+		}
+	},
 	"points": [
 		{
 			"pos": [

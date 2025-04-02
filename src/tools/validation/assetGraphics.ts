@@ -6,9 +6,9 @@ import {
 	MakeMirroredPoints,
 	MirrorBoneLike,
 	PointDefinitionCalculated,
-	PointMatchesPointType,
 	PointTemplate,
 	PointTemplateDiff,
+	PointTypeMatchesPointTypeFilter,
 	type AssetSourceGraphicsDefinition,
 	type GraphicsSourceLayer,
 } from 'pandora-common';
@@ -68,7 +68,7 @@ export function AssetGraphicsValidateMeshLayer(layer: Extract<GraphicsSourceLaye
 		}
 
 		// Layer shouldn't define point types if all points match
-		if (calculatedPoints.every((p) => PointMatchesPointType(p, layer.pointType))) {
+		if (calculatedPoints.every((p) => PointTypeMatchesPointTypeFilter(p.pointType, layer.pointType))) {
 			logger.warning(`Layer filters for point types, but all points match anyway. Remove the unnecessary filter.`);
 		}
 	}

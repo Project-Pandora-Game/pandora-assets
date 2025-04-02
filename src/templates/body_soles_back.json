@@ -1,4 +1,18 @@
 {
+	"pointTypes": {
+		"body_l": {
+			"allowedPriorities": [
+				"BELOW_BODY_SOLES",
+				"BODY_SOLES"
+			]
+		},
+		"body_r": {
+			"allowedPriorities": [
+				"BELOW_BODY_SOLES",
+				"BODY_SOLES"
+			]
+		}
+	},
 	"points": [
 		{
 			"pos": [

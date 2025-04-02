@@ -1,4 +1,9 @@
 {
+	"pointTypes": {
+		"point": {
+			"allowedPriorities": "*"
+		}
+	},
 	"points": [
 		{
 			"pos": [
@@ -6,6 +11,7 @@
 				469
 			],
 			"mirror": true,
+			"pointType": "point",
 			"transforms": []
 		},
 		{
@@ -14,6 +20,7 @@
 				599
 			],
 			"mirror": true,
+			"pointType": "point",
 			"transforms": []
 		},
 		{
@@ -22,6 +29,7 @@
 				681
 			],
 			"mirror": true,
+			"pointType": "point",
 			"transforms": []
 		},
 		{
@@ -30,6 +38,7 @@
 				736
 			],
 			"mirror": true,
+			"pointType": "point",
 			"transforms": []
 		},
 		{
@@ -38,6 +47,7 @@
 				779
 			],
 			"mirror": true,
+			"pointType": "point",
 			"transforms": []
 		},
 		{
@@ -46,6 +56,7 @@
 				836
 			],
 			"mirror": true,
+			"pointType": "point",
 			"transforms": []
 		},
 		{
@@ -54,6 +65,7 @@
 				856
 			],
 			"mirror": false,
+			"pointType": "point",
 			"transforms": []
 		}
 	]

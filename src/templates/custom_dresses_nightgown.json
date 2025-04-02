@@ -1,4 +1,57 @@
 {
+	"pointTypes": {
+		"body": {
+			"allowedPriorities": [
+				"BELOW_BODY",
+				"BELOW_BREASTS",
+				"ABOVE_BODY"
+			]
+		},
+		"body_l": {
+			"allowedPriorities": [
+				"BELOW_BODY",
+				"BELOW_BREASTS",
+				"ABOVE_BODY"
+			]
+		},
+		"body_r": {
+			"allowedPriorities": [
+				"BELOW_BODY",
+				"BELOW_BREASTS",
+				"ABOVE_BODY"
+			]
+		},
+		"bodyarm_l": {
+			"allowedPriorities": [
+				"BELOW_BODY",
+				"BELOW_BREASTS",
+				"ABOVE_BODY",
+				"BELOW_ARM_LEFT",
+				"ABOVE_ARM_LEFT"
+			]
+		},
+		"bodyarm_r": {
+			"allowedPriorities": [
+				"BELOW_BODY",
+				"BELOW_BREASTS",
+				"ABOVE_BODY",
+				"BELOW_ARM_RIGHT",
+				"ABOVE_ARM_RIGHT"
+			]
+		},
+		"arm_l": {
+			"allowedPriorities": [
+				"BELOW_ARM_LEFT",
+				"ABOVE_ARM_LEFT"
+			]
+		},
+		"arm_r": {
+			"allowedPriorities": [
+				"BELOW_ARM_RIGHT",
+				"ABOVE_ARM_RIGHT"
+			]
+		}
+	},
 	"points": [
 		{
 			"pos": [

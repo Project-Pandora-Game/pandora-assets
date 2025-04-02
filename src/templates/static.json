@@ -1,4 +1,15 @@
 {
+	"pointTypes": {
+		"static": {
+			"allowedPriorities": "*"
+		},
+		"static_l": {
+			"allowedPriorities": "*"
+		},
+		"static_r": {
+			"allowedPriorities": "*"
+		}
+	},
 	"points": [
 		{
 			"pos": [

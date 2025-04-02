@@ -1,4 +1,24 @@
 {
+	"pointTypes": {
+		"body": {
+			"allowedPriorities": [
+				"BELOW_BODY",
+				"ABOVE_BODY"
+			]
+		},
+		"body_l": {
+			"allowedPriorities": [
+				"BELOW_BODY",
+				"ABOVE_BODY"
+			]
+		},
+		"body_r": {
+			"allowedPriorities": [
+				"BELOW_BODY",
+				"ABOVE_BODY"
+			]
+		}
+	},
 	"points": [
 		{
 			"pos": [

@@ -18,7 +18,7 @@ import {
 } from 'pandora-common';
 import { relative } from 'path';
 import { z } from 'zod';
-import { OPTIMIZE_TEXTURES, SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../config.ts';
+import { IS_PRODUCTION_BUILD, OPTIMIZE_TEXTURES, SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../config.ts';
 import { AUTOMESH_TEMPLATES } from '../templates/automeshTemplates.ts';
 import { GENERATED_RESOLUTIONS } from './graphicsConstants.ts';
 import { GraphicsDatabase } from './graphicsDatabase.ts';
@@ -103,6 +103,7 @@ async function LoadAssetGraphics(
 	const originalImagesMap: Record<string, string> = {};
 
 	const assetLoadContext: GraphicsBuildContext = {
+		runImageBasedChecks: IS_PRODUCTION_BUILD || OPTIMIZE_TEXTURES,
 		generateOptimizedTextures: OPTIMIZE_TEXTURES,
 		generateResolutions: GENERATED_RESOLUTIONS,
 		getPointTemplate(name) {

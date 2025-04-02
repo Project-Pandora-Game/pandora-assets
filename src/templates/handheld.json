@@ -1,4 +1,18 @@
 {
+	"pointTypes": {
+		"handheld_l": {
+			"allowedPriorities": [
+				"BELOW_ARM_LEFT",
+				"ABOVE_ARM_LEFT"
+			]
+		},
+		"handheld_r": {
+			"allowedPriorities": [
+				"BELOW_ARM_RIGHT",
+				"ABOVE_ARM_RIGHT"
+			]
+		}
+	},
 	"points": [
 		{
 			"pos": [
