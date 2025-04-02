@@ -1,6 +1,6 @@
 import { GetLogger, Logger } from 'pandora-common';
 import { simpleGit } from 'simple-git';
-import { BASE_DIR, IS_PRODUCTION_BUILD } from '../constants.ts';
+import { BASE_DIR, IS_PRODUCTION_BUILD } from '../config.ts';
 
 let GitDataAvailable = false;
 let Contributors = new Set<string>();

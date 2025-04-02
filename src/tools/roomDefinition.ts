@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import { isEqual } from 'lodash-es';
 import { Assert, CalculateBackgroundDataFromCalibrationData, GetLogger, RoomBackgroundCalibrationDataSchema, RoomBackgroundInfo } from 'pandora-common';
 import { join } from 'path';
-import { BACKGROUNDS_SRC_DIR } from '../constants.ts';
+import { BACKGROUNDS_SRC_DIR } from '../config.ts';
 import { SetCurrentContext } from './context.ts';
 import { GitValidateResponsibleContributor } from './git.ts';
 import { GENERATED_RESOLUTIONS } from './graphicsConstants.ts';

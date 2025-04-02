@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { CanonizePointTemplate, GetLogger, ModuleNameSchema, PointTemplate, PointTemplateSchema, SCHEME_OVERRIDE } from 'pandora-common';
 import { join, relative } from 'path';
-import { SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../constants.ts';
+import { SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../config.ts';
 import { GraphicsDatabase } from '../tools/graphicsDatabase.ts';
 import { TemplateValidate } from '../tools/validation/templates.ts';
 import { WatchFile } from '../tools/watch.ts';

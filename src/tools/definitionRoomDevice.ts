@@ -2,7 +2,7 @@ import { freeze } from 'immer';
 import { cloneDeep, omit, pick } from 'lodash-es';
 import { Assert, AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition, type AssetModuleDefinition, type ImageBoundingBox } from 'pandora-common';
 import { join } from 'path';
-import { OPTIMIZE_TEXTURES } from '../constants.ts';
+import { OPTIMIZE_TEXTURES } from '../config.ts';
 import { AssetDatabase } from './assetDatabase.ts';
 import { AssetSourcePath, DefaultId } from './context.ts';
 import { LoadAssetGraphicsFile } from './graphics.ts';

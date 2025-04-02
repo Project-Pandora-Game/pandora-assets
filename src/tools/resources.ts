@@ -5,7 +5,7 @@ import { availableParallelism } from 'os';
 import { Assert, GetLogger, SplitStringFirstOccurrence, type GraphicsBuildImageResource, type ImageBoundingBox } from 'pandora-common';
 import { basename, join } from 'path';
 import sharp, { type AvifOptions, type Sharp } from 'sharp';
-import { GENERATE_AVIF } from '../constants.ts';
+import { GENERATE_AVIF } from '../config.ts';
 import { AssetSourcePath } from './context.ts';
 import { WatchFile } from './watch.ts';
 

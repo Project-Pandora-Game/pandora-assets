@@ -18,7 +18,7 @@ import {
 } from 'pandora-common';
 import { relative } from 'path';
 import { z } from 'zod';
-import { OPTIMIZE_TEXTURES, SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../constants.ts';
+import { OPTIMIZE_TEXTURES, SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../config.ts';
 import { AUTOMESH_TEMPLATES } from '../templates/automeshTemplates.ts';
 import { GENERATED_RESOLUTIONS } from './graphicsConstants.ts';
 import { GraphicsDatabase } from './graphicsDatabase.ts';

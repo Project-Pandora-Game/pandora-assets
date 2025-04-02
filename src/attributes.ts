@@ -2,7 +2,7 @@ import { cloneDeep } from 'lodash-es';
 import { AssetAttributeDefinition, AttributeNameSchema, GetLogger, SCHEME_OVERRIDE } from 'pandora-common';
 import { join } from 'path';
 import { ZodIssueCode } from 'zod';
-import { SRC_DIR } from './constants.ts';
+import { SRC_DIR } from './config.ts';
 import { SetCurrentContext } from './tools/context.ts';
 import { DefineResource } from './tools/resources.ts';
 

@@ -3,7 +3,7 @@ import * as fs from 'fs';
 import { Server as HttpServer } from 'http';
 import { Server as HttpsServer } from 'https';
 import { GetLogger } from 'pandora-common';
-import { OUT_DIR, SERVER_BIND, SERVER_HTTPS_CERT, SERVER_HTTPS_KEY, SERVER_PORT } from '../constants.ts';
+import { OUT_DIR, SERVER_BIND, SERVER_HTTPS_CERT, SERVER_HTTPS_KEY, SERVER_PORT } from '../config.ts';
 
 const logger = GetLogger('Server');
 

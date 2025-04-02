@@ -9,7 +9,7 @@ import { LoadBackgroundTags, LoadBackgrounds } from './backgrounds/backgrounds.t
 import { BODYPARTS, ValidateBodyparts } from './bodyparts.ts';
 import { LoadBoneNameValidation, boneDefinition } from './bones.ts';
 import { LoadCharacterModifierTemplates } from './characterModifierTemplates.ts';
-import { ASSET_DEST_DIR, ASSET_SRC_DIR, BASE_DIR, IS_PRODUCTION_BUILD, OUT_DIR } from './constants.ts';
+import { ASSET_DEST_DIR, ASSET_SRC_DIR, BASE_DIR, IS_PRODUCTION_BUILD, OUT_DIR } from './config.ts';
 import { POSE_PRESETS } from './posePresets.ts';
 import { APPEARANCE_RANDOMIZATION_CONFIG } from './presets.ts';
 import { LoadTemplates } from './templates/index.ts';
