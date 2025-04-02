@@ -2,8 +2,8 @@ DefineAsset({
 	name: 'Books',
 	size: 'medium',
 	graphics: 'graphics.json',
-	// size:200, y:350, not centered
-	preview: null, // 'preview.png',
+	// size:250, y:600, centered
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Accessory',
