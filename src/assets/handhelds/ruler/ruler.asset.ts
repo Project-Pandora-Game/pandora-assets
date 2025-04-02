@@ -74,7 +74,7 @@ DefineAsset({
 					name: 'Metal',
 					properties: {
 						poseLimits: {
-							rightArm: {
+							leftArm: {
 								fingers: 'fist',
 								rotation: 'up',
 							},
@@ -86,7 +86,7 @@ DefineAsset({
 					name: 'Acryl',
 					properties: {
 						poseLimits: {
-							rightArm: {
+							leftArm: {
 								fingers: 'fist',
 								rotation: 'up',
 							},
@@ -98,7 +98,7 @@ DefineAsset({
 					name: 'Wood',
 					properties: {
 						poseLimits: {
-							rightArm: {
+							leftArm: {
 								fingers: 'fist',
 								rotation: 'up',
 							},
