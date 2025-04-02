@@ -9,7 +9,7 @@
 			"type": "mesh",
 			"name": "SkirtFront",
 			"priority": "ABOVE_BODY",
-			"points": "body",
+			"points": "skirt_short",
 			"mirror": 0,
 			"colorizationKey": "skirt",
 			"image": {
@@ -38,7 +38,7 @@
 			"type": "mesh",
 			"name": "SkirtBack",
 			"priority": "BELOW_BODY",
-			"points": "body",
+			"points": "skirt_short",
 			"mirror": 0,
 			"colorizationKey": "skirt",
 			"image": {
@@ -67,7 +67,7 @@
 			"type": "mesh",
 			"name": "SkirtApplication",
 			"priority": "ABOVE_BODY",
-			"points": "body",
+			"points": "skirt_short",
 			"mirror": 0,
 			"colorizationKey": "application",
 			"image": {
@@ -96,7 +96,7 @@
 			"type": "mesh",
 			"name": "SkirtApplicationBack",
 			"priority": "BELOW_BODY",
-			"points": "body",
+			"points": "skirt_short",
 			"mirror": 0,
 			"colorizationKey": "application",
 			"image": {
@@ -125,7 +125,7 @@
 			"type": "mesh",
 			"name": "Tartan",
 			"priority": "ABOVE_BODY",
-			"points": "body",
+			"points": "skirt_short",
 			"mirror": 0,
 			"colorizationKey": "tartan",
 			"image": {
@@ -244,7 +244,7 @@
 			"type": "mesh",
 			"name": "TartanBack",
 			"priority": "BELOW_BODY",
-			"points": "body",
+			"points": "skirt_short",
 			"mirror": 0,
 			"colorizationKey": "tartan",
 			"image": {
