@@ -1,193 +1,195 @@
-[
-	{
-		"pos": [
-			501,
-			649
-		],
-		"mirror": true,
-		"pointType": "breasts_l",
-		"transforms": [
-			{
-				"type": "shift",
-				"bone": "breasts",
-				"value": {
-					"x": -1,
-					"y": 0
-				},
-				"condition": [
-					[
-						{
-							"bone": "breasts",
-							"operator": "<",
-							"value": 18
-						}
+{
+	"points": [
+		{
+			"pos": [
+				501,
+				649
+			],
+			"mirror": true,
+			"pointType": "breasts_l",
+			"transforms": [
+				{
+					"type": "shift",
+					"bone": "breasts",
+					"value": {
+						"x": -1,
+						"y": 0
+					},
+					"condition": [
+						[
+							{
+								"bone": "breasts",
+								"operator": "<",
+								"value": 18
+							}
+						]
 					]
-				]
-			},
-			{
-				"type": "shift",
-				"bone": "breasts",
-				"value": {
-					"x": 0,
-					"y": 39
+				},
+				{
+					"type": "shift",
+					"bone": "breasts",
+					"value": {
+						"x": 0,
+						"y": 39
+					}
+				},
+				{
+					"type": "shift",
+					"bone": "breasts",
+					"value": {
+						"x": 0,
+						"y": 15
+					},
+					"condition": [
+						[
+							{
+								"bone": "breasts",
+								"operator": "<=",
+								"value": -180
+							}
+						]
+					]
 				}
-			},
-			{
-				"type": "shift",
-				"bone": "breasts",
-				"value": {
-					"x": 0,
-					"y": 15
-				},
-				"condition": [
-					[
-						{
-							"bone": "breasts",
-							"operator": "<=",
-							"value": -180
-						}
+			]
+		},
+		{
+			"pos": [
+				501,
+				449
+			],
+			"mirror": true,
+			"pointType": "breasts_l",
+			"transforms": [
+				{
+					"type": "shift",
+					"bone": "breasts",
+					"value": {
+						"x": -20,
+						"y": 0
+					},
+					"condition": [
+						[
+							{
+								"bone": "breasts",
+								"operator": "<",
+								"value": 18
+							}
+						]
 					]
-				]
-			}
-		]
-	},
-	{
-		"pos": [
-			501,
-			449
-		],
-		"mirror": true,
-		"pointType": "breasts_l",
-		"transforms": [
-			{
-				"type": "shift",
-				"bone": "breasts",
-				"value": {
-					"x": -20,
-					"y": 0
 				},
-				"condition": [
-					[
-						{
-							"bone": "breasts",
-							"operator": "<",
-							"value": 18
-						}
+				{
+					"type": "shift",
+					"bone": "breasts",
+					"value": {
+						"x": -6,
+						"y": 6
+					},
+					"condition": [
+						[
+							{
+								"bone": "breasts",
+								"operator": ">=",
+								"value": 18
+							}
+						]
 					]
-				]
-			},
-			{
-				"type": "shift",
-				"bone": "breasts",
-				"value": {
-					"x": -6,
-					"y": 6
 				},
-				"condition": [
-					[
-						{
-							"bone": "breasts",
-							"operator": ">=",
-							"value": 18
-						}
+				{
+					"type": "shift",
+					"bone": "breasts",
+					"value": {
+						"x": 0,
+						"y": -13
+					}
+				},
+				{
+					"type": "shift",
+					"bone": "breasts",
+					"value": {
+						"x": 10,
+						"y": 25
+					},
+					"condition": [
+						[
+							{
+								"bone": "breasts",
+								"operator": "<=",
+								"value": -180
+							}
+						]
 					]
-				]
-			},
-			{
-				"type": "shift",
-				"bone": "breasts",
-				"value": {
-					"x": 0,
-					"y": -13
 				}
-			},
-			{
-				"type": "shift",
-				"bone": "breasts",
-				"value": {
-					"x": 10,
-					"y": 25
+			]
+		},
+		{
+			"pos": [
+				669,
+				649
+			],
+			"mirror": true,
+			"pointType": "breasts_l",
+			"transforms": [
+				{
+					"type": "shift",
+					"bone": "breasts",
+					"value": {
+						"x": 39,
+						"y": 39
+					}
 				},
-				"condition": [
-					[
-						{
-							"bone": "breasts",
-							"operator": "<=",
-							"value": -180
-						}
+				{
+					"type": "shift",
+					"bone": "breasts",
+					"value": {
+						"x": 0,
+						"y": 15
+					},
+					"condition": [
+						[
+							{
+								"bone": "breasts",
+								"operator": "<=",
+								"value": -180
+							}
+						]
 					]
-				]
-			}
-		]
-	},
-	{
-		"pos": [
-			669,
-			649
-		],
-		"mirror": true,
-		"pointType": "breasts_l",
-		"transforms": [
-			{
-				"type": "shift",
-				"bone": "breasts",
-				"value": {
-					"x": 39,
-					"y": 39
 				}
-			},
-			{
-				"type": "shift",
-				"bone": "breasts",
-				"value": {
-					"x": 0,
-					"y": 15
+			]
+		},
+		{
+			"pos": [
+				669,
+				449
+			],
+			"mirror": true,
+			"pointType": "breasts_l",
+			"transforms": [
+				{
+					"type": "shift",
+					"bone": "breasts",
+					"value": {
+						"x": 39,
+						"y": -13
+					}
 				},
-				"condition": [
-					[
-						{
-							"bone": "breasts",
-							"operator": "<=",
-							"value": -180
-						}
+				{
+					"type": "shift",
+					"bone": "breasts",
+					"value": {
+						"x": 1,
+						"y": 25
+					},
+					"condition": [
+						[
+							{
+								"bone": "breasts",
+								"operator": "<=",
+								"value": -180
+							}
+						]
 					]
-				]
-			}
-		]
-	},
-	{
-		"pos": [
-			669,
-			449
-		],
-		"mirror": true,
-		"pointType": "breasts_l",
-		"transforms": [
-			{
-				"type": "shift",
-				"bone": "breasts",
-				"value": {
-					"x": 39,
-					"y": -13
 				}
-			},
-			{
-				"type": "shift",
-				"bone": "breasts",
-				"value": {
-					"x": 1,
-					"y": 25
-				},
-				"condition": [
-					[
-						{
-							"bone": "breasts",
-							"operator": "<=",
-							"value": -180
-						}
-					]
-				]
-			}
-		]
-	}
-]
+			]
+		}
+	]
+}

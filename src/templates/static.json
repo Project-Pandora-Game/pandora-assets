@@ -1,587 +1,589 @@
-[
-	{
-		"pos": [
-			0,
-			0
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			125,
-			0
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			250,
-			0
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			375,
-			0
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			500,
-			0
-		],
-		"mirror": false,
-		"pointType": "static",
-		"transforms": []
-	},
-	{
-		"pos": [
-			0,
-			125
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			125,
-			125
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			250,
-			125
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			375,
-			125
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			500,
-			125
-		],
-		"mirror": false,
-		"pointType": "static",
-		"transforms": []
-	},
-	{
-		"pos": [
-			0,
-			250
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			125,
-			250
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			250,
-			250
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			375,
-			250
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			500,
-			250
-		],
-		"mirror": false,
-		"pointType": "static",
-		"transforms": []
-	},
-	{
-		"pos": [
-			0,
-			375
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			125,
-			375
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			250,
-			375
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			375,
-			375
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			500,
-			375
-		],
-		"mirror": false,
-		"pointType": "static",
-		"transforms": []
-	},
-	{
-		"pos": [
-			0,
-			500
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			125,
-			500
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			250,
-			500
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			375,
-			500
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			500,
-			500
-		],
-		"mirror": false,
-		"pointType": "static",
-		"transforms": []
-	},
-	{
-		"pos": [
-			0,
-			625
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			125,
-			625
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			250,
-			625
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			375,
-			625
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			500,
-			625
-		],
-		"mirror": false,
-		"pointType": "static",
-		"transforms": []
-	},
-	{
-		"pos": [
-			0,
-			750
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			125,
-			750
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			250,
-			750
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			375,
-			750
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			500,
-			750
-		],
-		"mirror": false,
-		"pointType": "static",
-		"transforms": []
-	},
-	{
-		"pos": [
-			0,
-			875
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			125,
-			875
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			250,
-			875
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			375,
-			875
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			500,
-			875
-		],
-		"mirror": false,
-		"pointType": "static",
-		"transforms": []
-	},
-	{
-		"pos": [
-			0,
-			1000
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			125,
-			1000
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			250,
-			1000
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			375,
-			1000
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			500,
-			1000
-		],
-		"mirror": false,
-		"pointType": "static",
-		"transforms": []
-	},
-	{
-		"pos": [
-			0,
-			1125
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			125,
-			1125
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			250,
-			1125
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			375,
-			1125
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			500,
-			1125
-		],
-		"mirror": false,
-		"pointType": "static",
-		"transforms": []
-	},
-	{
-		"pos": [
-			0,
-			1250
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			125,
-			1250
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			250,
-			1250
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			375,
-			1250
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			500,
-			1250
-		],
-		"mirror": false,
-		"pointType": "static",
-		"transforms": []
-	},
-	{
-		"pos": [
-			0,
-			1375
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			125,
-			1375
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			250,
-			1375
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			375,
-			1375
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			500,
-			1375
-		],
-		"mirror": false,
-		"pointType": "static",
-		"transforms": []
-	},
-	{
-		"pos": [
-			0,
-			1500
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			125,
-			1500
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			250,
-			1500
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			375,
-			1500
-		],
-		"mirror": true,
-		"pointType": "static_r",
-		"transforms": []
-	},
-	{
-		"pos": [
-			500,
-			1500
-		],
-		"mirror": false,
-		"pointType": "static",
-		"transforms": []
-	}
-]
+{
+	"points": [
+		{
+			"pos": [
+				0,
+				0
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				125,
+				0
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				250,
+				0
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				375,
+				0
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				500,
+				0
+			],
+			"mirror": false,
+			"pointType": "static",
+			"transforms": []
+		},
+		{
+			"pos": [
+				0,
+				125
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				125,
+				125
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				250,
+				125
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				375,
+				125
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				500,
+				125
+			],
+			"mirror": false,
+			"pointType": "static",
+			"transforms": []
+		},
+		{
+			"pos": [
+				0,
+				250
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				125,
+				250
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				250,
+				250
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				375,
+				250
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				500,
+				250
+			],
+			"mirror": false,
+			"pointType": "static",
+			"transforms": []
+		},
+		{
+			"pos": [
+				0,
+				375
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				125,
+				375
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				250,
+				375
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				375,
+				375
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				500,
+				375
+			],
+			"mirror": false,
+			"pointType": "static",
+			"transforms": []
+		},
+		{
+			"pos": [
+				0,
+				500
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				125,
+				500
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				250,
+				500
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				375,
+				500
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				500,
+				500
+			],
+			"mirror": false,
+			"pointType": "static",
+			"transforms": []
+		},
+		{
+			"pos": [
+				0,
+				625
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				125,
+				625
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				250,
+				625
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				375,
+				625
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				500,
+				625
+			],
+			"mirror": false,
+			"pointType": "static",
+			"transforms": []
+		},
+		{
+			"pos": [
+				0,
+				750
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				125,
+				750
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				250,
+				750
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				375,
+				750
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				500,
+				750
+			],
+			"mirror": false,
+			"pointType": "static",
+			"transforms": []
+		},
+		{
+			"pos": [
+				0,
+				875
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				125,
+				875
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				250,
+				875
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				375,
+				875
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				500,
+				875
+			],
+			"mirror": false,
+			"pointType": "static",
+			"transforms": []
+		},
+		{
+			"pos": [
+				0,
+				1000
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				125,
+				1000
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				250,
+				1000
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				375,
+				1000
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				500,
+				1000
+			],
+			"mirror": false,
+			"pointType": "static",
+			"transforms": []
+		},
+		{
+			"pos": [
+				0,
+				1125
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				125,
+				1125
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				250,
+				1125
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				375,
+				1125
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				500,
+				1125
+			],
+			"mirror": false,
+			"pointType": "static",
+			"transforms": []
+		},
+		{
+			"pos": [
+				0,
+				1250
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				125,
+				1250
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				250,
+				1250
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				375,
+				1250
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				500,
+				1250
+			],
+			"mirror": false,
+			"pointType": "static",
+			"transforms": []
+		},
+		{
+			"pos": [
+				0,
+				1375
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				125,
+				1375
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				250,
+				1375
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				375,
+				1375
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				500,
+				1375
+			],
+			"mirror": false,
+			"pointType": "static",
+			"transforms": []
+		},
+		{
+			"pos": [
+				0,
+				1500
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				125,
+				1500
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				250,
+				1500
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				375,
+				1500
+			],
+			"mirror": true,
+			"pointType": "static_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				500,
+				1500
+			],
+			"mirror": false,
+			"pointType": "static",
+			"transforms": []
+		}
+	]
+}

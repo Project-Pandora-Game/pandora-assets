@@ -1,59 +1,59 @@
 --- body.json
 +++ custom_arm_restraints_torso_ropes.json
-@@ -211,8 +211,8 @@
- 	},
- 	{
- 		"pos": [
--			404,
--			402
-+			400,
-+			399
- 		],
- 		"mirror": true,
- 		"pointType": "arm_r",
-@@ -228,7 +228,7 @@
- 			{
- 				"type": "rotate",
- 				"bone": "arm_r",
--				"value": -0.8
-+				"value": -0.9
- 			},
- 			{
- 				"type": "shift",
-@@ -1014,8 +1014,8 @@
- 	},
- 	{
- 		"pos": [
--			381,
--			435
-+			402,
-+			447
- 		],
- 		"mirror": true,
- 		"pointType": "arm_r",
-@@ -1024,6 +1024,14 @@
- 				"type": "rotate",
- 				"bone": "arm_r",
- 				"value": -1
-+			},
-+			{
-+				"type": "shift",
-+				"bone": "arm_r",
-+				"value": {
-+					"x": -1,
-+					"y": -19
-+				}
- 			}
- 		]
- 	},
-@@ -2639,8 +2647,8 @@
- 	},
- 	{
- 		"pos": [
--			396,
--			463
-+			403,
-+			459
- 		],
- 		"mirror": true,
- 		"pointType": "arm_r",
+@@ -212,8 +212,8 @@
+ 		},
+ 		{
+ 			"pos": [
+-				404,
+-				402
++				400,
++				399
+ 			],
+ 			"mirror": true,
+ 			"pointType": "arm_r",
+@@ -229,7 +229,7 @@
+ 				{
+ 					"type": "rotate",
+ 					"bone": "arm_r",
+-					"value": -0.8
++					"value": -0.9
+ 				},
+ 				{
+ 					"type": "shift",
+@@ -1015,8 +1015,8 @@
+ 		},
+ 		{
+ 			"pos": [
+-				381,
+-				435
++				402,
++				447
+ 			],
+ 			"mirror": true,
+ 			"pointType": "arm_r",
+@@ -1025,6 +1025,14 @@
+ 					"type": "rotate",
+ 					"bone": "arm_r",
+ 					"value": -1
++				},
++				{
++					"type": "shift",
++					"bone": "arm_r",
++					"value": {
++						"x": -1,
++						"y": -19
++					}
+ 				}
+ 			]
+ 		},
+@@ -2640,8 +2648,8 @@
+ 		},
+ 		{
+ 			"pos": [
+-				396,
+-				463
++				403,
++				459
+ 			],
+ 			"mirror": true,
+ 			"pointType": "arm_r",

@@ -1,5 +1,5 @@
 import { Immutable } from 'immer';
-import { AssetGraphicsDefinition, AssetId, GetLogger, PointTemplate, type AssetSourceGraphicsInfo, type GraphicsDefinitionFile, type GraphicsSourceDefinitionFile } from 'pandora-common';
+import { AssetGraphicsDefinition, AssetId, GetLogger, PointTemplate, type AssetSourceGraphicsInfo, type GraphicsDefinitionFile, type GraphicsSourceDefinitionFile, type PointTemplateSource } from 'pandora-common';
 import { GENERATE_AVIF } from '../config.ts';
 import { AUTOMESH_TEMPLATES } from '../templates/automeshTemplates.ts';
 import { AVIF_SUFFIX } from './resources.ts';
@@ -11,11 +11,7 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 		graphics: Immutable<AssetGraphicsDefinition>;
 		graphicsSource: Immutable<AssetSourceGraphicsInfo>;
 	}> = new Map();
-	private _templates: Map<string, PointTemplate> = new Map();
-
-	public get templates(): ReadonlyMap<string, Immutable<PointTemplate>> {
-		return this._templates;
-	}
+	private _templates: Map<string, Immutable<PointTemplateSource>> = new Map();
 
 	public registerAssetGraphics(
 		id: AssetId,
@@ -30,7 +26,7 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 		logger.debug('Registered asset graphics', id);
 	}
 
-	public registerPointTemplate(name: string, template: PointTemplate): void {
+	public registerPointTemplate(name: string, template: Immutable<PointTemplateSource>): void {
 		if (this._templates.has(name)) {
 			throw new Error(`Duplicate template definition, template '${name}' already exists`);
 		}
@@ -39,7 +35,7 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 		logger.debug('Registered point template', name);
 	}
 
-	public getPointTemplate(name: string): Immutable<PointTemplate> | undefined {
+	public getPointTemplate(name: string): Immutable<PointTemplateSource> | undefined {
 		return this._templates.get(name);
 	}
 
@@ -48,9 +44,9 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 	}
 
 	public export(): Immutable<GraphicsDefinitionFile> {
-		const pointTemplates: Record<string, PointTemplate> = {};
+		const pointTemplates: Record<string, Immutable<PointTemplate>> = {};
 		for (const [name, template] of this._templates.entries()) {
-			pointTemplates[name] = template;
+			pointTemplates[name] = template.points;
 		}
 		const assets: Record<AssetId, Immutable<AssetGraphicsDefinition>> = {};
 		for (const [id, data] of this.assets.entries()) {
@@ -68,7 +64,7 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 	}
 
 	public exportSource(): Immutable<GraphicsSourceDefinitionFile> {
-		const pointTemplates: Record<string, PointTemplate> = {};
+		const pointTemplates: Record<string, Immutable<PointTemplateSource>> = {};
 		for (const [name, template] of this._templates.entries()) {
 			pointTemplates[name] = template;
 		}
