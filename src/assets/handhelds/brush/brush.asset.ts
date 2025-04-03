@@ -35,7 +35,7 @@ DefineAsset({
 						poseLimits: {
 							rightArm: {
 								fingers: 'fist',
-								rotation: 'up',
+								rotation: ['up', 'down'],
 							},
 						},
 					},
@@ -47,7 +47,7 @@ DefineAsset({
 						poseLimits: {
 							rightArm: {
 								fingers: 'fist',
-								rotation: 'up',
+								rotation: ['up', 'down'],
 							},
 						},
 					},
@@ -59,7 +59,7 @@ DefineAsset({
 						poseLimits: {
 							rightArm: {
 								fingers: 'fist',
-								rotation: 'up',
+								rotation: ['up', 'down'],
 							},
 						},
 					},
@@ -71,7 +71,7 @@ DefineAsset({
 						poseLimits: {
 							rightArm: {
 								fingers: 'fist',
-								rotation: 'up',
+								rotation: ['up', 'down'],
 							},
 						},
 					},
@@ -94,7 +94,7 @@ DefineAsset({
 						poseLimits: {
 							leftArm: {
 								fingers: 'fist',
-								rotation: 'up',
+								rotation: ['up', 'down'],
 							},
 						},
 					},
@@ -106,7 +106,7 @@ DefineAsset({
 						poseLimits: {
 							leftArm: {
 								fingers: 'fist',
-								rotation: 'up',
+								rotation: ['up', 'down'],
 							},
 						},
 					},
@@ -118,7 +118,7 @@ DefineAsset({
 						poseLimits: {
 							leftArm: {
 								fingers: 'fist',
-								rotation: 'up',
+								rotation: ['up', 'down'],
 							},
 						},
 					},
@@ -130,7 +130,7 @@ DefineAsset({
 						poseLimits: {
 							leftArm: {
 								fingers: 'fist',
-								rotation: 'up',
+								rotation: ['up', 'down'],
 							},
 						},
 					},

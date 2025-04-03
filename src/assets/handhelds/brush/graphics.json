@@ -19,7 +19,7 @@
 				"image": "",
 				"overrides": [
 					{
-						"image": "brush_front_front.png",
+						"image": "brush_front_front_up.png",
 						"condition": [
 							[
 								{
@@ -29,12 +29,185 @@
 								},
 								{
 									"view": "front"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "up"
 								}
 							]
 						]
 					},
 					{
-						"image": "brush_back_back.png",
+						"image": "brush_front_back_up.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "back"
+								},
+								{
+									"view": "front"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "up"
+								}
+							]
+						]
+					},
+					{
+						"image": "brush_front_side_in_up.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "inwards"
+								},
+								{
+									"view": "front"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "up"
+								}
+							]
+						]
+					},
+					{
+						"image": "brush_front_side_out_up.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "outwards"
+								},
+								{
+									"view": "front"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "up"
+								}
+							]
+						]
+					},
+					{
+						"image": "brush_front_back_down.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "front"
+								},
+								{
+									"view": "front"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					},
+					{
+						"image": "brush_front_back_down.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "back"
+								},
+								{
+									"view": "front"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					},
+					{
+						"image": "brush_front_side_in_down.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "inwards"
+								},
+								{
+									"view": "front"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					},
+					{
+						"image": "brush_front_side_out_down.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "outwards"
+								},
+								{
+									"view": "front"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "brush back",
+			"priority": "BELOW_ARM_RIGHT",
+			"points": "handheld",
+			"pointType": [
+				"handheld_r"
+			],
+			"mirror": 1,
+			"colorizationKey": "brush",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "brush_back_back_up.png",
 						"condition": [
 							[
 								{
@@ -44,27 +217,18 @@
 								},
 								{
 									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "brush_front_back.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "back"
 								},
 								{
-									"view": "front"
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "up"
 								}
 							]
 						]
 					},
 					{
-						"image": "brush_back_front.png",
+						"image": "brush_back_front_up.png",
 						"condition": [
 							[
 								{
@@ -74,27 +238,18 @@
 								},
 								{
 									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "brush_front_side_in.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "inwards"
 								},
 								{
-									"view": "front"
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "up"
 								}
 							]
 						]
 					},
 					{
-						"image": "brush_back_side_in.png",
+						"image": "brush_back_side_in_up.png",
 						"condition": [
 							[
 								{
@@ -104,27 +259,18 @@
 								},
 								{
 									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "brush_front_side_out.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "outwards"
 								},
 								{
-									"view": "front"
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "up"
 								}
 							]
 						]
 					},
 					{
-						"image": "brush_back_side_out.png",
+						"image": "brush_back_side_out_up.png",
 						"condition": [
 							[
 								{
@@ -134,6 +280,96 @@
 								},
 								{
 									"view": "back"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "up"
+								}
+							]
+						]
+					},
+					{
+						"image": "brush_back_front_down.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "front"
+								},
+								{
+									"view": "back"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					},
+					{
+						"image": "brush_back_back_down.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "back"
+								},
+								{
+									"view": "back"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					},
+					{
+						"image": "brush_back_side_in_down.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "inwards"
+								},
+								{
+									"view": "back"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					},
+					{
+						"image": "brush_back_side_out_down.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "outwards"
+								},
+								{
+									"view": "back"
+								},
+								{
+									"armType": "rotation",
+									"side": "right",
+									"operator": "=",
+									"value": "down"
 								}
 							]
 						]
