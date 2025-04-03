@@ -1,6 +1,6 @@
 --- body.json
 +++ custom_arm_restraints_straight_jacket_straps.json
-@@ -312,8 +312,8 @@
+@@ -352,8 +352,8 @@
  		},
  		{
  			"pos": [
@@ -11,7 +11,7 @@
  			],
  			"mirror": true,
  			"pointType": "arm_r",
-@@ -996,8 +996,8 @@
+@@ -1036,8 +1036,8 @@
  		},
  		{
  			"pos": [
@@ -22,7 +22,7 @@
  			],
  			"mirror": true,
  			"pointType": "arm_r",
-@@ -1115,8 +1115,8 @@
+@@ -1155,8 +1155,8 @@
  		},
  		{
  			"pos": [
@@ -33,7 +33,7 @@
  			],
  			"mirror": true,
  			"pointType": "arm_r",
-@@ -2740,8 +2740,8 @@
+@@ -2780,8 +2780,8 @@
  		},
  		{
  			"pos": [

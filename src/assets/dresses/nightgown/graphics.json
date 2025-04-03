@@ -101,7 +101,7 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "breasts back",
-			"priority": "BELOW_BODY",
+			"priority": "BELOW_BREASTS",
 			"points": "breasts",
 			"mirror": 0,
 			"colorizationKey": "nightgown",

@@ -7,22 +7,6 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "jeans back breasts",
-			"priority": "BELOW_BODY",
-			"points": "custom_tops_jeans_jacket_breasts",
-			"mirror": 0,
-			"colorizationKey": "jacket",
-			"image": {
-				"image": "jj_back.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
 			"name": "jeans back",
 			"priority": "BELOW_BODY",
 			"points": "body",
@@ -186,7 +170,6 @@
 			"points": "body",
 			"pointType": [
 				"bodyarm_l",
-				"bodyarm_r",
 				"arm_l"
 			],
 			"mirror": 1,

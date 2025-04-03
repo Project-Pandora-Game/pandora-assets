@@ -18,9 +18,7 @@
 				"bodyarm_r",
 				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "bra",
@@ -46,9 +44,7 @@
 				"bodyarm_r",
 				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "chains",
@@ -202,9 +198,7 @@
 				"bodyarm_r",
 				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "bra",
@@ -230,9 +224,7 @@
 				"bodyarm_r",
 				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "chains",

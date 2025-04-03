@@ -522,10 +522,6 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
 				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
