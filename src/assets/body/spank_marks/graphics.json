@@ -14,6 +14,8 @@
 				"body",
 				"body_l",
 				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
 				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
@@ -118,6 +120,7 @@
 			"pointType": [
 				"body",
 				"body_l",
+				"bodyarm_l",
 				"bodyleg",
 				"bodyleg_l",
 				"leg_l"
@@ -190,6 +193,7 @@
 			"pointType": [
 				"body",
 				"body_l",
+				"bodyarm_l",
 				"bodyleg",
 				"bodyleg_l",
 				"leg_l"

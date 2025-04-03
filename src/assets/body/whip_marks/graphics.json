@@ -12,8 +12,6 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"body_l",
-				"body_r",
 				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
@@ -107,7 +105,6 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"body_l",
 				"bodyleg",
 				"bodyleg_l",
 				"leg_l"
@@ -155,7 +152,6 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"body_l",
 				"bodyleg",
 				"bodyleg_l",
 				"leg_l"
@@ -204,6 +200,7 @@
 			"pointType": [
 				"body",
 				"body_l",
+				"bodyarm_l",
 				"bodyleg",
 				"bodyleg_l",
 				"leg_l"
@@ -253,11 +250,11 @@
 				"body",
 				"body_l",
 				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
 				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "mark",
