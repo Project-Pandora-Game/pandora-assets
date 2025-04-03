@@ -10,12 +10,18 @@
 			"allowedPriorities": [
 				"BELOW_BODY",
 				"ABOVE_BODY"
+			],
+			"requiredPointTypes": [
+				"body"
 			]
 		},
 		"body_r": {
 			"allowedPriorities": [
 				"BELOW_BODY",
 				"ABOVE_BODY"
+			],
+			"requiredPointTypes": [
+				"body"
 			]
 		}
 	},

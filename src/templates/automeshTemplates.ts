@@ -55,7 +55,7 @@ const AUTOMESH_TEMPLATES_BASE = {
 			{
 				id: 'body',
 				priority: 'BELOW_BODY',
-				pointType: ['body', 'body_l', 'body_r', 'bodyarm_l', 'bodyarm_r', 'bodyleg'],
+				pointType: ['body', 'body_l', 'body_r', 'bodyarm_l', 'bodyarm_r', 'bodyleg', 'bodyleg_l', 'bodyleg_r'],
 			},
 			{
 				id: 'arms',

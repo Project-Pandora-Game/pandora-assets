@@ -4,10 +4,16 @@
 			"allowedPriorities": "*"
 		},
 		"static_l": {
-			"allowedPriorities": "*"
+			"allowedPriorities": "*",
+			"requiredPointTypes": [
+				"static"
+			]
 		},
 		"static_r": {
-			"allowedPriorities": "*"
+			"allowedPriorities": "*",
+			"requiredPointTypes": [
+				"static"
+			]
 		}
 	},
 	"points": [

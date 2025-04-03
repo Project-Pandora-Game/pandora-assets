@@ -12,6 +12,10 @@
 				"BELOW_BODY",
 				"BELOW_BREASTS",
 				"ABOVE_BODY"
+			],
+			"requiredPointTypes": [
+				"body",
+				"bodyarm_l"
 			]
 		},
 		"body_r": {
@@ -19,6 +23,10 @@
 				"BELOW_BODY",
 				"BELOW_BREASTS",
 				"ABOVE_BODY"
+			],
+			"requiredPointTypes": [
+				"body",
+				"bodyarm_r"
 			]
 		},
 		"bodyarm_l": {
@@ -43,12 +51,18 @@
 			"allowedPriorities": [
 				"BELOW_ARM_LEFT",
 				"ABOVE_ARM_LEFT"
+			],
+			"requiredPointTypes": [
+				"bodyarm_l"
 			]
 		},
 		"arm_r": {
 			"allowedPriorities": [
 				"BELOW_ARM_RIGHT",
 				"ABOVE_ARM_RIGHT"
+			],
+			"requiredPointTypes": [
+				"bodyarm_r"
 			]
 		}
 	},

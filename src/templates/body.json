@@ -16,6 +16,12 @@
 				"BODY",
 				"BELOW_BREASTS",
 				"ABOVE_BODY"
+			],
+			"requiredPointTypes": [
+				"body",
+				"bodyarm_l",
+				"bodyleg",
+				"bodyleg_l"
 			]
 		},
 		"body_r": {
@@ -25,6 +31,12 @@
 				"BODY",
 				"BELOW_BREASTS",
 				"ABOVE_BODY"
+			],
+			"requiredPointTypes": [
+				"body",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_r"
 			]
 		},
 		"bodyarm_l": {
@@ -56,6 +68,9 @@
 				"BELOW_ARM_LEFT",
 				"ARM_LEFT",
 				"ABOVE_ARM_LEFT"
+			],
+			"requiredPointTypes": [
+				"bodyarm_l"
 			]
 		},
 		"arm_r": {
@@ -63,6 +78,9 @@
 				"BELOW_ARM_RIGHT",
 				"ARM_RIGHT",
 				"ABOVE_ARM_RIGHT"
+			],
+			"requiredPointTypes": [
+				"bodyarm_r"
 			]
 		},
 		"bodyleg": {
@@ -81,6 +99,9 @@
 				"BODY",
 				"BELOW_BREASTS",
 				"ABOVE_BODY"
+			],
+			"requiredPointTypes": [
+				"bodyleg"
 			]
 		},
 		"bodyleg_r": {
@@ -90,6 +111,9 @@
 				"BODY",
 				"BELOW_BREASTS",
 				"ABOVE_BODY"
+			],
+			"requiredPointTypes": [
+				"bodyleg"
 			]
 		},
 		"leg_l": {
@@ -97,6 +121,10 @@
 				"BELOW_BODY",
 				"BODY",
 				"ABOVE_BODY"
+			],
+			"requiredPointTypes": [
+				"bodyleg",
+				"bodyleg_l"
 			]
 		},
 		"leg_r": {
@@ -104,6 +132,10 @@
 				"BELOW_BODY",
 				"BODY",
 				"ABOVE_BODY"
+			],
+			"requiredPointTypes": [
+				"bodyleg",
+				"bodyleg_r"
 			]
 		}
 	},
