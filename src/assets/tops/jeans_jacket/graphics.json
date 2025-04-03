@@ -28,9 +28,15 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
 				"bodyleg",
-				"leg"
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "jacket",
@@ -49,8 +55,8 @@
 			"priority": "BELOW_ARM_LEFT",
 			"points": "body",
 			"pointType": [
-				"arm_l",
-				"bodyarm_l"
+				"bodyarm_l",
+				"arm_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "jacket",
@@ -69,8 +75,8 @@
 			"priority": "BELOW_ARM_LEFT",
 			"points": "body",
 			"pointType": [
-				"arm_l",
-				"bodyarm_l"
+				"bodyarm_l",
+				"arm_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "jacket",
@@ -102,8 +108,8 @@
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "body",
 			"pointType": [
-				"arm_l",
-				"bodyarm_l"
+				"bodyarm_l",
+				"arm_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "jacket",
@@ -152,9 +158,15 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
 				"bodyleg",
-				"leg"
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "jacket",
@@ -173,7 +185,8 @@
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "body",
 			"pointType": [
-				"bodyarm",
+				"bodyarm_l",
+				"bodyarm_r",
 				"arm_l"
 			],
 			"mirror": 1,

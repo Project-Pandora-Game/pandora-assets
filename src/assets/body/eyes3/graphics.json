@@ -11,6 +11,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"pointType": [
+				"static",
 				"static_l"
 			],
 			"mirror": 1,
@@ -79,6 +80,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"pointType": [
+				"static",
 				"static_l"
 			],
 			"mirror": 1,
@@ -219,6 +221,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"pointType": [
+				"static",
 				"static_l"
 			],
 			"mirror": 1,
@@ -287,6 +290,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"pointType": [
+				"static",
 				"static_l"
 			],
 			"mirror": 1,
@@ -391,6 +395,7 @@
 			"priority": "BODY",
 			"points": "static",
 			"pointType": [
+				"static",
 				"static_l"
 			],
 			"mirror": 1,

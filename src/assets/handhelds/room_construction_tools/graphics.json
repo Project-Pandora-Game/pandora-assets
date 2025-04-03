@@ -339,6 +339,7 @@
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "static",
 			"pointType": [
+				"static",
 				"static_l"
 			],
 			"mirror": 0,
@@ -371,6 +372,7 @@
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "static",
 			"pointType": [
+				"static",
 				"static_l"
 			],
 			"mirror": 0,
@@ -407,6 +409,7 @@
 			"priority": "BELOW_ARM_LEFT",
 			"points": "static",
 			"pointType": [
+				"static",
 				"static_l"
 			],
 			"mirror": 0,
@@ -443,6 +446,7 @@
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "static",
 			"pointType": [
+				"static",
 				"static_l"
 			],
 			"mirror": 0,
@@ -480,6 +484,7 @@
 			"priority": "BELOW_ARM_LEFT",
 			"points": "static",
 			"pointType": [
+				"static",
 				"static_l"
 			],
 			"mirror": 0,

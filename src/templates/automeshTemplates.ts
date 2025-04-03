@@ -32,7 +32,7 @@ const AUTOMESH_TEMPLATES_BASE = {
 			{
 				id: 'body',
 				priority: 'ABOVE_BODY',
-				pointType: ['body', 'bodyarm', 'bodyleg'],
+				pointType: ['body', 'body_l', 'body_r', 'bodyarm_l', 'bodyarm_r', 'bodyleg', 'bodyleg_l', 'bodyleg_r'],
 			},
 			{
 				id: 'arms',
@@ -43,7 +43,7 @@ const AUTOMESH_TEMPLATES_BASE = {
 			{
 				id: 'legs',
 				priority: 'ABOVE_BODY', // TODO: Change me on legs split
-				pointType: ['bodyleg_l', 'leg_l'],
+				pointType: ['bodyleg', 'bodyleg_l', 'leg_l'],
 				mirror: LayerMirror.SELECT,
 			},
 		],
@@ -55,7 +55,7 @@ const AUTOMESH_TEMPLATES_BASE = {
 			{
 				id: 'body',
 				priority: 'BELOW_BODY',
-				pointType: ['body', 'bodyarm', 'bodyleg'],
+				pointType: ['body', 'body_l', 'body_r', 'bodyarm_l', 'bodyarm_r', 'bodyleg'],
 			},
 			{
 				id: 'arms',
@@ -66,7 +66,7 @@ const AUTOMESH_TEMPLATES_BASE = {
 			{
 				id: 'legs',
 				priority: 'BELOW_BODY', // TODO: Change me on legs split
-				pointType: ['bodyleg_l', 'leg_l'],
+				pointType: ['bodyleg', 'bodyleg_l', 'leg_l'],
 				mirror: LayerMirror.SELECT,
 			},
 		],

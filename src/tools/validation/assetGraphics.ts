@@ -4,11 +4,9 @@ import {
 	CloneDeepMutable,
 	Logger,
 	MakeMirroredPoints,
-	MirrorBoneLike,
 	PointDefinitionCalculated,
 	PointTemplate,
 	PointTemplateDiff,
-	PointTypeMatchesPointTypeFilter,
 	type AssetSourceGraphicsDefinition,
 	type GraphicsSourceLayer,
 } from 'pandora-common';
@@ -52,23 +50,13 @@ export function AssetGraphicsValidateMeshLayer(layer: Extract<GraphicsSourceLaye
 	if (layer.pointType != null) {
 		// Layer should only use point types that are mentioned in the template
 		for (const pointType of layer.pointType) {
-			const matchingPointTypes = [pointType];
-			if (!pointType.endsWith('_r') && !pointType.endsWith('_l')) {
-				matchingPointTypes.push(pointType + '_r', pointType + '_l');
-			}
-
-			if (!calculatedPoints.some((p) => (
-				p.pointType != null && (
-					matchingPointTypes.includes(p.pointType) ||
-					p.mirror && matchingPointTypes.includes(MirrorBoneLike(p.pointType))
-				)
-			))) {
-				logger.warning(`Layer filters for point type '${pointType}', but no point in the used point template uses that type.`);
+			if (!Object.hasOwn(pointTemplate.pointTypes, pointType)) {
+				logger.warning(`Layer filters for point type '${pointType}', but the used point template does not define that type.`);
 			}
 		}
 
 		// Layer shouldn't define point types if all points match
-		if (calculatedPoints.every((p) => PointTypeMatchesPointTypeFilter(p.pointType, layer.pointType))) {
+		if (calculatedPoints.every((p) => layer.pointType?.includes(p.pointType))) {
 			logger.warning(`Layer filters for point types, but all points match anyway. Remove the unnecessary filter.`);
 		}
 	}
