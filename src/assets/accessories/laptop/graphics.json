@@ -13,8 +13,29 @@
 			"mirror": 0,
 			"colorizationKey": "laptop",
 			"image": {
-				"image": "laptop.png",
-				"overrides": []
+				"image": "",
+				"overrides": [
+					{
+						"image": "laptop.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "laptop_back.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
 			}
 		},
 		{
@@ -39,6 +60,66 @@
 									"module": "logoType",
 									"operator": "=",
 									"value": "bdsm"
+								}
+							]
+						]
+					},
+					{
+						"image": "laptop_logo_cuffs.png",
+						"condition": [
+							[
+								{
+									"module": "logoType",
+									"operator": "=",
+									"value": "cuffs"
+								}
+							]
+						]
+					},
+					{
+						"image": "laptop_logo_gag.png",
+						"condition": [
+							[
+								{
+									"module": "logoType",
+									"operator": "=",
+									"value": "gag"
+								}
+							]
+						]
+					},
+					{
+						"image": "laptop_logo_heart.png",
+						"condition": [
+							[
+								{
+									"module": "logoType",
+									"operator": "=",
+									"value": "heart"
+								}
+							]
+						]
+					},
+					{
+						"image": "laptop_logo_tt.png",
+						"condition": [
+							[
+								{
+									"module": "logoType",
+									"operator": "=",
+									"value": "towel"
+								}
+							]
+						]
+					},
+					{
+						"image": "laptop_logo_whips.png",
+						"condition": [
+							[
+								{
+									"module": "logoType",
+									"operator": "=",
+									"value": "whip"
 								}
 							]
 						]
