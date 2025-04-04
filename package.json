@@ -42,7 +42,7 @@
 		"lodash-es": "4.17.21",
 		"pandora-common": "github:Project-Pandora-Game/pandora#master&path:pandora-common",
 		"rimraf": "6.0.1",
-		"sharp": "0.33.5",
+		"sharp": "0.34.0",
 		"simple-git": "3.27.0",
 		"zod": "3.24.2"
 	},
