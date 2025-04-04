@@ -36,6 +36,26 @@ DefineAsset({
 					id: 'bdsm',
 					name: 'BDSM',
 				},
+				{
+					id: 'towel',
+					name: 'T&T',
+				},
+				{
+					id: 'cuffs',
+					name: 'Cuffs',
+				},
+				{
+					id: 'gag',
+					name: 'Ball-gag',
+				},
+				{
+					id: 'whip',
+					name: 'Whips',
+				},
+				{
+					id: 'heart',
+					name: 'Heart',
+				},
 			],
 		},
 	},
