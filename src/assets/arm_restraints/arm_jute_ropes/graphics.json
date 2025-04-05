@@ -212,6 +212,10 @@
 			"name": "takate_front_arms_left",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "custom_arm_restraints_torso_ropes",
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -311,6 +315,10 @@
 			"name": "takate_front_arms_right",
 			"priority": "ABOVE_ARM_RIGHT",
 			"points": "custom_arm_restraints_torso_ropes",
+			"pointType": [
+				"bodyarm_r",
+				"arm_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -1476,6 +1484,10 @@
 			"name": "back_arms_left",
 			"priority": "BELOW_ARM_RIGHT",
 			"points": "custom_arm_restraints_torso_ropes",
+			"pointType": [
+				"bodyarm_r",
+				"arm_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -1526,6 +1538,10 @@
 			"name": "back_arms_right",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "custom_arm_restraints_torso_ropes",
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
