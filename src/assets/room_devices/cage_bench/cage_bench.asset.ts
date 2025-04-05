@@ -25,11 +25,52 @@ DefineRoomDeviceAsset({
 				name: 'Cage Bench',
 				size: 'huge',
 				poseLimits: {
+					options: [
+						{
+							bones: {
+								arm_l: [[74, 82]],
+								arm_r: [[74, 82]],
+								elbow_l: [[22, 109]],
+								elbow_r: [[22, 109]],
+							},
+						},
+						{
+							bones: {
+								arm_l: [[104, 110]],
+								arm_r: [[104, 110]],
+								elbow_l: [[-15, -1]],
+								elbow_r: [[-15, -1]],
+							},
+
+						},
+						{
+							bones: {
+								arm_l: [[87, 90]],
+								arm_r: [[87, 90]],
+								elbow_l: [[0, 168]],
+								elbow_r: [[0, 168]],
+							},
+
+						},
+						{
+							bones: {
+								arm_r: -90,
+								arm_l: -90,
+								elbow_r: -150,
+								elbow_l: -150,
+							},
+
+						},
+						{
+							bones: {
+								arm_r: 100,
+								arm_l: 100,
+								elbow_r: 130,
+								elbow_l: 130,
+							},
+						},
+					],
 					bones: {
-						arm_l: [[74, 82]],
-						arm_r: [[74, 82]],
-						elbow_l: [[22, 109]],
-						elbow_r: [[22, 109]],
 						leg_r: [[-10, 10]],
 						leg_l: [[-10, 10]],
 						character_rotation: 90,
