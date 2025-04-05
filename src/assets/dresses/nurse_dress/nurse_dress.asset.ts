@@ -47,6 +47,25 @@ DefineAsset({
 				},
 			],
 		},
+		pens: {
+			type: 'typed',
+			name: 'Pens',
+			variants: [
+				{
+					id: 'no',
+					name: 'None',
+				},
+				{
+					id: 'left',
+					name: 'Pens left',
+					default: true,
+				},
+				{
+					id: 'right',
+					name: 'Pens right',
+				},
+			],
+		},
 		dressStateFront: {
 			type: 'typed',
 			name: 'Dress State Front',
