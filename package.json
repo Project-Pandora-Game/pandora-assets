@@ -12,7 +12,10 @@
 		"onlyBuiltDependencies": [
 			"pandora-common",
 			"sharp"
-		]
+		],
+		"overrides": {
+			"pandora-common": "github:Project-Pandora-Game/pandora#feature/graphics-smart-layer&path:pandora-common"
+		}
 	},
 	"type": "module",
 	"scripts": {
