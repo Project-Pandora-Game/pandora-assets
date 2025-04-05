@@ -10,6 +10,18 @@
 			"name": "cuffsFront",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "cuff",
 			"image": {
@@ -26,6 +38,18 @@
 			"name": "cuffsBack",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "cuff",
 			"image": {
@@ -42,6 +66,18 @@
 			"name": "beltsFront",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "belt",
 			"image": {
@@ -58,6 +94,18 @@
 			"name": "beltsBack",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "belt",
 			"image": {
