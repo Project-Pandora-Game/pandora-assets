@@ -9,7 +9,7 @@
 			"type": "mesh",
 			"name": "bamboo",
 			"priority": "ABOVE_BODY",
-			"points": "body",
+			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "bamboo",
 			"image": {
@@ -25,7 +25,7 @@
 			"type": "mesh",
 			"name": "rope_front",
 			"priority": "ABOVE_BODY",
-			"points": "body",
+			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -41,7 +41,7 @@
 			"type": "mesh",
 			"name": "rope_back",
 			"priority": "BELOW_BODY",
-			"points": "body",
+			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -57,7 +57,7 @@
 			"type": "mesh",
 			"name": "back",
 			"priority": "BELOW_BACK_HAIR",
-			"points": "body",
+			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
