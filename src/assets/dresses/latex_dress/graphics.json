@@ -96,6 +96,18 @@
 			"name": "front skirt",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "dress",
 			"image": {
@@ -197,6 +209,18 @@
 			"name": "back skirt",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "dress",
 			"image": {
