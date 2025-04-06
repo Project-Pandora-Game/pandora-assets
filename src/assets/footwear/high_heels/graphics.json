@@ -10,6 +10,13 @@
 			"name": "body mask",
 			"priority": "BODY",
 			"points": "body",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"image": {
 				"image": "alpha_heels.png",
@@ -36,6 +43,13 @@
 			"name": "front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"image": {
 				"image": "alpha_heels.png",
@@ -62,6 +76,13 @@
 			"name": "front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "shoe",
 			"image": {
@@ -171,7 +192,7 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "front strap",
+			"name": "front strap back",
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
