@@ -19,9 +19,9 @@
 						"condition": [
 							[
 								{
-									"module": "usage",
+									"module": "read",
 									"operator": "=",
-									"value": "reading"
+									"value": "yes"
 								}
 							]
 						]
@@ -47,9 +47,9 @@
 						"condition": [
 							[
 								{
-									"module": "usage",
+									"module": "balance",
 									"operator": "=",
-									"value": "balancing"
+									"value": "yes"
 								},
 								{
 									"view": "front"
@@ -66,7 +66,7 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "balancing",
+			"name": "balancing back",
 			"priority": "BACK_HAIR",
 			"points": "static",
 			"mirror": 0,
@@ -78,12 +78,67 @@
 						"condition": [
 							[
 								{
-									"module": "usage",
+									"module": "balance",
 									"operator": "=",
-									"value": "balancing"
+									"value": "yes"
 								},
 								{
 									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "hold front",
+			"priority": "ABOVE_ARM_RIGHT",
+			"points": "handheld",
+			"pointType": [
+				"handheld_r"
+			],
+			"mirror": 1,
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "books_hold_1_front.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "one"
+								}
+							]
+						]
+					},
+					{
+						"image": "books_hold_2_front.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "two"
+								}
+							]
+						]
+					},
+					{
+						"image": "books_hold_3_front.png",
+						"condition": [
+							[
+								{
+									"module": "handUsage_r",
+									"operator": "=",
+									"value": "three"
 								}
 							]
 						]
