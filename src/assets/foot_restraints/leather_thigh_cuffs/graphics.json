@@ -10,6 +10,13 @@
 			"name": "large ring",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "largeRings",
 			"image": {
