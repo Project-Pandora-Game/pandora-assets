@@ -18,7 +18,9 @@
 				"bodyarm_r",
 				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r"
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "rope",
@@ -74,7 +76,9 @@
 				"bodyarm_r",
 				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r"
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "rope",
