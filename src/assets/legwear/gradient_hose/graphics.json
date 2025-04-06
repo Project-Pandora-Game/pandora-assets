@@ -7,9 +7,21 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "front",
+			"name": "front up",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "pantyhose_1",
 			"image": {
@@ -34,9 +46,16 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "front",
+			"name": "front low",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "pantyhose_2",
 			"image": {
@@ -61,9 +80,21 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "back",
+			"name": "back up",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "pantyhose_1",
 			"image": {
@@ -88,9 +119,16 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "back",
+			"name": "back low",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "pantyhose_2",
 			"image": {
