@@ -10,6 +10,13 @@
 			"name": "front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "socks",
 			"image": {
@@ -37,6 +44,13 @@
 			"name": "stripes front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "stripes",
 			"image": {
@@ -53,6 +67,13 @@
 			"name": "back",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "socks",
 			"image": {
@@ -80,6 +101,13 @@
 			"name": "stripes back",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "stripes",
 			"image": {
