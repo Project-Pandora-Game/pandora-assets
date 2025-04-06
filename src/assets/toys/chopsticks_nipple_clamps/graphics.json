@@ -2,10 +2,10 @@
 {
 	"layers": [
 		{
-			"x": 375,
-			"y": 450,
-			"width": 135,
-			"height": 135,
+			"x": 273,
+			"y": 375,
+			"width": 250,
+			"height": 281,
 			"type": "mesh",
 			"name": "Chopsticks Right B_160",
 			"priority": "ABOVE_BODY",
@@ -107,10 +107,10 @@
 			}
 		},
 		{
-			"x": 377,
-			"y": 446,
-			"width": 135,
-			"height": 135,
+			"x": 275,
+			"y": 371,
+			"width": 250,
+			"height": 281,
 			"type": "mesh",
 			"name": "Chopsticks Right B60_160",
 			"priority": "ABOVE_BODY",
@@ -232,10 +232,10 @@
 			}
 		},
 		{
-			"x": 380,
-			"y": 444,
-			"width": 135,
-			"height": 135,
+			"x": 278,
+			"y": 369,
+			"width": 250,
+			"height": 281,
 			"type": "mesh",
 			"name": "Chopsticks Right B-140_60",
 			"priority": "ABOVE_BODY",
@@ -357,10 +357,10 @@
 			}
 		},
 		{
-			"x": 387,
-			"y": 419,
-			"width": 135,
-			"height": 135,
+			"x": 285,
+			"y": 344,
+			"width": 250,
+			"height": 281,
 			"type": "mesh",
 			"name": "Chopsticks Right B-140",
 			"priority": "ABOVE_BODY",
@@ -462,10 +462,10 @@
 			}
 		},
 		{
-			"x": 375,
-			"y": 450,
-			"width": 135,
-			"height": 135,
+			"x": 273,
+			"y": 375,
+			"width": 250,
+			"height": 281,
 			"type": "mesh",
 			"name": "Strings Right B_160",
 			"priority": "ABOVE_BODY",
@@ -567,10 +567,10 @@
 			}
 		},
 		{
-			"x": 377,
-			"y": 446,
-			"width": 135,
-			"height": 135,
+			"x": 275,
+			"y": 371,
+			"width": 250,
+			"height": 281,
 			"type": "mesh",
 			"name": "Strings Right B160_60",
 			"priority": "ABOVE_BODY",
@@ -692,10 +692,10 @@
 			}
 		},
 		{
-			"x": 380,
-			"y": 444,
-			"width": 135,
-			"height": 135,
+			"x": 278,
+			"y": 369,
+			"width": 250,
+			"height": 281,
 			"type": "mesh",
 			"name": "Strings Right B60_-140",
 			"priority": "ABOVE_BODY",
@@ -817,10 +817,10 @@
 			}
 		},
 		{
-			"x": 387,
-			"y": 419,
-			"width": 135,
-			"height": 135,
+			"x": 285,
+			"y": 344,
+			"width": 250,
+			"height": 281,
 			"type": "mesh",
 			"name": "Strings Right B_-140",
 			"priority": "ABOVE_BODY",
@@ -922,10 +922,10 @@
 			}
 		},
 		{
-			"x": 489,
-			"y": 450,
-			"width": 135,
-			"height": 135,
+			"x": 387,
+			"y": 375,
+			"width": 250,
+			"height": 281,
 			"type": "mesh",
 			"name": "Chopsticks Left B_160",
 			"priority": "ABOVE_BODY",
@@ -1027,10 +1027,10 @@
 			}
 		},
 		{
-			"x": 487,
-			"y": 446,
-			"width": 135,
-			"height": 135,
+			"x": 385,
+			"y": 371,
+			"width": 250,
+			"height": 281,
 			"type": "mesh",
 			"name": "Chopsticks Right B60_160",
 			"priority": "ABOVE_BODY",
@@ -1152,10 +1152,10 @@
 			}
 		},
 		{
-			"x": 482,
-			"y": 444,
-			"width": 135,
-			"height": 135,
+			"x": 380,
+			"y": 369,
+			"width": 250,
+			"height": 281,
 			"type": "mesh",
 			"name": "Chopsticks Right B-140_60",
 			"priority": "ABOVE_BODY",
@@ -1277,10 +1277,10 @@
 			}
 		},
 		{
-			"x": 477,
-			"y": 419,
-			"width": 135,
-			"height": 135,
+			"x": 375,
+			"y": 344,
+			"width": 250,
+			"height": 281,
 			"type": "mesh",
 			"name": "Chopsticks Right B-140",
 			"priority": "ABOVE_BODY",
@@ -1382,10 +1382,10 @@
 			}
 		},
 		{
-			"x": 489,
-			"y": 450,
-			"width": 135,
-			"height": 135,
+			"x": 387,
+			"y": 375,
+			"width": 250,
+			"height": 281,
 			"type": "mesh",
 			"name": "Strings Right B_160",
 			"priority": "ABOVE_BODY",
@@ -1487,10 +1487,10 @@
 			}
 		},
 		{
-			"x": 487,
-			"y": 446,
-			"width": 135,
-			"height": 135,
+			"x": 385,
+			"y": 371,
+			"width": 250,
+			"height": 281,
 			"type": "mesh",
 			"name": "Strings Right B160_60",
 			"priority": "ABOVE_BODY",
@@ -1612,10 +1612,10 @@
 			}
 		},
 		{
-			"x": 482,
-			"y": 444,
-			"width": 135,
-			"height": 135,
+			"x": 380,
+			"y": 369,
+			"width": 250,
+			"height": 281,
 			"type": "mesh",
 			"name": "Strings Right B60_-140",
 			"priority": "ABOVE_BODY",
@@ -1737,10 +1737,10 @@
 			}
 		},
 		{
-			"x": 477,
-			"y": 419,
-			"width": 135,
-			"height": 135,
+			"x": 375,
+			"y": 344,
+			"width": 250,
+			"height": 281,
 			"type": "mesh",
 			"name": "Strings Right B_-140",
 			"priority": "ABOVE_BODY",
