@@ -39,6 +39,16 @@
 			"name": "bra breasts behind",
 			"priority": "BELOW_BREASTS",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "bra",
 			"image": {
@@ -80,6 +90,16 @@
 			"name": "bra back view",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "bra",
 			"image": {
