@@ -7,17 +7,17 @@ DefineAsset({
 	attributes: {
 		provides: [
 			'Accessory',
+			'Handheld',
 		],
 	},
 	modules: {
-		usage: {
+		read: {
 			type: 'typed',
-			name: 'Usage',
+			name: 'Reading',
 			variants: [
 				{
-					id: 'reading',
-					name: 'Reading',
-					default: true,
+					id: 'yes',
+					name: 'Yes',
 					properties: {
 						poseLimits: [
 							{
@@ -27,8 +27,118 @@ DefineAsset({
 					},
 				},
 				{
-					id: 'balancing',
-					name: 'Balancing',
+					id: 'no',
+					name: 'No',
+					default: true,
+				},
+			],
+		},
+		balance: {
+			type: 'typed',
+			name: 'Head balancing',
+			variants: [
+				{
+					id: 'yes',
+					name: 'Yes',
+				},
+				{
+					id: 'no',
+					name: 'No',
+					default: true,
+				},
+			],
+		},
+		handUsage_r: {
+			type: 'typed',
+			name: 'Holding in right hand',
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'one',
+					name: 'One',
+					properties: {
+						poseLimits: {
+							rightArm: {
+								fingers: 'spread',
+								rotation: 'backward',
+							},
+						},
+					},
+				},
+				{
+					id: 'two',
+					name: 'Two',
+					properties: {
+						poseLimits: {
+							rightArm: {
+								fingers: 'spread',
+								rotation: 'backward',
+							},
+						},
+					},
+				},
+				{
+					id: 'three',
+					name: 'Three',
+					properties: {
+						poseLimits: {
+							rightArm: {
+								fingers: 'spread',
+								rotation: 'backward',
+							},
+						},
+					},
+				},
+			],
+		},
+		handUsage_l: {
+			type: 'typed',
+			name: 'Holding in left hand',
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'one',
+					name: 'One',
+					properties: {
+						poseLimits: {
+							leftArm: {
+								fingers: 'spread',
+								rotation: 'backward',
+							},
+						},
+					},
+				},
+				{
+					id: 'two',
+					name: 'Two',
+					properties: {
+						poseLimits: {
+							leftArm: {
+								fingers: 'spread',
+								rotation: 'backward',
+							},
+						},
+					},
+				},
+				{
+					id: 'three',
+					name: 'Three',
+					properties: {
+						poseLimits: {
+							leftArm: {
+								fingers: 'spread',
+								rotation: 'backward',
+							},
+						},
+					},
 				},
 			],
 		},
