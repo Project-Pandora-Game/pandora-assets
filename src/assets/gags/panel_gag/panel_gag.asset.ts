@@ -36,7 +36,6 @@ DefineAsset({
 		requires: [
 			'!Mouth_tongue_out',
 			'!Mouth_protruding',
-			'!Mouth_cover',
 		],
 		covers: [
 			'Mouth_item',
@@ -58,11 +57,11 @@ DefineAsset({
 				{
 					id: 'false',
 					name: 'No',
+					default: true,
 				},
 				{
 					id: 'true',
 					name: 'Yes',
-					default: true,
 					properties: {
 						attributes: {
 							provides: [
@@ -70,6 +69,7 @@ DefineAsset({
 							],
 							requires: [
 								'Mouth_open_wide',
+								'!Mouth_cover',
 							],
 						},
 						effects: {
