@@ -187,6 +187,46 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
+			"name": "Pens",
+			"priority": "ABOVE_BODY",
+			"points": "static",
+			"mirror": 0,
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "nurse_dress_pens_left.png",
+						"condition": [
+							[
+								{
+									"module": "pens",
+									"operator": "=",
+									"value": "left"
+								}
+							]
+						]
+					},
+					{
+						"image": "nurse_dress_pens_right.png",
+						"condition": [
+							[
+								{
+									"module": "pens",
+									"operator": "=",
+									"value": "right"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
 			"name": "breastsBack",
 			"priority": "BELOW_BREASTS",
 			"points": "breasts",
