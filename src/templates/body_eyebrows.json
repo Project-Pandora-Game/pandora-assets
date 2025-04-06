@@ -1,0 +1,54 @@
+{
+	"pointTypes": {
+		"eye_l": {
+			"allowedPriorities": [
+				"BODY",
+				"ABOVE_BODY"
+			]
+		},
+		"eye_r": {
+			"allowedPriorities": [
+				"BODY",
+				"ABOVE_BODY"
+			]
+		}
+	},
+	"points": [
+		{
+			"pos": [
+				436,
+				257
+			],
+			"mirror": true,
+			"pointType": "eye_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				436,
+				321
+			],
+			"mirror": true,
+			"pointType": "eye_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				498,
+				257
+			],
+			"mirror": true,
+			"pointType": "eye_r",
+			"transforms": []
+		},
+		{
+			"pos": [
+				498,
+				321
+			],
+			"mirror": true,
+			"pointType": "eye_r",
+			"transforms": []
+		}
+	]
+}

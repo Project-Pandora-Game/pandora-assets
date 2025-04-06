@@ -9,10 +9,9 @@
 			"type": "mesh",
 			"name": "",
 			"priority": "BODY",
-			"points": "static",
+			"points": "body_eyes",
 			"pointType": [
-				"static",
-				"static_l"
+				"eye_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "eyeBackground",
@@ -78,10 +77,9 @@
 			"type": "mesh",
 			"name": "",
 			"priority": "BODY",
-			"points": "static",
+			"points": "body_eyes",
 			"pointType": [
-				"static",
-				"static_l"
+				"eye_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "eyeColor",
@@ -219,10 +217,9 @@
 			"type": "mesh",
 			"name": "",
 			"priority": "BODY",
-			"points": "static",
+			"points": "body_eyes",
 			"pointType": [
-				"static",
-				"static_l"
+				"eye_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "lashes",
@@ -288,10 +285,9 @@
 			"type": "mesh",
 			"name": "",
 			"priority": "BODY",
-			"points": "static",
+			"points": "body_eyes",
 			"pointType": [
-				"static",
-				"static_l"
+				"eye_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "shine",
@@ -393,10 +389,9 @@
 			"type": "mesh",
 			"name": "",
 			"priority": "BODY",
-			"points": "static",
+			"points": "body_eyes",
 			"pointType": [
-				"static",
-				"static_l"
+				"eye_l"
 			],
 			"mirror": 1,
 			"image": {

@@ -9,7 +9,7 @@
 			"type": "mesh",
 			"name": "Eyebrows",
 			"priority": "BODY",
-			"points": "static",
+			"points": "body_eyebrows",
 			"mirror": 0,
 			"colorizationKey": "eyebrows",
 			"image": {

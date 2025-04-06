@@ -10,6 +10,8 @@ const templateList: string[] = [
 	'static',
 	'body',
 	'body_soles_back',
+	'body_eyes',
+	'body_eyebrows',
 	'breast_toy',
 	'breasts',
 	'handheld',
