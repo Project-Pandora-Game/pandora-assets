@@ -202,6 +202,28 @@
 									"module": "pens",
 									"operator": "=",
 									"value": "left"
+								},
+								{
+									"bone": "waist",
+									"operator": ">=",
+									"value": -80
+								}
+							]
+						]
+					},
+					{
+						"image": "nurse_dress_pens_left_small.png",
+						"condition": [
+							[
+								{
+									"module": "pens",
+									"operator": "=",
+									"value": "left"
+								},
+								{
+									"bone": "waist",
+									"operator": "<",
+									"value": -80
 								}
 							]
 						]
