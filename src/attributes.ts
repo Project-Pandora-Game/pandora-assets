@@ -278,6 +278,11 @@ const ATTRIBUTES_DEFINITION_BASE = DefineAttributes({
 		description: 'A pair of underpants, briefs, or shorts',
 		parentAttributes: ['Underwear'],
 	},
+	Underwear_diaper: {
+		name: 'Diapers',
+		description: 'A pair absorbing undies',
+		parentAttributes: ['Underwear'],
+	},
 	Fantasy: {
 		name: 'Fantasy',
 		description: 'A tail, pair of ears, or similar cosplay/fantasy item',

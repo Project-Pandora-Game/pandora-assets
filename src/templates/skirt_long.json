@@ -117,7 +117,7 @@
 					"type": "shift",
 					"bone": "waist",
 					"value": {
-						"x": -12,
+						"x": -8,
 						"y": 0
 					}
 				},
@@ -197,9 +197,26 @@
 					"type": "shift",
 					"bone": "hips",
 					"value": {
-						"x": -8,
+						"x": -6,
 						"y": 0
 					}
+				},
+				{
+					"type": "shift",
+					"bone": "hips",
+					"value": {
+						"x": -6,
+						"y": 0
+					},
+					"condition": [
+						[
+							{
+								"bone": "hips",
+								"operator": "<",
+								"value": 0
+							}
+						]
+					]
 				},
 				{
 					"type": "const-shift",
@@ -234,7 +251,7 @@
 					"type": "shift",
 					"bone": "hips",
 					"value": {
-						"x": -8,
+						"x": -6,
 						"y": 0
 					}
 				},
@@ -242,7 +259,7 @@
 					"type": "shift",
 					"bone": "hips",
 					"value": {
-						"x": -12,
+						"x": -6,
 						"y": 0
 					},
 					"condition": [
@@ -377,9 +394,34 @@
 					"type": "shift",
 					"bone": "waist",
 					"value": {
-						"x": -12,
+						"x": -4,
 						"y": 0
 					}
+				},
+				{
+					"type": "shift",
+					"bone": "hips",
+					"value": {
+						"x": -4,
+						"y": 0
+					}
+				},
+				{
+					"type": "shift",
+					"bone": "hips",
+					"value": {
+						"x": -3,
+						"y": 0
+					},
+					"condition": [
+						[
+							{
+								"bone": "hips",
+								"operator": "<",
+								"value": 0
+							}
+						]
+					]
 				}
 			]
 		},
@@ -403,9 +445,26 @@
 					"type": "shift",
 					"bone": "hips",
 					"value": {
-						"x": -4,
+						"x": -6,
 						"y": 0
 					}
+				},
+				{
+					"type": "shift",
+					"bone": "hips",
+					"value": {
+						"x": -6,
+						"y": 0
+					},
+					"condition": [
+						[
+							{
+								"bone": "hips",
+								"operator": "<",
+								"value": 0
+							}
+						]
+					]
 				}
 			]
 		},
