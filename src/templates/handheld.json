@@ -16,51 +16,51 @@
 	"points": [
 		{
 			"pos": [
-				752,
+				248,
 				964
 			],
 			"mirror": true,
-			"pointType": "handheld_l",
+			"pointType": "handheld_r",
 			"transforms": [
 				{
 					"type": "rotate",
-					"bone": "elbow_l",
-					"value": 1
+					"bone": "elbow_r",
+					"value": -1
 				},
 				{
 					"type": "rotate",
-					"bone": "arm_l",
-					"value": 1
+					"bone": "arm_r",
+					"value": -1
 				}
 			]
 		},
 		{
 			"pos": [
-				1250,
+				-250,
 				964
 			],
 			"mirror": true,
-			"pointType": "handheld_l",
+			"pointType": "handheld_r",
 			"transforms": [
 				{
 					"type": "rotate",
-					"bone": "elbow_l",
-					"value": 1
+					"bone": "elbow_r",
+					"value": -1
 				},
 				{
 					"type": "rotate",
-					"bone": "arm_l",
-					"value": 1
+					"bone": "arm_r",
+					"value": -1
 				}
 			]
 		},
 		{
 			"pos": [
-				776,
+				224,
 				408
 			],
 			"mirror": true,
-			"pointType": "handheld_l",
+			"pointType": "handheld_r",
 			"transforms": [
 				{
 					"type": "shift",
@@ -72,23 +72,23 @@
 				},
 				{
 					"type": "rotate",
-					"bone": "elbow_l",
-					"value": 1
+					"bone": "elbow_r",
+					"value": -1
 				},
 				{
 					"type": "rotate",
-					"bone": "arm_l",
-					"value": 1
+					"bone": "arm_r",
+					"value": -1
 				}
 			]
 		},
 		{
 			"pos": [
-				938,
+				62,
 				365
 			],
 			"mirror": true,
-			"pointType": "handheld_l",
+			"pointType": "handheld_r",
 			"transforms": [
 				{
 					"type": "shift",
@@ -100,79 +100,79 @@
 				},
 				{
 					"type": "rotate",
-					"bone": "elbow_l",
-					"value": 1
+					"bone": "elbow_r",
+					"value": -1
 				},
 				{
 					"type": "rotate",
-					"bone": "arm_l",
-					"value": 1
+					"bone": "arm_r",
+					"value": -1
 				}
 			]
 		},
 		{
 			"pos": [
-				999,
+				0,
 				408
 			],
 			"mirror": true,
-			"pointType": "handheld_l",
+			"pointType": "handheld_r",
 			"transforms": [
 				{
 					"type": "shift",
 					"bone": "arm_width",
 					"value": {
-						"x": 1,
+						"x": -1,
 						"y": -1
 					}
 				},
 				{
 					"type": "rotate",
-					"bone": "elbow_l",
-					"value": 1
+					"bone": "elbow_r",
+					"value": -1
 				},
 				{
 					"type": "rotate",
-					"bone": "arm_l",
-					"value": 1
+					"bone": "arm_r",
+					"value": -1
 				}
 			]
 		},
 		{
 			"pos": [
-				999,
+				0,
 				462
 			],
 			"mirror": true,
-			"pointType": "handheld_l",
+			"pointType": "handheld_r",
 			"transforms": [
 				{
 					"type": "shift",
 					"bone": "arm_width",
 					"value": {
-						"x": 1,
+						"x": -1,
 						"y": 1
 					}
 				},
 				{
 					"type": "rotate",
-					"bone": "elbow_l",
-					"value": 1
+					"bone": "elbow_r",
+					"value": -1
 				},
 				{
 					"type": "rotate",
-					"bone": "arm_l",
-					"value": 1
+					"bone": "arm_r",
+					"value": -1
 				}
 			]
 		},
 		{
 			"pos": [
-				938,
+				62,
 				514
 			],
 			"mirror": true,
-			"pointType": "handheld_l",
+			"pointType": "handheld_r",
 			"transforms": [
 				{
 					"type": "shift",
@@ -184,23 +184,23 @@
 				},
 				{
 					"type": "rotate",
-					"bone": "elbow_l",
-					"value": 1
+					"bone": "elbow_r",
+					"value": -1
 				},
 				{
 					"type": "rotate",
-					"bone": "arm_l",
-					"value": 1
+					"bone": "arm_r",
+					"value": -1
 				}
 			]
 		},
 		{
 			"pos": [
-				776,
+				224,
 				462
 			],
 			"mirror": true,
-			"pointType": "handheld_l",
+			"pointType": "handheld_r",
 			"transforms": [
 				{
 					"type": "shift",
@@ -212,53 +212,253 @@
 				},
 				{
 					"type": "rotate",
-					"bone": "elbow_l",
-					"value": 1
+					"bone": "elbow_r",
+					"value": -1
 				},
 				{
 					"type": "rotate",
-					"bone": "arm_l",
-					"value": 1
+					"bone": "arm_r",
+					"value": -1
 				}
 			]
 		},
 		{
 			"pos": [
-				752,
-				1
+				248,
+				0
 			],
 			"mirror": true,
-			"pointType": "handheld_l",
+			"pointType": "handheld_r",
 			"transforms": [
 				{
 					"type": "rotate",
-					"bone": "elbow_l",
-					"value": 1
+					"bone": "elbow_r",
+					"value": -1
 				},
 				{
 					"type": "rotate",
-					"bone": "arm_l",
-					"value": 1
+					"bone": "arm_r",
+					"value": -1
 				}
 			]
 		},
 		{
 			"pos": [
-				1250,
+				-250,
 				1
 			],
 			"mirror": true,
-			"pointType": "handheld_l",
+			"pointType": "handheld_r",
 			"transforms": [
 				{
 					"type": "rotate",
-					"bone": "elbow_l",
-					"value": 1
+					"bone": "elbow_r",
+					"value": -1
 				},
 				{
 					"type": "rotate",
-					"bone": "arm_l",
-					"value": 1
+					"bone": "arm_r",
+					"value": -1
+				}
+			]
+		},
+		{
+			"pos": [
+				0,
+				0
+			],
+			"mirror": true,
+			"pointType": "handheld_r",
+			"transforms": [
+				{
+					"type": "rotate",
+					"bone": "elbow_r",
+					"value": -1
+				},
+				{
+					"type": "rotate",
+					"bone": "arm_r",
+					"value": -1
+				}
+			]
+		},
+		{
+			"pos": [
+				0,
+				964
+			],
+			"mirror": true,
+			"pointType": "handheld_r",
+			"transforms": [
+				{
+					"type": "rotate",
+					"bone": "elbow_r",
+					"value": -1
+				},
+				{
+					"type": "rotate",
+					"bone": "arm_r",
+					"value": -1
+				}
+			]
+		},
+		{
+			"pos": [
+				-250,
+				408
+			],
+			"mirror": true,
+			"pointType": "handheld_r",
+			"transforms": [
+				{
+					"type": "rotate",
+					"bone": "elbow_r",
+					"value": -1
+				},
+				{
+					"type": "rotate",
+					"bone": "arm_r",
+					"value": -1
+				}
+			]
+		},
+		{
+			"pos": [
+				-250,
+				462
+			],
+			"mirror": true,
+			"pointType": "handheld_r",
+			"transforms": [
+				{
+					"type": "rotate",
+					"bone": "elbow_r",
+					"value": -1
+				},
+				{
+					"type": "rotate",
+					"bone": "arm_r",
+					"value": -1
+				}
+			]
+		},
+		{
+			"pos": [
+				-250,
+				200
+			],
+			"mirror": true,
+			"pointType": "handheld_r",
+			"transforms": [
+				{
+					"type": "rotate",
+					"bone": "elbow_r",
+					"value": -1
+				},
+				{
+					"type": "rotate",
+					"bone": "arm_r",
+					"value": -1
+				}
+			]
+		},
+		{
+			"pos": [
+				0,
+				200
+			],
+			"mirror": true,
+			"pointType": "handheld_r",
+			"transforms": [
+				{
+					"type": "rotate",
+					"bone": "elbow_r",
+					"value": -1
+				},
+				{
+					"type": "rotate",
+					"bone": "arm_r",
+					"value": -1
+				}
+			]
+		},
+		{
+			"pos": [
+				248,
+				200
+			],
+			"mirror": true,
+			"pointType": "handheld_r",
+			"transforms": [
+				{
+					"type": "rotate",
+					"bone": "elbow_r",
+					"value": -1
+				},
+				{
+					"type": "rotate",
+					"bone": "arm_r",
+					"value": -1
+				}
+			]
+		},
+		{
+			"pos": [
+				-250,
+				764
+			],
+			"mirror": true,
+			"pointType": "handheld_r",
+			"transforms": [
+				{
+					"type": "rotate",
+					"bone": "elbow_r",
+					"value": -1
+				},
+				{
+					"type": "rotate",
+					"bone": "arm_r",
+					"value": -1
+				}
+			]
+		},
+		{
+			"pos": [
+				0,
+				764
+			],
+			"mirror": true,
+			"pointType": "handheld_r",
+			"transforms": [
+				{
+					"type": "rotate",
+					"bone": "elbow_r",
+					"value": -1
+				},
+				{
+					"type": "rotate",
+					"bone": "arm_r",
+					"value": -1
+				}
+			]
+		},
+		{
+			"pos": [
+				248,
+				764
+			],
+			"mirror": true,
+			"pointType": "handheld_r",
+			"transforms": [
+				{
+					"type": "rotate",
+					"bone": "elbow_r",
+					"value": -1
+				},
+				{
+					"type": "rotate",
+					"bone": "arm_r",
+					"value": -1
 				}
 			]
 		}
