@@ -17,10 +17,6 @@ DefineAsset({
 			'Underwear',
 			'Underwear_diaper',
 		],
-		requires: [
-			'!Underwear_panties',
-			'!Underwear_pants',
-		],
 	},
 	/*
 	modules: {
