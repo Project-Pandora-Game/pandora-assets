@@ -12,9 +12,15 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
 				"bodyleg",
-				"leg"
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "shirt",
@@ -241,9 +247,15 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
 				"bodyleg",
-				"leg"
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "sweater",
@@ -276,9 +288,15 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
 				"bodyleg",
-				"leg"
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "sweater",
@@ -360,9 +378,15 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
 				"bodyleg",
-				"leg"
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "sweater",
@@ -477,9 +501,15 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
 				"bodyleg",
-				"leg"
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "shirt",
@@ -534,8 +564,13 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm",
-				"bodyleg"
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "sailor",
@@ -630,8 +665,13 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm",
-				"bodyleg"
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "shirt",
@@ -847,9 +887,15 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
 				"bodyleg",
-				"leg"
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "shirt",
@@ -1076,9 +1122,15 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
 				"bodyleg",
-				"leg"
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "sweater",
@@ -1294,8 +1346,13 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm",
-				"bodyleg"
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "sailor",
@@ -1361,8 +1418,13 @@
 			"points": "body",
 			"pointType": [
 				"body",
-				"bodyarm",
-				"bodyleg"
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "shirt",
