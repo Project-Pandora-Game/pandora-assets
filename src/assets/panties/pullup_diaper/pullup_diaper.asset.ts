@@ -22,6 +22,7 @@ DefineAsset({
 			'!Underwear_pants',
 		],
 	},
+	/*
 	modules: {
 		wet: {
 			type: 'typed',
@@ -47,6 +48,7 @@ DefineAsset({
 			],
 		},
 	},
+	*/
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
 		credits: ['Taja'],
