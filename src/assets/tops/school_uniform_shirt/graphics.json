@@ -18,9 +18,7 @@
 				"bodyarm_r",
 				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "shirt",
@@ -253,9 +251,7 @@
 				"bodyarm_r",
 				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "sweater",
@@ -294,9 +290,7 @@
 				"bodyarm_r",
 				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "sweater",
@@ -384,9 +378,7 @@
 				"bodyarm_r",
 				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "sweater",
@@ -507,9 +499,7 @@
 				"bodyarm_r",
 				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "shirt",
