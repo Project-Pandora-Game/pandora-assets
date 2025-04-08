@@ -7,9 +7,21 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "jeans back",
+			"name": "pants back",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "pants",
 			"image": {
@@ -23,9 +35,21 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "jeans front",
+			"name": "pants front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "pants",
 			"image": {
@@ -42,6 +66,16 @@
 			"name": "belt back",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "belt",
 			"image": {
@@ -58,6 +92,16 @@
 			"name": "belt front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "belt",
 			"image": {
@@ -71,9 +115,16 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "jeans button",
+			"name": "pants button",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_r",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "buttons",
 			"image": {
@@ -87,9 +138,15 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "jeans button",
+			"name": "pants button back",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "buttons",
 			"image": {
