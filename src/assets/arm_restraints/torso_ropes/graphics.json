@@ -10,6 +10,18 @@
 			"name": "harness front under",
 			"priority": "BELOW_BREASTS",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -51,6 +63,18 @@
 			"name": "harness front over",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -98,51 +122,40 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "rope front",
-			"priority": "BELOW_BREASTS",
 			"points": "custom_arm_restraints_torso_ropes",
-			"mirror": 0,
-			"colorizationKey": "rope",
-			"image": {
-				"image": "front.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "armTies",
-									"operator": "=",
-									"value": "wristsBack"
-								}
-							]
-						]
-					},
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "armTies",
-									"operator": "=",
-									"value": "wrists"
-								}
-							]
-						]
-					},
-					{
-						"image": "front_elbows.png",
-						"condition": [
-							[
-								{
-									"module": "armTies",
-									"operator": "=",
-									"value": "elbows"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBreasts",
+			"disabledTemplateParts": [
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "rope"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "armTies"
+				}
+			],
+			"imageMap": {
+				"wrists": [
+					""
+				],
+				"wristsBack": [
+					""
+				],
+				"boxtie": [
+					"front.png"
+				],
+				"crossed": [
+					"front.png"
+				],
+				"elbows": [
+					"front_elbows.png"
 				]
 			}
 		},
@@ -155,6 +168,18 @@
 			"name": "harness back",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -216,63 +241,37 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "rope back",
-			"priority": "BELOW_ARM_LEFT",
 			"points": "custom_arm_restraints_torso_ropes",
-			"mirror": 0,
-			"colorizationKey": "rope",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "wrists_cross.png",
-						"condition": [
-							[
-								{
-									"module": "armTies",
-									"operator": "=",
-									"value": "wristsBack"
-								}
-							]
-						]
-					},
-					{
-						"image": "box.png",
-						"condition": [
-							[
-								{
-									"module": "armTies",
-									"operator": "=",
-									"value": "boxtie"
-								}
-							]
-						]
-					},
-					{
-						"image": "box_cross.png",
-						"condition": [
-							[
-								{
-									"module": "armTies",
-									"operator": "=",
-									"value": "crossed"
-								}
-							]
-						]
-					},
-					{
-						"image": "elbows.png",
-						"condition": [
-							[
-								{
-									"module": "armTies",
-									"operator": "=",
-									"value": "elbows"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "customBelowArms",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "rope"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "armTies"
+				}
+			],
+			"imageMap": {
+				"wrists": [
+					""
+				],
+				"wristsBack": [
+					"wrists_cross.png"
+				],
+				"boxtie": [
+					"box.png"
+				],
+				"crossed": [
+					"box_cross.png"
+				],
+				"elbows": [
+					"elbows.png"
 				]
 			}
 		}

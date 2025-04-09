@@ -120,6 +120,7 @@
 			"allowedPriorities": [
 				"BELOW_BODY",
 				"BODY",
+				"BELOW_BREASTS",
 				"ABOVE_BODY"
 			],
 			"requiredPointTypes": [
@@ -131,6 +132,7 @@
 			"allowedPriorities": [
 				"BELOW_BODY",
 				"BODY",
+				"BELOW_BREASTS",
 				"ABOVE_BODY"
 			],
 			"requiredPointTypes": [
@@ -169,6 +171,44 @@
 				{
 					"id": "legs",
 					"priority": "ABOVE_BODY",
+					"pointType": [
+						"bodyleg",
+						"bodyleg_l",
+						"leg_l"
+					],
+					"mirror": 1
+				}
+			]
+		},
+		"belowBreasts": {
+			"name": "Below breasts",
+			"parts": [
+				{
+					"id": "body",
+					"priority": "BELOW_BREASTS",
+					"pointType": [
+						"body",
+						"body_l",
+						"body_r",
+						"bodyarm_l",
+						"bodyarm_r",
+						"bodyleg",
+						"bodyleg_l",
+						"bodyleg_r"
+					]
+				},
+				{
+					"id": "arms",
+					"priority": "ABOVE_ARM_LEFT",
+					"pointType": [
+						"bodyarm_l",
+						"arm_l"
+					],
+					"mirror": 1
+				},
+				{
+					"id": "legs",
+					"priority": "BELOW_BREASTS",
 					"pointType": [
 						"bodyleg",
 						"bodyleg_l",

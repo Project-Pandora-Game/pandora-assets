@@ -1,6 +1,107 @@
 --- body.json
 +++ custom_arm_restraints_torso_ropes.json
-@@ -352,8 +352,8 @@
+@@ -2,6 +2,7 @@
+ 	"pointTypes": {
+ 		"body": {
+ 			"allowedPriorities": [
++				"BELOW_ARM_LEFT",
+ 				"BELOW_BACK_HAIR",
+ 				"BELOW_BODY",
+ 				"BODY",
+@@ -11,6 +12,7 @@
+ 		},
+ 		"body_l": {
+ 			"allowedPriorities": [
++				"BELOW_ARM_LEFT",
+ 				"BELOW_BACK_HAIR",
+ 				"BELOW_BODY",
+ 				"BODY",
+@@ -26,6 +28,7 @@
+ 		},
+ 		"body_r": {
+ 			"allowedPriorities": [
++				"BELOW_ARM_LEFT",
+ 				"BELOW_BACK_HAIR",
+ 				"BELOW_BODY",
+ 				"BODY",
+@@ -53,6 +56,7 @@
+ 		},
+ 		"bodyarm_r": {
+ 			"allowedPriorities": [
++				"BELOW_ARM_LEFT",
+ 				"BELOW_BACK_HAIR",
+ 				"BELOW_BODY",
+ 				"BODY",
+@@ -85,6 +89,7 @@
+ 		},
+ 		"bodyleg": {
+ 			"allowedPriorities": [
++				"BELOW_ARM_LEFT",
+ 				"BELOW_BACK_HAIR",
+ 				"BELOW_BODY",
+ 				"BODY",
+@@ -94,6 +99,7 @@
+ 		},
+ 		"bodyleg_l": {
+ 			"allowedPriorities": [
++				"BELOW_ARM_LEFT",
+ 				"BELOW_BACK_HAIR",
+ 				"BELOW_BODY",
+ 				"BODY",
+@@ -106,6 +112,7 @@
+ 		},
+ 		"bodyleg_r": {
+ 			"allowedPriorities": [
++				"BELOW_ARM_LEFT",
+ 				"BELOW_BACK_HAIR",
+ 				"BELOW_BODY",
+ 				"BODY",
+@@ -142,6 +149,44 @@
+ 		}
+ 	},
+ 	"automeshTemplates": {
++		"customBelowArms": {
++			"name": "Custom: Below arms",
++			"parts": [
++				{
++					"id": "body",
++					"priority": "BELOW_ARM_LEFT",
++					"pointType": [
++						"body",
++						"body_l",
++						"body_r",
++						"bodyarm_l",
++						"bodyarm_r",
++						"bodyleg",
++						"bodyleg_l",
++						"bodyleg_r"
++					]
++				},
++				{
++					"id": "arms",
++					"priority": "BELOW_ARM_LEFT",
++					"pointType": [
++						"bodyarm_l",
++						"arm_l"
++					],
++					"mirror": 1
++				},
++				{
++					"id": "legs",
++					"priority": "BELOW_BODY",
++					"pointType": [
++						"bodyleg",
++						"bodyleg_l",
++						"leg_l"
++					],
++					"mirror": 1
++				}
++			]
++		},
+ 		"aboveBody": {
+ 			"name": "Above body",
+ 			"parts": [
+@@ -470,8 +515,8 @@
  		},
  		{
  			"pos": [
@@ -11,7 +112,7 @@
  			],
  			"mirror": true,
  			"pointType": "arm_r",
-@@ -369,7 +369,7 @@
+@@ -487,7 +532,7 @@
  				{
  					"type": "rotate",
  					"bone": "arm_r",
@@ -20,7 +121,7 @@
  				},
  				{
  					"type": "shift",
-@@ -1155,8 +1155,8 @@
+@@ -1273,8 +1318,8 @@
  		},
  		{
  			"pos": [
@@ -31,7 +132,7 @@
  			],
  			"mirror": true,
  			"pointType": "arm_r",
-@@ -1165,6 +1165,14 @@
+@@ -1283,6 +1328,14 @@
  					"type": "rotate",
  					"bone": "arm_r",
  					"value": -1
@@ -46,7 +147,7 @@
  				}
  			]
  		},
-@@ -2780,8 +2788,8 @@
+@@ -2898,8 +2951,8 @@
  		},
  		{
  			"pos": [
