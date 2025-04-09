@@ -10,6 +10,16 @@
 			"name": "straps front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "nightgown",
 			"image": {
@@ -26,6 +36,13 @@
 			"name": "front",
 			"priority": "ABOVE_BODY",
 			"points": "custom_dresses_nightgown",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "nightgown",
 			"image": {
@@ -42,6 +59,16 @@
 			"name": "straps back",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "nightgown",
 			"image": {
@@ -58,6 +85,13 @@
 			"name": "back",
 			"priority": "BELOW_BODY",
 			"points": "custom_dresses_nightgown",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "nightgown",
 			"image": {
@@ -101,7 +135,7 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "breasts back",
-			"priority": "BELOW_BREASTS",
+			"priority": "BELOW_BODY",
 			"points": "breasts",
 			"mirror": 0,
 			"colorizationKey": "nightgown",
