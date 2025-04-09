@@ -6,12 +6,12 @@ DefineAsset({
 	colorization: {
 		body: {
 			name: 'Body',
-			default: '#FFFFFFFF',
-			minAlpha: 0.15,
+			default: '#FFFFFFCC',
+			minAlpha: 0.8,
 		},
 	},
 	// size:420, y:350, centered
-	preview: null, // 'preview.png',
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Clothing',
