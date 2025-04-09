@@ -139,6 +139,84 @@
 			]
 		}
 	},
+	"automeshTemplates": {
+		"aboveBody": {
+			"name": "Above body",
+			"parts": [
+				{
+					"id": "body",
+					"priority": "ABOVE_BODY",
+					"pointType": [
+						"body",
+						"body_l",
+						"body_r",
+						"bodyarm_l",
+						"bodyarm_r",
+						"bodyleg",
+						"bodyleg_l",
+						"bodyleg_r"
+					]
+				},
+				{
+					"id": "arms",
+					"priority": "ABOVE_ARM_LEFT",
+					"pointType": [
+						"bodyarm_l",
+						"arm_l"
+					],
+					"mirror": 1
+				},
+				{
+					"id": "legs",
+					"priority": "ABOVE_BODY",
+					"pointType": [
+						"bodyleg",
+						"bodyleg_l",
+						"leg_l"
+					],
+					"mirror": 1
+				}
+			]
+		},
+		"belowBody": {
+			"name": "Below body",
+			"parts": [
+				{
+					"id": "body",
+					"priority": "BELOW_BODY",
+					"pointType": [
+						"body",
+						"body_l",
+						"body_r",
+						"bodyarm_l",
+						"bodyarm_r",
+						"bodyleg",
+						"bodyleg_l",
+						"bodyleg_r"
+					]
+				},
+				{
+					"id": "arms",
+					"priority": "BELOW_ARM_LEFT",
+					"pointType": [
+						"bodyarm_l",
+						"arm_l"
+					],
+					"mirror": 1
+				},
+				{
+					"id": "legs",
+					"priority": "BELOW_BODY",
+					"pointType": [
+						"bodyleg",
+						"bodyleg_l",
+						"leg_l"
+					],
+					"mirror": 1
+				}
+			]
+		}
+	},
 	"points": [
 		{
 			"pos": [

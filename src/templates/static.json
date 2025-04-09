@@ -16,6 +16,26 @@
 			]
 		}
 	},
+	"automeshTemplates": {
+		"aboveBody": {
+			"name": "Above body",
+			"parts": [
+				{
+					"id": "base",
+					"priority": "ABOVE_BODY"
+				}
+			]
+		},
+		"belowBody": {
+			"name": "Below body",
+			"parts": [
+				{
+					"id": "base",
+					"priority": "BELOW_BODY"
+				}
+			]
+		}
+	},
 	"points": [
 		{
 			"pos": [

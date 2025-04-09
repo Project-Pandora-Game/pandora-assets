@@ -19,7 +19,6 @@ import {
 import { relative } from 'path';
 import { z } from 'zod';
 import { IS_PRODUCTION_BUILD, OPTIMIZE_TEXTURES, SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../config.ts';
-import { AUTOMESH_TEMPLATES } from '../templates/automeshTemplates.ts';
 import { GENERATED_RESOLUTIONS } from './graphicsConstants.ts';
 import { GraphicsDatabase } from './graphicsDatabase.ts';
 import { LoadLayerImageResource } from './load_helpers/layer_common.ts';
@@ -108,9 +107,6 @@ async function LoadAssetGraphics(
 		generateResolutions: GENERATED_RESOLUTIONS,
 		getPointTemplate(name) {
 			return GraphicsDatabase.getPointTemplate(name);
-		},
-		getAutomeshTemplate(name) {
-			return AUTOMESH_TEMPLATES[name];
 		},
 		bufferToBase64(buffer) {
 			return Buffer.from(buffer).toString('base64');
