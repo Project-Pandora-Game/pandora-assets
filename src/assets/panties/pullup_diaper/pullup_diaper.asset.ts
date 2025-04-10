@@ -17,6 +17,9 @@ DefineAsset({
 			'Underwear',
 			'Underwear_diaper',
 		],
+		hides: [
+			'Penis',
+		],
 	},
 	/*
 	modules: {
