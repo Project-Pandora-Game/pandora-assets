@@ -18,7 +18,7 @@ DefineAsset({
 		provides: [
 			'Clothing',
 			'Underwear',
-			'Underwear_panties',
+			'Underwear_pants',
 		],
 		hides: ['Penis'],
 	},

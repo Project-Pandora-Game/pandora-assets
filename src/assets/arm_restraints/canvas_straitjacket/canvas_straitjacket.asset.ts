@@ -58,7 +58,7 @@ DefineAsset({
 								'Anus_item',
 							],
 							requires: [
-								'!Vulva_protruding',
+								'!Crotch_protruding',
 								'!Anus_protruding',
 								'!Penis_erect',
 							],

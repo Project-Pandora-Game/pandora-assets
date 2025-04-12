@@ -17,6 +17,9 @@ DefineAsset({
 			'Underwear',
 			'Underwear_diaper',
 		],
+		requires: [
+			'!Crotch_protruding',
+		],
 		hides: [
 			'Penis',
 		],

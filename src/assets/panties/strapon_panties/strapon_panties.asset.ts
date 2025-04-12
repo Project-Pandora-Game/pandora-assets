@@ -61,18 +61,46 @@ DefineAsset({
 				{
 					id: 'large',
 					name: 'Large Strapon',
+					properties: {
+						attributes: {
+							provides: [
+								'Crotch_protruding',
+							],
+						},
+					},
 				},
 				{
 					id: 'small',
 					name: 'Small Strapon',
+					properties: {
+						attributes: {
+							provides: [
+								'Crotch_protruding',
+							],
+						},
+					},
 				},
 				{
 					id: 'both',
 					name: 'Both',
+					properties: {
+						attributes: {
+							provides: [
+								'Crotch_protruding',
+							],
+						},
+					},
 				},
 				{
 					id: 'huge',
 					name: 'Huge',
+					properties: {
+						attributes: {
+							provides: [
+								'Crotch_protruding',
+							],
+						},
+					},
 				},
 			],
 		},

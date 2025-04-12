@@ -95,7 +95,7 @@ DefineAsset({
 								'Vulva_item',
 							],
 							requires: [
-								'!Vulva_protruding',
+								'!Crotch_protruding',
 								'!Penis_erect',
 							],
 							hides: [
@@ -135,7 +135,7 @@ DefineAsset({
 								'Anus_item',
 							],
 							requires: [
-								'!Vulva_protruding',
+								'!Crotch_protruding',
 								'!Penis_erect',
 								'!Anus_protruding',
 							],

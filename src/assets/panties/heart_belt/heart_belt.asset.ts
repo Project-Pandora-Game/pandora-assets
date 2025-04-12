@@ -66,7 +66,7 @@ DefineAsset({
 								'Vulva_item',
 							],
 							requires: [
-								'!Vulva_protruding',
+								'!Crotch_protruding',
 							],
 							hides: [
 								'Penis',

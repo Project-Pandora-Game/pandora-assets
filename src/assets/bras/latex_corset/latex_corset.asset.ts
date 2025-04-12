@@ -84,7 +84,7 @@ DefineAsset({
 					properties: {
 						attributes: {
 							provides: [
-								'Underwear_pants',
+								'Underwear_panties',
 							],
 							hides: ['Penis'],
 						},

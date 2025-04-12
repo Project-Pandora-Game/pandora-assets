@@ -561,16 +561,16 @@ const ATTRIBUTES_DEFINITION_BASE = DefineAttributes({
 		description: 'An item that is inserted deep inside the vulva (in the area not usually visible from outside)',
 		parentAttributes: ['Vulva_item'],
 	},
-	Vulva_protruding: {
-		name: 'An item protruding outside of the vulva',
-		description: 'An item that is protruding outside of the vulva',
-		parentAttributes: ['Vulva_item'],
-	},
+
 	Vulva_cover: {
 		name: 'An item covering the vulva',
 		description: 'An item that is covering the vulva',
 	},
 	//#endregion
+	Crotch_protruding: {
+		name: 'An item protruding outside of the crotch',
+		description: 'An item that is protruding outside of the crotch',
+	},
 
 	//#region Anus items
 	Anus_item: {

@@ -20,6 +20,9 @@ DefineAsset({
 			'Clothing',
 			'Clothing_lower',
 		],
+		requires: [
+			'!Crotch_protruding',
+		],
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

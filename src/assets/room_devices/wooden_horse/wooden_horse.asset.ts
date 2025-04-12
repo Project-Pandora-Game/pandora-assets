@@ -83,7 +83,6 @@ DefineRoomDeviceAsset({
 								attributes: {
 									provides: ['Vulva_cover', 'Anus_cover'],
 									requires: [
-										'!Vulva_protruding',
 										'!Anus_protruding',
 									],
 								},
@@ -112,7 +111,6 @@ DefineRoomDeviceAsset({
 								attributes: {
 									provides: ['Vulva_cover', 'Anus_cover'],
 									requires: [
-										'!Vulva_protruding',
 										'!Anus_protruding',
 									],
 								},

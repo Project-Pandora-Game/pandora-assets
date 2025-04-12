@@ -27,7 +27,7 @@ DefineAsset({
 					default: true,
 					properties: {
 						attributes: {
-							provides: ['Vulva_insert', 'Vulva_protruding'],
+							provides: ['Vulva_insert', 'Crotch_protruding'],
 							requires: ['!Vulva_cover'],
 						},
 					},
@@ -37,7 +37,7 @@ DefineAsset({
 					name: 'Half Inside',
 					properties: {
 						attributes: {
-							provides: ['Vulva_insert', 'Vulva_insert_deep', 'Vulva_protruding'],
+							provides: ['Vulva_insert', 'Vulva_insert_deep', 'Crotch_protruding'],
 							requires: ['!Vulva_cover'],
 						},
 					},

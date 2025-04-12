@@ -15,6 +15,9 @@ DefineAsset({
 			'Clothing',
 			'Clothing_lower',
 		],
+		requires: [
+			'!Crotch_protruding',
+		],
 	},
 	modules: {
 		design: {
