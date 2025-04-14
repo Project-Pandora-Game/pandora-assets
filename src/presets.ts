@@ -24,4 +24,19 @@ export const APPEARANCE_RANDOMIZATION_CONFIG: AppearanceRandomizationData<AssetR
 		'Clothing_upper',
 		'Clothing_lower',
 	],
+	pose: {
+		view: 'front',
+		arms: {
+			position: 'front',
+			rotation: 'forward',
+			fingers: 'spread',
+		},
+		legs: 'standing',
+		bones: {
+			arm_r: 74,
+			arm_l: 74,
+			elbow_r: 15,
+			elbow_l: 15,
+		},
+	},
 };
