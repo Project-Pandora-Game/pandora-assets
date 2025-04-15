@@ -1,6 +1,6 @@
 DefineAsset({
 	name: 'Ballet Boots',
-	size: 'small',
+	size: 'medium',
 	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
