@@ -22,6 +22,11 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 				y: 160,
 				size: 720,
 				basePose: {
+					arms: {
+						position: 'front',
+						rotation: 'forward',
+						fingers: 'spread',
+					},
 					bones: {
 						arm_r: 74,
 						arm_l: 74,
@@ -444,11 +449,16 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 				size: 720,
 				basePose: {
 					view: 'back',
+					arms: {
+						position: 'back',
+						rotation: 'forward',
+						fingers: 'spread',
+					},
 					bones: {
-						arm_r: 74,
-						arm_l: 74,
-						elbow_r: 15,
-						elbow_l: 15,
+						arm_r: 104,
+						arm_l: 104,
+						elbow_r: -4,
+						elbow_l: -4,
 					},
 				},
 				highlight: ['ARM_LEFT', 'ARM_RIGHT'],
@@ -551,6 +561,19 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 				y: 0,
 				size: 720,
 				highlight: ['ARM_LEFT', 'ARM_RIGHT'],
+				basePose: {
+					arms: {
+						position: 'front',
+						rotation: 'up',
+						fingers: 'spread',
+					},
+					bones: {
+						arm_r: -25,
+						arm_l: -25,
+						elbow_r: -60,
+						elbow_l: -60,
+					},
+				},
 			},
 			poses: [
 				{
@@ -707,6 +730,13 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 				y: 650,
 				size: 700,
 				highlight: ['BODY', 'BREASTS'],
+				basePose: {
+					legs: 'standing',
+					bones: {
+						leg_r: 0,
+						leg_l: 0,
+					},
+				},
 			},
 			poses: [
 				{
@@ -808,11 +838,14 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					arms: {
 						position: 'back',
 					},
+					legs: 'kneeling',
 					bones: {
 						arm_r: 74,
 						arm_l: 74,
 						elbow_r: 15,
 						elbow_l: 15,
+						leg_r: 0,
+						leg_l: 0,
 					},
 				},
 				highlight: ['BODY', 'BREASTS'],
@@ -867,13 +900,18 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 				size: 700,
 				basePose: {
 					arms: {
-						position: 'back',
+						position: 'front',
+						rotation: 'down',
+						fingers: 'spread',
 					},
+					legs: 'sitting',
 					bones: {
 						arm_r: 74,
 						arm_l: 74,
-						elbow_r: 15,
-						elbow_l: 15,
+						elbow_r: 22,
+						elbow_l: 22,
+						leg_r: 0,
+						leg_l: 0,
 					},
 				},
 				highlight: ['BODY', 'BREASTS'],
