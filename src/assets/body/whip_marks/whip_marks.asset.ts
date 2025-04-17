@@ -12,7 +12,8 @@ DefineBodypart({
 			minAlpha: 0.1,
 		},
 	},
-	preview: null,
+	// size:600, y:370, centered
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Body_texture',

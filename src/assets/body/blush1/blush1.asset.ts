@@ -9,7 +9,8 @@ DefineBodypart({
 			default: '#FFFFFF',
 		},
 	},
-	preview: null,
+	// size:200, y:195, centered
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Blush',
