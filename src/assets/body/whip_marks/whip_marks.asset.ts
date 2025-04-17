@@ -12,7 +12,7 @@ DefineBodypart({
 			minAlpha: 0.1,
 		},
 	},
-	// size:600, y:370, centered
+	// size:400, y:440, centered
 	preview: 'preview.png',
 	attributes: {
 		provides: [
