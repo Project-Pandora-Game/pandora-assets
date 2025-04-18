@@ -417,6 +417,96 @@
 					}
 				]
 			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Soles Support",
+			"priority": "BELOW_BODY_SOLES",
+			"points": "body_soles_back",
+			"mirror": 0,
+			"colorizationKey": "support",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "balletboots_soles_box.png",
+						"condition": [
+							[
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Soles Sole",
+			"priority": "BELOW_BODY_SOLES",
+			"points": "body_soles_back",
+			"mirror": 0,
+			"colorizationKey": "sole",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "balletboots_soles_sole.png",
+						"condition": [
+							[
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Soles Heel",
+			"priority": "BELOW_BODY_SOLES",
+			"points": "body_soles_back",
+			"mirror": 0,
+			"colorizationKey": "heel",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "balletboots_soles_heel.png",
+						"condition": [
+							[
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			}
 		}
 	]
 }
