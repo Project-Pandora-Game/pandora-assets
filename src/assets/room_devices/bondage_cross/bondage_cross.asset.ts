@@ -194,9 +194,6 @@ DefineRoomDeviceAsset({
 										'Ankle_cuffs',
 									],
 								},
-								effects: {
-									blockHands: true,
-								},
 							},
 						},
 					},
@@ -218,9 +215,6 @@ DefineRoomDeviceAsset({
 									requires: [
 										'Ankle_cuffs',
 									],
-								},
-								effects: {
-									blockHands: true,
 								},
 							},
 						},
@@ -245,9 +239,6 @@ DefineRoomDeviceAsset({
 										'Ankle_cuffs',
 									],
 								},
-								effects: {
-									blockHands: true,
-								},
 								stateFlags: {
 									provides: ['ankles_tied'],
 								},
@@ -259,7 +250,7 @@ DefineRoomDeviceAsset({
 		},
 		rotation: {
 			type: 'typed',
-			name: 'Cross Rotation',
+			name: 'Cross rotation',
 			staticConfig: { slotName: 'character_slot' },
 			variants: [
 				{
