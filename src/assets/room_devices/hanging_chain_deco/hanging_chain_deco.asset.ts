@@ -1,5 +1,5 @@
 DefineRoomDeviceAsset({
-	name: 'Hanging Chain Deco',
+	name: 'Hanging Chain Decor',
 	size: 'large',
 	colorization: {
 		chain: {
