@@ -34,7 +34,7 @@ DefineRoomDeviceAsset({
 	},
 	pivot: {
 		x: 15,
-		y: 1930,
+		y: 2430,
 	},
 	graphicsLayers: [
 		{
@@ -55,7 +55,7 @@ DefineRoomDeviceAsset({
 					],
 				},
 				{
-					image: 'chain.png@23x1177',
+					image: 'chain.png@22x1575',
 					condition: [
 						[
 							{
@@ -67,7 +67,7 @@ DefineRoomDeviceAsset({
 					],
 				},
 				{
-					image: 'chain.png@15x768',
+					image: 'chain.png@15x1050',
 					condition: [
 						[
 							{
@@ -81,7 +81,7 @@ DefineRoomDeviceAsset({
 			],
 			offsetOverrides: [
 				{
-					offset: { x: 23, y: -100 },
+					offset: { x: 23, y: 0 },
 					condition: [
 						[
 							{
@@ -93,7 +93,7 @@ DefineRoomDeviceAsset({
 					],
 				},
 				{
-					offset: { x: 8, y: -100 },
+					offset: { x: 8, y: 0 },
 					condition: [
 						[
 							{
