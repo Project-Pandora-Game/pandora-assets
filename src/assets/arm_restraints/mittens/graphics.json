@@ -6,83 +6,62 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "mitten front",
-			"priority": "ABOVE_ARM_LEFT",
+			"type": "autoMesh",
+			"name": "front",
 			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"body",
+				"legs"
 			],
-			"mirror": 1,
-			"colorizationKey": "mittens",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "mittens_up.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "mittens_down.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "mittens_side.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "mittens_side_backward.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "Mitten",
+					"colorizationKey": "mittens"
+				},
+				{
+					"name": "Shine",
+					"colorizationKey": "shine"
+				},
+				{
+					"name": "Belt",
+					"colorizationKey": "belt"
+				},
+				{
+					"name": "Rings",
+					"colorizationKey": "rings"
+				}
+			],
+			"variables": [
+				{
+					"type": "armRotation",
+					"side": "left"
+				}
+			],
+			"imageMap": {
+				"up": [
+					"mittens_up.png",
+					"mittens_updown_shine.png",
+					"mittens_updown_belt.png",
+					"mittens_updown_rings.png"
+				],
+				"down": [
+					"mittens_down.png",
+					"mittens_updown_shine.png",
+					"mittens_updown_belt.png",
+					"mittens_updown_rings.png"
+				],
+				"forward": [
+					"mittens_side.png",
+					"mittens_side_shine.png",
+					"mittens_side_belt.png",
+					"mittens_side_rings.png"
+				],
+				"backward": [
+					"mittens_side_backward.png",
+					"mittens_side_shine.png",
+					"mittens_side_belt.png",
+					"mittens_side_rings.png"
 				]
 			}
 		},
@@ -91,365 +70,62 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "mitten shine front",
-			"priority": "ABOVE_ARM_LEFT",
+			"type": "autoMesh",
+			"name": "back",
 			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"legs",
+				"body"
 			],
-			"mirror": 1,
-			"colorizationKey": "shine",
-			"image": {
-				"image": "mittens_side_shine.png",
-				"overrides": [
-					{
-						"image": "mittens_updown_shine.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "mittens_updown_shine.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "belt front",
-			"priority": "ABOVE_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"graphicalLayers": [
+				{
+					"name": "Mitten",
+					"colorizationKey": "mittens"
+				},
+				{
+					"name": "Shine",
+					"colorizationKey": "shine"
+				},
+				{
+					"name": "Belt",
+					"colorizationKey": "belt"
+				},
+				{
+					"name": "Rings",
+					"colorizationKey": "rings"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "belt",
-			"image": {
-				"image": "mittens_side_belt.png",
-				"overrides": [
-					{
-						"image": "mittens_updown_belt.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "mittens_updown_belt.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "rings front",
-			"priority": "ABOVE_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"variables": [
+				{
+					"type": "armRotation",
+					"side": "left"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "rings",
-			"image": {
-				"image": "mittens_side_rings.png",
-				"overrides": [
-					{
-						"image": "mittens_updown_rings.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "mittens_updown_rings.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "mitten back",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "mittens",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "mittens_up.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "mittens_down.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "mittens_side.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "mittens_side_backward.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "mitten shine back",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "shine",
-			"image": {
-				"image": "mittens_side_shine.png",
-				"overrides": [
-					{
-						"image": "mittens_updown_shine.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "mittens_updown_shine.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "belt back",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "belt",
-			"image": {
-				"image": "mittens_side_belt.png",
-				"overrides": [
-					{
-						"image": "mittens_updown_belt.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "mittens_updown_belt.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "rings back",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "rings",
-			"image": {
-				"image": "mittens_side_rings.png",
-				"overrides": [
-					{
-						"image": "mittens_updown_rings.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "mittens_updown_rings.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
-					}
+			"imageMap": {
+				"up": [
+					"mittens_up.png",
+					"mittens_updown_shine.png",
+					"mittens_updown_belt.png",
+					"mittens_updown_rings.png"
+				],
+				"down": [
+					"mittens_down.png",
+					"mittens_updown_shine.png",
+					"mittens_updown_belt.png",
+					"mittens_updown_rings.png"
+				],
+				"forward": [
+					"mittens_side.png",
+					"mittens_side_shine.png",
+					"mittens_side_belt.png",
+					"mittens_side_rings.png"
+				],
+				"backward": [
+					"mittens_side_backward.png",
+					"mittens_side_shine.png",
+					"mittens_side_belt.png",
+					"mittens_side_rings.png"
 				]
 			}
 		}
