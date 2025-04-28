@@ -501,6 +501,11 @@
 								},
 								{
 									"view": "back"
+								},
+								{
+									"module": "heel",
+									"operator": "=",
+									"value": "true"
 								}
 							]
 						]
