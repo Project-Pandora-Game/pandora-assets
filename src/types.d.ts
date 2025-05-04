@@ -131,6 +131,25 @@ interface IntermediateRoomBackgroundDefinition extends Pick<import('pandora-comm
 	};
 }
 
+interface IntermediateTileTextureDefinition extends Pick<import('pandora-common').AssetsTileTextureInfo,
+	| 'id'
+	| 'name'
+> {
+	/** The background image of the tile; must be in `png` format */
+	image: `${string}.png`;
+	/** Info about who owns the asset(s) */
+	ownership: {
+		/** Same as author of git commits present in PR, has responsibility for this asset */
+		responsibleContributor: string;
+		/**
+		 * Legal info about the images
+		 * If there are multiple sources used, specify this multiple times.
+		 * If author gave you express permission to use images, but wishes to remain Anonymous, write "Anonymous" into relevant fields.
+		 */
+		licensing: LicensingInfo[];
+	};
+}
+
 interface LicensingInfo {
 	/**
 	 * Which part of the asset this part of licensing applies to?

@@ -13,6 +13,7 @@ import { ASSET_DEST_DIR, ASSET_SRC_DIR, BASE_DIR, IS_PRODUCTION_BUILD, OUT_DIR }
 import { POSE_PRESETS } from './posePresets.ts';
 import { APPEARANCE_RANDOMIZATION_CONFIG } from './presets.ts';
 import { LoadTemplates } from './templates/index.ts';
+import { LoadTileTextures } from './tileTextures/_tileTextures.ts';
 import { AssetDatabase } from './tools/assetDatabase.ts';
 import { GlobalDefineBodypart } from './tools/definitionBodypart.ts';
 import { GlobalDefineLockAsset } from './tools/definitionLock.ts';
@@ -100,6 +101,7 @@ async function Run() {
 	logger.info('Loading backgrounds...');
 	const tags = LoadBackgroundTags();
 	LoadBackgrounds();
+	LoadTileTextures();
 
 	// Do not repeat the import phase on re-run
 	if (assetProcesses.length === 0) {
@@ -194,7 +196,8 @@ async function Run() {
 		posePresets: POSE_PRESETS,
 		bodyparts: BODYPARTS,
 		backgroundTags: tags,
-		backgrounds: RoomDatabase.export(),
+		backgrounds: RoomDatabase.exportBackgrounds(),
+		tileTextures: RoomDatabase.exportTileTextures(),
 		graphicsId: graphicsFile.hash,
 		graphicsSourceId: graphicsSourceFile.hash,
 		attributes,

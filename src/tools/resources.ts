@@ -9,12 +9,13 @@ import { GENERATE_AVIF } from '../config.ts';
 import { AssetSourcePath } from './context.ts';
 import { WatchFile } from './watch.ts';
 
-export type ImageCategory = 'asset' | 'roomDevice' | 'background' | 'preview';
+export type ImageCategory = 'asset' | 'roomDevice' | 'background' | 'textureTile' | 'preview';
 
 const MAX_SIZES = {
 	asset: 1 * 1024 * 1024,
 	roomDevice: 4 * 1024 * 1024,
 	background: 4 * 1024 * 1024,
+	textureTile: 1024 * 1024,
 	preview: 1 * 1024 * 1024,
 } as const satisfies Record<ImageCategory, number>;
 
