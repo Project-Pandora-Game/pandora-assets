@@ -82,9 +82,30 @@ DefineRoomDeviceAsset({
 		},
 	},
 	modules: {
+		size: {
+			type: 'typed',
+			name: 'Couch size',
+			staticConfig: { slotName: null },
+			variants: [
+				{
+					id: 'normal',
+					name: 'Normal',
+					default: true,
+					properties: {
+						stateFlags: {
+							provides: ['anchors'],
+						},
+					},
+				},
+				{
+					id: 'large',
+					name: 'Extended',
+				},
+			],
+		},
 		ropes: {
 			type: 'typed',
-			name: 'Frame ropes',
+			name: 'Tied to the couch with ropes',
 			staticConfig: { slotName: 'character_slot_top' },
 			variants: [
 				{
@@ -116,6 +137,11 @@ DefineRoomDeviceAsset({
 								},
 							},
 						},
+						stateFlags: {
+							requires: {
+								anchors: 'Ties require a normal sized couch.',
+							},
+						},
 					},
 				},
 				{
@@ -132,6 +158,11 @@ DefineRoomDeviceAsset({
 									},
 									legs: 'standing',
 								},
+							},
+						},
+						stateFlags: {
+							requires: {
+								anchors: 'Ties require a normal sized couch.',
 							},
 						},
 					},
@@ -163,13 +194,18 @@ DefineRoomDeviceAsset({
 								},
 							},
 						},
+						stateFlags: {
+							requires: {
+								anchors: 'Ties require a normal sized couch.',
+							},
+						},
 					},
 				},
 			],
 		},
 	},
 	pivot: {
-		x: 900,
+		x: 1200,
 		y: 870,
 	},
 	graphicsLayers: [
@@ -177,11 +213,39 @@ DefineRoomDeviceAsset({
 			type: 'sprite',
 			image: 'couch_frame.png',
 			colorizationKey: 'frame',
+			imageOverrides: [
+				{
+					image: 'couch_frame_large.png',
+					condition: [
+						[
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+					],
+				},
+			],
 		},
 		{
 			type: 'sprite',
 			image: 'couch_cushion.png',
 			colorizationKey: 'cushion',
+			imageOverrides: [
+				{
+					image: 'couch_cushion_large.png',
+					condition: [
+						[
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+					],
+				},
+			],
 		},
 		{
 			type: 'slot',
