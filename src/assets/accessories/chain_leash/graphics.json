@@ -26,6 +26,18 @@
 								}
 							]
 						]
+					},
+					{
+						"image": "chain_leash_hanging_fading.png",
+						"condition": [
+							[
+								{
+									"module": "collarConfig",
+									"operator": "=",
+									"value": "held"
+								}
+							]
+						]
 					}
 				]
 			}

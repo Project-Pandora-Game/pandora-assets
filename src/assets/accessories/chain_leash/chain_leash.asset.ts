@@ -10,7 +10,7 @@ DefineAsset({
 		},
 		handle: {
 			name: 'Handle',
-			default: '#202020',
+			default: '#FF6565',
 		},
 	},
 	preview: 'chain_preview.png',
@@ -56,6 +56,10 @@ DefineAsset({
 				{
 					id: 'right_up',
 					name: 'Leash Held High Right',
+				},
+				{
+					id: 'held',
+					name: 'Leash Held (with separate handheld item)',
 				},
 			],
 		},
