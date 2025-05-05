@@ -6,34 +6,49 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "handle hand overlay",
-			"priority": "ABOVE_ARM_RIGHT",
+			"type": "autoMesh",
+			"name": "handle front",
 			"points": "static",
-			"pointType": [
-				"static_r",
-				"static"
+			"automeshTemplate": "aboveArms",
+			"graphicalLayers": [
+				{
+					"name": "handle front",
+					"colorizationKey": "handle"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "leash_handle_front.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "!=",
-									"value": "no"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "handUsage_l"
+				}
+			],
+			"imageMap": {
+				"front:no": [
+					""
+				],
+				"front:down": [
+					"leash_handle_front.png"
+				],
+				"front:left": [
+					"leash_handle_front.png"
+				],
+				"front:right": [
+					"leash_handle_front.png"
+				],
+				"back:no": [
+					""
+				],
+				"back:down": [
+					""
+				],
+				"back:left": [
+					""
+				],
+				"back:right": [
+					""
 				]
 			}
 		},
@@ -42,34 +57,49 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "handle hand overlay back",
-			"priority": "BELOW_ARM_RIGHT",
+			"type": "autoMesh",
+			"name": "handle back",
 			"points": "static",
-			"pointType": [
-				"static_r",
-				"static"
+			"automeshTemplate": "belowArms",
+			"graphicalLayers": [
+				{
+					"name": "handle back",
+					"colorizationKey": "handle"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "leash_handle_back.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "!=",
-									"value": "no"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "handUsage_l"
+				}
+			],
+			"imageMap": {
+				"front:no": [
+					""
+				],
+				"front:down": [
+					""
+				],
+				"front:left": [
+					""
+				],
+				"front:right": [
+					""
+				],
+				"back:no": [
+					""
+				],
+				"back:down": [
+					"leash_handle_back.png"
+				],
+				"back:left": [
+					"leash_handle_back.png"
+				],
+				"back:right": [
+					"leash_handle_back.png"
 				]
 			}
 		},
@@ -78,121 +108,50 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "tip",
-			"priority": "BELOW_ARM_RIGHT",
+			"type": "autoMesh",
+			"name": "leash",
 			"points": "static",
-			"pointType": [
-				"static_r",
-				"static"
+			"automeshTemplate": "belowArms",
+			"graphicalLayers": [
+				{
+					"name": "leash",
+					"colorizationKey": "leash"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "leash",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "leash_pet_hanging.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "pet"
-								}
-							]
-						]
-					},
-					{
-						"image": "leash_pet_right.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "right"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "pet"
-								}
-							]
-						]
-					},
-					{
-						"image": "leash_pet_left.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "left"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "pet"
-								}
-							]
-						]
-					},
-					{
-						"image": "leash_chain_hanging.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "chain"
-								}
-							]
-						]
-					},
-					{
-						"image": "leash_chain_right.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "right"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "chain"
-								}
-							]
-						]
-					},
-					{
-						"image": "leash_chain_left.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "left"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "chain"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "type"
+				},
+				{
+					"type": "typedModule",
+					"module": "handUsage_l"
+				}
+			],
+			"imageMap": {
+				"pet:no": [
+					""
+				],
+				"pet:down": [
+					"leash_pet_hanging.png"
+				],
+				"pet:left": [
+					"leash_pet_left.png"
+				],
+				"pet:right": [
+					"leash_pet_right.png"
+				],
+				"chain:no": [
+					""
+				],
+				"chain:down": [
+					"leash_chain_hanging.png"
+				],
+				"chain:left": [
+					"leash_chain_left.png"
+				],
+				"chain:right": [
+					"leash_chain_right.png"
 				]
 			}
 		}

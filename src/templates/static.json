@@ -34,6 +34,34 @@
 					"priority": "BELOW_BODY"
 				}
 			]
+		},
+		"aboveArms": {
+			"name": "Above arms (mirrored)",
+			"parts": [
+				{
+					"id": "arms",
+					"priority": "ABOVE_ARM_LEFT",
+					"pointType": [
+						"static_l",
+						"static"
+					],
+					"mirror": 1
+				}
+			]
+		},
+		"belowArms": {
+			"name": "Below arms (mirrored)",
+			"parts": [
+				{
+					"id": "arms",
+					"priority": "BELOW_ARM_LEFT",
+					"pointType": [
+						"static_l",
+						"static"
+					],
+					"mirror": 1
+				}
+			]
 		}
 	},
 	"points": [
