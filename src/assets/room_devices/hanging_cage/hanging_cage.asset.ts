@@ -144,6 +144,7 @@ DefineRoomDeviceAsset({
 				x: -12,
 				y: -1952,
 			},
+			clipToRoom: true,
 			offsetOverrides: [
 				{
 					offset: { x: -12, y: -2732 },

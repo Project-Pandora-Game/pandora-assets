@@ -391,6 +391,7 @@ DefineRoomDeviceAsset({
 		{
 			type: 'sprite',
 			image: 'hanging_chain_1.png',
+			clipToRoom: true,
 			colorizationKey: 'chains',
 			imageOverrides: [
 				{
@@ -424,6 +425,7 @@ DefineRoomDeviceAsset({
 		{
 			type: 'sprite',
 			image: 'hanging_chain_2.png',
+			clipToRoom: true,
 			colorizationKey: 'chains',
 			imageOverrides: [
 				{

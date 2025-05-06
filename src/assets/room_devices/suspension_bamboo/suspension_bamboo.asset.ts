@@ -473,6 +473,7 @@ DefineRoomDeviceAsset({
 			type: 'sprite',
 			image: '',
 			colorizationKey: 'rope',
+			clipToRoom: true,
 			imageOverrides: [
 				{
 					image: 'long_vertical_rope.png@64x1150',
@@ -507,6 +508,7 @@ DefineRoomDeviceAsset({
 			type: 'sprite',
 			image: '',
 			colorizationKey: 'rope',
+			clipToRoom: true,
 			imageOverrides: [
 				{
 					image: 'long_vertical_rope.png@64x1150',

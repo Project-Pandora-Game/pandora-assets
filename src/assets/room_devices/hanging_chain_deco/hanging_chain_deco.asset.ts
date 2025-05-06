@@ -40,6 +40,7 @@ DefineRoomDeviceAsset({
 		{
 			type: 'sprite',
 			image: '',
+			clipToRoom: true,
 			colorizationKey: 'chain',
 			imageOverrides: [
 				{

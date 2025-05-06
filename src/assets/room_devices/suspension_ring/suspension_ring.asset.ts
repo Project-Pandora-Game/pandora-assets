@@ -322,6 +322,7 @@ DefineRoomDeviceAsset({
 		{
 			type: 'sprite',
 			image: 'ceiling_line.png',
+			clipToRoom: true,
 			colorizationKey: 'rope',
 			offset: { x: 483, y: -580 },
 		},

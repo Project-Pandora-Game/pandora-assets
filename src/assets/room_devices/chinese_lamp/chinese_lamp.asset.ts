@@ -260,6 +260,7 @@ DefineRoomDeviceAsset({
 		{
 			type: 'sprite',
 			image: '',
+			clipToRoom: true,
 			imageOverrides: [
 				{
 					image: 'lamp_pendulum.png',
