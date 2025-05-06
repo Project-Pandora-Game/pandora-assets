@@ -15,7 +15,7 @@ const MAX_SIZES = {
 	asset: 1 * 1024 * 1024,
 	roomDevice: 4 * 1024 * 1024,
 	background: 4 * 1024 * 1024,
-	textureTile: 1.5 * 1024 * 1024,
+	textureTile: 512 * 1024,
 	preview: 1 * 1024 * 1024,
 } as const satisfies Record<ImageCategory, number>;
 
