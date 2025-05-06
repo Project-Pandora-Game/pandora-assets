@@ -3,8 +3,53 @@ import { DefineTileTexture } from '../tools/tileTextureDefinition.ts';
 const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 	{
 		id: 'black_white_marble_tiles_01',
-		name: 'Diamond alternating marble tiles',
+		name: 'Diamond alternating marble tile',
 		image: 'black_white_marble_tiles_01.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/200-tile-floor-textures?page=1',
+					copyrightHolder: 'Screaming Brain Studios',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'black_white_marble_tiles_02',
+		name: 'Diamond marble tile',
+		image: 'bw_marble_tile_03-256x256_0.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/200-tile-floor-textures?page=1',
+					copyrightHolder: 'Screaming Brain Studios',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'black_white_marble_tiles_03',
+		name: 'Chess marble tile',
+		image: 'bw_marble_tile_03-256x256.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/200-tile-floor-textures?page=1',
+					copyrightHolder: 'Screaming Brain Studios',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'black_white_marble_tiles_04',
+		name: 'Rectangle white marble tile',
+		image: 'rectangle_marble_tile_02-256x256.png',
 		ownership: {
 			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 			licensing: [
@@ -93,7 +138,7 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 	},
 	{
 		id: 'carpet_01',
-		name: 'Carpet 01',
+		name: 'Colorable Carpet',
 		image: 'holiday_fabric-512x512.png',
 		ownership: {
 			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
@@ -101,6 +146,21 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 				{
 					source: 'https://opengameart.org/content/holiday-texture-pack-holidayfabric03-512x512png',
 					copyrightHolder: 'Screaming Brain Studios',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'carpet_02',
+		name: 'Flower pattern textile',
+		image: 'BlueFlowerFabric.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/seamless-assorted-textures',
+					copyrightHolder: 'BMacZero',
 					license: 'Public Domain',
 				},
 			],
@@ -131,6 +191,36 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 				{
 					source: 'https://opengameart.org/content/tileable-dirt-textures',
 					copyrightHolder: 'Cethiel',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'dirt_03',
+		name: 'Grass-covered dirt',
+		image: 'grass_01.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/tileable-grass-textures-set-2',
+					copyrightHolder: 'Cethiel',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'dirt_04',
+		name: 'Grass floor',
+		image: 'grass_24.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/tiny-texture-pack-1?page=2',
+					copyrightHolder: 'Screaming Brain Studios',
 					license: 'Public Domain',
 				},
 			],
@@ -272,6 +362,36 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 		},
 	},
 	{
+		id: 'stone_06',
+		name: 'Black rock',
+		image: 'black_rock.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/100-seamless-textures',
+					copyrightHolder: 'Mitch Featherston',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'stone_07',
+		name: 'Marble',
+		image: 'marble.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/100-seamless-textures',
+					copyrightHolder: 'Mitch Featherston',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
 		id: 'mosaic_01',
 		name: 'Mosaic tile 01',
 		image: 'tile_4_256x256.png',
@@ -401,6 +521,81 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 				{
 					source: 'https://opengameart.org/content/base-material-texture-pack?page=3',
 					copyrightHolder: 'Screaming Brain Studios',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'wallpaper_01',
+		name: 'Denim wallpaper',
+		image: 'Denim1.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/cute-cartoon-style-texture-pack-256x256',
+					copyrightHolder: 'Rattel',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'wallpaper_02',
+		name: 'Cute wallpaper',
+		image: 'cute_wallpaper.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/cute-cartoon-style-texture-pack-256x256',
+					copyrightHolder: 'Rattel',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'wallpaper_03',
+		name: 'Parchment wallpaper',
+		image: 'ParchmentWallpaper.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/seamless-assorted-textures',
+					copyrightHolder: 'BMacZero',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'wallpaper_04',
+		name: 'Mystic pattern wallpaper',
+		image: 'CardBack.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/seamless-assorted-textures',
+					copyrightHolder: 'BMacZero',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'wallpaper_05',
+		name: 'Artistic wallpaper',
+		image: 'wallpaper_artistic.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/100-seamless-textures',
+					copyrightHolder: 'Mitch Featherston',
 					license: 'Public Domain',
 				},
 			],
