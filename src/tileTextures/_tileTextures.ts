@@ -32,6 +32,111 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 		},
 	},
 	{
+		id: 'brick_02',
+		name: 'Artistic brick pattern',
+		image: 'Brick_02.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/tileable-brick-ground-textures-set-2',
+					copyrightHolder: 'Cethiel',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'brick_03',
+		name: 'Grey square brick pattern',
+		image: 'Brick_03.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/tileable-brick-ground-textures-set-2',
+					copyrightHolder: 'Cethiel',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'brick_04',
+		name: 'Artistic brick floor',
+		image: 'Brick_04.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/tileable-brick-ground-textures-set-2',
+					copyrightHolder: 'Cethiel',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'brick_05',
+		name: 'White brick wall',
+		image: 'brick_05.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/node/45590',
+					copyrightHolder: 'beaterator',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'carpet_01',
+		name: 'Carpet 01',
+		image: 'holiday_fabric-512x512.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/holiday-texture-pack-holidayfabric03-512x512png',
+					copyrightHolder: 'Screaming Brain Studios',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'dirt_01',
+		name: 'Dirt floor',
+		image: 'dirt_01.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/tileable-dirt-textures',
+					copyrightHolder: 'Cethiel',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'dirt_02',
+		name: 'Leaf-covered floor',
+		image: 'dirt_02.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/tileable-dirt-textures',
+					copyrightHolder: 'Cethiel',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
 		id: 'wood_01',
 		name: 'Dark wood pattern',
 		image: 'wood_01.png',
@@ -101,6 +206,66 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 				{
 					source: 'https://opengameart.org/content/photorealistic-texture-pack-1?page=3',
 					copyrightHolder: 'Screaming Brain Studios',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'stone_02',
+		name: 'Grassy stone tiles 01',
+		image: 'Ground_01.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/tileable-bricks-ground-textures-set-1',
+					copyrightHolder: 'Cethiel',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'stone_03',
+		name: 'Grassy stone tiles 02',
+		image: 'Ground_02.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/tileable-bricks-ground-textures-set-1',
+					copyrightHolder: 'Cethiel',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'stone_04',
+		name: 'Grassy stone tiles 03',
+		image: 'Ground_03.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/tileable-bricks-ground-textures-set-1',
+					copyrightHolder: 'Cethiel',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'stone_05',
+		name: 'Grassy stone floor',
+		image: 'Ground_04.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/tileable-bricks-ground-textures-set-1',
+					copyrightHolder: 'Cethiel',
 					license: 'Public Domain',
 				},
 			],
