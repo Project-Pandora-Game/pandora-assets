@@ -102,7 +102,7 @@ DefineAsset({
 								arm_l: 74,
 								elbow_l: 15,
 							},
-							rightArm: {
+							leftArm: {
 								position: 'front',
 								rotation: 'forward',
 								fingers: 'spread',
@@ -119,7 +119,7 @@ DefineAsset({
 								arm_l: 74,
 								elbow_l: 15,
 							},
-							rightArm: {
+							leftArm: {
 								position: 'front',
 								rotation: 'forward',
 								fingers: 'spread',
@@ -136,7 +136,7 @@ DefineAsset({
 								arm_l: 74,
 								elbow_l: 15,
 							},
-							rightArm: {
+							leftArm: {
 								position: 'front',
 								rotation: 'forward',
 								fingers: 'spread',
