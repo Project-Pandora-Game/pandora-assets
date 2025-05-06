@@ -488,10 +488,77 @@ DefineRoomDeviceAsset({
 					],
 				},
 			],
-
+			offsetOverrides: [
+				{
+					offset: { x: 115, y: -2248 },
+					condition: [
+						[
+							{
+								module: 'configuration',
+								operator: '=',
+								value: 'hanging',
+							},
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'sprite',
+			image: '',
+			colorizationKey: 'rope',
+			clipToRoom: true,
+			imageOverrides: [
+				{
+					image: 'long_vertical_rope.png@64x1150',
+					condition: [
+						[
+							{
+								module: 'configuration',
+								operator: '=',
+								value: 'hanging',
+							},
+						],
+					],
+				},
+			],
 			offsetOverrides: [
 				{
 					offset: { x: 115, y: -1100 },
+					condition: [
+						[
+							{
+								module: 'configuration',
+								operator: '=',
+								value: 'hanging',
+							},
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'sprite',
+			image: '',
+			colorizationKey: 'rope',
+			clipToRoom: true,
+			imageOverrides: [
+				{
+					image: 'long_vertical_rope.png@64x1150',
+					condition: [
+						[
+							{
+								module: 'configuration',
+								operator: '=',
+								value: 'hanging',
+							},
+						],
+					],
+				},
+			],
+			offsetOverrides: [
+				{
+					offset: { x: 1338, y: -2248 },
 					condition: [
 						[
 							{
