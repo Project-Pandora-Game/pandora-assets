@@ -324,7 +324,9 @@ DefineAsset({
 							],
 						},
 						poseLimits: {
-							legs: 'kneeling',
+							legs: {
+								pose: 'kneeling',
+							},
 						},
 						stateFlags: {
 							requires: {

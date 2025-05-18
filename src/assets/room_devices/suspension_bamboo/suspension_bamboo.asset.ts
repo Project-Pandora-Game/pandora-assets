@@ -24,7 +24,9 @@ DefineRoomDeviceAsset({
 				name: 'Suspension Bamboo',
 				size: 'huge',
 				poseLimits: {
-					legs: ['standing', 'kneeling'],
+					legs: {
+						pose: ['standing', 'kneeling'],
+					},
 				},
 			},
 		},
@@ -60,7 +62,9 @@ DefineRoomDeviceAsset({
 							under_bamboo: {
 								poseLimits: {
 									view: 'front',
-									legs: ['standing', 'kneeling'],
+									legs: {
+										pose: ['standing', 'kneeling'],
+									},
 								},
 								stateFlags: {
 									provides: ['front_view'],
@@ -77,7 +81,9 @@ DefineRoomDeviceAsset({
 							under_bamboo: {
 								poseLimits: {
 									view: 'back',
-									legs: ['standing', 'kneeling'],
+									legs: {
+										pose: ['standing', 'kneeling'],
+									},
 								},
 								stateFlags: {
 									provides: ['back_view'],
@@ -111,7 +117,9 @@ DefineRoomDeviceAsset({
 									],
 								},
 								poseLimits: {
-									legs: 'kneeling',
+									legs: {
+										pose: 'kneeling',
+									},
 									bones: {
 										character_rotation: 0,
 										leg_l: [[-25, 6]],
@@ -135,7 +143,9 @@ DefineRoomDeviceAsset({
 									],
 								},
 								poseLimits: {
-									legs: ['standing', 'kneeling'],
+									legs: {
+										pose: ['standing', 'kneeling'],
+									},
 								},
 								stateFlags: {
 									provides: ['suspension_chest'],
@@ -271,7 +281,9 @@ DefineRoomDeviceAsset({
 						slotProperties: {
 							under_bamboo: {
 								poseLimits: {
-									legs: ['standing', 'kneeling'],
+									legs: {
+										pose: ['standing', 'kneeling'],
+									},
 									bones: {
 										character_rotation: 0,
 										leg_l: -65,
@@ -311,7 +323,9 @@ DefineRoomDeviceAsset({
 									],
 								},
 								poseLimits: {
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									bones: {
 										character_rotation: -27,
 										leg_l: -87,
@@ -339,7 +353,9 @@ DefineRoomDeviceAsset({
 									],
 								},
 								poseLimits: {
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									bones: {
 										character_rotation: 27,
 										leg_r: -87,
@@ -367,7 +383,9 @@ DefineRoomDeviceAsset({
 									],
 								},
 								poseLimits: {
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									bones: {
 										character_rotation: 27,
 										leg_l: -87,
@@ -395,7 +413,9 @@ DefineRoomDeviceAsset({
 									],
 								},
 								poseLimits: {
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									bones: {
 										character_rotation: -27,
 										leg_r: -87,
@@ -418,7 +438,9 @@ DefineRoomDeviceAsset({
 						slotProperties: {
 							under_bamboo: {
 								poseLimits: {
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									bones: {
 										character_rotation: 0,
 										leg_l: -65,
@@ -446,7 +468,9 @@ DefineRoomDeviceAsset({
 									],
 								},
 								poseLimits: {
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									bones: {
 										character_rotation: -90,
 									},

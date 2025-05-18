@@ -198,7 +198,9 @@ DefineAsset({
 							],
 						},
 						poseLimits: {
-							legs: ['kneeling', 'standing'],
+							legs: {
+								pose: ['kneeling', 'standing'],
+							},
 						},
 					},
 				},
@@ -215,7 +217,9 @@ DefineAsset({
 							],
 						},
 						poseLimits: {
-							legs: 'standing',
+							legs: {
+								pose: 'standing',
+							},
 						},
 					},
 				},

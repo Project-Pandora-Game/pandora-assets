@@ -13,8 +13,10 @@ import {
 	BONE_MIN,
 	CharacterViewSchema,
 	IsReadonlyArray,
+	LegSideOrderSchema,
 	LegsPoseSchema,
 	Logger,
+	type AssetDefinitionLegsPosePoseLimit,
 } from 'pandora-common';
 import { ZodEnum } from 'zod';
 import { ATTRIBUTES_DEFINITION, AttributeNames } from '../../attributes.ts';
@@ -155,8 +157,8 @@ function ValidateAssetDefinitionPoseLimit(logger: Logger, context: string, { bon
 	ValidateAssetDefinitionArmLimit(logger, `${context}.leftArm`, leftArm);
 	ValidateAssetDefinitionArmLimit(logger, `${context}.rightArm`, rightArm);
 	ValidateAssetDefinitionArmsOrderLimit(logger, `${context}.armsOrder`, armsOrder);
+	ValidateAssetDefinitionLegsLimit(logger, `${context}.legs`, legs);
 	ValidateAssetDefinitionEnumPoseLimit(logger, `${context}.view`, CharacterViewSchema, view);
-	ValidateAssetDefinitionEnumPoseLimit(logger, `${context}.legs`, LegsPoseSchema, legs);
 }
 
 function ValidateAssetDefinitionArmLimit(logger: Logger, context: string, { position, rotation, fingers }: Immutable<AssetDefinitionArmPoseLimit> = {}): void {
@@ -167,6 +169,11 @@ function ValidateAssetDefinitionArmLimit(logger: Logger, context: string, { posi
 
 function ValidateAssetDefinitionArmsOrderLimit(logger: Logger, context: string, { upper }: Immutable<AssetDefinitionArmOrderPoseLimit> = {}): void {
 	ValidateAssetDefinitionEnumPoseLimit(logger, `${context}.upper`, ArmSegmentOrderSchema, upper);
+}
+
+function ValidateAssetDefinitionLegsLimit(logger: Logger, context: string, { upper, pose }: Immutable<AssetDefinitionLegsPosePoseLimit> = {}): void {
+	ValidateAssetDefinitionEnumPoseLimit(logger, `${context}.upper`, LegSideOrderSchema, upper);
+	ValidateAssetDefinitionEnumPoseLimit(logger, `${context}.pose`, LegsPoseSchema, pose);
 }
 
 function ValidateAssetDefinitionEnumPoseLimit<E extends [string, ...string[]]>(logger: Logger, context: string, _schema: ZodEnum<E>, value: E[number] | readonly (E[number])[] | undefined): void {

@@ -75,7 +75,9 @@ DefineRoomDeviceAsset({
 						leg_l: [[-10, 10]],
 						character_rotation: 90,
 					},
-					legs: 'kneeling',
+					legs: {
+						pose: 'kneeling',
+					},
 					view: 'front',
 				},
 			},
@@ -91,7 +93,9 @@ DefineRoomDeviceAsset({
 						leg_l: [[-60, 60]],
 						character_rotation: [[-30, 30]],
 					},
-					legs: 'sitting',
+					legs: {
+						pose: 'sitting',
+					},
 					view: 'front',
 				},
 			},
@@ -107,7 +111,9 @@ DefineRoomDeviceAsset({
 						leg_l: [[-60, 60]],
 						character_rotation: [[-30, 30]],
 					},
-					legs: 'sitting',
+					legs: {
+						pose: 'sitting',
+					},
 					view: 'front',
 				},
 			},
@@ -123,7 +129,9 @@ DefineRoomDeviceAsset({
 						leg_l: [[-60, 60]],
 						character_rotation: [[-30, 30]],
 					},
-					legs: 'sitting',
+					legs: {
+						pose: 'sitting',
+					},
 					view: 'front',
 				},
 			},

@@ -31,7 +31,9 @@ export const APPEARANCE_RANDOMIZATION_CONFIG: AppearanceRandomizationData<AssetR
 			rotation: 'forward',
 			fingers: 'spread',
 		},
-		legs: 'standing',
+		legs: {
+			pose: 'standing',
+		},
 		bones: {
 			arm_r: 74,
 			arm_l: 74,

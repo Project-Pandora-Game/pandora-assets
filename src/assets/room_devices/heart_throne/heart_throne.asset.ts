@@ -25,7 +25,9 @@ DefineRoomDeviceAsset({
 						leg_l: [[-60, 60]],
 						character_rotation: [[-30, 30]],
 					},
-					legs: 'sitting',
+					legs: {
+						pose: 'sitting',
+					},
 					view: 'front',
 				},
 				posePresets: [
@@ -75,7 +77,9 @@ DefineRoomDeviceAsset({
 						leg_l: [[-30, 10]],
 						character_rotation: 0,
 					},
-					legs: 'kneeling',
+					legs: {
+						pose: 'kneeling',
+					},
 				},
 			},
 		},

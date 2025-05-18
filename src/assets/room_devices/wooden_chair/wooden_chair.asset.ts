@@ -32,7 +32,9 @@ DefineRoomDeviceAsset({
 				name: 'Wooden Chair',
 				size: 'huge',
 				poseLimits: {
-					legs: 'sitting',
+					legs: {
+						pose: 'sitting',
+					},
 					view: 'front',
 				},
 			},

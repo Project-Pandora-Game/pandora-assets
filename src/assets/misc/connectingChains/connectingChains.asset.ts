@@ -123,7 +123,9 @@ DefineAsset({
 					switchMessage: 'SOURCE_CHARACTER connected the cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE armbinder with short chains.',
 					properties: {
 						poseLimits: {
-							legs: 'kneeling',
+							legs: {
+								pose: 'kneeling',
+							},
 							bones: {
 								leg_l: [[-27, 5]],
 								leg_r: [[-27, 5]],
@@ -150,7 +152,9 @@ DefineAsset({
 							arms: {
 								position: 'back',
 							},
-							legs: 'kneeling',
+							legs: {
+								pose: 'kneeling',
+							},
 							bones: {
 								arm_l: 90,
 								arm_r: 90,

@@ -57,14 +57,18 @@ DefineBodypart({
 						poseLimits: {
 							options: [
 								{
-									legs: ['standing', 'kneeling'],
+									legs: {
+										pose: ['standing', 'kneeling'],
+									},
 									bones: {
 										leg_l: [[-100, 80]],
 										leg_r: [[-100, 80]],
 									},
 								},
 								{
-									legs: 'sitting',
+									legs: {
+										pose: 'sitting',
+									},
 									bones: {
 										leg_l: [[-50, 50]],
 										leg_r: [[-50, 50]],

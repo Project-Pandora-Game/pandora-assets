@@ -28,7 +28,9 @@ DefineRoomDeviceAsset({
 					bones: {
 						character_rotation: -90,
 					},
-					legs: ['standing', 'kneeling'],
+					legs: {
+						pose: ['standing', 'kneeling'],
+					},
 				},
 			},
 		},
@@ -43,7 +45,9 @@ DefineRoomDeviceAsset({
 						leg_l: [[-60, 60]],
 						character_rotation: [[-30, 30]],
 					},
-					legs: 'sitting',
+					legs: {
+						pose: 'sitting',
+					},
 					view: 'front',
 				},
 			},
@@ -59,7 +63,9 @@ DefineRoomDeviceAsset({
 						leg_l: [[-60, 60]],
 						character_rotation: [[-30, 30]],
 					},
-					legs: 'sitting',
+					legs: {
+						pose: 'sitting',
+					},
 					view: 'front',
 				},
 			},
@@ -75,7 +81,9 @@ DefineRoomDeviceAsset({
 						leg_l: [[-60, 60]],
 						character_rotation: [[-30, 30]],
 					},
-					legs: 'sitting',
+					legs: {
+						pose: 'sitting',
+					},
 					view: 'front',
 				},
 			},
@@ -156,7 +164,9 @@ DefineRoomDeviceAsset({
 										leg_l: 2,
 										leg_r: 2,
 									},
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 								},
 							},
 						},
@@ -183,7 +193,9 @@ DefineRoomDeviceAsset({
 										leg_l: 2,
 										leg_r: 2,
 									},
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									arms: {
 										rotation: 'up',
 										position: 'back',

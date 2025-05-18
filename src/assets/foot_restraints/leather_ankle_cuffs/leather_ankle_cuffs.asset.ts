@@ -133,21 +133,27 @@ DefineAsset({
 						poseLimits: {
 							options: [
 								{
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									bones: {
 										leg_r: 2,
 										leg_l: 2,
 									},
 								},
 								{
-									legs: 'sitting',
+									legs: {
+										pose: 'sitting',
+									},
 									bones: {
 										leg_r: 2,
 										leg_l: 2,
 									},
 								},
 								{
-									legs: 'kneeling',
+									legs: {
+										pose: 'kneeling',
+									},
 									bones: {
 										leg_r: 6,
 										leg_l: 6,
@@ -213,7 +219,9 @@ DefineAsset({
 								leg_r: -30,
 								leg_l: -30,
 							},
-							legs: 'standing',
+							legs: {
+								pose: 'standing',
+							},
 						},
 						stateFlags: {
 							provides: ['bar'],

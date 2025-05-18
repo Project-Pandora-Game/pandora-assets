@@ -28,7 +28,9 @@ DefineRoomDeviceAsset({
 				name: 'Sybian-type Saddle',
 				size: 'huge',
 				poseLimits: {
-					legs: 'kneeling',
+					legs: {
+						pose: 'kneeling',
+					},
 					bones: {
 						character_rotation: 0,
 						leg_l: [[-45, -30]],

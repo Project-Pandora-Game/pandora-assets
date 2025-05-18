@@ -59,7 +59,9 @@ DefineRoomDeviceAsset({
 										leg_l: [[-36, 10]],
 										character_rotation: 0,
 									},
-									legs: ['standing', 'kneeling'],
+									legs: {
+										pose: ['standing', 'kneeling'],
+									},
 								},
 							},
 						},
@@ -77,7 +79,9 @@ DefineRoomDeviceAsset({
 										leg_l: -29,
 										character_rotation: 0,
 									},
-									legs: ['standing', 'kneeling'],
+									legs: {
+										pose: ['standing', 'kneeling'],
+									},
 									view: 'front',
 								},
 								attributes: {
@@ -105,7 +109,9 @@ DefineRoomDeviceAsset({
 										leg_l: -30,
 										character_rotation: 0,
 									},
-									legs: ['standing', 'kneeling'],
+									legs: {
+										pose: ['standing', 'kneeling'],
+									},
 									view: 'back',
 								},
 								attributes: {
@@ -141,7 +147,9 @@ DefineRoomDeviceAsset({
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									options: [
 										{
 											view: 'front',
@@ -180,7 +188,9 @@ DefineRoomDeviceAsset({
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									options: [
 										{
 											view: 'front',
@@ -219,7 +229,9 @@ DefineRoomDeviceAsset({
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									options: [
 										{
 											view: 'front',
@@ -258,7 +270,9 @@ DefineRoomDeviceAsset({
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									options: [
 										{
 											view: 'front',
