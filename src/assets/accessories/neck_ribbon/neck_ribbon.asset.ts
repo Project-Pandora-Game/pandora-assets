@@ -21,7 +21,6 @@ DefineAsset({
 		],
 		requires: [
 			'Collar',
-			'!Collar_front_ring',
 		],
 	},
 	ownership: {
