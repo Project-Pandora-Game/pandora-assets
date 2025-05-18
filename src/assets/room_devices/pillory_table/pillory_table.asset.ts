@@ -117,7 +117,8 @@ DefineRoomDeviceAsset({
 			slot: 'character_slot',
 			characterPosition: {
 				offsetX: 0,
-				offsetY: 32,
+				offsetY: 390,
+				disablePoseOffset: true,
 			},
 		},
 		{
