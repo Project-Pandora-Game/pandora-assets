@@ -94,7 +94,13 @@
 				"BELOW_BODY",
 				"BODY",
 				"BELOW_BREASTS",
-				"ABOVE_BODY"
+				"ABOVE_BODY",
+				"BELOW_LEG_LEFT",
+				"LEG_LEFT",
+				"ABOVE_LEG_LEFT",
+				"BELOW_LEG_RIGHT",
+				"LEG_RIGHT",
+				"ABOVE_LEG_RIGHT"
 			]
 		},
 		"bodyleg_l": {
@@ -104,7 +110,10 @@
 				"BELOW_BODY",
 				"BODY",
 				"BELOW_BREASTS",
-				"ABOVE_BODY"
+				"ABOVE_BODY",
+				"BELOW_LEG_LEFT",
+				"LEG_LEFT",
+				"ABOVE_LEG_LEFT"
 			],
 			"requiredPointTypes": [
 				"bodyleg"
@@ -117,7 +126,10 @@
 				"BELOW_BODY",
 				"BODY",
 				"BELOW_BREASTS",
-				"ABOVE_BODY"
+				"ABOVE_BODY",
+				"BELOW_LEG_RIGHT",
+				"LEG_RIGHT",
+				"ABOVE_LEG_RIGHT"
 			],
 			"requiredPointTypes": [
 				"bodyleg"
@@ -125,10 +137,9 @@
 		},
 		"leg_l": {
 			"allowedPriorities": [
-				"BELOW_BODY",
-				"BODY",
-				"BELOW_BREASTS",
-				"ABOVE_BODY"
+				"BELOW_LEG_LEFT",
+				"LEG_LEFT",
+				"ABOVE_LEG_LEFT"
 			],
 			"requiredPointTypes": [
 				"bodyleg",
@@ -137,10 +148,9 @@
 		},
 		"leg_r": {
 			"allowedPriorities": [
-				"BELOW_BODY",
-				"BODY",
-				"BELOW_BREASTS",
-				"ABOVE_BODY"
+				"BELOW_LEG_RIGHT",
+				"LEG_RIGHT",
+				"ABOVE_LEG_RIGHT"
 			],
 			"requiredPointTypes": [
 				"bodyleg",
@@ -215,7 +225,7 @@
 				},
 				{
 					"id": "legs",
-					"priority": "ABOVE_BODY",
+					"priority": "ABOVE_LEG_LEFT",
 					"pointType": [
 						"bodyleg",
 						"bodyleg_l",
@@ -253,7 +263,7 @@
 				},
 				{
 					"id": "legs",
-					"priority": "BELOW_BREASTS",
+					"priority": "ABOVE_LEG_LEFT",
 					"pointType": [
 						"bodyleg",
 						"bodyleg_l",
@@ -291,7 +301,7 @@
 				},
 				{
 					"id": "legs",
-					"priority": "BELOW_BODY",
+					"priority": "BELOW_LEG_LEFT",
 					"pointType": [
 						"bodyleg",
 						"bodyleg_l",

@@ -21,7 +21,9 @@ DefineAsset({
 					properties: {
 						poseLimits: [
 							{
-								legs: 'sitting',
+								legs: {
+									pose: 'sitting',
+								},
 							},
 						],
 					},

@@ -29,7 +29,9 @@ DefineRoomDeviceAsset({
 				name: 'Floor anchor',
 				size: 'huge',
 				poseLimits: {
-					legs: ['standing', 'kneeling'],
+					legs: {
+						pose: ['standing', 'kneeling'],
+					},
 				},
 				graphics: 'left.json',
 			},
@@ -40,7 +42,9 @@ DefineRoomDeviceAsset({
 				name: 'Floor anchors',
 				size: 'huge',
 				poseLimits: {
-					legs: ['standing', 'kneeling'],
+					legs: {
+						pose: ['standing', 'kneeling'],
+					},
 				},
 			},
 		},
@@ -50,7 +54,9 @@ DefineRoomDeviceAsset({
 				name: 'Floor anchor',
 				size: 'huge',
 				poseLimits: {
-					legs: ['standing', 'kneeling'],
+					legs: {
+						pose: ['standing', 'kneeling'],
+					},
 				},
 				graphics: 'right.json',
 			},
@@ -102,7 +108,9 @@ DefineRoomDeviceAsset({
 										leg_r: [[-16, 0]],
 										leg_l: [[-16, 0]],
 									},
-									legs: 'kneeling',
+									legs: {
+										pose: 'kneeling',
+									},
 								},
 								attributes: {
 									requires: ['Collar_front_ring'],
@@ -174,7 +182,9 @@ DefineRoomDeviceAsset({
 										leg_r: [[-16, 0]],
 										leg_l: [[-16, 0]],
 									},
-									legs: 'kneeling',
+									legs: {
+										pose: 'kneeling',
+									},
 								},
 								attributes: {
 									requires: ['Collar_front_ring'],
@@ -223,7 +233,9 @@ DefineRoomDeviceAsset({
 										leg_r: -18,
 										leg_l: -18,
 									},
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 								},
 								attributes: {
 									requires: ['Ankle_cuffs'],

@@ -70,14 +70,18 @@ DefineAsset({
 						poseLimits: {
 							options: [
 								{
-									legs: 'sitting',
+									legs: {
+										pose: 'sitting',
+									},
 									bones: {
 										leg_l: 4,
 										leg_r: 4,
 									},
 								},
 								{
-									legs: 'kneeling',
+									legs: {
+										pose: 'kneeling',
+									},
 									bones: {
 										leg_l: 5,
 										leg_r: 5,
@@ -90,35 +94,45 @@ DefineAsset({
 									},
 								},
 								{
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									bones: {
 										leg_r: -3,
 										leg_l: -3,
 									},
 								},
 								{
-									legs: 'sitting',
+									legs: {
+										pose: 'sitting',
+									},
 									bones: {
 										leg_r: -7,
 										leg_l: -7,
 									},
 								},
 								{
-									legs: 'kneeling',
+									legs: {
+										pose: 'kneeling',
+									},
 									bones: {
 										leg_r: -7,
 										leg_l: -7,
 									},
 								},
 								{
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									bones: {
 										leg_r: -10,
 										leg_l: -10,
 									},
 								},
 								{
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									bones: {
 										leg_r: [[2, 6]],
 										leg_l: [[2, 6]],

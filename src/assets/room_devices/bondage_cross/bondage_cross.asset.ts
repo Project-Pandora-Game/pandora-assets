@@ -84,7 +84,9 @@ DefineRoomDeviceAsset({
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 								},
 							},
 						},
@@ -102,7 +104,9 @@ DefineRoomDeviceAsset({
 										arm_l: -44,
 										elbow_l: -21,
 									},
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 								},
 								attributes: {
 									requires: [
@@ -125,7 +129,9 @@ DefineRoomDeviceAsset({
 										arm_r: -44,
 										elbow_r: -21,
 									},
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 								},
 								attributes: {
 									requires: [
@@ -150,7 +156,9 @@ DefineRoomDeviceAsset({
 										arm_r: -44,
 										elbow_r: -21,
 									},
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 								},
 								attributes: {
 									requires: [
@@ -187,7 +195,9 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_l: -30,
 									},
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 								},
 								attributes: {
 									requires: [
@@ -209,7 +219,9 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_r: -30,
 									},
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 								},
 								attributes: {
 									requires: [
@@ -232,7 +244,9 @@ DefineRoomDeviceAsset({
 										leg_l: -30,
 										leg_r: -30,
 									},
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 								},
 								attributes: {
 									requires: [

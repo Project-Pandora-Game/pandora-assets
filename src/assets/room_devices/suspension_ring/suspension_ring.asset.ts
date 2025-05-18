@@ -20,7 +20,9 @@ DefineRoomDeviceAsset({
 				name: 'Suspension Ring',
 				size: 'huge',
 				poseLimits: {
-					legs: ['standing', 'kneeling'],
+					legs: {
+						pose: ['standing', 'kneeling'],
+					},
 				},
 			},
 		},
@@ -40,7 +42,9 @@ DefineRoomDeviceAsset({
 							under_ring: {
 								poseLimits: {
 									view: 'front',
-									legs: ['standing', 'kneeling'],
+									legs: {
+										pose: ['standing', 'kneeling'],
+									},
 								},
 								stateFlags: {
 									provides: ['front_view'],
@@ -57,7 +61,9 @@ DefineRoomDeviceAsset({
 							under_ring: {
 								poseLimits: {
 									view: 'back',
-									legs: ['standing', 'kneeling'],
+									legs: {
+										pose: ['standing', 'kneeling'],
+									},
 								},
 								stateFlags: {
 									provides: ['back_view'],
@@ -108,7 +114,9 @@ DefineRoomDeviceAsset({
 									],
 								},
 								poseLimits: {
-									legs: 'kneeling',
+									legs: {
+										pose: 'kneeling',
+									},
 									bones: {
 										character_rotation: 0,
 										leg_l: [[-25, 6]],
@@ -132,7 +140,9 @@ DefineRoomDeviceAsset({
 									],
 								},
 								poseLimits: {
-									legs: ['standing', 'kneeling'],
+									legs: {
+										pose: ['standing', 'kneeling'],
+									},
 								},
 								stateFlags: {
 									provides: ['suspension_chest'],
