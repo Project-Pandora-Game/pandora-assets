@@ -16,7 +16,6 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
 				"leg_l",
@@ -121,7 +120,6 @@
 				"body",
 				"body_l",
 				"bodyarm_l",
-				"bodyleg",
 				"bodyleg_l",
 				"leg_l"
 			],
@@ -194,9 +192,7 @@
 				"body",
 				"body_l",
 				"bodyarm_l",
-				"bodyleg",
-				"bodyleg_l",
-				"leg_l"
+				"bodyleg_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "print",

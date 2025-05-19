@@ -22,7 +22,6 @@
 			"requiredPointTypes": [
 				"body",
 				"bodyarm_l",
-				"bodyleg",
 				"bodyleg_l"
 			]
 		},
@@ -38,7 +37,6 @@
 			"requiredPointTypes": [
 				"body",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_r"
 			]
 		},
@@ -87,22 +85,6 @@
 				"bodyarm_r"
 			]
 		},
-		"bodyleg": {
-			"allowedPriorities": [
-				"BELOW_ARM_LEFT",
-				"BELOW_BACK_HAIR",
-				"BELOW_BODY",
-				"BODY",
-				"BELOW_BREASTS",
-				"ABOVE_BODY",
-				"BELOW_LEG_LEFT",
-				"LEG_LEFT",
-				"ABOVE_LEG_LEFT",
-				"BELOW_LEG_RIGHT",
-				"LEG_RIGHT",
-				"ABOVE_LEG_RIGHT"
-			]
-		},
 		"bodyleg_l": {
 			"allowedPriorities": [
 				"BELOW_ARM_LEFT",
@@ -114,9 +96,6 @@
 				"BELOW_LEG_LEFT",
 				"LEG_LEFT",
 				"ABOVE_LEG_LEFT"
-			],
-			"requiredPointTypes": [
-				"bodyleg"
 			]
 		},
 		"bodyleg_r": {
@@ -130,9 +109,6 @@
 				"BELOW_LEG_RIGHT",
 				"LEG_RIGHT",
 				"ABOVE_LEG_RIGHT"
-			],
-			"requiredPointTypes": [
-				"bodyleg"
 			]
 		},
 		"leg_l": {
@@ -142,7 +118,6 @@
 				"ABOVE_LEG_LEFT"
 			],
 			"requiredPointTypes": [
-				"bodyleg",
 				"bodyleg_l"
 			]
 		},
@@ -153,7 +128,6 @@
 				"ABOVE_LEG_RIGHT"
 			],
 			"requiredPointTypes": [
-				"bodyleg",
 				"bodyleg_r"
 			]
 		}
@@ -171,7 +145,6 @@
 						"body_r",
 						"bodyarm_l",
 						"bodyarm_r",
-						"bodyleg",
 						"bodyleg_l",
 						"bodyleg_r"
 					]
@@ -189,7 +162,6 @@
 					"id": "legs",
 					"priority": "BELOW_BODY",
 					"pointType": [
-						"bodyleg",
 						"bodyleg_l",
 						"leg_l"
 					],
@@ -209,7 +181,6 @@
 						"body_r",
 						"bodyarm_l",
 						"bodyarm_r",
-						"bodyleg",
 						"bodyleg_l",
 						"bodyleg_r"
 					]
@@ -227,7 +198,6 @@
 					"id": "legs",
 					"priority": "ABOVE_LEG_LEFT",
 					"pointType": [
-						"bodyleg",
 						"bodyleg_l",
 						"leg_l"
 					],
@@ -247,7 +217,6 @@
 						"body_r",
 						"bodyarm_l",
 						"bodyarm_r",
-						"bodyleg",
 						"bodyleg_l",
 						"bodyleg_r"
 					]
@@ -265,7 +234,6 @@
 					"id": "legs",
 					"priority": "ABOVE_LEG_LEFT",
 					"pointType": [
-						"bodyleg",
 						"bodyleg_l",
 						"leg_l"
 					],
@@ -285,7 +253,6 @@
 						"body_r",
 						"bodyarm_l",
 						"bodyarm_r",
-						"bodyleg",
 						"bodyleg_l",
 						"bodyleg_r"
 					]
@@ -303,7 +270,6 @@
 					"id": "legs",
 					"priority": "BELOW_LEG_LEFT",
 					"pointType": [
-						"bodyleg",
 						"bodyleg_l",
 						"leg_l"
 					],
@@ -1373,7 +1339,7 @@
 				727
 			],
 			"mirror": true,
-			"pointType": "leg_r",
+			"pointType": "body_r",
 			"transforms": [
 				{
 					"type": "shift",
@@ -1439,7 +1405,7 @@
 				705
 			],
 			"mirror": true,
-			"pointType": "leg_r",
+			"pointType": "body_r",
 			"transforms": [
 				{
 					"type": "shift",
@@ -1544,7 +1510,7 @@
 				734
 			],
 			"mirror": true,
-			"pointType": "leg_r",
+			"pointType": "body_r",
 			"transforms": [
 				{
 					"type": "shift",
@@ -1652,7 +1618,7 @@
 				760
 			],
 			"mirror": true,
-			"pointType": "leg_r",
+			"pointType": "bodyleg_r",
 			"transforms": [
 				{
 					"type": "shift",
@@ -2386,7 +2352,7 @@
 				758
 			],
 			"mirror": false,
-			"pointType": "bodyleg",
+			"pointType": "body",
 			"transforms": [
 				{
 					"type": "const-shift",
@@ -2410,7 +2376,7 @@
 				765
 			],
 			"mirror": true,
-			"pointType": "leg_r",
+			"pointType": "bodyleg_r",
 			"transforms": [
 				{
 					"type": "shift",
@@ -2631,7 +2597,7 @@
 				646
 			],
 			"mirror": true,
-			"pointType": "bodyleg_r",
+			"pointType": "body_r",
 			"transforms": [
 				{
 					"type": "shift",
@@ -3119,7 +3085,7 @@
 				766
 			],
 			"mirror": true,
-			"pointType": "leg_r",
+			"pointType": "bodyleg_r",
 			"transforms": [
 				{
 					"type": "shift",
@@ -3360,7 +3326,7 @@
 				750
 			],
 			"mirror": true,
-			"pointType": "leg_r",
+			"pointType": "body_r",
 			"transforms": [
 				{
 					"type": "const-shift",
@@ -3591,7 +3557,7 @@
 				689
 			],
 			"mirror": true,
-			"pointType": "bodyleg_r",
+			"pointType": "body_r",
 			"transforms": [
 				{
 					"type": "shift",
@@ -3631,7 +3597,7 @@
 				724
 			],
 			"mirror": true,
-			"pointType": "bodyleg_r",
+			"pointType": "body_r",
 			"transforms": [
 				{
 					"type": "const-shift",
@@ -4165,7 +4131,7 @@
 				747
 			],
 			"mirror": true,
-			"pointType": "bodyleg_r",
+			"pointType": "body_r",
 			"transforms": [
 				{
 					"type": "shift",
@@ -5485,7 +5451,7 @@
 				747
 			],
 			"mirror": true,
-			"pointType": "leg_r",
+			"pointType": "body_r",
 			"transforms": [
 				{
 					"type": "shift",
@@ -5522,7 +5488,7 @@
 				770
 			],
 			"mirror": true,
-			"pointType": "leg_r",
+			"pointType": "bodyleg_r",
 			"transforms": [
 				{
 					"type": "shift",
@@ -6857,6 +6823,114 @@
 					"type": "rotate",
 					"bone": "leg_r",
 					"value": -1
+				}
+			]
+		},
+		{
+			"pos": [
+				410,
+				762
+			],
+			"mirror": true,
+			"pointType": "bodyleg_r",
+			"transforms": [
+				{
+					"type": "shift",
+					"bone": "leg_width",
+					"value": {
+						"x": -9,
+						"y": 0
+					}
+				},
+				{
+					"type": "shift",
+					"bone": "leg_width",
+					"value": {
+						"x": 4,
+						"y": 0
+					},
+					"condition": [
+						[
+							{
+								"bone": "leg_width",
+								"operator": "<",
+								"value": 0
+							}
+						]
+					]
+				},
+				{
+					"type": "shift",
+					"bone": "hips",
+					"value": {
+						"x": -2,
+						"y": 0
+					}
+				},
+				{
+					"type": "shift",
+					"bone": "hips",
+					"value": {
+						"x": -2,
+						"y": 0
+					},
+					"condition": [
+						[
+							{
+								"bone": "hips",
+								"operator": "<",
+								"value": 0
+							}
+						]
+					]
+				},
+				{
+					"type": "const-shift",
+					"value": {
+						"x": 0,
+						"y": -30
+					},
+					"condition": [
+						[
+							{
+								"legs": "sitting"
+							}
+						]
+					]
+				},
+				{
+					"type": "shift",
+					"bone": "leg_r",
+					"value": {
+						"x": 19,
+						"y": 2
+					},
+					"condition": [
+						[
+							{
+								"bone": "leg_r",
+								"operator": "<",
+								"value": 0
+							}
+						]
+					]
+				},
+				{
+					"type": "rotate",
+					"bone": "leg_r",
+					"value": -0.66
+				},
+				{
+					"type": "rotate",
+					"bone": "leg_r",
+					"value": -0.07,
+					"condition": [
+						[
+							{
+								"legs": "sitting"
+							}
+						]
+					]
 				}
 			]
 		}
