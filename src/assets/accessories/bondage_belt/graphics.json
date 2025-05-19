@@ -16,11 +16,8 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "cuff",
@@ -44,11 +41,8 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "cuff",
@@ -72,11 +66,8 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "belt",
@@ -100,11 +91,8 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "belt",

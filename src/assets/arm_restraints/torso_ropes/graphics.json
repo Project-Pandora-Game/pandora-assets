@@ -16,11 +16,8 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "rope",
@@ -69,11 +66,8 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "rope",
@@ -174,11 +168,8 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "rope",
@@ -245,6 +236,9 @@
 			"name": "rope back",
 			"points": "custom_arm_restraints_torso_ropes",
 			"automeshTemplate": "customBelowArms",
+			"disabledTemplateParts": [
+				"legs"
+			],
 			"graphicalLayers": [
 				{
 					"name": "",

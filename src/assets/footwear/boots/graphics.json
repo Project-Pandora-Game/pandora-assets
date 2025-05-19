@@ -11,7 +11,6 @@
 			"priority": "BODY",
 			"points": "body",
 			"pointType": [
-				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
 				"leg_l",
@@ -44,7 +43,6 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"pointType": [
-				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
 				"leg_l",
@@ -77,7 +75,6 @@
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"pointType": [
-				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
 				"leg_l",
@@ -207,7 +204,6 @@
 			"priority": "BELOW_BODY",
 			"points": "body",
 			"pointType": [
-				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
 				"leg_l",
