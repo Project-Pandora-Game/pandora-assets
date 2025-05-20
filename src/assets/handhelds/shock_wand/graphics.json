@@ -152,6 +152,7 @@
 				"handheld_r"
 			],
 			"mirror": 1,
+			"colorizationKey": "contacts",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -333,6 +334,7 @@
 				"handheld_r"
 			],
 			"mirror": 1,
+			"colorizationKey": "contacts",
 			"image": {
 				"image": "",
 				"overrides": [

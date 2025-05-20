@@ -11,6 +11,10 @@ DefineAsset({
 			name: 'Handle',
 			default: '#4C4C4C',
 		},
+		contacts: {
+			name: 'Contacts',
+			default: '#FFFFFF',
+		},
 	},
 	// size:380, y:269, X:0
 	preview: 'preview.png',
