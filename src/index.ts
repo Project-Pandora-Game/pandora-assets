@@ -22,12 +22,14 @@ import { LoadGitData } from './tools/git.ts';
 import { GraphicsDatabase } from './tools/graphicsDatabase.ts';
 import { AssetImportContext, SetCurrentImportContext } from './tools/importContext.ts';
 import { GlobalDefineAsset, SetCurrentContext } from './tools/index.ts';
+import { AddFileOutput } from './tools/logging.ts';
 import { CleanOldResources, ClearAllResources, DefineResourceInline, ExportAllResources, SetResourceDestinationDirectory } from './tools/resources.ts';
 import { RoomDatabase } from './tools/roomDatabase.ts';
 import { RunDev } from './tools/watch.ts';
 
 const logger = GetLogger('Main');
 SetConsoleOutput(LogLevel.VERBOSE);
+await AddFileOutput('./build.log', false, LogLevel.VERBOSE);
 
 let hadErrors = false;
 let hadWarnings = false;

@@ -6,5 +6,6 @@
 /.env
 /.hooks/.env
 /pandora
+/*.log
 
 .DS_Store
