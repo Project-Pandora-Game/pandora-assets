@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Head-mounted display',
+	name: 'Head-mounted Display',
 	size: 'medium',
 	graphics: 'graphics.json',
 	colorization: {
