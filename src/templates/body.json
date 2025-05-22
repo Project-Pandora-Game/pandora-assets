@@ -234,6 +234,42 @@
 					"mirror": 1
 				}
 			]
+		},
+		"body": {
+			"name": "Bodypart",
+			"parts": [
+				{
+					"id": "body",
+					"priority": "BODY",
+					"pointType": [
+						"body",
+						"body_l",
+						"body_r",
+						"bodyarm_l",
+						"bodyarm_r",
+						"bodyleg_l",
+						"bodyleg_r"
+					]
+				},
+				{
+					"id": "arms",
+					"priority": "ARM_LEFT",
+					"pointType": [
+						"bodyarm_l",
+						"arm_l"
+					],
+					"mirror": 1
+				},
+				{
+					"id": "legs",
+					"priority": "LEG_LEFT",
+					"pointType": [
+						"bodyleg_l",
+						"leg_l"
+					],
+					"mirror": 1
+				}
+			]
 		}
 	},
 	"points": [
