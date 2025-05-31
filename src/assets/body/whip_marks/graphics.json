@@ -100,46 +100,34 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "thighs front",
-			"priority": "BODY",
+			"type": "autoMesh",
+			"name": "Thighs front",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"bodyarm_l",
-				"bodyleg_l",
-				"leg_l"
+			"automeshTemplate": "bodyMirror",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 1,
-			"colorizationKey": "mark",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "thighs1.png",
-						"condition": [
-							[
-								{
-									"module": "fthighColor_l",
-									"operator": "=",
-									"value": "one"
-								}
-							]
-						]
-					},
-					{
-						"image": "thighs2.png",
-						"condition": [
-							[
-								{
-									"module": "fthighColor_l",
-									"operator": "=",
-									"value": "multi"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "mark"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "fthighColor_l"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"one": [
+					"thighs1.png"
+				],
+				"multi": [
+					"thighs2.png"
 				]
 			}
 		},
@@ -148,46 +136,34 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "thighs back",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Thighs back",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"bodyarm_l",
-				"bodyleg_l",
-				"leg_l"
+			"automeshTemplate": "belowBodyMirror",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 1,
-			"colorizationKey": "mark",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "thighs1.png",
-						"condition": [
-							[
-								{
-									"module": "bthighColor_l",
-									"operator": "=",
-									"value": "one"
-								}
-							]
-						]
-					},
-					{
-						"image": "thighs2.png",
-						"condition": [
-							[
-								{
-									"module": "bthighColor_l",
-									"operator": "=",
-									"value": "multi"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "mark"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "bthighColor_l"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"one": [
+					"thighs1.png"
+				],
+				"multi": [
+					"thighs2.png"
 				]
 			}
 		},
