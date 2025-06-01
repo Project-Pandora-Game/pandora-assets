@@ -32,6 +32,11 @@
 									"view": "front"
 								},
 								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								},
+								{
 									"module": "variants",
 									"operator": "=",
 									"value": "closed"
@@ -50,6 +55,11 @@
 							[
 								{
 									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
 								},
 								{
 									"module": "variants",
@@ -77,6 +87,11 @@
 									"view": "front"
 								},
 								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								},
+								{
 									"module": "variants",
 									"operator": "=",
 									"value": "closed"
@@ -100,6 +115,11 @@
 							[
 								{
 									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
 								},
 								{
 									"module": "variants",
@@ -127,6 +147,11 @@
 									"view": "front"
 								},
 								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								},
+								{
 									"module": "variants",
 									"operator": "=",
 									"value": "closed"
@@ -147,6 +172,11 @@
 									"view": "front"
 								},
 								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								},
+								{
 									"module": "variants",
 									"operator": "=",
 									"value": "open"
@@ -165,6 +195,11 @@
 							[
 								{
 									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
 								},
 								{
 									"module": "variants",
@@ -192,6 +227,11 @@
 									"view": "front"
 								},
 								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								},
+								{
 									"module": "variants",
 									"operator": "=",
 									"value": "open"
@@ -217,6 +257,11 @@
 									"view": "front"
 								},
 								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								},
+								{
 									"module": "variants",
 									"operator": "=",
 									"value": "open"
@@ -240,6 +285,291 @@
 							[
 								{
 									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "open"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": 100
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_closed_size_0.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "closed"
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -180
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_closed_size_1.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "closed"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": -180
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -70
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_closed_size_2.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "closed"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": -70
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_closed_size_3.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "closed"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": 0
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": 100
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_closed_size_4.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "closed"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": 100
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_open_size_0.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "open"
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -180
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_open_size_1.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "open"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": -180
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -70
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_open_size_2.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "open"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": -70
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_open_size_3.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "open"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": 0
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": 100
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_open_size_4.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
 								},
 								{
 									"module": "variants",
@@ -343,46 +673,6 @@
 									"module": "addOns",
 									"operator": "=",
 									"value": "both"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_catsuit_front_short_closed_size_0.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "variants",
-									"operator": "=",
-									"value": "closed"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "short"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_catsuit_front_short_open_size_0.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "variants",
-									"operator": "=",
-									"value": "open"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "short"
 								}
 							]
 						]
@@ -1393,6 +1683,11 @@
 									"view": "back"
 								},
 								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								},
+								{
 									"module": "variants",
 									"operator": "=",
 									"value": "closed"
@@ -1406,6 +1701,50 @@
 							[
 								{
 									"view": "back"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "open"
+								}
+							]
+						]
+					},					{
+						"image": "latex_catsuit_back_long_closed.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "closed"
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_back_long_open.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
 								},
 								{
 									"module": "variants",
@@ -1467,6 +1806,16 @@
 							[
 								{
 									"view": "back"
+								},
+								{
+									"module": "addOns",
+									"operator": "!=",
+									"value": "gloves"
+								},
+								{
+									"module": "addOns",
+									"operator": "!=",
+									"value": "both"
 								}
 							]
 						]
@@ -2170,46 +2519,6 @@
 									"module": "addOns",
 									"operator": "=",
 									"value": "both"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_catsuit_back_short_closed.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "variants",
-									"operator": "=",
-									"value": "closed"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "short"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_catsuit_back_short_open.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "variants",
-									"operator": "=",
-									"value": "open"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "short"
 								}
 							]
 						]
