@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Onesie',
+	name: 'Onesie [⚠️ BROKEN]',
 	size: 'medium',
 	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
@@ -22,7 +22,8 @@ DefineAsset({
 		},
 	},
 	// size:450, y:380, centered
-	preview: 'preview.png',
+	preview: null,
+	// preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Clothing',

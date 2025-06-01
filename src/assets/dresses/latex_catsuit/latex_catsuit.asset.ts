@@ -16,7 +16,7 @@ DefineAsset({
 			minAlpha: 0,
 		},
 	},
-	// size:376, y:400, centered
+	// size:400, y:376, centered
 	preview: 'preview.png',
 	attributes: {
 		provides: [
