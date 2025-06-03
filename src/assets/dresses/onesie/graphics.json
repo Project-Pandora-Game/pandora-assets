@@ -26,15 +26,29 @@
 			"variables": [
 				{
 					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "pattern"
 				}
 			],
 			"imageMap": {
-				"front": [
+				"front:none": [
+					"onesie_front.png",
+					"",
+					"onesie_front_applications.png"
+				],
+				"front:toys": [
 					"onesie_front.png",
 					"onesie_front_pattern.png",
 					"onesie_front_applications.png"
 				],
-				"back": [
+				"back:none": [
+					"",
+					"",
+					""
+				],
+				"back:toys": [
 					"",
 					"",
 					""
@@ -158,8 +172,62 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "Back - Flap",
+			"name": "Back - Pattern",
 			"points": "body",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "Pattern"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "pattern"
+				},
+				{
+					"type": "typedModule",
+					"module": "flap"
+				},
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"none:closed:front": [
+					""
+				],
+				"none:closed:back": [
+					""
+				],
+				"none:open:front": [
+					""
+				],
+				"none:open:back": [
+					""
+				],
+				"toys:closed:front": [
+					""
+				],
+				"toys:closed:back": [
+					"onesie_back_pattern_closed.png"
+				],
+				"toys:open:front": [
+					""
+				],
+				"toys:open:back": [
+					"onesie_back_pattern_open.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Back - Flap",
+			"points": "static",
 			"automeshTemplate": "belowBody",
 			"disabledTemplateParts": [
 				"arms"
@@ -246,60 +314,6 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "Back - Pattern",
-			"points": "body",
-			"automeshTemplate": "belowBody",
-			"graphicalLayers": [
-				{
-					"name": "Pattern"
-				}
-			],
-			"variables": [
-				{
-					"type": "view"
-				},
-				{
-					"type": "typedModule",
-					"module": "pattern"
-				},
-				{
-					"type": "typedModule",
-					"module": "flap"
-				}
-			],
-			"imageMap": {
-				"front:none:closed": [
-					""
-				],
-				"front:none:open": [
-					""
-				],
-				"front:toys:closed": [
-					""
-				],
-				"front:toys:open": [
-					""
-				],
-				"back:none:closed": [
-					""
-				],
-				"back:none:open": [
-					""
-				],
-				"back:toys:closed": [
-					"onesie_back_pattern_closed.png"
-				],
-				"back:toys:open": [
-					"onesie_back_pattern_open.png"
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "autoMesh",
 			"name": "Back - Application",
 			"points": "body",
 			"automeshTemplate": "belowBody",
@@ -320,6 +334,36 @@
 				],
 				"back": [
 					"onesie_back_applications.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "onesie"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "flap"
+				}
+			],
+			"imageMap": {
+				"closed": [
+					""
+				],
+				"open": [
+					"onesie_back_flap_open.png"
 				]
 			}
 		}
