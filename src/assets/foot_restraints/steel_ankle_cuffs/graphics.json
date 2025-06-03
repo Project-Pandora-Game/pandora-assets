@@ -8,9 +8,13 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "bar",
-			"priority": "ABOVE_BODY",
+			"priority": "ABOVE_LEG_LEFT",
 			"points": "static",
-			"mirror": 0,
+			"pointType": [
+				"static",
+				"static_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "bar",
 			"image": {
 				"image": "",
@@ -114,151 +118,14 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "cuffs",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "cuffs",
-			"image": {
-				"image": "steelanklecuffs.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"legs": "kneeling"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "cuffs back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "cuffs",
-			"image": {
-				"image": "steelanklecuffs.png",
-				"overrides": [
-					{
-						"image": "steelanklecuffs.png",
-						"condition": [
-							[
-								{
-									"legs": "kneeling"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "bar kneeling",
-			"priority": "BELOW_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "bar",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "steelanklecuffs_bar_kneeling_front.png",
-						"condition": [
-							[
-								{
-									"module": "barWidth",
-									"operator": "=",
-									"value": "barNormal"
-								},
-								{
-									"legs": "kneeling"
-								},
-								{
-									"view": "front"
-								}
-							],
-							[
-								{
-									"module": "barWidth",
-									"operator": "=",
-									"value": "barNarrow"
-								},
-								{
-									"legs": "kneeling"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "steelanklecuffs_bar_kneeling_normal.png",
-						"condition": [
-							[
-								{
-									"module": "barWidth",
-									"operator": "=",
-									"value": "barNormal"
-								},
-								{
-									"legs": "kneeling"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "steelanklecuffs_bar_kneeling_narrow.png",
-						"condition": [
-							[
-								{
-									"legs": "kneeling"
-								},
-								{
-									"module": "barWidth",
-									"operator": "=",
-									"value": "barNarrow"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
 			"name": "chain",
-			"priority": "ABOVE_BODY",
+			"priority": "ABOVE_LEG_LEFT",
 			"points": "static",
-			"mirror": 0,
+			"pointType": [
+				"static",
+				"static_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "chains",
 			"image": {
 				"image": "",
@@ -465,11 +332,155 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"type": "autoMesh",
+			"name": "Front",
+			"points": "body",
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Cuffs",
+					"colorizationKey": "cuffs"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"steelanklecuffs.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Back",
+			"points": "body",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Cuffs",
+					"colorizationKey": "cuffs"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"steelanklecuffs.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "bar kneeling",
+			"priority": "BELOW_LEG_LEFT",
+			"points": "static",
+			"pointType": [
+				"static",
+				"static_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "bar",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "steelanklecuffs_bar_kneeling_front.png",
+						"condition": [
+							[
+								{
+									"module": "barWidth",
+									"operator": "=",
+									"value": "barNormal"
+								},
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "front"
+								}
+							],
+							[
+								{
+									"module": "barWidth",
+									"operator": "=",
+									"value": "barNarrow"
+								},
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "steelanklecuffs_bar_kneeling_normal.png",
+						"condition": [
+							[
+								{
+									"module": "barWidth",
+									"operator": "=",
+									"value": "barNormal"
+								},
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					},
+					{
+						"image": "steelanklecuffs_bar_kneeling_narrow.png",
+						"condition": [
+							[
+								{
+									"legs": "kneeling"
+								},
+								{
+									"module": "barWidth",
+									"operator": "=",
+									"value": "barNarrow"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "mesh",
 			"name": "chain kneeling",
-			"priority": "BELOW_BODY",
+			"priority": "BELOW_LEG_LEFT",
 			"points": "static",
-			"mirror": 0,
+			"pointType": [
+				"static",
+				"static_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "chains",
 			"image": {
 				"image": "",
