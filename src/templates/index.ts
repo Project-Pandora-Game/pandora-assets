@@ -15,6 +15,7 @@ const templateList: string[] = [
 	'breast_toy',
 	'breasts',
 	'handheld',
+	'skirt_tight',
 	'skirt_short',
 	'skirt_long',
 	// Custom templates

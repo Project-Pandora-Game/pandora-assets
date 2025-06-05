@@ -9,15 +9,17 @@
 			"type": "mesh",
 			"name": "front",
 			"priority": "ABOVE_BODY",
-			"points": "body",
+			"points": "skirt_tight",
 			"pointType": [
 				"body",
 				"body_l",
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
+				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
+				"leg",
 				"leg_l",
 				"leg_r"
 			],
@@ -48,7 +50,7 @@
 			"type": "mesh",
 			"name": "front",
 			"priority": "ABOVE_ARM_LEFT",
-			"points": "body",
+			"points": "skirt_tight",
 			"pointType": [
 				"bodyarm_l",
 				"arm_l"
@@ -68,15 +70,17 @@
 			"type": "mesh",
 			"name": "front behind breasts",
 			"priority": "BELOW_BREASTS",
-			"points": "body",
+			"points": "skirt_tight",
 			"pointType": [
 				"body",
 				"body_l",
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
+				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
+				"leg",
 				"leg_l",
 				"leg_r"
 			],
@@ -107,15 +111,17 @@
 			"type": "mesh",
 			"name": "back",
 			"priority": "BELOW_BODY",
-			"points": "body",
+			"points": "skirt_tight",
 			"pointType": [
 				"body",
 				"body_l",
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
+				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
+				"leg",
 				"leg_l",
 				"leg_r"
 			],
@@ -134,7 +140,7 @@
 			"type": "mesh",
 			"name": "back",
 			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
+			"points": "skirt_tight",
 			"pointType": [
 				"bodyarm_l",
 				"arm_l"
