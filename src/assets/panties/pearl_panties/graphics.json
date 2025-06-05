@@ -6,15 +6,30 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "Panties",
-			"priority": "ABOVE_BODY",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "pearls",
-			"image": {
-				"image": "pearl_panties_front.png",
-				"overrides": []
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"legs",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "small",
+					"colorizationKey": "pearls"
+				},
+				{
+					"name": "large",
+					"colorizationKey": "largePearls"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"pearl_panties_front.png",
+					"pearl_panties_front_large.png"
+				]
 			}
 		},
 		{
@@ -22,15 +37,21 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "PantiesBack",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "pearls",
-			"image": {
-				"image": "pearl_panties_back.png",
-				"overrides": []
+			"type": "autoMesh",
+			"name": "Panties hanging",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "pearls"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"pearl_panties_front_hanging.png"
+				]
 			}
 		},
 		{
@@ -38,15 +59,25 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "LargePearls",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Panties Back",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "largePearls",
-			"image": {
-				"image": "pearl_panties_front_large.png",
-				"overrides": []
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "pearls"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"pearl_panties_back.png"
+				]
 			}
 		}
 	]
