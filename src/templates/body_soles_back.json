@@ -2,14 +2,42 @@
 	"pointTypes": {
 		"body_l": {
 			"allowedPriorities": [
-				"BELOW_BODY_SOLES",
-				"BODY_SOLES"
+				"BELOW_SOLE_LEFT",
+				"SOLE_LEFT"
 			]
 		},
 		"body_r": {
 			"allowedPriorities": [
-				"BELOW_BODY_SOLES",
-				"BODY_SOLES"
+				"BELOW_SOLE_RIGHT",
+				"SOLE_RIGHT"
+			]
+		}
+	},
+	"automeshTemplates": {
+		"belowSoles": {
+			"name": "Below soles",
+			"parts": [
+				{
+					"id": "soles",
+					"priority": "BELOW_SOLE_LEFT",
+					"pointType": [
+						"body_l"
+					],
+					"mirror": 1
+				}
+			]
+		},
+		"body": {
+			"name": "Bodypart",
+			"parts": [
+				{
+					"id": "soles",
+					"priority": "SOLE_LEFT",
+					"pointType": [
+						"body_l"
+					],
+					"mirror": 1
+				}
 			]
 		}
 	},

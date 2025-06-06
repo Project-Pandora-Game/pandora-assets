@@ -1735,38 +1735,6 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "hogtie_knot_back",
-			"priority": "BODY_SOLES",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "rope",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "hogtie_knot.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "hogtie",
-									"operator": "=",
-									"value": "hogtie_arms"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
 			"name": "cuff_front",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "static",
@@ -2188,6 +2156,38 @@
 									"module": "arms",
 									"operator": "=",
 									"value": "arms_high"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "hogtie_knot_back",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "rope",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "hogtie_knot.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "hogtie",
+									"operator": "=",
+									"value": "hogtie_arms"
 								}
 							]
 						]

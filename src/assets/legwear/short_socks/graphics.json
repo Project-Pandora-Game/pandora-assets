@@ -74,9 +74,12 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "soles",
-			"priority": "BELOW_BODY_SOLES",
+			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"mirror": 0,
+			"pointType": [
+				"body_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "socks",
 			"image": {
 				"image": "",
