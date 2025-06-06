@@ -43,7 +43,7 @@
 		"pandora-common": "github:Project-Pandora-Game/pandora#master&path:pandora-common",
 		"rimraf": "6.0.1",
 		"sharp": "0.34.2",
-		"simple-git": "3.27.0",
+		"simple-git": "3.28.0",
 		"zod": "3.25.42"
 	},
 	"devDependencies": {
