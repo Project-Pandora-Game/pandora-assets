@@ -52,7 +52,9 @@ DefineAsset({
 						poseLimits: {
 							options: [
 								{
-									legs: ['sitting', 'kneeling'],
+									legs: {
+										pose: ['sitting', 'kneeling'],
+									},
 								},
 								{
 									bones: {
@@ -71,7 +73,9 @@ DefineAsset({
 						poseLimits: {
 							options: [
 								{
-									legs: 'kneeling',
+									legs: {
+										pose: 'kneeling',
+									},
 								},
 								{
 									bones: {

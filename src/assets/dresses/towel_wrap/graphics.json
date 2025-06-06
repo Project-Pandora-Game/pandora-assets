@@ -9,7 +9,7 @@
 			"type": "mesh",
 			"name": "breasts",
 			"priority": "ABOVE_BODY",
-			"points": "body",
+			"points": "skirt_tight",
 			"pointType": [
 				"body",
 				"body_l",
@@ -19,6 +19,7 @@
 				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
+				"leg",
 				"leg_l",
 				"leg_r"
 			],
@@ -79,7 +80,7 @@
 			"type": "mesh",
 			"name": "back view",
 			"priority": "BELOW_BODY",
-			"points": "body",
+			"points": "skirt_tight",
 			"pointType": [
 				"body",
 				"body_l",
@@ -89,6 +90,7 @@
 				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
+				"leg",
 				"leg_l",
 				"leg_r"
 			],

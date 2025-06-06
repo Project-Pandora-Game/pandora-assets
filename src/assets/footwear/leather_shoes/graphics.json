@@ -6,25 +6,37 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Front",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "shoes",
-			"image": {
-				"image": "shoes.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"body"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Shoes",
+					"colorizationKey": "shoes"
+				},
+				{
+					"name": "Soles",
+					"colorizationKey": "soles"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"front": [
+					"shoes.png",
+					"soles.png"
+				],
+				"back": [
+					"",
+					""
 				]
 			}
 		},
@@ -33,79 +45,37 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "soles front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Back",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "soles",
-			"image": {
-				"image": "soles.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "shoes",
-			"image": {
-				"image": "shoes_back.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "soles back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "soles",
-			"image": {
-				"image": "soles_back.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Shoes",
+					"colorizationKey": "shoes"
+				},
+				{
+					"name": "Soles",
+					"colorizationKey": "soles"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"front": [
+					"",
+					""
+				],
+				"back": [
+					"shoes_back.png",
+					"soles_back.png"
 				]
 			}
 		},
@@ -116,9 +86,12 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "soles kneeling sole",
-			"priority": "BELOW_BODY_SOLES",
+			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"mirror": 0,
+			"pointType": [
+				"body_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "soles",
 			"image": {
 				"image": "",

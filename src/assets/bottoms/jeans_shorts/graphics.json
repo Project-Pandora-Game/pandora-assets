@@ -6,26 +6,24 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "alphaImageMesh",
-			"name": "jeans back",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Jeans back",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 0,
-			"image": {
-				"image": "Alpha_jeans_shorts.png",
-				"overrides": []
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "pants"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"Jeans_Shorts_Back.png"
+				]
 			}
 		},
 		{
@@ -33,82 +31,24 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "jeans back",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Jeans front",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 0,
-			"colorizationKey": "pants",
-			"image": {
-				"image": "Jeans_Shorts_Back.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "alphaImageMesh",
-			"name": "jeans front",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "pants"
+				}
 			],
-			"mirror": 0,
-			"image": {
-				"image": "Alpha_jeans_shorts.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "jeans front",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
-			],
-			"mirror": 0,
-			"colorizationKey": "pants",
-			"image": {
-				"image": "Jeans_Shorts.png",
-				"overrides": []
+			"variables": [],
+			"imageMap": {
+				"": [
+					"Jeans_Shorts.png"
+				]
 			}
 		},
 		{

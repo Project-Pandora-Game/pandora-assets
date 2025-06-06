@@ -8,16 +8,13 @@
 			"height": 1500,
 			"type": "alphaImageMesh",
 			"name": "body mask",
-			"priority": "BODY",
+			"priority": "LEG_LEFT",
 			"points": "body",
 			"pointType": [
-				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"leg_l"
 			],
-			"mirror": 0,
+			"mirror": 1,
 			"image": {
 				"image": "alpha_heels.png",
 				"overrides": [
@@ -41,16 +38,13 @@
 			"height": 1500,
 			"type": "alphaImageMesh",
 			"name": "front",
-			"priority": "ABOVE_BODY",
+			"priority": "ABOVE_LEG_LEFT",
 			"points": "body",
 			"pointType": [
-				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"leg_l"
 			],
-			"mirror": 0,
+			"mirror": 1,
 			"image": {
 				"image": "alpha_heels.png",
 				"overrides": [
@@ -72,102 +66,57 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Front",
 			"points": "body",
-			"pointType": [
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
 			],
-			"mirror": 0,
-			"colorizationKey": "shoe",
-			"image": {
-				"image": "boots.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "boots_long.png",
-						"condition": [
-							[
-								{
-									"module": "bootType",
-									"operator": "=",
-									"value": "thigh"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "rings",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "smallRings",
-			"image": {
-				"image": "boots_rings.png",
-				"overrides": [
-					{
-						"image": "boots_rings_long.png",
-						"condition": [
-							[
-								{
-									"module": "bootType",
-									"operator": "=",
-									"value": "thigh"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "strings",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "strings",
-			"image": {
-				"image": "boots_strings.png",
-				"overrides": [
-					{
-						"image": "boots_strings_long.png",
-						"condition": [
-							[
-								{
-									"module": "bootType",
-									"operator": "=",
-									"value": "thigh"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "Shoe",
+					"colorizationKey": "shoe"
+				},
+				{
+					"name": "Rings",
+					"colorizationKey": "smallRings"
+				},
+				{
+					"name": "Strings",
+					"colorizationKey": "strings"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "bootType"
+				}
+			],
+			"imageMap": {
+				"front:knee": [
+					"boots.png",
+					"boots_rings.png",
+					"boots_strings.png"
+				],
+				"front:thigh": [
+					"boots_long.png",
+					"boots_rings_long.png",
+					"boots_strings_long.png"
+				],
+				"back:knee": [
+					"",
+					"",
+					""
+				],
+				"back:thigh": [
+					"",
+					"",
+					""
 				]
 			}
 		},
@@ -178,9 +127,13 @@
 			"height": 1500,
 			"type": "alphaImageMesh",
 			"name": "back",
-			"priority": "BELOW_BODY",
+			"priority": "BELOW_LEG_LEFT",
 			"points": "body",
-			"mirror": 0,
+			"pointType": [
+				"bodyleg_l",
+				"leg_l"
+			],
+			"mirror": 1,
 			"image": {
 				"image": "alpha_heels_back.png",
 				"overrides": [
@@ -202,71 +155,49 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "back",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Back",
 			"points": "body",
-			"pointType": [
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms",
+				"body"
 			],
-			"mirror": 0,
-			"colorizationKey": "shoe",
-			"image": {
-				"image": "boots_back.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "boots_back_long.png",
-						"condition": [
-							[
-								{
-									"module": "bootType",
-									"operator": "=",
-									"value": "thigh"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "soles back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "soles",
-			"image": {
-				"image": "heels_back_soles.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "Shoe",
+					"colorizationKey": "shoe"
+				},
+				{
+					"name": "Soles",
+					"colorizationKey": "soles"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "bootType"
+				}
+			],
+			"imageMap": {
+				"front:knee": [
+					"",
+					""
+				],
+				"front:thigh": [
+					"",
+					""
+				],
+				"back:knee": [
+					"boots_back.png",
+					"heels_back_soles.png"
+				],
+				"back:thigh": [
+					"boots_back_long.png",
+					"heels_back_soles.png"
 				]
 			}
 		},
@@ -277,9 +208,12 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "soles kneeling sole",
-			"priority": "BELOW_BODY_SOLES",
+			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"mirror": 0,
+			"pointType": [
+				"body_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "soles",
 			"image": {
 				"image": "",
@@ -307,9 +241,12 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "soles kneeling sides",
-			"priority": "BELOW_BODY_SOLES",
+			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"mirror": 0,
+			"pointType": [
+				"body_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "shoe",
 			"image": {
 				"image": "",

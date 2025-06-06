@@ -6,25 +6,37 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front Highlights",
-			"priority": "OVERLAY",
+			"type": "autoMesh",
+			"name": "Front",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "shoesHighlights",
-			"image": {
-				"image": "flat_shoes_ Highlights.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Shoe",
+					"colorizationKey": "shoes"
+				},
+				{
+					"name": "Highlights",
+					"colorizationKey": "shoesHighlights"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"front": [
+					"flat_shoes.png",
+					"flat_shoes_ Highlights.png"
+				],
+				"back": [
+					"",
+					""
 				]
 			}
 		},
@@ -33,79 +45,37 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Back",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "shoes",
-			"image": {
-				"image": "flat_shoes.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "shoes",
-			"image": {
-				"image": "flat_shoes_back.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "back Highlights",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "shoesHighlights",
-			"image": {
-				"image": "flat_shoes_back_Highlights.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Shoe",
+					"colorizationKey": "shoes"
+				},
+				{
+					"name": "Highlights",
+					"colorizationKey": "shoesHighlights"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"front": [
+					"",
+					""
+				],
+				"back": [
+					"flat_shoes_back.png",
+					"flat_shoes_back_Highlights.png"
 				]
 			}
 		},
@@ -116,9 +86,12 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "soles kneeling sole",
-			"priority": "BELOW_BODY_SOLES",
+			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"mirror": 0,
+			"pointType": [
+				"body_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "shoes",
 			"image": {
 				"image": "",

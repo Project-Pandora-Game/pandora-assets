@@ -6,72 +6,37 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"type": "autoMesh",
+			"name": "Front",
+			"points": "skirt_tight",
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 0,
-			"colorizationKey": "panties",
-			"image": {
-				"image": "thong_front.png",
-				"overrides": [
-					{
-						"image": "thong_front_side.png",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "aside"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "thong_front_ankle.png",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "fully"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "thong_front_knee.png",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "knees"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "Panties",
+					"colorizationKey": "panties"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "pantiesState"
+				}
+			],
+			"imageMap": {
+				"normal": [
+					"thong_front.png"
+				],
+				"aside": [
+					"thong_front_side.png"
+				],
+				"knees": [
+					"thong_front_knee.png"
+				],
+				"fully": [
+					"thong_front_ankle.png"
 				]
 			}
 		},
@@ -117,82 +82,37 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"type": "autoMesh",
+			"name": "Back",
+			"points": "skirt_tight",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 0,
-			"colorizationKey": "panties",
-			"image": {
-				"image": "thong_back.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "thong_back_ankle.png",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "fully"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "thong_back_knee.png",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "knees"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "thong_back_side.png",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "aside"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "Panties",
+					"colorizationKey": "panties"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "pantiesState"
+				}
+			],
+			"imageMap": {
+				"normal": [
+					"thong_back.png"
+				],
+				"aside": [
+					"thong_back_side.png"
+				],
+				"knees": [
+					"thong_back_knee.png"
+				],
+				"fully": [
+					"thong_back_ankle.png"
 				]
 			}
 		}

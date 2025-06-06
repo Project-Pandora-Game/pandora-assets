@@ -6,32 +6,57 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Front",
 			"points": "body",
-			"pointType": [
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"body"
 			],
-			"mirror": 0,
-			"colorizationKey": "stocking",
-			"image": {
-				"image": "stocking_f.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "stocking"
+				},
+				{
+					"name": "Pattern",
+					"colorizationKey": "seams"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "stockingState"
+				}
+			],
+			"imageMap": {
+				"front:normal": [
+					"stocking_f.png",
+					""
+				],
+				"front:seam": [
+					"stocking_f.png",
+					""
+				],
+				"front:stripes": [
+					"stocking_f.png",
+					"stocking_f_stripes.png"
+				],
+				"back:normal": [
+					"",
+					""
+				],
+				"back:seam": [
+					"",
+					""
+				],
+				"back:stripes": [
+					"",
+					""
 				]
 			}
 		},
@@ -40,68 +65,57 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "patterns front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Back",
 			"points": "body",
-			"pointType": [
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms",
+				"body"
 			],
-			"mirror": 0,
-			"colorizationKey": "seams",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "stocking_f_stripes.png",
-						"condition": [
-							[
-								{
-									"module": "stockingState",
-									"operator": "=",
-									"value": "stripes"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "stocking"
+				},
+				{
+					"name": "Pattern",
+					"colorizationKey": "seams"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "stocking",
-			"image": {
-				"image": "stocking_b.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "stockingState"
+				}
+			],
+			"imageMap": {
+				"front:normal": [
+					"",
+					""
+				],
+				"front:seam": [
+					"",
+					""
+				],
+				"front:stripes": [
+					"",
+					""
+				],
+				"back:normal": [
+					"stocking_b.png",
+					""
+				],
+				"back:seam": [
+					"stocking_b.png",
+					"stocking_b_seam.png"
+				],
+				"back:stripes": [
+					"stocking_b.png",
+					"stocking_b_stripes.png"
 				]
 			}
 		},
@@ -112,9 +126,12 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "soles",
-			"priority": "BELOW_BODY_SOLES",
+			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"mirror": 0,
+			"pointType": [
+				"body_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "stocking",
 			"image": {
 				"image": "",
@@ -128,54 +145,6 @@
 								},
 								{
 									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "patterns back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
-			],
-			"mirror": 0,
-			"colorizationKey": "seams",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "stocking_b_seam.png",
-						"condition": [
-							[
-								{
-									"module": "stockingState",
-									"operator": "=",
-									"value": "seam"
-								}
-							]
-						]
-					},
-					{
-						"image": "stocking_b_stripes.png",
-						"condition": [
-							[
-								{
-									"module": "stockingState",
-									"operator": "=",
-									"value": "stripes"
 								}
 							]
 						]

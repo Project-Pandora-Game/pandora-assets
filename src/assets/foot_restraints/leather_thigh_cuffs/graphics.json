@@ -6,118 +6,25 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "large ring",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Large ring",
 			"points": "body",
-			"pointType": [
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"body"
 			],
-			"mirror": 0,
-			"colorizationKey": "largeRings",
-			"image": {
-				"image": "leatherthighcuffs_large_ring.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "cuffs",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "cuff",
-			"image": {
-				"image": "leatherthighcuffs_cuff.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "belts",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "belt",
-			"image": {
-				"image": "leatherthighcuffs_belt.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "rings",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "smallRings",
-			"image": {
-				"image": "leatherthighcuffs_rings.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "cuff back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "cuff",
-			"image": {
-				"image": "leatherthighcuffs_cuff.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "belt back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "belt",
-			"image": {
-				"image": "leatherthighcuffs_belt.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "ring back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "smallRings",
-			"image": {
-				"image": "leatherthighcuffs_rings.png",
-				"overrides": []
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "largeRings"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"leatherthighcuffs_large_ring.png"
+				]
 			}
 		},
 		{
@@ -127,9 +34,13 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "chain",
-			"priority": "ABOVE_BODY",
+			"priority": "ABOVE_LEG_LEFT",
 			"points": "static",
-			"mirror": 0,
+			"pointType": [
+				"static",
+				"static_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "chains",
 			"image": {
 				"image": "",
@@ -304,6 +215,78 @@
 							]
 						]
 					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Front",
+			"points": "body",
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Cuffs",
+					"colorizationKey": "cuff"
+				},
+				{
+					"name": "Belts",
+					"colorizationKey": "belt"
+				},
+				{
+					"name": "Rings",
+					"colorizationKey": "smallRings"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"leatherthighcuffs_cuff.png",
+					"leatherthighcuffs_belt.png",
+					"leatherthighcuffs_rings.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Back",
+			"points": "body",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Cuffs",
+					"colorizationKey": "cuff"
+				},
+				{
+					"name": "Belts",
+					"colorizationKey": "belt"
+				},
+				{
+					"name": "Rings",
+					"colorizationKey": "smallRings"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"leatherthighcuffs_cuff.png",
+					"leatherthighcuffs_belt.png",
+					"leatherthighcuffs_rings.png"
 				]
 			}
 		}

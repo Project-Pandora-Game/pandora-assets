@@ -9,7 +9,7 @@
 			"type": "mesh",
 			"name": "SkirtFront",
 			"priority": "ABOVE_BODY",
-			"points": "body",
+			"points": "skirt_tight",
 			"pointType": [
 				"body",
 				"body_l",
@@ -19,6 +19,7 @@
 				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
+				"leg",
 				"leg_l",
 				"leg_r"
 			],
@@ -37,7 +38,7 @@
 			"type": "mesh",
 			"name": "SkirtFrontWrinkles",
 			"priority": "ABOVE_BODY",
-			"points": "body",
+			"points": "skirt_tight",
 			"pointType": [
 				"body",
 				"body_l",
@@ -47,6 +48,7 @@
 				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
+				"leg",
 				"leg_l",
 				"leg_r"
 			],
@@ -76,7 +78,7 @@
 			"type": "mesh",
 			"name": "SkirtBack",
 			"priority": "BELOW_BODY",
-			"points": "body",
+			"points": "skirt_tight",
 			"pointType": [
 				"body",
 				"body_l",
@@ -86,6 +88,7 @@
 				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
+				"leg",
 				"leg_l",
 				"leg_r"
 			],

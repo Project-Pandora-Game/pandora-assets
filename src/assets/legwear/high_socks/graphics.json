@@ -6,47 +6,41 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Front",
 			"points": "body",
-			"pointType": [
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"body"
 			],
-			"mirror": 0,
-			"colorizationKey": "socks",
-			"image": {
-				"image": "highleg_socks.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "highleg_socks_footless.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "feet",
-									"operator": "=",
-									"value": "footless"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "socks"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "feet"
+				}
+			],
+			"imageMap": {
+				"front:standard": [
+					"highleg_socks.png"
+				],
+				"front:footless": [
+					"highleg_socks_footless.png"
+				],
+				"back:standard": [
+					""
+				],
+				"back:footless": [
+					""
 				]
 			}
 		},
@@ -55,47 +49,41 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "back",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Back",
 			"points": "body",
-			"pointType": [
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms",
+				"body"
 			],
-			"mirror": 0,
-			"colorizationKey": "socks",
-			"image": {
-				"image": "highleg_socks_back.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "highleg_socks_back_footless.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "feet",
-									"operator": "=",
-									"value": "footless"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "socks"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "feet"
+				}
+			],
+			"imageMap": {
+				"front:standard": [
+					""
+				],
+				"front:footless": [
+					""
+				],
+				"back:standard": [
+					"highleg_socks_back.png"
+				],
+				"back:footless": [
+					"highleg_socks_back_footless.png"
 				]
 			}
 		},
@@ -106,9 +94,12 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "soles",
-			"priority": "BELOW_BODY_SOLES",
+			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"mirror": 0,
+			"pointType": [
+				"body_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "socks",
 			"image": {
 				"image": "",

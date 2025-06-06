@@ -6,190 +6,41 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Front",
 			"points": "body",
-			"pointType": [
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
 			],
-			"mirror": 0,
-			"colorizationKey": "socks",
-			"image": {
-				"image": "socks.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "socks_footless.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "feet",
-									"operator": "=",
-									"value": "footless"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "stripe 1 front",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "stripeTop",
-			"image": {
-				"image": "stripe1.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "stripes",
-									"operator": "=",
-									"value": "none"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "stripe 2 front",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "stripeMiddle",
-			"image": {
-				"image": "stripe2.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "stripes",
-									"operator": "=",
-									"value": "none"
-								}
-							],
-							[
-								{
-									"module": "stripes",
-									"operator": "=",
-									"value": "one"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "stripe 3 front",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "stripeBottom",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "stripe3.png",
-						"condition": [
-							[
-								{
-									"module": "stripes",
-									"operator": "=",
-									"value": "three"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"graphicalLayers": [
+				{
+					"name": "Sock",
+					"colorizationKey": "socks"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "socks",
-			"image": {
-				"image": "socks_back.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "socks_back_footless.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "feet",
-									"operator": "=",
-									"value": "footless"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "feet"
+				}
+			],
+			"imageMap": {
+				"front:standard": [
+					"socks.png"
+				],
+				"front:footless": [
+					"socks_footless.png"
+				],
+				"back:standard": [
+					""
+				],
+				"back:footless": [
+					""
 				]
 			}
 		},
@@ -198,27 +49,77 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "stripe 1 back",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Front Stripes",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "stripeTop",
-			"image": {
-				"image": "stripe1.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "stripes",
-									"operator": "=",
-									"value": "none"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Stripe 1",
+					"colorizationKey": "stripeTop"
+				},
+				{
+					"name": "Stripe 2",
+					"colorizationKey": "stripeMiddle"
+				},
+				{
+					"name": "Stripe 3",
+					"colorizationKey": "stripeBottom"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "stripes"
+				}
+			],
+			"imageMap": {
+				"front:three": [
+					"stripe1.png",
+					"stripe2.png",
+					"stripe3.png"
+				],
+				"front:two": [
+					"stripe1.png",
+					"stripe2.png",
+					""
+				],
+				"front:one": [
+					"stripe1.png",
+					"",
+					""
+				],
+				"front:none": [
+					"",
+					"",
+					""
+				],
+				"back:three": [
+					"",
+					"",
+					""
+				],
+				"back:two": [
+					"",
+					"",
+					""
+				],
+				"back:one": [
+					"",
+					"",
+					""
+				],
+				"back:none": [
+					"",
+					"",
+					""
 				]
 			}
 		},
@@ -227,34 +128,41 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "stripe 2 back",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Back",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "stripeMiddle",
-			"image": {
-				"image": "stripe2.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "stripes",
-									"operator": "=",
-									"value": "none"
-								}
-							],
-							[
-								{
-									"module": "stripes",
-									"operator": "=",
-									"value": "one"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Sock",
+					"colorizationKey": "socks"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "feet"
+				}
+			],
+			"imageMap": {
+				"front:standard": [
+					""
+				],
+				"front:footless": [
+					""
+				],
+				"back:standard": [
+					"socks_back.png"
+				],
+				"back:footless": [
+					"socks_back_footless.png"
 				]
 			}
 		},
@@ -263,27 +171,77 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "stripe 3 back",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Back stripes",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "stripeBottom",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "stripe3.png",
-						"condition": [
-							[
-								{
-									"module": "stripes",
-									"operator": "=",
-									"value": "three"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms",
+				"body"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Stripe 1",
+					"colorizationKey": "stripeTop"
+				},
+				{
+					"name": "Stripe 2",
+					"colorizationKey": "stripeMiddle"
+				},
+				{
+					"name": "Stripe 3",
+					"colorizationKey": "stripeBottom"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "stripes"
+				}
+			],
+			"imageMap": {
+				"front:three": [
+					"",
+					"",
+					""
+				],
+				"front:two": [
+					"",
+					"",
+					""
+				],
+				"front:one": [
+					"",
+					"",
+					""
+				],
+				"front:none": [
+					"",
+					"",
+					""
+				],
+				"back:three": [
+					"stripe1.png",
+					"stripe2.png",
+					"stripe3.png"
+				],
+				"back:two": [
+					"stripe1.png",
+					"stripe2.png",
+					""
+				],
+				"back:one": [
+					"stripe1.png",
+					"",
+					""
+				],
+				"back:none": [
+					"",
+					"",
+					""
 				]
 			}
 		},
@@ -294,9 +252,12 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "soles",
-			"priority": "BELOW_BODY_SOLES",
+			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"mirror": 0,
+			"pointType": [
+				"body_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "socks",
 			"image": {
 				"image": "",

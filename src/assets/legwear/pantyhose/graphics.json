@@ -6,61 +6,52 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Front",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 0,
-			"colorizationKey": "pantyhose",
-			"image": {
-				"image": "pantyhose_f.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "pantyhose_f_ripped.png",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "between"
-								}
-							]
-						]
-					},
-					{
-						"image": "pantyhose_f_ripped_full.png",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "fully"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "pantyhose"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "pantiesState"
+				}
+			],
+			"imageMap": {
+				"front:normal": [
+					"pantyhose_f.png"
+				],
+				"front:between": [
+					"pantyhose_f_ripped.png"
+				],
+				"front:fully": [
+					"pantyhose_f_ripped_full.png"
+				],
+				"front:seam": [
+					"pantyhose_f.png"
+				],
+				"back:normal": [
+					""
+				],
+				"back:between": [
+					""
+				],
+				"back:fully": [
+					""
+				],
+				"back:seam": [
+					""
 				]
 			}
 		},
@@ -69,61 +60,64 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "back",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Back",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 0,
-			"colorizationKey": "pantyhose",
-			"image": {
-				"image": "pantyhose_b.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "pantyhose_b_ripped.png",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "between"
-								}
-							]
-						]
-					},
-					{
-						"image": "pantyhose_b_ripped_full.png",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "fully"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "pantyhose"
+				},
+				{
+					"name": "Seams",
+					"colorizationKey": "seams"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "pantiesState"
+				}
+			],
+			"imageMap": {
+				"front:normal": [
+					"",
+					""
+				],
+				"front:between": [
+					"",
+					""
+				],
+				"front:fully": [
+					"",
+					""
+				],
+				"front:seam": [
+					"",
+					""
+				],
+				"back:normal": [
+					"pantyhose_b.png",
+					""
+				],
+				"back:between": [
+					"pantyhose_b_ripped.png",
+					""
+				],
+				"back:fully": [
+					"pantyhose_b_ripped_full.png",
+					""
+				],
+				"back:seam": [
+					"pantyhose_b.png",
+					"pantyhose_b_seam.png"
 				]
 			}
 		},
@@ -134,9 +128,12 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "soles",
-			"priority": "BELOW_BODY_SOLES",
+			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"mirror": 0,
+			"pointType": [
+				"body_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "pantyhose",
 			"image": {
 				"image": "",
@@ -150,35 +147,6 @@
 								},
 								{
 									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "seams",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "seams",
-			"image": {
-				"image": "pantyhose_b_seam.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "!=",
-									"value": "seam"
 								}
 							]
 						]

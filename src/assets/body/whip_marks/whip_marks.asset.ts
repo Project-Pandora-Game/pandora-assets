@@ -105,6 +105,56 @@ DefineBodypart({
 				},
 			],
 		},
+		soleColor_l: {
+			type: 'typed',
+			name: 'Left Sole Marks',
+			expression: 'Left Sole Marks',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'one',
+					name: 'One',
+				},
+				{
+					id: 'multi',
+					name: 'Multiple',
+				},
+				{
+					id: 'many',
+					name: 'Many',
+				},
+			],
+		},
+		soleColor_r: {
+			type: 'typed',
+			name: 'Right Sole Marks',
+			expression: 'Right Sole Marks',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'one',
+					name: 'One',
+				},
+				{
+					id: 'multi',
+					name: 'Multiple',
+				},
+				{
+					id: 'many',
+					name: 'Many',
+				},
+			],
+		},
 		backColor: {
 			type: 'typed',
 			name: 'Back Marks',

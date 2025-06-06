@@ -16,11 +16,8 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "body",
@@ -135,11 +132,8 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "shine",
@@ -254,7 +248,6 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r"
 			],
@@ -403,11 +396,8 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "body",
@@ -442,11 +432,8 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "shine",

@@ -22,7 +22,9 @@ DefineRoomDeviceAsset({
 						leg_l: [[-10, 10]],
 						character_rotation: 0,
 					},
-					legs: ['standing', 'kneeling'],
+					legs: {
+						pose: ['standing', 'kneeling'],
+					},
 				},
 				posePresets: [
 					{

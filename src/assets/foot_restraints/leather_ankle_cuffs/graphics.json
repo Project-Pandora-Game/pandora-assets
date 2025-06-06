@@ -6,15 +6,25 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "large ring",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Large ring",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "largeRings",
-			"image": {
-				"image": "leatheranklecuffs_large_ring.png",
-				"overrides": []
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "largeRings"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"leatheranklecuffs_large_ring.png"
+				]
 			}
 		},
 		{
@@ -24,9 +34,13 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "chain",
-			"priority": "ABOVE_BODY",
+			"priority": "ABOVE_LEG_LEFT",
 			"points": "static",
-			"mirror": 0,
+			"pointType": [
+				"static",
+				"static_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "chains",
 			"image": {
 				"image": "",
@@ -235,9 +249,13 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "bar",
-			"priority": "ABOVE_BODY",
+			"priority": "ABOVE_LEG_LEFT",
 			"points": "static",
-			"mirror": 0,
+			"pointType": [
+				"static",
+				"static_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "bar",
 			"image": {
 				"image": "",
@@ -340,15 +358,35 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "cuffs",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Front",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "cuff",
-			"image": {
-				"image": "leatheranklecuffs_cuff.png",
-				"overrides": []
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Cuffs",
+					"colorizationKey": "cuff"
+				},
+				{
+					"name": "Belts",
+					"colorizationKey": "belt"
+				},
+				{
+					"name": "Rings",
+					"colorizationKey": "smallRings"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"leatheranklecuffs_cuff.png",
+					"leatheranklecuffs_belt.png",
+					"leatheranklecuffs_rings.png"
+				]
 			}
 		},
 		{
@@ -356,79 +394,35 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "belts",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Back",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "belt",
-			"image": {
-				"image": "leatheranklecuffs_belt.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "rings",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "smallRings",
-			"image": {
-				"image": "leatheranklecuffs_rings.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "cuff back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "cuff",
-			"image": {
-				"image": "leatheranklecuffs_cuff.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "belt back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "belt",
-			"image": {
-				"image": "leatheranklecuffs_belt.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "ring back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "smallRings",
-			"image": {
-				"image": "leatheranklecuffs_rings.png",
-				"overrides": []
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Cuffs",
+					"colorizationKey": "cuff"
+				},
+				{
+					"name": "Belts",
+					"colorizationKey": "belt"
+				},
+				{
+					"name": "Rings",
+					"colorizationKey": "smallRings"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"leatheranklecuffs_cuff.png",
+					"leatheranklecuffs_belt.png",
+					"leatheranklecuffs_rings.png"
+				]
 			}
 		},
 		{

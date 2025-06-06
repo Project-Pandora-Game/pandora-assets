@@ -16,11 +16,8 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"image": {
@@ -46,75 +43,40 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"type": "autoMesh",
+			"name": "Front",
+			"points": "skirt_tight",
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 0,
-			"colorizationKey": "panties",
-			"image": {
-				"image": "style1.png",
-				"overrides": [
-					{
-						"image": "style1_aside.png",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "aside"
-								}
-							]
-						]
-					},
-					{
-						"image": "style1_floor.png",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "fully"
-								}
-							]
-						]
-					},
-					{
-						"image": "style1_knees.png",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "knees"
-								}
-							]
-						]
-					},
-					{
-						"image": "style1_wedged.png",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "wedged"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "Panties",
+					"colorizationKey": "panties"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "pantiesState"
+				}
+			],
+			"imageMap": {
+				"normal": [
+					"style1.png"
+				],
+				"aside": [
+					"style1_aside.png"
+				],
+				"wedged": [
+					"style1_wedged.png"
+				],
+				"knees": [
+					"style1_knees.png"
+				],
+				"fully": [
+					"style1_floor.png"
 				]
 			}
 		},
@@ -170,11 +132,8 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"image": {
@@ -200,73 +159,40 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"type": "autoMesh",
+			"name": "Back",
+			"points": "skirt_tight",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 0,
-			"colorizationKey": "panties",
-			"image": {
-				"image": "style1_back.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "style1_floor.png",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "fully"
-								}
-							]
-						]
-					},
-					{
-						"image": "style1_knees.png",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "knees"
-								}
-							]
-						]
-					},
-					{
-						"image": "style1_wedged.png",
-						"condition": [
-							[
-								{
-									"module": "pantiesState",
-									"operator": "=",
-									"value": "wedged"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "Panties",
+					"colorizationKey": "panties"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "pantiesState"
+				}
+			],
+			"imageMap": {
+				"normal": [
+					"style1_back.png"
+				],
+				"aside": [
+					"style1_aside.png"
+				],
+				"wedged": [
+					"style1_wedged.png"
+				],
+				"knees": [
+					"style1_knees.png"
+				],
+				"fully": [
+					"style1_floor.png"
 				]
 			}
 		}

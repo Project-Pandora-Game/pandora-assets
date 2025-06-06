@@ -6,214 +6,73 @@
 			"y": -15,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "Front Sole",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Front",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "sole",
-			"image": {
-				"image": "balletboots_front_sole.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": -15,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Front Support Bottom",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "support",
-			"image": {
-				"image": "balletboots_front_box_bottom.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": -15,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Front Inner",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "inner",
-			"image": {
-				"image": "balletboots_front_inner.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": -15,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Front Outer",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "outer",
-			"image": {
-				"image": "balletboots_front_outer.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": -15,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Front Support Top",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "support",
-			"image": {
-				"image": "balletboots_front_box_top.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": -15,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Front Laces",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "laces",
-			"image": {
-				"image": "balletboots_front_laces.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": -15,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Front Shine",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "shine",
-			"image": {
-				"image": "balletboots_front_shine.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": -15,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Front Belt",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "belt",
-			"image": {
-				"image": "balletboots_belt.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Sole",
+					"colorizationKey": "sole"
+				},
+				{
+					"name": "Support Bottom",
+					"colorizationKey": "support"
+				},
+				{
+					"name": "Inner",
+					"colorizationKey": "inner"
+				},
+				{
+					"name": "Outer",
+					"colorizationKey": "outer"
+				},
+				{
+					"name": "Support Top",
+					"colorizationKey": "support"
+				},
+				{
+					"name": "Laces",
+					"colorizationKey": "laces"
+				},
+				{
+					"name": "Shine",
+					"colorizationKey": "shine"
+				},
+				{
+					"name": "Belt",
+					"colorizationKey": "belt"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"front": [
+					"balletboots_front_sole.png",
+					"balletboots_front_box_bottom.png",
+					"balletboots_front_inner.png",
+					"balletboots_front_outer.png",
+					"balletboots_front_box_top.png",
+					"balletboots_front_laces.png",
+					"balletboots_front_shine.png",
+					"balletboots_belt.png"
+				],
+				"back": [
+					"",
+					"",
+					"",
+					"",
+					"",
+					"",
+					"",
+					""
 				]
 			}
 		},
@@ -222,25 +81,31 @@
 			"y": -14,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "Front Buckle",
-			"priority": "ABOVE_BODY",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "buckle",
-			"image": {
-				"image": "balletboots_buckle.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "buckle"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"front": [
+					"balletboots_buckle.png"
+				],
+				"back": [
+					""
 				]
 			}
 		},
@@ -249,172 +114,81 @@
 			"y": -15,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "Back Outer",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Back",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "outer",
-			"image": {
-				"image": "balletboots_back_outer.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": -15,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Back Support",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "support",
-			"image": {
-				"image": "balletboots_back_box.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": -15,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Back Sole",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "sole",
-			"image": {
-				"image": "balletboots_back_sole.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": -15,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Back Heel",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "heel",
-			"image": {
-				"image": "balletboots_back_heel.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "heel",
-									"operator": "=",
-									"value": "false"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": -15,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Back Shine",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "shine",
-			"image": {
-				"image": "balletboots_back_shine.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": -15,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Back Belt",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "belt",
-			"image": {
-				"image": "balletboots_belt.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Outer",
+					"colorizationKey": "outer"
+				},
+				{
+					"name": "Support",
+					"colorizationKey": "support"
+				},
+				{
+					"name": "Sole",
+					"colorizationKey": "sole"
+				},
+				{
+					"name": "Heel",
+					"colorizationKey": "heel"
+				},
+				{
+					"name": "Shine",
+					"colorizationKey": "shine"
+				},
+				{
+					"name": "Belt",
+					"colorizationKey": "belt"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "heel"
+				}
+			],
+			"imageMap": {
+				"front:false": [
+					"",
+					"",
+					"",
+					"",
+					"",
+					""
+				],
+				"front:true": [
+					"",
+					"",
+					"",
+					"",
+					"",
+					""
+				],
+				"back:false": [
+					"balletboots_back_outer.png",
+					"balletboots_back_box.png",
+					"balletboots_back_sole.png",
+					"",
+					"balletboots_back_shine.png",
+					"balletboots_belt.png"
+				],
+				"back:true": [
+					"balletboots_back_outer.png",
+					"balletboots_back_box.png",
+					"balletboots_back_sole.png",
+					"balletboots_back_heel.png",
+					"balletboots_back_shine.png",
+					"balletboots_belt.png"
 				]
 			}
 		},
@@ -425,9 +199,12 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "Soles Support",
-			"priority": "BELOW_BODY_SOLES",
+			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"mirror": 0,
+			"pointType": [
+				"body_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "support",
 			"image": {
 				"image": "",
@@ -455,9 +232,12 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "Soles Sole",
-			"priority": "BELOW_BODY_SOLES",
+			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"mirror": 0,
+			"pointType": [
+				"body_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "sole",
 			"image": {
 				"image": "",
@@ -485,9 +265,12 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "Soles Heel",
-			"priority": "BELOW_BODY_SOLES",
+			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"mirror": 0,
+			"pointType": [
+				"body_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "heel",
 			"image": {
 				"image": "",

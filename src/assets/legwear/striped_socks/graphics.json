@@ -6,32 +6,37 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Front",
 			"points": "body",
-			"pointType": [
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"body"
 			],
-			"mirror": 0,
-			"colorizationKey": "socks",
-			"image": {
-				"image": "striped_socks.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "Sock",
+					"colorizationKey": "socks"
+				},
+				{
+					"name": "Stripes",
+					"colorizationKey": "stripes"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"front": [
+					"striped_socks.png",
+					"striped_socks_stripes.png"
+				],
+				"back": [
+					"",
+					""
 				]
 			}
 		},
@@ -40,79 +45,38 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "stripes front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Back",
 			"points": "body",
-			"pointType": [
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms",
+				"body"
 			],
-			"mirror": 0,
-			"colorizationKey": "stripes",
-			"image": {
-				"image": "striped_socks_stripes.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"graphicalLayers": [
+				{
+					"name": "Sock",
+					"colorizationKey": "socks"
+				},
+				{
+					"name": "Stripes",
+					"colorizationKey": "stripes"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "socks",
-			"image": {
-				"image": "striped_socks_back.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"front": [
+					"",
+					""
+				],
+				"back": [
+					"striped_socks_back.png",
+					"striped_socks_stripes.png"
 				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "stripes back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
-			],
-			"mirror": 0,
-			"colorizationKey": "stripes",
-			"image": {
-				"image": "striped_socks_stripes.png",
-				"overrides": []
 			}
 		},
 		{
@@ -122,9 +86,12 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "soles",
-			"priority": "BELOW_BODY_SOLES",
+			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"mirror": 0,
+			"pointType": [
+				"body_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "socks",
 			"image": {
 				"image": "",

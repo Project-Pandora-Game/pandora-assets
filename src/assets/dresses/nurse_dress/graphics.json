@@ -9,7 +9,7 @@
 			"type": "mesh",
 			"name": "dressFront",
 			"priority": "ABOVE_BODY",
-			"points": "body",
+			"points": "skirt_tight",
 			"pointType": [
 				"body",
 				"body_l",
@@ -19,6 +19,7 @@
 				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
+				"leg",
 				"leg_l",
 				"leg_r"
 			],
@@ -70,7 +71,7 @@
 			"type": "mesh",
 			"name": "dressBack",
 			"priority": "BELOW_BODY",
-			"points": "body",
+			"points": "skirt_tight",
 			"pointType": [
 				"body",
 				"body_l",
@@ -80,6 +81,7 @@
 				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
+				"leg",
 				"leg_l",
 				"leg_r"
 			],

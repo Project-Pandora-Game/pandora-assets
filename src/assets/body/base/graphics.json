@@ -8,12 +8,15 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "Soles",
-			"priority": "BODY_SOLES",
+			"priority": "SOLE_LEFT",
 			"points": "body_soles_back",
+			"pointType": [
+				"body_l"
+			],
 			"previewOverrides": {
 				"color": 5461849
 			},
-			"mirror": 0,
+			"mirror": 1,
 			"colorizationKey": "skin",
 			"image": {
 				"image": "",
@@ -39,40 +42,65 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "Body",
-			"priority": "BODY",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "body",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"previewOverrides": {
-				"color": 5461849
-			},
-			"mirror": 0,
-			"colorizationKey": "skin",
-			"image": {
-				"image": "body.png",
-				"overrides": [
-					{
-						"image": "body_back.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
+			"graphicalLayers": [
+				{
+					"name": "Back shadow",
+					"colorizationKey": "skin",
+					"previewOverrides": {
+						"alpha": 0
 					}
+				},
+				{
+					"name": "Body",
+					"colorizationKey": "skin",
+					"previewOverrides": {
+						"color": 5461849
+					}
+				},
+				{
+					"name": "Shadow",
+					"colorizationKey": "skin",
+					"previewOverrides": {
+						"alpha": 0
+					}
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "muscleType"
+				}
+			],
+			"imageMap": {
+				"front:standard": [
+					"body_back_shadow.png",
+					"body.png",
+					"body_shadow_f.png"
+				],
+				"front:muscular": [
+					"body_back_shadow.png",
+					"body.png",
+					"body_shadow_m.png"
+				],
+				"back:standard": [
+					"body_back_shadow.png",
+					"body_back.png",
+					"body_shadow_f.png"
+				],
+				"back:muscular": [
+					"body_back_shadow.png",
+					"body_back.png",
+					"body_shadow_m.png"
 				]
 			}
 		},
@@ -423,114 +451,6 @@
 									"side": "left",
 									"operator": "=",
 									"value": "fist"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Body shadow",
-			"priority": "BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
-			],
-			"previewOverrides": {
-				"alpha": 0
-			},
-			"mirror": 0,
-			"colorizationKey": "skin",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "body_shadow_f.png",
-						"condition": [
-							[
-								{
-									"module": "muscleType",
-									"operator": "=",
-									"value": "standard"
-								}
-							]
-						]
-					},
-					{
-						"image": "body_shadow_m.png",
-						"condition": [
-							[
-								{
-									"module": "muscleType",
-									"operator": "=",
-									"value": "muscular"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Body shadow back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
-			],
-			"previewOverrides": {
-				"alpha": 0
-			},
-			"mirror": 0,
-			"colorizationKey": "skin",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "body_back_shadow.png",
-						"condition": [
-							[
-								{
-									"view": "back"
 								}
 							]
 						]

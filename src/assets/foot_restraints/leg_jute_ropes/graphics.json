@@ -1242,27 +1242,32 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "frogtie_front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Frogtie front",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "rope",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "thighs_frogtie.png",
-						"condition": [
-							[
-								{
-									"module": "frogtie",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "rope"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "frogtie"
+				}
+			],
+			"imageMap": {
+				"no": [
+					""
+				],
+				"yes": [
+					"thighs_frogtie.png"
 				]
 			}
 		},
@@ -1271,56 +1276,38 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "frogtie_back",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Frogtie back",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "rope",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "thighs_frogtie.png",
-						"condition": [
-							[
-								{
-									"module": "frogtie",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "frogtie_legs_back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "rope",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "legs_frogtie.png",
-						"condition": [
-							[
-								{
-									"module": "frogtie",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "rope"
+				},
+				{
+					"name": "Legs",
+					"colorizationKey": "rope"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "frogtie"
+				}
+			],
+			"imageMap": {
+				"no": [
+					"",
+					""
+				],
+				"yes": [
+					"thighs_frogtie.png",
+					"legs_frogtie.png"
 				]
 			}
 		}

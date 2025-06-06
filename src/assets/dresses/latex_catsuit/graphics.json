@@ -16,7 +16,6 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r"
 			],
@@ -31,6 +30,11 @@
 							[
 								{
 									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
 								},
 								{
 									"module": "variants",
@@ -51,6 +55,11 @@
 							[
 								{
 									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
 								},
 								{
 									"module": "variants",
@@ -78,6 +87,11 @@
 									"view": "front"
 								},
 								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								},
+								{
 									"module": "variants",
 									"operator": "=",
 									"value": "closed"
@@ -101,6 +115,11 @@
 							[
 								{
 									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
 								},
 								{
 									"module": "variants",
@@ -128,6 +147,11 @@
 									"view": "front"
 								},
 								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								},
+								{
 									"module": "variants",
 									"operator": "=",
 									"value": "closed"
@@ -148,6 +172,11 @@
 									"view": "front"
 								},
 								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								},
+								{
 									"module": "variants",
 									"operator": "=",
 									"value": "open"
@@ -166,6 +195,11 @@
 							[
 								{
 									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
 								},
 								{
 									"module": "variants",
@@ -193,6 +227,11 @@
 									"view": "front"
 								},
 								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								},
+								{
 									"module": "variants",
 									"operator": "=",
 									"value": "open"
@@ -216,6 +255,11 @@
 							[
 								{
 									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
 								},
 								{
 									"module": "variants",
@@ -243,6 +287,11 @@
 									"view": "front"
 								},
 								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								},
+								{
 									"module": "variants",
 									"operator": "=",
 									"value": "open"
@@ -254,68 +303,9 @@
 								}
 							]
 						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "catsuit legs",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"pointType": [
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
-			],
-			"mirror": 0,
-			"colorizationKey": "catsuit",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "latex_catsuit_front_long_legs.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
-									"module": "addOns",
-									"operator": "=",
-									"value": "none"
-								}
-							],
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
-									"module": "addOns",
-									"operator": "=",
-									"value": "gloves"
-								}
-							]
-						]
 					},
 					{
-						"image": "latex_catsuit_front_long_legs_feet.png",
+						"image": "latex_catsuit_front_long_closed_size_0.png",
 						"condition": [
 							[
 								{
@@ -325,36 +315,6 @@
 									"module": "length",
 									"operator": "=",
 									"value": "long"
-								},
-								{
-									"module": "addOns",
-									"operator": "=",
-									"value": "socks"
-								}
-							],
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
-									"module": "addOns",
-									"operator": "=",
-									"value": "both"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_catsuit_front_short_closed_size_0.png",
-						"condition": [
-							[
-								{
-									"view": "front"
 								},
 								{
 									"module": "variants",
@@ -362,19 +322,139 @@
 									"value": "closed"
 								},
 								{
-									"module": "length",
-									"operator": "=",
-									"value": "short"
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -180
 								}
 							]
 						]
 					},
 					{
-						"image": "latex_catsuit_front_short_open_size_0.png",
+						"image": "latex_catsuit_front_long_closed_size_1.png",
 						"condition": [
 							[
 								{
 									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "closed"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": -180
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -70
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_closed_size_2.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "closed"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": -70
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_closed_size_3.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "closed"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": 0
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": 100
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_closed_size_4.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "closed"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": 100
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_open_size_0.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
 								},
 								{
 									"module": "variants",
@@ -382,9 +462,124 @@
 									"value": "open"
 								},
 								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -180
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_open_size_1.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
 									"module": "length",
 									"operator": "=",
-									"value": "short"
+									"value": "long"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "open"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": -180
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -70
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_open_size_2.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "open"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": -70
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_open_size_3.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "open"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": 0
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": 100
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_front_long_open_size_4.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "open"
+								},
+								{
+									"bone": "breasts",
+									"operator": ">",
+									"value": 100
 								}
 							]
 						]
@@ -407,11 +602,8 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "reflection",
@@ -516,93 +708,101 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "catsuit legs shine",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "catsuit legs",
 			"points": "body",
-			"pointType": [
-				"body",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"body"
 			],
-			"mirror": 0,
-			"colorizationKey": "reflection",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "latex_catsuit_front_long_legs_reflection.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
-									"module": "addOns",
-									"operator": "=",
-									"value": "none"
-								}
-							],
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
-									"module": "addOns",
-									"operator": "=",
-									"value": "gloves"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_catsuit_front_long_legs_feet_reflection.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
-									"module": "addOns",
-									"operator": "=",
-									"value": "socks"
-								}
-							],
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
-									"module": "addOns",
-									"operator": "=",
-									"value": "both"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "Suit",
+					"colorizationKey": "catsuit"
+				},
+				{
+					"name": "Shine",
+					"colorizationKey": "reflection"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "length"
+				},
+				{
+					"type": "typedModule",
+					"module": "addOns"
+				}
+			],
+			"imageMap": {
+				"front:short:none": [
+					"latex_catsuit_front_short_closed_size_0.png",
+					"latex_catsuit_front_short_reflection_size_0.png"
+				],
+				"front:short:socks": [
+					"latex_catsuit_front_short_closed_size_0.png",
+					"latex_catsuit_front_short_reflection_size_0.png"
+				],
+				"front:short:gloves": [
+					"latex_catsuit_front_short_closed_size_0.png",
+					"latex_catsuit_front_short_reflection_size_0.png"
+				],
+				"front:short:both": [
+					"latex_catsuit_front_short_closed_size_0.png",
+					"latex_catsuit_front_short_reflection_size_0.png"
+				],
+				"front:long:none": [
+					"latex_catsuit_front_long_legs.png",
+					"latex_catsuit_front_long_legs_reflection.png"
+				],
+				"front:long:socks": [
+					"latex_catsuit_front_long_legs_feet.png",
+					"latex_catsuit_front_long_legs_feet_reflection.png"
+				],
+				"front:long:gloves": [
+					"latex_catsuit_front_long_legs.png",
+					"latex_catsuit_front_long_legs_reflection.png"
+				],
+				"front:long:both": [
+					"latex_catsuit_front_long_legs_feet.png",
+					"latex_catsuit_front_long_legs_feet_reflection.png"
+				],
+				"back:short:none": [
+					"",
+					""
+				],
+				"back:short:socks": [
+					"",
+					""
+				],
+				"back:short:gloves": [
+					"",
+					""
+				],
+				"back:short:both": [
+					"",
+					""
+				],
+				"back:long:none": [
+					"",
+					""
+				],
+				"back:long:socks": [
+					"",
+					""
+				],
+				"back:long:gloves": [
+					"",
+					""
+				],
+				"back:long:both": [
+					"",
+					""
 				]
 			}
 		},
@@ -1381,7 +1581,6 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r"
 			],
@@ -1398,6 +1597,11 @@
 									"view": "back"
 								},
 								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								},
+								{
 									"module": "variants",
 									"operator": "=",
 									"value": "closed"
@@ -1411,6 +1615,51 @@
 							[
 								{
 									"view": "back"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "short"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "open"
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_back_long_closed.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "variants",
+									"operator": "=",
+									"value": "closed"
+								}
+							]
+						]
+					},
+					{
+						"image": "latex_catsuit_back_long_open.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "length",
+									"operator": "=",
+									"value": "long"
 								},
 								{
 									"module": "variants",
@@ -1472,6 +1721,16 @@
 							[
 								{
 									"view": "back"
+								},
+								{
+									"module": "addOns",
+									"operator": "!=",
+									"value": "gloves"
+								},
+								{
+									"module": "addOns",
+									"operator": "!=",
+									"value": "both"
 								}
 							]
 						]
@@ -2095,140 +2354,6 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "catsuit legs",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
-			],
-			"mirror": 0,
-			"colorizationKey": "catsuit",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "latex_catsuit_back_long_legs.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
-									"module": "addOns",
-									"operator": "=",
-									"value": "none"
-								}
-							],
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
-									"module": "addOns",
-									"operator": "=",
-									"value": "gloves"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_catsuit_back_long_legs_feet.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
-									"module": "addOns",
-									"operator": "=",
-									"value": "socks"
-								}
-							],
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
-									"module": "addOns",
-									"operator": "=",
-									"value": "both"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_catsuit_back_short_closed.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "variants",
-									"operator": "=",
-									"value": "closed"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "short"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_catsuit_back_short_open.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "variants",
-									"operator": "=",
-									"value": "open"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "short"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
 			"name": "shine back suit",
 			"priority": "BELOW_BODY",
 			"points": "body",
@@ -2238,11 +2363,8 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "reflection",
@@ -2267,92 +2389,101 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "shine back suit",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "catsuit legs back",
 			"points": "body",
-			"pointType": [
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms",
+				"body"
 			],
-			"mirror": 0,
-			"colorizationKey": "reflection",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "latex_catsuit_back_long_legs_reflection.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
-									"module": "addOns",
-									"operator": "=",
-									"value": "none"
-								}
-							],
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
-									"module": "addOns",
-									"operator": "=",
-									"value": "gloves"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_catsuit_back_long_legs_feet_reflection.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
-									"module": "addOns",
-									"operator": "=",
-									"value": "socks"
-								}
-							],
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								},
-								{
-									"module": "addOns",
-									"operator": "=",
-									"value": "both"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "Suit",
+					"colorizationKey": "catsuit"
+				},
+				{
+					"name": "Shine",
+					"colorizationKey": "reflection"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "length"
+				},
+				{
+					"type": "typedModule",
+					"module": "addOns"
+				}
+			],
+			"imageMap": {
+				"front:short:none": [
+					"",
+					""
+				],
+				"front:short:socks": [
+					"",
+					""
+				],
+				"front:short:gloves": [
+					"",
+					""
+				],
+				"front:short:both": [
+					"",
+					""
+				],
+				"back:short:none": [
+					"latex_catsuit_back_short_closed.png",
+					"latex_catsuit_back_short_reflection.png"
+				],
+				"back:short:socks": [
+					"latex_catsuit_back_short_closed.png",
+					"latex_catsuit_back_short_reflection.png"
+				],
+				"back:short:gloves": [
+					"latex_catsuit_back_short_closed.png",
+					"latex_catsuit_back_short_reflection.png"
+				],
+				"back:short:both": [
+					"latex_catsuit_back_short_closed.png",
+					"latex_catsuit_back_short_reflection.png"
+				],
+				"front:long:none": [
+					"",
+					""
+				],
+				"front:long:socks": [
+					"",
+					""
+				],
+				"front:long:gloves": [
+					"",
+					""
+				],
+				"front:long:both": [
+					"",
+					""
+				],
+				"back:long:none": [
+					"latex_catsuit_back_long_legs.png",
+					"latex_catsuit_back_long_legs_reflection.png"
+				],
+				"back:long:socks": [
+					"latex_catsuit_back_long_legs_feet.png",
+					"latex_catsuit_back_long_legs_feet_reflection.png"
+				],
+				"back:long:gloves": [
+					"latex_catsuit_back_long_legs.png",
+					"latex_catsuit_back_long_legs_reflection.png"
+				],
+				"back:long:both": [
+					"latex_catsuit_back_long_legs_feet.png",
+					"latex_catsuit_back_long_legs_feet_reflection.png"
 				]
 			}
 		},
@@ -2363,9 +2494,12 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "soles",
-			"priority": "BELOW_BODY_SOLES",
+			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"mirror": 0,
+			"pointType": [
+				"body_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "catsuit",
 			"image": {
 				"image": "",
@@ -2421,9 +2555,12 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "soles shine",
-			"priority": "BELOW_BODY_SOLES",
+			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"mirror": 0,
+			"pointType": [
+				"body_l"
+			],
+			"mirror": 1,
 			"colorizationKey": "reflection",
 			"image": {
 				"image": "",

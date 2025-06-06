@@ -9,11 +9,11 @@
 			"type": "mesh",
 			"name": "legs front",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_leg_ropes",
+			"points": "custom_foot_restraints_duct_tape",
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
-				"image": "legs_basic.png",
+				"image": "legs_toes_back.png",
 				"overrides": [
 					{
 						"image": "",
@@ -48,26 +48,6 @@
 								}
 							]
 						]
-					},
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"legs": "kneeling"
-								}
-							]
-						]
-					},
-					{
-						"image": "legs_basic_sitting.png",
-						"condition": [
-							[
-								{
-									"legs": "sitting"
-								}
-							]
-						]
 					}
 				]
 			}
@@ -80,11 +60,11 @@
 			"type": "mesh",
 			"name": "legs back",
 			"priority": "BELOW_BODY",
-			"points": "custom_foot_restraints_leg_ropes",
+			"points": "custom_foot_restraints_duct_tape",
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
-				"image": "legs_basic.png",
+				"image": "legs_toes_back.png",
 				"overrides": [
 					{
 						"image": "",
@@ -116,26 +96,6 @@
 									"module": "legTies",
 									"operator": "=",
 									"value": "toes"
-								}
-							]
-						]
-					},
-					{
-						"image": "legs_basic_kneeling.png",
-						"condition": [
-							[
-								{
-									"legs": "kneeling"
-								}
-							]
-						]
-					},
-					{
-						"image": "legs_basic_sitting.png",
-						"condition": [
-							[
-								{
-									"legs": "sitting"
 								}
 							]
 						]

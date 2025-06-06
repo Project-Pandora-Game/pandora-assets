@@ -29,7 +29,9 @@ DefineRoomDeviceAsset({
 				name: 'Bondage Frame',
 				size: 'huge',
 				poseLimits: {
-					legs: ['standing', 'kneeling'],
+					legs: {
+						pose: ['standing', 'kneeling'],
+					},
 				},
 			},
 		},
@@ -39,7 +41,9 @@ DefineRoomDeviceAsset({
 				name: 'Bondage Frame',
 				size: 'huge',
 				poseLimits: {
-					legs: ['standing', 'kneeling'],
+					legs: {
+						pose: ['standing', 'kneeling'],
+					},
 				},
 			},
 		},
@@ -49,7 +53,9 @@ DefineRoomDeviceAsset({
 				name: 'Bondage Frame',
 				size: 'huge',
 				poseLimits: {
-					legs: ['standing', 'kneeling'],
+					legs: {
+						pose: ['standing', 'kneeling'],
+					},
 				},
 			},
 		},

@@ -6,39 +6,31 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "sex",
-			"priority": "BODY",
+			"type": "autoMesh",
+			"name": "Sex",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "body",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 0,
-			"colorizationKey": "blush",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "privates_color.png",
-						"condition": [
-							[
-								{
-									"module": "sexColor",
-									"operator": "=",
-									"value": "medium"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "blush"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "sexColor"
+				}
+			],
+			"imageMap": {
+				"noColor": [
+					""
+				],
+				"medium": [
+					"privates_color.png"
 				]
 			}
 		},
@@ -113,71 +105,46 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "butt",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Butt",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"bodyarm_l",
-				"bodyleg",
-				"bodyleg_l",
-				"leg_l"
+			"automeshTemplate": "belowBodyMirror",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 1,
-			"colorizationKey": "blush",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "butt_red_faint.png",
-						"condition": [
-							[
-								{
-									"module": "buttColor_l",
-									"operator": "=",
-									"value": "faint"
-								}
-							]
-						]
-					},
-					{
-						"image": "butt_red_medium.png",
-						"condition": [
-							[
-								{
-									"module": "buttColor_l",
-									"operator": "=",
-									"value": "medium"
-								}
-							]
-						]
-					},
-					{
-						"image": "butt_red_strong.png",
-						"condition": [
-							[
-								{
-									"module": "buttColor_l",
-									"operator": "=",
-									"value": "strong"
-								}
-							]
-						]
-					},
-					{
-						"image": "butt_red_extreme.png",
-						"condition": [
-							[
-								{
-									"module": "buttColor_l",
-									"operator": "=",
-									"value": "extreme"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "Butt",
+					"colorizationKey": "blush"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "buttColor_l"
+				}
+			],
+			"imageMap": {
+				"noColor": [
+					""
+				],
+				"faint": [
+					"butt_red_faint.png"
+				],
+				"medium": [
+					"butt_red_medium.png"
+				],
+				"strong": [
+					"butt_red_strong.png"
+				],
+				"extreme": [
+					"butt_red_extreme.png"
+				],
+				"printOut": [
+					""
+				],
+				"printIn": [
+					""
 				]
 			}
 		},
@@ -194,9 +161,7 @@
 				"body",
 				"body_l",
 				"bodyarm_l",
-				"bodyleg",
-				"bodyleg_l",
-				"leg_l"
+				"bodyleg_l"
 			],
 			"mirror": 1,
 			"colorizationKey": "print",

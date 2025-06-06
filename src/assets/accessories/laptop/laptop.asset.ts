@@ -20,7 +20,9 @@ DefineAsset({
 		],
 	},
 	poseLimits: {
-		legs: 'sitting',
+		legs: {
+			pose: 'sitting',
+		},
 	},
 	modules: {
 		logoType: {

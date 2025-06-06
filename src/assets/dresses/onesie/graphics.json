@@ -6,8 +6,62 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"type": "autoMesh",
+			"name": "Front",
+			"points": "body",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Base",
+					"colorizationKey": "onesie"
+				},
+				{
+					"name": "Pattern"
+				},
+				{
+					"name": "Application",
+					"colorizationKey": "applications"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "pattern"
+				}
+			],
+			"imageMap": {
+				"front:none": [
+					"onesie_front.png",
+					"",
+					"onesie_front_applications.png"
+				],
+				"front:toys": [
+					"onesie_front.png",
+					"onesie_front_pattern.png",
+					"onesie_front_applications.png"
+				],
+				"back:none": [
+					"",
+					"",
+					""
+				],
+				"back:toys": [
+					"",
+					"",
+					""
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "mesh",
-			"name": "Onesie front",
+			"name": "Buttons front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
 			"pointType": [
@@ -16,242 +70,13 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
-			"colorizationKey": "onesie",
+			"colorizationKey": "buttons",
 			"image": {
-				"image": "onesie_front.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "front",
-			"priority": "ABOVE_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "onesie",
-			"image": {
-				"image": "onesie_front.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "back",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "onesie",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "onesie_back_closed.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "flap",
-									"operator": "=",
-									"value": "closed"
-								}
-							]
-						]
-					},
-					{
-						"image": "onesie_back_open.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "flap",
-									"operator": "=",
-									"value": "open"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "back App",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "applications",
-			"image": {
-				"image": "onesie_back_applications.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Pattern front",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
-			],
-			"mirror": 0,
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "onesie_front_pattern.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "pattern",
-									"operator": "=",
-									"value": "toys"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Application front",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
-			],
-			"mirror": 0,
-			"colorizationKey": "applications",
-			"image": {
-				"image": "onesie_front_applications.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Application",
-			"priority": "ABOVE_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "applications",
-			"image": {
-				"image": "onesie_front_applications.png",
+				"image": "onesie_front_buttons.png",
 				"overrides": [
 					{
 						"image": "",
@@ -281,11 +106,8 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "pockets",
@@ -310,35 +132,37 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "Buttons front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Back - Base",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r"
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "Base",
+					"colorizationKey": "onesie"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "buttons",
-			"image": {
-				"image": "onesie_front_buttons.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "flap"
+				}
+			],
+			"imageMap": {
+				"front:closed": [
+					""
+				],
+				"front:open": [
+					""
+				],
+				"back:closed": [
+					"onesie_back_closed.png"
+				],
+				"back:open": [
+					"onesie_back_open.png"
 				]
 			}
 		},
@@ -347,57 +171,52 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "Onesie back",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Back - Pattern",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "Pattern"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "onesie",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "onesie_back_closed.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "flap",
-									"operator": "=",
-									"value": "closed"
-								}
-							]
-						]
-					},
-					{
-						"image": "onesie_back_open.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "flap",
-									"operator": "=",
-									"value": "open"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "pattern"
+				},
+				{
+					"type": "typedModule",
+					"module": "flap"
+				},
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"none:closed:front": [
+					""
+				],
+				"none:closed:back": [
+					""
+				],
+				"none:open:front": [
+					""
+				],
+				"none:open:back": [
+					""
+				],
+				"toys:closed:front": [
+					""
+				],
+				"toys:closed:back": [
+					"onesie_back_pattern_closed.png"
+				],
+				"toys:open:front": [
+					""
+				],
+				"toys:open:back": [
+					"onesie_back_pattern_open.png"
 				]
 			}
 		},
@@ -406,57 +225,40 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "Onesie flap application back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"type": "autoMesh",
+			"name": "Back - Flap",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 0,
-			"colorizationKey": "applications",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "onesie_back_flap_closed_applications.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "flap",
-									"operator": "=",
-									"value": "closed"
-								}
-							]
-						]
-					},
-					{
-						"image": "onesie_back_flap_open_applications.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "flap",
-									"operator": "=",
-									"value": "open"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "Flap",
+					"colorizationKey": "applications"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "flap"
+				}
+			],
+			"imageMap": {
+				"front:closed": [
+					""
+				],
+				"front:open": [
+					""
+				],
+				"back:closed": [
+					"onesie_back_flap_closed_applications.png"
+				],
+				"back:open": [
+					"onesie_back_flap_open_applications.png"
 				]
 			}
 		},
@@ -475,7 +277,6 @@
 				"body_r",
 				"bodyarm_l",
 				"bodyarm_r",
-				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r"
 			],
@@ -512,66 +313,27 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "Onesie pattern back",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Back - Application",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "Application",
+					"colorizationKey": "applications"
+				}
 			],
-			"mirror": 1,
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "onesie_back_pattern_closed.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "flap",
-									"operator": "=",
-									"value": "closed"
-								},
-								{
-									"module": "pattern",
-									"operator": "=",
-									"value": "toys"
-								}
-							]
-						]
-					},
-					{
-						"image": "onesie_back_pattern_open.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "flap",
-									"operator": "=",
-									"value": "open"
-								},
-								{
-									"module": "pattern",
-									"operator": "=",
-									"value": "toys"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"front": [
+					""
+				],
+				"back": [
+					"onesie_back_applications.png"
 				]
 			}
 		},
@@ -580,37 +342,28 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "Onesie applications back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"type": "autoMesh",
+			"name": "",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "onesie"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "applications",
-			"image": {
-				"image": "onesie_back_applications.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "flap"
+				}
+			],
+			"imageMap": {
+				"closed": [
+					""
+				],
+				"open": [
+					"onesie_back_flap_open.png"
 				]
 			}
 		}

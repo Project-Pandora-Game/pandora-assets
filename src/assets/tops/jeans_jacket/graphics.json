@@ -9,7 +9,7 @@
 			"type": "mesh",
 			"name": "jeans back",
 			"priority": "BELOW_BODY",
-			"points": "body",
+			"points": "skirt_tight",
 			"pointType": [
 				"body",
 				"body_l",
@@ -19,6 +19,7 @@
 				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
+				"leg",
 				"leg_l",
 				"leg_r"
 			],
@@ -37,7 +38,7 @@
 			"type": "mesh",
 			"name": "jeans back",
 			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
+			"points": "skirt_tight",
 			"pointType": [
 				"bodyarm_l",
 				"arm_l"
@@ -57,7 +58,7 @@
 			"type": "mesh",
 			"name": "jeans sleeves",
 			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
+			"points": "skirt_tight",
 			"pointType": [
 				"bodyarm_l",
 				"arm_l"
@@ -90,7 +91,7 @@
 			"type": "mesh",
 			"name": "jeans sleeves",
 			"priority": "ABOVE_ARM_LEFT",
-			"points": "body",
+			"points": "skirt_tight",
 			"pointType": [
 				"bodyarm_l",
 				"arm_l"
@@ -139,7 +140,7 @@
 			"type": "mesh",
 			"name": "jeans front",
 			"priority": "ABOVE_BODY",
-			"points": "body",
+			"points": "skirt_tight",
 			"pointType": [
 				"body",
 				"body_l",
@@ -149,6 +150,7 @@
 				"bodyleg",
 				"bodyleg_l",
 				"bodyleg_r",
+				"leg",
 				"leg_l",
 				"leg_r"
 			],
@@ -167,7 +169,7 @@
 			"type": "mesh",
 			"name": "jeans front sleeves part",
 			"priority": "ABOVE_ARM_LEFT",
-			"points": "body",
+			"points": "skirt_tight",
 			"pointType": [
 				"bodyarm_l",
 				"arm_l"

@@ -381,6 +381,15 @@
 			"name": "Thighs_front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg_l",
+				"bodyleg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -407,9 +416,18 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "Thighs_front",
+			"name": "Thighs_back",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg_l",
+				"bodyleg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {

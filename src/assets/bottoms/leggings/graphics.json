@@ -6,55 +6,23 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "Leggings front",
-			"priority": "ABOVE_BODY",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 0,
-			"colorizationKey": "leggings",
-			"image": {
-				"image": "leggings_f_cut.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Leggings front fill",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "leggings",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "leggings_f_fill.png",
-						"condition": [
-							[
-								{
-									"module": "design",
-									"operator": "=",
-									"value": "plain"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "leggings"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"leggings_f_cut.png"
 				]
 			}
 		},
@@ -63,27 +31,33 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "Leggings back",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Leggings front fill",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"body"
 			],
-			"mirror": 0,
-			"colorizationKey": "leggings",
-			"image": {
-				"image": "leggings_b_cut.png",
-				"overrides": []
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "leggings"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "design"
+				}
+			],
+			"imageMap": {
+				"netshowing": [
+					""
+				],
+				"plain": [
+					"leggings_f_fill.png"
+				]
 			}
 		},
 		{
@@ -91,27 +65,57 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "Leggings back fill",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Leggings back",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "leggings",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "leggings_b_fill.png",
-						"condition": [
-							[
-								{
-									"module": "design",
-									"operator": "=",
-									"value": "plain"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "leggings"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"leggings_b_cut.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Leggings back fill",
+			"points": "body",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms",
+				"body"
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "leggings"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "design"
+				}
+			],
+			"imageMap": {
+				"netshowing": [
+					""
+				],
+				"plain": [
+					"leggings_b_fill.png"
 				]
 			}
 		}

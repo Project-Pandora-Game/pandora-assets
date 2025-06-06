@@ -33,7 +33,9 @@ DefineRoomDeviceAsset({
 				name: 'Wooden Double Bed left side',
 				size: 'huge',
 				poseLimits: {
-					legs: ['standing', 'kneeling'],
+					legs: {
+						pose: ['standing', 'kneeling'],
+					},
 				},
 				graphics: 'ropes_left.json',
 			},
@@ -44,7 +46,9 @@ DefineRoomDeviceAsset({
 				name: 'Wooden Double Bed center',
 				size: 'huge',
 				poseLimits: {
-					legs: ['standing', 'kneeling'],
+					legs: {
+						pose: ['standing', 'kneeling'],
+					},
 				},
 			},
 		},
@@ -54,7 +58,9 @@ DefineRoomDeviceAsset({
 				name: 'Wooden Double Bed right side',
 				size: 'huge',
 				poseLimits: {
-					legs: ['standing', 'kneeling'],
+					legs: {
+						pose: ['standing', 'kneeling'],
+					},
 				},
 				graphics: 'ropes_right.json',
 			},
@@ -84,7 +90,9 @@ DefineRoomDeviceAsset({
 										leg_l: -18,
 										character_rotation: 0,
 									},
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									view: 'front',
 								},
 							},
@@ -132,7 +140,9 @@ DefineRoomDeviceAsset({
 										leg_l: -18,
 										character_rotation: 0,
 									},
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									view: 'front',
 								},
 								effects: {
@@ -155,7 +165,9 @@ DefineRoomDeviceAsset({
 										leg_l: -18,
 										character_rotation: 0,
 									},
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									view: 'back',
 								},
 							},
@@ -203,7 +215,9 @@ DefineRoomDeviceAsset({
 										leg_l: -18,
 										character_rotation: 0,
 									},
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									view: 'back',
 								},
 								effects: {
@@ -238,7 +252,9 @@ DefineRoomDeviceAsset({
 										leg_l: -18,
 										character_rotation: 0,
 									},
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									view: 'front',
 								},
 							},
@@ -286,7 +302,9 @@ DefineRoomDeviceAsset({
 										leg_l: -18,
 										character_rotation: 0,
 									},
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									view: 'front',
 								},
 								effects: {
@@ -309,7 +327,9 @@ DefineRoomDeviceAsset({
 										leg_l: -18,
 										character_rotation: 0,
 									},
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									view: 'back',
 								},
 							},
@@ -357,7 +377,9 @@ DefineRoomDeviceAsset({
 										leg_l: -18,
 										character_rotation: 0,
 									},
-									legs: 'standing',
+									legs: {
+										pose: 'standing',
+									},
 									view: 'back',
 								},
 								effects: {
