@@ -27,7 +27,9 @@ DefineRoomDeviceAsset({
 						character_rotation: 0,
 						tiptoeing: 0,
 					},
-					legs: 'standing',
+					legs: {
+						pose: 'standing',
+					},
 					arms: {
 						position: 'back',
 					},
