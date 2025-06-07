@@ -729,7 +729,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 			preview: {
 				y: 650,
 				size: 700,
-				highlight: ['BODY', 'BREASTS'],
+				highlight: ['LEG_LEFT', 'LEG_RIGHT', 'SOLE_LEFT', 'SOLE_RIGHT'],
 				basePose: {
 					legs: {
 						pose: 'standing',
@@ -833,6 +833,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					preview: {
 						y: 500,
 						size: 1000,
+						highlight: ['LEG_LEFT', 'LEG_RIGHT', 'SOLE_LEFT', 'SOLE_RIGHT'],
 					},
 				},
 				{
@@ -847,6 +848,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					preview: {
 						y: 500,
 						size: 1200,
+						highlight: ['LEG_LEFT', 'LEG_RIGHT', 'SOLE_LEFT', 'SOLE_RIGHT'],
 					},
 				},
 			],
@@ -872,7 +874,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						leg_l: 0,
 					},
 				},
-				highlight: ['BODY', 'BREASTS'],
+				highlight: ['LEG_LEFT', 'LEG_RIGHT', 'SOLE_LEFT', 'SOLE_RIGHT'],
 			},
 			poses: [
 				{
@@ -950,7 +952,7 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						leg_l: 0,
 					},
 				},
-				highlight: ['BODY', 'BREASTS'],
+				highlight: ['LEG_LEFT', 'LEG_RIGHT', 'SOLE_LEFT', 'SOLE_RIGHT'],
 			},
 			poses: [
 				{
