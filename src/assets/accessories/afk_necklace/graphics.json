@@ -40,7 +40,7 @@
 			"mirror": 0,
 			"colorizationKey": "pendant",
 			"image": {
-				"image": "necklace_afk.png",
+				"image": "necklace_pendant_heart_outer.png",
 				"overrides": [
 					{
 						"image": "",
@@ -60,6 +60,59 @@
 									"module": "pendantType",
 									"operator": "=",
 									"value": "triangle"
+								}
+							]
+						]
+					},
+					{
+						"image": "necklace_pendant_jewel_outer.png",
+						"condition": [
+							[
+								{
+									"module": "pendantType",
+									"operator": "=",
+									"value": "jewel"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "pendant inner",
+			"priority": "ABOVE_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "inner",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "necklace_pendant_heart_inner.png",
+						"condition": [
+							[
+								{
+									"module": "pendantType",
+									"operator": "=",
+									"value": "heart"
+								}
+							]
+						]
+					},
+					{
+						"image": "necklace_pendant_jewel_inner.png",
+						"condition": [
+							[
+								{
+									"module": "pendantType",
+									"operator": "=",
+									"value": "jewel"
 								}
 							]
 						]
