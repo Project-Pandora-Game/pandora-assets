@@ -31,7 +31,9 @@ DefineRoomDeviceAsset({
 						tiptoeing: 0,
 						character_rotation: 0,
 					},
-					legs: 'kneeling',
+					legs: {
+						pose: 'kneeling',
+					},
 				},
 				attributes: {
 					requires: ['!Footwear'],
