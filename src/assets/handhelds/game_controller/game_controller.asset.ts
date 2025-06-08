@@ -8,6 +8,9 @@ DefineAsset({
 		provides: [
 			'Handheld',
 		],
+		requires: [
+			'!Hand_restricting_cover',
+		],
 	},
 	poseLimits: {
 		arms: {
