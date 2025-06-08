@@ -1,7 +1,7 @@
 import { ItemInteractionType } from 'pandora-common';
 
 DefineAsset({
-	name: 'Pendant Necklace',
+	name: 'Adaptable Necklace',
 	size: 'small',
 	graphics: 'graphics.json',
 	colorization: {
