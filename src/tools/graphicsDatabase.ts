@@ -1,5 +1,6 @@
 import { Immutable } from 'immer';
 import { AssetGraphicsDefinition, AssetId, GetLogger, PointTemplate, type AssetSourceGraphicsInfo, type GraphicsDefinitionFile, type GraphicsSourceDefinitionFile, type PointTemplateSource } from 'pandora-common';
+import { InversePosingHandles } from '../bones.ts';
 import { GENERATE_AVIF } from '../config.ts';
 import { AVIF_SUFFIX } from './resources.ts';
 
@@ -59,6 +60,7 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 			assets,
 			pointTemplates,
 			imageFormats,
+			inversePosingHandles: InversePosingHandles,
 		};
 	}
 

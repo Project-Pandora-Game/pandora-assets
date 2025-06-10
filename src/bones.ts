@@ -1,6 +1,6 @@
 // TODO: Re-add `import type` after ESLint gets fixed
 import { Immutable } from 'immer';
-import { BoneDefinitionCompressed, BoneNameSchema, BoneType, CoordinatesCompressed, IsNotNullable, SCHEME_OVERRIDE } from 'pandora-common';
+import { BoneDefinitionCompressed, BoneNameSchema, BoneType, CoordinatesCompressed, IsNotNullable, SCHEME_OVERRIDE, type InversePosingHandle } from 'pandora-common';
 import { ZodIssueCode } from 'zod';
 
 const boneDefinitionImpl = {
@@ -33,6 +33,51 @@ const boneDefinitionImpl = {
 		type: 'pose',
 	},
 } as const satisfies Immutable<Record<string, BoneDefinitionCompressed>>;
+
+/** Handles for inverse kinematic posing of the character. */
+export const InversePosingHandles: Immutable<(Omit<InversePosingHandle, 'parentBone'> & { parentBone: AllBones; })[]> = [
+	{
+		parentBone: 'elbow_l',
+		style: 'move',
+		x: 875,
+		y: 434,
+	},
+	{
+		parentBone: 'elbow_r',
+		style: 'move',
+		x: 125,
+		y: 434,
+	},
+	{
+		parentBone: 'leg_l',
+		style: 'left-right',
+		x: 545,
+		y: 1250,
+		transforms: [
+			{ type: 'const-shift', value: { x: 0, y: -140 }, condition: [[{ legs: 'sitting' }]] },
+			{ type: 'const-shift', value: { x: 0, y: -300 }, condition: [[{ legs: 'kneeling' }, { view: 'front' }]] },
+			{ type: 'const-shift', value: { x: 0, y: -185 }, condition: [[{ legs: 'kneeling' }, { view: 'back' }]] },
+		],
+	},
+	{
+		parentBone: 'leg_r',
+		style: 'left-right',
+		x: 455,
+		y: 1250,
+		transforms: [
+			{ type: 'const-shift', value: { x: 0, y: -140 }, condition: [[{ legs: 'sitting' }]] },
+			{ type: 'const-shift', value: { x: 0, y: -300 }, condition: [[{ legs: 'kneeling' }, { view: 'front' }]] },
+			{ type: 'const-shift', value: { x: 0, y: -185 }, condition: [[{ legs: 'kneeling' }, { view: 'back' }]] },
+		],
+	},
+	{
+		parentBone: 'character_rotation',
+		style: 'left-right',
+		excludeFromCharacterTransforms: true,
+		x: 500,
+		y: 700,
+	},
+];
 
 type Key = keyof typeof boneDefinitionImpl;
 
