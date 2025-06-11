@@ -38,13 +38,13 @@ const boneDefinitionImpl = {
 export const InversePosingHandles: Immutable<(Omit<InversePosingHandle, 'parentBone'> & { parentBone: AllBones; })[]> = [
 	{
 		parentBone: 'elbow_l',
-		style: 'move',
+		style: 'hand-left',
 		x: 875,
 		y: 434,
 	},
 	{
 		parentBone: 'elbow_r',
-		style: 'move',
+		style: 'hand-right',
 		x: 125,
 		y: 434,
 	},
@@ -69,13 +69,6 @@ export const InversePosingHandles: Immutable<(Omit<InversePosingHandle, 'parentB
 			{ type: 'const-shift', value: { x: 0, y: -300 }, condition: [[{ legs: 'kneeling' }, { view: 'front' }]] },
 			{ type: 'const-shift', value: { x: 0, y: -185 }, condition: [[{ legs: 'kneeling' }, { view: 'back' }]] },
 		],
-	},
-	{
-		parentBone: 'character_rotation',
-		style: 'left-right',
-		excludeFromCharacterTransforms: true,
-		x: 500,
-		y: 800,
 	},
 ];
 
