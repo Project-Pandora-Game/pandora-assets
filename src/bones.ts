@@ -75,7 +75,7 @@ export const InversePosingHandles: Immutable<(Omit<InversePosingHandle, 'parentB
 		style: 'left-right',
 		excludeFromCharacterTransforms: true,
 		x: 500,
-		y: 700,
+		y: 800,
 	},
 ];
 
