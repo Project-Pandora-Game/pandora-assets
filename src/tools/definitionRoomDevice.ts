@@ -281,6 +281,14 @@ async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDef
 				definitionValid = false;
 				logger.error(`Layer #${index} links to unknown slot '${layer.slot}'`);
 			}
+		} else if (layer.type === 'text') {
+			if (def.modules?.[layer.dataModule]?.type !== 'text') {
+				definitionValid = false;
+				logger.error(`Layer #${index} links module '${layer.dataModule}', but it is not a text module`);
+			}
+			if (layer.colorizationKey != null && !colorizationKeys.has(layer.colorizationKey)) {
+				logger.warning(`Layer #${index} has colorizationKey ${layer.colorizationKey} outside of defined colorization keys [${[...colorizationKeys].join(', ')}]`);
+			}
 		} else {
 			AssertNever(layer);
 		}

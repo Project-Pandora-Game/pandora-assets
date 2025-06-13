@@ -131,11 +131,13 @@ export function ValidateTextModule<TProperties, TStaticData, TPropertiesValidati
 	_metadata: ModuleValidationMetadata<TProperties, TPropertiesValidationMetadata>,
 	moduleDefinition: ModuleConfigText<TProperties, TStaticData>,
 ): void {
-	if (!Number.isInteger(moduleDefinition.maxLength) || moduleDefinition.maxLength < 1) {
-		logger.error(`Invalid module config: ${context}.maxLength: Expected positive integer, found '${moduleDefinition.maxLength}'`);
-	}
+	if (moduleDefinition.maxLength != null) {
+		if (!Number.isInteger(moduleDefinition.maxLength) || moduleDefinition.maxLength < 1) {
+			logger.error(`Invalid module config: ${context}.maxLength: Expected positive integer, found '${moduleDefinition.maxLength}'`);
+		}
 
-	if (moduleDefinition.maxLength > LIMIT_ITEM_MODULE_TEXT_LENGTH) {
-		logger.warning(`Invalid module config: ${context}.maxLength: Length will be limited to platform maximum ${LIMIT_ITEM_MODULE_TEXT_LENGTH}`);
+		if (moduleDefinition.maxLength > LIMIT_ITEM_MODULE_TEXT_LENGTH) {
+			logger.warning(`Invalid module config: ${context}.maxLength: Length will be limited to platform maximum ${LIMIT_ITEM_MODULE_TEXT_LENGTH}`);
+		}
 	}
 }
