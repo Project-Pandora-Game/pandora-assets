@@ -25,6 +25,9 @@ export function AssetGraphicsValidate(definition: AssetSourceGraphicsDefinition,
 			case 'autoMesh':
 				AssetGraphicsValidateAutomeshLayer(layer, layerLogger, colorizationKeys);
 				break;
+			case 'text':
+				// Fully validated in build code
+				break;
 			default:
 				AssertNever(layer);
 		}

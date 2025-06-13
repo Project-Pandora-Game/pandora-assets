@@ -1,6 +1,6 @@
-import { freeze } from 'immer';
+import { freeze, type Immutable } from 'immer';
 import { cloneDeep, omit, pick } from 'lodash-es';
-import { AssetId, BodypartAssetDefinition, GetLogger } from 'pandora-common';
+import { AssetId, BodypartAssetDefinition, GetLogger, type GraphicsBuildContextAssetData } from 'pandora-common';
 import { join } from 'path';
 import { AssetDatabase } from './assetDatabase.ts';
 import { AssetSourcePath, DefaultId } from './context.ts';
@@ -110,10 +110,14 @@ async function GlobalDefineBodypartProcess(def: IntermediateBodypartAssetDefinit
 
 	// Load and verify graphics
 	if (def.graphics) {
+		const builtAssetData: Immutable<GraphicsBuildContextAssetData> = {
+			modules: asset.modules,
+			colorizationKeys: new Set(Object.keys(colorization ?? {})),
+		};
+
 		const { graphics, graphicsSource } = await LoadAssetGraphicsFile(
 			join(AssetSourcePath, def.graphics),
-			asset.modules,
-			new Set(Object.keys(colorization ?? {})),
+			builtAssetData,
 		);
 
 		GraphicsDatabase.registerAssetGraphics(id, graphics, graphicsSource);

@@ -1,6 +1,6 @@
-import { freeze } from 'immer';
+import { freeze, type Immutable } from 'immer';
 import { cloneDeep, omit, pick } from 'lodash-es';
-import { AssetId, GetLogger, PersonalAssetDefinition } from 'pandora-common';
+import { AssetId, GetLogger, PersonalAssetDefinition, type GraphicsBuildContextAssetData } from 'pandora-common';
 import { join } from 'path';
 import { AssetDatabase } from './assetDatabase.ts';
 import { AssetSourcePath, DefaultId } from './context.ts';
@@ -116,10 +116,14 @@ async function GlobalDefineAssetProcess(def: IntermediatePersonalAssetDefinition
 
 	// Load and verify graphics
 	if (def.graphics) {
+		const builtAssetData: Immutable<GraphicsBuildContextAssetData> = {
+			modules: asset.modules,
+			colorizationKeys: new Set(Object.keys(colorization ?? {})),
+		};
+
 		const { graphics, graphicsSource } = await LoadAssetGraphicsFile(
 			join(AssetSourcePath, def.graphics),
-			asset.modules,
-			new Set(Object.keys(colorization ?? {})),
+			builtAssetData,
 		);
 
 		GraphicsDatabase.registerAssetGraphics(id, graphics, graphicsSource);

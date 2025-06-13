@@ -5,19 +5,21 @@ import { isEqual } from 'lodash-es';
 import {
 	Assert,
 	AssetGraphicsDefinition,
+	AssetManager,
 	AssetSourceGraphicsDefinitionSchema,
 	GetLogger,
 	LoadAssetLayer,
 	Logger,
 	ModuleNameSchema,
 	SCHEME_OVERRIDE,
-	type AssetModuleDefinition,
 	type AssetSourceGraphicsDefinition,
 	type AssetSourceGraphicsInfo,
 	type GraphicsBuildContext,
+	type GraphicsBuildContextAssetData,
 } from 'pandora-common';
 import { relative } from 'path';
 import { z } from 'zod';
+import { boneDefinition } from '../bones.ts';
 import { IS_PRODUCTION_BUILD, OPTIMIZE_TEXTURES, SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../config.ts';
 import { GENERATED_RESOLUTIONS } from './graphicsConstants.ts';
 import { GraphicsDatabase } from './graphicsDatabase.ts';
@@ -27,9 +29,7 @@ import { WatchFile } from './watch.ts';
 
 export async function LoadAssetGraphicsFile(
 	path: string,
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	modules: Record<string, AssetModuleDefinition<unknown, any>> | undefined,
-	colorizationKeys: ReadonlySet<string>,
+	builtAssetData: Immutable<GraphicsBuildContextAssetData>,
 ): Promise<{ graphics: Immutable<AssetGraphicsDefinition>; graphicsSource: AssetSourceGraphicsInfo; }> {
 	const logger = GetLogger('GraphicsValidation').prefixMessages(`Graphics definition '${relative(SRC_DIR, path)}':\n\t`);
 
@@ -44,7 +44,7 @@ export async function LoadAssetGraphicsFile(
 	);
 
 	ModuleNameSchema[SCHEME_OVERRIDE]((module, ctx) => {
-		if (modules?.[module] == null) {
+		if (builtAssetData.modules?.[module] == null) {
 			ctx.addIssue({
 				code: z.ZodIssueCode.custom,
 				message: `Module '${module}' is not a valid module name`,
@@ -80,9 +80,9 @@ export async function LoadAssetGraphicsFile(
 
 	const graphicsSource: AssetSourceGraphicsDefinition = freeze(parseResult.data, true);
 
-	AssetGraphicsValidate(graphicsSource, logger, colorizationKeys);
+	AssetGraphicsValidate(graphicsSource, logger, builtAssetData.colorizationKeys);
 
-	const { graphics, originalImagesMap } = await LoadAssetGraphics(graphicsSource, modules, logger);
+	const { graphics, originalImagesMap } = await LoadAssetGraphics(graphicsSource, builtAssetData, logger);
 
 	return {
 		graphics,
@@ -95,8 +95,7 @@ export async function LoadAssetGraphicsFile(
 
 async function LoadAssetGraphics(
 	source: Immutable<AssetSourceGraphicsDefinition>,
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	modules: Record<string, AssetModuleDefinition<unknown, any>> | undefined,
+	builtAssetData: Immutable<GraphicsBuildContextAssetData>,
 	logger: Logger,
 ): Promise<{ graphics: Immutable<AssetGraphicsDefinition>; originalImagesMap: Record<string, string>; }> {
 	const originalImagesMap: Record<string, string> = {};
@@ -105,6 +104,9 @@ async function LoadAssetGraphics(
 		runImageBasedChecks: IS_PRODUCTION_BUILD || OPTIMIZE_TEXTURES,
 		generateOptimizedTextures: OPTIMIZE_TEXTURES,
 		generateResolutions: GENERATED_RESOLUTIONS,
+		getBones() {
+			return Array.from(AssetManager.loadBones(boneDefinition).values());
+		},
 		getPointTemplate(name) {
 			return GraphicsDatabase.getPointTemplate(name);
 		},
@@ -116,9 +118,7 @@ async function LoadAssetGraphics(
 			originalImagesMap[image] = resource.resultName;
 			return resource;
 		},
-		builtAssetData: {
-			modules,
-		},
+		builtAssetData,
 	};
 
 	const layers = (await Promise.all(source.layers.map((l) => LoadAssetLayer(l, assetLoadContext, logger)))).flat();

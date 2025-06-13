@@ -5,10 +5,12 @@ import {
 	AssetSizeMapping,
 	AssetType,
 	IsObject,
+	LIMIT_ITEM_MODULE_TEXT_LENGTH,
 	Logger,
 } from 'pandora-common';
 import { IModuleConfigLockSlot } from 'pandora-common/dist/assets/modules/lockSlot.js';
 import { IModuleConfigStorage } from 'pandora-common/dist/assets/modules/storage.js';
+import type { ModuleConfigText } from 'pandora-common/dist/assets/modules/text.js';
 import { IModuleConfigTyped } from 'pandora-common/dist/assets/modules/typed.js';
 
 interface ModuleValidationMetadata<TProperties, TPropertiesValidationMetadata> {
@@ -40,6 +42,8 @@ export function ValidateModule<TProperties, TStaticData, TPropertiesValidationMe
 		ValidateLockSlotModule(logger, context, metadata, moduleDefinition);
 	} else if (moduleDefinition.type === 'storage') {
 		ValidateStorageModule(logger, context, metadata, moduleDefinition);
+	} else if (moduleDefinition.type === 'text') {
+		ValidateTextModule(logger, context, metadata, moduleDefinition);
 	} else {
 		AssertNever(moduleDefinition);
 	}
@@ -118,5 +122,20 @@ export function ValidateStorageModule<TProperties, TStaticData, TPropertiesValid
 	const assetSize = AssetSizeMapping[metadata.baseAssetDefinition.size];
 	if (!(maxContentSize < assetSize)) {
 		logger.error(`Invalid module config: ${context}.maxAcceptedSize:\n\tSize of accepted content must be strictly smaller than the asset itself ('${moduleDefinition.maxAcceptedSize}' >= '${metadata.baseAssetDefinition.size}')`);
+	}
+}
+
+export function ValidateTextModule<TProperties, TStaticData, TPropertiesValidationMetadata>(
+	logger: Logger,
+	context: string,
+	_metadata: ModuleValidationMetadata<TProperties, TPropertiesValidationMetadata>,
+	moduleDefinition: ModuleConfigText<TProperties, TStaticData>,
+): void {
+	if (!Number.isInteger(moduleDefinition.maxLength) || moduleDefinition.maxLength < 1) {
+		logger.error(`Invalid module config: ${context}.maxLength: Expected positive integer, found '${moduleDefinition.maxLength}'`);
+	}
+
+	if (moduleDefinition.maxLength > LIMIT_ITEM_MODULE_TEXT_LENGTH) {
+		logger.warning(`Invalid module config: ${context}.maxLength: Length will be limited to platform maximum ${LIMIT_ITEM_MODULE_TEXT_LENGTH}`);
 	}
 }

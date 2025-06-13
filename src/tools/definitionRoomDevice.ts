@@ -1,6 +1,6 @@
-import { freeze } from 'immer';
+import { freeze, type Immutable } from 'immer';
 import { cloneDeep, omit, pick } from 'lodash-es';
-import { Assert, AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition, type AssetModuleDefinition, type ImageBoundingBox } from 'pandora-common';
+import { Assert, AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition, type AssetModuleDefinition, type GraphicsBuildContextAssetData, type ImageBoundingBox } from 'pandora-common';
 import { join } from 'path';
 import { OPTIMIZE_TEXTURES } from '../config.ts';
 import { AssetDatabase } from './assetDatabase.ts';
@@ -112,10 +112,14 @@ async function DefineRoomDeviceWearablePart(
 
 	// Load and verify graphics
 	if (def.graphics) {
-		const { graphics, graphicsSource } = await LoadAssetGraphicsFile(
-			join(AssetSourcePath, def.graphics),
+		const builtAssetData: Immutable<GraphicsBuildContextAssetData> = {
 			modules,
 			colorizationKeys,
+		};
+
+		const { graphics, graphicsSource } = await LoadAssetGraphicsFile(
+			join(AssetSourcePath, def.graphics),
+			builtAssetData,
 		);
 
 		GraphicsDatabase.registerAssetGraphics(id, graphics, graphicsSource);
