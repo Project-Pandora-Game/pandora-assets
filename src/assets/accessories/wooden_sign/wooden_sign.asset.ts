@@ -7,6 +7,10 @@ DefineAsset({
 			name: 'Sign',
 			default: '#FFC591',
 		},
+		text: {
+			name: 'Text',
+			default: '#222222',
+		},
 		rope: {
 			name: 'Rope',
 			default: '#DE9762',
@@ -18,6 +22,12 @@ DefineAsset({
 		provides: [
 			'Accessory',
 		],
+	},
+	modules: {
+		text: {
+			type: 'text',
+			name: 'Text',
+		},
 	},
 	chat: {
 		actionAdd: 'SOURCE_CHARACTER placed ITEM_ASSET_NAME over TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',

@@ -6,26 +6,21 @@ DefineRoomDeviceAsset({
 			name: 'Sign Post',
 			default: '#FFC591',
 		},
+		text: {
+			name: 'Text',
+			default: '#222222',
+		},
 	},
 	staticAttributes: ['Floor'],
 	preview: 'preview.png',
 	slots: {},
 	modules: {
-		size: {
-			type: 'typed',
-			name: 'Sign size',
-			staticConfig: { slotName: null },
-			variants: [
-				{
-					id: 'large',
-					name: 'Large',
-					default: true,
-				},
-				{
-					id: 'small',
-					name: 'Small',
-				},
-			],
+		text: {
+			type: 'text',
+			name: 'Text',
+			staticConfig: {
+				slotName: null,
+			},
 		},
 	},
 	pivot: {
@@ -35,50 +30,16 @@ DefineRoomDeviceAsset({
 	graphicsLayers: [
 		{
 			type: 'sprite',
-			image: '',
-			imageOverrides: [
-				{
-					image: 'sign_post.png',
-					condition: [
-						[
-							{
-								module: 'size',
-								operator: '=',
-								value: 'large',
-							},
-						],
-
-					],
-				},
-				{
-					image: 'sign_post.png@223x257',
-					condition: [
-						[
-							{
-								module: 'size',
-								operator: '=',
-								value: 'small',
-							},
-						],
-
-					],
-				},
-			],
-			offsetOverrides: [
-				{
-					offset: { x: 74, y: 170 },
-					condition: [
-						[
-							{
-								module: 'size',
-								operator: '=',
-								value: 'small',
-							},
-						],
-					],
-				},
-			],
+			image: 'sign_post.png',
 			colorizationKey: 'sign',
+		},
+		{
+			type: 'text',
+			dataModule: 'text',
+			colorizationKey: 'text',
+			fontSize: 48,
+			offset: { x: 20, y: 70 },
+			size: { width: 333, height: 150 },
 		},
 	],
 	ownership: {
