@@ -62,6 +62,21 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 		},
 	},
 	{
+		id: 'black_white_marble_tiles_05',
+		name: 'Square marble tiles',
+		image: 'bw_marble_tile_05.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://ambientcg.com/view?id=Tiles079',
+					copyrightHolder: 'ambientCG.com',
+					license: 'CC0',
+				},
+			],
+		},
+	},
+	{
 		id: 'brick_01',
 		name: 'Brown brick wall',
 		image: 'brick_01.png',
@@ -137,6 +152,21 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 		},
 	},
 	{
+		id: 'brick_06',
+		name: 'Grey bricks',
+		image: 'grey_bricks.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://ambientcg.com/view?id=Tiles029',
+					copyrightHolder: 'ambientCG.com',
+					license: 'CC0',
+				},
+			],
+		},
+	},
+	{
 		id: 'carpet_01',
 		name: 'Colorable Carpet',
 		image: 'holiday_fabric-512x512.png',
@@ -162,6 +192,51 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 					source: 'https://opengameart.org/content/seamless-assorted-textures',
 					copyrightHolder: 'BMacZero',
 					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'carpet_03',
+		name: 'Fluffy colorable carpet',
+		image: 'Carpet_bw.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://ambientcg.com/view?id=Carpet012',
+					copyrightHolder: 'ambientCG.com',
+					license: 'CC0',
+				},
+			],
+		},
+	},
+	{
+		id: 'dark_cloth',
+		name: 'Dark cloth',
+		image: 'dark-cloth-512x512.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.manytextures.com/texture/22/dark-cloth/',
+					copyrightHolder: 'ManyTextures.com',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'dark_leather',
+		name: 'Dark leather',
+		image: 'black-leather-256x256.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.manytextures.com/texture/38/black-leather/',
+					copyrightHolder: 'ManyTextures.com',
+					license: 'CC BY',
 				},
 			],
 		},
@@ -227,6 +302,97 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 		},
 	},
 	{
+		id: 'dirt_05',
+		name: 'Sand floor',
+		image: 'smooth-sand-dunes-512x512.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.manytextures.com/texture/43/smooth-sand-dunes/',
+					copyrightHolder: 'ManyTextures.com',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'plants_01',
+		name: 'Ivy wall',
+		image: 'ivy-caper-leaves-512x512.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.manytextures.com/texture/114/ivy-caper-leaves/',
+					copyrightHolder: 'ManyTextures.com',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+
+	{
+		id: 'water_01',
+		name: 'Sea water',
+		image: 'sea-water-512x512.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.manytextures.com/texture/23/sea-water/',
+					copyrightHolder: 'ManyTextures.com',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'snow_01',
+		name: 'Ice surface',
+		image: 'ice-snow-256x256.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.manytextures.com/texture/113/ice-snow/',
+					copyrightHolder: 'ManyTextures.com',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'snow_02',
+		name: 'Ice and snow ground',
+		image: 'ice-and-snow-ground-512x512.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.manytextures.com/texture/254/ice-and-snow-ground/',
+					copyrightHolder: 'ManyTextures.com',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'snow_03',
+		name: 'Ice wall',
+		image: 'ice-frost-512x512.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.manytextures.com/texture/255/ice-frost/',
+					copyrightHolder: 'ManyTextures.com',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
 		id: 'wood_01',
 		name: 'Dark wood pattern',
 		image: 'wood_01.png',
@@ -282,6 +448,51 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 					source: 'https://opengameart.org/content/photorealistic-texture-pack-1?page=5',
 					copyrightHolder: 'Screaming Brain Studios',
 					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'metal_01',
+		name: 'Metal surface',
+		image: 'metal-garage-door-512x512.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.manytextures.com/texture/73/metal-garage-door/',
+					copyrightHolder: 'ManyTextures.com',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'metal_02',
+		name: 'Metal stripes',
+		image: 'plastic-stripes-256x256.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.manytextures.com/texture/165/plastic-stripes/',
+					copyrightHolder: 'ManyTextures.com',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'stone_00',
+		name: 'Rock surface',
+		image: 'rock-wall-512x512.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.manytextures.com/texture/69/rock-wall/',
+					copyrightHolder: 'ManyTextures.com',
+					license: 'CC BY',
 				},
 			],
 		},
@@ -452,6 +663,21 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 		},
 	},
 	{
+		id: 'mosaic_05',
+		name: 'Irregular mosaic tile',
+		image: 'irregular-stone-ground-256x256.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.manytextures.com/texture/82/irregular-stone-ground/',
+					copyrightHolder: 'ManyTextures.com',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
 		id: 'concrete_grey_01',
 		name: 'Grey concrete 1',
 		image: 'mat_concrete_gray_01-256x256.png',
@@ -492,6 +718,21 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 					source: 'https://opengameart.org/content/base-material-texture-pack?page=3',
 					copyrightHolder: 'Screaming Brain Studios',
 					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'concrete_grey_04',
+		name: 'Grey concrete with mosaic',
+		image: 'concrete-wall-decoration-256x256.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.manytextures.com/texture/211/concrete-wall-decoration/',
+					copyrightHolder: 'ManyTextures.com',
+					license: 'CC BY',
 				},
 			],
 		},
@@ -597,6 +838,66 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 					source: 'https://opengameart.org/content/100-seamless-textures',
 					copyrightHolder: 'Mitch Featherston',
 					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'wallpaper_06',
+		name: 'Painted wallpaper',
+		image: 'painted_wall.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://ambientcg.com/view?id=Paint004',
+					copyrightHolder: 'ambientCG.com',
+					license: 'CC0',
+				},
+			],
+		},
+	},
+	{
+		id: 'wallpaper_07',
+		name: 'Crumpled paper',
+		image: 'crumpled-paper-256x256.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.manytextures.com/texture/111/crumpled-paper/',
+					copyrightHolder: 'ManyTextures.com',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'wallpaper_08',
+		name: 'Rhombus pattern wallpaper',
+		image: 'abstract_128x128-24.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://opengameart.org/content/abstract-texture-pack-abstract128x128-24png',
+					copyrightHolder: 'Screaming Brain Studios',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'cork_01',
+		name: 'Cork',
+		image: 'cork_01.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://ambientcg.com/view?id=Cork003',
+					copyrightHolder: 'ambientCG.com',
+					license: 'CC0',
 				},
 			],
 		},
