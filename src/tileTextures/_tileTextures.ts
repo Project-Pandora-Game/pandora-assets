@@ -500,7 +500,7 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 	{
 		id: 'metal_03',
 		name: 'Metal fence',
-		image: 'fence.png',
+		image: 'Fence.png',
 		ownership: {
 			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 			licensing: [
