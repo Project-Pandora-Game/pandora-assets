@@ -212,6 +212,21 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 		},
 	},
 	{
+		id: 'fabric_01',
+		name: 'Cushioned fabric',
+		image: 'fabric_chester.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://cc0-textures.com/t/st-white-fabric-3',
+					copyrightHolder: 'cc0-textures.com',
+					license: 'CC0',
+				},
+			],
+		},
+	},
+	{
 		id: 'dark_cloth',
 		name: 'Dark cloth',
 		image: 'dark-cloth-512x512.png',
@@ -478,6 +493,21 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 					source: 'https://www.manytextures.com/texture/165/plastic-stripes/',
 					copyrightHolder: 'ManyTextures.com',
 					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'metal_03',
+		name: 'Metal fence',
+		image: 'fence.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://cc0-textures.com/t/cc0t-fence-007-a',
+					copyrightHolder: 'cc0-textures.com',
+					license: 'CC0',
 				},
 			],
 		},
@@ -882,6 +912,126 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 				{
 					source: 'https://opengameart.org/content/abstract-texture-pack-abstract128x128-24png',
 					copyrightHolder: 'Screaming Brain Studios',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'wallpaper_09',
+		name: 'Aristocratic wallpaper (dark)',
+		image: 'pattern_wallpaper_01.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://cc0-textures.com/t/st-wallpaper-9',
+					copyrightHolder: 'cc0-textures.com',
+					license: 'CC0',
+				},
+			],
+		},
+	},
+	{
+		id: 'wallpaper_10',
+		name: 'Aristocratic wallpaper (light)',
+		image: 'pattern_wallpaper_01_light.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://cc0-textures.com/t/st-wallpaper-9',
+					copyrightHolder: 'cc0-textures.com',
+					license: 'CC0',
+				},
+			],
+		},
+	},
+	{
+		id: 'wallpaper_11',
+		name: 'Classic wallpaper (dark)',
+		image: 'classic_wallpaper.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://cc0-textures.com/t/st-wallpaper-43',
+					copyrightHolder: 'cc0-textures.com',
+					license: 'CC0',
+				},
+			],
+		},
+	},
+	{
+		id: 'wallpaper_12',
+		name: 'Classic wallpaper (light)',
+		image: 'classic_wallpaper_light.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://cc0-textures.com/t/st-wallpaper-43',
+					copyrightHolder: 'cc0-textures.com',
+					license: 'CC0',
+				},
+			],
+		},
+	},
+	{
+		id: 'wallpaper_13',
+		name: 'Royal wallpaper',
+		image: 'royal_wallpaper.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://cc0-textures.com/t/st-wallpaper-textured-wall-28',
+					copyrightHolder: 'cc0-textures.com',
+					license: 'CC0',
+				},
+			],
+		},
+	},
+	{
+		id: 'wallpaper_14',
+		name: 'Historic flower wallpaper',
+		image: 'flowers_wallpaper_3.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://github.com/rec0de/papertiles',
+					copyrightHolder: 'rec0de',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'wallpaper_15',
+		name: 'Old Flower wallpaper',
+		image: 'flowers_wallpaper_2.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://github.com/rec0de/papertiles',
+					copyrightHolder: 'rec0de',
+					license: 'Public Domain',
+				},
+			],
+		},
+	},
+	{
+		id: 'wallpaper_16',
+		name: 'Plant pattern wallpaper',
+		image: 'flower_wallpaper.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://github.com/rec0de/papertiles',
+					copyrightHolder: 'rec0de',
 					license: 'Public Domain',
 				},
 			],
