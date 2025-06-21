@@ -35,7 +35,7 @@
 	"dependencies": {
 		"delaunator": "5.0.1",
 		"dotenv": "16.5.0",
-		"express": "4.21.2",
+		"express": "5.1.0",
 		"ignore": "7.0.5",
 		"immer": "10.1.1",
 		"json-diff": "1.0.6",
@@ -51,7 +51,7 @@
 		"@jest/globals": "29.7.0",
 		"@stylistic/eslint-plugin": "4.4.1",
 		"@types/delaunator": "5.0.3",
-		"@types/express": "4.17.23",
+		"@types/express": "5.0.3",
 		"@types/json-diff": "1.0.3",
 		"@types/lodash-es": "4.17.12",
 		"@types/node": "22.15.32",
