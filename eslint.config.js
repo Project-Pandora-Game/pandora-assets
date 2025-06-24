@@ -105,12 +105,10 @@ export default tsEslint.config(
 				'warn',
 				'tab',
 				{
-					'SwitchCase': 1,
-					'ignoredNodes': [
+					SwitchCase: 1,
+					flatTernaryExpressions: true,
+					ignoredNodes: [
 						'ConditionalExpression',
-						'PropertyDefinition[decorators]',
-						'TSTypeParameterInstantiation',
-						'TSUnionType',
 					],
 				},
 			],

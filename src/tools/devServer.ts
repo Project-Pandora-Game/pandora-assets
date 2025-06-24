@@ -34,7 +34,6 @@ export function StartHttpServer(): Promise<void> {
 
 	expressApp.use(function (req, res, next) {
 		res.header('Access-Control-Allow-Origin', req.get('Origin') || '*');
-		res.header('Access-Control-Allow-Credentials', 'true');
 		res.header('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE');
 		res.header('Access-Control-Expose-Headers', 'Content-Length');
 		res.header('Access-Control-Allow-Headers', 'Accept, Authorization, Content-Type, X-Requested-With, Range');
@@ -43,7 +42,8 @@ export function StartHttpServer(): Promise<void> {
 		res.header('Cache-Control', 'no-store');
 
 		if (req.method === 'OPTIONS') {
-			return res.sendStatus(200);
+			res.sendStatus(200);
+			return;
 		} else {
 			return next();
 		}
@@ -72,12 +72,24 @@ export function StartHttpServer(): Promise<void> {
 		server = new HttpsServer({
 			cert: certData,
 			key: keyData,
-		}, expressApp);
+		}, (req, res) => {
+			expressApp(req, res);
+		});
 	} else {
-		server = new HttpServer(expressApp);
+		server = new HttpServer((req, res) => {
+			expressApp(req, res);
+		});
 	}
 	// Host assets
 	expressApp.use('/assets', AssetsServe());
+
+	// Error handling
+	const expressErrorHandler: express.ErrorRequestHandler = (err: unknown, req, res, _next): void => {
+		logger.error(`Error during handling of '${req.method} ${req.url}':\n`, err);
+		res.sendStatus(500);
+	};
+	expressApp.use(expressErrorHandler);
+
 	// Start listening
 	return new Promise((resolve, reject) => {
 		// Catch error during port open
