@@ -11,7 +11,8 @@
 	"pnpm": {
 		"onlyBuiltDependencies": [
 			"pandora-common",
-			"sharp"
+			"sharp",
+			"unrs-resolver"
 		]
 	},
 	"type": "module",
