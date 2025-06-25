@@ -1,4 +1,3 @@
-
 DefineRoomDeviceAsset({
 	name: 'Wooden Chair',
 	size: 'huge',
