@@ -4,7 +4,7 @@ DefineAsset({
 	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
-		cuff: {
+		cuffs: {
 			name: 'Cuff',
 			default: '#FFFFFF',
 		},
@@ -18,118 +18,140 @@ DefineAsset({
 			'Wrist_cuffs',
 		],
 	},
+	effects: {
+		blockHands: true,
+	},
 	modules: {
 		cuffState: {
 			type: 'typed',
 			name: 'Cuff states',
 			variants: [
 				{
-					id: 'unchained',
-					name: 'No Chain',
+					id: 'front_low',
+					name: 'In front low',
 					default: true,
-				},
-				{
-					id: 'chained_front',
-					name: 'Chained in front',
 					properties: {
 						poseLimits: {
-							options: [
-								{
-									arms: {
-										position: 'front',
-										rotation: 'down',
-									},
-									bones: {
-										arm_r: 74,
-										arm_l: 74,
-										elbow_r: 43,
-										elbow_l: 43,
-									},
-								},
-								{
-									arms: {
-										rotation: 'up',
-									},
-									bones: {
-										arm_r: -74,
-										arm_l: -74,
-										elbow_r: -46,
-										elbow_l: -47,
-									},
-									options: [
-										{ arms: { position: 'front_above_hair' } },
-										{ arms: { position: 'front' } },
-										{ arms: { position: 'back' } },
-										{ arms: { position: 'back_below_hair' } },
-									],
-								},
-							],
-						},
-						stateFlags: {
-							provides: ['chain'],
-						},
-					},
-				},
-				{
-					id: 'chained_back',
-					name: 'Chained behind',
-					properties: {
-						poseLimits: {
-							options: [
-								{
-									arms: {
-										rotation: 'down',
-									},
-									bones: {
-										arm_r: 74,
-										arm_l: 74,
-										elbow_r: 43,
-										elbow_l: 43,
-									},
-									options: [
-										{ arms: { position: 'back' } },
-										{ arms: { position: 'back_below_hair' } },
-									],
-								},
-								{
-									bones: {
-										arm_r: 104,
-										arm_l: 104,
-										elbow_r: -4,
-										elbow_l: -4,
-									},
-									options: [
-										{ arms: { position: 'back' } },
-										{ arms: { position: 'back_below_hair' } },
-									],
-								},
-							],
-						},
-						stateFlags: {
-							provides: ['chain'],
-						},
-					},
-				},
-				{
-					id: 'reverse_prayer',
-					name: 'Reverse prayer',
-					properties: {
-						effects: {
-							blockHands: true,
-						},
-						poseLimits: {
-							arms: {
-								position: 'back',
-							},
 							bones: {
-								arm_r: 100,
-								arm_l: 100,
-								elbow_r: 130,
-								elbow_l: 130,
+								arm_r: 88,
+								arm_l: 88,
+								elbow_r: 20,
+								elbow_l: 20,
 							},
+							options: [
+								{ arms: { position: 'front' } },
+								{ arms: { position: 'front_above_hair' } },
+							],
 						},
-						stateFlags: {
-							provides: ['chain'],
+					},
+				},
+				{
+					id: 'front_up',
+					name: 'In front up',
+					properties: {
+						poseLimits: {
+							bones: {
+								arm_r: 85,
+								arm_l: 85,
+								elbow_r: 164,
+								elbow_l: 164,
+							},
+							options: [
+								{ arms: { position: 'front' } },
+								{ arms: { position: 'front_above_hair' } },
+							],
+						},
+					},
+				},
+				{
+					id: 'back_low',
+					name: 'Cuffed behind, low',
+					properties: {
+						poseLimits: {
+							bones: {
+								arm_r: 88,
+								arm_l: 88,
+								elbow_r: 20,
+								elbow_l: 20,
+							},
+							options: [
+								{ arms: { position: 'back' } },
+								{ arms: { position: 'back_below_hair' } },
+							],
+						},
+					},
+				},
+				{
+					id: 'back_right',
+					name: 'Cuffed behind, right hand up',
+					properties: {
+						poseLimits: {
+							bones: {
+								arm_l: 96,
+								arm_r: 37,
+								elbow_l: 56,
+								elbow_r: 124,
+							},
+							options: [
+								{ arms: { position: 'back' } },
+								{ arms: { position: 'back_below_hair' } },
+							],
+						},
+					},
+				},
+				{
+					id: 'back_left',
+					name: 'Cuffed behind, left hand up',
+					properties: {
+						poseLimits: {
+							bones: {
+								arm_l: 37,
+								arm_r: 96,
+								elbow_l: 124,
+								elbow_r: 56,
+							},
+							options: [
+								{ arms: { position: 'back' } },
+								{ arms: { position: 'back_below_hair' } },
+							],
+						},
+					},
+				},
+				{
+					id: 'back_up',
+					name: 'Cuffed behind, up',
+					properties: {
+						poseLimits: {
+							bones: {
+								arm_r: 85,
+								arm_l: 85,
+								elbow_r: 164,
+								elbow_l: 164,
+							},
+							options: [
+								{ arms: { position: 'back' } },
+								{ arms: { position: 'back_below_hair' } },
+							],
+						},
+					},
+				},
+				{
+					id: 'above_head',
+					name: 'Above head',
+					properties: {
+						poseLimits: {
+							bones: {
+								arm_r: -84,
+								arm_l: -84,
+								elbow_r: -30,
+								elbow_l: -30,
+							},
+							options: [
+								{ arms: { position: 'front' } },
+								{ arms: { position: 'front_above_hair' } },
+								{ arms: { position: 'back' } },
+								{ arms: { position: 'back_below_hair' } },
+							],
 						},
 					},
 				},
@@ -142,13 +164,13 @@ DefineAsset({
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
-		credits: ['SandrinePDR'],
+		credits: ['taja'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
 				source: 'Self-Made',
-				copyrightHolder: 'ClaudiaMia',
+				copyrightHolder: 'taja',
 				editedBy: 'SandrinePDR',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
