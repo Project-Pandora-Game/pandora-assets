@@ -12,8 +12,8 @@ importers:
         specifier: 5.0.1
         version: 5.0.1
       dotenv:
-        specifier: 16.6.1
-        version: 16.6.1
+        specifier: 17.0.0
+        version: 17.0.0
       express:
         specifier: 5.1.0
         version: 5.1.0
@@ -1171,8 +1171,8 @@ packages:
     resolution: {integrity: sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==}
     engines: {node: '>=0.10.0'}
 
-  dotenv@16.6.1:
-    resolution: {integrity: sha512-uBq4egWHTcTt33a72vpSG0z3HnPuIl6NqYcTrKEg2azoEyl2hpW0zqlxysq2pK9HlDIHyHyakeYaYnSAwd8bow==}
+  dotenv@17.0.0:
+    resolution: {integrity: sha512-A0BJ5lrpJVSfnMMXjmeO0xUnoxqsBHWCoqqTnGwGYVdnctqXXUEhJOO7LxmgxJon9tEZFGpe0xPRX0h2v3AANQ==}
     engines: {node: '>=12'}
 
   dreamopt@0.8.0:
@@ -3943,7 +3943,7 @@ snapshots:
     dependencies:
       esutils: 2.0.3
 
-  dotenv@16.6.1: {}
+  dotenv@17.0.0: {}
 
   dreamopt@0.8.0:
     dependencies:
