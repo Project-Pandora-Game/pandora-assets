@@ -62,6 +62,34 @@
 					"mirror": 1
 				}
 			]
+		},
+		"aboveLegs": {
+			"name": "Above legs (mirrored)",
+			"parts": [
+				{
+					"id": "legs",
+					"priority": "ABOVE_LEG_LEFT",
+					"pointType": [
+						"static_l",
+						"static"
+					],
+					"mirror": 1
+				}
+			]
+		},
+		"belowLegs": {
+			"name": "Below legs (mirrored)",
+			"parts": [
+				{
+					"id": "legs",
+					"priority": "BELOW_LEG_LEFT",
+					"pointType": [
+						"static_l",
+						"static"
+					],
+					"mirror": 1
+				}
+			]
 		}
 	},
 	"points": [
