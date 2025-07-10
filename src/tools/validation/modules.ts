@@ -4,7 +4,6 @@ import {
 	AssetModuleDefinition,
 	AssetSizeMapping,
 	AssetType,
-	IsObject,
 	LIMIT_ITEM_MODULE_TEXT_LENGTH,
 	Logger,
 } from 'pandora-common';
@@ -80,16 +79,6 @@ export function ValidateTypedModule<TProperties, TStaticData, TPropertiesValidat
 
 		if (variant.properties !== undefined) {
 			metadata.validateProperties(logger, `${variantCtx}.properties`, metadata.propertiesValidationMetadata, variant.properties);
-		}
-
-		if (IsObject(variant.switchMessage)) {
-			for (const k of Object.keys(variant.switchMessage)) {
-				if (k === '_')
-					continue;
-				if (!seenIds.has(k)) {
-					logger.warning(`Invalid module config:\n\t${variantCtx}.switchMessage: Unknown variant '${k}'`);
-				}
-			}
 		}
 	}
 }

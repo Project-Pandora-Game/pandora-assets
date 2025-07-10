@@ -34,7 +34,6 @@ DefineAsset({
 				{
 					id: 'chained_collar',
 					name: 'Wrists chained to a collar',
-					switchMessage: 'SOURCE_CHARACTER connected the cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE collar with short chains.',
 					properties: {
 						attributes: {
 							requires: [
@@ -63,7 +62,6 @@ DefineAsset({
 				{
 					id: 'reverse_prayer',
 					name: 'Reverse prayer',
-					switchMessage: 'SOURCE_CHARACTER chains the cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE collar in a strict reverse prayer position.',
 					properties: {
 						attributes: {
 							requires: [
@@ -92,7 +90,6 @@ DefineAsset({
 				{
 					id: 'beltChain',
 					name: 'Belt Chains',
-					switchMessage: 'SOURCE_CHARACTER connected the cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE belt with short chains.',
 					properties: {
 						poseLimits: {
 							arms: {
@@ -120,7 +117,6 @@ DefineAsset({
 				{
 					id: 'armbinderChain',
 					name: 'Kneeling Chains',
-					switchMessage: 'SOURCE_CHARACTER connected the cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE armbinder with short chains.',
 					properties: {
 						poseLimits: {
 							legs: {
@@ -146,7 +142,6 @@ DefineAsset({
 				{
 					id: 'wristToAnkles',
 					name: 'Wrists chained to ankles',
-					switchMessage: 'SOURCE_CHARACTER chained the wrist cuffs to TARGET_CHARACTER_DYNAMIC_POSSESSIVE ankles with short chains.',
 					properties: {
 						poseLimits: {
 							arms: {

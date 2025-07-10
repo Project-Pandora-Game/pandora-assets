@@ -42,12 +42,10 @@ DefineAsset({
 					id: 'none',
 					name: 'No inlays',
 					default: true,
-					switchMessage: 'SOURCE_CHARACTER removed the insoles in TARGET_CHARACTER_DYNAMIC_POSSESSIVE fluffy shoes.',
 				},
 				{
 					id: 'light',
 					name: 'Insoles preventing standing',
-					switchMessage: 'SOURCE_CHARACTER put uncomfortable insoles into TARGET_CHARACTER_DYNAMIC_POSSESSIVE fluffy shoes.',
 					properties: {
 						poseLimits: {
 							options: [
@@ -68,7 +66,6 @@ DefineAsset({
 				{
 					id: 'strict',
 					name: 'Stricter insoles preventing standing and sitting',
-					switchMessage: 'SOURCE_CHARACTER put very uncomfortable insoles into TARGET_CHARACTER_DYNAMIC_POSSESSIVE fluffy shoes.',
 					properties: {
 						poseLimits: {
 							options: [
