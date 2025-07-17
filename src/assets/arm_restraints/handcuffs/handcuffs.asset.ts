@@ -27,110 +27,94 @@ DefineAsset({
 			name: 'Cuff states',
 			variants: [
 				{
-					id: 'front_low',
-					name: 'In front low',
+					id: 'front',
+					name: 'Cuffed in front',
 					default: true,
 					properties: {
 						poseLimits: {
-							bones: {
-								arm_r: 88,
-								arm_l: 88,
-								elbow_r: 20,
-								elbow_l: 20,
-							},
 							options: [
-								{ arms: { position: 'front' } },
-								{ arms: { position: 'front_above_hair' } },
+								{
+									bones: {
+										arm_r: 88,
+										arm_l: 88,
+										elbow_r: 20,
+										elbow_l: 20,
+									},
+									options: [
+										{ arms: { position: 'front' } },
+										{ arms: { position: 'front_above_hair' } },
+									],
+								},
+								{
+									bones: {
+										arm_r: 85,
+										arm_l: 85,
+										elbow_r: 164,
+										elbow_l: 164,
+									},
+									options: [
+										{ arms: { position: 'front' } },
+										{ arms: { position: 'front_above_hair' } },
+									],
+								},
 							],
 						},
 					},
 				},
 				{
-					id: 'front_up',
-					name: 'In front up',
+					id: 'back',
+					name: 'Cuffed behind',
 					properties: {
 						poseLimits: {
-							bones: {
-								arm_r: 85,
-								arm_l: 85,
-								elbow_r: 164,
-								elbow_l: 164,
-							},
 							options: [
-								{ arms: { position: 'front' } },
-								{ arms: { position: 'front_above_hair' } },
-							],
-						},
-					},
-				},
-				{
-					id: 'back_low',
-					name: 'Cuffed behind, low',
-					properties: {
-						poseLimits: {
-							bones: {
-								arm_r: 88,
-								arm_l: 88,
-								elbow_r: 20,
-								elbow_l: 20,
-							},
-							options: [
-								{ arms: { position: 'back' } },
-								{ arms: { position: 'back_below_hair' } },
-							],
-						},
-					},
-				},
-				{
-					id: 'back_right',
-					name: 'Cuffed behind, right hand up',
-					properties: {
-						poseLimits: {
-							bones: {
-								arm_l: 96,
-								arm_r: 37,
-								elbow_l: 56,
-								elbow_r: 124,
-							},
-							options: [
-								{ arms: { position: 'back' } },
-								{ arms: { position: 'back_below_hair' } },
-							],
-						},
-					},
-				},
-				{
-					id: 'back_left',
-					name: 'Cuffed behind, left hand up',
-					properties: {
-						poseLimits: {
-							bones: {
-								arm_l: 37,
-								arm_r: 96,
-								elbow_l: 124,
-								elbow_r: 56,
-							},
-							options: [
-								{ arms: { position: 'back' } },
-								{ arms: { position: 'back_below_hair' } },
-							],
-						},
-					},
-				},
-				{
-					id: 'back_up',
-					name: 'Cuffed behind, up',
-					properties: {
-						poseLimits: {
-							bones: {
-								arm_r: 85,
-								arm_l: 85,
-								elbow_r: 164,
-								elbow_l: 164,
-							},
-							options: [
-								{ arms: { position: 'back' } },
-								{ arms: { position: 'back_below_hair' } },
+								{ // Down
+									bones: {
+										arm_r: 88,
+										arm_l: 88,
+										elbow_r: 20,
+										elbow_l: 20,
+									},
+									options: [
+										{ arms: { position: 'back' } },
+										{ arms: { position: 'back_below_hair' } },
+									],
+								},
+								{ // left up
+									bones: {
+										arm_l: 96,
+										arm_r: 37,
+										elbow_l: 56,
+										elbow_r: 124,
+									},
+									options: [
+										{ arms: { position: 'back' } },
+										{ arms: { position: 'back_below_hair' } },
+									],
+								},
+								{ // right up
+									bones: {
+										arm_l: 37,
+										arm_r: 96,
+										elbow_l: 124,
+										elbow_r: 56,
+									},
+									options: [
+										{ arms: { position: 'back' } },
+										{ arms: { position: 'back_below_hair' } },
+									],
+								},
+								{ // reverse prayer
+									bones: {
+										arm_r: 85,
+										arm_l: 85,
+										elbow_r: 164,
+										elbow_l: 164,
+									},
+									options: [
+										{ arms: { position: 'back' } },
+										{ arms: { position: 'back_below_hair' } },
+									],
+								},
 							],
 						},
 					},

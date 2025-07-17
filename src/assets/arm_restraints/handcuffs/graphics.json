@@ -22,7 +22,12 @@
 								{
 									"module": "cuffState",
 									"operator": "=",
-									"value": "front_low"
+									"value": "front"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": "<",
+									"value": 162
 								},
 								{
 									"view": "front"
@@ -37,7 +42,12 @@
 								{
 									"module": "cuffState",
 									"operator": "=",
-									"value": "front_up"
+									"value": "front"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": ">=",
+									"value": 162
 								},
 								{
 									"view": "front"
@@ -52,7 +62,17 @@
 								{
 									"module": "cuffState",
 									"operator": "=",
-									"value": "back_right"
+									"value": "back"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": ">",
+									"value": 20
+								},
+								{
+									"bone": "elbow_l",
+									"operator": "<",
+									"value": 111
 								},
 								{
 									"view": "front"
@@ -67,7 +87,17 @@
 								{
 									"module": "cuffState",
 									"operator": "=",
-									"value": "back_left"
+									"value": "back"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": ">",
+									"value": 115
+								},
+								{
+									"bone": "elbow_l",
+									"operator": "<",
+									"value": 164
 								},
 								{
 									"view": "front"
@@ -99,7 +129,129 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "cuff front",
+			"name": "cuff front background",
+			"priority": "BELOW_ARM_LEFT",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "cuffs",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "handcuffs_front_middle_down_bg.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "front"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": "<",
+									"value": 162
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "handcuffs_front_middle_up_bg.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "front"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": ">=",
+									"value": 162
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "handcuffs_front_right_bg.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "back"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": ">",
+									"value": 20
+								},
+								{
+									"bone": "elbow_l",
+									"operator": "<",
+									"value": 111
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "handcuffs_front_left_bg.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "back"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": ">",
+									"value": 115
+								},
+								{
+									"bone": "elbow_l",
+									"operator": "<",
+									"value": 164
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "handcuffs_front_middle_high_bg.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "above_head"
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "cuff back",
 			"priority": "BACKGROUND",
 			"points": "static",
 			"mirror": 0,
@@ -114,7 +266,12 @@
 								{
 									"module": "cuffState",
 									"operator": "=",
-									"value": "back_low"
+									"value": "back"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": "<=",
+									"value": 20
 								},
 								{
 									"view": "back"
@@ -129,7 +286,12 @@
 								{
 									"module": "cuffState",
 									"operator": "=",
-									"value": "back_up"
+									"value": "back"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": ">=",
+									"value": 160
 								},
 								{
 									"view": "back"
@@ -144,7 +306,17 @@
 								{
 									"module": "cuffState",
 									"operator": "=",
-									"value": "back_right"
+									"value": "back"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": ">",
+									"value": 20
+								},
+								{
+									"bone": "elbow_l",
+									"operator": "<",
+									"value": 115
 								},
 								{
 									"view": "back"
@@ -159,7 +331,17 @@
 								{
 									"module": "cuffState",
 									"operator": "=",
-									"value": "back_left"
+									"value": "back"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": ">=",
+									"value": 115
+								},
+								{
+									"bone": "elbow_l",
+									"operator": "<",
+									"value": 162
 								},
 								{
 									"view": "back"
@@ -169,6 +351,128 @@
 					},
 					{
 						"image": "handcuffs_back_middle_high.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "above_head"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "cuff back background",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "cuffs",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "handcuffs_back_middle_down_bg.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "back"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": "<=",
+									"value": 20
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					},
+					{
+						"image": "handcuffs_back_middle_up_bg.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "back"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": ">=",
+									"value": 162
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					},
+					{
+						"image": "handcuffs_back_left_bg.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "back"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": ">",
+									"value": 20
+								},
+								{
+									"bone": "elbow_l",
+									"operator": "<",
+									"value": 115
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					},
+					{
+						"image": "handcuffs_back_right_bg.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "back"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": ">",
+									"value": 115
+								},
+								{
+									"bone": "elbow_l",
+									"operator": "<",
+									"value": 164
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					},
+					{
+						"image": "handcuffs_back_middle_high_bg.png",
 						"condition": [
 							[
 								{
