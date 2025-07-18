@@ -32,6 +32,8 @@ DefineAsset({
 					default: true,
 					properties: {
 						poseLimits: {
+							arms: { position: 'front' },
+							armsOrder: { upper: 'right' },
 							options: [
 								{
 									bones: {
@@ -40,10 +42,6 @@ DefineAsset({
 										elbow_r: 20,
 										elbow_l: 20,
 									},
-									options: [
-										{ arms: { position: 'front' } },
-										{ arms: { position: 'front_above_hair' } },
-									],
 								},
 								{
 									bones: {
@@ -52,10 +50,14 @@ DefineAsset({
 										elbow_r: 164,
 										elbow_l: 164,
 									},
-									options: [
-										{ arms: { position: 'front' } },
-										{ arms: { position: 'front_above_hair' } },
-									],
+								},
+								{
+									bones: {
+										arm_r: -84,
+										arm_l: -84,
+										elbow_r: -30,
+										elbow_l: -30,
+									},
 								},
 							],
 						},
@@ -66,6 +68,8 @@ DefineAsset({
 					name: 'Cuffed behind',
 					properties: {
 						poseLimits: {
+							arms: { position: 'back' },
+							armsOrder: { upper: 'right' },
 							options: [
 								{ // Down
 									bones: {
@@ -74,10 +78,6 @@ DefineAsset({
 										elbow_r: 20,
 										elbow_l: 20,
 									},
-									options: [
-										{ arms: { position: 'back' } },
-										{ arms: { position: 'back_below_hair' } },
-									],
 								},
 								{ // left up
 									bones: {
@@ -86,10 +86,6 @@ DefineAsset({
 										elbow_l: 56,
 										elbow_r: 124,
 									},
-									options: [
-										{ arms: { position: 'back' } },
-										{ arms: { position: 'back_below_hair' } },
-									],
 								},
 								{ // right up
 									bones: {
@@ -98,10 +94,6 @@ DefineAsset({
 										elbow_l: 124,
 										elbow_r: 56,
 									},
-									options: [
-										{ arms: { position: 'back' } },
-										{ arms: { position: 'back_below_hair' } },
-									],
 								},
 								{ // reverse prayer
 									bones: {
@@ -110,31 +102,7 @@ DefineAsset({
 										elbow_r: 164,
 										elbow_l: 164,
 									},
-									options: [
-										{ arms: { position: 'back' } },
-										{ arms: { position: 'back_below_hair' } },
-									],
 								},
-							],
-						},
-					},
-				},
-				{
-					id: 'above_head',
-					name: 'Above head',
-					properties: {
-						poseLimits: {
-							bones: {
-								arm_r: -84,
-								arm_l: -84,
-								elbow_r: -30,
-								elbow_l: -30,
-							},
-							options: [
-								{ arms: { position: 'front' } },
-								{ arms: { position: 'front_above_hair' } },
-								{ arms: { position: 'back' } },
-								{ arms: { position: 'back_below_hair' } },
 							],
 						},
 					},

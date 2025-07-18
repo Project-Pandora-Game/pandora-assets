@@ -30,6 +30,11 @@
 									"value": 162
 								},
 								{
+									"bone": "elbow_l",
+									"operator": ">=",
+									"value": -16
+								},
+								{
 									"view": "front"
 								}
 							]
@@ -112,7 +117,12 @@
 								{
 									"module": "cuffState",
 									"operator": "=",
-									"value": "above_head"
+									"value": "front"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": "<",
+									"value": -16
 								},
 								{
 									"view": "front"
@@ -150,6 +160,11 @@
 									"bone": "elbow_l",
 									"operator": "<",
 									"value": 162
+								},
+								{
+									"bone": "elbow_l",
+									"operator": ">=",
+									"value": -16
 								},
 								{
 									"view": "front"
@@ -234,7 +249,12 @@
 								{
 									"module": "cuffState",
 									"operator": "=",
-									"value": "above_head"
+									"value": "front"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": "<",
+									"value": -16
 								},
 								{
 									"view": "front"
@@ -356,7 +376,12 @@
 								{
 									"module": "cuffState",
 									"operator": "=",
-									"value": "above_head"
+									"value": "front"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": "<",
+									"value": -16
 								},
 								{
 									"view": "back"
@@ -470,7 +495,24 @@
 								}
 							]
 						]
-					},
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "cuff back background above head",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "cuffs",
+			"image": {
+				"image": "",
+				"overrides": [
 					{
 						"image": "handcuffs_back_middle_high_bg.png",
 						"condition": [
@@ -478,7 +520,12 @@
 								{
 									"module": "cuffState",
 									"operator": "=",
-									"value": "above_head"
+									"value": "front"
+								},
+								{
+									"bone": "elbow_l",
+									"operator": "<",
+									"value": -16
 								},
 								{
 									"view": "back"
