@@ -734,7 +734,7 @@ const ATTRIBUTES_DEFINITION_BASE = DefineAttributes({
 	},
 	Back_knot_anchor_point: {
 		name: 'Back knot',
-		description: 'A knot on the back to which a connecting rope can be tied',
+		description: 'A knot on the back (provided by Harness Jute Rope or Arm Jute Rope box ties) to which a connecting rope can be tied',
 		useAsAssetPreference: false,
 	},
 	Rope_vulva_anchor_point: {
@@ -759,7 +759,7 @@ const ATTRIBUTES_DEFINITION_BASE = DefineAttributes({
 	},
 	Gag_anchor_point: {
 		name: 'Ankle rope',
-		description: 'A fix point behind the head to which a gag can be secured',
+		description: 'A fix point (provided by Bamboo Stick) behind the head to which a gag can be secured',
 		useAsAssetPreference: false,
 	},
 });
