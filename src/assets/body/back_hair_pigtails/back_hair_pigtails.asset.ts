@@ -1,7 +1,7 @@
 import { CreateHairColor } from '../../../helpers/hair_base.ts';
 const { colorization, modules } = CreateHairColor(false);
 
-DefineBodypart({
+const bodypart = DefineBodypart({
 	name: 'Pigtails',
 	bodypart: 'backhair',
 	graphics: 'graphics.json',
@@ -55,3 +55,21 @@ DefineBodypart({
 		],
 	},
 });
+
+DefineAsset({
+	...bodypart, // Reuse most of bodypart definition
+	id: 'body/back_hair_pigtails/wig',
+	name: 'Pigtails wig',
+	size: 'small',
+	attributes: {
+		provides: [
+			'Wig',
+			'Wig_back',
+		],
+		hides: [
+			'Hair_back',
+			'Hair_extension',
+		],
+	},
+});
+
