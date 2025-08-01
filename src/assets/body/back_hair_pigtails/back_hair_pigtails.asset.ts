@@ -64,11 +64,6 @@ DefineAsset({
 	attributes: {
 		provides: [
 			'Wig',
-			'Wig_back',
-		],
-		hides: [
-			'Hair_back',
-			'Hair_extension',
 		],
 	},
 });
