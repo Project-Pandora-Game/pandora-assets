@@ -105,7 +105,7 @@ DefineAsset({
 	},
 	effects: {
 		blockHands: true,
-		blockRoomLeave: true,
+		blockSpaceLeave: true,
 		blockRoomMovement: true,
 	},
 	blockSelfAddRemove: true,
