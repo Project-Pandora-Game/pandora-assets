@@ -165,7 +165,7 @@ DefineAsset({
 							provides: ['chain'],
 						},
 						effects: {
-							blockRoomLeave: true,
+							blockSpaceLeave: true,
 							blockRoomMovement: true,
 						},
 					},
@@ -227,7 +227,7 @@ DefineAsset({
 							provides: ['bar'],
 						},
 						effects: {
-							blockRoomLeave: true,
+							blockSpaceLeave: true,
 							blockRoomMovement: true,
 						},
 					},
