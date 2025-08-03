@@ -28,6 +28,7 @@ DefineRoomDeviceAsset({
 			maxAcceptedSize: 'large',
 		},
 	},
+	storageModule: 'content',
 	pivot: {
 		x: 660,
 		y: 400,

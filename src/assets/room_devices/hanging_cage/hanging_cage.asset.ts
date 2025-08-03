@@ -100,6 +100,7 @@ DefineRoomDeviceAsset({
 			maxCount: 5,
 		},
 	},
+	storageModule: 'storage',
 	pivot: {
 		x: 380,
 		y: 900,
