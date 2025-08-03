@@ -74,6 +74,7 @@ DefineAsset({
 			],
 		},
 	},
+	storageModule: 'content',
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
 		credits: ['Sandrine'],
