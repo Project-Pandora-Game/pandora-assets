@@ -46,6 +46,7 @@ const ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'size',
 	'chat',
 	'modules',
+	'storageModule',
 	'staticAttributes',
 	'posePresets',
 	'preview',
@@ -319,6 +320,11 @@ async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDef
 		validateProperties: ValidateRoomDeviceProperties,
 		propertiesValidationMetadata,
 	}, def.modules);
+	if (def.storageModule != null) {
+		if (def.modules?.[def.storageModule] == null) {
+			logger.warning(`#.storageModule refers to an unknown module '${def.storageModule}'`);
+		}
+	}
 
 	for (const module of Object.values(def.modules ?? {})) {
 		if (module.staticConfig.slotName == null) {
