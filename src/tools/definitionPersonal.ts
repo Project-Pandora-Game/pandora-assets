@@ -35,6 +35,7 @@ const PERSONAL_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'chat',
 	'posePresets',
 	'modules',
+	'storageModule',
 	'preview',
 	'assetPreferenceDefault',
 	'requireFreeHandsToUseDefault',
@@ -108,6 +109,11 @@ async function GlobalDefineAssetProcess(def: IntermediatePersonalAssetDefinition
 		validateProperties: ValidateAssetProperties,
 		propertiesValidationMetadata,
 	}, def.modules);
+	if (def.storageModule != null) {
+		if (def.modules?.[def.storageModule] == null) {
+			logger.warning(`#.storageModule refers to an unknown module '${def.storageModule}'`);
+		}
+	}
 
 	ValidateAssetPropertiesFinalize(logger, propertiesValidationMetadata);
 

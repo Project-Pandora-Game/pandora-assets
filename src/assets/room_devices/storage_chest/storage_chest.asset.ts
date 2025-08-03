@@ -31,6 +31,7 @@ DefineRoomDeviceAsset({
 			},
 		},
 	},
+	storageModule: 'content',
 	pivot: {
 		x: 350,
 		y: 400,

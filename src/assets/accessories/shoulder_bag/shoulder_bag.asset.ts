@@ -34,6 +34,7 @@ DefineAsset({
 			},
 		},
 	},
+	storageModule: 'content',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

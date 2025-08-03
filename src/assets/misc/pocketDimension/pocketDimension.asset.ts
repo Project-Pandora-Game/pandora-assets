@@ -10,6 +10,7 @@ DefineAsset({
 			maxAcceptedSize: 'medium',
 		},
 	},
+	storageModule: 'content',
 	chat: {
 		chatDescriptor: 'pocket dimension',
 		actionAdd: 'SOURCE_CHARACTER summoned ITEM_ASSET_NAME for TARGET_CHARACTER_DYNAMIC_REFLEXIVE.',
