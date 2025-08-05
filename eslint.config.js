@@ -121,7 +121,7 @@ export default tsEslint.config(
 					},
 				},
 			],
-			'@stylistic/quotes': ['warn', 'single', { 'avoidEscape': true, 'allowTemplateLiterals': true }],
+			'@stylistic/quotes': ['warn', 'single', { 'avoidEscape': true, 'allowTemplateLiterals': 'always' }],
 			'@stylistic/jsx-quotes': ['warn', 'prefer-single'],
 			'@stylistic/brace-style': ['warn', '1tbs'],
 			'@stylistic/space-before-function-paren': [
