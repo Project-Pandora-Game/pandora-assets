@@ -31,7 +31,7 @@ importers:
         version: 4.17.21
       pandora-common:
         specifier: github:Project-Pandora-Game/pandora#master&path:pandora-common
-        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/d88b05cb96a2ca4d932988cbf185640ca912cf50#path:pandora-common
+        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/9085321204bb7ca2b461dde8dd4d6bbfdc466bec#path:pandora-common
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -74,25 +74,25 @@ importers:
         version: 9.32.0
       eslint-plugin-import:
         specifier: 2.32.0
-        version: 2.32.0(@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.8.3))(eslint@9.32.0)
+        version: 2.32.0(@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.9.2))(eslint@9.32.0)
       jest:
         specifier: 30.0.5
         version: 30.0.5(@types/node@22.17.0)
       ts-jest:
         specifier: 29.4.1
-        version: 29.4.1(@babel/core@7.27.4)(@jest/transform@30.0.5)(@jest/types@30.0.5)(babel-jest@30.0.5(@babel/core@7.27.4))(jest-util@30.0.5)(jest@30.0.5(@types/node@22.17.0))(typescript@5.8.3)
+        version: 29.4.1(@babel/core@7.27.4)(@jest/transform@30.0.5)(@jest/types@30.0.5)(babel-jest@30.0.5(@babel/core@7.27.4))(jest-util@30.0.5)(jest@30.0.5(@types/node@22.17.0))(typescript@5.9.2)
       tsc-watch:
         specifier: 7.1.1
-        version: 7.1.1(typescript@5.8.3)
+        version: 7.1.1(typescript@5.9.2)
       tslib:
         specifier: 2.8.1
         version: 2.8.1
       typescript:
-        specifier: 5.8.3
-        version: 5.8.3
+        specifier: 5.9.2
+        version: 5.9.2
       typescript-eslint:
         specifier: 8.39.0
-        version: 8.39.0(eslint@9.32.0)(typescript@5.8.3)
+        version: 8.39.0(eslint@9.32.0)(typescript@5.9.2)
 
 packages:
 
@@ -2149,8 +2149,8 @@ packages:
   package-json-from-dist@1.0.1:
     resolution: {integrity: sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/d88b05cb96a2ca4d932988cbf185640ca912cf50#path:pandora-common:
-    resolution: {path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/d88b05cb96a2ca4d932988cbf185640ca912cf50}
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/9085321204bb7ca2b461dde8dd4d6bbfdc466bec#path:pandora-common:
+    resolution: {path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/9085321204bb7ca2b461dde8dd4d6bbfdc466bec}
     version: 0.1.0
     engines: {node: '>=22.x'}
 
@@ -2607,8 +2607,8 @@ packages:
       eslint: ^8.57.0 || ^9.0.0
       typescript: '>=4.8.4 <6.0.0'
 
-  typescript@5.8.3:
-    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
+  typescript@5.9.2:
+    resolution: {integrity: sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -3449,41 +3449,41 @@ snapshots:
     dependencies:
       '@types/yargs-parser': 21.0.3
 
-  '@typescript-eslint/eslint-plugin@8.39.0(@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.8.3))(eslint@9.32.0)(typescript@5.8.3)':
+  '@typescript-eslint/eslint-plugin@8.39.0(@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.9.2))(eslint@9.32.0)(typescript@5.9.2)':
     dependencies:
       '@eslint-community/regexpp': 4.12.1
-      '@typescript-eslint/parser': 8.39.0(eslint@9.32.0)(typescript@5.8.3)
+      '@typescript-eslint/parser': 8.39.0(eslint@9.32.0)(typescript@5.9.2)
       '@typescript-eslint/scope-manager': 8.39.0
-      '@typescript-eslint/type-utils': 8.39.0(eslint@9.32.0)(typescript@5.8.3)
-      '@typescript-eslint/utils': 8.39.0(eslint@9.32.0)(typescript@5.8.3)
+      '@typescript-eslint/type-utils': 8.39.0(eslint@9.32.0)(typescript@5.9.2)
+      '@typescript-eslint/utils': 8.39.0(eslint@9.32.0)(typescript@5.9.2)
       '@typescript-eslint/visitor-keys': 8.39.0
       eslint: 9.32.0
       graphemer: 1.4.0
       ignore: 7.0.5
       natural-compare: 1.4.0
-      ts-api-utils: 2.1.0(typescript@5.8.3)
-      typescript: 5.8.3
+      ts-api-utils: 2.1.0(typescript@5.9.2)
+      typescript: 5.9.2
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.8.3)':
+  '@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.9.2)':
     dependencies:
       '@typescript-eslint/scope-manager': 8.39.0
       '@typescript-eslint/types': 8.39.0
-      '@typescript-eslint/typescript-estree': 8.39.0(typescript@5.8.3)
+      '@typescript-eslint/typescript-estree': 8.39.0(typescript@5.9.2)
       '@typescript-eslint/visitor-keys': 8.39.0
       debug: 4.4.0
       eslint: 9.32.0
-      typescript: 5.8.3
+      typescript: 5.9.2
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/project-service@8.39.0(typescript@5.8.3)':
+  '@typescript-eslint/project-service@8.39.0(typescript@5.9.2)':
     dependencies:
-      '@typescript-eslint/tsconfig-utils': 8.39.0(typescript@5.8.3)
+      '@typescript-eslint/tsconfig-utils': 8.39.0(typescript@5.9.2)
       '@typescript-eslint/types': 8.39.0
       debug: 4.4.0
-      typescript: 5.8.3
+      typescript: 5.9.2
     transitivePeerDependencies:
       - supports-color
 
@@ -3492,19 +3492,19 @@ snapshots:
       '@typescript-eslint/types': 8.39.0
       '@typescript-eslint/visitor-keys': 8.39.0
 
-  '@typescript-eslint/tsconfig-utils@8.39.0(typescript@5.8.3)':
+  '@typescript-eslint/tsconfig-utils@8.39.0(typescript@5.9.2)':
     dependencies:
-      typescript: 5.8.3
+      typescript: 5.9.2
 
-  '@typescript-eslint/type-utils@8.39.0(eslint@9.32.0)(typescript@5.8.3)':
+  '@typescript-eslint/type-utils@8.39.0(eslint@9.32.0)(typescript@5.9.2)':
     dependencies:
       '@typescript-eslint/types': 8.39.0
-      '@typescript-eslint/typescript-estree': 8.39.0(typescript@5.8.3)
-      '@typescript-eslint/utils': 8.39.0(eslint@9.32.0)(typescript@5.8.3)
+      '@typescript-eslint/typescript-estree': 8.39.0(typescript@5.9.2)
+      '@typescript-eslint/utils': 8.39.0(eslint@9.32.0)(typescript@5.9.2)
       debug: 4.4.0
       eslint: 9.32.0
-      ts-api-utils: 2.1.0(typescript@5.8.3)
-      typescript: 5.8.3
+      ts-api-utils: 2.1.0(typescript@5.9.2)
+      typescript: 5.9.2
     transitivePeerDependencies:
       - supports-color
 
@@ -3512,10 +3512,10 @@ snapshots:
 
   '@typescript-eslint/types@8.39.0': {}
 
-  '@typescript-eslint/typescript-estree@8.39.0(typescript@5.8.3)':
+  '@typescript-eslint/typescript-estree@8.39.0(typescript@5.9.2)':
     dependencies:
-      '@typescript-eslint/project-service': 8.39.0(typescript@5.8.3)
-      '@typescript-eslint/tsconfig-utils': 8.39.0(typescript@5.8.3)
+      '@typescript-eslint/project-service': 8.39.0(typescript@5.9.2)
+      '@typescript-eslint/tsconfig-utils': 8.39.0(typescript@5.9.2)
       '@typescript-eslint/types': 8.39.0
       '@typescript-eslint/visitor-keys': 8.39.0
       debug: 4.4.0
@@ -3523,19 +3523,19 @@ snapshots:
       is-glob: 4.0.3
       minimatch: 9.0.5
       semver: 7.7.2
-      ts-api-utils: 2.1.0(typescript@5.8.3)
-      typescript: 5.8.3
+      ts-api-utils: 2.1.0(typescript@5.9.2)
+      typescript: 5.9.2
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/utils@8.39.0(eslint@9.32.0)(typescript@5.8.3)':
+  '@typescript-eslint/utils@8.39.0(eslint@9.32.0)(typescript@5.9.2)':
     dependencies:
       '@eslint-community/eslint-utils': 4.7.0(eslint@9.32.0)
       '@typescript-eslint/scope-manager': 8.39.0
       '@typescript-eslint/types': 8.39.0
-      '@typescript-eslint/typescript-estree': 8.39.0(typescript@5.8.3)
+      '@typescript-eslint/typescript-estree': 8.39.0(typescript@5.9.2)
       eslint: 9.32.0
-      typescript: 5.8.3
+      typescript: 5.9.2
     transitivePeerDependencies:
       - supports-color
 
@@ -4136,17 +4136,17 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint@9.32.0):
+  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.9.2))(eslint-import-resolver-node@0.3.9)(eslint@9.32.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
-      '@typescript-eslint/parser': 8.39.0(eslint@9.32.0)(typescript@5.8.3)
+      '@typescript-eslint/parser': 8.39.0(eslint@9.32.0)(typescript@5.9.2)
       eslint: 9.32.0
       eslint-import-resolver-node: 0.3.9
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.8.3))(eslint@9.32.0):
+  eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.9.2))(eslint@9.32.0):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.9
@@ -4157,7 +4157,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.32.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint@9.32.0)
+      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.9.2))(eslint-import-resolver-node@0.3.9)(eslint@9.32.0)
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
@@ -4169,7 +4169,7 @@ snapshots:
       string.prototype.trimend: 1.0.9
       tsconfig-paths: 3.15.0
     optionalDependencies:
-      '@typescript-eslint/parser': 8.39.0(eslint@9.32.0)(typescript@5.8.3)
+      '@typescript-eslint/parser': 8.39.0(eslint@9.32.0)(typescript@5.9.2)
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
@@ -5264,7 +5264,7 @@ snapshots:
 
   package-json-from-dist@1.0.1: {}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/d88b05cb96a2ca4d932988cbf185640ca912cf50#path:pandora-common:
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/9085321204bb7ca2b461dde8dd4d6bbfdc466bec#path:pandora-common:
     dependencies:
       '@types/async-lock': 1.4.2
       '@types/lodash-es': 4.17.12
@@ -5698,11 +5698,11 @@ snapshots:
 
   toidentifier@1.0.1: {}
 
-  ts-api-utils@2.1.0(typescript@5.8.3):
+  ts-api-utils@2.1.0(typescript@5.9.2):
     dependencies:
-      typescript: 5.8.3
+      typescript: 5.9.2
 
-  ts-jest@29.4.1(@babel/core@7.27.4)(@jest/transform@30.0.5)(@jest/types@30.0.5)(babel-jest@30.0.5(@babel/core@7.27.4))(jest-util@30.0.5)(jest@30.0.5(@types/node@22.17.0))(typescript@5.8.3):
+  ts-jest@29.4.1(@babel/core@7.27.4)(@jest/transform@30.0.5)(@jest/types@30.0.5)(babel-jest@30.0.5(@babel/core@7.27.4))(jest-util@30.0.5)(jest@30.0.5(@types/node@22.17.0))(typescript@5.9.2):
     dependencies:
       bs-logger: 0.2.6
       fast-json-stable-stringify: 2.1.0
@@ -5713,7 +5713,7 @@ snapshots:
       make-error: 1.3.6
       semver: 7.7.2
       type-fest: 4.41.0
-      typescript: 5.8.3
+      typescript: 5.9.2
       yargs-parser: 21.1.1
     optionalDependencies:
       '@babel/core': 7.27.4
@@ -5722,13 +5722,13 @@ snapshots:
       babel-jest: 30.0.5(@babel/core@7.27.4)
       jest-util: 30.0.5
 
-  tsc-watch@7.1.1(typescript@5.8.3):
+  tsc-watch@7.1.1(typescript@5.9.2):
     dependencies:
       cross-spawn: 7.0.6
       node-cleanup: 2.1.2
       ps-tree: 1.2.0
       string-argv: 0.3.2
-      typescript: 5.8.3
+      typescript: 5.9.2
 
   tsconfig-paths@3.15.0:
     dependencies:
@@ -5788,18 +5788,18 @@ snapshots:
       possible-typed-array-names: 1.1.0
       reflect.getprototypeof: 1.0.10
 
-  typescript-eslint@8.39.0(eslint@9.32.0)(typescript@5.8.3):
+  typescript-eslint@8.39.0(eslint@9.32.0)(typescript@5.9.2):
     dependencies:
-      '@typescript-eslint/eslint-plugin': 8.39.0(@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.8.3))(eslint@9.32.0)(typescript@5.8.3)
-      '@typescript-eslint/parser': 8.39.0(eslint@9.32.0)(typescript@5.8.3)
-      '@typescript-eslint/typescript-estree': 8.39.0(typescript@5.8.3)
-      '@typescript-eslint/utils': 8.39.0(eslint@9.32.0)(typescript@5.8.3)
+      '@typescript-eslint/eslint-plugin': 8.39.0(@typescript-eslint/parser@8.39.0(eslint@9.32.0)(typescript@5.9.2))(eslint@9.32.0)(typescript@5.9.2)
+      '@typescript-eslint/parser': 8.39.0(eslint@9.32.0)(typescript@5.9.2)
+      '@typescript-eslint/typescript-estree': 8.39.0(typescript@5.9.2)
+      '@typescript-eslint/utils': 8.39.0(eslint@9.32.0)(typescript@5.9.2)
       eslint: 9.32.0
-      typescript: 5.8.3
+      typescript: 5.9.2
     transitivePeerDependencies:
       - supports-color
 
-  typescript@5.8.3: {}
+  typescript@5.9.2: {}
 
   uglify-js@3.19.3:
     optional: true
