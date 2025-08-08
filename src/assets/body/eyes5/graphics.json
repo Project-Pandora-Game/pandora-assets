@@ -61,14 +61,14 @@
 			"width": 128,
 			"height": 64,
 			"type": "mesh",
-			"name": "Iris",
+			"name": "Iris Left",
 			"priority": "BODY",
 			"points": "body_eyes",
 			"pointType": [
 				"eye_l"
 			],
 			"mirror": 1,
-			"colorizationKey": "iris",
+			"colorizationKey": "iris_left",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -83,7 +83,7 @@
 						]
 					},
 					{
-						"image": "eyes_normal/iris_normal_straight.png",
+						"image": "eyes_normal/iris_normal_straight_left.png",
 						"condition": [
 							[
 								{
@@ -100,7 +100,7 @@
 						]
 					},
 					{
-						"image": "eyes_normal/iris_normal_left.png",
+						"image": "eyes_normal/iris_normal_left_left.png",
 						"condition": [
 							[
 								{
@@ -117,7 +117,7 @@
 						]
 					},
 					{
-						"image": "eyes_normal/iris_normal_right.png",
+						"image": "eyes_normal/iris_normal_right_left.png",
 						"condition": [
 							[
 								{
@@ -134,7 +134,7 @@
 						]
 					},
 					{
-						"image": "eyes_normal/iris_normal_down.png",
+						"image": "eyes_normal/iris_normal_down_left.png",
 						"condition": [
 							[
 								{
@@ -151,7 +151,7 @@
 						]
 					},
 					{
-						"image": "eyes_normal/iris_normal_up.png",
+						"image": "eyes_normal/iris_normal_up_left.png",
 						"condition": [
 							[
 								{
@@ -168,7 +168,7 @@
 						]
 					},
 					{
-						"image": "eyes_normal/iris_normal_rolled.png",
+						"image": "eyes_normal/iris_normal_rolled_left.png",
 						"condition": [
 							[
 								{
@@ -185,7 +185,7 @@
 						]
 					},
 					{
-						"image": "eyes_squint/iris_squint_straight.png",
+						"image": "eyes_squint/iris_squint_straight_left.png",
 						"condition": [
 							[
 								{
@@ -202,7 +202,7 @@
 						]
 					},
 					{
-						"image": "eyes_squint/iris_squint_left.png",
+						"image": "eyes_squint/iris_squint_left_left.png",
 						"condition": [
 							[
 								{
@@ -219,7 +219,7 @@
 						]
 					},
 					{
-						"image": "eyes_squint/iris_squint_right.png",
+						"image": "eyes_squint/iris_squint_right_left.png",
 						"condition": [
 							[
 								{
@@ -236,7 +236,7 @@
 						]
 					},
 					{
-						"image": "eyes_squint/iris_squint_down.png",
+						"image": "eyes_squint/iris_squint_down_left.png",
 						"condition": [
 							[
 								{
@@ -253,7 +253,7 @@
 						]
 					},
 					{
-						"image": "eyes_squint/iris_squint_up.png",
+						"image": "eyes_squint/iris_squint_up_left.png",
 						"condition": [
 							[
 								{
@@ -270,11 +270,245 @@
 						]
 					},
 					{
-						"image": "eyes_squint/iris_squint_rolled.png",
+						"image": "eyes_squint/iris_squint_rolled_left.png",
 						"condition": [
 							[
 								{
 									"module": "eyeState_l",
+									"operator": "=",
+									"value": "squint"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "rolled"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 436,
+			"y": 257,
+			"width": 128,
+			"height": 64,
+			"type": "mesh",
+			"name": "Iris Right",
+			"priority": "BODY",
+			"points": "body_eyes",
+			"pointType": [
+				"eye_r"
+			],
+			"mirror": 1,
+			"colorizationKey": "iris_right",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"blinking": true
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_normal/iris_normal_straight_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_r",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "straight"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_normal/iris_normal_left_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_r",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "left"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_normal/iris_normal_right_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_r",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "right"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_normal/iris_normal_down_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_r",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_normal/iris_normal_up_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_r",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "up"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_normal/iris_normal_rolled_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_r",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "rolled"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_squint/iris_squint_straight_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_r",
+									"operator": "=",
+									"value": "squint"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "straight"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_squint/iris_squint_left_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_r",
+									"operator": "=",
+									"value": "squint"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "left"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_squint/iris_squint_right_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_r",
+									"operator": "=",
+									"value": "squint"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "right"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_squint/iris_squint_down_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_r",
+									"operator": "=",
+									"value": "squint"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_squint/iris_squint_up_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_r",
+									"operator": "=",
+									"value": "squint"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "up"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_squint/iris_squint_rolled_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_r",
 									"operator": "=",
 									"value": "squint"
 								},
