@@ -82,7 +82,7 @@
 				"eye_l"
 			],
 			"mirror": 1,
-			"colorizationKey": "eyeColor",
+			"colorizationKey": "eyeColor_left",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -111,7 +111,7 @@
 						]
 					},
 					{
-						"image": "cornea.png",
+						"image": "cornea_left.png",
 						"condition": [
 							[
 								{
@@ -123,7 +123,7 @@
 						]
 					},
 					{
-						"image": "cornea_left.png",
+						"image": "cornea_left_left.png",
 						"condition": [
 							[
 								{
@@ -135,7 +135,7 @@
 						]
 					},
 					{
-						"image": "cornea_right.png",
+						"image": "cornea_right_left.png",
 						"condition": [
 							[
 								{
@@ -147,7 +147,7 @@
 						]
 					},
 					{
-						"image": "cornea_down.png",
+						"image": "cornea_down_left.png",
 						"condition": [
 							[
 								{
@@ -159,7 +159,7 @@
 						]
 					},
 					{
-						"image": "cornea_up.png",
+						"image": "cornea_up_left.png",
 						"condition": [
 							[
 								{
@@ -171,7 +171,7 @@
 						]
 					},
 					{
-						"image": "cornea_rolled.png",
+						"image": "cornea_rolled_left.png",
 						"condition": [
 							[
 								{
@@ -183,7 +183,7 @@
 						]
 					},
 					{
-						"image": "cornea_big.png",
+						"image": "cornea_big_left.png",
 						"condition": [
 							[
 								{
@@ -195,7 +195,147 @@
 						]
 					},
 					{
-						"image": "cornea_small.png",
+						"image": "cornea_small_left.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "wideSmall"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "",
+			"priority": "BODY",
+			"points": "body_eyes",
+			"pointType": [
+				"eye_r"
+			],
+			"mirror": 1,
+			"colorizationKey": "eyeColor_right",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "eyeState_r",
+									"operator": "=",
+									"value": "closed"
+								}
+							],
+							[
+								{
+									"module": "eyeState_r",
+									"operator": "=",
+									"value": "blind"
+								}
+							],
+							[
+								{
+									"blinking": true
+								}
+							]
+						]
+					},
+					{
+						"image": "cornea_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "straight"
+								}
+							]
+						]
+					},
+					{
+						"image": "cornea_left_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "left"
+								}
+							]
+						]
+					},
+					{
+						"image": "cornea_right_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "right"
+								}
+							]
+						]
+					},
+					{
+						"image": "cornea_down_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					},
+					{
+						"image": "cornea_up_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "up"
+								}
+							]
+						]
+					},
+					{
+						"image": "cornea_rolled_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "rolled"
+								}
+							]
+						]
+					},
+					{
+						"image": "cornea_big_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "wideBig"
+								}
+							]
+						]
+					},
+					{
+						"image": "cornea_small_right.png",
 						"condition": [
 							[
 								{
