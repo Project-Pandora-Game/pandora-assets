@@ -4,8 +4,12 @@ DefineBodypart({
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: {
-		eyeColor: {
-			name: 'Eye color',
+		eyeColor_right: {
+			name: 'Eye color Left',
+			default: '#7e6ae0',
+		},
+		eyeColor_left: {
+			name: 'Eye color Right',
 			default: '#7e6ae0',
 		},
 		lashes: {
