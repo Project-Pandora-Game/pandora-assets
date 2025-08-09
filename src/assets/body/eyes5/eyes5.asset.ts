@@ -12,8 +12,12 @@ DefineBodypart({
 			name: 'Pupil',
 			default: '#222222',
 		},
-		iris: {
-			name: 'Iris',
+		iris_right: {
+			name: 'Iris Left',
+			default: '#448E32',
+		},
+		iris_left: {
+			name: 'Iris Right',
 			default: '#448E32',
 		},
 		lashes: {
