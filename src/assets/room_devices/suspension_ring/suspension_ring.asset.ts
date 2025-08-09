@@ -12,7 +12,7 @@ DefineRoomDeviceAsset({
 			default: '#D7AC4D',
 		},
 		rock: {
-			name: 'Rope',
+			name: 'Rock',
 			default: '#9b9b9bff',
 		},
 	},
