@@ -80,7 +80,7 @@ export async function LoadAssetGraphicsFile(
 
 	const graphicsSource: AssetSourceGraphicsDefinition = freeze(parseResult.data, true);
 
-	AssetGraphicsValidate(graphicsSource, logger, builtAssetData.colorizationKeys);
+	AssetGraphicsValidate(graphicsSource, logger);
 
 	const { graphics, originalImagesMap } = await LoadAssetGraphics(graphicsSource, builtAssetData, logger);
 

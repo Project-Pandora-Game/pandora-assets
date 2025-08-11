@@ -12,7 +12,7 @@ import {
 } from 'pandora-common';
 import { GraphicsDatabase } from '../graphicsDatabase.ts';
 
-export function AssetGraphicsValidate(definition: AssetSourceGraphicsDefinition, logger: Logger, colorizationKeys: ReadonlySet<string>): void {
+export function AssetGraphicsValidate(definition: AssetSourceGraphicsDefinition, logger: Logger): void {
 	for (let layerIndex = 0; layerIndex < definition.layers.length; layerIndex++) {
 		const layer = definition.layers[layerIndex];
 		const layerLogger = logger.prefixMessages(`Layer #${layerIndex} (${layer.name ?? '[UNNAMED]'}): `);
@@ -20,10 +20,10 @@ export function AssetGraphicsValidate(definition: AssetSourceGraphicsDefinition,
 		switch (layer.type) {
 			case 'mesh':
 			case 'alphaImageMesh':
-				AssetGraphicsValidateMeshLayer(layer, layerLogger, colorizationKeys);
+				AssetGraphicsValidateMeshLayer(layer, layerLogger);
 				break;
 			case 'autoMesh':
-				AssetGraphicsValidateAutomeshLayer(layer, layerLogger, colorizationKeys);
+				// Fully validated in build code
 				break;
 			case 'text':
 				// Fully validated in build code
@@ -34,7 +34,7 @@ export function AssetGraphicsValidate(definition: AssetSourceGraphicsDefinition,
 	}
 }
 
-export function AssetGraphicsValidateMeshLayer(layer: Extract<GraphicsSourceLayer, { type: 'mesh' | 'alphaImageMesh'; }>, logger: Logger, colorizationKeys: ReadonlySet<string>): void {
+export function AssetGraphicsValidateMeshLayer(layer: Extract<GraphicsSourceLayer, { type: 'mesh' | 'alphaImageMesh'; }>, logger: Logger): void {
 	const pointTemplate = GraphicsDatabase.getPointTemplate(layer.points);
 	if (pointTemplate == null) {
 		logger.error(`Layer refers to unknown template '${layer.points}'`);
@@ -61,21 +61,6 @@ export function AssetGraphicsValidateMeshLayer(layer: Extract<GraphicsSourceLaye
 		// Layer shouldn't define point types if all points match
 		if (calculatedPoints.every((p) => layer.pointType?.includes(p.pointType))) {
 			logger.warning(`Layer filters for point types, but all points match anyway. Remove the unnecessary filter.`);
-		}
-	}
-
-	if (layer.type !== 'alphaImageMesh') {
-		if (layer.colorizationKey != null && !colorizationKeys.has(layer.colorizationKey)) {
-			logger.warning(`Layer has colorizationKey ${layer.colorizationKey} outside of defined colorization keys [${[...colorizationKeys].join(', ')}]`);
-		}
-	}
-}
-
-export function AssetGraphicsValidateAutomeshLayer(layer: Extract<GraphicsSourceLayer, { type: 'autoMesh'; }>, logger: Logger, colorizationKeys: ReadonlySet<string>): void {
-	for (const graphicalLayer of layer.graphicalLayers) {
-		const layerLogger = logger.prefixMessages(`Graphical layer ${graphicalLayer.name || '[unnamed]'}`);
-		if (graphicalLayer.colorizationKey != null && !colorizationKeys.has(graphicalLayer.colorizationKey)) {
-			layerLogger.warning(`has colorizationKey ${graphicalLayer.colorizationKey} outside of defined colorization keys [${[...colorizationKeys].join(', ')}]`);
 		}
 	}
 }
