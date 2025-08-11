@@ -18,6 +18,25 @@ import { AssetDatabase } from './tools/assetDatabase.ts';
 //#region Character modifier template definitions
 
 const CHARACTER_MODIFIER_TEMPLATES: AssetSpecificCharacterModifierInbuiltTemplates = {
+	block_changing_following_state: [
+		{
+			type: 'block_changing_following_state',
+			name: 'Unable to stop following while wearing a leash',
+			config: {
+				blockStarting: false,
+			},
+			conditions: [
+				{
+					logic: 'or',
+					invert: false,
+					condition: {
+						type: 'hasItemWithAttribute',
+						attribute: 'Leash',
+					},
+				},
+			],
+		},
+	],
 	effect_blind: [
 		{
 			type: 'effect_blind',
@@ -88,7 +107,7 @@ const CHARACTER_MODIFIER_TEMPLATES: AssetSpecificCharacterModifierInbuiltTemplat
 	effect_block_room_movement: [
 		{
 			type: 'effect_block_room_movement',
-			name: 'Block room movement while leashed',
+			name: 'Block room movement while wearing a leash',
 			config: {},
 			conditions: [
 				{
