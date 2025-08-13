@@ -37,6 +37,40 @@ const CHARACTER_MODIFIER_TEMPLATES: AssetSpecificCharacterModifierInbuiltTemplat
 			],
 		},
 	],
+	block_managing_room_map: [
+		{
+			type: 'block_managing_room_map',
+			name: 'Prevent managing room while helpless',
+			config: {},
+			conditions: [
+				{
+					logic: 'or',
+					invert: false,
+					condition: {
+						type: 'hasItemWithEffect',
+						effect: 'blind',
+						minStrength: 1,
+					},
+				},
+				{
+					logic: 'or',
+					invert: false,
+					condition: {
+						type: 'hasItemWithEffect',
+						effect: 'blockHands',
+					},
+				},
+				{
+					logic: 'or',
+					invert: false,
+					condition: {
+						type: 'hasItemWithEffect',
+						effect: 'blockRoomMovement',
+					},
+				},
+			],
+		},
+	],
 	effect_blind: [
 		{
 			type: 'effect_blind',
