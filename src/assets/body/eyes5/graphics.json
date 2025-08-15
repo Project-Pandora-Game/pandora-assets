@@ -68,7 +68,7 @@
 				"eye_l"
 			],
 			"mirror": 1,
-			"colorizationKey": "iris",
+			"colorizationKey": "iris_l",
 			"image": {
 				"image": "",
 				"overrides": [
