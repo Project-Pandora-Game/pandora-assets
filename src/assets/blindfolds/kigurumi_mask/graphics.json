@@ -523,8 +523,12 @@
 			"name": "pupils",
 			"priority": "ABOVE_BODY",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "eyeColor",
+			"pointType": [
+				"static",
+				"static_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "eyeColor_l",
 			"image": {
 				"image": "",
 				"overrides": [

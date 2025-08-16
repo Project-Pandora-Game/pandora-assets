@@ -82,7 +82,7 @@
 				"eye_l"
 			],
 			"mirror": 1,
-			"colorizationKey": "eyeColor",
+			"colorizationKey": "eyeColor_l",
 			"image": {
 				"image": "",
 				"overrides": [

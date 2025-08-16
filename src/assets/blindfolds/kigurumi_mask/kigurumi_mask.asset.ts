@@ -24,8 +24,13 @@ DefineAsset({
 			name: 'Eyebrows',
 			default: '#555555',
 		},
-		eyeColor: {
-			name: 'Eye Color',
+		eyeColor_l: {
+			name: 'Eye color left',
+			default: '#2D589B',
+			minAlpha: 0.8,
+		},
+		eyeColor_r: {
+			name: 'Eye color right',
 			default: '#2D589B',
 			minAlpha: 0.8,
 		},
