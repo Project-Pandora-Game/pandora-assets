@@ -524,41 +524,12 @@
 			"priority": "ABOVE_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationKey": "eyeColor_l",
+			"colorizationKey": "eyeColor",
 			"image": {
 				"image": "",
 				"overrides": [
 					{
-						"image": "cornea_l.png",
-						"condition": [
-							[
-								{
-									"module": "mask",
-									"operator": "=",
-									"value": "closed"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "pupils",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "eyeColor_r",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "cornea_r.png",
+						"image": "cornea.png",
 						"condition": [
 							[
 								{
