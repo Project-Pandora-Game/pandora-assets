@@ -10,6 +10,14 @@ DefineRoomDeviceAsset({
 			name: 'Passe-partout',
 			default: '#ffffff',
 		},
+		image: {
+			name: 'Image tint',
+			default: '#ffffff',
+		},
+		text: {
+			name: 'Text',
+			default: '#222222',
+		},
 	},
 	staticAttributes: ['Wall'],
 	preview: 'picture_preview.png',
@@ -98,6 +106,20 @@ DefineRoomDeviceAsset({
 					name: 'Small',
 				},
 			],
+		},
+		text: {
+			type: 'text',
+			name: 'Optional writing on large pictures',
+			staticConfig: {
+				slotName: null,
+			},
+		},
+		text2: {
+			type: 'text',
+			name: 'Optional writing on medium pictures',
+			staticConfig: {
+				slotName: null,
+			},
 		},
 	},
 	pivot: {
@@ -442,6 +464,7 @@ DefineRoomDeviceAsset({
 					],
 				},
 			],
+			colorizationKey: 'image',
 		},
 		{
 			type: 'sprite',
@@ -712,6 +735,22 @@ DefineRoomDeviceAsset({
 				},
 			],
 			colorizationKey: 'frame',
+		},
+		{
+			type: 'text',
+			dataModule: 'text',
+			colorizationKey: 'text',
+			fontSize: 64,
+			offset: { x: 502, y: 310 },
+			size: { width: 400, height: 580 },
+		},
+		{
+			type: 'text',
+			dataModule: 'text2',
+			colorizationKey: 'text',
+			fontSize: 48,
+			offset: { x: 602, y: 310 },
+			size: { width: 200, height: 290 },
 		},
 	],
 	ownership: {
