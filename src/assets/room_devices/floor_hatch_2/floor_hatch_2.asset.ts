@@ -10,7 +10,24 @@ DefineRoomDeviceAsset({
 	staticAttributes: ['Floor'],
 	preview: 'preview.png',
 	slots: {},
-	modules: {},
+	modules: {
+		orientation: {
+			type: 'typed',
+			name: 'Orientation',
+			staticConfig: { slotName: null },
+			variants: [
+				{
+					id: 'floor',
+					name: 'Floor',
+					default: true,
+				},
+				{
+					id: 'ceiling',
+					name: 'Ceiling (needs manual height adjustment)',
+				},
+			],
+		},
+	},
 	pivot: {
 		x: 513,
 		y: 80,
@@ -20,6 +37,41 @@ DefineRoomDeviceAsset({
 			type: 'sprite',
 			image: 'floor_hatch_2.png',
 			colorizationKey: 'base',
+			imageOverrides: [
+				{
+					image: '',
+					condition: [
+						[
+							{
+								module: 'orientation',
+								operator: '=',
+								value: 'ceiling',
+							},
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'sprite',
+			image: 'floor_hatch_2_upside-down.png',
+			clipToRoom: true,
+			colorizationKey: 'base',
+			offset: { x: 0, y: -600 },
+			imageOverrides: [
+				{
+					image: '',
+					condition: [
+						[
+							{
+								module: 'orientation',
+								operator: '=',
+								value: 'floor',
+							},
+						],
+					],
+				},
+			],
 		},
 	],
 	ownership: {
