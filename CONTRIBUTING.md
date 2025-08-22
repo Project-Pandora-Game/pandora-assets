@@ -29,7 +29,7 @@ Not all assets are equal, and some could be controversial or even harmful to Pan
   - ❌ Example(s) not OK: assets called "drug" or referencing real illegal substances by name, assets that describe an effect of problematic substances
 - Cigarettes, including electric ones
 - Assets containing symbols protected by international treaties, such as the red cross
-- Anything with ties to any real-world brand, trademark or a real person; unless you own the brand or are the person in question and provide proof of that
+- Anything mentioning any real-world brand, trademark or a real person; unless you own the brand or are the person in question and provide proof of that
 - Assets which promote a political or religious agenda
   - ✅ Example(s) OK: religious clothes like a nun's habit
   - ❌ Example(s) not OK: symbols, flags, slogans

@@ -1,6 +1,6 @@
 # Licensing of assets submitted to Project Pandora
 
-All assets must provide license information about their asset images that allows them to be used in Project Pandora.
+All assets must provide licensing and origin information about their asset images (e.g. "self-made") that allows them to be used in Project Pandora.
 Note, that any licensing rights given specifically to "Project Pandora" do not imply any rights for forks or derivative projects.
 The asset code is not covered by these licenses.
 
