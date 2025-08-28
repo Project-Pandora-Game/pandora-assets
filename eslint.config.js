@@ -87,7 +87,10 @@ export default tsEslint.config(
 			'prefer-object-spread': 'warn',
 			'import/no-cycle': 'warn',
 			'import/no-internal-modules': ['error', {
-				'forbid': ['pandora-common/src/**'],
+				forbid: [
+					'pandora-common/src/**',
+					'zod/**',
+				],
 			}],
 			'import/no-extraneous-dependencies': ['warn', {
 				'devDependencies': [
@@ -96,6 +99,13 @@ export default tsEslint.config(
 					'./test/**',
 				],
 			}],
+			'no-restricted-syntax': ['warn',
+				{
+					message: "Do not import z namespace from zod. Use `import * as z from 'zod';` instead.",
+					// Reason for this is to allow better tree-shaking
+					selector: 'ImportDeclaration[source.value="zod"] ImportSpecifier Identifier[name="z"]',
+				},
+			],
 			// Stylistic rules
 			'@stylistic/semi': ['warn', 'always'],
 			'@stylistic/semi-style': ['warn', 'last'],

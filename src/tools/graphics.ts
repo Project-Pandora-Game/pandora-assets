@@ -18,7 +18,7 @@ import {
 	type GraphicsBuildContextAssetData,
 } from 'pandora-common';
 import { relative } from 'path';
-import { z } from 'zod';
+import * as z from 'zod';
 import { boneDefinition } from '../bones.ts';
 import { IS_PRODUCTION_BUILD, OPTIMIZE_TEXTURES, SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../config.ts';
 import { GENERATED_RESOLUTIONS } from './graphicsConstants.ts';
@@ -46,7 +46,7 @@ export async function LoadAssetGraphicsFile(
 	ModuleNameSchema[SCHEME_OVERRIDE]((module, ctx) => {
 		if (builtAssetData.modules?.[module] == null) {
 			ctx.addIssue({
-				code: z.ZodIssueCode.custom,
+				code: 'custom',
 				message: `Module '${module}' is not a valid module name`,
 			});
 		}
@@ -57,7 +57,7 @@ export async function LoadAssetGraphicsFile(
 	if (!parseResult.success) {
 		logger.error(
 			`File is not valid AssetSourceGraphicsDefinition:\n`,
-			parseResult.error.toString(),
+			z.prettifyError(parseResult.error),
 		);
 		throw new Error(`Graphics in '${path}' are not AssetSourceGraphicsDefinition`);
 	}

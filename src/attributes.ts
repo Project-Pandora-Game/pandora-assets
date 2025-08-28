@@ -1,7 +1,6 @@
 import { cloneDeep } from 'lodash-es';
 import { AssetAttributeDefinition, AttributeNameSchema, GetLogger, SCHEME_OVERRIDE } from 'pandora-common';
 import { join } from 'path';
-import { ZodIssueCode } from 'zod';
 import { SRC_DIR } from './config.ts';
 import { SetCurrentContext } from './tools/context.ts';
 import { DefineResource } from './tools/resources.ts';
@@ -820,7 +819,7 @@ export function LoadAttributeNameValidation() {
 		}
 		if (!attributes.includes(attribute)) {
 			ctx.addIssue({
-				code: ZodIssueCode.custom,
+				code: 'custom',
 				message: `Attribute '${attribute}' is not a valid attribute name`,
 			});
 		}

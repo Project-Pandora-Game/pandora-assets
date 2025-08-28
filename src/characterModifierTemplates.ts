@@ -13,6 +13,7 @@ import {
 	type CharacterModifierType,
 	type Satisfies,
 } from 'pandora-common';
+import * as z from 'zod';
 import { AssetDatabase } from './tools/assetDatabase.ts';
 
 //#region Character modifier template definitions
@@ -268,7 +269,7 @@ export function LoadCharacterModifierTemplates(): AssetSpecificCharacterModifier
 		for (const template of v) {
 			const parsedName = CharacterModifierNameSchema.safeParse(template.name);
 			if (!parsedName.success) {
-				logger.warning(`Template '${template.name}' for modifier type ${k} has invalid name:\n`, parsedName.error.toString());
+				logger.warning(`Template '${template.name}' for modifier type ${k} has invalid name:\n`, z.prettifyError(parsedName.error));
 			} else {
 				Assert(parsedName.data === template.name);
 			}
@@ -290,7 +291,7 @@ export function LoadCharacterModifierTemplates(): AssetSpecificCharacterModifier
 				if (condition.type === 'hasItemOfAsset') {
 					const parsedId = AssetIdSchema.safeParse(condition.assetId);
 					if (!parsedId.success) {
-						logger.warning(`Template '${template.name}' for modifier type ${k}:\n\t'${condition.assetId}' is not a valid asset id:\n`, parsedId.error.toString());
+						logger.warning(`Template '${template.name}' for modifier type ${k}:\n\t'${condition.assetId}' is not a valid asset id:\n`, z.prettifyError(parsedId.error));
 					} else {
 						const asset = AssetDatabase.assets.get(parsedId.data);
 						if (asset == null) {

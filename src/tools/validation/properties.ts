@@ -18,7 +18,7 @@ import {
 	Logger,
 	type AssetDefinitionLegsPosePoseLimit,
 } from 'pandora-common';
-import { ZodEnum } from 'zod';
+import * as z from 'zod';
 import { ATTRIBUTES_DEFINITION, AttributeNames } from '../../attributes.ts';
 
 export interface PropertiesValidationMetadata {
@@ -176,7 +176,7 @@ function ValidateAssetDefinitionLegsLimit(logger: Logger, context: string, { upp
 	ValidateAssetDefinitionEnumPoseLimit(logger, `${context}.pose`, LegsPoseSchema, pose);
 }
 
-function ValidateAssetDefinitionEnumPoseLimit<E extends [string, ...string[]]>(logger: Logger, context: string, _schema: ZodEnum<E>, value: E[number] | readonly (E[number])[] | undefined): void {
+function ValidateAssetDefinitionEnumPoseLimit<E extends z.util.EnumLike>(logger: Logger, context: string, _schema: z.ZodEnum<E>, value: E[keyof E] | readonly (E[keyof E])[] | undefined): void {
 	if (value != null) {
 		if (IsReadonlyArray(value)) {
 			const uniqueValues = new Set(value);

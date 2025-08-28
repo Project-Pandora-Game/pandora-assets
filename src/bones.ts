@@ -1,7 +1,6 @@
 // TODO: Re-add `import type` after ESLint gets fixed
 import { Immutable } from 'immer';
 import { BoneDefinitionCompressed, BoneNameSchema, BoneType, CoordinatesCompressed, IsNotNullable, SCHEME_OVERRIDE, type InversePosingHandle } from 'pandora-common';
-import { ZodIssueCode } from 'zod';
 
 const boneDefinitionImpl = {
 	arm_l: {
@@ -99,7 +98,7 @@ export function LoadBoneNameValidation() {
 	BoneNameSchema[SCHEME_OVERRIDE]((bone, ctx) => {
 		if (!bones.includes(bone)) {
 			ctx.addIssue({
-				code: ZodIssueCode.custom,
+				code: 'custom',
 				message: `Bone '${bone}' is not a valid bone name`,
 			});
 		}
