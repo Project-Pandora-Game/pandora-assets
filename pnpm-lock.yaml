@@ -28,7 +28,7 @@ importers:
         version: 4.17.21
       pandora-common:
         specifier: github:Project-Pandora-Game/pandora#master&path:pandora-common
-        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/593b523ee38bf588b69840947f7835848917b728#path:pandora-common
+        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/b5ea044388a8ca87b00e65ea6a19d32267687178#path:pandora-common
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -736,10 +736,6 @@ packages:
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
       typescript: '>=4.8.4 <6.0.0'
-
-  '@typescript-eslint/types@8.39.1':
-    resolution: {integrity: sha512-7sPDKQQp+S11laqTrhHqeAbsCfMkwJMrV7oTDvtDds4mEofJYir414bYKUEb8YPUm9QL3U+8f6L6YExSoAGdQw==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@typescript-eslint/types@8.41.0':
     resolution: {integrity: sha512-9EwxsWdVqh42afLbHP90n2VdHaWU/oWgbH2P0CfcNfdKL7CuKpwMQGjwev56vWu9cSKU7FWSu6r9zck6CVfnag==}
@@ -2138,8 +2134,8 @@ packages:
   package-json-from-dist@1.0.1:
     resolution: {integrity: sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/593b523ee38bf588b69840947f7835848917b728#path:pandora-common:
-    resolution: {path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/593b523ee38bf588b69840947f7835848917b728}
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/b5ea044388a8ca87b00e65ea6a19d32267687178#path:pandora-common:
+    resolution: {path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/b5ea044388a8ca87b00e65ea6a19d32267687178}
     version: 0.1.0
     engines: {node: '>=22.x'}
 
@@ -2701,9 +2697,6 @@ packages:
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
-
-  zod@3.25.76:
-    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
   zod@4.1.4:
     resolution: {integrity: sha512-2YqJuWkU6IIK9qcE4k1lLLhyZ6zFw7XVRdQGpV97jEIZwTrscUw+DY31Xczd8nwaoksyJUIxCojZXwckJovWxA==}
@@ -3327,7 +3320,7 @@ snapshots:
   '@stylistic/eslint-plugin@5.2.3(eslint@9.34.0)':
     dependencies:
       '@eslint-community/eslint-utils': 4.7.0(eslint@9.34.0)
-      '@typescript-eslint/types': 8.39.1
+      '@typescript-eslint/types': 8.41.0
       eslint: 9.34.0
       eslint-visitor-keys: 4.2.1
       espree: 10.4.0
@@ -3499,8 +3492,6 @@ snapshots:
       typescript: 5.9.2
     transitivePeerDependencies:
       - supports-color
-
-  '@typescript-eslint/types@8.39.1': {}
 
   '@typescript-eslint/types@8.41.0': {}
 
@@ -5200,7 +5191,7 @@ snapshots:
 
   package-json-from-dist@1.0.1: {}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/593b523ee38bf588b69840947f7835848917b728#path:pandora-common:
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/b5ea044388a8ca87b00e65ea6a19d32267687178#path:pandora-common:
     dependencies:
       '@types/async-lock': 1.4.2
       '@types/lodash-es': 4.17.12
@@ -5211,7 +5202,7 @@ snapshots:
       lodash-es: 4.17.21
       nanoid: 5.1.5
       type-fest: 4.41.0
-      zod: 3.25.76
+      zod: 4.1.4
 
   parent-module@1.0.1:
     dependencies:
@@ -5882,7 +5873,5 @@ snapshots:
       yargs-parser: 21.1.1
 
   yocto-queue@0.1.0: {}
-
-  zod@3.25.76: {}
 
   zod@4.1.4: {}
