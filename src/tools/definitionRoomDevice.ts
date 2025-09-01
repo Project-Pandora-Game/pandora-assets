@@ -24,9 +24,7 @@ const ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'attributes',
 	'stateFlags',
 	'blockAddRemove',
-	'blockSelfAddRemove',
 	'blockModules',
-	'blockSelfModules',
 	'overrideColorKey',
 	'excludeFromColorInheritance',
 

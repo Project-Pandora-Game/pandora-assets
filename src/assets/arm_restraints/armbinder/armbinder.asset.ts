@@ -95,7 +95,6 @@ DefineAsset({
 	effects: {
 		blockHands: true,
 	},
-	blockSelfAddRemove: true,
 	chat: {
 		actionAdd: 'SOURCE_CHARACTER slipped ITEM_ASSET_NAME over TARGET_CHARACTER_DYNAMIC_POSSESSIVE arms, lacing it tightly.',
 		actionRemove: 'SOURCE_CHARACTER loosened and then slipped off ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE arms.',

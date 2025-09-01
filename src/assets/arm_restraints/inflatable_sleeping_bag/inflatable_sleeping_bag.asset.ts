@@ -108,7 +108,6 @@ DefineAsset({
 		blockSpaceLeave: true,
 		blockRoomMovement: true,
 	},
-	blockSelfAddRemove: true,
 	chat: {
 		actionAdd: 'SOURCE_CHARACTER trapped TARGET_CHARACTER_DYNAMIC_REFLEXIVE in an ITEM_ASSET_NAME.',
 		actionAddCreate: 'SOURCE_CHARACTER created an ITEM_ASSET_NAME and trapped TARGET_CHARACTER_DYNAMIC_REFLEXIVE in it.',

@@ -34,7 +34,6 @@ DefineAsset({
 	effects: {
 		blockHands: true,
 	},
-	blockSelfAddRemove: true,
 	poseLimits: {
 		arms: {
 			position: 'front',

@@ -72,12 +72,6 @@ export function ValidateAssetProperties(
 			logger.warning(`Invalid configuration: ${context}.blockModules:\n\tUnknown module '${moduleName}'`);
 		}
 	}
-
-	for (const moduleName of properties.blockSelfModules ?? []) {
-		if (!metadata.getModuleNames().includes(moduleName)) {
-			logger.warning(`Invalid configuration: ${context}.blockSelfModules:\n\tUnknown module '${moduleName}'`);
-		}
-	}
 }
 
 export function ValidateAssetPropertiesFinalize(

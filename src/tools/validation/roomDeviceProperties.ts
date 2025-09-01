@@ -30,20 +30,10 @@ export function ValidateRoomDeviceProperties(
 			logger.warning(`Invalid configuration: ${context}.blockModules:\n\tUnknown module '${moduleName}'`);
 		}
 	}
-	for (const moduleName of properties.blockSelfModules ?? []) {
-		if (!metadata.getModuleNames().includes(moduleName)) {
-			logger.warning(`Invalid configuration: ${context}.blockSelfModules:\n\tUnknown module '${moduleName}'`);
-		}
-	}
 
 	for (const slotName of properties.blockSlotsEnterLeave ?? []) {
 		if (!metadata.getSlotNames().includes(slotName)) {
 			logger.warning(`Invalid configuration: ${context}.blockSlotsEnterLeave:\n\tUnknown slot '${slotName}'`);
-		}
-	}
-	for (const slotName of properties.blockSlotsSelfEnterLeave ?? []) {
-		if (!metadata.getSlotNames().includes(slotName)) {
-			logger.warning(`Invalid configuration: ${context}.blockSlotsSelfEnterLeave:\n\tUnknown slot '${slotName}'`);
 		}
 	}
 }

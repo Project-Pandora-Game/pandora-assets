@@ -1,3 +1,5 @@
+import { ItemInteractionType } from 'pandora-common';
+
 DefineAsset({
 	name: 'Latex Catsuit',
 	size: 'medium',
@@ -34,8 +36,7 @@ DefineAsset({
 			name: 'Lock',
 			lockedProperties: {
 				blockAddRemove: true,
-				blockSelfModules: [
-					'length',
+				blockModules: [
 					'variants',
 					'addOns',
 				],
@@ -44,6 +45,7 @@ DefineAsset({
 		length: {
 			type: 'typed',
 			name: 'Length',
+			interactionType: ItemInteractionType.ADD_REMOVE,
 			variants: [
 				{
 					id: 'short',
