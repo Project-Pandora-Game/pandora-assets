@@ -23,7 +23,7 @@ DefineRoomDeviceAsset({
 						character_rotation: [[-15, 15]],
 					},
 					legs: {
-						pose: ['kneeling'],
+						pose: 'kneeling',
 					},
 				},
 			},
