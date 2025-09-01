@@ -28,7 +28,7 @@ importers:
         version: 4.17.21
       pandora-common:
         specifier: github:Project-Pandora-Game/pandora#master&path:pandora-common
-        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/b5ea044388a8ca87b00e65ea6a19d32267687178#path:pandora-common
+        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/33063c1346f14a7d1ffc6fd895fba3222a80149b#path:pandora-common
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -2134,8 +2134,8 @@ packages:
   package-json-from-dist@1.0.1:
     resolution: {integrity: sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/b5ea044388a8ca87b00e65ea6a19d32267687178#path:pandora-common:
-    resolution: {path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/b5ea044388a8ca87b00e65ea6a19d32267687178}
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/33063c1346f14a7d1ffc6fd895fba3222a80149b#path:pandora-common:
+    resolution: {path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/33063c1346f14a7d1ffc6fd895fba3222a80149b}
     version: 0.1.0
     engines: {node: '>=22.x'}
 
@@ -2700,6 +2700,9 @@ packages:
 
   zod@4.1.4:
     resolution: {integrity: sha512-2YqJuWkU6IIK9qcE4k1lLLhyZ6zFw7XVRdQGpV97jEIZwTrscUw+DY31Xczd8nwaoksyJUIxCojZXwckJovWxA==}
+
+  zod@4.1.5:
+    resolution: {integrity: sha512-rcUUZqlLJgBC33IT3PNMgsCq6TzLQEG/Ei/KTCU0PedSWRMAXoOUN+4t/0H+Q8bdnLPdqUYnvboJT0bn/229qg==}
 
 snapshots:
 
@@ -5191,7 +5194,7 @@ snapshots:
 
   package-json-from-dist@1.0.1: {}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/b5ea044388a8ca87b00e65ea6a19d32267687178#path:pandora-common:
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/33063c1346f14a7d1ffc6fd895fba3222a80149b#path:pandora-common:
     dependencies:
       '@types/async-lock': 1.4.2
       '@types/lodash-es': 4.17.12
@@ -5202,7 +5205,7 @@ snapshots:
       lodash-es: 4.17.21
       nanoid: 5.1.5
       type-fest: 4.41.0
-      zod: 4.1.4
+      zod: 4.1.5
 
   parent-module@1.0.1:
     dependencies:
@@ -5875,3 +5878,5 @@ snapshots:
   yocto-queue@0.1.0: {}
 
   zod@4.1.4: {}
+
+  zod@4.1.5: {}
