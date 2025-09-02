@@ -100,6 +100,23 @@ DefineBodypart({
 				},
 			],
 		},
+		backColor: {
+			type: 'typed',
+			name: 'Above Butt Color',
+			expression: 'Above Butt Color',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
+			variants: [
+				{
+					id: 'noColor',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'medium',
+					name: 'Colored',
+				},
+			],
+		},
 		breastColor_l: {
 			type: 'typed',
 			name: 'Left Breast Color',
@@ -134,6 +151,23 @@ DefineBodypart({
 				},
 			],
 		},
+		stomachColor: {
+			type: 'typed',
+			name: 'Stomach Color',
+			expression: 'Stomach Color',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
+			variants: [
+				{
+					id: 'noColor',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'medium',
+					name: 'Colored',
+				},
+			],
+		},
 		sexColor: {
 			type: 'typed',
 			name: 'Sex Color',
@@ -148,6 +182,90 @@ DefineBodypart({
 				{
 					id: 'medium',
 					name: 'Colored',
+				},
+			],
+		},
+		thighsFrontColor_l: {
+			type: 'typed',
+			name: 'Left Front Thigh Color',
+			expression: 'Left Front Thigh Color',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
+			variants: [
+				{
+					id: 'noColor',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'medium',
+					name: 'Medium',
+				},
+				{
+					id: 'strong',
+					name: 'Strong',
+				},
+			],
+		},
+		thighsFrontColor_r: {
+			type: 'typed',
+			name: 'Right Front Thigh Color',
+			expression: 'Right Front Thigh Color',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
+			variants: [
+				{
+					id: 'noColor',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'medium',
+					name: 'Medium',
+				},
+				{
+					id: 'strong',
+					name: 'Strong',
+				},
+			],
+		},
+		thighsBackColor_l: {
+			type: 'typed',
+			name: 'Left Back Thigh Color',
+			expression: 'Left Back Thigh Color',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
+			variants: [
+				{
+					id: 'noColor',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'medium',
+					name: 'Medium',
+				},
+				{
+					id: 'strong',
+					name: 'Strong',
+				},
+			],
+		},
+		thighsBackColor_r: {
+			type: 'typed',
+			name: 'Right Back Thigh Color',
+			expression: 'Right Back Thigh Color',
+			interactionType: ItemInteractionType.ACCESS_ONLY,
+			variants: [
+				{
+					id: 'noColor',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'medium',
+					name: 'Medium',
+				},
+				{
+					id: 'strong',
+					name: 'Strong',
 				},
 			],
 		},
