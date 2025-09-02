@@ -100,23 +100,6 @@ DefineBodypart({
 				},
 			],
 		},
-		backColor: {
-			type: 'typed',
-			name: 'Above Butt Color',
-			expression: 'Above Butt Color',
-			interactionType: ItemInteractionType.ACCESS_ONLY,
-			variants: [
-				{
-					id: 'noColor',
-					name: 'None',
-					default: true,
-				},
-				{
-					id: 'medium',
-					name: 'Colored',
-				},
-			],
-		},
 		breastColor_l: {
 			type: 'typed',
 			name: 'Left Breast Color',
@@ -138,23 +121,6 @@ DefineBodypart({
 			type: 'typed',
 			name: 'Right Breast Color',
 			expression: 'Right Breast Color',
-			interactionType: ItemInteractionType.ACCESS_ONLY,
-			variants: [
-				{
-					id: 'noColor',
-					name: 'None',
-					default: true,
-				},
-				{
-					id: 'medium',
-					name: 'Colored',
-				},
-			],
-		},
-		stomachColor: {
-			type: 'typed',
-			name: 'Stomach Color',
-			expression: 'Stomach Color',
 			interactionType: ItemInteractionType.ACCESS_ONLY,
 			variants: [
 				{
