@@ -145,6 +145,9 @@ DefineAsset({
 						stateFlags: {
 							provides: ['chain'],
 						},
+						effects: {
+							blockRoomMovement: true,
+						},
 					},
 				},
 			],
