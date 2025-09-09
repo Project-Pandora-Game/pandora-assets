@@ -6,6 +6,93 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"type": "mesh",
+			"name": "chain",
+			"priority": "BELOW_ARM_LEFT",
+			"points": "static",
+			"mirror": 1,
+			"colorizationKey": "chain",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "leathercuffs_chain.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "chained_front"
+								},
+								{
+									"bone": "arm_l",
+									"operator": ">=",
+									"value": 0
+								}
+							],
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "chained_back"
+								},
+								{
+									"bone": "arm_l",
+									"operator": ">=",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "leathercuffs_chain_up.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "chained_front"
+								},
+								{
+									"bone": "arm_l",
+									"operator": "<",
+									"value": 0
+								}
+							],
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "chained_back"
+								},
+								{
+									"bone": "arm_l",
+									"operator": "<",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "leathercuffs_chain_reverse_prayer.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "reverse_prayer"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "autoMesh",
 			"name": "Front",
 			"points": "body",
