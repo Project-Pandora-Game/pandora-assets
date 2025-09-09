@@ -333,6 +333,9 @@ DefineAsset({
 								hogtie_anchor_point: 'Legs cannot be hogtied without a knot on back or wrist tied back',
 							},
 						},
+						effects: {
+							blockRoomMovement: true,
+						},
 					},
 				},
 			],
