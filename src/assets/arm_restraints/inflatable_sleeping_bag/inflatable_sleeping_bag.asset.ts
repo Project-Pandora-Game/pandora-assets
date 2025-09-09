@@ -3,6 +3,7 @@ DefineAsset({
 	size: 'medium',
 	graphics: 'graphics.json',
 	requireFreeHandsToUseDefault: true,
+	assetPreferenceDefault: 'maybe',
 	colorization: {
 		bag: {
 			name: 'Bag',

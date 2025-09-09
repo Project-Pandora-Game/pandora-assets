@@ -42,7 +42,7 @@ DefineAsset({
 				blockModules: ['barWidth'],
 				stateFlags: {
 					requires: {
-						chain: 'Locking requires a bar to lock.',
+						bar: 'Locking requires a bar to lock.',
 					},
 				},
 			},
@@ -152,10 +152,6 @@ DefineAsset({
 						stateFlags: {
 							provides: ['chain'],
 						},
-						effects: {
-							blockSpaceLeave: true,
-							blockRoomMovement: true,
-						},
 					},
 				},
 			],
@@ -178,6 +174,9 @@ DefineAsset({
 								leg_l: -10,
 							},
 						},
+						stateFlags: {
+							provides: ['bar'],
+						},
 					},
 				},
 				{
@@ -189,6 +188,9 @@ DefineAsset({
 								leg_r: -18,
 								leg_l: -18,
 							},
+						},
+						stateFlags: {
+							provides: ['bar'],
 						},
 					},
 				},
@@ -205,9 +207,8 @@ DefineAsset({
 								pose: 'standing',
 							},
 						},
-						effects: {
-							blockSpaceLeave: true,
-							blockRoomMovement: true,
+						stateFlags: {
+							provides: ['bar'],
 						},
 					},
 				},
