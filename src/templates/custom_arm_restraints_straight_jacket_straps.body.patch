@@ -1,6 +1,90 @@
 --- body.json
 +++ custom_arm_restraints_straight_jacket_straps.json
-@@ -449,8 +449,8 @@
+@@ -249,42 +249,6 @@
+ 				}
+ 			]
+ 		},
+-		"body": {
+-			"name": "Bodypart",
+-			"parts": [
+-				{
+-					"id": "body",
+-					"priority": "BODY",
+-					"pointType": [
+-						"body",
+-						"body_l",
+-						"body_r",
+-						"bodyarm_l",
+-						"bodyarm_r",
+-						"bodyleg_l",
+-						"bodyleg_r"
+-					]
+-				},
+-				{
+-					"id": "arms",
+-					"priority": "ARM_LEFT",
+-					"pointType": [
+-						"bodyarm_l",
+-						"arm_l"
+-					],
+-					"mirror": 1
+-				},
+-				{
+-					"id": "legs",
+-					"priority": "LEG_LEFT",
+-					"pointType": [
+-						"bodyleg_l",
+-						"leg_l"
+-					],
+-					"mirror": 1
+-				}
+-			]
+-		},
+ 		"aboveBodyMirror": {
+ 			"name": "Above body (mirrored)",
+ 			"parts": [
+@@ -386,40 +350,6 @@
+ 					"mirror": 1
+ 				}
+ 			]
+-		},
+-		"bodyMirror": {
+-			"name": "Bodypart (mirrored)",
+-			"parts": [
+-				{
+-					"id": "body",
+-					"priority": "BODY",
+-					"pointType": [
+-						"body",
+-						"body_l",
+-						"bodyarm_l",
+-						"bodyleg_l"
+-					],
+-					"mirror": 1
+-				},
+-				{
+-					"id": "arms",
+-					"priority": "ARM_LEFT",
+-					"pointType": [
+-						"bodyarm_l",
+-						"arm_l"
+-					],
+-					"mirror": 1
+-				},
+-				{
+-					"id": "legs",
+-					"priority": "LEG_LEFT",
+-					"pointType": [
+-						"bodyleg_l",
+-						"leg_l"
+-					],
+-					"mirror": 1
+-				}
+-			]
+ 		}
+ 	},
+ 	"points": [
+@@ -635,8 +565,8 @@
  		},
  		{
  			"pos": [
@@ -11,7 +95,7 @@
  			],
  			"mirror": true,
  			"pointType": "arm_r",
-@@ -1133,8 +1133,8 @@
+@@ -1319,8 +1249,8 @@
  		},
  		{
  			"pos": [
@@ -22,7 +106,7 @@
  			],
  			"mirror": true,
  			"pointType": "arm_r",
-@@ -1252,8 +1252,8 @@
+@@ -1438,8 +1368,8 @@
  		},
  		{
  			"pos": [
@@ -33,7 +117,7 @@
  			],
  			"mirror": true,
  			"pointType": "arm_r",
-@@ -2877,8 +2877,8 @@
+@@ -3063,8 +2993,8 @@
  		},
  		{
  			"pos": [

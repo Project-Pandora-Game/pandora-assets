@@ -4,20 +4,24 @@
 			"allowedPriorities": [
 				"BELOW_ARM_LEFT",
 				"BELOW_BACK_HAIR",
+				"ABOVE_BACK_HAIR",
 				"BELOW_BODY",
 				"BODY",
 				"BELOW_BREASTS",
-				"ABOVE_BODY"
+				"ABOVE_BODY",
+				"ABOVE_FRONT_HAIR"
 			]
 		},
 		"body_l": {
 			"allowedPriorities": [
 				"BELOW_ARM_LEFT",
 				"BELOW_BACK_HAIR",
+				"ABOVE_BACK_HAIR",
 				"BELOW_BODY",
 				"BODY",
 				"BELOW_BREASTS",
-				"ABOVE_BODY"
+				"ABOVE_BODY",
+				"ABOVE_FRONT_HAIR"
 			],
 			"requiredPointTypes": [
 				"body",
@@ -29,10 +33,12 @@
 			"allowedPriorities": [
 				"BELOW_ARM_LEFT",
 				"BELOW_BACK_HAIR",
+				"ABOVE_BACK_HAIR",
 				"BELOW_BODY",
 				"BODY",
 				"BELOW_BREASTS",
-				"ABOVE_BODY"
+				"ABOVE_BODY",
+				"ABOVE_FRONT_HAIR"
 			],
 			"requiredPointTypes": [
 				"body",
@@ -43,26 +49,30 @@
 		"bodyarm_l": {
 			"allowedPriorities": [
 				"BELOW_BACK_HAIR",
+				"ABOVE_BACK_HAIR",
 				"BELOW_BODY",
 				"BODY",
 				"BELOW_BREASTS",
 				"ABOVE_BODY",
 				"BELOW_ARM_LEFT",
 				"ARM_LEFT",
-				"ABOVE_ARM_LEFT"
+				"ABOVE_ARM_LEFT",
+				"ABOVE_FRONT_HAIR"
 			]
 		},
 		"bodyarm_r": {
 			"allowedPriorities": [
 				"BELOW_ARM_LEFT",
 				"BELOW_BACK_HAIR",
+				"ABOVE_BACK_HAIR",
 				"BELOW_BODY",
 				"BODY",
 				"BELOW_BREASTS",
 				"ABOVE_BODY",
 				"BELOW_ARM_RIGHT",
 				"ARM_RIGHT",
-				"ABOVE_ARM_RIGHT"
+				"ABOVE_ARM_RIGHT",
+				"ABOVE_FRONT_HAIR"
 			]
 		},
 		"arm_l": {
@@ -89,26 +99,30 @@
 			"allowedPriorities": [
 				"BELOW_ARM_LEFT",
 				"BELOW_BACK_HAIR",
+				"ABOVE_BACK_HAIR",
 				"BELOW_BODY",
 				"BODY",
 				"BELOW_BREASTS",
 				"ABOVE_BODY",
 				"BELOW_LEG_LEFT",
 				"LEG_LEFT",
-				"ABOVE_LEG_LEFT"
+				"ABOVE_LEG_LEFT",
+				"ABOVE_FRONT_HAIR"
 			]
 		},
 		"bodyleg_r": {
 			"allowedPriorities": [
 				"BELOW_ARM_LEFT",
 				"BELOW_BACK_HAIR",
+				"ABOVE_BACK_HAIR",
 				"BELOW_BODY",
 				"BODY",
 				"BELOW_BREASTS",
 				"ABOVE_BODY",
 				"BELOW_LEG_RIGHT",
 				"LEG_RIGHT",
-				"ABOVE_LEG_RIGHT"
+				"ABOVE_LEG_RIGHT",
+				"ABOVE_FRONT_HAIR"
 			]
 		},
 		"leg_l": {
@@ -269,6 +283,178 @@
 				{
 					"id": "legs",
 					"priority": "BELOW_LEG_LEFT",
+					"pointType": [
+						"bodyleg_l",
+						"leg_l"
+					],
+					"mirror": 1
+				}
+			]
+		},
+		"body": {
+			"name": "Bodypart",
+			"parts": [
+				{
+					"id": "body",
+					"priority": "BODY",
+					"pointType": [
+						"body",
+						"body_l",
+						"body_r",
+						"bodyarm_l",
+						"bodyarm_r",
+						"bodyleg_l",
+						"bodyleg_r"
+					]
+				},
+				{
+					"id": "arms",
+					"priority": "ARM_LEFT",
+					"pointType": [
+						"bodyarm_l",
+						"arm_l"
+					],
+					"mirror": 1
+				},
+				{
+					"id": "legs",
+					"priority": "LEG_LEFT",
+					"pointType": [
+						"bodyleg_l",
+						"leg_l"
+					],
+					"mirror": 1
+				}
+			]
+		},
+		"aboveBodyMirror": {
+			"name": "Above body (mirrored)",
+			"parts": [
+				{
+					"id": "body",
+					"priority": "ABOVE_BODY",
+					"pointType": [
+						"body",
+						"body_l",
+						"bodyarm_l",
+						"bodyleg_l"
+					],
+					"mirror": 1
+				},
+				{
+					"id": "arms",
+					"priority": "ABOVE_ARM_LEFT",
+					"pointType": [
+						"bodyarm_l",
+						"arm_l"
+					],
+					"mirror": 1
+				},
+				{
+					"id": "legs",
+					"priority": "ABOVE_LEG_LEFT",
+					"pointType": [
+						"bodyleg_l",
+						"leg_l"
+					],
+					"mirror": 1
+				}
+			]
+		},
+		"belowBreastsMirror": {
+			"name": "Below breasts (mirrored)",
+			"parts": [
+				{
+					"id": "body",
+					"priority": "BELOW_BREASTS",
+					"pointType": [
+						"body",
+						"body_l",
+						"bodyarm_l",
+						"bodyleg_l"
+					],
+					"mirror": 1
+				},
+				{
+					"id": "arms",
+					"priority": "ABOVE_ARM_LEFT",
+					"pointType": [
+						"bodyarm_l",
+						"arm_l"
+					],
+					"mirror": 1
+				},
+				{
+					"id": "legs",
+					"priority": "ABOVE_LEG_LEFT",
+					"pointType": [
+						"bodyleg_l",
+						"leg_l"
+					],
+					"mirror": 1
+				}
+			]
+		},
+		"belowBodyMirror": {
+			"name": "Below body (mirrored)",
+			"parts": [
+				{
+					"id": "body",
+					"priority": "BELOW_BODY",
+					"pointType": [
+						"body",
+						"body_l",
+						"bodyarm_l",
+						"bodyleg_l"
+					],
+					"mirror": 1
+				},
+				{
+					"id": "arms",
+					"priority": "BELOW_ARM_LEFT",
+					"pointType": [
+						"bodyarm_l",
+						"arm_l"
+					],
+					"mirror": 1
+				},
+				{
+					"id": "legs",
+					"priority": "BELOW_LEG_LEFT",
+					"pointType": [
+						"bodyleg_l",
+						"leg_l"
+					],
+					"mirror": 1
+				}
+			]
+		},
+		"bodyMirror": {
+			"name": "Bodypart (mirrored)",
+			"parts": [
+				{
+					"id": "body",
+					"priority": "BODY",
+					"pointType": [
+						"body",
+						"body_l",
+						"bodyarm_l",
+						"bodyleg_l"
+					],
+					"mirror": 1
+				},
+				{
+					"id": "arms",
+					"priority": "ARM_LEFT",
+					"pointType": [
+						"bodyarm_l",
+						"arm_l"
+					],
+					"mirror": 1
+				},
+				{
+					"id": "legs",
+					"priority": "LEG_LEFT",
 					"pointType": [
 						"bodyleg_l",
 						"leg_l"
