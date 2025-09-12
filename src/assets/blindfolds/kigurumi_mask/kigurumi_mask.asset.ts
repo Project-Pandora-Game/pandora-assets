@@ -28,11 +28,13 @@ DefineAsset({
 			name: 'Eye color left',
 			default: '#2D589B',
 			minAlpha: 0.8,
+			migrateFrom: ['eyeColor'],
 		},
 		eyeColor_r: {
 			name: 'Eye color right',
 			default: '#2D589B',
 			minAlpha: 0.8,
+			migrateFrom: ['eyeColor'],
 		},
 		lashes: {
 			name: 'Eyelashes',

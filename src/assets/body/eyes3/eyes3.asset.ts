@@ -7,10 +7,12 @@ DefineBodypart({
 		eyeColor_l: {
 			name: 'Eye color left',
 			default: '#2D589B',
+			migrateFrom: ['eyeColor'],
 		},
 		eyeColor_r: {
 			name: 'Eye color right',
 			default: '#2D589B',
+			migrateFrom: ['eyeColor'],
 		},
 		lashes: {
 			name: 'Lashes',
