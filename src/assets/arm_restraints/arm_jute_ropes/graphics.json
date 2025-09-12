@@ -795,6 +795,23 @@
 				"image": "",
 				"overrides": [
 					{
+						"image": "rope_end_180.png",
+						"condition": [
+							[
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "wrists_high"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "=",
+									"value": 180
+								}
+							]
+						]
+					},
+					{
 						"image": "rope_end_short.png",
 						"condition": [
 							[
@@ -824,6 +841,106 @@
 									"module": "end",
 									"operator": "=",
 									"value": "normal"
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_right.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "wrists_high"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": ">",
+									"value": 26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_left.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "wrists_high"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "<",
+									"value": -26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_left.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "wrists_high"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": ">",
+									"value": 26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_right.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "wrists_high"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "<",
+									"value": -26
 								}
 							]
 						]
@@ -863,6 +980,33 @@
 				"image": "",
 				"overrides": [
 					{
+						"image": "rope_end_180.png",
+						"condition": [
+							[
+								{
+									"module": "wrists",
+									"operator": "!=",
+									"value": "linked"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "arms_high"
+								},
+								{
+									"module": "hogtie",
+									"operator": "!=",
+									"value": "hogtie_arms"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "=",
+									"value": 180
+								}
+							]
+						]
+					},
+					{
 						"image": "rope_end_short.png",
 						"condition": [
 							[
@@ -912,6 +1056,146 @@
 									"module": "hogtie",
 									"operator": "!=",
 									"value": "hogtie_arms"
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_right.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "wrists",
+									"operator": "!=",
+									"value": "linked"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "arms_high"
+								},
+								{
+									"module": "hogtie",
+									"operator": "!=",
+									"value": "hogtie_arms"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": ">",
+									"value": 26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_left.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "wrists",
+									"operator": "!=",
+									"value": "linked"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "arms_high"
+								},
+								{
+									"module": "hogtie",
+									"operator": "!=",
+									"value": "hogtie_arms"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "<",
+									"value": -26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_left.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "wrists",
+									"operator": "!=",
+									"value": "linked"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "arms_high"
+								},
+								{
+									"module": "hogtie",
+									"operator": "!=",
+									"value": "hogtie_arms"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": ">",
+									"value": 26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_right.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "wrists",
+									"operator": "!=",
+									"value": "linked"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "arms_high"
+								},
+								{
+									"module": "hogtie",
+									"operator": "!=",
+									"value": "hogtie_arms"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "<",
+									"value": -26
 								}
 							]
 						]
@@ -961,6 +1245,33 @@
 				"image": "",
 				"overrides": [
 					{
+						"image": "rope_end_180.png",
+						"condition": [
+							[
+								{
+									"module": "wrists",
+									"operator": "!=",
+									"value": "linked"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "arms_high"
+								},
+								{
+									"module": "hogtie",
+									"operator": "=",
+									"value": "hogtie_arms"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "=",
+									"value": 180
+								}
+							]
+						]
+					},
+					{
 						"image": "rope_end_short.png",
 						"condition": [
 							[
@@ -1010,6 +1321,146 @@
 									"module": "hogtie",
 									"operator": "=",
 									"value": "hogtie_arms"
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_right.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "wrists",
+									"operator": "!=",
+									"value": "linked"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "arms_high"
+								},
+								{
+									"module": "hogtie",
+									"operator": "=",
+									"value": "hogtie_arms"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": ">",
+									"value": 26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_left.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "wrists",
+									"operator": "!=",
+									"value": "linked"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "arms_high"
+								},
+								{
+									"module": "hogtie",
+									"operator": "=",
+									"value": "hogtie_arms"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "<",
+									"value": -26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_left.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "wrists",
+									"operator": "!=",
+									"value": "linked"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "arms_high"
+								},
+								{
+									"module": "hogtie",
+									"operator": "=",
+									"value": "hogtie_arms"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": ">",
+									"value": 26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_right.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "wrists",
+									"operator": "!=",
+									"value": "linked"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "arms_high"
+								},
+								{
+									"module": "hogtie",
+									"operator": "=",
+									"value": "hogtie_arms"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "<",
+									"value": -26
 								}
 							]
 						]
@@ -1059,6 +1510,28 @@
 				"image": "",
 				"overrides": [
 					{
+						"image": "rope_end_180.png",
+						"condition": [
+							[
+								{
+									"module": "wrists",
+									"operator": "=",
+									"value": "linked"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "arms_high"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "=",
+									"value": 180
+								}
+							]
+						]
+					},
+					{
 						"image": "rope_end_short.png",
 						"condition": [
 							[
@@ -1098,6 +1571,126 @@
 									"module": "arms",
 									"operator": "=",
 									"value": "arms_high"
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_right.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "wrists",
+									"operator": "=",
+									"value": "linked"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "arms_high"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": ">",
+									"value": 26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_left.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "wrists",
+									"operator": "=",
+									"value": "linked"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "arms_high"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "<",
+									"value": -26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_left.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "wrists",
+									"operator": "=",
+									"value": "linked"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "arms_high"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": ">",
+									"value": 26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_right.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "wrists",
+									"operator": "=",
+									"value": "linked"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "arms_high"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "<",
+									"value": -26
 								}
 							]
 						]
@@ -1182,6 +1775,18 @@
 						]
 					},
 					{
+						"image": "rope_end_180.png",
+						"condition": [
+							[
+								{
+									"bone": "character_rotation",
+									"operator": "=",
+									"value": 180
+								}
+							]
+						]
+					},
+					{
 						"image": "rope_end_short.png",
 						"condition": [
 							[
@@ -1201,6 +1806,86 @@
 									"module": "end",
 									"operator": "=",
 									"value": "normal"
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_right.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": ">",
+									"value": 26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_left.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "<",
+									"value": -26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_left.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": ">",
+									"value": 26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_right.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "<",
+									"value": -26
 								}
 							]
 						]
@@ -1422,6 +2107,23 @@
 				"image": "",
 				"overrides": [
 					{
+						"image": "rope_end_180.png",
+						"condition": [
+							[
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "armbinder"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "=",
+									"value": 180
+								}
+							]
+						]
+					},
+					{
 						"image": "rope_end_short.png",
 						"condition": [
 							[
@@ -1451,6 +2153,106 @@
 									"module": "arms",
 									"operator": "=",
 									"value": "armbinder"
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_right.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "armbinder"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": ">",
+									"value": 26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_left.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "armbinder"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "<",
+									"value": -26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_left.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "armbinder"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": ">",
+									"value": 26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_right.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "armbinder"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "<",
+									"value": -26
 								}
 							]
 						]
@@ -1801,6 +2603,28 @@
 				"image": "",
 				"overrides": [
 					{
+						"image": "rope_end_180.png",
+						"condition": [
+							[
+								{
+									"module": "end",
+									"operator": "!=",
+									"value": "short"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "=",
+									"value": 180
+								}
+							]
+						]
+					},
+					{
 						"image": "rope_end_normal.png",
 						"condition": [
 							[
@@ -1813,6 +2637,106 @@
 									"module": "end",
 									"operator": "=",
 									"value": "normal"
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_right.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": ">",
+									"value": 26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_left.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "<",
+									"value": -26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_left.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": ">",
+									"value": 26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_right.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "<",
+									"value": -26
 								}
 							]
 						]
@@ -1932,6 +2856,28 @@
 				"image": "",
 				"overrides": [
 					{
+						"image": "rope_end_180.png",
+						"condition": [
+							[
+								{
+									"module": "end",
+									"operator": "!=",
+									"value": "short"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_back"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "=",
+									"value": 180
+								}
+							]
+						]
+					},
+					{
 						"image": "rope_end_normal.png",
 						"condition": [
 							[
@@ -1944,6 +2890,106 @@
 									"module": "end",
 									"operator": "=",
 									"value": "normal"
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_right.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_back"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": ">",
+									"value": 26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_left.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_back"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "<",
+									"value": -26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_left.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_back"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": ">",
+									"value": 26
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_right.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_back"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "<",
+									"value": -26
 								}
 							]
 						]
