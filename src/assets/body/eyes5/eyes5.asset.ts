@@ -15,10 +15,12 @@ DefineBodypart({
 		iris_l: {
 			name: 'Iris left',
 			default: '#448E32',
+			migrateFrom: ['iris'],
 		},
 		iris_r: {
 			name: 'Iris right',
 			default: '#448E32',
+			migrateFrom: ['iris'],
 		},
 		lashes: {
 			name: 'Lashes',
