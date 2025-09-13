@@ -119,6 +119,9 @@ DefineAsset({
 								leg_l: -30,
 							},
 						},
+						effects: {
+							blockRoomMovement: true,
+						},
 					},
 				},
 			],

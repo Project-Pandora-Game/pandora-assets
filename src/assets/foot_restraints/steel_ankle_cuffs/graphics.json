@@ -332,6 +332,221 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"type": "mesh",
+			"name": "chain behind",
+			"priority": "BELOW_LEG_LEFT",
+			"points": "static",
+			"pointType": [
+				"static",
+				"static_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "chains",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "steelanklecuffs_chain_spread.png",
+						"condition": [
+							[
+								{
+									"legs": "standing"
+								},
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "chainNormal"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "=",
+									"value": -3
+								}
+							]
+						]
+					},
+					{
+						"image": "steelanklecuffs_chain.png",
+						"condition": [
+							[
+								{
+									"legs": "standing"
+								},
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "chainNormal"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "=",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "steelanklecuffs_chain_closed.png",
+						"condition": [
+							[
+								{
+									"legs": "standing"
+								},
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "chainNormal"
+								},
+								{
+									"bone": "leg_l",
+									"operator": ">",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "steelanklecuffs_chain_short.png",
+						"condition": [
+							[
+								{
+									"legs": "standing"
+								},
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "short"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<",
+									"value": 2
+								}
+							]
+						]
+					},
+					{
+						"image": "steelanklecuffs_chain_sitting_short.png",
+						"condition": [
+							[
+								{
+									"legs": "sitting"
+								},
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "short"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<",
+									"value": 2
+								}
+							]
+						]
+					},
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "short"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "=",
+									"value": 2
+								},
+								{
+									"bone": "leg_r",
+									"operator": "=",
+									"value": 2
+								}
+							]
+						]
+					},
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "clipped"
+								}
+							]
+						]
+					},
+					{
+						"image": "steelanklecuffs_chain_sitting_spread.png",
+						"condition": [
+							[
+								{
+									"legs": "sitting"
+								},
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "chainNormal"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "=",
+									"value": -3
+								}
+							]
+						]
+					},
+					{
+						"image": "steelanklecuffs_chain_sitting.png",
+						"condition": [
+							[
+								{
+									"legs": "sitting"
+								},
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "chainNormal"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "=",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "steelanklecuffs_chain_sitting_closed.png",
+						"condition": [
+							[
+								{
+									"legs": "sitting"
+								},
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "chainNormal"
+								},
+								{
+									"bone": "leg_l",
+									"operator": ">",
+									"value": 0
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "autoMesh",
 			"name": "Front",
 			"points": "body",
