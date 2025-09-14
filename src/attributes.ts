@@ -771,6 +771,11 @@ const ATTRIBUTES_DEFINITION_BASE = DefineAttributes({
 		description: 'A pillar or pole where the model can be tied to',
 		useAsAssetPreference: false,
 	},
+	Rope_strappado_anchor_point: {
+		name: 'Armbinder rope tie',
+		description: 'A rope tying the arms to which a strappado can be held',
+		useAsAssetPreference: false,
+	},
 });
 
 //#endregion

@@ -211,6 +211,9 @@ DefineAsset({
 								upper: 'right',
 							},
 						},
+						attributes: {
+							provides: ['Rope_strappado_anchor_point'],
+						},
 						stateFlags: {
 							provides: [
 								'uncuffed_hands',

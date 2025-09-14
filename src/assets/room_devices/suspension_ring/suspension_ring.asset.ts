@@ -134,7 +134,7 @@ DefineRoomDeviceAsset({
 						slotProperties: {
 							under_ring: {
 								stateFlags: {
-									provides: ['free_wrists'],
+									provides: ['free_wrists', 'not_strappado'],
 								},
 							},
 						},
@@ -156,13 +156,39 @@ DefineRoomDeviceAsset({
 									},
 								},
 								stateFlags: {
-									provides: ['suspension_point'],
+									provides: ['suspension_point', 'not_strappado'],
 									requires: {
 										height_high: 'Tying wrists requires Ring in High Height',
 									},
 								},
 								effects: {
 									blockHands: true,
+								},
+							},
+						},
+					},
+				},
+				{
+					id: 'strappado',
+					name: 'Strappado',
+					properties: {
+						blockSlotsEnterLeave: ['under_ring'],
+						slotProperties: {
+							under_ring: {
+								poseLimits: {
+									legs: {
+										pose: 'standing',
+									},
+									bones: {
+										leg_l: [[-10, 10]],
+										leg_r: [[-10, 10]],
+									},
+								},
+								attributes: {
+									requires: ['Rope_strappado_anchor_point'],
+								},
+								stateFlags: {
+									provides: ['suspension_point', 'free_wrists'],
 								},
 							},
 						},
@@ -227,6 +253,7 @@ DefineRoomDeviceAsset({
 									requires: {
 										free_wrists: 'Suspension requires Wrists not tied to ring',
 										height_high: 'Suspension requires Ring in High position',
+										not_strappado: 'This pose cannot be applied while using strappado',
 									},
 								},
 							},
@@ -266,6 +293,7 @@ DefineRoomDeviceAsset({
 									requires: {
 										suspension_chest: 'Thigh cannot be tied without Chest Line Attached',
 										front_view: 'Tying Left Thigh from this side require Front-facing view',
+										not_strappado: 'This pose cannot be applied while using strappado',
 									},
 									provides: ['dangling_right_leg'],
 								},
@@ -294,6 +322,7 @@ DefineRoomDeviceAsset({
 									requires: {
 										suspension_chest: 'Thigh cannot be tied without Chest Line Attached',
 										front_view: 'Tying Right Thigh from this side require Front-facing view',
+										not_strappado: 'This pose cannot be applied while using strappado',
 									},
 									provides: ['dangling_left_leg'],
 								},
@@ -322,6 +351,7 @@ DefineRoomDeviceAsset({
 									requires: {
 										suspension_chest: 'Thigh cannot be tied without Chest Line Attached',
 										back_view: 'Tying Left Thigh from this side require Front-facing view',
+										not_strappado: 'This pose cannot be applied while using strappado',
 									},
 									provides: ['dangling_right_leg'],
 								},
@@ -350,6 +380,7 @@ DefineRoomDeviceAsset({
 									requires: {
 										suspension_chest: 'Thigh cannot be tied without Chest Line Attached',
 										back_view: 'Tying Right Thigh from this side require Front-facing view',
+										not_strappado: 'This pose cannot be applied while using strappado',
 									},
 									provides: ['dangling_left_leg'],
 								},
@@ -390,6 +421,7 @@ DefineRoomDeviceAsset({
 									requires: {
 										suspension_point: 'Ankles cannot be tied without Wrists over head or Chest Line Attached',
 										height_high: 'Tying ankles requires Ring in High Height',
+										not_strappado: 'This pose cannot be applied while using strappado',
 									},
 								},
 							},
@@ -1716,6 +1748,83 @@ DefineRoomDeviceAsset({
 								value: 'frogtie_right',
 							},
 						],
+					],
+				},
+			],
+		},
+
+		{
+			type: 'sprite',
+			image: '',
+			colorizationKey: 'rope',
+			imageOverrides: [
+				{
+					image: 'strappado_upside_down.png',
+					condition: [
+						[
+							{
+								module: 'position',
+								operator: '=',
+								value: 'front',
+							},
+							{
+								module: 'wrists_line',
+								operator: '=',
+								value: 'strappado',
+							},
+							{
+								module: 'ankles_line',
+								operator: '=',
+								value: 'ankles_upside_down',
+							},
+						],
+
+					],
+				},
+				{
+					image: 'strappado_normal_standing.png',
+					condition: [
+						[
+							{
+								module: 'position',
+								operator: '=',
+								value: 'front',
+							},
+							{
+								module: 'ring_height',
+								operator: '=',
+								value: 'normal',
+							},
+							{
+								module: 'wrists_line',
+								operator: '=',
+								value: 'strappado',
+							},
+						],
+
+					],
+				},
+				{
+					image: 'strappado_high_standing.png',
+					condition: [
+						[
+							{
+								module: 'position',
+								operator: '=',
+								value: 'front',
+							},
+							{
+								module: 'ring_height',
+								operator: '=',
+								value: 'high',
+							},
+							{
+								module: 'wrists_line',
+								operator: '=',
+								value: 'strappado',
+							},
+						],
+
 					],
 				},
 			],
@@ -3259,6 +3368,83 @@ DefineRoomDeviceAsset({
 								value: 'frogtie_right',
 							},
 						],
+					],
+				},
+			],
+		},
+
+		{
+			type: 'sprite',
+			image: '',
+			colorizationKey: 'rope',
+			imageOverrides: [
+				{
+					image: 'strappado_upside_down.png',
+					condition: [
+						[
+							{
+								module: 'position',
+								operator: '=',
+								value: 'back',
+							},
+							{
+								module: 'wrists_line',
+								operator: '=',
+								value: 'strappado',
+							},
+							{
+								module: 'ankles_line',
+								operator: '=',
+								value: 'ankles_upside_down',
+							},
+						],
+
+					],
+				},
+				{
+					image: 'strappado_normal_standing.png',
+					condition: [
+						[
+							{
+								module: 'position',
+								operator: '=',
+								value: 'back',
+							},
+							{
+								module: 'ring_height',
+								operator: '=',
+								value: 'normal',
+							},
+							{
+								module: 'wrists_line',
+								operator: '=',
+								value: 'strappado',
+							},
+						],
+
+					],
+				},
+				{
+					image: 'strappado_high_standing.png',
+					condition: [
+						[
+							{
+								module: 'position',
+								operator: '=',
+								value: 'back',
+							},
+							{
+								module: 'ring_height',
+								operator: '=',
+								value: 'high',
+							},
+							{
+								module: 'wrists_line',
+								operator: '=',
+								value: 'strappado',
+							},
+						],
+
 					],
 				},
 			],

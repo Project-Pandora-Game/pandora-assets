@@ -93,6 +93,15 @@ DefineRoomDeviceAsset({
 				{
 					id: 'extended',
 					name: 'Extended',
+					properties: {
+						slotProperties: {
+							under_winch: {
+								stateFlags: {
+									provides: ['cable_extended'],
+								},
+							},
+						},
+					},
 				},
 			],
 		},
@@ -206,6 +215,37 @@ DefineRoomDeviceAsset({
 						},
 					},
 				},
+				{
+					id: 'strappado',
+					name: 'Armbinder Strappado',
+					properties: {
+						blockSlotsEnterLeave: ['under_winch'],
+						slotProperties: {
+							under_winch: {
+								poseLimits: {
+									bones: {
+										leg_l: [[-18, 10]],
+										leg_r: [[-18, 10]],
+									},
+									legs: {
+										pose: 'standing',
+									},
+								},
+								attributes: {
+									requires: [
+										'Armbinder_chainable',
+									],
+								},
+								stateFlags: {
+									requires: {
+										cable_extended: 'Strappado requires extended cable',
+										carabiner: 'Strappado cannot be applied without an armbinder and the Carabiner attached to the Pulley',
+									},
+								},
+							},
+						},
+					},
+				},
 			],
 		},
 		spreader_bar: {
@@ -302,14 +342,45 @@ DefineRoomDeviceAsset({
 	graphicsLayers: [
 		{
 			type: 'sprite',
-			image: 'winch_cable.png',
+			image: '',
 			clipToRoom: true,
 			colorizationKey: 'cable',
 			offset: {
 				x: -16,
 				y: -1950,
 			},
+			imageOverrides: [
+				{
+					image: 'winch_cable.png',
+					condition: [
+						[
+							{
+								module: 'position',
+								operator: '=',
+								value: 'front',
+							},
+						],
+					],
+				},
+			],
 			offsetOverrides: [
+				{
+					offset: { x: -16, y: -1125 },
+					condition: [
+						[
+							{
+								module: 'cable',
+								operator: '=',
+								value: 'extended',
+							},
+							{
+								module: 'carabiner',
+								operator: '=',
+								value: 'strappado',
+							},
+						],
+					],
+				},
 				{
 					offset: { x: -16, y: -2450 },
 					condition: [
@@ -423,8 +494,20 @@ DefineRoomDeviceAsset({
 							},
 							{
 								module: 'carabiner',
-								operator: '!=',
-								value: 'none',
+								operator: '=',
+								value: 'wrist_tied',
+							},
+						],
+						[
+							{
+								module: 'attachment',
+								operator: '=',
+								value: 'carabiner',
+							},
+							{
+								module: 'carabiner',
+								operator: '=',
+								value: 'ankles_tied',
 							},
 						],
 					],
@@ -447,13 +530,44 @@ DefineRoomDeviceAsset({
 		},
 		{
 			type: 'sprite',
-			image: 'winch_pulley.png',
+			image: '',
 			colorizationKey: 'pulley',
 			offset: {
 				x: -25,
 				y: 5,
 			},
+			imageOverrides: [
+				{
+					image: 'winch_pulley.png',
+					condition: [
+						[
+							{
+								module: 'position',
+								operator: '=',
+								value: 'front',
+							},
+						],
+					],
+				},
+			],
 			offsetOverrides: [
+				{
+					offset: { x: -25, y: 835 },
+					condition: [
+						[
+							{
+								module: 'cable',
+								operator: '=',
+								value: 'extended',
+							},
+							{
+								module: 'carabiner',
+								operator: '=',
+								value: 'strappado',
+							},
+						],
+					],
+				},
 				{
 					offset: { x: -25, y: -495 },
 					condition: [
@@ -482,6 +596,11 @@ DefineRoomDeviceAsset({
 					condition: [
 						[
 							{
+								module: 'position',
+								operator: '=',
+								value: 'front',
+							},
+							{
 								module: 'attachment',
 								operator: '!=',
 								value: 'none',
@@ -491,6 +610,23 @@ DefineRoomDeviceAsset({
 				},
 			],
 			offsetOverrides: [
+				{
+					offset: { x: -25, y: 835 },
+					condition: [
+						[
+							{
+								module: 'cable',
+								operator: '=',
+								value: 'extended',
+							},
+							{
+								module: 'carabiner',
+								operator: '=',
+								value: 'strappado',
+							},
+						],
+					],
+				},
 				{
 					offset: { x: -25, y: -495 },
 					condition: [
@@ -584,8 +720,20 @@ DefineRoomDeviceAsset({
 							},
 							{
 								module: 'carabiner',
-								operator: '!=',
-								value: 'none',
+								operator: '=',
+								value: 'wrist_tied',
+							},
+						],
+						[
+							{
+								module: 'cable',
+								operator: '=',
+								value: 'retracted',
+							},
+							{
+								module: 'carabiner',
+								operator: '=',
+								value: 'ankles_tied',
 							},
 						],
 					],
@@ -632,6 +780,175 @@ DefineRoomDeviceAsset({
 								module: 'carabiner',
 								operator: '!=',
 								value: 'none',
+							},
+						],
+					],
+				},
+			],
+		},
+
+		{
+			type: 'sprite',
+			image: '',
+			clipToRoom: true,
+			colorizationKey: 'cable',
+			offset: {
+				x: -16,
+				y: -1950,
+			},
+			imageOverrides: [
+				{
+					image: 'winch_cable.png',
+					condition: [
+						[
+							{
+								module: 'position',
+								operator: '=',
+								value: 'back',
+							},
+						],
+					],
+				},
+			],
+			offsetOverrides: [
+				{
+					offset: { x: -16, y: -1125 },
+					condition: [
+						[
+							{
+								module: 'cable',
+								operator: '=',
+								value: 'extended',
+							},
+							{
+								module: 'carabiner',
+								operator: '=',
+								value: 'strappado',
+							},
+						],
+					],
+				},
+				{
+					offset: { x: -16, y: -2450 },
+					condition: [
+						[
+							{
+								module: 'cable',
+								operator: '=',
+								value: 'retracted',
+							},
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'sprite',
+			image: '',
+			colorizationKey: 'pulley',
+			offset: {
+				x: -25,
+				y: 5,
+			},
+			imageOverrides: [
+				{
+					image: 'winch_pulley.png',
+					condition: [
+						[
+							{
+								module: 'position',
+								operator: '=',
+								value: 'back',
+							},
+						],
+					],
+				},
+			],
+			offsetOverrides: [
+				{
+					offset: { x: -25, y: 835 },
+					condition: [
+						[
+							{
+								module: 'cable',
+								operator: '=',
+								value: 'extended',
+							},
+							{
+								module: 'carabiner',
+								operator: '=',
+								value: 'strappado',
+							},
+						],
+					],
+				},
+				{
+					offset: { x: -25, y: -495 },
+					condition: [
+						[
+							{
+								module: 'cable',
+								operator: '=',
+								value: 'retracted',
+							},
+						],
+					],
+				},
+			],
+		},
+		{
+			type: 'sprite',
+			image: '',
+			colorizationKey: 'carabiner',
+			offset: {
+				x: -25,
+				y: 5,
+			},
+			imageOverrides: [
+				{
+					image: 'winch_carabiner.png',
+					condition: [
+						[
+							{
+								module: 'position',
+								operator: '=',
+								value: 'back',
+							},
+							{
+								module: 'attachment',
+								operator: '!=',
+								value: 'none',
+							},
+						],
+					],
+				},
+			],
+			offsetOverrides: [
+				{
+					offset: { x: -25, y: 835 },
+					condition: [
+						[
+							{
+								module: 'cable',
+								operator: '=',
+								value: 'extended',
+							},
+							{
+								module: 'carabiner',
+								operator: '=',
+								value: 'strappado',
+							},
+						],
+					],
+				},
+				{
+					offset: { x: -25, y: -495 },
+					condition: [
+						[
+							{
+								module: 'cable',
+								operator: '=',
+								value: 'retracted',
 							},
 						],
 					],
