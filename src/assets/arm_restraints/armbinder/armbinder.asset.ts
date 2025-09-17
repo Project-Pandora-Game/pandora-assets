@@ -82,15 +82,28 @@ DefineAsset({
 			position: 'back',
 			rotation: 'forward',
 		},
-		bones: {
-			arm_r: 104,
-			arm_l: 104,
-			elbow_r: -4,
-			elbow_l: -4,
-		},
 		armsOrder: {
 			upper: 'right',
 		},
+		options: [
+			{
+				bones: {
+					arm_r: 104,
+					arm_l: 104,
+					elbow_r: -4,
+					elbow_l: -4,
+				},
+
+			},
+			{
+				bones: {
+					arm_r: 110,
+					arm_l: 110,
+					elbow_r: -15,
+					elbow_l: -15,
+				},
+			},
+		],
 	},
 	effects: {
 		blockHands: true,
