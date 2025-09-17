@@ -10,6 +10,15 @@
 			"name": "hood front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg_l",
+				"bodyleg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "hood",
 			"image": {
@@ -26,6 +35,15 @@
 			"name": "hood front reflection",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg_l",
+				"bodyleg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "reflection",
 			"image": {
@@ -42,6 +60,15 @@
 			"name": "hood back",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg_l",
+				"bodyleg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "hood",
 			"image": {
@@ -69,6 +96,15 @@
 			"name": "hood back reflection",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg_l",
+				"bodyleg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "reflection",
 			"image": {
