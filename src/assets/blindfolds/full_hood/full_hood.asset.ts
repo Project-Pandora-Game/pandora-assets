@@ -98,7 +98,6 @@ DefineAsset({
 					name: 'Mouth Cover',
 					properties: {
 						effects: {
-							blind: 1,
 							lipsTouch: 1,
 							jawMove: 2,
 							tongueRoof: 0,

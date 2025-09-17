@@ -43,7 +43,7 @@ DefineAsset({
 		],
 	},
 	effects: {
-		blind: 1,
+		blind: 10,
 		lipsTouch: 1,
 		jawMove: 2,
 		tongueRoof: 0,
