@@ -30,6 +30,9 @@ DefineAsset({
 								position: 'front',
 								rotation: 'forward',
 							},
+							armsOrder: {
+								upper: 'left',
+							},
 							bones: {
 								arm_r: 90,
 								arm_l: 90,
@@ -75,6 +78,9 @@ DefineAsset({
 							arms: {
 								position: 'back',
 								rotation: 'forward',
+							},
+							armsOrder: {
+								upper: 'left',
 							},
 							bones: {
 								arm_r: 90,

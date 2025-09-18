@@ -65,6 +65,35 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
+			"name": "Wrists Above Head back",
+			"priority": "ABOVE_BACK_HAIR",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "rope",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "wrists_above_head.png",
+						"condition": [
+							[
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "attached_high"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
 			"name": "Arms Behind Pillar",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "custom_arm_restraints_torso_ropes",
