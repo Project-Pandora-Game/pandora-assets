@@ -82,6 +82,30 @@ DefineRoomDeviceAsset({
 					name: 'Anime A',
 				},
 				{
+					id: 'blacklady',
+					name: 'Lady in Black',
+				},
+				{
+					id: 'carnival',
+					name: 'Carnival',
+				},
+				{
+					id: 'chair',
+					name: 'Chair',
+				},
+				{
+					id: 'countryside',
+					name: 'Countryside',
+				},
+				{
+					id: 'horsewoman',
+					name: 'Horsewoman',
+				},
+				{
+					id: 'village',
+					name: 'Village',
+				},
+				{
 					id: 'mirror',
 					name: 'Mirror',
 				},
@@ -377,6 +401,313 @@ DefineRoomDeviceAsset({
 								module: 'picture',
 								operator: '=',
 								value: 'anime1',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+					],
+				},
+				{
+					image: 'blacklady.png',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'blacklady',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+					],
+				},
+				{
+					image: 'blacklady.png@700x1000',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'blacklady',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'medium',
+							},
+						],
+					],
+				},
+				{
+					image: 'blacklady.png@350x500',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'blacklady',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+					],
+				},
+				{
+					image: 'carnival.png',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'carnival',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+					],
+				},
+				{
+					image: 'carnival.png@700x1000',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'carnival',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'medium',
+							},
+						],
+					],
+				},
+				{
+					image: 'carnival.png@350x500',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'carnival',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+					],
+				},
+				{
+					image: 'chair.png',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'chair',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+					],
+				},
+				{
+					image: 'chair.png@700x1000',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'chair',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'medium',
+							},
+						],
+					],
+				},
+				{
+					image: 'chair.png@350x500',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'chair',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+					],
+				},
+				{
+					image: 'countryside.png',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'countryside',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+					],
+				},
+				{
+					image: 'countryside.png@700x1000',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'countryside',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'medium',
+							},
+						],
+					],
+				},
+				{
+					image: 'countryside.png@350x500',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'countryside',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+					],
+				},
+				//
+				{
+					image: 'horsewoman.png',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'horsewoman',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+					],
+				},
+				{
+					image: 'horsewoman.png@700x1000',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'horsewoman',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'medium',
+							},
+						],
+					],
+				},
+				{
+					image: 'horsewoman.png@350x500',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'horsewoman',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'small',
+							},
+						],
+					],
+				},
+				{
+					image: 'village.png',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'village',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'large',
+							},
+						],
+					],
+				},
+				{
+					image: 'village.png@700x1000',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'village',
+							},
+							{
+								module: 'size',
+								operator: '=',
+								value: 'medium',
+							},
+						],
+					],
+				},
+				{
+					image: 'village.png@350x500',
+					condition: [
+						[
+							{
+								module: 'picture',
+								operator: '=',
+								value: 'village',
 							},
 							{
 								module: 'size',
@@ -800,6 +1131,13 @@ DefineRoomDeviceAsset({
 				copyrightHolder: 'Creazilla',
 				editedBy: 'Sandrine',
 				license: 'CC0',
+			},
+			{
+				part: 'other pictures',
+				source: 'https://www.metmuseum.org/',
+				copyrightHolder: 'The Metropolitan Museum of Art, New York, OA',
+				editedBy: 'ClaudiaMia',
+				license: 'Public Domain',
 			},
 		],
 	},
