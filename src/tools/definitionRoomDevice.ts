@@ -1,10 +1,10 @@
 import { freeze, type Immutable } from 'immer';
 import { cloneDeep, omit, pick } from 'lodash-es';
-import { Assert, AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition, type AssetModuleDefinition, type GraphicsBuildContextAssetData, type ImageBoundingBox } from 'pandora-common';
+import { Assert, AssertNever, AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition, type AssetCreditsInfo, type AssetModuleDefinition, type GraphicsBuildContextAssetData, type ImageBoundingBox } from 'pandora-common';
 import { join } from 'path';
 import { OPTIMIZE_TEXTURES } from '../config.ts';
 import { AssetDatabase } from './assetDatabase.ts';
-import { AssetSourcePath, DefaultId } from './context.ts';
+import { AssetSourcePath, DefaultId, GetAssetRepositoryPath } from './context.ts';
 import { LoadAssetGraphicsFile } from './graphics.ts';
 import { GENERATED_RESOLUTIONS } from './graphicsConstants.ts';
 import { GraphicsDatabase } from './graphicsDatabase.ts';
@@ -69,6 +69,7 @@ async function DefineRoomDeviceWearablePart(
 	colorizationKeys: ReadonlySet<string>,
 	propertiesValidationMetadata: RoomDevicePropertiesValidationMetadata,
 	preview: string | null,
+	credits: AssetCreditsInfo,
 ): Promise<AssetId | null> {
 	const id: AssetId = `${baseId}/${slot}` as const;
 
@@ -107,6 +108,7 @@ async function DefineRoomDeviceWearablePart(
 		id,
 		preview,
 		hasGraphics: def.graphics !== undefined,
+		credits,
 	};
 
 	// Load and verify graphics
@@ -160,12 +162,17 @@ async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDef
 	}
 	const preview = def.preview != null ? DefinePngResource(def.preview, 'preview') : null;
 
+	const credits: AssetCreditsInfo = {
+		credits: def.ownership.credits,
+		sourcePath: GetAssetRepositoryPath(),
+	};
+
 	//#region Load slots
 
 	for (const [k, v] of Object.entries(def.slots)) {
 		slotIds.add(k);
 
-		const slotWearableId = await DefineRoomDeviceWearablePart(id, k, v.asset, def.modules, colorizationKeys, propertiesValidationMetadata, preview);
+		const slotWearableId = await DefineRoomDeviceWearablePart(id, k, v.asset, def.modules, colorizationKeys, propertiesValidationMetadata, preview, credits);
 		if (slotWearableId == null) {
 			definitionValid = false;
 			logger.error(`Failed to process asset for slot '${k}'`);
@@ -306,6 +313,7 @@ async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDef
 		id,
 		preview,
 		slots,
+		credits,
 	};
 
 	// Validate properties

@@ -3,7 +3,7 @@ import { cloneDeep, omit, pick } from 'lodash-es';
 import { AssetId, BodypartAssetDefinition, GetLogger, type GraphicsBuildContextAssetData } from 'pandora-common';
 import { join } from 'path';
 import { AssetDatabase } from './assetDatabase.ts';
-import { AssetSourcePath, DefaultId } from './context.ts';
+import { AssetSourcePath, DefaultId, GetAssetRepositoryPath } from './context.ts';
 import { LoadAssetGraphicsFile } from './graphics.ts';
 import { GraphicsDatabase } from './graphicsDatabase.ts';
 import { RegisterImportContextProcess } from './importContext.ts';
@@ -79,6 +79,10 @@ async function GlobalDefineBodypartProcess(def: IntermediateBodypartAssetDefinit
 		preview: def.preview != null ? DefinePngResource(def.preview, 'preview') : null,
 		colorization,
 		hasGraphics: def.graphics !== undefined,
+		credits: {
+			credits: def.ownership.credits,
+			sourcePath: GetAssetRepositoryPath(),
+		},
 	};
 
 	const propertiesValidationMetadata: PropertiesValidationMetadata = {

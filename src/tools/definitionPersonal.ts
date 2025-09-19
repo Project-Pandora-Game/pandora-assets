@@ -3,7 +3,7 @@ import { cloneDeep, omit, pick } from 'lodash-es';
 import { AssetId, GetLogger, PersonalAssetDefinition, type GraphicsBuildContextAssetData } from 'pandora-common';
 import { join } from 'path';
 import { AssetDatabase } from './assetDatabase.ts';
-import { AssetSourcePath, DefaultId } from './context.ts';
+import { AssetSourcePath, DefaultId, GetAssetRepositoryPath } from './context.ts';
 import { LoadAssetGraphicsFile } from './graphics.ts';
 import { GraphicsDatabase } from './graphicsDatabase.ts';
 import { RegisterImportContextProcess } from './importContext.ts';
@@ -86,6 +86,10 @@ async function GlobalDefineAssetProcess(def: IntermediatePersonalAssetDefinition
 		preview: def.preview != null ? DefinePngResource(def.preview, 'preview') : null,
 		colorization,
 		hasGraphics: def.graphics !== undefined,
+		credits: {
+			credits: def.ownership.credits,
+			sourcePath: GetAssetRepositoryPath(),
+		},
 	};
 
 	const propertiesValidationMetadata: PropertiesValidationMetadata = {

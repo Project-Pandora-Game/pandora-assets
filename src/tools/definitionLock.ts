@@ -2,7 +2,7 @@ import { freeze } from 'immer';
 import { cloneDeep, omit, pick } from 'lodash-es';
 import { AssetId, GetLogger, LockAssetDefinition } from 'pandora-common';
 import { AssetDatabase } from './assetDatabase.ts';
-import { DefaultId } from './context.ts';
+import { DefaultId, GetAssetRepositoryPath } from './context.ts';
 import { RegisterImportContextProcess } from './importContext.ts';
 import { ValidateOwnershipData } from './licensing.ts';
 import { DefinePngResource, PREVIEW_SIZE } from './resources.ts';
@@ -54,6 +54,10 @@ async function GlobalDefineLockAssetProcess(def: IntermediateLockAssetDefinition
 		size: 'small',
 		preview: def.preview != null ? DefinePngResource(def.preview, 'preview') : null,
 		hasGraphics: false,
+		credits: {
+			credits: def.ownership.credits,
+			sourcePath: GetAssetRepositoryPath(),
+		},
 	};
 
 	AssetDatabase.registerAsset(id, asset);
