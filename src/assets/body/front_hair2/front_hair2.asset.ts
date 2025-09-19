@@ -18,7 +18,7 @@ const bodypart = DefineBodypart({
 	modules,
 	ownership: {
 		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',
-		credits: ['Titania', 'Echo', 'Jomshir', 'ClaudiaMia'],
+		credits: ['Titania', 'Echo', 'ClaudiaMia'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [

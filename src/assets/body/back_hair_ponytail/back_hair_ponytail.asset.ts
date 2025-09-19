@@ -39,7 +39,7 @@ const bodypart = DefineBodypart({
 	},
 	ownership: {
 		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',
-		credits: ['Titania', 'Jomshir', 'ClaudiaMia', 'SandrinePDR'],
+		credits: ['Titania', 'ClaudiaMia', 'SandrinePDR'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
