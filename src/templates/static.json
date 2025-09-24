@@ -90,6 +90,20 @@
 					"mirror": 1
 				}
 			]
+		},
+		"belowSoles": {
+			"name": "Below soles (mirrored)",
+			"parts": [
+				{
+					"id": "legs",
+					"priority": "BELOW_SOLE_LEFT",
+					"pointType": [
+						"static_l",
+						"static"
+					],
+					"mirror": 1
+				}
+			]
 		}
 	},
 	"points": [
