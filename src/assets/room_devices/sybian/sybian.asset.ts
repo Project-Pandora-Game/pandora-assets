@@ -126,6 +126,7 @@ DefineRoomDeviceAsset({
 					name: 'Attached to Collar',
 					properties: {
 						blockSlotsEnterLeave: ['seated'],
+						blockModules: ['position'],
 						slotProperties: {
 							seated: {
 								attributes: {
@@ -164,6 +165,7 @@ DefineRoomDeviceAsset({
 					name: 'Attached to Wrist Cuffs',
 					properties: {
 						blockSlotsEnterLeave: ['seated'],
+						blockModules: ['position'],
 						slotProperties: {
 							seated: {
 								attributes: {

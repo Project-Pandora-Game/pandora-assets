@@ -89,6 +89,7 @@ DefineRoomDeviceAsset({
 					name: 'Tied standing (Arms)',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot'],
+						blockModules: ['position'],
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
@@ -117,6 +118,7 @@ DefineRoomDeviceAsset({
 					name: 'Tied standing (Legs)',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot'],
+						blockModules: ['position'],
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
@@ -142,6 +144,7 @@ DefineRoomDeviceAsset({
 					name: 'Tied standing (Arms & Legs)',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot'],
+						blockModules: ['position'],
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
@@ -173,6 +176,7 @@ DefineRoomDeviceAsset({
 					name: 'Tied hanging (Arms)',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot'],
+						blockModules: ['position'],
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
@@ -201,6 +205,7 @@ DefineRoomDeviceAsset({
 					name: 'Tied hanging (Arms & Legs)',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot'],
+						blockModules: ['position'],
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
@@ -268,7 +273,7 @@ DefineRoomDeviceAsset({
 			name: 'Under the frame chain locks',
 			staticConfig: { slotName: 'character_slot' },
 			lockedProperties: {
-				blockModules: ['chains', 'position'],
+				blockModules: ['chains'],
 			},
 		},
 		frame_left: {
