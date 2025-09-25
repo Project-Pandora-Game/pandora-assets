@@ -170,6 +170,7 @@ DefineRoomDeviceAsset({
 					id: 'thigh_front_left',
 					name: 'Front-facing Left Thigh Tied',
 					properties: {
+						blockModules: ['position'],
 						slotProperties: {
 							under_bamboo: {
 								attributes: {
@@ -197,6 +198,7 @@ DefineRoomDeviceAsset({
 					id: 'thigh_front_right',
 					name: 'Front-facing Right Thigh Tied',
 					properties: {
+						blockModules: ['position'],
 						slotProperties: {
 							under_bamboo: {
 								attributes: {
@@ -224,6 +226,7 @@ DefineRoomDeviceAsset({
 					id: 'thigh_back_left',
 					name: 'Back-facing Left Thigh Tied',
 					properties: {
+						blockModules: ['position'],
 						slotProperties: {
 							under_bamboo: {
 								attributes: {
@@ -251,6 +254,7 @@ DefineRoomDeviceAsset({
 					id: 'thigh_back_right',
 					name: 'Back-facing Right Thigh Tied',
 					properties: {
+						blockModules: ['position'],
 						slotProperties: {
 							under_bamboo: {
 								attributes: {
@@ -278,6 +282,7 @@ DefineRoomDeviceAsset({
 					id: 'split_65',
 					name: 'Split Wide',
 					properties: {
+						blockModules: ['position'],
 						slotProperties: {
 							under_bamboo: {
 								poseLimits: {
@@ -315,6 +320,7 @@ DefineRoomDeviceAsset({
 					id: 'ankle_front_left',
 					name: 'Front-facing Left Ankle Tied',
 					properties: {
+						blockModules: ['position'],
 						slotProperties: {
 							under_bamboo: {
 								attributes: {
@@ -345,6 +351,7 @@ DefineRoomDeviceAsset({
 					id: 'ankle_front_right',
 					name: 'Front-facing Right Ankle Tied',
 					properties: {
+						blockModules: ['position'],
 						slotProperties: {
 							under_bamboo: {
 								attributes: {
@@ -375,6 +382,7 @@ DefineRoomDeviceAsset({
 					id: 'ankle_back_left',
 					name: 'Back-facing Left Ankle Tied',
 					properties: {
+						blockModules: ['position'],
 						slotProperties: {
 							under_bamboo: {
 								attributes: {
@@ -405,6 +413,7 @@ DefineRoomDeviceAsset({
 					id: 'ankle_back_right',
 					name: 'Back-facing Right Ankle Tied',
 					properties: {
+						blockModules: ['position'],
 						slotProperties: {
 							under_bamboo: {
 								attributes: {
@@ -435,6 +444,7 @@ DefineRoomDeviceAsset({
 					id: 'split_65',
 					name: 'Split Wide',
 					properties: {
+						blockModules: ['position'],
 						slotProperties: {
 							under_bamboo: {
 								poseLimits: {
@@ -460,6 +470,7 @@ DefineRoomDeviceAsset({
 					id: 'ankles_tied',
 					name: 'Horizontal Suspensión',
 					properties: {
+						blockModules: ['position'],
 						slotProperties: {
 							under_bamboo: {
 								attributes: {

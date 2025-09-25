@@ -225,6 +225,7 @@ DefineRoomDeviceAsset({
 					id: 'tied_center',
 					name: 'Tied (Feet)',
 					properties: {
+						blockModules: ['position'],
 						blockSlotsEnterLeave: ['character_slot_middle'],
 						slotProperties: {
 							character_slot_middle: {
@@ -288,7 +289,7 @@ DefineRoomDeviceAsset({
 			name: 'Lock for ankle cuff chains',
 			staticConfig: { slotName: 'character_slot_middle' },
 			lockedProperties: {
-				blockModules: ['center', 'position'],
+				blockModules: ['center'],
 				stateFlags: {
 					requires: {
 						chain_center: 'Locking requires a chain to lock.',

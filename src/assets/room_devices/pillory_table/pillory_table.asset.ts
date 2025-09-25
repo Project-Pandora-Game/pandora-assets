@@ -78,6 +78,7 @@ DefineRoomDeviceAsset({
 					id: 'both',
 					name: 'Head & arms',
 					properties: {
+						blockModules: ['position'],
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
@@ -100,7 +101,7 @@ DefineRoomDeviceAsset({
 			staticConfig: { slotName: 'character_slot' },
 			lockedProperties: {
 				blockSlotsEnterLeave: ['character_slot'],
-				blockModules: ['position', 'tie'],
+				blockModules: ['tie'],
 			},
 		},
 	},

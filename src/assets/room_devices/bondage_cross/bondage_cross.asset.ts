@@ -97,6 +97,7 @@ DefineRoomDeviceAsset({
 					name: 'Left Only',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot'],
+						blockModules: ['position'],
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
@@ -122,6 +123,7 @@ DefineRoomDeviceAsset({
 					name: 'Right Only',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot'],
+						blockModules: ['position'],
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
@@ -147,6 +149,7 @@ DefineRoomDeviceAsset({
 					name: 'Both',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot'],
+						blockModules: ['position'],
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
@@ -189,6 +192,7 @@ DefineRoomDeviceAsset({
 					name: 'Left Only',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot'],
+						blockModules: ['position'],
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
@@ -213,6 +217,7 @@ DefineRoomDeviceAsset({
 					name: 'Right Only',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot'],
+						blockModules: ['position'],
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
@@ -237,6 +242,7 @@ DefineRoomDeviceAsset({
 					name: 'Both',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot'],
+						blockModules: ['position'],
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
