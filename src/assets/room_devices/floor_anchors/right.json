@@ -16,6 +16,87 @@
 				"image": "",
 				"overrides": [
 					{
+						"image": "chain_hanging_back_wide.png",
+						"condition": [
+							[
+								{
+									"module": "right",
+									"operator": "=",
+									"value": "tied_right_long"
+								},
+								{
+									"legs": "!kneeling"
+								},
+								{
+									"view": "front"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<",
+									"value": -18
+								},
+								{
+									"bone": "leg_r",
+									"operator": "<",
+									"value": -18
+								}
+							]
+						]
+					},
+					{
+						"image": "chain_hanging_kneeling_back_wide.png",
+						"condition": [
+							[
+								{
+									"module": "right",
+									"operator": "=",
+									"value": "tied_right_long"
+								},
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "front"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<",
+									"value": -18
+								},
+								{
+									"bone": "leg_r",
+									"operator": "<",
+									"value": -18
+								}
+							]
+						]
+					},
+					{
+						"image": "chain_hanging_short_back_wide.png",
+						"condition": [
+							[
+								{
+									"module": "right",
+									"operator": "=",
+									"value": "tied_right_short"
+								},
+								{
+									"view": "front"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<",
+									"value": -18
+								},
+								{
+									"bone": "leg_r",
+									"operator": "<",
+									"value": -18
+								}
+							]
+						]
+					},
+					{
 						"image": "chain_hanging_back.png",
 						"condition": [
 							[
@@ -83,6 +164,87 @@
 			"image": {
 				"image": "",
 				"overrides": [
+					{
+						"image": "chain_hanging_wide.png",
+						"condition": [
+							[
+								{
+									"module": "right",
+									"operator": "=",
+									"value": "tied_right_long"
+								},
+								{
+									"legs": "!kneeling"
+								},
+								{
+									"view": "back"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<",
+									"value": -18
+								},
+								{
+									"bone": "leg_r",
+									"operator": "<",
+									"value": -18
+								}
+							]
+						]
+					},
+					{
+						"image": "chain_hanging_kneeling_wide.png",
+						"condition": [
+							[
+								{
+									"module": "right",
+									"operator": "=",
+									"value": "tied_right_long"
+								},
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "back"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<",
+									"value": -18
+								},
+								{
+									"bone": "leg_r",
+									"operator": "<",
+									"value": -18
+								}
+							]
+						]
+					},
+					{
+						"image": "chain_hanging_short_wide.png",
+						"condition": [
+							[
+								{
+									"module": "right",
+									"operator": "=",
+									"value": "tied_right_short"
+								},
+								{
+									"view": "back"
+								},
+								{
+									"bone": "leg_l",
+									"operator": "<",
+									"value": -18
+								},
+								{
+									"bone": "leg_r",
+									"operator": "<",
+									"value": -18
+								}
+							]
+						]
+					},
 					{
 						"image": "chain_hanging.png",
 						"condition": [
