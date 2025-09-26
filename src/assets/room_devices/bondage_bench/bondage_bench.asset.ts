@@ -94,6 +94,7 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_l: [[-2, 3]],
 										leg_r: [[-2, 3]],
+										character_rotation: 0,
 									},
 								},
 							},
@@ -134,6 +135,7 @@ DefineRoomDeviceAsset({
 										arm_r: 85,
 										elbow_l: -2,
 										elbow_r: -2,
+										character_rotation: 0,
 									},
 									options: [
 										{
@@ -163,6 +165,9 @@ DefineRoomDeviceAsset({
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
+									bones: {
+										character_rotation: 0,
+									},
 									options: [
 										{
 											view: 'front',
@@ -207,6 +212,15 @@ DefineRoomDeviceAsset({
 					name: 'Tied over the neck',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot'],
+						slotProperties: {
+							character_slot: {
+								poseLimits: {
+									bones: {
+										character_rotation: 0,
+									},
+								},
+							},
+						},
 					},
 				},
 			],
@@ -234,6 +248,15 @@ DefineRoomDeviceAsset({
 					name: 'Attached',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot'],
+						slotProperties: {
+							character_slot: {
+								poseLimits: {
+									bones: {
+										character_rotation: 0,
+									},
+								},
+							},
+						},
 					},
 				},
 			],
