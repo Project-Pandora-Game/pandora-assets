@@ -27,6 +27,7 @@ DefineAsset({
 				bones: {
 					leg_l: 2,
 					leg_r: 2,
+					tiptoeing: 0,
 				},
 			},
 			{
@@ -34,6 +35,7 @@ DefineAsset({
 				bones: {
 					leg_l: 3,
 					leg_r: 3,
+					tiptoeing: 0,
 				},
 			},
 		],

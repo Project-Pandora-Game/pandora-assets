@@ -45,7 +45,7 @@
 					""
 				],
 				"kneeling:back": [
-					"front_kneeling_back.png"
+					""
 				]
 			}
 		},
@@ -93,7 +93,7 @@
 					"full_kneeling_front.png"
 				],
 				"kneeling:back": [
-					"back_kneeling_back.png"
+					""
 				]
 			}
 		},
@@ -103,7 +103,55 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "Soles",
+			"name": "Above soles",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Cuffs",
+					"colorizationKey": "cuffs"
+				}
+			],
+			"variables": [
+				{
+					"type": "legsState"
+				},
+				{
+					"type": "view"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 1,
+				"roughness": 0.2
+			},
+			"imageMap": {
+				"standing:front": [
+					""
+				],
+				"standing:back": [
+					""
+				],
+				"sitting:front": [
+					""
+				],
+				"sitting:back": [
+					""
+				],
+				"kneeling:front": [
+					""
+				],
+				"kneeling:back": [
+					"front_kneeling_back.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Below soles",
 			"points": "static",
 			"automeshTemplate": "belowSoles",
 			"graphicalLayers": [
