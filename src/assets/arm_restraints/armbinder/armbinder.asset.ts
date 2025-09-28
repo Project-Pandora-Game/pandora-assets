@@ -46,6 +46,18 @@ DefineAsset({
 			'Wrist_cuffs',
 		],
 	},
+	effects: {
+		blockHands: true,
+	},
+	poseLimits: {
+		arms: {
+			position: 'back',
+			rotation: 'forward',
+		},
+		armsOrder: {
+			upper: 'right',
+		},
+	},
 	modules: {
 		lock: {
 			type: 'lockSlot',
@@ -76,44 +88,61 @@ DefineAsset({
 				},
 			],
 		},
-	},
-	poseLimits: {
-		arms: {
-			position: 'back',
-			rotation: 'forward',
+		lacing: {
+			type: 'typed',
+			name: 'Lacing',
+			variants: [
+				{
+					id: 'normal',
+					name: 'Normal',
+					default: true,
+					properties: {
+						poseLimits: {
+							options: [
+								{
+									bones: {
+										arm_r: 104,
+										arm_l: 104,
+										elbow_r: -4,
+										elbow_l: -4,
+									},
+								},
+								{
+									bones: {
+										arm_r: 103,
+										arm_l: 103,
+										elbow_r: -5,
+										elbow_l: -5,
+									},
+								},
+								{
+									bones: {
+										arm_r: 110,
+										arm_l: 110,
+										elbow_r: -15,
+										elbow_l: -15,
+									},
+								},
+							],
+						},
+					},
+				},
+				{
+					id: 'tight',
+					name: 'Tight',
+					properties: {
+						poseLimits: {
+							bones: {
+								arm_r: 110,
+								arm_l: 110,
+								elbow_r: -15,
+								elbow_l: -15,
+							},
+						},
+					},
+				},
+			],
 		},
-		armsOrder: {
-			upper: 'right',
-		},
-		options: [
-			{
-				bones: {
-					arm_r: 104,
-					arm_l: 104,
-					elbow_r: -4,
-					elbow_l: -4,
-				},
-			},
-			{
-				bones: {
-					arm_r: 103,
-					arm_l: 103,
-					elbow_r: -5,
-					elbow_l: -5,
-				},
-			},
-			{
-				bones: {
-					arm_r: 110,
-					arm_l: 110,
-					elbow_r: -15,
-					elbow_l: -15,
-				},
-			},
-		],
-	},
-	effects: {
-		blockHands: true,
 	},
 	chat: {
 		actionAdd: 'SOURCE_CHARACTER slipped ITEM_ASSET_NAME over TARGET_CHARACTER_DYNAMIC_POSSESSIVE arms, lacing it tightly.',

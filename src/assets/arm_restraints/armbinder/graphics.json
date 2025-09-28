@@ -103,6 +103,18 @@
 				"image": "armbinder_glove.png",
 				"overrides": [
 					{
+						"image": "armbinder_glove_tight.png",
+						"condition": [
+							[
+								{
+									"module": "lacing",
+									"operator": "=",
+									"value": "tight"
+								}
+							]
+						]
+					},
+					{
 						"image": "armbinder_glove_bigarms.png",
 						"condition": [
 							[
@@ -277,6 +289,18 @@
 			"image": {
 				"image": "armbinder_glove.png",
 				"overrides": [
+					{
+						"image": "armbinder_glove_tight.png",
+						"condition": [
+							[
+								{
+									"module": "lacing",
+									"operator": "=",
+									"value": "tight"
+								}
+							]
+						]
+					},
 					{
 						"image": "armbinder_glove_bigarms.png",
 						"condition": [
