@@ -1,7 +1,7 @@
 DefineAsset({
 	name: 'Steel Wrist Cuffs',
 	size: 'small',
-	requireFreeHandsToUseDefault: false,
+	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
 		cuff: {
@@ -65,7 +65,7 @@ DefineAsset({
 								{
 									arms: {
 										position: 'front',
-										rotation: 'down',
+										rotation: ['forward', 'down'],
 									},
 									bones: {
 										arm_r: 74,
@@ -76,7 +76,7 @@ DefineAsset({
 								},
 								{
 									arms: {
-										rotation: 'up',
+										rotation: ['up', 'backward'],
 									},
 									bones: {
 										arm_r: -74,
@@ -106,7 +106,7 @@ DefineAsset({
 							options: [
 								{
 									arms: {
-										rotation: 'down',
+										rotation: ['forward', 'down'],
 									},
 									bones: {
 										arm_r: 74,
@@ -147,14 +147,18 @@ DefineAsset({
 						},
 						poseLimits: {
 							arms: {
-								position: 'back',
+								rotation: ['forward', 'down'],
 							},
 							bones: {
-								arm_r: 100,
-								arm_l: 100,
-								elbow_r: 130,
-								elbow_l: 130,
+								arm_r: 99,
+								arm_l: 99,
+								elbow_r: 141,
+								elbow_l: 141,
 							},
+							options: [
+								{ arms: { position: 'back_below_hair' } },
+								{ arms: { position: 'back' } },
+							],
 						},
 						stateFlags: {
 							provides: ['chain'],

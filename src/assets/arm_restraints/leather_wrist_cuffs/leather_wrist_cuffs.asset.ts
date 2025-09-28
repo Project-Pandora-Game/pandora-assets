@@ -1,7 +1,7 @@
 DefineAsset({
 	name: 'Leather Wrist Cuffs',
 	size: 'small',
-	requireFreeHandsToUseDefault: false,
+	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
 		cuff: {
@@ -155,14 +155,18 @@ DefineAsset({
 						},
 						poseLimits: {
 							arms: {
-								position: 'back',
+								rotation: ['forward', 'down'],
 							},
 							bones: {
-								arm_r: 100,
-								arm_l: 100,
-								elbow_r: 130,
-								elbow_l: 130,
+								arm_r: 99,
+								arm_l: 99,
+								elbow_r: 141,
+								elbow_l: 141,
 							},
+							options: [
+								{ arms: { position: 'back_below_hair' } },
+								{ arms: { position: 'back' } },
+							],
 						},
 						stateFlags: {
 							provides: ['chain'],
