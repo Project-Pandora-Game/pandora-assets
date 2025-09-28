@@ -110,14 +110,6 @@ DefineAsset({
 								},
 								{
 									bones: {
-										arm_r: 103,
-										arm_l: 103,
-										elbow_r: -5,
-										elbow_l: -5,
-									},
-								},
-								{
-									bones: {
 										arm_r: 110,
 										arm_l: 110,
 										elbow_r: -15,
