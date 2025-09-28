@@ -98,8 +98,8 @@ DefineAsset({
 					properties: {
 						poseLimits: {
 							bones: {
-								leg_r: [[0, 2]],
-								leg_l: [[0, 2]],
+								leg_r: [[0, 3]],
+								leg_l: [[0, 3]],
 							},
 						},
 						stateFlags: {
@@ -136,8 +136,8 @@ DefineAsset({
 										pose: 'kneeling',
 									},
 									bones: {
-										leg_r: 6,
-										leg_l: 6,
+										leg_r: 5,
+										leg_l: 5,
 									},
 								},
 							],

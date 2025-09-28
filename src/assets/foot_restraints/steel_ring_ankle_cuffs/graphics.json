@@ -418,7 +418,7 @@
 								{
 									"bone": "leg_l",
 									"operator": "<",
-									"value": 2
+									"value": 4
 								},
 								{
 									"view": "back"
