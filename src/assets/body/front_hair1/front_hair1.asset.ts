@@ -35,7 +35,7 @@ const bodypart = DefineBodypart({
 DefineAsset({
 	...bodypart, // Reuse most of bodypart definition
 	id: 'body/front_hair1/wig',
-	name: 'Front wig 1',
+	name: 'Front Wig 1',
 	size: 'small',
 	attributes: {
 		provides: [

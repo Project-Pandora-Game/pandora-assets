@@ -59,7 +59,7 @@ const bodypart = DefineBodypart({
 DefineAsset({
 	...bodypart, // Reuse most of bodypart definition
 	id: 'body/back_hair_twintails_long/wig',
-	name: 'Long twintails wig',
+	name: 'Long twintails Wig',
 	size: 'small',
 	attributes: {
 		provides: [

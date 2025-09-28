@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Duct tape',
+	name: 'Duct Tape',
 	size: 'small',
 	graphics: 'graphics.json',
 	requireFreeHandsToUseDefault: true,
