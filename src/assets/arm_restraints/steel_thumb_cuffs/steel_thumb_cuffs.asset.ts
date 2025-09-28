@@ -15,6 +15,7 @@ DefineAsset({
 		provides: [
 			'Restraint',
 			'Restraint_arms',
+			'Hand_item',
 		],
 		requires: [
 			'!Hand_restricting_cover',

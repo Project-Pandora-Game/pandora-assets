@@ -36,6 +36,7 @@ DefineAsset({
 			'Hand_restricting_cover',
 		],
 		covers: [
+			'Restraint_arms',
 			'Hand_item',
 			'Hand_cover',
 			'Handheld',

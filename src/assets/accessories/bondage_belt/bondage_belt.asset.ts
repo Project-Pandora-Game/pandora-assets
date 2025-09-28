@@ -26,7 +26,7 @@ DefineAsset({
 	attributes: {
 		provides: [
 			'Restraint',
-			'Restraint_arms',
+			'Restraint_torso',
 			'Belt_chainable',
 		],
 	},
