@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Steel ring collar',
+	name: 'Steel Ring Collar',
 	size: 'small',
 	graphics: 'graphics.json',
 	requireFreeHandsToUseDefault: true,

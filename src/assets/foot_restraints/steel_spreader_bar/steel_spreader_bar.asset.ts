@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Steel spreader bar',
+	name: 'Steel Spreader Bar',
 	size: 'medium',
 	graphics: 'graphics.json',
 	colorization: {

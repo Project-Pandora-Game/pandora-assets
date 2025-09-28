@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Steel thumb cuffs',
+	name: 'Steel Thumb Cuffs',
 	size: 'small',
 	graphics: 'graphics.json',
 	requireFreeHandsToUseDefault: true,

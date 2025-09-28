@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Pocket dimension',
+	name: 'Pocket Dimension',
 	size: 'large',
 	preview: 'preview.png',
 	modules: {

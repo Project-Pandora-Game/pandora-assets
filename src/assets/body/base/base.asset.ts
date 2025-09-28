@@ -1,7 +1,7 @@
 import { ItemInteractionType } from 'pandora-common';
 
 DefineBodypart({
-	name: 'Base body',
+	name: 'Base Body',
 	bodypart: 'base',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',

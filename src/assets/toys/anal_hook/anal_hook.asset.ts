@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Anal hook',
+	name: 'Anal Hook',
 	size: 'small',
 	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
