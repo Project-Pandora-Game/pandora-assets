@@ -21,6 +21,72 @@ DefineAsset({
 	effects: {
 		blockHands: true,
 	},
+	posePresets: [
+		{
+			name: 'Down 1',
+			bones: {
+				arm_r: 88,
+				arm_l: 88,
+				elbow_r: 20,
+				elbow_l: 20,
+			},
+		},
+		{
+			name: 'Down 2',
+			bones: {
+				arm_r: 100,
+				arm_l: 100,
+				elbow_r: -4,
+				elbow_l: -4,
+			},
+		},
+		{
+			name: 'Up 1',
+			bones: {
+				arm_r: 85,
+				arm_l: 85,
+				elbow_r: 164,
+				elbow_l: 164,
+			},
+			optional: { arms: { position: 'front' } },
+		},
+		{
+			name: 'Up 2',
+			bones: {
+				arm_r: -84,
+				arm_l: -84,
+				elbow_r: -30,
+				elbow_l: -30,
+			},
+			optional: { arms: { position: 'front' } },
+		},
+		{
+			name: 'Wiggling left',
+			arms: {
+				rotation: 'forward',
+				fingers: 'spread',
+			},
+			bones: {
+				arm_l: 96,
+				arm_r: 37,
+				elbow_l: 56,
+				elbow_r: 124,
+			},
+		},
+		{
+			name: 'Wiggling right',
+			arms: {
+				rotation: 'forward',
+				fingers: 'spread',
+			},
+			bones: {
+				arm_l: 37,
+				arm_r: 96,
+				elbow_l: 124,
+				elbow_r: 56,
+			},
+		},
+	],
 	modules: {
 		cuffState: {
 			type: 'typed',
@@ -32,7 +98,6 @@ DefineAsset({
 					default: true,
 					properties: {
 						poseLimits: {
-							arms: { position: 'front' },
 							armsOrder: { upper: 'right' },
 							options: [
 								{
@@ -42,6 +107,10 @@ DefineAsset({
 										elbow_r: 20,
 										elbow_l: 20,
 									},
+									options: [
+										{ arms: { position: 'front_above_hair' } },
+										{ arms: { position: 'front' } },
+									],
 								},
 								{
 									bones: {
@@ -50,6 +119,10 @@ DefineAsset({
 										elbow_r: 164,
 										elbow_l: 164,
 									},
+									options: [
+										{ arms: { position: 'front_above_hair' } },
+										{ arms: { position: 'front' } },
+									],
 								},
 								{
 									bones: {
@@ -58,6 +131,22 @@ DefineAsset({
 										elbow_r: -30,
 										elbow_l: -30,
 									},
+									options: [
+										{ arms: { position: 'front_above_hair' } },
+										{ arms: { position: 'front' } },
+									],
+								},
+								{ // Supporting thumb cuffs
+									bones: {
+										arm_r: 100,
+										arm_l: 100,
+										elbow_r: -4,
+										elbow_l: -4,
+									},
+									options: [
+										{ arms: { position: 'front_above_hair' } },
+										{ arms: { position: 'front' } },
+									],
 								},
 							],
 						},
@@ -68,7 +157,6 @@ DefineAsset({
 					name: 'Cuffed behind',
 					properties: {
 						poseLimits: {
-							arms: { position: 'back' },
 							armsOrder: { upper: 'right' },
 							options: [
 								{ // Down
@@ -78,6 +166,22 @@ DefineAsset({
 										elbow_r: 20,
 										elbow_l: 20,
 									},
+									options: [
+										{ arms: { position: 'back_below_hair' } },
+										{ arms: { position: 'back' } },
+									],
+								},
+								{ // Down - supporting thumb cuffs
+									bones: {
+										arm_r: 100,
+										arm_l: 100,
+										elbow_r: -4,
+										elbow_l: -4,
+									},
+									options: [
+										{ arms: { position: 'back_below_hair' } },
+										{ arms: { position: 'back' } },
+									],
 								},
 								{ // left up
 									bones: {
@@ -86,6 +190,10 @@ DefineAsset({
 										elbow_l: 56,
 										elbow_r: 124,
 									},
+									options: [
+										{ arms: { position: 'back_below_hair' } },
+										{ arms: { position: 'back' } },
+									],
 								},
 								{ // right up
 									bones: {
@@ -94,6 +202,10 @@ DefineAsset({
 										elbow_l: 124,
 										elbow_r: 56,
 									},
+									options: [
+										{ arms: { position: 'back_below_hair' } },
+										{ arms: { position: 'back' } },
+									],
 								},
 								{ // reverse prayer
 									bones: {
@@ -102,6 +214,10 @@ DefineAsset({
 										elbow_r: 164,
 										elbow_l: 164,
 									},
+									options: [
+										{ arms: { position: 'back_below_hair' } },
+										{ arms: { position: 'back' } },
+									],
 								},
 							],
 						},
