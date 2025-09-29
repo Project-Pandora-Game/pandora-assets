@@ -87,6 +87,7 @@ export async function LoadAssetGraphicsFile(
 	return {
 		graphics,
 		graphicsSource: {
+			type: 'worn',
 			definition: graphicsSource,
 			originalImagesMap,
 		},
@@ -125,6 +126,7 @@ async function LoadAssetGraphics(
 
 	return {
 		graphics: {
+			type: 'worn',
 			layers,
 		},
 		originalImagesMap,
