@@ -101,6 +101,7 @@ interface IntermediateRoomDeviceDefinition extends Pick<import('pandora-common')
 	slots: Record<string, IntermediateRoomDeviceSlotDefinition>;
 	/** Info about who owns the asset(s) */
 	ownership: AssetOwnershipData;
+	graphicsLayers: import('pandora-common').RoomDeviceGraphicsLayer[];
 }
 
 interface IntermediateLockAssetDefinition extends Pick<import('pandora-common').LockAssetDefinition, import('./tools/definitionLock.ts').LockAssetDefinitionFallthroughProperties> {
