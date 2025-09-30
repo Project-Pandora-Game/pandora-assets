@@ -1,6 +1,6 @@
 import { freeze, type Immutable } from 'immer';
 import { cloneDeep, omit, pick } from 'lodash-es';
-import { AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition, type AssetCreditsInfo, type AssetModuleDefinition, type GraphicsBuildContextAssetData } from 'pandora-common';
+import { AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition, type AssetCreditsInfo, type AssetModuleDefinition, type GraphicsBuildContextAssetData, type GraphicsBuildContextRoomDeviceData } from 'pandora-common';
 import { join } from 'path';
 import { AssetDatabase } from './assetDatabase.ts';
 import { AssetSourcePath, DefaultId, GetAssetRepositoryPath } from './context.ts';
@@ -248,15 +248,15 @@ async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDef
 
 	// Load and verify graphics
 	{
-		const builtAssetData: Immutable<GraphicsBuildContextAssetData> = {
+		const builtAssetData: Immutable<GraphicsBuildContextRoomDeviceData> = {
 			modules: asset.modules,
 			colorizationKeys: new Set(Object.keys(colorization ?? {})),
+			slotIds,
 		};
 
 		const { graphics, graphicsSource } = await LoadRoomDeviceAssetGraphics(
-			{ type: 'roomDevice', layers: def.graphicsLayers },
+			{ layers: def.graphicsLayers },
 			builtAssetData,
-			slotIds,
 			logger.prefixMessages(`Graphics definition:\n\t`),
 		);
 
