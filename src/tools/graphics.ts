@@ -101,7 +101,7 @@ async function LoadAssetGraphics(
 ): Promise<{ graphics: Immutable<AssetGraphicsDefinition>; originalImagesMap: Record<string, string>; }> {
 	const originalImagesMap: Record<string, string> = {};
 
-	const assetLoadContext: GraphicsBuildContext = {
+	const assetLoadContext: GraphicsBuildContext<Immutable<GraphicsBuildContextAssetData>> = {
 		runImageBasedChecks: IS_PRODUCTION_BUILD || OPTIMIZE_TEXTURES,
 		generateOptimizedTextures: OPTIMIZE_TEXTURES,
 		generateResolutions: GENERATED_RESOLUTIONS,
