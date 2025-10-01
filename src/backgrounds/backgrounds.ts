@@ -1655,9 +1655,9 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 		image: 'indoor_pool.jpg',
 		calibration: {
 			imageSize: [3840, 2160],
-			cameraCenterOffset: [-5, -20],
+			cameraCenterOffset: [-6, -26],
 			areaCoverage: 3.2,
-			ceiling: 3748,
+			ceiling: 3807,
 			areaDepthRatio: 4,
 			baseScale: 1.64,
 			fov: 80,
