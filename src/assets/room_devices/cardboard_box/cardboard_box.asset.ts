@@ -106,10 +106,10 @@ DefineRoomDeviceAsset({
 			characterPosition: {
 				offsetX: 0,
 				offsetY: 0,
-				relativeScale: 0.96,
+				relativeScale: 0.95,
 				pivotOffset: {
 					x: 0,
-					y: 22,
+					y: 45,
 				},
 			},
 			characterPositionOverrides: [
@@ -126,6 +126,24 @@ DefineRoomDeviceAsset({
 								module: 'lid',
 								operator: '=',
 								value: 'closed',
+							},
+						],
+					],
+				},
+				{
+					position: {
+						offsetX: 30,
+						offsetY: 156,
+						relativeScale: 0.85,
+						disablePoseOffset: true,
+					},
+					condition: [
+						[
+							{
+								view: 'back',
+							},
+							{
+								legs: 'kneeling',
 							},
 						],
 					],
