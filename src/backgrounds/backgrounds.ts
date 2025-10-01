@@ -1649,6 +1649,31 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 			],
 		},
 	},
+	{
+		id: 'indoor_pool',
+		name: 'Indoor pool',
+		image: 'indoor_pool.jpg',
+		calibration: {
+			imageSize: [3840, 2160],
+			cameraCenterOffset: [-5, -35],
+			areaCoverage: 4.2,
+			ceiling: 6250,
+			areaDepthRatio: 6.83,
+			baseScale: 1.88,
+			fov: 80,
+		},
+		tags: ['inside', 'day', 'home', 'chill', 'water', 'space_large'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/6AtOR',
+					copyrightHolder: 'IPfuentes',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
 ];
 
 export function LoadBackgroundTags() {
