@@ -468,6 +468,36 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 		},
 	},
 	{
+		id: 'wood_05',
+		name: 'Wooden angled floor tiles',
+		image: 'wooden_tiles_512.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/pxDy7',
+					copyrightHolder: 'ChoboiAssets/alsoliman905',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'wood_06',
+		name: 'Wooden beams with light',
+		image: 'wooden_beams_with_lights.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/oKu9s',
+					copyrightHolder: 'annaorsha',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
 		id: 'metal_01',
 		name: 'Metal surface',
 		image: 'metal-garage-door-512x512.png',
@@ -508,6 +538,21 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 					source: 'https://cc0-textures.com/t/cc0t-fence-007-a',
 					copyrightHolder: 'cc0-textures.com',
 					license: 'CC0',
+				},
+			],
+		},
+	},
+	{
+		id: 'metal_04',
+		name: 'Metal tiles with light',
+		image: 'metal_tiles_with_light.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/pxDy7',
+					copyrightHolder: 'ChoboiAssets/alsoliman905',
+					license: 'CC BY',
 				},
 			],
 		},

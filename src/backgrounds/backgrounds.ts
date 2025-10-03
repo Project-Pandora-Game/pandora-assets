@@ -6,6 +6,65 @@ type CategoryDefinition = {
 	tags: Record<string, string>;
 };
 
+/*
+GUIDELINE: How to find good "calibration" values from the background image you want to add
+
+1. You need to run Pandora locally which sets it to development mode
+
+2. Add your new image in this file's folder and add an entry for it in this file.
+Filling out the values should be mostly self explanatory, otherwise please ask on Discord.
+For the "calibration" value, use this template as a start:
+		calibration: {
+			imageSize: [#width-of-your-image, #height-of-your-image],
+			cameraCenterOffset: [0, 0],
+			areaCoverage: 1,
+			ceiling: 0,
+			areaDepthRatio: 20,
+			baseScale: 1,
+			fov: 80,
+		},
+
+3. You need to have or create a space in your test account that has the development option at the bottom enabled.
+
+4. Go to the "Room"-tab
+
+5. Press the "Space configuration" button and chose your new background image under the "Room management" tab
+
+6. Go back to the "Room"-tab and near the bottom, expand the "[DEV] debug options"
+
+7. Toggle on "Show calibration helper line" to see colorful planes overlaid.
+
+8. Toggle on "Custom calibration"
+
+9. This should now let you see the starting values that you set in this file in step (2)
+
+10. Unless you know the FOV of the image/photo/scene, it is recommended to keep FOV at 80.
+
+11. "Area coverage" should be done near the end, to fit the red area to the whole available floor space.
+Right now, use this slider to identify some lines of rectangles in the image, e.g. some patterns on the floor
+or some vanishing points, e.g. wall lines.
+
+12. "Area depth ratio" is set to max depth and can then be reduced to fit, after everything except coverage
+and "base scale" is done. You can also use it in between as an intermediate test to move the yellow
+rectangle to various depths to see if it matches with the background.
+
+13. Use the "camera center offset" values to adjust the planes to the image's vanishing points,
+especially the second Y value.
+
+14. When everything seems to be fine, including setting the "Area depth ratio" to limit the walkable area
+to the far wall/edge, you can adjust the "ceiling" slider to fit a possible ceiling
+in the image.
+
+15. Afterwards, move "area coverage" to the final size to cover everything where a character should be able to walk to.
+
+16. Base scale should be done last, as it just changes the height of characters in the same way everywhere
+in the room. So you just select a suitable object in the image and move your character next to it.
+Then you change the base scale until the relation in sizes seems realistic.
+
+17. As a final test, you can move your character around the room to see if it does not get unrealistically
+smaller or bigger when moving it along the wall for instance. If something feels off, you likely have set some values incorrectly.
+*/
+
 const TAGS_DEFINITION = {
 	time: {
 		name: 'Time',
@@ -48,16 +107,18 @@ const TAGS_DEFINITION = {
 			field: 'Field',
 			forest: 'Forest',
 			foyer: 'Foyer',
-			hallway: 'Hallway',
 			garage: 'Garage',
 			garden: 'Garden',
 			gym: 'Gym',
+			hallway: 'Hallway',
+			hospital: 'Hospital',
 			kitchen: 'Kitchen',
 			livingroom: 'Livingroom',
 			lounge: 'Lounge',
 			museum: 'Museum',
 			nature: 'Nature',
 			nightclub: 'Nightclub',
+			prison: 'Prison',
 			shopping: 'Shopping',
 			storage: 'Storage',
 			street: 'Street',
@@ -1185,10 +1246,10 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 		image: 'club_room_small.jpg',
 		calibration: {
 			imageSize: [4000, 2914],
-			cameraCenterOffset: [0, 100],
+			cameraCenterOffset: [0, 24],
 			areaCoverage: 4,
-			ceiling: 3300,
-			areaDepthRatio: 0.24,
+			ceiling: 3526,
+			areaDepthRatio: 0.26,
 			baseScale: 1.2,
 			fov: 80,
 		},
@@ -1669,6 +1730,406 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 				{
 					source: 'https://skfb.ly/6AtOR',
 					copyrightHolder: 'IPfuentes',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'scandinavian_kitchen',
+		name: 'Scandinavian kitchen',
+		image: 'scandinavian_kitchen.jpg',
+		calibration: {
+			imageSize: [3840, 2160],
+			cameraCenterOffset: [0, 132],
+			areaCoverage: 1.62,
+			ceiling: 2183,
+			areaDepthRatio: 0.64,
+			baseScale: 1.1,
+			fov: 80,
+		},
+		tags: ['inside', 'day', 'home', 'chill', 'kitchen', 'space_medium'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/oIqQL',
+					copyrightHolder: 'QuarizonStudio',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'open_kitchen_room',
+		name: 'Open kitchen room',
+		image: 'open_kitchen_room.jpg',
+		calibration: {
+			imageSize: [3840, 2160],
+			cameraCenterOffset: [-37, 181],
+			areaCoverage: 1.19,
+			ceiling: 2147,
+			areaDepthRatio: 0.65,
+			baseScale: 1.4,
+			fov: 80,
+		},
+		tags: ['inside', 'day', 'home', 'chill', 'kitchen', 'path', 'space_medium'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/oyxEV',
+					copyrightHolder: 'dylanheyes',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'stair_case',
+		name: 'Stair case',
+		image: 'stair_case.jpg',
+		calibration: {
+			imageSize: [3840, 2160],
+			cameraCenterOffset: [-450, -200],
+			areaCoverage: 0.94,
+			ceiling: 3814,
+			areaDepthRatio: 0.47,
+			baseScale: 1.5,
+			fov: 80,
+		},
+		tags: ['inside', 'day', 'path', 'space_small'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/oytWF',
+					copyrightHolder: 'Comicaroid/yuuuusukeeee',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'rundown_hideout',
+		name: 'Rundown hideout',
+		image: 'rundown_hideout.jpg',
+		calibration: {
+			imageSize: [3440, 2160],
+			cameraCenterOffset: [0, 184],
+			areaCoverage: 0.97,
+			ceiling: 2724,
+			areaDepthRatio: 0.76,
+			baseScale: 1.3,
+			fov: 80,
+		},
+		tags: ['inside', 'night', 'home', 'dirty', 'kitchen', 'space_small'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/6WYzB',
+					copyrightHolder: '_SeF_',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'rooftop',
+		name: 'Rooftop',
+		image: 'rooftop.jpg',
+		calibration: {
+			imageSize: [3840, 2160],
+			cameraCenterOffset: [0, 800],
+			areaCoverage: 2.2,
+			ceiling: 0,
+			areaDepthRatio: 0.68,
+			baseScale: 1.2,
+			fov: 80,
+		},
+		tags: ['outside', 'day', 'path', 'space_medium'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/oytWU',
+					copyrightHolder: 'Comicaroid/yuuuusukeeee',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'interior_pathway_stairs',
+		name: 'Interior pathway stairs',
+		image: 'interior_pathway_stairs.jpg',
+		calibration: {
+			imageSize: [3513, 2155],
+			cameraCenterOffset: [900, 400],
+			areaCoverage: 2.9,
+			ceiling: 0,
+			areaDepthRatio: 0.51,
+			baseScale: 1.3,
+			fov: 80,
+		},
+		tags: ['inside', 'home', 'day', 'path', 'space_medium'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/p9UuE',
+					copyrightHolder: 'Deerparkstairs51',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'interior_pathway_cellar',
+		name: 'Interior pathway cellar',
+		image: 'interior_pathway_cellar.jpg',
+		calibration: {
+			imageSize: [3426, 1898],
+			cameraCenterOffset: [0, 0],
+			areaCoverage: 2.3,
+			ceiling: 0,
+			areaDepthRatio: 0.77,
+			baseScale: 1.6,
+			fov: 80,
+		},
+		tags: ['inside', 'home', 'day', 'cellar', 'path', 'space_small'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/p88rK',
+					copyrightHolder: 'Deerparkstairs51',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'underground_complex',
+		name: 'Underground complex',
+		image: 'underground_complex.jpg',
+		calibration: {
+			imageSize: [3840, 2160],
+			cameraCenterOffset: [41, 275],
+			areaCoverage: 2.6,
+			ceiling: 0,
+			areaDepthRatio: 5,
+			baseScale: 1,
+			fov: 80,
+		},
+		tags: ['cellar', 'path', 'space_large'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/pyyTZ',
+					copyrightHolder: 'Veterock',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'stone_cell',
+		name: 'Stone cell',
+		image: 'stone_cell.jpg',
+		calibration: {
+			imageSize: [3838, 2158],
+			cameraCenterOffset: [0, 0],
+			areaCoverage: 1.62,
+			ceiling: 2443,
+			areaDepthRatio: 0.31,
+			baseScale: 1,
+			fov: 80,
+		},
+		tags: ['day', 'inside', 'cellar', 'dungeon', 'space_medium'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/pyVSr',
+					copyrightHolder: 'abhayexe',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'prison_block',
+		name: 'Prison block',
+		image: 'prison_block.jpg',
+		calibration: {
+			imageSize: [3838, 2158],
+			cameraCenterOffset: [-76, 72],
+			areaCoverage: 1.72,
+			ceiling: 1915,
+			areaDepthRatio: 1.18,
+			baseScale: 1,
+			fov: 80,
+		},
+		tags: ['inside', 'prison', 'cell', 'space_large'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/oo966',
+					copyrightHolder: 'P736728/penpats.hon',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'onsen',
+		name: 'Onsen',
+		image: 'onsen.jpg',
+		calibration: {
+			imageSize: [3838, 2158],
+			cameraCenterOffset: [200, 160],
+			areaCoverage: 2,
+			ceiling: 0,
+			areaDepthRatio: 0.94,
+			baseScale: 2.2,
+			fov: 80,
+		},
+		tags: ['outside', 'day', 'pool', 'water', 'foggy', 'space_small'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/pzOPt',
+					copyrightHolder: 'Local Yany',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'office_room',
+		name: 'Office room',
+		image: 'office_room.jpg',
+		calibration: {
+			imageSize: [3838, 2158],
+			cameraCenterOffset: [10, -88],
+			areaCoverage: 2.69,
+			ceiling: 4056,
+			areaDepthRatio: 1,
+			baseScale: 1.5,
+			fov: 80,
+		},
+		tags: ['inside', 'work', 'space_large'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/pxDy7',
+					copyrightHolder: 'ChoboiAssets/alsoliman905',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'medieval_dungeon_cell',
+		name: 'Medieval dungeon cell',
+		image: 'medieval_dungeon_cell.jpg',
+		calibration: {
+			imageSize: [3838, 2158],
+			cameraCenterOffset: [119, -41],
+			areaCoverage: 1,
+			ceiling: 2777,
+			areaDepthRatio: 0.48,
+			baseScale: 1.1,
+			fov: 80,
+		},
+		tags: ['inside', 'night', 'dirty', 'cell', 'dungeon', 'space_small'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/6SMRH',
+					copyrightHolder: 'Choopa',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'hospital_hallway',
+		name: 'Hospital hallway',
+		image: 'hospital_hallway.jpg',
+		calibration: {
+			imageSize: [3838, 2158],
+			cameraCenterOffset: [375, 138],
+			areaCoverage: 1.42,
+			ceiling: 2757,
+			areaDepthRatio: 2.35,
+			baseScale: 1.6,
+			fov: 80,
+		},
+		tags: ['inside', 'hospital', 'asylum', 'hallway', 'space_small'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/pzORr',
+					copyrightHolder: 'Local Yany',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'hospital_entrance',
+		name: 'Hospital entrance',
+		image: 'hospital_entrance.jpg',
+		calibration: {
+			imageSize: [3838, 2158],
+			cameraCenterOffset: [0, -120],
+			areaCoverage: 2.7,
+			ceiling: 2150,
+			areaDepthRatio: 3.96,
+			baseScale: 1.1,
+			fov: 80,
+		},
+		tags: ['inside', 'hospital', 'asylum', 'space_large'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/oPJWC',
+					copyrightHolder: 'Flavia Fabbri',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'apartment_hallway',
+		name: 'Apartment hallway',
+		image: 'apartment_hallway.jpg',
+		calibration: {
+			imageSize: [3323, 2148],
+			cameraCenterOffset: [-22, -44],
+			areaCoverage: 0.8,
+			ceiling: 2232,
+			areaDepthRatio: 0.56,
+			baseScale: 1.26,
+			fov: 80,
+		},
+		tags: ['inside', 'home', 'path', 'entrance', 'hallway', 'space_small'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/6DTXz',
+					copyrightHolder: 'marcinbuczko',
 					license: 'CC BY',
 				},
 			],
