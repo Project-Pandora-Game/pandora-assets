@@ -9,14 +9,14 @@ const logger = GetLogger('GraphicsDatabase');
 export const GraphicsDatabase = new class GraphicsDatabase {
 	private assets: Map<AssetId, {
 		graphics: Immutable<AssetGraphicsDefinition>;
-		graphicsSource: Immutable<AssetSourceGraphicsInfo>;
+		graphicsSource: Immutable<AssetSourceGraphicsInfo> | null;
 	}> = new Map();
 	private _templates: Map<string, Immutable<PointTemplateSource>> = new Map();
 
 	public registerAssetGraphics(
 		id: AssetId,
 		graphics: Immutable<AssetGraphicsDefinition>,
-		graphicsSource: Immutable<AssetSourceGraphicsInfo>,
+		graphicsSource: Immutable<AssetSourceGraphicsInfo> | null,
 	): void {
 		if (this.assets.has(id)) {
 			throw new Error(`Duplicate asset definition, asset graphics '${id}' already exists`);
@@ -71,7 +71,9 @@ export const GraphicsDatabase = new class GraphicsDatabase {
 		}
 		const assets: Record<AssetId, Immutable<AssetSourceGraphicsInfo>> = {};
 		for (const [id, data] of this.assets.entries()) {
-			assets[id] = data.graphicsSource;
+			if (data.graphicsSource !== null) {
+				assets[id] = data.graphicsSource;
+			}
 		}
 		return {
 			assets,

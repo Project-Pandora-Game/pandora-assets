@@ -1,12 +1,12 @@
+import { existsSync, readFileSync, unlinkSync, writeFileSync } from 'fs';
 import { freeze, type Immutable } from 'immer';
 import { cloneDeep, omit, pick } from 'lodash-es';
-import { AssetId, GetLogger, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition, type AssetCreditsInfo, type AssetModuleDefinition, type GraphicsBuildContextAssetData, type GraphicsBuildContextRoomDeviceData } from 'pandora-common';
+import { Assert, AssetId, AssetSourceGraphicsDefinitionSchema, GetLogger, ModuleNameSchema, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition, SCHEME_OVERRIDE, type AssetCreditsInfo, type AssetSourceGraphicsRoomDeviceDefinition, type GraphicsBuildContextRoomDeviceData } from 'pandora-common';
 import { join } from 'path';
 import { AssetDatabase } from './assetDatabase.ts';
 import { AssetSourcePath, DefaultId, GetAssetRepositoryPath } from './context.ts';
-import { LoadAssetGraphicsFile } from './graphics.ts';
 import { GraphicsDatabase } from './graphicsDatabase.ts';
-import { LoadRoomDeviceAssetGraphics } from './graphicsRoomDevice.ts';
+import { LoadRoomDeviceAssetGraphicsFile } from './graphicsRoomDevice.ts';
 import { RegisterImportContextProcess } from './importContext.ts';
 import { ValidateOwnershipData } from './licensing.ts';
 import { LoadRoomDeviceColorization } from './load_helpers/color.ts';
@@ -58,17 +58,14 @@ const ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES = [
 
 export type AssetRoomDeviceDefinitionFallthroughProperties = (typeof ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES)[number] & string;
 
-async function DefineRoomDeviceWearablePart(
+function DefineRoomDeviceWearablePart(
 	baseId: AssetId,
 	slot: string,
 	def: IntermediateRoomDeviceWearablePartDefinition,
-	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	modules: Record<string, AssetModuleDefinition<unknown, any>> | undefined,
-	colorizationKeys: ReadonlySet<string>,
 	propertiesValidationMetadata: RoomDevicePropertiesValidationMetadata,
 	preview: string | null,
 	credits: AssetCreditsInfo,
-): Promise<AssetId | null> {
+): AssetId | null {
 	const id: AssetId = `${baseId}/${slot}` as const;
 
 	const logger = GetLogger('RoomDeviceWearablePart', `[Asset ${id}]`);
@@ -108,20 +105,6 @@ async function DefineRoomDeviceWearablePart(
 		credits,
 	};
 
-	// Load and verify graphics
-	if (def.graphics) {
-		const builtAssetData: Immutable<GraphicsBuildContextAssetData> = {
-			modules,
-			colorizationKeys,
-		};
-
-		const { graphics, graphicsSource } = await LoadAssetGraphicsFile(
-			join(AssetSourcePath, def.graphics),
-			builtAssetData,
-		);
-
-		GraphicsDatabase.registerAssetGraphics(id, graphics, graphicsSource);
-	}
 	AssetDatabase.registerAsset(id, asset);
 
 	return id;
@@ -142,8 +125,6 @@ async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDef
 
 	const slots: RoomDeviceAssetDefinition<AssetRepoExtraArgs>['slots'] = {};
 	const slotIds = new Set<string>();
-
-	const colorizationKeys = new Set<string>(Object.keys(def.colorization ?? {}));
 
 	const propertiesValidationMetadata: RoomDevicePropertiesValidationMetadata = {
 		getModuleNames: () => Object.keys(def.modules ?? {}),
@@ -169,7 +150,7 @@ async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDef
 	for (const [k, v] of Object.entries(def.slots)) {
 		slotIds.add(k);
 
-		const slotWearableId = await DefineRoomDeviceWearablePart(id, k, v.asset, def.modules, colorizationKeys, propertiesValidationMetadata, preview, credits);
+		const slotWearableId = DefineRoomDeviceWearablePart(id, k, v.asset, propertiesValidationMetadata, preview, credits);
 		if (slotWearableId == null) {
 			definitionValid = false;
 			logger.error(`Failed to process asset for slot '${k}'`);
@@ -253,13 +234,76 @@ async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDef
 			slotIds,
 		};
 
-		const { graphics, graphicsSource } = await LoadRoomDeviceAssetGraphics(
-			{ layers: def.graphicsLayers },
+		// Migrate existing graphics if needed
+		/* eslint-disable @typescript-eslint/no-deprecated */
+		const graphicsPath = join(AssetSourcePath, def.graphics);
+		if (!existsSync(graphicsPath) && def.graphicsLayers !== undefined) {
+			logger.alert('Migrating graphics definitions to graphics file. Please remove \'graphicsLayers\' from the definition after this completes.');
+			const migratedDefinition: AssetSourceGraphicsRoomDeviceDefinition = {
+				layers: def.graphicsLayers,
+				slots: {},
+			};
+
+			ModuleNameSchema[SCHEME_OVERRIDE](() => { /* NOOP */ });
+			for (const [k, v] of Object.entries(def.slots)) {
+				if (v.asset.graphics) {
+					const rawDefinition = readFileSync(join(AssetSourcePath, v.asset.graphics), { encoding: 'utf-8' });
+					const slotDefinition = AssetSourceGraphicsDefinitionSchema.parse(JSON.parse(
+						rawDefinition
+							.split('\n')
+							.filter((line) => !line.trimStart().startsWith('//'))
+							.join('\n'),
+					));
+
+					migratedDefinition.slots[k] = {
+						layers: slotDefinition.layers,
+					};
+				}
+			}
+
+			// Write the new definition
+			const canonizedExport = JSON.stringify(migratedDefinition, undefined, '\t').trim() + '\n';
+			writeFileSync(graphicsPath, canonizedExport, { encoding: 'utf-8' });
+
+			// Remove slot graphics
+			for (const [, v] of Object.entries(def.slots)) {
+				if (v.asset.graphics) {
+					unlinkSync(join(AssetSourcePath, v.asset.graphics));
+				}
+			}
+		}
+
+		if (def.graphicsLayers !== undefined) {
+			logger.warning('Deprecated property \'graphicsLayers\' is used. Please remove it after migration to JSON graphics definition completes.');
+		}
+		for (const [k, v] of Object.entries(def.slots)) {
+			if (v.asset.graphics) {
+				logger.warning(`[slot '${k}'] Deprecated property 'graphics' is used. Please remove it after migration to JSON graphics definition completes.`);
+			}
+		}
+		/* eslint-enable @typescript-eslint/no-deprecated */
+
+		const { graphics, graphicsSource, slotGraphics } = await LoadRoomDeviceAssetGraphicsFile(
+			graphicsPath,
 			builtAssetData,
-			logger.prefixMessages(`Graphics definition:\n\t`),
 		);
 
 		GraphicsDatabase.registerAssetGraphics(id, graphics, graphicsSource);
+
+		const usedSlots = new Set<string>();
+		for (const [k, v] of Object.entries(asset.slots)) {
+			if (Object.hasOwn(slotGraphics, k)) {
+				Assert(slotGraphics[k] != null);
+				usedSlots.add(k);
+				GraphicsDatabase.registerAssetGraphics(v.wearableAsset, slotGraphics[k], null);
+			}
+		}
+
+		for (const k of Object.keys(slotGraphics)) {
+			if (!usedSlots.has(k)) {
+				logger.warning(`Graphics contains entry for unknown slot '${k}'`);
+			}
+		}
 	}
 
 	AssetDatabase.registerAsset(id, asset);
