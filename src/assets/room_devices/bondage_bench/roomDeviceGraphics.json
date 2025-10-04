@@ -1,0 +1,603 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "bench",
+			"image": "bench.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "bench",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "bench_cover.png",
+					"condition": [
+						[
+							{
+								"module": "hole",
+								"operator": "=",
+								"value": "no"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "ring",
+			"image": "bench_ring_background.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "belts",
+			"image": "bench_ring_background_strap.png"
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": -100,
+				"disablePoseOffset": true
+			}
+		}
+	],
+	"slots": {
+		"character_slot": {
+			"layers": [
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "leg belts back",
+					"points": "static",
+					"automeshTemplate": "belowBody",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "belts"
+						}
+					],
+					"variables": [
+						{
+							"type": "view"
+						},
+						{
+							"type": "typedModule",
+							"module": "legs"
+						}
+					],
+					"imageMap": {
+						"front:no": [
+							""
+						],
+						"back:no": [
+							""
+						],
+						"front:tied": [
+							""
+						],
+						"back:tied": [
+							"bench_belts_legs.png"
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "leg buckles back",
+					"points": "static",
+					"automeshTemplate": "belowBody",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "buckles"
+						}
+					],
+					"variables": [
+						{
+							"type": "view"
+						},
+						{
+							"type": "typedModule",
+							"module": "legs"
+						}
+					],
+					"imageMap": {
+						"front:no": [
+							""
+						],
+						"back:no": [
+							""
+						],
+						"front:tied": [
+							""
+						],
+						"back:tied": [
+							"bench_buckles_legs.png"
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "body belts back",
+					"points": "static",
+					"automeshTemplate": "belowBody",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "belts"
+						}
+					],
+					"variables": [
+						{
+							"type": "view"
+						},
+						{
+							"type": "typedModule",
+							"module": "body"
+						}
+					],
+					"imageMap": {
+						"front:no": [
+							""
+						],
+						"back:no": [
+							""
+						],
+						"front:tied": [
+							""
+						],
+						"back:tied": [
+							"bench_belts_body.png"
+						],
+						"front:tiedarmsfree": [
+							""
+						],
+						"back:tiedarmsfree": [
+							"bench_belts_body.png"
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "body buckles back",
+					"points": "static",
+					"automeshTemplate": "belowBody",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "buckles"
+						}
+					],
+					"variables": [
+						{
+							"type": "view"
+						},
+						{
+							"type": "typedModule",
+							"module": "body"
+						}
+					],
+					"imageMap": {
+						"front:no": [
+							""
+						],
+						"back:no": [
+							""
+						],
+						"front:tied": [
+							""
+						],
+						"back:tied": [
+							"bench_buckles_body.png"
+						],
+						"front:tiedarmsfree": [
+							""
+						],
+						"back:tiedarmsfree": [
+							"bench_buckles_body.png"
+						]
+					}
+				},
+				{
+					"x": -8,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "neck belt back",
+					"points": "static",
+					"automeshTemplate": "belowBody",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "belts"
+						}
+					],
+					"variables": [
+						{
+							"type": "view"
+						},
+						{
+							"type": "typedModule",
+							"module": "neck"
+						}
+					],
+					"imageMap": {
+						"front:no": [
+							""
+						],
+						"back:no": [
+							""
+						],
+						"front:tied": [
+							""
+						],
+						"back:tied": [
+							"bench_belts_neck.png"
+						]
+					}
+				},
+				{
+					"x": -8,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "neck buckle back",
+					"points": "static",
+					"automeshTemplate": "belowBody",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "buckles"
+						}
+					],
+					"variables": [
+						{
+							"type": "view"
+						},
+						{
+							"type": "typedModule",
+							"module": "neck"
+						}
+					],
+					"imageMap": {
+						"front:no": [
+							""
+						],
+						"back:no": [
+							""
+						],
+						"front:tied": [
+							""
+						],
+						"back:tied": [
+							"bench_buckles_neck.png"
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "leg belts",
+					"points": "static",
+					"automeshTemplate": "aboveBody",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "belts"
+						}
+					],
+					"variables": [
+						{
+							"type": "view"
+						},
+						{
+							"type": "typedModule",
+							"module": "legs"
+						}
+					],
+					"imageMap": {
+						"front:no": [
+							""
+						],
+						"back:no": [
+							""
+						],
+						"front:tied": [
+							"bench_belts_legs.png"
+						],
+						"back:tied": [
+							""
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "leg buckles",
+					"points": "static",
+					"automeshTemplate": "aboveBody",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "buckles"
+						}
+					],
+					"variables": [
+						{
+							"type": "view"
+						},
+						{
+							"type": "typedModule",
+							"module": "legs"
+						}
+					],
+					"imageMap": {
+						"front:no": [
+							""
+						],
+						"back:no": [
+							""
+						],
+						"front:tied": [
+							"bench_buckles_legs.png"
+						],
+						"back:tied": [
+							""
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "body belts",
+					"points": "static",
+					"automeshTemplate": "aboveBody",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "belts"
+						}
+					],
+					"variables": [
+						{
+							"type": "view"
+						},
+						{
+							"type": "typedModule",
+							"module": "body"
+						}
+					],
+					"imageMap": {
+						"front:no": [
+							""
+						],
+						"back:no": [
+							""
+						],
+						"front:tied": [
+							"bench_belts_body.png"
+						],
+						"back:tied": [
+							""
+						],
+						"front:tiedarmsfree": [
+							"bench_belts_body.png"
+						],
+						"back:tiedarmsfree": [
+							""
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "body buckles",
+					"points": "static",
+					"automeshTemplate": "aboveBody",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "buckles"
+						}
+					],
+					"variables": [
+						{
+							"type": "view"
+						},
+						{
+							"type": "typedModule",
+							"module": "body"
+						}
+					],
+					"imageMap": {
+						"front:no": [
+							""
+						],
+						"back:no": [
+							""
+						],
+						"front:tied": [
+							"bench_buckles_body.png"
+						],
+						"back:tied": [
+							""
+						],
+						"front:tiedarmsfree": [
+							"bench_buckles_body.png"
+						],
+						"back:tiedarmsfree": [
+							""
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "neck belt",
+					"points": "static",
+					"automeshTemplate": "aboveBody",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "belts"
+						}
+					],
+					"variables": [
+						{
+							"type": "view"
+						},
+						{
+							"type": "typedModule",
+							"module": "neck"
+						}
+					],
+					"imageMap": {
+						"front:no": [
+							""
+						],
+						"back:no": [
+							""
+						],
+						"front:tied": [
+							"bench_belts_neck.png"
+						],
+						"back:tied": [
+							""
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "neck buckle",
+					"points": "static",
+					"automeshTemplate": "aboveBody",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "buckles"
+						}
+					],
+					"variables": [
+						{
+							"type": "view"
+						},
+						{
+							"type": "typedModule",
+							"module": "neck"
+						}
+					],
+					"imageMap": {
+						"front:no": [
+							""
+						],
+						"back:no": [
+							""
+						],
+						"front:tied": [
+							"bench_buckles_neck.png"
+						],
+						"back:tied": [
+							""
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "harness front",
+					"priority": "ABOVE_FRONT_HAIR",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "belts",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "bench_harness_front.png",
+								"condition": [
+									[
+										{
+											"module": "harness",
+											"operator": "=",
+											"value": "attached"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "harness back",
+					"priority": "BELOW_BACK_HAIR",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "belts",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "bench_harness_back.png",
+								"condition": [
+									[
+										{
+											"module": "harness",
+											"operator": "=",
+											"value": "attached"
+										}
+									]
+								]
+							}
+						]
+					}
+				}
+			]
+		}
+	}
+}

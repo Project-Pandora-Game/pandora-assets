@@ -1,0 +1,48 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "base",
+			"image": "floor_hatch_1.png",
+			"imageOverrides": [
+				{
+					"image": "",
+					"condition": [
+						[
+							{
+								"module": "orientation",
+								"operator": "=",
+								"value": "ceiling"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": 0,
+				"y": -600
+			},
+			"clipToRoom": true,
+			"colorizationKey": "base",
+			"image": "floor_hatch_1_upside-down.png",
+			"imageOverrides": [
+				{
+					"image": "",
+					"condition": [
+						[
+							{
+								"module": "orientation",
+								"operator": "=",
+								"value": "floor"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {}
+}

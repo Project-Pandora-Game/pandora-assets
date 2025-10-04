@@ -1,0 +1,15 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "chest",
+			"image": "chest.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "color",
+			"image": "chest_overlay.png"
+		}
+	],
+	"slots": {}
+}

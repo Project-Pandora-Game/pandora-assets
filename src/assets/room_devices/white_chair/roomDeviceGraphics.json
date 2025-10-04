@@ -1,0 +1,28 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "chair",
+			"image": "white_chair.png"
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_sitting",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": 35,
+				"relativeScale": 1.1
+			}
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_kneeling",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": 255,
+				"relativeScale": 1.16
+			}
+		}
+	],
+	"slots": {}
+}

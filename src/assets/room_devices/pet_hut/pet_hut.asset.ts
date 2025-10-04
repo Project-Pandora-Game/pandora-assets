@@ -86,65 +86,7 @@ DefineRoomDeviceAsset({
 		x: 580,
 		y: 1010,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'hut_back.png',
-			colorizationKey: 'inside',
-		},
-		{
-			type: 'sprite',
-			image: 'hut_cushion.png',
-			colorizationKey: 'cushion',
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot_inside',
-			characterPosition: {
-				offsetX: 0,
-				offsetY: -100,
-				disablePoseOffset: true,
-				relativeScale: 0.95,
-				pivotOffset: {
-					x: 120,
-					y: -720,
-				},
-			},
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot_kneeling',
-			characterPosition: {
-				offsetX: 0,
-				offsetY: 10,
-				relativeScale: 0.98,
-			},
-		},
-		{
-			type: 'sprite',
-			image: 'hut_front_ears.png',
-			imageOverrides: [
-				{
-					image: '',
-					condition: [
-						[
-							{
-								module: 'ears',
-								operator: '=',
-								value: 'no',
-							},
-						],
-					],
-				},
-			],
-			colorizationKey: 'outside',
-		},
-		{
-			type: 'sprite',
-			image: 'hut_front.png',
-			colorizationKey: 'outside',
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

@@ -109,27 +109,7 @@ DefineRoomDeviceAsset({
 		x: 500,
 		y: 690,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'pillory_table_back.png',
-			colorizationKey: 'table',
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot',
-			characterPosition: {
-				offsetX: 0,
-				offsetY: 390,
-				disablePoseOffset: true,
-			},
-		},
-		{
-			type: 'sprite',
-			image: 'pillory_table_front.png',
-			colorizationKey: 'table',
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

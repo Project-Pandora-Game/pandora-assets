@@ -18,18 +18,7 @@ DefineRoomDeviceAsset({
 		x: 400,
 		y: 250,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'flower_bed_leafs.png',
-			colorizationKey: 'leafs',
-		},
-		{
-			type: 'sprite',
-			image: 'flower_bed_flowers.png',
-			colorizationKey: 'flowers',
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

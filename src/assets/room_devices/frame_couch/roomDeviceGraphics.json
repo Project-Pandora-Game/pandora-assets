@@ -1,0 +1,136 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "frame",
+			"image": "couch_frame.png",
+			"imageOverrides": [
+				{
+					"image": "couch_frame_large.png",
+					"condition": [
+						[
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "large"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "cushion",
+			"image": "couch_cushion.png",
+			"imageOverrides": [
+				{
+					"image": "couch_cushion_large.png",
+					"condition": [
+						[
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "large"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_sitting_left",
+			"characterPosition": {
+				"offsetX": -360,
+				"offsetY": 120,
+				"relativeScale": 1.08
+			}
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_sitting_middle",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": 120,
+				"relativeScale": 1.08
+			}
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_sitting_right",
+			"characterPosition": {
+				"offsetX": 360,
+				"offsetY": 120,
+				"relativeScale": 1.08
+			}
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_top",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": -290,
+				"relativeScale": 0.96,
+				"pivotOffset": {
+					"x": 0,
+					"y": -590
+				},
+				"disablePoseOffset": true
+			}
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "ropes",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "couch_rope_feet.png",
+					"condition": [
+						[
+							{
+								"module": "ropes",
+								"operator": "=",
+								"value": "tied_legs"
+							}
+						],
+						[
+							{
+								"module": "ropes",
+								"operator": "=",
+								"value": "tied_both"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "ropes",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "couch_rope_arms.png",
+					"condition": [
+						[
+							{
+								"module": "ropes",
+								"operator": "=",
+								"value": "tied_arms"
+							}
+						],
+						[
+							{
+								"module": "ropes",
+								"operator": "=",
+								"value": "tied_both"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {}
+}

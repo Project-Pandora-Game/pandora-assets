@@ -48,66 +48,7 @@ DefineRoomDeviceAsset({
 		x: 353,
 		y: -120,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'rug_base.png',
-			colorizationKey: 'base',
-		},
-		{
-			type: 'sprite',
-			image: '',
-			colorizationKey: 'center',
-			imageOverrides: [
-				{
-					image: 'rug_center.png',
-					condition: [
-						[
-							{
-								module: 'rugState',
-								operator: '=',
-								value: 'complete',
-							},
-						],
-						[
-							{
-								module: 'rugState',
-								operator: '=',
-								value: 'baseCenter',
-							},
-						],
-					],
-				},
-			],
-		},
-		{
-			type: 'sprite',
-			image: '',
-			colorizationKey: 'decorations',
-			imageOverrides: [
-				{
-					image: 'rug_decoration.png',
-					condition: [
-						[
-							{
-								module: 'rugState',
-								operator: '=',
-								value: 'complete',
-							},
-						],
-						[
-							{
-								module: 'rugState',
-								operator: '=',
-								value: 'baseDeco',
-							},
-						],
-					],
-				},
-			],
-		},
-
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
 		credits: ['SandrinePDR'],

@@ -1,0 +1,662 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -16,
+				"y": -1950
+			},
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": -16,
+						"y": -1125
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "extended"
+							},
+							{
+								"module": "carabiner",
+								"operator": "=",
+								"value": "strappado"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": -16,
+						"y": -2450
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "retracted"
+							}
+						]
+					]
+				}
+			],
+			"clipToRoom": true,
+			"colorizationKey": "cable",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "winch_cable.png",
+					"condition": [
+						[
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "front"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -250,
+				"y": 0
+			},
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": -250,
+						"y": -500
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "retracted"
+							}
+						]
+					]
+				}
+			],
+			"colorizationKey": "bar",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "winch_bar.png",
+					"condition": [
+						[
+							{
+								"module": "attachment",
+								"operator": "=",
+								"value": "spreader_bar"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -250,
+				"y": 0
+			},
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": -250,
+						"y": -500
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "retracted"
+							}
+						]
+					]
+				}
+			],
+			"colorizationKey": "chains",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "winch_bar_carabiners.png",
+					"condition": [
+						[
+							{
+								"module": "attachment",
+								"operator": "=",
+								"value": "spreader_bar"
+							},
+							{
+								"module": "spreader_bar",
+								"operator": "!=",
+								"value": "none"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -250,
+				"y": 5
+			},
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": -250,
+						"y": -500
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "retracted"
+							}
+						]
+					]
+				}
+			],
+			"colorizationKey": "chains",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "winch_carabiner_chains.png",
+					"condition": [
+						[
+							{
+								"module": "attachment",
+								"operator": "=",
+								"value": "carabiner"
+							},
+							{
+								"module": "carabiner",
+								"operator": "=",
+								"value": "wrist_tied"
+							}
+						],
+						[
+							{
+								"module": "attachment",
+								"operator": "=",
+								"value": "carabiner"
+							},
+							{
+								"module": "carabiner",
+								"operator": "=",
+								"value": "ankles_tied"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -25,
+				"y": 5
+			},
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": -25,
+						"y": 835
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "extended"
+							},
+							{
+								"module": "carabiner",
+								"operator": "=",
+								"value": "strappado"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": -25,
+						"y": -495
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "retracted"
+							}
+						]
+					]
+				}
+			],
+			"colorizationKey": "pulley",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "winch_pulley.png",
+					"condition": [
+						[
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "front"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -25,
+				"y": 5
+			},
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": -25,
+						"y": 835
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "extended"
+							},
+							{
+								"module": "carabiner",
+								"operator": "=",
+								"value": "strappado"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": -25,
+						"y": -495
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "retracted"
+							}
+						]
+					]
+				}
+			],
+			"colorizationKey": "carabiner",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "winch_carabiner.png",
+					"condition": [
+						[
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "front"
+							},
+							{
+								"module": "attachment",
+								"operator": "!=",
+								"value": "none"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "slot",
+			"slot": "under_winch",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": 0,
+				"relativeScale": 1,
+				"pivotOffset": {
+					"x": 0,
+					"y": 0
+				}
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": -1700,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "retracted"
+							},
+							{
+								"module": "spreader_bar",
+								"operator": "=",
+								"value": "ankles_cuffed"
+							}
+						],
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "retracted"
+							},
+							{
+								"module": "carabiner",
+								"operator": "=",
+								"value": "ankles_tied"
+							}
+						]
+					]
+				},
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": 0,
+						"pivotOffset": {
+							"x": 0,
+							"y": 500
+						},
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "retracted"
+							},
+							{
+								"module": "spreader_bar",
+								"operator": "!=",
+								"value": "none"
+							}
+						],
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "retracted"
+							},
+							{
+								"module": "carabiner",
+								"operator": "=",
+								"value": "wrist_tied"
+							}
+						],
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "retracted"
+							},
+							{
+								"module": "carabiner",
+								"operator": "=",
+								"value": "ankles_tied"
+							}
+						]
+					]
+				},
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": -1200,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "spreader_bar",
+								"operator": "=",
+								"value": "ankles_cuffed"
+							}
+						],
+						[
+							{
+								"module": "carabiner",
+								"operator": "=",
+								"value": "ankles_tied"
+							}
+						]
+					]
+				},
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": 0,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "spreader_bar",
+								"operator": "!=",
+								"value": "none"
+							}
+						],
+						[
+							{
+								"module": "carabiner",
+								"operator": "!=",
+								"value": "none"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -16,
+				"y": -1950
+			},
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": -16,
+						"y": -1125
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "extended"
+							},
+							{
+								"module": "carabiner",
+								"operator": "=",
+								"value": "strappado"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": -16,
+						"y": -2450
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "retracted"
+							}
+						]
+					]
+				}
+			],
+			"clipToRoom": true,
+			"colorizationKey": "cable",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "winch_cable.png",
+					"condition": [
+						[
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "back"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -25,
+				"y": 5
+			},
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": -25,
+						"y": 835
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "extended"
+							},
+							{
+								"module": "carabiner",
+								"operator": "=",
+								"value": "strappado"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": -25,
+						"y": -495
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "retracted"
+							}
+						]
+					]
+				}
+			],
+			"colorizationKey": "pulley",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "winch_pulley.png",
+					"condition": [
+						[
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "back"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -25,
+				"y": 5
+			},
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": -25,
+						"y": 835
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "extended"
+							},
+							{
+								"module": "carabiner",
+								"operator": "=",
+								"value": "strappado"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": -25,
+						"y": -495
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "retracted"
+							}
+						]
+					]
+				}
+			],
+			"colorizationKey": "carabiner",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "winch_carabiner.png",
+					"condition": [
+						[
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "back"
+							},
+							{
+								"module": "attachment",
+								"operator": "!=",
+								"value": "none"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {}
+}

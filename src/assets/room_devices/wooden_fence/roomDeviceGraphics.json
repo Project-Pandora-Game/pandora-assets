@@ -1,0 +1,10 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "fence",
+			"image": "wooden_fence.png"
+		}
+	],
+	"slots": {}
+}

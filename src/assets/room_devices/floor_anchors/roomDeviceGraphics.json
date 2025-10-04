@@ -1,0 +1,664 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "sockets",
+			"image": "floor_sockets.png"
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_left",
+			"characterPosition": {
+				"offsetX": -370,
+				"offsetY": -34,
+				"relativeScale": 0.98
+			}
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_right",
+			"characterPosition": {
+				"offsetX": 370,
+				"offsetY": -34,
+				"relativeScale": 0.98
+			}
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_middle",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": 0,
+				"pivotOffset": {
+					"x": 0,
+					"y": -30
+				}
+			}
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "chains",
+			"image": "chain_leftright.png",
+			"imageOverrides": [
+				{
+					"image": "",
+					"condition": [
+						[
+							{
+								"module": "center",
+								"operator": "!=",
+								"value": "tied_center"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {
+		"character_slot_left": {
+			"layers": [
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "chain front-facing",
+					"priority": "OVERLAY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "chains",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "chain_hanging_wide.png",
+								"condition": [
+									[
+										{
+											"module": "left",
+											"operator": "=",
+											"value": "tied_left_long"
+										},
+										{
+											"legs": "!kneeling"
+										},
+										{
+											"view": "front"
+										},
+										{
+											"bone": "leg_l",
+											"operator": "<",
+											"value": -18
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -18
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_kneeling_wide.png",
+								"condition": [
+									[
+										{
+											"module": "left",
+											"operator": "=",
+											"value": "tied_left_long"
+										},
+										{
+											"legs": "kneeling"
+										},
+										{
+											"view": "front"
+										},
+										{
+											"bone": "leg_l",
+											"operator": "<",
+											"value": -18
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -18
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_short_wide.png",
+								"condition": [
+									[
+										{
+											"module": "left",
+											"operator": "=",
+											"value": "tied_left_short"
+										},
+										{
+											"view": "front"
+										},
+										{
+											"bone": "leg_l",
+											"operator": "<",
+											"value": -18
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -18
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging.png",
+								"condition": [
+									[
+										{
+											"module": "left",
+											"operator": "=",
+											"value": "tied_left_long"
+										},
+										{
+											"legs": "!kneeling"
+										},
+										{
+											"view": "front"
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_kneeling.png",
+								"condition": [
+									[
+										{
+											"module": "left",
+											"operator": "=",
+											"value": "tied_left_long"
+										},
+										{
+											"legs": "kneeling"
+										},
+										{
+											"view": "front"
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_short.png",
+								"condition": [
+									[
+										{
+											"module": "left",
+											"operator": "=",
+											"value": "tied_left_short"
+										},
+										{
+											"view": "front"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "chain back-facing",
+					"priority": "OVERLAY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "chains",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "chain_hanging_back_wide.png",
+								"condition": [
+									[
+										{
+											"module": "left",
+											"operator": "=",
+											"value": "tied_left_long"
+										},
+										{
+											"legs": "!kneeling"
+										},
+										{
+											"view": "back"
+										},
+										{
+											"bone": "leg_l",
+											"operator": "<",
+											"value": -18
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -18
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_kneeling_back_wide.png",
+								"condition": [
+									[
+										{
+											"module": "left",
+											"operator": "=",
+											"value": "tied_left_long"
+										},
+										{
+											"legs": "kneeling"
+										},
+										{
+											"view": "back"
+										},
+										{
+											"bone": "leg_l",
+											"operator": "<",
+											"value": -18
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -18
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_short_back_wide.png",
+								"condition": [
+									[
+										{
+											"module": "left",
+											"operator": "=",
+											"value": "tied_left_short"
+										},
+										{
+											"view": "back"
+										},
+										{
+											"bone": "leg_l",
+											"operator": "<",
+											"value": -18
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -18
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_back.png",
+								"condition": [
+									[
+										{
+											"module": "left",
+											"operator": "=",
+											"value": "tied_left_long"
+										},
+										{
+											"legs": "!kneeling"
+										},
+										{
+											"view": "back"
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_kneeling_back.png",
+								"condition": [
+									[
+										{
+											"module": "left",
+											"operator": "=",
+											"value": "tied_left_long"
+										},
+										{
+											"legs": "kneeling"
+										},
+										{
+											"view": "back"
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_short_back.png",
+								"condition": [
+									[
+										{
+											"module": "left",
+											"operator": "=",
+											"value": "tied_left_short"
+										},
+										{
+											"view": "back"
+										}
+									]
+								]
+							}
+						]
+					}
+				}
+			]
+		},
+		"character_slot_right": {
+			"layers": [
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "chain front-facing",
+					"priority": "OVERLAY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "chains",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "chain_hanging_back_wide.png",
+								"condition": [
+									[
+										{
+											"module": "right",
+											"operator": "=",
+											"value": "tied_right_long"
+										},
+										{
+											"legs": "!kneeling"
+										},
+										{
+											"view": "front"
+										},
+										{
+											"bone": "leg_l",
+											"operator": "<",
+											"value": -18
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -18
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_kneeling_back_wide.png",
+								"condition": [
+									[
+										{
+											"module": "right",
+											"operator": "=",
+											"value": "tied_right_long"
+										},
+										{
+											"legs": "kneeling"
+										},
+										{
+											"view": "front"
+										},
+										{
+											"bone": "leg_l",
+											"operator": "<",
+											"value": -18
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -18
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_short_back_wide.png",
+								"condition": [
+									[
+										{
+											"module": "right",
+											"operator": "=",
+											"value": "tied_right_short"
+										},
+										{
+											"view": "front"
+										},
+										{
+											"bone": "leg_l",
+											"operator": "<",
+											"value": -18
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -18
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_back.png",
+								"condition": [
+									[
+										{
+											"module": "right",
+											"operator": "=",
+											"value": "tied_right_long"
+										},
+										{
+											"legs": "!kneeling"
+										},
+										{
+											"view": "front"
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_kneeling_back.png",
+								"condition": [
+									[
+										{
+											"module": "right",
+											"operator": "=",
+											"value": "tied_right_long"
+										},
+										{
+											"legs": "kneeling"
+										},
+										{
+											"view": "front"
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_short_back.png",
+								"condition": [
+									[
+										{
+											"module": "right",
+											"operator": "=",
+											"value": "tied_right_short"
+										},
+										{
+											"view": "front"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "chain back-facing",
+					"priority": "OVERLAY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "chains",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "chain_hanging_wide.png",
+								"condition": [
+									[
+										{
+											"module": "right",
+											"operator": "=",
+											"value": "tied_right_long"
+										},
+										{
+											"legs": "!kneeling"
+										},
+										{
+											"view": "back"
+										},
+										{
+											"bone": "leg_l",
+											"operator": "<",
+											"value": -18
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -18
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_kneeling_wide.png",
+								"condition": [
+									[
+										{
+											"module": "right",
+											"operator": "=",
+											"value": "tied_right_long"
+										},
+										{
+											"legs": "kneeling"
+										},
+										{
+											"view": "back"
+										},
+										{
+											"bone": "leg_l",
+											"operator": "<",
+											"value": -18
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -18
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_short_wide.png",
+								"condition": [
+									[
+										{
+											"module": "right",
+											"operator": "=",
+											"value": "tied_right_short"
+										},
+										{
+											"view": "back"
+										},
+										{
+											"bone": "leg_l",
+											"operator": "<",
+											"value": -18
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -18
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging.png",
+								"condition": [
+									[
+										{
+											"module": "right",
+											"operator": "=",
+											"value": "tied_right_long"
+										},
+										{
+											"legs": "!kneeling"
+										},
+										{
+											"view": "back"
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_kneeling.png",
+								"condition": [
+									[
+										{
+											"module": "right",
+											"operator": "=",
+											"value": "tied_right_long"
+										},
+										{
+											"legs": "kneeling"
+										},
+										{
+											"view": "back"
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_short.png",
+								"condition": [
+									[
+										{
+											"module": "right",
+											"operator": "=",
+											"value": "tied_right_short"
+										},
+										{
+											"view": "back"
+										}
+									]
+								]
+							}
+						]
+					}
+				}
+			]
+		}
+	}
+}

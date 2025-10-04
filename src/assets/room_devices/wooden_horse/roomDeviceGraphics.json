@@ -1,0 +1,365 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "top",
+			"image": "horse_top_unused.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "top",
+			"image": "horse_top_used.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "frame",
+			"image": "horse_frame.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "parts",
+			"image": "horse_metal.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "iron",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "horse_iron_big.png",
+					"condition": [
+						[
+							{
+								"module": "leg_chain",
+								"operator": "=",
+								"value": "weights_large"
+							},
+							{
+								"module": "weights",
+								"operator": "=",
+								"value": "iron"
+							}
+						]
+					]
+				},
+				{
+					"image": "horse_iron_medium.png",
+					"condition": [
+						[
+							{
+								"module": "leg_chain",
+								"operator": "=",
+								"value": "weights_medium"
+							},
+							{
+								"module": "weights",
+								"operator": "=",
+								"value": "iron"
+							}
+						]
+					]
+				},
+				{
+					"image": "horse_iron_small.png",
+					"condition": [
+						[
+							{
+								"module": "leg_chain",
+								"operator": "=",
+								"value": "weights_small"
+							},
+							{
+								"module": "weights",
+								"operator": "=",
+								"value": "iron"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "stone",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "horse_stone_big.png",
+					"condition": [
+						[
+							{
+								"module": "leg_chain",
+								"operator": "=",
+								"value": "weights_large"
+							},
+							{
+								"module": "weights",
+								"operator": "=",
+								"value": "stone"
+							}
+						]
+					]
+				},
+				{
+					"image": "horse_stone_medium.png",
+					"condition": [
+						[
+							{
+								"module": "leg_chain",
+								"operator": "=",
+								"value": "weights_medium"
+							},
+							{
+								"module": "weights",
+								"operator": "=",
+								"value": "stone"
+							}
+						]
+					]
+				},
+				{
+					"image": "horse_stone_small.png",
+					"condition": [
+						[
+							{
+								"module": "leg_chain",
+								"operator": "=",
+								"value": "weights_small"
+							},
+							{
+								"module": "weights",
+								"operator": "=",
+								"value": "stone"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot",
+			"characterPosition": {
+				"offsetX": 50,
+				"offsetY": 65,
+				"relativeScale": 1.05
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": 38,
+						"pivotOffset": {
+							"x": 0,
+							"y": 142
+						},
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "position",
+								"operator": "!=",
+								"value": "none"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "chains",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "horse_chain_feet.png",
+					"condition": [
+						[
+							{
+								"module": "leg_chain",
+								"operator": "=",
+								"value": "chained"
+							}
+						]
+					]
+				},
+				{
+					"image": "horse_chain_feet_short.png",
+					"condition": [
+						[
+							{
+								"module": "leg_chain",
+								"operator": "!=",
+								"value": "chained"
+							},
+							{
+								"module": "leg_chain",
+								"operator": "!=",
+								"value": "none"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "chains",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "horse_chain_collar.png",
+					"condition": [
+						[
+							{
+								"module": "collar_chain",
+								"operator": "=",
+								"value": "chained"
+							},
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "forward"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {
+		"character_slot": {
+			"layers": [
+				{
+					"x": -42,
+					"y": 86,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Top front",
+					"priority": "ABOVE_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "top",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "horse_top_used.png",
+								"condition": [
+									[
+										{
+											"module": "position",
+											"operator": "!=",
+											"value": "none"
+										},
+										{
+											"view": "front"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": -42,
+					"y": 86,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Frame front",
+					"priority": "ABOVE_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "frame",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "horse_frame.png",
+								"condition": [
+									[
+										{
+											"module": "position",
+											"operator": "!=",
+											"value": "none"
+										},
+										{
+											"view": "front"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": -42,
+					"y": 86,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Metal front",
+					"priority": "ABOVE_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "parts",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "horse_metal.png",
+								"condition": [
+									[
+										{
+											"module": "position",
+											"operator": "!=",
+											"value": "none"
+										},
+										{
+											"view": "front"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": -38,
+					"y": 88,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Top back",
+					"priority": "BELOW_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "top",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "horse_top_used.png",
+								"condition": [
+									[
+										{
+											"module": "position",
+											"operator": "!=",
+											"value": "none"
+										},
+										{
+											"view": "back"
+										}
+									]
+								]
+							}
+						]
+					}
+				}
+			]
+		}
+	}
+}

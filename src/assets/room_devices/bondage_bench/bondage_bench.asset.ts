@@ -33,7 +33,6 @@ DefineRoomDeviceAsset({
 						pose: 'standing',
 					},
 				},
-				graphics: 'bench.json',
 			},
 		},
 	},
@@ -290,51 +289,7 @@ DefineRoomDeviceAsset({
 		x: 500,
 		y: 1390,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'bench.png',
-			colorizationKey: 'bench',
-		},
-		{
-			type: 'sprite',
-			image: '',
-			colorizationKey: 'bench',
-			imageOverrides: [
-				{
-					image: 'bench_cover.png',
-					condition: [
-						[
-							{
-								module: 'hole',
-								operator: '=',
-								value: 'no',
-							},
-						],
-					],
-				},
-			],
-		},
-		{
-			type: 'sprite',
-			image: 'bench_ring_background.png',
-			colorizationKey: 'ring',
-		},
-		{
-			type: 'sprite',
-			image: 'bench_ring_background_strap.png',
-			colorizationKey: 'belts',
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot',
-			characterPosition: {
-				offsetX: 0,
-				offsetY: -100,
-				disablePoseOffset: true,
-			},
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

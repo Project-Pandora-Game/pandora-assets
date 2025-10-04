@@ -1,0 +1,1022 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -142,
+				"y": -3584
+			},
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": -142,
+						"y": -1600
+					},
+					"condition": [
+						[
+							{
+								"module": "model",
+								"operator": "=",
+								"value": "outdoor"
+							}
+						]
+					]
+				}
+			],
+			"clipToRoom": true,
+			"colorizationKey": "hashira",
+			"image": "hashira.png"
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -142,
+				"y": -180
+			},
+			"colorizationKey": "hashira",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "hashira_base.png",
+					"condition": [
+						[
+							{
+								"module": "base",
+								"operator": "=",
+								"value": "basic"
+							}
+						]
+					]
+				},
+				{
+					"image": "hashira_base_big.png",
+					"condition": [
+						[
+							{
+								"module": "base",
+								"operator": "=",
+								"value": "extra_base"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -500,
+				"y": -2000
+			},
+			"colorizationKey": "rope",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "hashira_rope_top_link.png",
+					"condition": [
+						[
+							{
+								"module": "suspension",
+								"operator": "=",
+								"value": "rope"
+							}
+						]
+					]
+				},
+				{
+					"image": "hashira_rope_top_link_upside_down.png",
+					"condition": [
+						[
+							{
+								"module": "suspension",
+								"operator": "=",
+								"value": "upside_down"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -142,
+				"y": -600
+			},
+			"colorizationKey": "leather",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "saddle_seat.png",
+					"condition": [
+						[
+							{
+								"module": "suspension",
+								"operator": "=",
+								"value": "saddle"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -142,
+				"y": -600
+			},
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "saddle_seat_reflection.png",
+					"condition": [
+						[
+							{
+								"module": "suspension",
+								"operator": "=",
+								"value": "saddle"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "slot",
+			"slot": "front",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": 0,
+				"relativeScale": 1,
+				"pivotOffset": {
+					"x": 0,
+					"y": 0
+				}
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": -1240,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "suspension",
+								"operator": "=",
+								"value": "upside_down"
+							}
+						]
+					]
+				},
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": 0,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "suspension",
+								"operator": "!=",
+								"value": "none"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -142,
+				"y": -600
+			},
+			"colorizationKey": "hashira",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "saddle_base.png",
+					"condition": [
+						[
+							{
+								"module": "suspension",
+								"operator": "=",
+								"value": "saddle"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -142,
+				"y": -600
+			},
+			"colorizationKey": "leather",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "saddle_leather.png",
+					"condition": [
+						[
+							{
+								"module": "suspension",
+								"operator": "=",
+								"value": "saddle"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -142,
+				"y": -600
+			},
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "saddle_leather_reflection.png",
+					"condition": [
+						[
+							{
+								"module": "suspension",
+								"operator": "=",
+								"value": "saddle"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -142,
+				"y": -600
+			},
+			"colorizationKey": "bolts",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "saddle_bolts.png",
+					"condition": [
+						[
+							{
+								"module": "suspension",
+								"operator": "=",
+								"value": "saddle"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -500,
+				"y": -2000
+			},
+			"colorizationKey": "rope",
+			"image": "hashira_rope_top_normal.png",
+			"imageOverrides": [
+				{
+					"image": "hashira_rope_top.png",
+					"condition": [
+						[
+							{
+								"module": "suspension",
+								"operator": "=",
+								"value": "rope"
+							}
+						],
+						[
+							{
+								"module": "suspension",
+								"operator": "=",
+								"value": "upside_down"
+							}
+						],
+						[
+							{
+								"module": "futomomo",
+								"operator": "!=",
+								"value": "none"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {
+		"front": {
+			"layers": [
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Ankles Upside Down",
+					"priority": "ABOVE_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "rope",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "ankles_upside_down.png",
+								"condition": [
+									[
+										{
+											"module": "suspension",
+											"operator": "=",
+											"value": "upside_down"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Wrists Above Head",
+					"priority": "ABOVE_ARM_RIGHT",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "rope",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "wrists_above_head.png",
+								"condition": [
+									[
+										{
+											"module": "arms",
+											"operator": "=",
+											"value": "attached_high"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Wrists Above Head back",
+					"priority": "ABOVE_BACK_HAIR",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "rope",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "wrists_above_head.png",
+								"condition": [
+									[
+										{
+											"module": "arms",
+											"operator": "=",
+											"value": "attached_high"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Arms Behind Pillar",
+					"priority": "ABOVE_ARM_LEFT",
+					"points": "custom_arm_restraints_torso_ropes",
+					"pointType": [
+						"bodyarm_l",
+						"arm_l"
+					],
+					"mirror": 1,
+					"colorizationKey": "rope",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "arms_legs_tied.png",
+								"condition": [
+									[
+										{
+											"module": "arms",
+											"operator": "=",
+											"value": "attached"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Neck",
+					"priority": "BELOW_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "rope",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "collar_hashira.png",
+								"condition": [
+									[
+										{
+											"module": "neck",
+											"operator": "=",
+											"value": "attached"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Neck",
+					"priority": "ABOVE_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "rope",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "collar_neck.png",
+								"condition": [
+									[
+										{
+											"module": "neck",
+											"operator": "=",
+											"value": "attached"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Over breasts rope",
+					"priority": "ABOVE_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "rope",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "chest_over_breasts.png",
+								"condition": [
+									[
+										{
+											"module": "chest",
+											"operator": "=",
+											"value": "attached"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Waist rope",
+					"priority": "ABOVE_BODY",
+					"points": "custom_arm_restraints_torso_ropes",
+					"mirror": 0,
+					"colorizationKey": "rope",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "waist.png",
+								"condition": [
+									[
+										{
+											"module": "waist",
+											"operator": "=",
+											"value": "attached"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Chest to waist rope",
+					"priority": "ABOVE_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "rope",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "chest_to_waist.png",
+								"condition": [
+									[
+										{
+											"module": "chest",
+											"operator": "=",
+											"value": "attached"
+										},
+										{
+											"module": "waist",
+											"operator": "=",
+											"value": "attached"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Chest to waist rope",
+					"priority": "ABOVE_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "rope",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "chest_to_waist.png",
+								"condition": [
+									[
+										{
+											"module": "chest",
+											"operator": "=",
+											"value": "attached"
+										},
+										{
+											"module": "waist",
+											"operator": "=",
+											"value": "attached"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": -712,
+					"width": 1000,
+					"height": 2000,
+					"type": "mesh",
+					"name": "Legs Link",
+					"priority": "BELOW_BODY",
+					"points": "static",
+					"pointType": [
+						"static",
+						"static_r"
+					],
+					"mirror": 1,
+					"colorizationKey": "rope",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "legs_1.png",
+								"condition": [
+									[
+										{
+											"module": "futomomo",
+											"operator": "!=",
+											"value": "none"
+										},
+										{
+											"module": "thighs",
+											"operator": "=",
+											"value": "futomomo"
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -90
+										}
+									]
+								]
+							},
+							{
+								"image": "legs_2.png",
+								"condition": [
+									[
+										{
+											"module": "futomomo",
+											"operator": "!=",
+											"value": "none"
+										},
+										{
+											"module": "thighs",
+											"operator": "=",
+											"value": "futomomo"
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -80
+										}
+									]
+								]
+							},
+							{
+								"image": "legs_3.png",
+								"condition": [
+									[
+										{
+											"module": "futomomo",
+											"operator": "!=",
+											"value": "none"
+										},
+										{
+											"module": "thighs",
+											"operator": "=",
+											"value": "futomomo"
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -70
+										}
+									]
+								]
+							},
+							{
+								"image": "legs_4.png",
+								"condition": [
+									[
+										{
+											"module": "futomomo",
+											"operator": "!=",
+											"value": "none"
+										},
+										{
+											"module": "thighs",
+											"operator": "=",
+											"value": "futomomo"
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -62
+										}
+									]
+								]
+							},
+							{
+								"image": "legs_5.png",
+								"condition": [
+									[
+										{
+											"module": "futomomo",
+											"operator": "!=",
+											"value": "none"
+										},
+										{
+											"module": "thighs",
+											"operator": "=",
+											"value": "futomomo"
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -52
+										}
+									]
+								]
+							},
+							{
+								"image": "legs_6.png",
+								"condition": [
+									[
+										{
+											"module": "futomomo",
+											"operator": "!=",
+											"value": "none"
+										},
+										{
+											"module": "thighs",
+											"operator": "=",
+											"value": "futomomo"
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -44
+										}
+									]
+								]
+							},
+							{
+								"image": "legs_7.png",
+								"condition": [
+									[
+										{
+											"module": "futomomo",
+											"operator": "!=",
+											"value": "none"
+										},
+										{
+											"module": "thighs",
+											"operator": "=",
+											"value": "futomomo"
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -40
+										}
+									]
+								]
+							},
+							{
+								"image": "legs_8.png",
+								"condition": [
+									[
+										{
+											"module": "futomomo",
+											"operator": "!=",
+											"value": "none"
+										},
+										{
+											"module": "thighs",
+											"operator": "=",
+											"value": "futomomo"
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -35
+										}
+									]
+								]
+							},
+							{
+								"image": "legs_9.png",
+								"condition": [
+									[
+										{
+											"module": "futomomo",
+											"operator": "!=",
+											"value": "none"
+										},
+										{
+											"module": "thighs",
+											"operator": "=",
+											"value": "futomomo"
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -25
+										}
+									]
+								]
+							},
+							{
+								"image": "legs_10.png",
+								"condition": [
+									[
+										{
+											"module": "futomomo",
+											"operator": "!=",
+											"value": "none"
+										},
+										{
+											"module": "thighs",
+											"operator": "=",
+											"value": "futomomo"
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -19
+										}
+									]
+								]
+							},
+							{
+								"image": "legs_11.png",
+								"condition": [
+									[
+										{
+											"module": "futomomo",
+											"operator": "!=",
+											"value": "none"
+										},
+										{
+											"module": "thighs",
+											"operator": "=",
+											"value": "futomomo"
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -14
+										}
+									]
+								]
+							},
+							{
+								"image": "legs_12.png",
+								"condition": [
+									[
+										{
+											"module": "futomomo",
+											"operator": "!=",
+											"value": "none"
+										},
+										{
+											"module": "thighs",
+											"operator": "=",
+											"value": "futomomo"
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -10
+										}
+									]
+								]
+							},
+							{
+								"image": "legs_13.png",
+								"condition": [
+									[
+										{
+											"module": "futomomo",
+											"operator": "!=",
+											"value": "none"
+										},
+										{
+											"module": "thighs",
+											"operator": "=",
+											"value": "futomomo"
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": -5
+										}
+									]
+								]
+							},
+							{
+								"image": "legs_14.png",
+								"condition": [
+									[
+										{
+											"module": "futomomo",
+											"operator": "!=",
+											"value": "none"
+										},
+										{
+											"module": "thighs",
+											"operator": "=",
+											"value": "futomomo"
+										},
+										{
+											"bone": "leg_r",
+											"operator": "<",
+											"value": 0
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Legs Futomomo",
+					"priority": "ABOVE_LEG_LEFT",
+					"points": "body",
+					"pointType": [
+						"bodyleg_l",
+						"leg_l"
+					],
+					"mirror": 1,
+					"colorizationKey": "rope",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "arms_legs_tied.png",
+								"condition": [
+									[
+										{
+											"module": "thighs",
+											"operator": "=",
+											"value": "futomomo"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Legs tied to Pillar",
+					"priority": "ABOVE_BODY",
+					"points": "custom_foot_restraints_duct_tape",
+					"mirror": 0,
+					"colorizationKey": "rope",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "legs_tied.png",
+								"condition": [
+									[
+										{
+											"module": "thighs",
+											"operator": "=",
+											"value": "attached"
+										}
+									]
+								]
+							}
+						]
+					}
+				}
+			]
+		}
+	}
+}

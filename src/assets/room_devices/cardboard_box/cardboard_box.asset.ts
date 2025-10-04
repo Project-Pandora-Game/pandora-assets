@@ -94,78 +94,7 @@ DefineRoomDeviceAsset({
 		x: 483,
 		y: 630,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'cardbox_back.png',
-			colorizationKey: 'box',
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot_inside',
-			characterPosition: {
-				offsetX: 0,
-				offsetY: 0,
-				relativeScale: 0.96,
-				pivotOffset: {
-					x: 0,
-					y: 22,
-				},
-			},
-			characterPositionOverrides: [
-				{
-					position: {
-						offsetX: 0,
-						offsetY: -50,
-						relativeScale: 0.01,
-						disablePoseOffset: true,
-					},
-					condition: [
-						[
-							{
-								module: 'lid',
-								operator: '=',
-								value: 'closed',
-							},
-						],
-					],
-				},
-			],
-		},
-		{
-			type: 'sprite',
-			image: 'cardbox_front.png',
-			colorizationKey: 'box',
-		},
-		{
-			type: 'sprite',
-			image: 'cardbox_lid.png',
-			colorizationKey: 'box',
-			imageOverrides: [
-				{
-					image: '',
-					condition: [
-						[
-							{
-								module: 'lid',
-								operator: '=',
-								value: 'open',
-							},
-						],
-					],
-				},
-			],
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot_sitting_middle',
-			characterPosition: {
-				offsetX: 30,
-				offsetY: -24,
-				relativeScale: 1.08,
-			},
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

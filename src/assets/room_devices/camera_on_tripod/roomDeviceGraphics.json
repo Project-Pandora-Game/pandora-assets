@@ -1,0 +1,133 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "tripod",
+			"image": "camera_tripod_l.png",
+			"imageOverrides": [
+				{
+					"image": "camera_tripod_r.png",
+					"condition": [
+						[
+							{
+								"module": "orientation",
+								"operator": "=",
+								"value": "right"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "module",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "camera_photo_l.png",
+					"condition": [
+						[
+							{
+								"module": "type",
+								"operator": "=",
+								"value": "photo"
+							},
+							{
+								"module": "orientation",
+								"operator": "=",
+								"value": "left"
+							}
+						]
+					]
+				},
+				{
+					"image": "camera_photo_r.png",
+					"condition": [
+						[
+							{
+								"module": "type",
+								"operator": "=",
+								"value": "photo"
+							},
+							{
+								"module": "orientation",
+								"operator": "=",
+								"value": "right"
+							}
+						]
+					]
+				},
+				{
+					"image": "camera_video_l.png",
+					"condition": [
+						[
+							{
+								"module": "type",
+								"operator": "=",
+								"value": "video"
+							},
+							{
+								"module": "orientation",
+								"operator": "=",
+								"value": "left"
+							}
+						]
+					]
+				},
+				{
+					"image": "camera_video_r.png",
+					"condition": [
+						[
+							{
+								"module": "type",
+								"operator": "=",
+								"value": "video"
+							},
+							{
+								"module": "orientation",
+								"operator": "=",
+								"value": "right"
+							}
+						]
+					]
+				},
+				{
+					"image": "camera_spotlight_l.png",
+					"condition": [
+						[
+							{
+								"module": "type",
+								"operator": "=",
+								"value": "spotlight"
+							},
+							{
+								"module": "orientation",
+								"operator": "=",
+								"value": "left"
+							}
+						]
+					]
+				},
+				{
+					"image": "camera_spotlight_r.png",
+					"condition": [
+						[
+							{
+								"module": "type",
+								"operator": "=",
+								"value": "spotlight"
+							},
+							{
+								"module": "orientation",
+								"operator": "=",
+								"value": "right"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {}
+}

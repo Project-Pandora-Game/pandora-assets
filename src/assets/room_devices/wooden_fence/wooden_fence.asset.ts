@@ -14,13 +14,7 @@ DefineRoomDeviceAsset({
 		x: 800,
 		y: 680,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'wooden_fence.png',
-			colorizationKey: 'fence',
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

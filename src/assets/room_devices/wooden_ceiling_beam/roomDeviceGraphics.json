@@ -1,0 +1,15 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -3072,
+				"y": -40
+			},
+			"clipToRoom": true,
+			"colorizationKey": "hashira",
+			"image": "ceiling_beam.png"
+		}
+	],
+	"slots": {}
+}

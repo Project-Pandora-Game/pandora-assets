@@ -18,33 +18,7 @@ DefineRoomDeviceAsset({
 	},
 	staticAttributes: ['Play_furniture'],
 	slots: {},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'cable_drum.png',
-			colorizationKey: 'cable',
-			imageOverrides: [
-			],
-		},
-		{
-			type: 'sprite',
-			image: 'engine.png',
-			colorizationKey: 'engine',
-			imageOverrides: [
-			],
-		},
-		{
-			type: 'sprite',
-			image: 'shell.png',
-			colorizationKey: 'shell',
-			imageOverrides: [
-			],
-		},
-		{
-			type: 'sprite',
-			image: 'shell_shine.png',
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	pivot: {
 		x: 200,
 		y: 2000,

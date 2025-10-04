@@ -32,48 +32,7 @@ DefineRoomDeviceAsset({
 		x: 567,
 		y: 80,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'floor_hatch_1.png',
-			colorizationKey: 'base',
-			imageOverrides: [
-				{
-					image: '',
-					condition: [
-						[
-							{
-								module: 'orientation',
-								operator: '=',
-								value: 'ceiling',
-							},
-						],
-					],
-				},
-			],
-		},
-		{
-			type: 'sprite',
-			image: 'floor_hatch_1_upside-down.png',
-			clipToRoom: true,
-			colorizationKey: 'base',
-			offset: { x: 0, y: -600 },
-			imageOverrides: [
-				{
-					image: '',
-					condition: [
-						[
-							{
-								module: 'orientation',
-								operator: '=',
-								value: 'floor',
-							},
-						],
-					],
-				},
-			],
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

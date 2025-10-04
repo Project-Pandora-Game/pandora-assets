@@ -1,0 +1,28 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -142,
+				"y": -180
+			},
+			"colorizationKey": "hashira",
+			"image": "hashira_base.png",
+			"imageOverrides": [
+				{
+					"image": "hashira_base_big.png",
+					"condition": [
+						[
+							{
+								"module": "model",
+								"operator": "=",
+								"value": "extra_base"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {}
+}

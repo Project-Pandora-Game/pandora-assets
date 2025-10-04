@@ -28,29 +28,7 @@ DefineRoomDeviceAsset({
 			],
 		},
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'hashira_base.png',
-			colorizationKey: 'hashira',
-			offset: { x: -142, y: -180 },
-
-			imageOverrides: [
-				{
-					image: 'hashira_base_big.png',
-					condition: [
-						[
-							{
-								module: 'model',
-								operator: '=',
-								value: 'extra_base',
-							},
-						],
-					],
-				},
-			],
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	pivot: {
 		x: 0,
 		y: 0,

@@ -1,0 +1,10 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "couch",
+			"image": "couch.png"
+		}
+	],
+	"slots": {}
+}

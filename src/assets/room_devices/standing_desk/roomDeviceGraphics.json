@@ -1,0 +1,63 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "desk",
+			"image": "standing_desk_base.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "desk",
+			"image": "standing_desk_cover.png",
+			"imageOverrides": [
+				{
+					"image": "",
+					"condition": [
+						[
+							{
+								"module": "hole",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_under",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": 0,
+				"relativeScale": 0.93,
+				"pivotOffset": {
+					"x": 0,
+					"y": 4
+				}
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": -66,
+						"relativeScale": 0.88
+					},
+					"condition": [
+						[
+							{
+								"view": "back"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "desk",
+			"image": "standing_desk_top.png"
+		}
+	],
+	"slots": {}
+}

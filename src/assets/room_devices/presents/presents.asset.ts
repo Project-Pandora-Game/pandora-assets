@@ -33,23 +33,7 @@ DefineRoomDeviceAsset({
 		x: 660,
 		y: 400,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'presents_color_1.png',
-			colorizationKey: 'color_1',
-		},
-		{
-			type: 'sprite',
-			image: 'presents_color_2.png',
-			colorizationKey: 'color_2',
-		},
-		{
-			type: 'sprite',
-			image: 'presents_color_3.png',
-			colorizationKey: 'color_3',
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
 		credits: ['Sandrine'],

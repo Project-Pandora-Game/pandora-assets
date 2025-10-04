@@ -1,0 +1,24 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "table",
+			"image": "pillory_table_back.png"
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": 390,
+				"disablePoseOffset": true
+			}
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "table",
+			"image": "pillory_table_front.png"
+		}
+	],
+	"slots": {}
+}

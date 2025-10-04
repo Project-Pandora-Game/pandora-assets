@@ -50,31 +50,7 @@ DefineRoomDeviceAsset({
 		x: 188,
 		y: 750,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'white_chair.png',
-			colorizationKey: 'chair',
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot_sitting',
-			characterPosition: {
-				offsetX: 0,
-				offsetY: 35,
-				relativeScale: 1.1,
-			},
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot_kneeling',
-			characterPosition: {
-				offsetX: 0,
-				offsetY: 255,
-				relativeScale: 1.16,
-			},
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

@@ -14,13 +14,7 @@ DefineRoomDeviceAsset({
 		x: 1400,
 		y: 950,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'couch.png',
-			colorizationKey: 'couch',
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

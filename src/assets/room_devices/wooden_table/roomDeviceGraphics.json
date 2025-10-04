@@ -1,0 +1,10 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "table",
+			"image": "wooden_table.png"
+		}
+	],
+	"slots": {}
+}

@@ -1,0 +1,81 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": 23,
+						"y": 0
+					},
+					"condition": [
+						[
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "small"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": 8,
+						"y": 0
+					},
+					"condition": [
+						[
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "medium"
+							}
+						]
+					]
+				}
+			],
+			"clipToRoom": true,
+			"colorizationKey": "chain",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "chain.png",
+					"condition": [
+						[
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "large"
+							}
+						]
+					]
+				},
+				{
+					"image": "chain.png@22x1575",
+					"condition": [
+						[
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "medium"
+							}
+						]
+					]
+				},
+				{
+					"image": "chain.png@15x1050",
+					"condition": [
+						[
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "small"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {}
+}

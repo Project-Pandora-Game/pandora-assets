@@ -1,0 +1,24 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "sign",
+			"image": "sign_post.png"
+		},
+		{
+			"type": "text",
+			"dataModule": "text",
+			"offset": {
+				"x": 20,
+				"y": 70
+			},
+			"size": {
+				"width": 333,
+				"height": 150
+			},
+			"fontSize": 48,
+			"colorizationKey": "text"
+		}
+	],
+	"slots": {}
+}

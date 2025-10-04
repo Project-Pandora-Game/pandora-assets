@@ -1,0 +1,275 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -500,
+				"y": -900
+			},
+			"colorizationKey": "base",
+			"image": "base.png"
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -500,
+				"y": -900
+			},
+			"colorizationKey": "cover",
+			"image": "top.png"
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -500,
+				"y": -900
+			},
+			"colorizationKey": "base",
+			"image": "front.png"
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -500,
+				"y": -900
+			},
+			"colorizationKey": "ring",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "ring_front_down.png",
+					"condition": [
+						[
+							{
+								"module": "front_ring",
+								"operator": "=",
+								"value": "show"
+							},
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "front"
+							}
+						],
+						[
+							{
+								"module": "back_ring",
+								"operator": "=",
+								"value": "show"
+							},
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "back"
+							}
+						]
+					]
+				},
+				{
+					"image": "ring_front_up.png",
+					"condition": [
+						[
+							{
+								"module": "front_ring",
+								"operator": "=",
+								"value": "attached"
+							},
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "front"
+							}
+						],
+						[
+							{
+								"module": "back_ring",
+								"operator": "=",
+								"value": "attached"
+							},
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "back"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -500,
+				"y": -900
+			},
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "label.png",
+					"condition": [
+						[
+							{
+								"module": "brand",
+								"operator": "=",
+								"value": "show"
+							},
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "back"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -500,
+				"y": -900
+			},
+			"colorizationKey": "dildo",
+			"image": "vibration_base.png"
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -500,
+				"y": -900
+			},
+			"colorizationKey": "dildo",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "dildo.png",
+					"condition": [
+						[
+							{
+								"module": "vibration",
+								"operator": "=",
+								"value": "dildo"
+							},
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "front"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -500,
+				"y": -930
+			},
+			"colorizationKey": "dildo",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "dildo.png",
+					"condition": [
+						[
+							{
+								"module": "vibration",
+								"operator": "=",
+								"value": "dildo"
+							},
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "back"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "slot",
+			"slot": "seated",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": 0,
+				"relativeScale": 1
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": -25,
+						"pivotOffset": {
+							"x": 0,
+							"y": 0
+						}
+					},
+					"condition": [
+						[
+							{
+								"view": "back"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -500,
+				"y": -900
+			},
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "chain_collar.png",
+					"condition": [
+						[
+							{
+								"module": "front_ring",
+								"operator": "=",
+								"value": "attached"
+							},
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "front"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -500,
+				"y": -900
+			},
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "chain_wrists.png",
+					"condition": [
+						[
+							{
+								"module": "back_ring",
+								"operator": "=",
+								"value": "attached"
+							},
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "back"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {}
+}

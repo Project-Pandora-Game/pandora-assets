@@ -1,0 +1,250 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "frame",
+			"image": "frame.png",
+			"imageOverrides": [
+				{
+					"image": "",
+					"condition": [
+						[
+							{
+								"module": "setup",
+								"operator": "!=",
+								"value": "stand"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": 155,
+						"y": -1250
+					},
+					"condition": [
+						[
+							{
+								"module": "setup",
+								"operator": "=",
+								"value": "hanging"
+							}
+						]
+					]
+				}
+			],
+			"clipToRoom": true,
+			"colorizationKey": "chains",
+			"image": "hanging_chain_1.png",
+			"imageOverrides": [
+				{
+					"image": "",
+					"condition": [
+						[
+							{
+								"module": "setup",
+								"operator": "!=",
+								"value": "hanging"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": 715,
+						"y": -1250
+					},
+					"condition": [
+						[
+							{
+								"module": "setup",
+								"operator": "=",
+								"value": "hanging"
+							}
+						]
+					]
+				}
+			],
+			"clipToRoom": true,
+			"colorizationKey": "chains",
+			"image": "hanging_chain_2.png",
+			"imageOverrides": [
+				{
+					"image": "",
+					"condition": [
+						[
+							{
+								"module": "setup",
+								"operator": "!=",
+								"value": "hanging"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": 0,
+						"y": 700
+					},
+					"condition": [
+						[
+							{
+								"module": "rotation",
+								"operator": "=",
+								"value": "upsideDown"
+							}
+						]
+					]
+				}
+			],
+			"colorizationKey": "cross",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "headrest_base.png",
+					"condition": [
+						[
+							{
+								"module": "headrest",
+								"operator": "=",
+								"value": "yes"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": 0,
+						"y": 700
+					},
+					"condition": [
+						[
+							{
+								"module": "rotation",
+								"operator": "=",
+								"value": "upsideDown"
+							}
+						]
+					]
+				}
+			],
+			"colorizationKey": "padding",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "headrest_padding.png",
+					"condition": [
+						[
+							{
+								"module": "headrest",
+								"operator": "=",
+								"value": "yes"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "cross",
+			"image": "cross.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "nails",
+			"image": "nails.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "padding",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "padding_center.png",
+					"condition": [
+						[
+							{
+								"module": "padding",
+								"operator": "!=",
+								"value": "none"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "padding",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "padding_edges.png",
+					"condition": [
+						[
+							{
+								"module": "padding",
+								"operator": "=",
+								"value": "all"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "chains",
+			"image": "chains.png"
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot",
+			"characterPosition": {
+				"offsetX": 1,
+				"offsetY": 75,
+				"disablePoseOffset": true
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": 1,
+						"offsetY": -1130,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "rotation",
+								"operator": "=",
+								"value": "upsideDown"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {}
+}

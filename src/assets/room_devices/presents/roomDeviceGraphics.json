@@ -1,0 +1,20 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "color_1",
+			"image": "presents_color_1.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "color_2",
+			"image": "presents_color_2.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "color_3",
+			"image": "presents_color_3.png"
+		}
+	],
+	"slots": {}
+}
