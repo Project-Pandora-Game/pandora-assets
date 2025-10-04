@@ -27,21 +27,7 @@ DefineRoomDeviceAsset({
 		x: 185,
 		y: 400,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'sign_post.png',
-			colorizationKey: 'sign',
-		},
-		{
-			type: 'text',
-			dataModule: 'text',
-			colorizationKey: 'text',
-			fontSize: 48,
-			offset: { x: 20, y: 70 },
-			size: { width: 333, height: 150 },
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

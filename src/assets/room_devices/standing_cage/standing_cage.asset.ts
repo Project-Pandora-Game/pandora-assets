@@ -101,54 +101,7 @@ DefineRoomDeviceAsset({
 		x: 394,
 		y: 1265,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'cage_closed_back.png',
-			imageOverrides: [
-				{
-					image: 'cage_opened_back.png',
-					condition: [
-						[
-							{
-								module: 'door',
-								operator: '=',
-								value: 'open',
-							},
-						],
-					],
-				},
-			],
-			colorizationKey: 'cage',
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot',
-			characterPosition: {
-				offsetX: 0,
-				offsetY: -10,
-			},
-		},
-		{
-			type: 'sprite',
-			image: 'cage_closed_front.png',
-			imageOverrides: [
-				{
-					image: 'cage_opened_front.png',
-					condition: [
-						[
-							{
-								module: 'door',
-								operator: '=',
-								value: 'open',
-							},
-						],
-					],
-				},
-			],
-			colorizationKey: 'cage',
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['paparebbe', 'ClaudiaMia'],

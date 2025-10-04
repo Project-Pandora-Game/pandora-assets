@@ -37,7 +37,6 @@ DefineRoomDeviceAsset({
 						pose: ['standing', 'kneeling'],
 					},
 				},
-				graphics: 'ropes_left.json',
 			},
 		},
 		character_slot_middle: {
@@ -62,7 +61,6 @@ DefineRoomDeviceAsset({
 						pose: ['standing', 'kneeling'],
 					},
 				},
-				graphics: 'ropes_right.json',
 			},
 		},
 	},
@@ -396,103 +394,7 @@ DefineRoomDeviceAsset({
 		x: 920,
 		y: 1730,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'wooden_double_bed_base.png',
-			colorizationKey: 'bed_frame',
-		},
-		{
-			type: 'sprite',
-			image: 'wooden_double_bed_mattress.png',
-			colorizationKey: 'mattress',
-		},
-		{
-			type: 'sprite',
-			image: 'wooden_double_bed_pillows.png',
-			colorizationKey: 'pillows',
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot_left',
-			characterPosition: {
-				offsetX: -288,
-				offsetY: -680,
-				pivotOffset: {
-					x: 0,
-					y: -500,
-				},
-			},
-			characterPositionOverrides: [
-				{
-					position: {
-						offsetX: -288,
-						offsetY: -680,
-						pivotOffset: {
-							x: 0,
-							y: -500,
-						},
-						disablePoseOffset: true,
-					},
-					condition: [
-						[
-							{
-								module: 'ropes_left',
-								operator: '!=',
-								value: 'none',
-							},
-						],
-					],
-				},
-			],
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot_middle',
-			characterPosition: {
-				offsetX: 0,
-				offsetY: -670,
-				pivotOffset: {
-					x: 0,
-					y: -500,
-				},
-			},
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot_right',
-			characterPosition: {
-				offsetX: 288,
-				offsetY: -680,
-				pivotOffset: {
-					x: 0,
-					y: -500,
-				},
-			},
-			characterPositionOverrides: [
-				{
-					position: {
-						offsetX: 288,
-						offsetY: -680,
-						pivotOffset: {
-							x: 0,
-							y: -500,
-						},
-						disablePoseOffset: true,
-					},
-					condition: [
-						[
-							{
-								module: 'ropes_right',
-								operator: '!=',
-								value: 'none',
-							},
-						],
-					],
-				},
-			],
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

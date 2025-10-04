@@ -51,64 +51,7 @@ DefineRoomDeviceAsset({
 		x: 560,
 		y: 1290,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'standing_desk_base.png',
-			colorizationKey: 'desk',
-		},
-		{
-			type: 'sprite',
-			image: 'standing_desk_cover.png',
-			colorizationKey: 'desk',
-			imageOverrides: [
-				{
-					image: '',
-					condition: [
-						[
-							{
-								module: 'hole',
-								operator: '=',
-								value: 'open',
-							},
-						],
-					],
-				},
-			],
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot_under',
-			characterPosition: {
-				offsetX: 0,
-				offsetY: 0,
-				relativeScale: 0.93,
-				pivotOffset: {
-					x: 0,
-					y: 4,
-				},
-			},
-			characterPositionOverrides: [
-				{
-					position: {
-						offsetX: 0,
-						offsetY: -66,
-						relativeScale: 0.88,
-					},
-					condition: [
-						[
-							{ view: 'back' },
-						],
-					],
-				},
-			],
-		},
-		{
-			type: 'sprite',
-			image: 'standing_desk_top.png',
-			colorizationKey: 'desk',
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

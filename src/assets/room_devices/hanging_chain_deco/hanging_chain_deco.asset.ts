@@ -36,78 +36,7 @@ DefineRoomDeviceAsset({
 		x: 15,
 		y: 2430,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: '',
-			clipToRoom: true,
-			colorizationKey: 'chain',
-			imageOverrides: [
-				{
-					image: 'chain.png',
-					condition: [
-						[
-							{
-								module: 'size',
-								operator: '=',
-								value: 'large',
-							},
-						],
-					],
-				},
-				{
-					image: 'chain.png@22x1575',
-					condition: [
-						[
-							{
-								module: 'size',
-								operator: '=',
-								value: 'medium',
-							},
-						],
-					],
-				},
-				{
-					image: 'chain.png@15x1050',
-					condition: [
-						[
-							{
-								module: 'size',
-								operator: '=',
-								value: 'small',
-							},
-						],
-					],
-				},
-			],
-			offsetOverrides: [
-				{
-					offset: { x: 23, y: 0 },
-					condition: [
-						[
-							{
-								module: 'size',
-								operator: '=',
-								value: 'small',
-							},
-						],
-					],
-				},
-				{
-					offset: { x: 8, y: 0 },
-					condition: [
-						[
-							{
-								module: 'size',
-								operator: '=',
-								value: 'medium',
-							},
-						],
-					],
-				},
-			],
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

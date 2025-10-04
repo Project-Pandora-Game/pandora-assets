@@ -20,18 +20,7 @@ DefineRoomDeviceAsset({
 		x: 390,
 		y: 1358,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'door_2.png',
-			colorizationKey: 'door',
-		},
-		{
-			type: 'sprite',
-			image: 'door_2_knob.png',
-			colorizationKey: 'knob',
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

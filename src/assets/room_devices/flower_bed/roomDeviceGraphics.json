@@ -1,0 +1,15 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "leafs",
+			"image": "flower_bed_leafs.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "flowers",
+			"image": "flower_bed_flowers.png"
+		}
+	],
+	"slots": {}
+}

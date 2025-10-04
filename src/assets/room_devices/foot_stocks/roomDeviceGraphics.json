@@ -1,0 +1,87 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "stocks",
+			"image": "wooden_stocks.png"
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": 112,
+				"relativeScale": 0.88,
+				"disablePoseOffset": true
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": 370,
+						"relativeScale": 1.06,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "front"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "stocks",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "wooden_stocks_used.png",
+					"condition": [
+						[
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "back"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "chains",
+			"image": "wooden_stocks_chain.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "braces",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "wooden_stocks_braces.png",
+					"condition": [
+						[
+							{
+								"module": "tie",
+								"operator": "=",
+								"value": "yes"
+							},
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "back"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {}
+}

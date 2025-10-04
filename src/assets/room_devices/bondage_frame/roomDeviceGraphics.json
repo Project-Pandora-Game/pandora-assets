@@ -1,0 +1,379 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "rings",
+			"image": "frame_rings_side.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "frame",
+			"image": "frame.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "rings",
+			"image": "frame_ring_left.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "rings",
+			"image": "frame_ring_right.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "sockets",
+			"image": "frame_sockets.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "rings",
+			"image": "frame_rings_top.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "chains",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "frame_chains_left_top_attached.png",
+					"condition": [
+						[
+							{
+								"module": "frame_left",
+								"operator": "=",
+								"value": "tied_left_up"
+							}
+						],
+						[
+							{
+								"module": "frame_left",
+								"operator": "=",
+								"value": "tied_left_both"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "chains",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "frame_chains_left_low_attached.png",
+					"condition": [
+						[
+							{
+								"module": "frame_left",
+								"operator": "=",
+								"value": "tied_left_feet"
+							}
+						],
+						[
+							{
+								"module": "frame_left",
+								"operator": "=",
+								"value": "tied_left_both"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "chains",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "frame_chains_right_top_attached.png",
+					"condition": [
+						[
+							{
+								"module": "frame_right",
+								"operator": "=",
+								"value": "tied_right_up"
+							}
+						],
+						[
+							{
+								"module": "frame_right",
+								"operator": "=",
+								"value": "tied_right_both"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "chains",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "frame_chains_right_low_attached.png",
+					"condition": [
+						[
+							{
+								"module": "frame_right",
+								"operator": "=",
+								"value": "tied_right_feet"
+							}
+						],
+						[
+							{
+								"module": "frame_right",
+								"operator": "=",
+								"value": "tied_right_both"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "chains",
+			"image": "frame_chains_top_hanging.png",
+			"imageOverrides": [
+				{
+					"image": "frame_chains_top_short.png",
+					"condition": [
+						[
+							{
+								"module": "chains",
+								"operator": "=",
+								"value": "hanging"
+							}
+						],
+						[
+							{
+								"module": "chains",
+								"operator": "=",
+								"value": "hanging_and_legs"
+							}
+						]
+					]
+				},
+				{
+					"image": "frame_chains_top_long.png",
+					"condition": [
+						[
+							{
+								"module": "chains",
+								"operator": "=",
+								"value": "standing"
+							}
+						]
+					]
+				},
+				{
+					"image": "frame_chains_top_longer.png",
+					"condition": [
+						[
+							{
+								"module": "chains",
+								"operator": "=",
+								"value": "standing_arms_legs"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "chains",
+			"image": "frame_chains_bottom_hanging.png",
+			"imageOverrides": [
+				{
+					"image": "frame_chains_bottom_long_attached.png",
+					"condition": [
+						[
+							{
+								"module": "chains",
+								"operator": "=",
+								"value": "standing_legs"
+							}
+						],
+						[
+							{
+								"module": "chains",
+								"operator": "=",
+								"value": "standing_arms_legs"
+							}
+						]
+					]
+				},
+				{
+					"image": "frame_chains_bottom_attached.png",
+					"condition": [
+						[
+							{
+								"module": "chains",
+								"operator": "=",
+								"value": "hanging_and_legs"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": 10
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": 10,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "chains",
+								"operator": "=",
+								"value": "standing"
+							}
+						]
+					]
+				},
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": 90,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "chains",
+								"operator": "=",
+								"value": "standing_legs"
+							}
+						],
+						[
+							{
+								"module": "chains",
+								"operator": "=",
+								"value": "standing_arms_legs"
+							}
+						]
+					]
+				},
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": -255,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "chains",
+								"operator": "=",
+								"value": "hanging"
+							}
+						],
+						[
+							{
+								"module": "chains",
+								"operator": "=",
+								"value": "hanging_and_legs"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_left",
+			"characterPosition": {
+				"offsetX": -520,
+				"offsetY": 35
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": -520,
+						"offsetY": 35,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "frame_left",
+								"operator": "=",
+								"value": "tied_left_up"
+							}
+						],
+						[
+							{
+								"module": "frame_left",
+								"operator": "=",
+								"value": "tied_left_feet"
+							}
+						],
+						[
+							{
+								"module": "frame_left",
+								"operator": "=",
+								"value": "tied_left_both"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_right",
+			"characterPosition": {
+				"offsetX": 520,
+				"offsetY": 35
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": 520,
+						"offsetY": 35,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "frame_right",
+								"operator": "=",
+								"value": "tied_right_up"
+							}
+						],
+						[
+							{
+								"module": "frame_right",
+								"operator": "=",
+								"value": "tied_right_feet"
+							}
+						],
+						[
+							{
+								"module": "frame_right",
+								"operator": "=",
+								"value": "tied_right_both"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {}
+}

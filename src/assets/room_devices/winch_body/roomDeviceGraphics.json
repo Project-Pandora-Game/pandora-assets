@@ -1,0 +1,27 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "cable",
+			"image": "cable_drum.png",
+			"imageOverrides": []
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "engine",
+			"image": "engine.png",
+			"imageOverrides": []
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "shell",
+			"image": "shell.png",
+			"imageOverrides": []
+		},
+		{
+			"type": "sprite",
+			"image": "shell_shine.png"
+		}
+	],
+	"slots": {}
+}

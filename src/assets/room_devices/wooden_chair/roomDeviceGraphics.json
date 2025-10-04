@@ -1,0 +1,344 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -216,
+				"y": -740
+			},
+			"colorizationKey": "rope",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "ankles_together_back.png@432x811",
+					"condition": [
+						[
+							{
+								"module": "ankles",
+								"operator": "=",
+								"value": "together"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -216,
+				"y": -745
+			},
+			"colorizationKey": "chair",
+			"image": "chair_base.png@432x811"
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -216,
+				"y": -745
+			},
+			"colorizationKey": "chair",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "cushion_normal_shadow.png@432x811",
+					"condition": [
+						[
+							{
+								"module": "accessories",
+								"operator": "=",
+								"value": "cushion"
+							},
+							{
+								"module": "armrests",
+								"operator": "=",
+								"value": "no"
+							}
+						]
+					]
+				},
+				{
+					"image": "cushion_arms_shadow.png@432x811",
+					"condition": [
+						[
+							{
+								"module": "accessories",
+								"operator": "=",
+								"value": "cushion"
+							},
+							{
+								"module": "armrests",
+								"operator": "=",
+								"value": "yes"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -216,
+				"y": -745
+			},
+			"colorizationKey": "plug",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "dildo_2.png@432x811",
+					"condition": [
+						[
+							{
+								"module": "accessories",
+								"operator": "=",
+								"value": "plug"
+							}
+						],
+						[
+							{
+								"module": "accessories",
+								"operator": "=",
+								"value": "double_dildo"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -216,
+				"y": -745
+			},
+			"colorizationKey": "dildo",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "dildo_1.png@432x811",
+					"condition": [
+						[
+							{
+								"module": "accessories",
+								"operator": "=",
+								"value": "dildo"
+							}
+						],
+						[
+							{
+								"module": "accessories",
+								"operator": "=",
+								"value": "double_dildo"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -216,
+				"y": -745
+			},
+			"colorizationKey": "cushion",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "cushion_normal.png@432x811",
+					"condition": [
+						[
+							{
+								"module": "accessories",
+								"operator": "=",
+								"value": "cushion"
+							},
+							{
+								"module": "armrests",
+								"operator": "=",
+								"value": "no"
+							}
+						]
+					]
+				},
+				{
+					"image": "cushion_arms.png@432x811",
+					"condition": [
+						[
+							{
+								"module": "accessories",
+								"operator": "=",
+								"value": "cushion"
+							},
+							{
+								"module": "armrests",
+								"operator": "=",
+								"value": "yes"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -216,
+				"y": -740
+			},
+			"colorizationKey": "rope",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "wrists_armrests_back.png",
+					"condition": [
+						[
+							{
+								"module": "wrists",
+								"operator": "=",
+								"value": "tied"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -216,
+				"y": -740
+			},
+			"colorizationKey": "chair",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "chair_arms.png@432x811",
+					"condition": [
+						[
+							{
+								"module": "armrests",
+								"operator": "=",
+								"value": "yes"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "slot",
+			"slot": "seated",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": -20,
+				"relativeScale": 1
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": -15,
+						"pivotOffset": {
+							"x": 0,
+							"y": 0
+						}
+					},
+					"condition": [
+						[
+							{
+								"module": "accessories",
+								"operator": "!=",
+								"value": "cushion"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -216,
+				"y": -760
+			},
+			"colorizationKey": "rope",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "body.png",
+					"condition": [
+						[
+							{
+								"module": "body",
+								"operator": "=",
+								"value": "tied"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -216,
+				"y": -740
+			},
+			"colorizationKey": "rope",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "wrists_armrests.png",
+					"condition": [
+						[
+							{
+								"module": "wrists",
+								"operator": "=",
+								"value": "tied"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -216,
+				"y": -760
+			},
+			"colorizationKey": "rope",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "ankles_split.png@432x811",
+					"condition": [
+						[
+							{
+								"module": "ankles",
+								"operator": "=",
+								"value": "split"
+							}
+						]
+					]
+				},
+				{
+					"image": "ankles_together.png@432x811",
+					"condition": [
+						[
+							{
+								"module": "ankles",
+								"operator": "=",
+								"value": "together"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {}
+}

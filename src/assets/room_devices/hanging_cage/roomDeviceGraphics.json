@@ -1,0 +1,131 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": 0,
+						"y": -780
+					},
+					"condition": [
+						[
+							{
+								"module": "hanging",
+								"operator": "=",
+								"value": "high"
+							}
+						]
+					]
+				}
+			],
+			"colorizationKey": "cage",
+			"image": "small_cage.png",
+			"imageOverrides": [
+				{
+					"image": "small_cage_hanging.png",
+					"condition": [
+						[
+							{
+								"module": "hanging",
+								"operator": "=",
+								"value": "high"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -12,
+				"y": -1952
+			},
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": -12,
+						"y": -2732
+					},
+					"condition": [
+						[
+							{
+								"module": "hanging",
+								"operator": "=",
+								"value": "high"
+							}
+						]
+					]
+				}
+			],
+			"clipToRoom": true,
+			"colorizationKey": "chain",
+			"image": "small_cage_chain.png"
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": -50,
+				"relativeScale": 0.96
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": -830,
+						"relativeScale": 0.96
+					},
+					"condition": [
+						[
+							{
+								"module": "hanging",
+								"operator": "=",
+								"value": "high"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": 0,
+						"y": -780
+					},
+					"condition": [
+						[
+							{
+								"module": "hanging",
+								"operator": "=",
+								"value": "high"
+							}
+						]
+					]
+				}
+			],
+			"colorizationKey": "cage_door",
+			"image": "small_cage_door.png",
+			"imageOverrides": [
+				{
+					"image": "small_cage_dooropen.png",
+					"condition": [
+						[
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {}
+}

@@ -1,0 +1,93 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "box",
+			"image": "cardbox_back.png"
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_inside",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": 0,
+				"relativeScale": 0.95,
+				"pivotOffset": {
+					"x": 0,
+					"y": 45
+				}
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": -50,
+						"relativeScale": 0.01,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "lid",
+								"operator": "=",
+								"value": "closed"
+							}
+						]
+					]
+				},
+				{
+					"position": {
+						"offsetX": 30,
+						"offsetY": 156,
+						"relativeScale": 0.85,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"view": "back"
+							},
+							{
+								"legs": "kneeling"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "box",
+			"image": "cardbox_front.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "box",
+			"image": "cardbox_lid.png",
+			"imageOverrides": [
+				{
+					"image": "",
+					"condition": [
+						[
+							{
+								"module": "lid",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_sitting_middle",
+			"characterPosition": {
+				"offsetX": 30,
+				"offsetY": -24,
+				"relativeScale": 1.08
+			}
+		}
+	],
+	"slots": {}
+}

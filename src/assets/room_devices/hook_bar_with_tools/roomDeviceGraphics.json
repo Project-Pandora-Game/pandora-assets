@@ -1,0 +1,183 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "bar",
+			"image": "hookbar_bar.png",
+			"imageOverrides": []
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "hooks",
+			"image": "hookbar_hooks.png",
+			"imageOverrides": []
+		},
+		{
+			"type": "sprite",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "hookbar_slot1.png",
+					"condition": [
+						[
+							{
+								"module": "crop",
+								"operator": "=",
+								"value": "on"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "hookbar_slot2a.png",
+					"condition": [
+						[
+							{
+								"module": "paddle",
+								"operator": "=",
+								"value": "on"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "paddle",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "hookbar_slot2b.png",
+					"condition": [
+						[
+							{
+								"module": "paddle",
+								"operator": "=",
+								"value": "on"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "hookbar_slot3a.png",
+					"condition": [
+						[
+							{
+								"module": "flogger",
+								"operator": "=",
+								"value": "on"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "flogger",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "hookbar_slot3b.png",
+					"condition": [
+						[
+							{
+								"module": "flogger",
+								"operator": "=",
+								"value": "on"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "hookbar_slot4a.png",
+					"condition": [
+						[
+							{
+								"module": "heart",
+								"operator": "=",
+								"value": "on"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "heart",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "hookbar_slot4b.png",
+					"condition": [
+						[
+							{
+								"module": "heart",
+								"operator": "=",
+								"value": "on"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "hookbar_slot5a.png",
+					"condition": [
+						[
+							{
+								"module": "cane",
+								"operator": "=",
+								"value": "on"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "cane",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "hookbar_slot5b.png",
+					"condition": [
+						[
+							{
+								"module": "cane",
+								"operator": "=",
+								"value": "on"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {}
+}

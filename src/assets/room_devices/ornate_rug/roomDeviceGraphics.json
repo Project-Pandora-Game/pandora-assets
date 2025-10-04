@@ -1,0 +1,62 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "base",
+			"image": "rug_base.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "center",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "rug_center.png",
+					"condition": [
+						[
+							{
+								"module": "rugState",
+								"operator": "=",
+								"value": "complete"
+							}
+						],
+						[
+							{
+								"module": "rugState",
+								"operator": "=",
+								"value": "baseCenter"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "decorations",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "rug_decoration.png",
+					"condition": [
+						[
+							{
+								"module": "rugState",
+								"operator": "=",
+								"value": "complete"
+							}
+						],
+						[
+							{
+								"module": "rugState",
+								"operator": "=",
+								"value": "baseDeco"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {}
+}

@@ -1,0 +1,781 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "bed_frame",
+			"image": "wooden_double_bed_base.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "mattress",
+			"image": "wooden_double_bed_mattress.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "pillows",
+			"image": "wooden_double_bed_pillows.png"
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_left",
+			"characterPosition": {
+				"offsetX": -288,
+				"offsetY": -680,
+				"pivotOffset": {
+					"x": 0,
+					"y": -500
+				}
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": -288,
+						"offsetY": -680,
+						"pivotOffset": {
+							"x": 0,
+							"y": -500
+						},
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "ropes_left",
+								"operator": "!=",
+								"value": "none"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_middle",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": -670,
+				"pivotOffset": {
+					"x": 0,
+					"y": -500
+				}
+			}
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_right",
+			"characterPosition": {
+				"offsetX": 288,
+				"offsetY": -680,
+				"pivotOffset": {
+					"x": 0,
+					"y": -500
+				}
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": 288,
+						"offsetY": -680,
+						"pivotOffset": {
+							"x": 0,
+							"y": -500
+						},
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "ropes_right",
+								"operator": "!=",
+								"value": "none"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {
+		"character_slot_left": {
+			"layers": [
+				{
+					"x": -132,
+					"y": -260,
+					"width": 1777,
+					"height": 1810,
+					"type": "mesh",
+					"name": "Ankles rope",
+					"priority": "BACKGROUND",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "ropes_left",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "ropes_bottom_left.png",
+								"condition": [
+									[
+										{
+											"module": "ropes_left",
+											"operator": "=",
+											"value": "tied_legs"
+										},
+										{
+											"view": "front"
+										}
+									],
+									[
+										{
+											"module": "ropes_left",
+											"operator": "=",
+											"value": "tied_both"
+										},
+										{
+											"view": "front"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": -132,
+					"y": -260,
+					"width": 1777,
+					"height": 1810,
+					"type": "mesh",
+					"name": "Ankles wrap",
+					"priority": "OVERLAY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "ropes_left",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "ankles_left.png",
+								"condition": [
+									[
+										{
+											"module": "ropes_left",
+											"operator": "=",
+											"value": "tied_legs"
+										},
+										{
+											"view": "front"
+										}
+									],
+									[
+										{
+											"module": "ropes_left",
+											"operator": "=",
+											"value": "tied_both"
+										},
+										{
+											"view": "front"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": -132,
+					"y": -260,
+					"width": 1777,
+					"height": 1810,
+					"type": "mesh",
+					"name": "Wrists rope",
+					"priority": "BACKGROUND",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "ropes_left",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "ropes_top_left.png",
+								"condition": [
+									[
+										{
+											"module": "ropes_left",
+											"operator": "=",
+											"value": "tied_arms"
+										},
+										{
+											"view": "front"
+										}
+									],
+									[
+										{
+											"module": "ropes_left",
+											"operator": "=",
+											"value": "tied_both"
+										},
+										{
+											"view": "front"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": -132,
+					"y": -260,
+					"width": 1777,
+					"height": 1810,
+					"type": "mesh",
+					"name": "Wrists wrap",
+					"priority": "OVERLAY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "ropes_left",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "wrists_left.png",
+								"condition": [
+									[
+										{
+											"module": "ropes_left",
+											"operator": "=",
+											"value": "tied_arms"
+										},
+										{
+											"view": "front"
+										}
+									],
+									[
+										{
+											"module": "ropes_left",
+											"operator": "=",
+											"value": "tied_both"
+										},
+										{
+											"view": "front"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": -132,
+					"y": -260,
+					"width": 1777,
+					"height": 1810,
+					"type": "mesh",
+					"name": "Ankles rope",
+					"priority": "OVERLAY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "ropes_left",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "ropes_bottom_left.png",
+								"condition": [
+									[
+										{
+											"module": "ropes_left",
+											"operator": "=",
+											"value": "tied_legs_back"
+										},
+										{
+											"view": "back"
+										}
+									],
+									[
+										{
+											"module": "ropes_left",
+											"operator": "=",
+											"value": "tied_both_back"
+										},
+										{
+											"view": "back"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": -132,
+					"y": -260,
+					"width": 1777,
+					"height": 1810,
+					"type": "mesh",
+					"name": "Ankles wrap",
+					"priority": "BACKGROUND",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "ropes_left",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "ankles_left.png",
+								"condition": [
+									[
+										{
+											"module": "ropes_left",
+											"operator": "=",
+											"value": "tied_legs_back"
+										},
+										{
+											"view": "back"
+										}
+									],
+									[
+										{
+											"module": "ropes_left",
+											"operator": "=",
+											"value": "tied_both_back"
+										},
+										{
+											"view": "back"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": -132,
+					"y": -260,
+					"width": 1777,
+					"height": 1810,
+					"type": "mesh",
+					"name": "Wrists rope",
+					"priority": "OVERLAY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "ropes_left",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "ropes_top_left.png",
+								"condition": [
+									[
+										{
+											"module": "ropes_left",
+											"operator": "=",
+											"value": "tied_arms_back"
+										},
+										{
+											"view": "back"
+										}
+									],
+									[
+										{
+											"module": "ropes_left",
+											"operator": "=",
+											"value": "tied_both_back"
+										},
+										{
+											"view": "back"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": -132,
+					"y": -260,
+					"width": 1777,
+					"height": 1810,
+					"type": "mesh",
+					"name": "Wrists wrap",
+					"priority": "BACKGROUND",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "ropes_left",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "wrists_left.png",
+								"condition": [
+									[
+										{
+											"module": "ropes_left",
+											"operator": "=",
+											"value": "tied_arms_back"
+										},
+										{
+											"view": "back"
+										}
+									],
+									[
+										{
+											"module": "ropes_left",
+											"operator": "=",
+											"value": "tied_both_back"
+										},
+										{
+											"view": "back"
+										}
+									]
+								]
+							}
+						]
+					}
+				}
+			]
+		},
+		"character_slot_right": {
+			"layers": [
+				{
+					"x": -708,
+					"y": -260,
+					"width": 1777,
+					"height": 1810,
+					"type": "mesh",
+					"name": "Ankles rope",
+					"priority": "BACKGROUND",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "ropes_right",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "ropes_bottom_right.png",
+								"condition": [
+									[
+										{
+											"module": "ropes_right",
+											"operator": "=",
+											"value": "tied_legs"
+										},
+										{
+											"view": "front"
+										}
+									],
+									[
+										{
+											"module": "ropes_right",
+											"operator": "=",
+											"value": "tied_both"
+										},
+										{
+											"view": "front"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": -708,
+					"y": -260,
+					"width": 1777,
+					"height": 1810,
+					"type": "mesh",
+					"name": "Ankles wrap",
+					"priority": "OVERLAY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "ropes_right",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "ankles_right.png",
+								"condition": [
+									[
+										{
+											"module": "ropes_right",
+											"operator": "=",
+											"value": "tied_legs"
+										},
+										{
+											"view": "front"
+										}
+									],
+									[
+										{
+											"module": "ropes_right",
+											"operator": "=",
+											"value": "tied_both"
+										},
+										{
+											"view": "front"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": -708,
+					"y": -260,
+					"width": 1777,
+					"height": 1810,
+					"type": "mesh",
+					"name": "Wrists rope",
+					"priority": "BACKGROUND",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "ropes_right",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "ropes_top_right.png",
+								"condition": [
+									[
+										{
+											"module": "ropes_right",
+											"operator": "=",
+											"value": "tied_arms"
+										},
+										{
+											"view": "front"
+										}
+									],
+									[
+										{
+											"module": "ropes_right",
+											"operator": "=",
+											"value": "tied_both"
+										},
+										{
+											"view": "front"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": -708,
+					"y": -260,
+					"width": 1777,
+					"height": 1810,
+					"type": "mesh",
+					"name": "Wrists wrap",
+					"priority": "OVERLAY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "ropes_right",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "wrists_right.png",
+								"condition": [
+									[
+										{
+											"module": "ropes_right",
+											"operator": "=",
+											"value": "tied_arms"
+										},
+										{
+											"view": "front"
+										}
+									],
+									[
+										{
+											"module": "ropes_right",
+											"operator": "=",
+											"value": "tied_both"
+										},
+										{
+											"view": "front"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": -708,
+					"y": -260,
+					"width": 1777,
+					"height": 1810,
+					"type": "mesh",
+					"name": "Ankles rope",
+					"priority": "OVERLAY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "ropes_right",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "ropes_bottom_right.png",
+								"condition": [
+									[
+										{
+											"module": "ropes_right",
+											"operator": "=",
+											"value": "tied_legs_back"
+										},
+										{
+											"view": "back"
+										}
+									],
+									[
+										{
+											"module": "ropes_right",
+											"operator": "=",
+											"value": "tied_both_back"
+										},
+										{
+											"view": "back"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": -708,
+					"y": -260,
+					"width": 1777,
+					"height": 1810,
+					"type": "mesh",
+					"name": "Ankles wrap",
+					"priority": "BACKGROUND",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "ropes_right",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "ankles_right.png",
+								"condition": [
+									[
+										{
+											"module": "ropes_right",
+											"operator": "=",
+											"value": "tied_legs_back"
+										},
+										{
+											"view": "back"
+										}
+									],
+									[
+										{
+											"module": "ropes_right",
+											"operator": "=",
+											"value": "tied_both_back"
+										},
+										{
+											"view": "back"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": -708,
+					"y": -260,
+					"width": 1777,
+					"height": 1810,
+					"type": "mesh",
+					"name": "Wrists rope",
+					"priority": "OVERLAY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "ropes_right",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "ropes_top_right.png",
+								"condition": [
+									[
+										{
+											"module": "ropes_right",
+											"operator": "=",
+											"value": "tied_arms_back"
+										},
+										{
+											"view": "back"
+										}
+									],
+									[
+										{
+											"module": "ropes_right",
+											"operator": "=",
+											"value": "tied_both_back"
+										},
+										{
+											"view": "back"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": -708,
+					"y": -260,
+					"width": 1777,
+					"height": 1810,
+					"type": "mesh",
+					"name": "Wrists wrap",
+					"priority": "BACKGROUND",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "ropes_right",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "wrists_right.png",
+								"condition": [
+									[
+										{
+											"module": "ropes_right",
+											"operator": "=",
+											"value": "tied_arms_back"
+										},
+										{
+											"view": "back"
+										}
+									],
+									[
+										{
+											"module": "ropes_right",
+											"operator": "=",
+											"value": "tied_both_back"
+										},
+										{
+											"view": "back"
+										}
+									]
+								]
+							}
+						]
+					}
+				}
+			]
+		}
+	}
+}

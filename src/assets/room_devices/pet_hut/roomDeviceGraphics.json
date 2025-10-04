@@ -1,0 +1,62 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "inside",
+			"image": "hut_back.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "cushion",
+			"image": "hut_cushion.png"
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_inside",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": -100,
+				"relativeScale": 0.95,
+				"pivotOffset": {
+					"x": 120,
+					"y": -720
+				},
+				"disablePoseOffset": true
+			}
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_kneeling",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": 10,
+				"relativeScale": 0.98
+			}
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "outside",
+			"image": "hut_front_ears.png",
+			"imageOverrides": [
+				{
+					"image": "",
+					"condition": [
+						[
+							{
+								"module": "ears",
+								"operator": "=",
+								"value": "no"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "outside",
+			"image": "hut_front.png"
+		}
+	],
+	"slots": {}
+}

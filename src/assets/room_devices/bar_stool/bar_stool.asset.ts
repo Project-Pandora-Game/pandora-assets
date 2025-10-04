@@ -41,7 +41,6 @@ DefineRoomDeviceAsset({
 					},
 					view: 'front',
 				},
-				graphics: 'seated.json',
 			},
 		},
 		kneeling: {
@@ -61,7 +60,6 @@ DefineRoomDeviceAsset({
 					},
 					view: 'back',
 				},
-				graphics: 'kneeling.json',
 			},
 		},
 	},
@@ -237,122 +235,7 @@ DefineRoomDeviceAsset({
 			},
 		},
 	},
-
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'base.png',
-			colorizationKey: 'metal',
-			offset: { x: -500, y: -1500 },
-		},
-		{
-			type: 'sprite',
-			image: 'base_back_extra.png',
-			colorizationKey: 'metal',
-			offset: { x: -500, y: -1500 },
-		},
-		{
-			type: 'sprite',
-			image: 'base_back.png',
-			colorizationKey: 'metal',
-			offset: { x: -500, y: -1500 },
-		},
-		{
-			type: 'sprite',
-			image: 'base_front_shadow.png',
-			colorizationKey: 'metal',
-			offset: { x: -500, y: -1500 },
-		},
-		{
-			type: 'sprite',
-			image: '',
-			colorizationKey: 'cushion',
-			offset: { x: -500, y: -1495 },
-
-			imageOverrides: [
-				{
-					image: 'cushion.png',
-					condition: [
-						[
-							{
-								module: 'cushion',
-								operator: '=',
-								value: 'yes',
-							},
-						],
-					],
-				},
-			],
-		},
-		{
-			type: 'sprite',
-			image: 'base_front.png',
-			colorizationKey: 'metal',
-			offset: { x: -500, y: -1500 },
-		},
-		{
-			type: 'sprite',
-			image: 'chair_base.png',
-			colorizationKey: 'chair',
-			offset: { x: -500, y: -1500 },
-		},
-		{
-			type: 'sprite',
-			image: '',
-			colorizationKey: 'chair',
-			offset: { x: -500, y: -1500 },
-
-			imageOverrides: [
-				{
-					image: 'chair_pillory.png',
-					condition: [
-						[
-							{
-								module: 'pillory',
-								operator: '=',
-								value: 'closed',
-							},
-						],
-					],
-				},
-			],
-		},
-
-		{
-			type: 'slot',
-			slot: 'seated',
-			characterPosition: {
-				offsetX: 0,
-				offsetY: -228,
-				relativeScale: 1,
-				disablePoseOffset: true,
-				pivotOffset: {
-					x: 0,
-					y: 0,
-				},
-			},
-			characterPositionOverrides: [
-
-			],
-		},
-
-		{
-			type: 'slot',
-			slot: 'kneeling',
-			characterPosition: {
-				offsetX: 0,
-				offsetY: 195,
-				disablePoseOffset: true,
-				pivotOffset: {
-					x: 0,
-					y: 0,
-				},
-			},
-			characterPositionOverrides: [
-
-			],
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	pivot: {
 		x: 8,
 		y: 0,

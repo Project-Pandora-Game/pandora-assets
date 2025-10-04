@@ -33,7 +33,6 @@ DefineRoomDeviceAsset({
 						pose: ['standing', 'kneeling'],
 					},
 				},
-				graphics: 'left.json',
 			},
 		},
 		character_slot_middle: {
@@ -58,7 +57,6 @@ DefineRoomDeviceAsset({
 						pose: ['standing', 'kneeling'],
 					},
 				},
-				graphics: 'right.json',
 			},
 		},
 	},
@@ -302,62 +300,7 @@ DefineRoomDeviceAsset({
 		x: 500,
 		y: 1230,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'floor_sockets.png',
-			colorizationKey: 'sockets',
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot_left',
-			characterPosition: {
-				offsetX: -370,
-				offsetY: -34,
-				relativeScale: 0.98,
-			},
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot_right',
-			characterPosition: {
-				offsetX: 370,
-				offsetY: -34,
-				relativeScale: 0.98,
-			},
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot_middle',
-			characterPosition: {
-				offsetX: 0,
-				offsetY: 0,
-				pivotOffset: {
-					x: 0,
-					y: -30,
-				},
-			},
-		},
-		{
-			type: 'sprite',
-			image: 'chain_leftright.png',
-			colorizationKey: 'chains',
-			imageOverrides: [
-				{
-					image: '',
-					condition: [
-						[
-							{
-								module: 'center',
-								operator: '!=',
-								value: 'tied_center',
-							},
-						],
-					],
-				},
-			],
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

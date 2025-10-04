@@ -88,40 +88,7 @@ DefineRoomDeviceAsset({
 		x: 357,
 		y: 1100,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'queen_throne.png',
-		},
-		{
-			type: 'sprite',
-			image: 'queen_throne_cushion.png',
-			colorizationKey: 'cushion',
-		},
-		{
-			type: 'sprite',
-			image: 'queen_throne_gem.png',
-			colorizationKey: 'gem',
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot_sitting',
-			characterPosition: {
-				offsetX: 0,
-				offsetY: 25,
-				relativeScale: 1.1,
-			},
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot_kneeling',
-			characterPosition: {
-				offsetX: 0,
-				offsetY: 240,
-				relativeScale: 1.16,
-			},
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

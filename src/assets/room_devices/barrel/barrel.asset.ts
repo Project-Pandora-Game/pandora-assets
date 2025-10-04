@@ -98,69 +98,7 @@ DefineRoomDeviceAsset({
 		x: 500,
 		y: 1330,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'barrel-background.png',
-			colorizationKey: 'barrel',
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot_inside',
-			characterPosition: {
-				offsetX: 0,
-				offsetY: 0,
-				relativeScale: 0.96,
-				pivotOffset: {
-					x: 0,
-					y: 4,
-				},
-			},
-			characterPositionOverrides: [
-				{
-					position: {
-						offsetX: 0,
-						offsetY: -50,
-						relativeScale: 0.01,
-						disablePoseOffset: true,
-					},
-					condition: [
-						[
-							{
-								module: 'lid',
-								operator: '=',
-								value: 'closed',
-							},
-						],
-					],
-				},
-			],
-		},
-		{
-			type: 'sprite',
-			image: 'barrel-lid.png',
-			colorizationKey: 'barrel',
-			imageOverrides: [
-				{
-					image: '',
-					condition: [
-						[
-							{
-								module: 'lid',
-								operator: '=',
-								value: 'open',
-							},
-						],
-					],
-				},
-			],
-		},
-		{
-			type: 'sprite',
-			image: 'barrel.png',
-			colorizationKey: 'barrel',
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

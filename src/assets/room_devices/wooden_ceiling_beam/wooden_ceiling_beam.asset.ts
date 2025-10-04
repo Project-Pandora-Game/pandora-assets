@@ -10,15 +10,7 @@ DefineRoomDeviceAsset({
 	},
 	staticAttributes: ['Floor'],
 	slots: {},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'ceiling_beam.png',
-			colorizationKey: 'hashira',
-			clipToRoom: true,
-			offset: { x: -3072, y: -40 },
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	pivot: {
 		x: 0,
 		y: 0,

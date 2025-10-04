@@ -1,0 +1,20 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "frame",
+			"image": "screen_frame.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "paper",
+			"image": "screen_paper.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "overlay",
+			"image": "screen_paper_overlay.png"
+		}
+	],
+	"slots": {}
+}

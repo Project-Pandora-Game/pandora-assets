@@ -125,69 +125,7 @@ DefineRoomDeviceAsset({
 		x: 500,
 		y: 1300,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'wardrobe_back.png',
-			colorizationKey: 'wardrobe',
-		},
-		{
-			type: 'slot',
-			slot: 'character_slot',
-			characterPosition: {
-				offsetX: 0,
-				offsetY: -11,
-			},
-		},
-		{
-			type: 'sprite',
-			image: 'wardrobe_front.png',
-			colorizationKey: 'wardrobe',
-		},
-		{
-			type: 'sprite',
-			image: '',
-			imageOverrides: [
-				{
-					image: 'wardrobe_door_open.png',
-					condition: [
-						[
-							{
-								module: 'door',
-								operator: '=',
-								value: 'open',
-							},
-						],
-					],
-				},
-				{
-					image: 'wardrobe_door_closed.png',
-					condition: [
-						[
-							{
-								module: 'door',
-								operator: '=',
-								value: 'closed',
-							},
-						],
-					],
-				},
-				{
-					image: 'wardrobe_door_closed_openhatch.png',
-					condition: [
-						[
-							{
-								module: 'door',
-								operator: '=',
-								value: 'closed_hatch_open',
-							},
-						],
-					],
-				},
-			],
-			colorizationKey: 'wardrobe',
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

@@ -1,0 +1,99 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "cage",
+			"image": "bench_open.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "cage",
+			"image": "bench_closed.png",
+			"imageOverrides": [
+				{
+					"image": "",
+					"condition": [
+						[
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_inside",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": -100,
+				"relativeScale": 0.96,
+				"pivotOffset": {
+					"x": 0,
+					"y": -690
+				},
+				"disablePoseOffset": true
+			}
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "cage",
+			"image": "bench_overlay.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "cushion",
+			"image": "bench_cushion.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "curtain",
+			"image": "bench_curtain.png",
+			"imageOverrides": [
+				{
+					"image": "",
+					"condition": [
+						[
+							{
+								"module": "curtain",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_sitting_left",
+			"characterPosition": {
+				"offsetX": -280,
+				"offsetY": 64,
+				"relativeScale": 1.08
+			}
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_sitting_middle",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": 64,
+				"relativeScale": 1.08
+			}
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_sitting_right",
+			"characterPosition": {
+				"offsetX": 280,
+				"offsetY": 64,
+				"relativeScale": 1.08
+			}
+		}
+	],
+	"slots": {}
+}

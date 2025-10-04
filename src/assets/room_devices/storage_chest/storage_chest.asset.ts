@@ -36,18 +36,7 @@ DefineRoomDeviceAsset({
 		x: 350,
 		y: 400,
 	},
-	graphicsLayers: [
-		{
-			type: 'sprite',
-			image: 'chest.png',
-			colorizationKey: 'chest',
-		},
-		{
-			type: 'sprite',
-			image: 'chest_overlay.png',
-			colorizationKey: 'color',
-		},
-	],
+	graphics: 'roomDeviceGraphics.json',
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],

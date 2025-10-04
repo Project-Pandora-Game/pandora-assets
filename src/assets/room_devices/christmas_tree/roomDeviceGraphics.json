@@ -1,0 +1,101 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": 260,
+						"y": 735
+					},
+					"condition": [
+						[
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "small"
+							}
+						]
+					]
+				}
+			],
+			"colorizationKey": "tree",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "tree_base.png",
+					"condition": [
+						[
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "large"
+							}
+						]
+					]
+				},
+				{
+					"image": "tree_base.png@797x1229",
+					"condition": [
+						[
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "small"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": 260,
+						"y": 735
+					},
+					"condition": [
+						[
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "small"
+							}
+						]
+					]
+				}
+			],
+			"colorizationKey": "accent",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "tree_accent.png",
+					"condition": [
+						[
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "large"
+							}
+						]
+					]
+				},
+				{
+					"image": "tree_accent.png@797x1229",
+					"condition": [
+						[
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "small"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {}
+}

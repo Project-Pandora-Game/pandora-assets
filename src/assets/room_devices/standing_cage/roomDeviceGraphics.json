@@ -1,0 +1,51 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "cage",
+			"image": "cage_closed_back.png",
+			"imageOverrides": [
+				{
+					"image": "cage_opened_back.png",
+					"condition": [
+						[
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": -10
+			}
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "cage",
+			"image": "cage_closed_front.png",
+			"imageOverrides": [
+				{
+					"image": "cage_opened_front.png",
+					"condition": [
+						[
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {}
+}

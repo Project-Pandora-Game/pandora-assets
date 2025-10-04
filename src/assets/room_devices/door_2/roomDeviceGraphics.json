@@ -1,0 +1,15 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "door",
+			"image": "door_2.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "knob",
+			"image": "door_2_knob.png"
+		}
+	],
+	"slots": {}
+}
