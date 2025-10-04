@@ -105,7 +105,6 @@ async function DefineRoomDeviceWearablePart(
 		type: 'roomDeviceWearablePart',
 		id,
 		preview,
-		hasGraphics: def.graphics !== undefined,
 		credits,
 	};
 
