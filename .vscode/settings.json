@@ -56,4 +56,12 @@
 			"severity": "info"
 		}
 	],
+	"json.schemas": [
+		{
+			"fileMatch": [
+				"/src/assets/**/graphics.json"
+			],
+			"url": "./out/graphicsSource-worn.schema.json"
+		}
+	],
 }

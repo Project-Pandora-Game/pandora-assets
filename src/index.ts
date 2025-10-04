@@ -1,9 +1,10 @@
 import * as fs from 'fs';
 import ignore from 'ignore';
 import type { Immutable } from 'immer';
-import { AssetsDefinitionFile, GetLogger, LogLevel, SetConsoleOutput, logConfig, type GraphicsDefinitionFile, type GraphicsSourceDefinitionFile } from 'pandora-common';
+import { AssetSourceGraphicsDefinitionSchema, AssetsDefinitionFile, GetLogger, LogLevel, SetConsoleOutput, logConfig, type GraphicsDefinitionFile, type GraphicsSourceDefinitionFile } from 'pandora-common';
 import { join, relative } from 'path';
 import { pathToFileURL } from 'url';
+import * as z from 'zod';
 import { LoadAttributeNameValidation, LoadAttributes } from './attributes.ts';
 import { LoadBackgroundTags, LoadBackgrounds } from './backgrounds/backgrounds.ts';
 import { BODYPARTS, ValidateBodyparts } from './bodyparts.ts';
@@ -210,6 +211,10 @@ async function Run() {
 	ValidateBodyparts(definitions);
 
 	const definitionsFile = DefineResourceInline('assets.json', JSON.stringify(definitions));
+
+	// JSON schemas for nicer editing
+	const assetGraphicsWornSchema = z.toJSONSchema(AssetSourceGraphicsDefinitionSchema, { target: 'draft-7' });
+	DefineResourceInline('graphicsSource-worn.schema.json', JSON.stringify(assetGraphicsWornSchema, undefined, '\t'), 'graphicsSource-worn.schema.json');
 
 	// Do export of all resources pending so far
 	await ExportAllResources();
