@@ -88,6 +88,10 @@ interface IntermediatePersonalAssetDefinition extends Pick<import('pandora-commo
 }
 
 interface IntermediateRoomDeviceWearablePartDefinition extends Pick<import('pandora-common').RoomDeviceWearablePartAssetDefinition<AssetRepoExtraArgs>, import('./tools/definitionRoomDevice.ts').RoomDeviceWearablePartAssetDefinitionFallthroughProperties> {
+	/**
+	 * Old style definition of room device slot graphics.
+	 * @deprecated Use `roomDeviceGraphics.json` file instead, defined using `graphics` property on the device itself.
+	 */
 	graphics?: string;
 }
 
@@ -101,7 +105,13 @@ interface IntermediateRoomDeviceDefinition extends Pick<import('pandora-common')
 	slots: Record<string, IntermediateRoomDeviceSlotDefinition>;
 	/** Info about who owns the asset(s) */
 	ownership: AssetOwnershipData;
-	graphicsLayers: import('pandora-common').GraphicsSourceRoomDeviceLayer[];
+	/** Relative path to a room device graphics definition file (`roomDeviceGraphics.json`) */
+	graphics: string;
+	/**
+	 * Old style definition of room device graphics.
+	 * @deprecated Use `roomDeviceGraphics.json` file instead, defined using `graphics` property.
+	 */
+	graphicsLayers?: import('pandora-common').GraphicsSourceRoomDeviceLayer[];
 }
 
 interface IntermediateLockAssetDefinition extends Pick<import('pandora-common').LockAssetDefinition, import('./tools/definitionLock.ts').LockAssetDefinitionFallthroughProperties> {

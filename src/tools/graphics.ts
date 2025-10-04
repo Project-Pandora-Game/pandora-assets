@@ -17,7 +17,7 @@ import {
 	type GraphicsBuildContext,
 	type GraphicsBuildContextAssetData,
 } from 'pandora-common';
-import { relative } from 'path';
+import { basename, relative } from 'path';
 import * as z from 'zod';
 import { boneDefinition } from '../bones.ts';
 import { IS_PRODUCTION_BUILD, OPTIMIZE_TEXTURES, SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../config.ts';
@@ -34,6 +34,11 @@ export async function LoadAssetGraphicsFile(
 	const logger = GetLogger('GraphicsValidation').prefixMessages(`Graphics definition '${relative(SRC_DIR, path)}':\n\t`);
 
 	WatchFile(path);
+
+	const fileBasename = basename(path);
+	if (fileBasename !== 'graphics.json') {
+		logger.warning(`Worn item graphics should be stored in files named 'graphics.json', found '${fileBasename}'`);
+	}
 
 	const rawDefinition = readFileSync(path, { encoding: 'utf-8' });
 	const definition: unknown = JSON.parse(
@@ -94,7 +99,7 @@ export async function LoadAssetGraphicsFile(
 	};
 }
 
-async function LoadAssetGraphics(
+export async function LoadAssetGraphics(
 	source: Immutable<AssetSourceGraphicsDefinition>,
 	builtAssetData: Immutable<GraphicsBuildContextAssetData>,
 	logger: Logger,
