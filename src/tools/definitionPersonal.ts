@@ -85,7 +85,6 @@ async function GlobalDefineAssetProcess(def: IntermediatePersonalAssetDefinition
 		id,
 		preview: def.preview != null ? DefinePngResource(def.preview, 'preview') : null,
 		colorization,
-		hasGraphics: def.graphics !== undefined,
 		credits: {
 			credits: def.ownership.credits,
 			sourcePath: GetAssetRepositoryPath(),

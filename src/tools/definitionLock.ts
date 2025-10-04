@@ -53,7 +53,6 @@ async function GlobalDefineLockAssetProcess(def: IntermediateLockAssetDefinition
 		id,
 		size: 'small',
 		preview: def.preview != null ? DefinePngResource(def.preview, 'preview') : null,
-		hasGraphics: false,
 		credits: {
 			credits: def.ownership.credits,
 			sourcePath: GetAssetRepositoryPath(),
