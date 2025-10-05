@@ -299,8 +299,8 @@
 			},
 			"imageMap": {
 				"front": [
-					"back_front.png",
-					""
+					"",
+					"back_front.png"
 				],
 				"back": [
 					"nub_back.png",
