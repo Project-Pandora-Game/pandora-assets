@@ -125,13 +125,18 @@ export async function LoadRoomDeviceAssetGraphics(
 
 	const slotGraphics: Record<string, Immutable<AssetGraphicsWornDefinition>> = {};
 	for (const [slot, slotGraphicsSource] of Object.entries(source.slots)) {
+		const slotLogger = logger.prefixMessages(`Slot '${slot}':\n\t\t`);
+		if (slotGraphicsSource.layers.length === 0) {
+			slotLogger.warning('Slot has no layers. Either add layers or remove slot graphics altogether.');
+		}
+
 		const slotResult = await LoadAssetGraphics(
 			slotGraphicsSource,
 			{
 				modules: builtAssetData.modules,
 				colorizationKeys: builtAssetData.colorizationKeys,
 			},
-			logger.prefixMessages(`Slot '${slot}':\n\t\t`),
+			slotLogger,
 		);
 
 		for (const [image, resultName] of Object.entries(slotResult.originalImagesMap)) {
