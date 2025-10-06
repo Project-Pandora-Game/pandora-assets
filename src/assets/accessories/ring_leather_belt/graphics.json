@@ -26,6 +26,35 @@
 			"name": "ring leather belt front",
 			"priority": "ABOVE_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg_l",
+				"bodyleg_r"
+			],
+			"mirror": 0,
+			"colorizationKey": "belt",
+			"image": {
+				"image": "ring_leather_belt.png",
+				"overrides": []
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "ring leather belt front (2)",
+			"priority": "ABOVE_LEG_RIGHT",
+			"points": "body",
+			"pointType": [
+				"bodyleg_r",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "belt",
 			"image": {
@@ -58,6 +87,15 @@
 			"name": "ring leather belt back",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg_l",
+				"bodyleg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "belt",
 			"image": {
