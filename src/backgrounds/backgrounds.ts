@@ -2135,6 +2135,31 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 			],
 		},
 	},
+	{
+		id: 'zen_garden',
+		name: 'Zen Garden',
+		image: 'zen_garden.jpg',
+		calibration: {
+			imageSize: [3564, 2160],
+			cameraCenterOffset: [-420, 91],
+			areaCoverage: 7,
+			ceiling: 0,
+			areaDepthRatio: 2.75,
+			baseScale: 1,
+			fov: 80,
+		},
+		tags: ['outside', 'nature', 'garden', 'day', 'space_large'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.flickr.com/photos/el_ave/30868553144/',
+					copyrightHolder: 'el ave',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
 ];
 
 export function LoadBackgroundTags() {

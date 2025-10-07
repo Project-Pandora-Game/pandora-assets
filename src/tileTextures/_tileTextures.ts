@@ -227,6 +227,21 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 		},
 	},
 	{
+		id: 'fabric_02',
+		name: 'White fabric',
+		image: 'white_fabric.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.swtexture.com',
+					copyrightHolder: 'swtexture',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
 		id: 'dark_cloth',
 		name: 'Dark cloth',
 		image: 'dark-cloth-512x512.png',
@@ -484,6 +499,36 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 	},
 	{
 		id: 'wood_06',
+		name: 'Square parquet',
+		image: 'square_parquet.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.swtexture.com',
+					copyrightHolder: 'swtexture',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'wood_07',
+		name: 'Herringbone parquet',
+		image: 'herringbone_parquet.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.swtexture.com',
+					copyrightHolder: 'swtexture',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'wood_08',
 		name: 'Wooden beams with light',
 		image: 'wooden_beams_with_lights.png',
 		ownership: {
@@ -813,6 +858,21 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 		},
 	},
 	{
+		id: 'concrete_grey_05',
+		name: 'Pebble dash',
+		image: 'pebble_dash.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.swtexture.com',
+					copyrightHolder: 'swtexture',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
 		id: 'concrete_white_01',
 		name: 'White concrete 1',
 		image: 'mat_concrete_white_01-256x256.png',
@@ -1093,6 +1153,21 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 					source: 'https://ambientcg.com/view?id=Cork003',
 					copyrightHolder: 'ambientCG.com',
 					license: 'CC0',
+				},
+			],
+		},
+	},
+	{
+		id: 'tatami_01',
+		name: 'Tatami mat',
+		image: 'tatami_mat.png',
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://www.swtexture.com',
+					copyrightHolder: 'swtexture',
+					license: 'CC BY',
 				},
 			],
 		},
