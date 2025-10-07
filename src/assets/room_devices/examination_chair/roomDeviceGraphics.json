@@ -1,0 +1,564 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"name": "Frame base",
+			"colorizationKey": "frame",
+			"image": "chair_base_frame.png"
+		},
+		{
+			"type": "sprite",
+			"name": "Frame footstool cover",
+			"colorizationKey": "stool",
+			"image": "chair_footstool.png"
+		},
+		{
+			"type": "sprite",
+			"name": "Frame base cover",
+			"colorizationKey": "base",
+			"image": "chair_base_cover.png"
+		},
+		{
+			"type": "sprite",
+			"name": "Seat frame",
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": 0,
+						"y": -450
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "very"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": 0,
+						"y": -310
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "high"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": 0,
+						"y": -170
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "medium"
+							}
+						]
+					]
+				}
+			],
+			"colorizationKey": "sframe",
+			"image": "chair_seat_frame.png"
+		},
+		{
+			"type": "sprite",
+			"name": "Seat cover",
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": 0,
+						"y": -450
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "very"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": 0,
+						"y": -310
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "high"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": 0,
+						"y": -170
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "medium"
+							}
+						]
+					]
+				}
+			],
+			"colorizationKey": "seat",
+			"image": "chair_seat_cover.png"
+		},
+		{
+			"type": "sprite",
+			"name": "Seat holders",
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": 0,
+						"y": -450
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "very"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": 0,
+						"y": -310
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "high"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": 0,
+						"y": -170
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "medium"
+							}
+						]
+					]
+				}
+			],
+			"colorizationKey": "sframe",
+			"image": "chair_seat_frame_holder.png",
+			"imageOverrides": [
+				{
+					"image": "",
+					"condition": [
+						[
+							{
+								"module": "legrests",
+								"operator": "=",
+								"value": "no"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"name": "Seat leg rests",
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": 0,
+						"y": -450
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "very"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": 0,
+						"y": -310
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "high"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": 0,
+						"y": -170
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "medium"
+							}
+						]
+					]
+				}
+			],
+			"colorizationKey": "rests",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "chair_seat_frame_legrests_used.png",
+					"condition": [
+						[
+							{
+								"module": "ankles",
+								"operator": "=",
+								"value": "tied"
+							}
+						],
+						[
+							{
+								"module": "legs",
+								"operator": "=",
+								"value": "tied"
+							}
+						],
+						[
+							{
+								"module": "legrests",
+								"operator": "=",
+								"value": "used"
+							}
+						]
+					]
+				},
+				{
+					"image": "chair_seat_frame_legrests_unused.png",
+					"condition": [
+						[
+							{
+								"module": "legrests",
+								"operator": "=",
+								"value": "yes"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "slot",
+			"name": "character slot",
+			"slot": "character_slot",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": 26,
+				"disablePoseOffset": true
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": -424,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "very"
+							}
+						]
+					]
+				},
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": -284,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "high"
+							}
+						]
+					]
+				},
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": -144,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "medium"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {
+		"character_slot": {
+			"layers": [
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "neck belt",
+					"points": "static",
+					"automeshTemplate": "aboveBody",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "belts"
+						}
+					],
+					"variables": [
+						{
+							"type": "typedModule",
+							"module": "neck"
+						}
+					],
+					"imageMap": {
+						"no": [
+							""
+						],
+						"tied": [
+							"chair_belts_neck.png"
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "neck buckle",
+					"points": "static",
+					"automeshTemplate": "aboveBody",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "buckles"
+						}
+					],
+					"variables": [
+						{
+							"type": "typedModule",
+							"module": "neck"
+						}
+					],
+					"imageMap": {
+						"no": [
+							""
+						],
+						"tied": [
+							"chair_buckles_neck.png"
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "body belt",
+					"points": "static",
+					"automeshTemplate": "aboveBody",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "belts"
+						}
+					],
+					"variables": [
+						{
+							"type": "typedModule",
+							"module": "body"
+						}
+					],
+					"imageMap": {
+						"no": [
+							""
+						],
+						"tied": [
+							"chair_belts_body.png"
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "body buckle",
+					"points": "static",
+					"automeshTemplate": "aboveBody",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "buckles"
+						}
+					],
+					"variables": [
+						{
+							"type": "typedModule",
+							"module": "body"
+						}
+					],
+					"imageMap": {
+						"no": [
+							""
+						],
+						"tied": [
+							"chair_buckles_body.png"
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 99,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "leg belts",
+					"points": "static",
+					"automeshTemplate": "aboveLegs",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "belts"
+						}
+					],
+					"variables": [
+						{
+							"type": "typedModule",
+							"module": "legs"
+						}
+					],
+					"imageMap": {
+						"no": [
+							""
+						],
+						"tied": [
+							"chair_belts_legs.png"
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 99,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "leg buckles",
+					"points": "static",
+					"automeshTemplate": "aboveLegs",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "buckles"
+						}
+					],
+					"variables": [
+						{
+							"type": "typedModule",
+							"module": "legs"
+						}
+					],
+					"imageMap": {
+						"no": [
+							""
+						],
+						"tied": [
+							"chair_buckles_legs.png"
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 99,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "chains",
+					"points": "static",
+					"automeshTemplate": "aboveLegs",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "chains"
+						}
+					],
+					"variables": [
+						{
+							"type": "typedModule",
+							"module": "ankles"
+						}
+					],
+					"imageMap": {
+						"no": [
+							""
+						],
+						"tied": [
+							"chair_chains.png"
+						]
+					}
+				}
+			]
+		}
+	}
+}
