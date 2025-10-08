@@ -86,6 +86,7 @@ DefineAsset({
 			name: 'Lock',
 			lockedProperties: {
 				blockAddRemove: true,
+				blockModules: ['position'],
 			},
 		},
 		position: {
