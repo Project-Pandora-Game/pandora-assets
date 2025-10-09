@@ -42,6 +42,16 @@ DefineAsset({
 				elbow_l: -4,
 			},
 		},
+		{
+			name: 'Overhead',
+			bones: {
+				arm_r: -84,
+				arm_l: -84,
+				elbow_r: -30,
+				elbow_l: -30,
+			},
+			optional: { arms: { position: 'front' } },
+		},
 	],
 	modules: {
 		lock: {
@@ -70,6 +80,18 @@ DefineAsset({
 										arm_l: 88,
 										elbow_r: 20,
 										elbow_l: 20,
+									},
+									options: [
+										{ arms: { position: 'front_above_hair' } },
+										{ arms: { position: 'front' } },
+									],
+								},
+								{
+									bones: {
+										arm_r: -84,
+										arm_l: -84,
+										elbow_r: -30,
+										elbow_l: -30,
 									},
 									options: [
 										{ arms: { position: 'front_above_hair' } },

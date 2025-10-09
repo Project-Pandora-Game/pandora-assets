@@ -25,6 +25,31 @@
 									"value": "front"
 								},
 								{
+									"bone": "arm_l",
+									"operator": ">",
+									"value": 0
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "handcuffs_up_front.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "front"
+								},
+								{
+									"bone": "arm_l",
+									"operator": "<=",
+									"value": 0
+								},
+								{
 									"view": "front"
 								}
 							]
@@ -57,6 +82,31 @@
 									"value": "front"
 								},
 								{
+									"bone": "arm_l",
+									"operator": ">",
+									"value": 0
+								},
+								{
+									"view": "front"
+								}
+							]
+						]
+					},
+					{
+						"image": "handcuffs_up_front_background.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "front"
+								},
+								{
+									"bone": "arm_l",
+									"operator": "<=",
+									"value": 0
+								},
+								{
 									"view": "front"
 								}
 							]
@@ -87,6 +137,31 @@
 									"module": "cuffState",
 									"operator": "=",
 									"value": "back"
+								},
+								{
+									"bone": "arm_l",
+									"operator": ">",
+									"value": 0
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					},
+					{
+						"image": "handcuffs_up_back.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "front"
+								},
+								{
+									"bone": "arm_l",
+									"operator": "<=",
+									"value": 0
 								},
 								{
 									"view": "back"
@@ -134,12 +209,48 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"type": "mesh",
+			"name": "cuff up back background",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "cuffs",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "handcuffs_up_back_background.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "front"
+								},
+								{
+									"bone": "arm_l",
+									"operator": "<=",
+									"value": 0
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "autoMesh",
 			"name": "link front",
-			"points": "body",
+			"points": "static",
 			"automeshTemplate": "aboveBody",
 			"disabledTemplateParts": [
-				"arms",
 				"legs"
 			],
 			"graphicalLayers": [
@@ -159,31 +270,62 @@
 				{
 					"type": "typedModule",
 					"module": "cuffState"
+				},
+				{
+					"type": "bone",
+					"bone": "arm_l",
+					"stops": [
+						0
+					]
 				}
 			],
 			"imageMap": {
-				"chain:front:front": [
+				"chain:front:front:-180": [
+					"handcuffs_chain_up.png"
+				],
+				"chain:front:back:-180": [
+					""
+				],
+				"chain:back:front:-180": [
+					""
+				],
+				"chain:back:back:-180": [
+					""
+				],
+				"bar:front:front:-180": [
+					"handcuffs_bar_up.png"
+				],
+				"bar:front:back:-180": [
+					""
+				],
+				"bar:back:front:-180": [
+					""
+				],
+				"bar:back:back:-180": [
+					""
+				],
+				"chain:front:front:0": [
 					"handcuffs_chain.png"
 				],
-				"chain:front:back": [
-					""
-				],
-				"chain:back:front": [
-					""
-				],
-				"chain:back:back": [
-					""
-				],
-				"bar:front:front": [
+				"bar:front:front:0": [
 					"handcuffs_bar.png"
 				],
-				"bar:front:back": [
+				"chain:back:back:0": [
 					""
 				],
-				"bar:back:front": [
+				"chain:back:front:0": [
 					""
 				],
-				"bar:back:back": [
+				"chain:front:back:0": [
+					""
+				],
+				"bar:front:back:0": [
+					""
+				],
+				"bar:back:front:0": [
+					""
+				],
+				"bar:back:back:0": [
 					""
 				]
 			}
@@ -195,7 +337,7 @@
 			"height": 1500,
 			"type": "autoMesh",
 			"name": "link back",
-			"points": "body",
+			"points": "static",
 			"automeshTemplate": "belowBody",
 			"disabledTemplateParts": [
 				"arms",
@@ -218,32 +360,63 @@
 				{
 					"type": "typedModule",
 					"module": "cuffState"
+				},
+				{
+					"type": "bone",
+					"bone": "arm_l",
+					"stops": [
+						0
+					]
 				}
 			],
 			"imageMap": {
-				"chain:front:front": [
+				"chain:front:front:-180": [
 					""
 				],
-				"chain:front:back": [
+				"chain:front:back:-180": [
 					""
 				],
-				"chain:back:front": [
+				"chain:back:front:-180": [
+					"handcuffs_chain_up.png"
+				],
+				"chain:back:back:-180": [
 					""
 				],
-				"chain:back:back": [
+				"bar:front:front:-180": [
+					""
+				],
+				"bar:front:back:-180": [
+					""
+				],
+				"bar:back:front:-180": [
+					"handcuffs_bar_up.png"
+				],
+				"bar:back:back:-180": [
+					""
+				],
+				"chain:back:back:0": [
 					"handcuffs_chain.png"
 				],
-				"bar:front:front": [
-					""
-				],
-				"bar:front:back": [
-					""
-				],
-				"bar:back:front": [
-					""
-				],
-				"bar:back:back": [
+				"bar:back:back:0": [
 					"handcuffs_bar.png"
+				],
+				"bar:back:front:0": [
+					""
+				],
+				"bar:front:back:0": [
+					""
+				],
+				"bar:front:front:0": [
+					""
+				],
+				"chain:back:front:0": [
+					""
+				],
+				"chain:front:back:0": [
+					""
+				],
+				"chain:front:front:0": [
+					""
 				]
 			}
 		}
