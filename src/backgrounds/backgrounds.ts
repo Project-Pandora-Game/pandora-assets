@@ -1911,56 +1911,6 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 		},
 	},
 	{
-		id: 'underground_complex',
-		name: 'Underground complex',
-		image: 'underground_complex.jpg',
-		calibration: {
-			imageSize: [3840, 2160],
-			cameraCenterOffset: [41, 275],
-			areaCoverage: 2.6,
-			ceiling: 0,
-			areaDepthRatio: 5,
-			baseScale: 1,
-			fov: 80,
-		},
-		tags: ['cellar', 'path', 'space_large'],
-		ownership: {
-			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-			licensing: [
-				{
-					source: 'https://skfb.ly/pyyTZ',
-					copyrightHolder: 'Veterock',
-					license: 'CC BY',
-				},
-			],
-		},
-	},
-	{
-		id: 'stone_cell',
-		name: 'Stone cell',
-		image: 'stone_cell.jpg',
-		calibration: {
-			imageSize: [3838, 2158],
-			cameraCenterOffset: [0, 0],
-			areaCoverage: 1.62,
-			ceiling: 2443,
-			areaDepthRatio: 0.31,
-			baseScale: 1,
-			fov: 80,
-		},
-		tags: ['day', 'inside', 'cellar', 'dungeon', 'space_medium'],
-		ownership: {
-			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-			licensing: [
-				{
-					source: 'https://skfb.ly/pyVSr',
-					copyrightHolder: 'abhayexe',
-					license: 'CC BY',
-				},
-			],
-		},
-	},
-	{
 		id: 'prison_block',
 		name: 'Prison block',
 		image: 'prison_block.jpg',
