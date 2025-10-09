@@ -1787,7 +1787,7 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 	},
 	{
 		id: 'stair_case',
-		name: 'Stair case',
+		name: 'Staircase',
 		image: 'stair_case.jpg',
 		calibration: {
 			imageSize: [3840, 2160],
