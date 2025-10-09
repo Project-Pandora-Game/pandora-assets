@@ -24,15 +24,6 @@ DefineAsset({
 			'Accessory',
 		],
 	},
-	modules: {
-		lock: {
-			type: 'lockSlot',
-			name: 'Lock',
-			lockedProperties: {
-				blockAddRemove: true,
-			},
-		},
-	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],
