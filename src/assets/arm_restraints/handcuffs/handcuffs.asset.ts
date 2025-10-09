@@ -41,7 +41,7 @@ DefineAsset({
 			},
 		},
 		{
-			name: 'Up 1',
+			name: 'Overhead 1',
 			bones: {
 				arm_r: 85,
 				arm_l: 85,
@@ -51,7 +51,7 @@ DefineAsset({
 			optional: { arms: { position: 'front' } },
 		},
 		{
-			name: 'Up 2',
+			name: 'Overhead 2',
 			bones: {
 				arm_r: -84,
 				arm_l: -84,

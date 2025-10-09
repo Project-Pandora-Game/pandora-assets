@@ -52,7 +52,7 @@ DefineAsset({
 			},
 		},
 		{
-			name: 'Up 1',
+			name: 'Overhead 1',
 			arms: {
 				rotation: 'backward',
 				fingers: 'spread',
@@ -66,7 +66,7 @@ DefineAsset({
 			optional: { arms: { position: 'front' } },
 		},
 		{
-			name: 'Up 2',
+			name: 'Overhead 2',
 			arms: {
 				rotation: 'backward',
 				fingers: 'spread',
