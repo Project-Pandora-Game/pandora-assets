@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Leather Belted Skirt',
+	name: 'Belted Leather Skirt',
 	size: 'medium',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
