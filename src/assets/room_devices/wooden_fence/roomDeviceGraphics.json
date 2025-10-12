@@ -2,6 +2,7 @@
 	"layers": [
 		{
 			"type": "sprite",
+			"clipToRoom": true,
 			"colorizationKey": "fence",
 			"image": "wooden_fence.png"
 		}
