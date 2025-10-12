@@ -6,28 +6,24 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "Front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front",
 			"points": "skirt_tight",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "aboveBodyMirror",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 0,
-			"colorizationKey": "skirt",
-			"image": {
-				"image": "mini_skirt_front.png",
-				"overrides": []
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "skirt"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"mini_skirt_front.png"
+				]
 			}
 		},
 		{
@@ -35,28 +31,24 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "Front shine",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front shine",
 			"points": "skirt_tight",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "aboveBodyMirror",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 0,
-			"colorizationKey": "shine",
-			"image": {
-				"image": "mini_skirt_front_shine.png",
-				"overrides": []
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "shine"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"mini_skirt_front_shine.png"
+				]
 			}
 		},
 		{
@@ -64,28 +56,24 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "Back",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "back",
 			"points": "skirt_tight",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "belowBodyMirror",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 0,
-			"colorizationKey": "skirt",
-			"image": {
-				"image": "mini_skirt_back.png",
-				"overrides": []
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "skirt"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"mini_skirt_back.png"
+				]
 			}
 		},
 		{
@@ -93,28 +81,24 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "Back shine",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "back shine",
 			"points": "skirt_tight",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "belowBodyMirror",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 0,
-			"colorizationKey": "shine",
-			"image": {
-				"image": "mini_skirt_back_shine.png",
-				"overrides": []
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "shine"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"mini_skirt_back_shine.png"
+				]
 			}
 		}
 	]
