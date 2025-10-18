@@ -30,13 +30,11 @@
 						"y": 30
 					},
 					"condition": [
-						[
-							{
-								"bone": "breasts",
-								"operator": "=",
-								"value": -180
-							}
-						]
+						{
+							"bone": "breasts",
+							"operator": "=",
+							"value": -180
+						}
 					]
 				},
 				{
@@ -47,13 +45,11 @@
 						"y": 9
 					},
 					"condition": [
-						[
-							{
-								"bone": "breasts",
-								"operator": ">",
-								"value": 50
-							}
-						]
+						{
+							"bone": "breasts",
+							"operator": ">",
+							"value": 50
+						}
 					]
 				}
 			]
@@ -74,13 +70,11 @@
 						"y": 15
 					},
 					"condition": [
-						[
-							{
-								"bone": "breasts",
-								"operator": "=",
-								"value": -180
-							}
-						]
+						{
+							"bone": "breasts",
+							"operator": "=",
+							"value": -180
+						}
 					]
 				},
 				{
@@ -91,13 +85,11 @@
 						"y": 9
 					},
 					"condition": [
-						[
-							{
-								"bone": "breasts",
-								"operator": ">",
-								"value": 50
-							}
-						]
+						{
+							"bone": "breasts",
+							"operator": ">",
+							"value": 50
+						}
 					]
 				}
 			]
@@ -118,13 +110,11 @@
 						"y": 30
 					},
 					"condition": [
-						[
-							{
-								"bone": "breasts",
-								"operator": "=",
-								"value": -180
-							}
-						]
+						{
+							"bone": "breasts",
+							"operator": "=",
+							"value": -180
+						}
 					]
 				},
 				{
@@ -135,13 +125,11 @@
 						"y": 9
 					},
 					"condition": [
-						[
-							{
-								"bone": "breasts",
-								"operator": ">",
-								"value": 50
-							}
-						]
+						{
+							"bone": "breasts",
+							"operator": ">",
+							"value": 50
+						}
 					]
 				}
 			]
@@ -162,13 +150,11 @@
 						"y": 15
 					},
 					"condition": [
-						[
-							{
-								"bone": "breasts",
-								"operator": "=",
-								"value": -180
-							}
-						]
+						{
+							"bone": "breasts",
+							"operator": "=",
+							"value": -180
+						}
 					]
 				},
 				{
@@ -179,13 +165,11 @@
 						"y": 9
 					},
 					"condition": [
-						[
-							{
-								"bone": "breasts",
-								"operator": ">",
-								"value": 50
-							}
-						]
+						{
+							"bone": "breasts",
+							"operator": ">",
+							"value": 50
+						}
 					]
 				}
 			]

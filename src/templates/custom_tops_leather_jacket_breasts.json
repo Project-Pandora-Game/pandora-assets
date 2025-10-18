@@ -30,13 +30,11 @@
 						"y": 10
 					},
 					"condition": [
-						[
-							{
-								"bone": "breasts",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "breasts",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -57,13 +55,11 @@
 						"y": 3
 					},
 					"condition": [
-						[
-							{
-								"bone": "breasts",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "breasts",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -84,13 +80,11 @@
 						"y": 10
 					},
 					"condition": [
-						[
-							{
-								"bone": "breasts",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "breasts",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -111,13 +105,11 @@
 						"y": -1
 					},
 					"condition": [
-						[
-							{
-								"bone": "breasts",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "breasts",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -138,13 +130,11 @@
 						"y": 3
 					},
 					"condition": [
-						[
-							{
-								"bone": "breasts",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "breasts",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -165,13 +155,11 @@
 						"y": 6
 					},
 					"condition": [
-						[
-							{
-								"bone": "breasts",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "breasts",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -201,13 +189,11 @@
 						"y": 6
 					},
 					"condition": [
-						[
-							{
-								"bone": "breasts",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "breasts",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -228,13 +214,11 @@
 						"y": 12
 					},
 					"condition": [
-						[
-							{
-								"bone": "breasts",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "breasts",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]

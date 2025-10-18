@@ -57,14 +57,12 @@
 						"y": -218
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -89,14 +87,12 @@
 						"y": -218
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -121,14 +117,12 @@
 						"y": -248
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -153,14 +147,12 @@
 						"y": -248
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -185,14 +177,12 @@
 						"y": -237
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{

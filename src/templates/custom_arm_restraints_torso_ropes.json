@@ -525,13 +525,11 @@
 						"y": 1
 					},
 					"condition": [
-						[
-							{
-								"bone": "arm_width",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "arm_width",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -542,13 +540,11 @@
 						"y": 20
 					},
 					"condition": [
-						[
-							{
-								"bone": "arm_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "arm_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -590,13 +586,11 @@
 						"y": 30
 					},
 					"condition": [
-						[
-							{
-								"bone": "arm_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "arm_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -607,13 +601,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "arm_r",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "arm_r",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -647,13 +639,11 @@
 						"y": 50
 					},
 					"condition": [
-						[
-							{
-								"bone": "arm_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "arm_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -664,13 +654,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "arm_r",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "arm_r",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -704,13 +692,11 @@
 						"y": 46
 					},
 					"condition": [
-						[
-							{
-								"bone": "arm_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "arm_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -721,13 +707,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "arm_r",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "arm_r",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -753,13 +737,11 @@
 					"bone": "elbow_r",
 					"value": -0.05,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -767,13 +749,11 @@
 					"bone": "elbow_r",
 					"value": -0.1,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -804,13 +784,11 @@
 					"bone": "elbow_r",
 					"value": -0.6,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -818,13 +796,11 @@
 					"bone": "elbow_r",
 					"value": -0.15,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -855,13 +831,11 @@
 					"bone": "elbow_r",
 					"value": -0.6,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -869,13 +843,11 @@
 					"bone": "elbow_r",
 					"value": -0.15,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -906,13 +878,11 @@
 					"bone": "elbow_r",
 					"value": -1.08,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -920,13 +890,11 @@
 					"bone": "elbow_r",
 					"value": -0.6,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -957,13 +925,11 @@
 					"bone": "elbow_r",
 					"value": -1,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -971,13 +937,11 @@
 					"bone": "elbow_r",
 					"value": -0.8,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1176,13 +1140,11 @@
 					"bone": "elbow_r",
 					"value": -0.8,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1190,13 +1152,11 @@
 					"bone": "elbow_r",
 					"value": -1,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1227,13 +1187,11 @@
 					"bone": "elbow_r",
 					"value": -0.6,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1241,13 +1199,11 @@
 					"bone": "elbow_r",
 					"value": -1.08,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1278,13 +1234,11 @@
 					"bone": "elbow_r",
 					"value": -0.15,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1292,13 +1246,11 @@
 					"bone": "elbow_r",
 					"value": -0.6,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1329,13 +1281,11 @@
 					"bone": "elbow_r",
 					"value": -0.15,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1343,13 +1293,11 @@
 					"bone": "elbow_r",
 					"value": -0.6,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1380,13 +1328,11 @@
 					"bone": "elbow_r",
 					"value": -0.1,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1394,13 +1340,11 @@
 					"bone": "elbow_r",
 					"value": -0.05,
 					"condition": [
-						[
-							{
-								"bone": "elbow_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "elbow_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1441,13 +1385,11 @@
 						"y": 25
 					},
 					"condition": [
-						[
-							{
-								"bone": "arm_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "arm_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1543,13 +1485,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "hips",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "hips",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1559,11 +1499,9 @@
 						"y": -11
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -1576,11 +1514,9 @@
 					"bone": "leg_r",
 					"value": -0.17,
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				}
 			]
@@ -1609,13 +1545,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1634,13 +1568,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "hips",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "hips",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1650,11 +1582,9 @@
 						"y": -10
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -1665,13 +1595,11 @@
 						"y": 105
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "leg_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1679,13 +1607,11 @@
 					"bone": "leg_r",
 					"value": -0.6,
 					"condition": [
-						[
-							{
-								"bone": "leg_r",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "leg_r",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -1714,13 +1640,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1739,13 +1663,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "hips",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "hips",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1755,11 +1677,9 @@
 						"y": -12
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -1770,13 +1690,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "leg_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1789,11 +1707,9 @@
 					"bone": "leg_r",
 					"value": -0.14,
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				}
 			]
@@ -1830,13 +1746,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "hips",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "hips",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1846,11 +1760,9 @@
 						"y": -25
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -1861,13 +1773,11 @@
 						"y": 207
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "leg_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -1875,13 +1785,11 @@
 					"bone": "leg_r",
 					"value": -0.4,
 					"condition": [
-						[
-							{
-								"bone": "leg_r",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "leg_r",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -1901,11 +1809,9 @@
 						"y": -152
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -1931,11 +1837,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -1945,11 +1849,9 @@
 						"y": -162
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -1959,14 +1861,12 @@
 						"y": -60
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -1976,14 +1876,12 @@
 						"y": -40
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -2009,11 +1907,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -2023,11 +1919,9 @@
 						"y": -125
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -2037,14 +1931,12 @@
 						"y": -374
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -2054,14 +1946,12 @@
 						"y": -307
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -2077,16 +1967,14 @@
 						"y": 20
 					},
 					"condition": [
-						[
-							{
-								"bone": "tiptoeing",
-								"operator": ">",
-								"value": 0
-							},
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"bone": "tiptoeing",
+							"operator": ">",
+							"value": 0
+						},
+						{
+							"legs": "!kneeling"
+						}
 					]
 				}
 			]
@@ -2107,11 +1995,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -2121,11 +2007,9 @@
 						"y": -122
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -2135,14 +2019,12 @@
 						"y": -396
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -2152,14 +2034,12 @@
 						"y": -330
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -2175,16 +2055,14 @@
 						"y": 20
 					},
 					"condition": [
-						[
-							{
-								"bone": "tiptoeing",
-								"operator": ">",
-								"value": 0
-							},
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"bone": "tiptoeing",
+							"operator": ">",
+							"value": 0
+						},
+						{
+							"legs": "!kneeling"
+						}
 					]
 				}
 			]
@@ -2212,11 +2090,9 @@
 						"y": -152
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -2242,11 +2118,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -2257,11 +2131,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							}
-						]
+						{
+							"legs": "kneeling"
+						}
 					]
 				},
 				{
@@ -2271,11 +2143,9 @@
 						"y": -162
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -2285,14 +2155,12 @@
 						"y": -46
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -2302,14 +2170,12 @@
 						"y": -28
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -2335,11 +2201,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -2350,16 +2214,14 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							},
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						},
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -2369,11 +2231,9 @@
 						"y": -158
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -2383,14 +2243,12 @@
 						"y": -73
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -2400,14 +2258,12 @@
 						"y": -66
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -2433,11 +2289,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -2447,11 +2301,9 @@
 						"y": -160
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -2461,14 +2313,12 @@
 						"y": -56
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -2478,14 +2328,12 @@
 						"y": -52
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -2518,11 +2366,9 @@
 						"y": -28
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -2547,11 +2393,9 @@
 						"y": -5
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				}
 			]
@@ -2579,11 +2423,9 @@
 						"y": -14
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -2671,13 +2513,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "waist",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "waist",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -2706,13 +2546,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "waist",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "waist",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -2741,13 +2579,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "waist",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "waist",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -2766,13 +2602,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "hips",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "hips",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -2809,13 +2643,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "hips",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "hips",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -2836,11 +2668,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -2850,11 +2680,9 @@
 						"y": -136
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -2864,14 +2692,12 @@
 						"y": -274
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -2881,14 +2707,12 @@
 						"y": -208
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -2921,11 +2745,9 @@
 						"y": -57
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -2951,11 +2773,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -2965,11 +2785,9 @@
 						"y": -132
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -2979,14 +2797,12 @@
 						"y": -313
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -2996,14 +2812,12 @@
 						"y": -246
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -3029,11 +2843,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -3043,11 +2855,9 @@
 						"y": -130
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -3057,14 +2867,12 @@
 						"y": -317
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -3074,14 +2882,12 @@
 						"y": -251
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -3097,16 +2903,14 @@
 						"y": 20
 					},
 					"condition": [
-						[
-							{
-								"bone": "tiptoeing",
-								"operator": ">",
-								"value": 0
-							},
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"bone": "tiptoeing",
+							"operator": ">",
+							"value": 0
+						},
+						{
+							"legs": "!kneeling"
+						}
 					]
 				}
 			]
@@ -3132,13 +2936,11 @@
 					"bone": "arm_r",
 					"value": -1,
 					"condition": [
-						[
-							{
-								"bone": "arm_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "arm_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -3146,13 +2948,11 @@
 					"bone": "arm_r",
 					"value": -0.7,
 					"condition": [
-						[
-							{
-								"bone": "arm_r",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "arm_r",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -3163,13 +2963,11 @@
 						"y": 50
 					},
 					"condition": [
-						[
-							{
-								"bone": "arm_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "arm_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -3180,13 +2978,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "arm_r",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "arm_r",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -3214,11 +3010,9 @@
 						"y": -94
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -3251,11 +3045,9 @@
 						"y": -112
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -3289,13 +3081,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -3314,13 +3104,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "hips",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "hips",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -3330,11 +3118,9 @@
 						"y": -38
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -3368,13 +3154,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -3384,11 +3168,9 @@
 						"y": -70
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -3422,13 +3204,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -3439,13 +3219,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "hips",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "hips",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -3455,11 +3233,9 @@
 						"y": -48
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -3492,11 +3268,9 @@
 						"y": -50
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -3521,11 +3295,9 @@
 						"y": -13
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -3559,13 +3331,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "hips",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "hips",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -3575,11 +3345,9 @@
 						"y": -62
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -3590,16 +3358,14 @@
 						"y": -25
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_r",
-								"operator": "<",
-								"value": 0
-							},
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"bone": "leg_r",
+							"operator": "<",
+							"value": 0
+						},
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -3633,13 +3399,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -3649,11 +3413,9 @@
 						"y": -82
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -3686,11 +3448,9 @@
 						"y": -80
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -3723,11 +3483,9 @@
 						"y": -88
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -3761,13 +3519,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "hips",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "hips",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -3792,11 +3548,9 @@
 						"y": -10
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -3830,13 +3584,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -3846,11 +3598,9 @@
 						"y": -104
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -3883,11 +3633,9 @@
 						"y": -114
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -3920,11 +3668,9 @@
 						"y": -108
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -3949,11 +3695,9 @@
 						"y": -132
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -3986,11 +3730,9 @@
 						"y": -129
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -4023,11 +3765,9 @@
 						"y": -136
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -4060,11 +3800,9 @@
 						"y": -134
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -4097,11 +3835,9 @@
 						"y": -122
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -4126,11 +3862,9 @@
 						"y": -150
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -4156,11 +3890,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -4171,11 +3903,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							}
-						]
+						{
+							"legs": "kneeling"
+						}
 					]
 				},
 				{
@@ -4185,11 +3915,9 @@
 						"y": -147
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -4199,14 +3927,12 @@
 						"y": -187
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -4216,14 +3942,12 @@
 						"y": -134
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -4249,11 +3973,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -4263,11 +3985,9 @@
 						"y": -145
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -4277,14 +3997,12 @@
 						"y": -187
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -4294,14 +4012,12 @@
 						"y": -148
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -4344,11 +4060,9 @@
 						"y": -164
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -4358,14 +4072,12 @@
 						"y": -18
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -4375,14 +4087,12 @@
 						"y": -26
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -4408,11 +4118,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -4423,11 +4131,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							}
-						]
+						{
+							"legs": "kneeling"
+						}
 					]
 				},
 				{
@@ -4437,11 +4143,9 @@
 						"y": -157
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -4451,14 +4155,12 @@
 						"y": -95
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -4468,14 +4170,12 @@
 						"y": -65
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -4501,11 +4201,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -4516,16 +4214,14 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							},
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						},
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -4535,11 +4231,9 @@
 						"y": -155
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -4549,14 +4243,12 @@
 						"y": -101
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -4566,14 +4258,12 @@
 						"y": -86
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -4599,11 +4289,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -4614,11 +4302,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							}
-						]
+						{
+							"legs": "kneeling"
+						}
 					]
 				},
 				{
@@ -4629,16 +4315,14 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							},
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						},
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -4648,11 +4332,9 @@
 						"y": -152
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -4662,14 +4344,12 @@
 						"y": -144
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -4679,14 +4359,12 @@
 						"y": -102
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -4712,11 +4390,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -4727,16 +4403,14 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							},
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						},
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -4746,11 +4420,9 @@
 						"y": -150
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -4760,14 +4432,12 @@
 						"y": -145
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -4777,14 +4447,12 @@
 						"y": -119
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -4810,11 +4478,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -4825,16 +4491,14 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							},
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						},
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -4844,11 +4508,9 @@
 						"y": -152
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -4858,14 +4520,12 @@
 						"y": -123
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -4875,14 +4535,12 @@
 						"y": -104
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -4908,11 +4566,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -4923,16 +4579,14 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							},
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						},
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -4942,11 +4596,9 @@
 						"y": -155
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -4956,14 +4608,12 @@
 						"y": -123
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -4973,14 +4623,12 @@
 						"y": -84
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -5006,11 +4654,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -5021,16 +4667,14 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							},
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						},
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -5040,11 +4684,9 @@
 						"y": -147
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -5054,14 +4696,12 @@
 						"y": -167
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -5071,14 +4711,12 @@
 						"y": -134
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -5104,11 +4742,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -5119,16 +4755,14 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							},
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						},
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -5138,11 +4772,9 @@
 						"y": -150
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -5152,14 +4784,12 @@
 						"y": -172
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -5169,14 +4799,12 @@
 						"y": -120
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -5202,11 +4830,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -5216,11 +4842,9 @@
 						"y": -145
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -5230,14 +4854,12 @@
 						"y": -191
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -5247,14 +4869,12 @@
 						"y": -146
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -5280,11 +4900,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -5295,16 +4913,14 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							},
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						},
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -5314,11 +4930,9 @@
 						"y": -143
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -5328,14 +4942,12 @@
 						"y": -206
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -5345,14 +4957,12 @@
 						"y": -158
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -5378,11 +4988,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -5392,11 +5000,9 @@
 						"y": -140
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -5406,14 +5012,12 @@
 						"y": -228
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -5423,14 +5027,12 @@
 						"y": -176
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -5456,11 +5058,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -5471,11 +5071,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							}
-						]
+						{
+							"legs": "kneeling"
+						}
 					]
 				},
 				{
@@ -5486,16 +5084,14 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							},
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						},
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -5505,11 +5101,9 @@
 						"y": -143
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -5519,14 +5113,12 @@
 						"y": -223
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -5536,14 +5128,12 @@
 						"y": -161
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -5569,11 +5159,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -5583,11 +5171,9 @@
 						"y": -140
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -5597,14 +5183,12 @@
 						"y": -241
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -5614,14 +5198,12 @@
 						"y": -183
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -5654,11 +5236,9 @@
 						"y": -2
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -5691,11 +5271,9 @@
 						"y": -21
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -5729,13 +5307,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "waist",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "waist",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -5773,13 +5349,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "waist",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "waist",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -5808,13 +5382,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "waist",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "waist",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -5843,13 +5415,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "waist",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "waist",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -5868,13 +5438,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "hips",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "hips",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -5903,13 +5471,11 @@
 						"y": 20
 					},
 					"condition": [
-						[
-							{
-								"bone": "arm_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "arm_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -5929,11 +5495,9 @@
 						"y": -164
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -5943,14 +5507,12 @@
 						"y": -18
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -5960,14 +5522,12 @@
 						"y": -26
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -6006,13 +5566,11 @@
 						"y": 60
 					},
 					"condition": [
-						[
-							{
-								"bone": "arm_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "arm_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -6023,13 +5581,11 @@
 						"y": -14
 					},
 					"condition": [
-						[
-							{
-								"bone": "arm_r",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "arm_r",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -6063,13 +5619,11 @@
 						"y": 60
 					},
 					"condition": [
-						[
-							{
-								"bone": "arm_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "arm_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -6080,13 +5634,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "arm_r",
-								"operator": ">",
-								"value": 0
-							}
-						]
+						{
+							"bone": "arm_r",
+							"operator": ">",
+							"value": 0
+						}
 					]
 				}
 			]
@@ -6107,11 +5659,9 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"legs": "!kneeling"
+						}
 					]
 				},
 				{
@@ -6121,11 +5671,9 @@
 						"y": -140
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -6135,14 +5683,12 @@
 						"y": -275
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -6152,14 +5698,12 @@
 						"y": -208
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -6184,11 +5728,9 @@
 						"y": -154
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -6198,14 +5740,12 @@
 						"y": -7
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -6230,11 +5770,9 @@
 						"y": -132
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -6268,13 +5806,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -6284,11 +5820,9 @@
 						"y": -104
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -6322,13 +5856,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -6338,11 +5870,9 @@
 						"y": -70
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -6367,11 +5897,9 @@
 						"y": -122
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -6381,14 +5909,12 @@
 						"y": -396
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -6398,14 +5924,12 @@
 						"y": -330
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -6421,16 +5945,14 @@
 						"y": 20
 					},
 					"condition": [
-						[
-							{
-								"bone": "tiptoeing",
-								"operator": ">",
-								"value": 0
-							},
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"bone": "tiptoeing",
+							"operator": ">",
+							"value": 0
+						},
+						{
+							"legs": "!kneeling"
+						}
 					]
 				}
 			]
@@ -6450,11 +5972,9 @@
 						"y": -130
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -6464,14 +5984,12 @@
 						"y": -317
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -6481,14 +5999,12 @@
 						"y": -251
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -6504,16 +6020,14 @@
 						"y": 20
 					},
 					"condition": [
-						[
-							{
-								"bone": "tiptoeing",
-								"operator": ">",
-								"value": 0
-							},
-							{
-								"legs": "!kneeling"
-							}
-						]
+						{
+							"bone": "tiptoeing",
+							"operator": ">",
+							"value": 0
+						},
+						{
+							"legs": "!kneeling"
+						}
 					]
 				}
 			]
@@ -6533,11 +6047,9 @@
 						"y": -136
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -6547,14 +6059,12 @@
 						"y": -274
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -6564,14 +6074,12 @@
 						"y": -208
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -6596,11 +6104,9 @@
 						"y": -143
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -6610,14 +6116,12 @@
 						"y": -223
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -6627,14 +6131,12 @@
 						"y": -161
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -6659,11 +6161,9 @@
 						"y": -147
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -6673,14 +6173,12 @@
 						"y": -187
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -6690,14 +6188,12 @@
 						"y": -134
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -6722,11 +6218,9 @@
 						"y": -152
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -6736,14 +6230,12 @@
 						"y": -144
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -6753,14 +6245,12 @@
 						"y": -102
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -6785,11 +6275,9 @@
 						"y": -157
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -6799,14 +6287,12 @@
 						"y": -95
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -6816,14 +6302,12 @@
 						"y": -65
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -6848,11 +6332,9 @@
 						"y": -162
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -6862,14 +6344,12 @@
 						"y": -46
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "front"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
 					]
 				},
 				{
@@ -6879,14 +6359,12 @@
 						"y": -28
 					},
 					"condition": [
-						[
-							{
-								"legs": "kneeling"
-							},
-							{
-								"view": "back"
-							}
-						]
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
 					]
 				},
 				{
@@ -6911,11 +6389,9 @@
 						"y": -152
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -6940,11 +6416,9 @@
 						"y": -136
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -6969,11 +6443,9 @@
 						"y": -112
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -6998,11 +6470,9 @@
 						"y": -88
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -7036,13 +6506,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_width",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "leg_width",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -7061,13 +6529,11 @@
 						"y": 0
 					},
 					"condition": [
-						[
-							{
-								"bone": "hips",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "hips",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -7077,11 +6543,9 @@
 						"y": -30
 					},
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				},
 				{
@@ -7092,13 +6556,11 @@
 						"y": 2
 					},
 					"condition": [
-						[
-							{
-								"bone": "leg_r",
-								"operator": "<",
-								"value": 0
-							}
-						]
+						{
+							"bone": "leg_r",
+							"operator": "<",
+							"value": 0
+						}
 					]
 				},
 				{
@@ -7111,11 +6573,9 @@
 					"bone": "leg_r",
 					"value": -0.07,
 					"condition": [
-						[
-							{
-								"legs": "sitting"
-							}
-						]
+						{
+							"legs": "sitting"
+						}
 					]
 				}
 			]

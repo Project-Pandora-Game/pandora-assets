@@ -53,9 +53,9 @@ export const InversePosingHandles: Immutable<(Omit<InversePosingHandle, 'parentB
 		x: 545,
 		y: 1250,
 		transforms: [
-			{ type: 'const-shift', value: { x: 0, y: -140 }, condition: [[{ legs: 'sitting' }]] },
-			{ type: 'const-shift', value: { x: 0, y: -300 }, condition: [[{ legs: 'kneeling' }, { view: 'front' }]] },
-			{ type: 'const-shift', value: { x: 0, y: -185 }, condition: [[{ legs: 'kneeling' }, { view: 'back' }]] },
+			{ type: 'const-shift', value: { x: 0, y: -140 }, condition: [{ legs: 'sitting' }] },
+			{ type: 'const-shift', value: { x: 0, y: -300 }, condition: [{ legs: 'kneeling' }, { view: 'front' }] },
+			{ type: 'const-shift', value: { x: 0, y: -185 }, condition: [{ legs: 'kneeling' }, { view: 'back' }] },
 		],
 	},
 	{
@@ -64,9 +64,9 @@ export const InversePosingHandles: Immutable<(Omit<InversePosingHandle, 'parentB
 		x: 455,
 		y: 1250,
 		transforms: [
-			{ type: 'const-shift', value: { x: 0, y: -140 }, condition: [[{ legs: 'sitting' }]] },
-			{ type: 'const-shift', value: { x: 0, y: -300 }, condition: [[{ legs: 'kneeling' }, { view: 'front' }]] },
-			{ type: 'const-shift', value: { x: 0, y: -185 }, condition: [[{ legs: 'kneeling' }, { view: 'back' }]] },
+			{ type: 'const-shift', value: { x: 0, y: -140 }, condition: [{ legs: 'sitting' }] },
+			{ type: 'const-shift', value: { x: 0, y: -300 }, condition: [{ legs: 'kneeling' }, { view: 'front' }] },
+			{ type: 'const-shift', value: { x: 0, y: -185 }, condition: [{ legs: 'kneeling' }, { view: 'back' }] },
 		],
 	},
 ];
