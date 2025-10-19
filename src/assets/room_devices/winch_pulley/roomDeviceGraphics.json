@@ -64,6 +64,67 @@
 		{
 			"type": "sprite",
 			"offset": {
+				"x": -16,
+				"y": -3840
+			},
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": -16,
+						"y": -3015
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "extended"
+							},
+							{
+								"module": "carabiner",
+								"operator": "=",
+								"value": "strappado"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": -16,
+						"y": -4340
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "retracted"
+							}
+						]
+					]
+				}
+			],
+			"clipToRoom": true,
+			"colorizationKey": "cable",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "winch_cable.png",
+					"condition": [
+						[
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "front"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
 				"x": -250,
 				"y": 0
 			},
@@ -502,6 +563,67 @@
 					"offset": {
 						"x": -16,
 						"y": -2450
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "retracted"
+							}
+						]
+					]
+				}
+			],
+			"clipToRoom": true,
+			"colorizationKey": "cable",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "winch_cable.png",
+					"condition": [
+						[
+							{
+								"module": "position",
+								"operator": "=",
+								"value": "back"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -16,
+				"y": -3840
+			},
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": -16,
+						"y": -3015
+					},
+					"condition": [
+						[
+							{
+								"module": "cable",
+								"operator": "=",
+								"value": "extended"
+							},
+							{
+								"module": "carabiner",
+								"operator": "=",
+								"value": "strappado"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": -16,
+						"y": -4340
 					},
 					"condition": [
 						[
