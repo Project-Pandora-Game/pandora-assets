@@ -1,0 +1,46 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"name": "Rug",
+			"offset": {
+				"x": 0,
+				"y": 0
+			},
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": -790,
+						"y": -30
+					},
+					"condition": [
+						[
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "large"
+							}
+						]
+					]
+				}
+			],
+			"colorizationKey": "rug",
+			"image": "fluffy_rug.png",
+			"imageOverrides": [
+				{
+					"image": "fluffy_rug_large.png",
+					"condition": [
+						[
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "large"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {}
+}

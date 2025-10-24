@@ -2087,7 +2087,7 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 	},
 	{
 		id: 'zen_garden',
-		name: 'Zen Garden',
+		name: 'Zen garden',
 		image: 'zen_garden.jpg',
 		calibration: {
 			imageSize: [3564, 2160],
@@ -2105,6 +2105,31 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 				{
 					source: 'https://www.flickr.com/photos/el_ave/30868553144/',
 					copyrightHolder: 'el ave',
+					license: 'CC BY',
+				},
+			],
+		},
+	},
+	{
+		id: 'artists_livingroom_night',
+		name: 'Artist\'s livingroom',
+		image: 'artists_livingroom_night.jpg',
+		calibration: {
+			imageSize: [3840, 2160],
+			cameraCenterOffset: [-20, 199],
+			areaCoverage: 1.02,
+			ceiling: 2866,
+			areaDepthRatio: 0.42,
+			baseScale: 1.06,
+			fov: 80,
+		},
+		tags: ['inside', 'livingroom', 'couch', 'cozy', 'path', 'home', 'night', 'space_medium'],
+		ownership: {
+			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
+			licensing: [
+				{
+					source: 'https://skfb.ly/pzB6y',
+					copyrightHolder: 'Visthétique',
 					license: 'CC BY',
 				},
 			],

@@ -1,0 +1,11 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"name": "Pillow",
+			"colorizationKey": "pillow",
+			"image": "pillow.png"
+		}
+	],
+	"slots": {}
+}
