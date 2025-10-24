@@ -1,21 +1,24 @@
 DefineAsset({
-	name: 'Spiked Platform Shoes',
-	size: 'medium',
+	name: 'Spiked Leather Collar',
+	size: 'small',
 	graphics: 'graphics.json',
+	requireFreeHandsToUseDefault: true,
 	colorization: {
-		shoes: {
-			name: 'Shoes',
-			default: '#D6D6D6',
+		collar: {
+			name: 'Collar',
+			default: '#FFFFFF',
+		},
+		ring: {
+			name: 'Ring',
+			default: '#CCCCCC',
 		},
 	},
-	// size:250, y:1185, centered
+	// size:150, y:315, centered
 	preview: 'preview.png',
 	attributes: {
 		provides: [
-			'Clothing',
-			'Footwear',
 			'Restraint',
-			'Restraint_legs',
+			'Collar',
 		],
 	},
 	modules: {
@@ -25,13 +28,33 @@ DefineAsset({
 			lockedProperties: {
 				blockAddRemove: true,
 			},
-
+		},
+		collarConfig: {
+			type: 'typed',
+			name: 'Collar Configuration',
+			variants: [
+				{
+					id: 'collar',
+					name: 'Collar Only',
+					default: true,
+				},
+				{
+					id: 'ring',
+					name: 'Collar + Ring',
+					properties: {
+						attributes: {
+							provides: [
+								'Collar_front_ring',
+							],
+						},
+					},
+				},
+			],
 		},
 	},
-	poseLimits: {
-		bones: {
-			tiptoeing: 180,
-		},
+	chat: {
+		actionAdd: 'SOURCE_CHARACTER fitted and closed ITEM_ASSET_NAME around TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',
+		actionRemove: 'SOURCE_CHARACTER opened and then removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
