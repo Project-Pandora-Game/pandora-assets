@@ -1,0 +1,65 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"name": "bottom",
+			"colorizationKey": "bottom",
+			"image": "cloth_pile_b_1.png",
+			"imageOverrides": [
+				{
+					"image": "cloth_pile_a_1.png",
+					"condition": [
+						[
+							{
+								"module": "type",
+								"operator": "=",
+								"value": "unfolded"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"name": "middle",
+			"colorizationKey": "middle",
+			"image": "cloth_pile_b_2.png",
+			"imageOverrides": [
+				{
+					"image": "cloth_pile_a_2.png",
+					"condition": [
+						[
+							{
+								"module": "type",
+								"operator": "=",
+								"value": "unfolded"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"name": "top",
+			"colorizationKey": "top",
+			"image": "cloth_pile_b_3.png",
+			"imageOverrides": [
+				{
+					"image": "cloth_pile_a_3.png",
+					"condition": [
+						[
+							{
+								"module": "type",
+								"operator": "=",
+								"value": "unfolded"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {}
+}
