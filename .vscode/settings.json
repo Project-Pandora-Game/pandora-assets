@@ -68,6 +68,12 @@
 				"/src/assets/**/roomDeviceGraphics.json"
 			],
 			"url": "./out/graphicsSource-roomDevice.schema.json"
+		},
+		{
+			"fileMatch": [
+				"/src/templates/**/*.json"
+			],
+			"url": "./out/graphicsSource-pointTemplate.schema.json"
 		}
 	],
 }
