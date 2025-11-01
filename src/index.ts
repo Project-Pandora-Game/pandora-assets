@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import ignore from 'ignore';
 import type { Immutable } from 'immer';
-import { AssetSourceGraphicsDefinitionSchema, AssetSourceGraphicsRoomDeviceDefinitionSchema, AssetsDefinitionFile, GetLogger, LogLevel, SetConsoleOutput, logConfig, type GraphicsDefinitionFile, type GraphicsSourceDefinitionFile } from 'pandora-common';
+import { AssetSourceGraphicsDefinitionSchema, AssetSourceGraphicsRoomDeviceDefinitionSchema, AssetsDefinitionFile, GetLogger, LogLevel, PointTemplateSourceSchema, SetConsoleOutput, logConfig, type GraphicsDefinitionFile, type GraphicsSourceDefinitionFile } from 'pandora-common';
 import { join, relative } from 'path';
 import { pathToFileURL } from 'url';
 import * as z from 'zod';
@@ -218,6 +218,9 @@ async function Run() {
 
 	const assetGraphicsRoomDeviceSchema = z.toJSONSchema(AssetSourceGraphicsRoomDeviceDefinitionSchema, { target: 'draft-7' });
 	DefineResourceInline('graphicsSource-roomDevice.schema.json', JSON.stringify(assetGraphicsRoomDeviceSchema, undefined, '\t'), 'graphicsSource-roomDevice.schema.json');
+
+	const pointTemplateSchema = z.toJSONSchema(PointTemplateSourceSchema, { target: 'draft-7' });
+	DefineResourceInline('graphicsSource-pointTemplate.schema.json', JSON.stringify(pointTemplateSchema, undefined, '\t'), 'graphicsSource-pointTemplate.schema.json');
 
 	// Do export of all resources pending so far
 	await ExportAllResources();
