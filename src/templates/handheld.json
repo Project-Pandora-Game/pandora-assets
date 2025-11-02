@@ -13,6 +13,34 @@
 			]
 		}
 	},
+	"automeshTemplates": {
+		"aboveBody": {
+			"name": "Above body",
+			"parts": [
+				{
+					"id": "arms",
+					"priority": "ABOVE_ARM_LEFT",
+					"pointType": [
+						"handheld_l"
+					],
+					"mirror": 1
+				}
+			]
+		},
+		"belowBody": {
+			"name": "Below body",
+			"parts": [
+				{
+					"id": "arms",
+					"priority": "BELOW_ARM_LEFT",
+					"pointType": [
+						"handheld_l"
+					],
+					"mirror": 1
+				}
+			]
+		}
+	},
 	"points": [
 		{
 			"pos": [

@@ -6,54 +6,77 @@
 			"y": 0,
 			"width": 1500,
 			"height": 1500,
-			"type": "mesh",
-			"name": "wand",
-			"priority": "BELOW_ARM_RIGHT",
+			"type": "autoMesh",
+			"name": "Front",
 			"points": "handheld",
-			"pointType": [
-				"handheld_r"
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "handle",
+					"colorizationKey": "handle"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "wheel",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "wand_base.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "wand_base_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "handUsage_l"
+				},
+				{
+					"type": "armRotation",
+					"side": "left"
+				},
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"yes:backward:front": [
+					""
+				],
+				"yes:backward:back": [
+					""
+				],
+				"yes:up:front": [
+					"wand_handle_overlay.png"
+				],
+				"yes:up:back": [
+					"wand_handle.png"
+				],
+				"yes:forward:front": [
+					""
+				],
+				"yes:forward:back": [
+					""
+				],
+				"yes:down:front": [
+					"wand_handle_overlay_back_down.png"
+				],
+				"yes:down:back": [
+					"wand_handle_down.png"
+				],
+				"no:backward:front": [
+					""
+				],
+				"no:backward:back": [
+					""
+				],
+				"no:up:front": [
+					""
+				],
+				"no:up:back": [
+					""
+				],
+				"no:forward:front": [
+					""
+				],
+				"no:forward:back": [
+					""
+				],
+				"no:down:front": [
+					""
+				],
+				"no:down:back": [
+					""
 				]
 			}
 		},
@@ -62,286 +85,97 @@
 			"y": 0,
 			"width": 1500,
 			"height": 1500,
-			"type": "mesh",
-			"name": "handle hand overlay",
-			"priority": "ABOVE_ARM_RIGHT",
+			"type": "autoMesh",
+			"name": "Back",
 			"points": "handheld",
-			"pointType": [
-				"handheld_r"
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "wand",
+					"colorizationKey": "wheel"
+				},
+				{
+					"name": "handle",
+					"colorizationKey": "handle"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "wand_handle_overlay.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": -250,
-			"y": 0,
-			"width": 1500,
-			"height": 1500,
-			"type": "mesh",
-			"name": "handle hand overlay back",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "handUsage_l"
+				},
+				{
+					"type": "armRotation",
+					"side": "left"
+				},
+				{
+					"type": "view"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "wand_handle_overlay_back.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": -250,
-			"y": 0,
-			"width": 1500,
-			"height": 1500,
-			"type": "mesh",
-			"name": "handle",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "wand_handle.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "wand_handle_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": -250,
-			"y": 0,
-			"width": 1500,
-			"height": 1500,
-			"type": "mesh",
-			"name": "handle hand overlay down",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "wand_handle_overlay_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": -250,
-			"y": 0,
-			"width": 1500,
-			"height": 1500,
-			"type": "mesh",
-			"name": "handle hand overlay back down",
-			"priority": "ABOVE_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "wand_handle_overlay_back_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": -250,
-			"y": 0,
-			"width": 1500,
-			"height": 1500,
-			"type": "mesh",
-			"name": "handle back",
-			"priority": "ABOVE_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "wand_handle.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "wand_handle_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"imageMap": {
+				"yes:backward:front": [
+					"",
+					""
+				],
+				"yes:backward:back": [
+					"",
+					""
+				],
+				"yes:up:front": [
+					"wand_base.png",
+					"wand_handle.png"
+				],
+				"yes:up:back": [
+					"wand_base.png",
+					"wand_handle_overlay_back.png"
+				],
+				"yes:forward:front": [
+					"",
+					""
+				],
+				"yes:forward:back": [
+					"",
+					""
+				],
+				"yes:down:front": [
+					"wand_base_down.png",
+					"wand_handle_down.png"
+				],
+				"yes:down:back": [
+					"wand_base_down.png",
+					"wand_handle_overlay_down.png"
+				],
+				"no:backward:front": [
+					"",
+					""
+				],
+				"no:backward:back": [
+					"",
+					""
+				],
+				"no:up:front": [
+					"",
+					""
+				],
+				"no:up:back": [
+					"",
+					""
+				],
+				"no:forward:front": [
+					"",
+					""
+				],
+				"no:forward:back": [
+					"",
+					""
+				],
+				"no:down:front": [
+					"",
+					""
+				],
+				"no:down:back": [
+					"",
+					""
 				]
 			}
 		}
