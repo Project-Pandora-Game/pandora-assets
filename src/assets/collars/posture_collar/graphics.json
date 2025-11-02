@@ -6,36 +6,32 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "collar front",
-			"priority": "ABOVE_BODY",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
 			],
-			"mirror": 0,
-			"colorizationKey": "collar",
-			"image": {
-				"image": "posture_collar_front.png",
-				"overrides": [
-					{
-						"image": "posture_collar_front_white.png",
-						"condition": [
-							[
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "front",
+					"colorizationKey": "collar"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "color"
+				}
+			],
+			"imageMap": {
+				"black": [
+					"posture_collar_front.png"
+				],
+				"white": [
+					"posture_collar_front_white.png"
 				]
 			}
 		},
@@ -44,85 +40,38 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "collar chin",
-			"priority": "ABOVE_BODY",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "collar",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "posture_collar_chin_low_white.png",
-						"condition": [
-							[
-								{
-									"module": "collarType",
-									"operator": "=",
-									"value": "low"
-								},
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "posture_collar_chin_high_white.png",
-						"condition": [
-							[
-								{
-									"module": "collarType",
-									"operator": "=",
-									"value": "high"
-								},
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "posture_collar_chin_low.png",
-						"condition": [
-							[
-								{
-									"module": "collarType",
-									"operator": "=",
-									"value": "low"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "posture_collar_chin_high.png",
-						"condition": [
-							[
-								{
-									"module": "collarType",
-									"operator": "=",
-									"value": "high"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "chin",
+					"colorizationKey": "collar"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "collarType"
+				},
+				{
+					"type": "typedModule",
+					"module": "color"
+				}
+			],
+			"imageMap": {
+				"low:black": [
+					"posture_collar_chin_low.png"
+				],
+				"low:white": [
+					"posture_collar_chin_low_white.png"
+				],
+				"high:black": [
+					"posture_collar_chin_high.png"
+				],
+				"high:white": [
+					"posture_collar_chin_high_white.png"
 				]
 			}
 		},
@@ -131,39 +80,31 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "addon",
-			"priority": "ABOVE_BODY",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "addon",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "posture_collar_telescope.png",
-						"condition": [
-							[
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "telescope"
-								}
-							]
-						]
-					},
-					{
-						"image": "posture_collar_ring.png",
-						"condition": [
-							[
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "ring"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "addon",
+					"colorizationKey": "addon"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "collarConfig"
+				}
+			],
+			"imageMap": {
+				"collar": [
+					""
+				],
+				"ring": [
+					"posture_collar_ring.png"
+				],
+				"telescope": [
+					"posture_collar_telescope.png"
 				]
 			}
 		},
@@ -172,27 +113,32 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "collar back",
-			"priority": "BELOW_BODY",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "collar",
-			"image": {
-				"image": "posture_collar_back.png",
-				"overrides": [
-					{
-						"image": "posture_collar_back_white.png",
-						"condition": [
-							[
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "back",
+					"colorizationKey": "collar"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "color"
+				}
+			],
+			"imageMap": {
+				"black": [
+					"posture_collar_back.png"
+				],
+				"white": [
+					"posture_collar_back_white.png"
 				]
 			}
 		}

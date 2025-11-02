@@ -6,43 +6,25 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "choker front",
-			"priority": "ABOVE_BODY",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "choker",
-			"image": {
-				"image": "choker.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "choker ring",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "ring",
-			"image": {
-				"image": "choker_ring.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "config",
-									"operator": "=",
-									"value": "choker"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "chocker",
+					"colorizationKey": "choker"
+				},
+				{
+					"name": "rivets",
+					"colorizationKey": "rivets"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"choker.png",
+					"choker_rivets.png"
 				]
 			}
 		},
@@ -51,15 +33,29 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "choker rivets front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "ring",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "rivets",
-			"image": {
-				"image": "choker_rivets.png",
-				"overrides": []
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "ring",
+					"colorizationKey": "ring"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "config"
+				}
+			],
+			"imageMap": {
+				"choker": [
+					""
+				],
+				"ring": [
+					"choker_ring.png"
+				]
 			}
 		},
 		{
@@ -67,31 +63,26 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "choker back",
-			"priority": "BELOW_BODY",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "choker",
-			"image": {
-				"image": "choker_back.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "choker rivets back",
-			"priority": "BELOW_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "rivets",
-			"image": {
-				"image": "choker_rivets_back.png",
-				"overrides": []
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "chocker",
+					"colorizationKey": "choker"
+				},
+				{
+					"name": "rivets",
+					"colorizationKey": "rivets"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"choker_back.png",
+					"choker_rivets_back.png"
+				]
 			}
 		}
 	]

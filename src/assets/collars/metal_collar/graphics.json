@@ -6,27 +6,28 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "collar front",
-			"priority": "ABOVE_BODY",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "collar",
-			"image": {
-				"image": "metal_collar.png",
-				"overrides": [
-					{
-						"image": "thick_metal_collar.png",
-						"condition": [
-							[
-								{
-									"module": "collarType",
-									"operator": "=",
-									"value": "thick"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "front",
+					"colorizationKey": "collar"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "collarType"
+				}
+			],
+			"imageMap": {
+				"normal": [
+					"metal_collar.png"
+				],
+				"thick": [
+					"thick_metal_collar.png"
 				]
 			}
 		},
@@ -35,39 +36,38 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "ring",
-			"priority": "ABOVE_BODY",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "ring",
-			"image": {
-				"image": "metal_collar_ring.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "collar"
-								}
-							]
-						]
-					},
-					{
-						"image": "thick_metal_collar_ring.png",
-						"condition": [
-							[
-								{
-									"module": "collarType",
-									"operator": "=",
-									"value": "thick"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "ring",
+					"colorizationKey": "ring"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "collarConfig"
+				},
+				{
+					"type": "typedModule",
+					"module": "collarType"
+				}
+			],
+			"imageMap": {
+				"collar:normal": [
+					""
+				],
+				"collar:thick": [
+					""
+				],
+				"ring:normal": [
+					"metal_collar_ring.png"
+				],
+				"ring:thick": [
+					"thick_metal_collar_ring.png"
 				]
 			}
 		},
@@ -76,27 +76,28 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "collar back",
-			"priority": "BELOW_BODY",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "collar",
-			"image": {
-				"image": "metal_collar.png",
-				"overrides": [
-					{
-						"image": "thick_metal_collar.png",
-						"condition": [
-							[
-								{
-									"module": "collarType",
-									"operator": "=",
-									"value": "thick"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "back",
+					"colorizationKey": "collar"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "collarType"
+				}
+			],
+			"imageMap": {
+				"normal": [
+					"metal_collar.png"
+				],
+				"thick": [
+					"thick_metal_collar.png"
 				]
 			}
 		}
