@@ -83,7 +83,7 @@
 				{
 					"type": "const-shift",
 					"value": {
-						"x": -4,
+						"x": -3,
 						"y": -218
 					},
 					"condition": [
@@ -113,7 +113,7 @@
 				{
 					"type": "const-shift",
 					"value": {
-						"x": -4,
+						"x": -3,
 						"y": -248
 					},
 					"condition": [
@@ -173,7 +173,7 @@
 				{
 					"type": "const-shift",
 					"value": {
-						"x": -4,
+						"x": -3,
 						"y": -237
 					},
 					"condition": [

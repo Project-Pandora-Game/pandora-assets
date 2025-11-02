@@ -238,6 +238,37 @@
 				}
 			]
 		},
+		"belowBreasts": {
+			"name": "Below breasts",
+			"parts": [
+				{
+					"id": "body",
+					"priority": "BELOW_BREASTS",
+					"pointType": [
+						"body",
+						"body_l",
+						"body_r",
+						"bodyarm_l",
+						"bodyarm_r",
+						"bodyleg",
+						"bodyleg_l",
+						"bodyleg_r",
+						"leg",
+						"leg_l",
+						"leg_r"
+					]
+				},
+				{
+					"id": "arms",
+					"priority": "ABOVE_ARM_LEFT",
+					"pointType": [
+						"bodyarm_l",
+						"arm_l"
+					],
+					"mirror": 1
+				}
+			]
+		},
 		"belowBody": {
 			"name": "Below body",
 			"parts": [
@@ -1918,6 +1949,89 @@
 		},
 		{
 			"pos": [
+				400,
+				1405
+			],
+			"mirror": true,
+			"pointType": "leg_r",
+			"transforms": [
+				{
+					"type": "shift",
+					"bone": "leg_width",
+					"value": {
+						"x": -2,
+						"y": 0
+					},
+					"condition": [
+						{
+							"legs": "!kneeling"
+						}
+					]
+				},
+				{
+					"type": "const-shift",
+					"value": {
+						"x": -6,
+						"y": -119
+					},
+					"condition": [
+						{
+							"legs": "sitting"
+						}
+					]
+				},
+				{
+					"type": "const-shift",
+					"value": {
+						"x": 36,
+						"y": -428
+					},
+					"condition": [
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				},
+				{
+					"type": "const-shift",
+					"value": {
+						"x": 18,
+						"y": -361
+					},
+					"condition": [
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
+					]
+				},
+				{
+					"type": "shift",
+					"bone": "tiptoeing",
+					"value": {
+						"x": 0,
+						"y": 20
+					},
+					"condition": [
+						{
+							"bone": "tiptoeing",
+							"operator": ">",
+							"value": 0
+						},
+						{
+							"legs": "!kneeling"
+						}
+					]
+				}
+			]
+		},
+		{
+			"pos": [
 				492,
 				1374
 			],
@@ -1952,7 +2066,7 @@
 				{
 					"type": "const-shift",
 					"value": {
-						"x": -31,
+						"x": -32,
 						"y": -396
 					},
 					"condition": [
@@ -1967,8 +2081,91 @@
 				{
 					"type": "const-shift",
 					"value": {
-						"x": -10,
+						"x": -11,
 						"y": -330
+					},
+					"condition": [
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
+					]
+				},
+				{
+					"type": "shift",
+					"bone": "tiptoeing",
+					"value": {
+						"x": 0,
+						"y": 20
+					},
+					"condition": [
+						{
+							"bone": "tiptoeing",
+							"operator": ">",
+							"value": 0
+						},
+						{
+							"legs": "!kneeling"
+						}
+					]
+				}
+			]
+		},
+		{
+			"pos": [
+				492,
+				1405
+			],
+			"mirror": true,
+			"pointType": "leg_r",
+			"transforms": [
+				{
+					"type": "shift",
+					"bone": "leg_width",
+					"value": {
+						"x": 2,
+						"y": 0
+					},
+					"condition": [
+						{
+							"legs": "!kneeling"
+						}
+					]
+				},
+				{
+					"type": "const-shift",
+					"value": {
+						"x": 4,
+						"y": -119
+					},
+					"condition": [
+						{
+							"legs": "sitting"
+						}
+					]
+				},
+				{
+					"type": "const-shift",
+					"value": {
+						"x": -32,
+						"y": -427
+					},
+					"condition": [
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				},
+				{
+					"type": "const-shift",
+					"value": {
+						"x": -11,
+						"y": -361
 					},
 					"condition": [
 						{
@@ -3736,7 +3933,7 @@
 				{
 					"type": "const-shift",
 					"value": {
-						"x": -3,
+						"x": -2,
 						"y": -187
 					},
 					"condition": [
@@ -4312,7 +4509,7 @@
 				{
 					"type": "const-shift",
 					"value": {
-						"x": 5,
+						"x": 7,
 						"y": -123
 					},
 					"condition": [
@@ -5534,7 +5731,7 @@
 					"type": "const-shift",
 					"value": {
 						"x": 0,
-						"y": -396
+						"y": -413
 					},
 					"condition": [
 						{
@@ -5604,7 +5801,7 @@
 					"type": "const-shift",
 					"value": {
 						"x": 0,
-						"y": -317
+						"y": -334
 					},
 					"condition": [
 						{
@@ -5674,7 +5871,7 @@
 					"type": "const-shift",
 					"value": {
 						"x": 0,
-						"y": -274
+						"y": -291
 					},
 					"condition": [
 						{
@@ -5726,7 +5923,7 @@
 					"type": "const-shift",
 					"value": {
 						"x": 0,
-						"y": -223
+						"y": -222
 					},
 					"condition": [
 						{
@@ -5778,7 +5975,7 @@
 					"type": "const-shift",
 					"value": {
 						"x": 0,
-						"y": -187
+						"y": -188
 					},
 					"condition": [
 						{
@@ -5830,7 +6027,7 @@
 					"type": "const-shift",
 					"value": {
 						"x": 0,
-						"y": -144
+						"y": -146
 					},
 					"condition": [
 						{
@@ -5882,7 +6079,7 @@
 					"type": "const-shift",
 					"value": {
 						"x": 0,
-						"y": -95
+						"y": -94
 					},
 					"condition": [
 						{
@@ -5934,7 +6131,7 @@
 					"type": "const-shift",
 					"value": {
 						"x": 0,
-						"y": -46
+						"y": -44
 					},
 					"condition": [
 						{
@@ -6128,6 +6325,76 @@
 							"bone": "leg_r",
 							"operator": "<",
 							"value": 0
+						}
+					]
+				}
+			]
+		},
+		{
+			"pos": [
+				500,
+				1405
+			],
+			"mirror": false,
+			"pointType": "leg",
+			"transforms": [
+				{
+					"type": "const-shift",
+					"value": {
+						"x": 0,
+						"y": -119
+					},
+					"condition": [
+						{
+							"legs": "sitting"
+						}
+					]
+				},
+				{
+					"type": "const-shift",
+					"value": {
+						"x": 0,
+						"y": -444
+					},
+					"condition": [
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "front"
+						}
+					]
+				},
+				{
+					"type": "const-shift",
+					"value": {
+						"x": 0,
+						"y": -361
+					},
+					"condition": [
+						{
+							"legs": "kneeling"
+						},
+						{
+							"view": "back"
+						}
+					]
+				},
+				{
+					"type": "shift",
+					"bone": "tiptoeing",
+					"value": {
+						"x": 0,
+						"y": 20
+					},
+					"condition": [
+						{
+							"bone": "tiptoeing",
+							"operator": ">",
+							"value": 0
+						},
+						{
+							"legs": "!kneeling"
 						}
 					]
 				}

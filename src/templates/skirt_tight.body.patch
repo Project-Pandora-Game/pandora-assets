@@ -1,0 +1,1136 @@
+--- body.json
++++ skirt_tight.json
+@@ -9,6 +9,9 @@
+ 				"BELOW_BREASTS",
+ 				"ABOVE_BODY",
+ 				"ABOVE_FRONT_HAIR"
++			],
++			"requiredPointTypes": [
++				"bodyleg"
+ 			]
+ 		},
+ 		"body_l": {
+@@ -24,6 +27,7 @@
+ 			"requiredPointTypes": [
+ 				"body",
+ 				"bodyarm_l",
++				"bodyleg",
+ 				"bodyleg_l"
+ 			]
+ 		},
+@@ -40,6 +44,7 @@
+ 			"requiredPointTypes": [
+ 				"body",
+ 				"bodyarm_r",
++				"bodyleg",
+ 				"bodyleg_r"
+ 			]
+ 		},
+@@ -91,6 +96,23 @@
+ 				"bodyarm_r"
+ 			]
+ 		},
++		"bodyleg": {
++			"allowedPriorities": [
++				"BELOW_BACK_HAIR",
++				"ABOVE_BACK_HAIR",
++				"BELOW_BODY",
++				"BODY",
++				"BELOW_BREASTS",
++				"ABOVE_BODY",
++				"BELOW_LEG_LEFT",
++				"LEG_LEFT",
++				"ABOVE_LEG_LEFT",
++				"BELOW_LEG_RIGHT",
++				"LEG_RIGHT",
++				"ABOVE_LEG_RIGHT",
++				"ABOVE_FRONT_HAIR"
++			]
++		},
+ 		"bodyleg_l": {
+ 			"allowedPriorities": [
+ 				"BELOW_BACK_HAIR",
+@@ -103,6 +125,9 @@
+ 				"LEG_LEFT",
+ 				"ABOVE_LEG_LEFT",
+ 				"ABOVE_FRONT_HAIR"
++			],
++			"requiredPointTypes": [
++				"bodyleg"
+ 			]
+ 		},
+ 		"bodyleg_r": {
+@@ -117,25 +142,66 @@
+ 				"LEG_RIGHT",
+ 				"ABOVE_LEG_RIGHT",
+ 				"ABOVE_FRONT_HAIR"
++			],
++			"requiredPointTypes": [
++				"bodyleg"
++			]
++		},
++		"leg": {
++			"allowedPriorities": [
++				"BELOW_BACK_HAIR",
++				"ABOVE_BACK_HAIR",
++				"BELOW_BODY",
++				"BODY",
++				"BELOW_BREASTS",
++				"ABOVE_BODY",
++				"BELOW_LEG_LEFT",
++				"LEG_LEFT",
++				"ABOVE_LEG_LEFT",
++				"BELOW_LEG_RIGHT",
++				"LEG_RIGHT",
++				"ABOVE_LEG_RIGHT",
++				"ABOVE_FRONT_HAIR"
++			],
++			"requiredPointTypes": [
++				"bodyleg"
+ 			]
+ 		},
+ 		"leg_l": {
+ 			"allowedPriorities": [
++				"BELOW_BACK_HAIR",
++				"ABOVE_BACK_HAIR",
++				"BELOW_BODY",
++				"BODY",
++				"BELOW_BREASTS",
++				"ABOVE_BODY",
+ 				"BELOW_LEG_LEFT",
+ 				"LEG_LEFT",
+-				"ABOVE_LEG_LEFT"
++				"ABOVE_LEG_LEFT",
++				"ABOVE_FRONT_HAIR"
+ 			],
+ 			"requiredPointTypes": [
++				"leg",
++				"bodyleg",
+ 				"bodyleg_l"
+ 			]
+ 		},
+ 		"leg_r": {
+ 			"allowedPriorities": [
++				"BELOW_BACK_HAIR",
++				"ABOVE_BACK_HAIR",
++				"BELOW_BODY",
++				"BODY",
++				"BELOW_BREASTS",
++				"ABOVE_BODY",
+ 				"BELOW_LEG_RIGHT",
+ 				"LEG_RIGHT",
+-				"ABOVE_LEG_RIGHT"
++				"ABOVE_LEG_RIGHT",
++				"ABOVE_FRONT_HAIR"
+ 			],
+ 			"requiredPointTypes": [
++				"leg",
++				"bodyleg",
+ 				"bodyleg_r"
+ 			]
+ 		}
+@@ -153,8 +219,12 @@
+ 						"body_r",
+ 						"bodyarm_l",
+ 						"bodyarm_r",
++						"bodyleg",
+ 						"bodyleg_l",
+-						"bodyleg_r"
++						"bodyleg_r",
++						"leg",
++						"leg_l",
++						"leg_r"
+ 					]
+ 				},
+ 				{
+@@ -165,15 +235,6 @@
+ 						"arm_l"
+ 					],
+ 					"mirror": 1
+-				},
+-				{
+-					"id": "legs",
+-					"priority": "ABOVE_LEG_LEFT",
+-					"pointType": [
+-						"bodyleg_l",
+-						"leg_l"
+-					],
+-					"mirror": 1
+ 				}
+ 			]
+ 		},
+@@ -189,8 +250,12 @@
+ 						"body_r",
+ 						"bodyarm_l",
+ 						"bodyarm_r",
++						"bodyleg",
+ 						"bodyleg_l",
+-						"bodyleg_r"
++						"bodyleg_r",
++						"leg",
++						"leg_l",
++						"leg_r"
+ 					]
+ 				},
+ 				{
+@@ -201,37 +266,60 @@
+ 						"arm_l"
+ 					],
+ 					"mirror": 1
+-				},
++				}
++			]
++		},
++		"belowBody": {
++			"name": "Below body",
++			"parts": [
+ 				{
+-					"id": "legs",
+-					"priority": "ABOVE_LEG_LEFT",
++					"id": "body",
++					"priority": "BELOW_BODY",
+ 					"pointType": [
++						"body",
++						"body_l",
++						"body_r",
++						"bodyarm_l",
++						"bodyarm_r",
++						"bodyleg",
+ 						"bodyleg_l",
+-						"leg_l"
++						"bodyleg_r",
++						"leg",
++						"leg_l",
++						"leg_r"
++					]
++				},
++				{
++					"id": "arms",
++					"priority": "BELOW_ARM_LEFT",
++					"pointType": [
++						"bodyarm_l",
++						"arm_l"
+ 					],
+ 					"mirror": 1
+ 				}
+ 			]
+ 		},
+-		"belowBody": {
+-			"name": "Below body",
++		"aboveLegs": {
++			"name": "Above legs",
+ 			"parts": [
+ 				{
+ 					"id": "body",
+-					"priority": "BELOW_BODY",
++					"priority": "ABOVE_BODY",
+ 					"pointType": [
+ 						"body",
+ 						"body_l",
+ 						"body_r",
+ 						"bodyarm_l",
+ 						"bodyarm_r",
++						"bodyleg",
+ 						"bodyleg_l",
+ 						"bodyleg_r"
+ 					]
+ 				},
+ 				{
+ 					"id": "arms",
+-					"priority": "BELOW_ARM_LEFT",
++					"priority": "ABOVE_ARM_LEFT",
+ 					"pointType": [
+ 						"bodyarm_l",
+ 						"arm_l"
+@@ -240,34 +328,37 @@
+ 				},
+ 				{
+ 					"id": "legs",
+-					"priority": "BELOW_LEG_LEFT",
++					"priority": "ABOVE_LEG_LEFT",
+ 					"pointType": [
++						"bodyleg",
+ 						"bodyleg_l",
++						"leg",
+ 						"leg_l"
+ 					],
+ 					"mirror": 1
+ 				}
+ 			]
+ 		},
+-		"body": {
+-			"name": "Bodypart",
++		"belowLegs": {
++			"name": "Below legs",
+ 			"parts": [
+ 				{
+ 					"id": "body",
+-					"priority": "BODY",
++					"priority": "BELOW_BODY",
+ 					"pointType": [
+ 						"body",
+ 						"body_l",
+ 						"body_r",
+ 						"bodyarm_l",
+ 						"bodyarm_r",
++						"bodyleg",
+ 						"bodyleg_l",
+ 						"bodyleg_r"
+ 					]
+ 				},
+ 				{
+ 					"id": "arms",
+-					"priority": "ARM_LEFT",
++					"priority": "BELOW_ARM_LEFT",
+ 					"pointType": [
+ 						"bodyarm_l",
+ 						"arm_l"
+@@ -276,9 +367,11 @@
+ 				},
+ 				{
+ 					"id": "legs",
+-					"priority": "LEG_LEFT",
++					"priority": "BELOW_LEG_LEFT",
+ 					"pointType": [
++						"bodyleg",
+ 						"bodyleg_l",
++						"leg",
+ 						"leg_l"
+ 					],
+ 					"mirror": 1
+@@ -295,7 +388,10 @@
+ 						"body",
+ 						"body_l",
+ 						"bodyarm_l",
+-						"bodyleg_l"
++						"bodyleg",
++						"bodyleg_l",
++						"leg",
++						"leg_l"
+ 					],
+ 					"mirror": 1
+ 				},
+@@ -307,69 +403,55 @@
+ 						"arm_l"
+ 					],
+ 					"mirror": 1
+-				},
+-				{
+-					"id": "legs",
+-					"priority": "ABOVE_LEG_LEFT",
+-					"pointType": [
+-						"bodyleg_l",
+-						"leg_l"
+-					],
+-					"mirror": 1
+ 				}
+ 			]
+ 		},
+-		"belowBreastsMirror": {
+-			"name": "Below breasts (mirrored)",
++		"belowBodyMirror": {
++			"name": "Below body (mirrored)",
+ 			"parts": [
+ 				{
+ 					"id": "body",
+-					"priority": "BELOW_BREASTS",
++					"priority": "BELOW_BODY",
+ 					"pointType": [
+ 						"body",
+ 						"body_l",
+ 						"bodyarm_l",
+-						"bodyleg_l"
++						"bodyleg",
++						"bodyleg_l",
++						"leg",
++						"leg_l"
+ 					],
+ 					"mirror": 1
+ 				},
+ 				{
+ 					"id": "arms",
+-					"priority": "ABOVE_ARM_LEFT",
++					"priority": "BELOW_ARM_LEFT",
+ 					"pointType": [
+ 						"bodyarm_l",
+ 						"arm_l"
+ 					],
+ 					"mirror": 1
+-				},
+-				{
+-					"id": "legs",
+-					"priority": "ABOVE_LEG_LEFT",
+-					"pointType": [
+-						"bodyleg_l",
+-						"leg_l"
+-					],
+-					"mirror": 1
+ 				}
+ 			]
+ 		},
+-		"belowBodyMirror": {
+-			"name": "Below body (mirrored)",
++		"aboveLegsMirror": {
++			"name": "Above legs (mirrored)",
+ 			"parts": [
+ 				{
+ 					"id": "body",
+-					"priority": "BELOW_BODY",
++					"priority": "ABOVE_BODY",
+ 					"pointType": [
+ 						"body",
+ 						"body_l",
+ 						"bodyarm_l",
++						"bodyleg",
+ 						"bodyleg_l"
+ 					],
+ 					"mirror": 1
+ 				},
+ 				{
+ 					"id": "arms",
+-					"priority": "BELOW_ARM_LEFT",
++					"priority": "ABOVE_ARM_LEFT",
+ 					"pointType": [
+ 						"bodyarm_l",
+ 						"arm_l"
+@@ -378,32 +460,35 @@
+ 				},
+ 				{
+ 					"id": "legs",
+-					"priority": "BELOW_LEG_LEFT",
++					"priority": "ABOVE_LEG_LEFT",
+ 					"pointType": [
++						"bodyleg",
+ 						"bodyleg_l",
++						"leg",
+ 						"leg_l"
+ 					],
+ 					"mirror": 1
+ 				}
+ 			]
+ 		},
+-		"bodyMirror": {
+-			"name": "Bodypart (mirrored)",
++		"belowLegsMirror": {
++			"name": "Below legs (mirrored)",
+ 			"parts": [
+ 				{
+ 					"id": "body",
+-					"priority": "BODY",
++					"priority": "BELOW_BODY",
+ 					"pointType": [
+ 						"body",
+ 						"body_l",
+ 						"bodyarm_l",
++						"bodyleg",
+ 						"bodyleg_l"
+ 					],
+ 					"mirror": 1
+ 				},
+ 				{
+ 					"id": "arms",
+-					"priority": "ARM_LEFT",
++					"priority": "BELOW_ARM_LEFT",
+ 					"pointType": [
+ 						"bodyarm_l",
+ 						"arm_l"
+@@ -412,9 +497,11 @@
+ 				},
+ 				{
+ 					"id": "legs",
+-					"priority": "LEG_LEFT",
++					"priority": "BELOW_LEG_LEFT",
+ 					"pointType": [
++						"bodyleg",
+ 						"bodyleg_l",
++						"leg",
+ 						"leg_l"
+ 					],
+ 					"mirror": 1
+@@ -2213,7 +2300,7 @@
+ 					"type": "const-shift",
+ 					"value": {
+ 						"x": 3,
+-						"y": -152
++						"y": -154
+ 					},
+ 					"condition": [
+ 						{
+@@ -2471,36 +2558,23 @@
+ 		},
+ 		{
+ 			"pos": [
+-				497,
++				500,
+ 				784
+ 			],
+-			"mirror": true,
+-			"pointType": "leg_r",
++			"mirror": false,
++			"pointType": "leg",
+ 			"transforms": [
+ 				{
+-					"type": "shift",
+-					"bone": "leg_width",
+-					"value": {
+-						"x": 7,
+-						"y": 0
+-					}
+-				},
+-				{
+ 					"type": "const-shift",
+ 					"value": {
+ 						"x": 0,
+-						"y": -28
++						"y": -32
+ 					},
+ 					"condition": [
+ 						{
+ 							"legs": "sitting"
+ 						}
+ 					]
+-				},
+-				{
+-					"type": "rotate",
+-					"bone": "leg_r",
+-					"value": -1
+ 				}
+ 			]
+ 		},
+@@ -2516,7 +2590,7 @@
+ 					"type": "const-shift",
+ 					"value": {
+ 						"x": 0,
+-						"y": -5
++						"y": -9
+ 					},
+ 					"condition": [
+ 						{
+@@ -2528,36 +2602,23 @@
+ 		},
+ 		{
+ 			"pos": [
+-				498,
++				500,
+ 				765
+ 			],
+-			"mirror": true,
+-			"pointType": "bodyleg_r",
++			"mirror": false,
++			"pointType": "bodyleg",
+ 			"transforms": [
+ 				{
+-					"type": "shift",
+-					"bone": "leg_width",
+-					"value": {
+-						"x": 7,
+-						"y": 0
+-					}
+-				},
+-				{
+ 					"type": "const-shift",
+ 					"value": {
+ 						"x": 0,
+-						"y": -14
++						"y": -15
+ 					},
+ 					"condition": [
+ 						{
+ 							"legs": "sitting"
+ 						}
+ 					]
+-				},
+-				{
+-					"type": "rotate",
+-					"bone": "leg_r",
+-					"value": -1
+ 				}
+ 			]
+ 		},
+@@ -2850,36 +2911,23 @@
+ 		},
+ 		{
+ 			"pos": [
+-				497,
++				500,
+ 				818
+ 			],
+-			"mirror": true,
+-			"pointType": "leg_r",
++			"mirror": false,
++			"pointType": "leg",
+ 			"transforms": [
+ 				{
+-					"type": "shift",
+-					"bone": "leg_width",
+-					"value": {
+-						"x": 7,
+-						"y": 0
+-					}
+-				},
+-				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": 2,
+-						"y": -57
++						"x": 0,
++						"y": -62
+ 					},
+ 					"condition": [
+ 						{
+ 							"legs": "sitting"
+ 						}
+ 					]
+-				},
+-				{
+-					"type": "rotate",
+-					"bone": "leg_r",
+-					"value": -1
+ 				}
+ 			]
+ 		},
+@@ -3168,7 +3216,7 @@
+ 					"type": "const-shift",
+ 					"value": {
+ 						"x": 3,
+-						"y": -112
++						"y": -117
+ 					},
+ 					"condition": [
+ 						{
+@@ -3606,7 +3654,7 @@
+ 					"type": "const-shift",
+ 					"value": {
+ 						"x": 3,
+-						"y": -88
++						"y": -90
+ 					},
+ 					"condition": [
+ 						{
+@@ -6010,16 +6058,16 @@
+ 		},
+ 		{
+ 			"pos": [
+-				499,
++				500,
+ 				1374
+ 			],
+-			"mirror": true,
+-			"pointType": "leg_r",
++			"mirror": false,
++			"pointType": "leg",
+ 			"transforms": [
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": 4,
++						"x": 0,
+ 						"y": -122
+ 					},
+ 					"condition": [
+@@ -6031,7 +6079,7 @@
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": -1,
++						"x": 0,
+ 						"y": -413
+ 					},
+ 					"condition": [
+@@ -6046,7 +6094,7 @@
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": -12,
++						"x": 0,
+ 						"y": -330
+ 					},
+ 					"condition": [
+@@ -6075,26 +6123,21 @@
+ 							"legs": "!kneeling"
+ 						}
+ 					]
+-				},
+-				{
+-					"type": "rotate",
+-					"bone": "leg_r",
+-					"value": -1
+ 				}
+ 			]
+ 		},
+ 		{
+ 			"pos": [
+-				499,
++				500,
+ 				1295
+ 			],
+-			"mirror": true,
+-			"pointType": "leg_r",
++			"mirror": false,
++			"pointType": "leg",
+ 			"transforms": [
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": 5,
++						"x": 0,
+ 						"y": -130
+ 					},
+ 					"condition": [
+@@ -6106,7 +6149,7 @@
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": -1,
++						"x": 0,
+ 						"y": -334
+ 					},
+ 					"condition": [
+@@ -6121,7 +6164,7 @@
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": -12,
++						"x": 0,
+ 						"y": -251
+ 					},
+ 					"condition": [
+@@ -6150,26 +6193,21 @@
+ 							"legs": "!kneeling"
+ 						}
+ 					]
+-				},
+-				{
+-					"type": "rotate",
+-					"bone": "leg_r",
+-					"value": -1
+ 				}
+ 			]
+ 		},
+ 		{
+ 			"pos": [
+-				499,
++				500,
+ 				1252
+ 			],
+-			"mirror": true,
+-			"pointType": "leg_r",
++			"mirror": false,
++			"pointType": "leg",
+ 			"transforms": [
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": 4,
++						"x": 0,
+ 						"y": -136
+ 					},
+ 					"condition": [
+@@ -6181,7 +6219,7 @@
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": -1,
++						"x": 0,
+ 						"y": -291
+ 					},
+ 					"condition": [
+@@ -6196,7 +6234,7 @@
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": -12,
++						"x": 0,
+ 						"y": -208
+ 					},
+ 					"condition": [
+@@ -6207,26 +6245,21 @@
+ 							"view": "back"
+ 						}
+ 					]
+-				},
+-				{
+-					"type": "rotate",
+-					"bone": "leg_r",
+-					"value": -1
+ 				}
+ 			]
+ 		},
+ 		{
+ 			"pos": [
+-				498,
++				500,
+ 				1183
+ 			],
+-			"mirror": true,
+-			"pointType": "leg_r",
++			"mirror": false,
++			"pointType": "leg",
+ 			"transforms": [
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": 4,
++						"x": 0,
+ 						"y": -143
+ 					},
+ 					"condition": [
+@@ -6253,7 +6286,7 @@
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": -6,
++						"x": 0,
+ 						"y": -161
+ 					},
+ 					"condition": [
+@@ -6264,26 +6297,21 @@
+ 							"view": "back"
+ 						}
+ 					]
+-				},
+-				{
+-					"type": "rotate",
+-					"bone": "leg_r",
+-					"value": -1
+ 				}
+ 			]
+ 		},
+ 		{
+ 			"pos": [
+-				498,
++				500,
+ 				1149
+ 			],
+-			"mirror": true,
+-			"pointType": "leg_r",
++			"mirror": false,
++			"pointType": "leg",
+ 			"transforms": [
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": 4,
++						"x": 0,
+ 						"y": -147
+ 					},
+ 					"condition": [
+@@ -6310,7 +6338,7 @@
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": -4,
++						"x": 0,
+ 						"y": -134
+ 					},
+ 					"condition": [
+@@ -6321,26 +6349,21 @@
+ 							"view": "back"
+ 						}
+ 					]
+-				},
+-				{
+-					"type": "rotate",
+-					"bone": "leg_r",
+-					"value": -1
+ 				}
+ 			]
+ 		},
+ 		{
+ 			"pos": [
+-				498,
++				500,
+ 				1107
+ 			],
+-			"mirror": true,
+-			"pointType": "leg_r",
++			"mirror": false,
++			"pointType": "leg",
+ 			"transforms": [
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": 4,
++						"x": 0,
+ 						"y": -152
+ 					},
+ 					"condition": [
+@@ -6367,7 +6390,7 @@
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": -2,
++						"x": 0,
+ 						"y": -102
+ 					},
+ 					"condition": [
+@@ -6378,26 +6401,21 @@
+ 							"view": "back"
+ 						}
+ 					]
+-				},
+-				{
+-					"type": "rotate",
+-					"bone": "leg_r",
+-					"value": -1
+ 				}
+ 			]
+ 		},
+ 		{
+ 			"pos": [
+-				498,
++				500,
+ 				1055
+ 			],
+-			"mirror": true,
+-			"pointType": "leg_r",
++			"mirror": false,
++			"pointType": "leg",
+ 			"transforms": [
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": 4,
++						"x": 0,
+ 						"y": -157
+ 					},
+ 					"condition": [
+@@ -6424,7 +6442,7 @@
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": -1,
++						"x": 0,
+ 						"y": -65
+ 					},
+ 					"condition": [
+@@ -6435,26 +6453,21 @@
+ 							"view": "back"
+ 						}
+ 					]
+-				},
+-				{
+-					"type": "rotate",
+-					"bone": "leg_r",
+-					"value": -1
+ 				}
+ 			]
+ 		},
+ 		{
+ 			"pos": [
+-				498,
++				500,
+ 				1005
+ 			],
+-			"mirror": true,
+-			"pointType": "leg_r",
++			"mirror": false,
++			"pointType": "leg",
+ 			"transforms": [
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": 3,
++						"x": 0,
+ 						"y": -162
+ 					},
+ 					"condition": [
+@@ -6481,7 +6494,7 @@
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": 2,
++						"x": 0,
+ 						"y": -28
+ 					},
+ 					"condition": [
+@@ -6492,53 +6505,43 @@
+ 							"view": "back"
+ 						}
+ 					]
+-				},
+-				{
+-					"type": "rotate",
+-					"bone": "leg_r",
+-					"value": -1
+ 				}
+ 			]
+ 		},
+ 		{
+ 			"pos": [
+-				498,
++				500,
+ 				961
+ 			],
+-			"mirror": true,
+-			"pointType": "leg_r",
++			"mirror": false,
++			"pointType": "leg",
+ 			"transforms": [
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": 3,
+-						"y": -152
++						"x": 0,
++						"y": -154
+ 					},
+ 					"condition": [
+ 						{
+ 							"legs": "sitting"
+ 						}
+ 					]
+-				},
+-				{
+-					"type": "rotate",
+-					"bone": "leg_r",
+-					"value": -1
+ 				}
+ 			]
+ 		},
+ 		{
+ 			"pos": [
+-				498,
++				500,
+ 				926
+ 			],
+-			"mirror": true,
+-			"pointType": "leg_r",
++			"mirror": false,
++			"pointType": "leg",
+ 			"transforms": [
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": 3,
++						"x": 0,
+ 						"y": -136
+ 					},
+ 					"condition": [
+@@ -6546,65 +6549,50 @@
+ 							"legs": "sitting"
+ 						}
+ 					]
+-				},
+-				{
+-					"type": "rotate",
+-					"bone": "leg_r",
+-					"value": -1
+ 				}
+ 			]
+ 		},
+ 		{
+ 			"pos": [
+-				498,
++				500,
+ 				891
+ 			],
+-			"mirror": true,
+-			"pointType": "leg_r",
++			"mirror": false,
++			"pointType": "leg",
+ 			"transforms": [
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": 3,
+-						"y": -112
++						"x": 0,
++						"y": -117
+ 					},
+ 					"condition": [
+ 						{
+ 							"legs": "sitting"
+ 						}
+ 					]
+-				},
+-				{
+-					"type": "rotate",
+-					"bone": "leg_r",
+-					"value": -1
+ 				}
+ 			]
+ 		},
+ 		{
+ 			"pos": [
+-				498,
++				500,
+ 				857
+ 			],
+-			"mirror": true,
+-			"pointType": "leg_r",
++			"mirror": false,
++			"pointType": "leg",
+ 			"transforms": [
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": 3,
+-						"y": -88
++						"x": 0,
++						"y": -90
+ 					},
+ 					"condition": [
+ 						{
+ 							"legs": "sitting"
+ 						}
+ 					]
+-				},
+-				{
+-					"type": "rotate",
+-					"bone": "leg_r",
+-					"value": -1
+ 				}
+ 			]
+ 		},
+@@ -6708,16 +6696,16 @@
+ 		},
+ 		{
+ 			"pos": [
+-				499,
++				500,
+ 				1405
+ 			],
+-			"mirror": true,
+-			"pointType": "leg_r",
++			"mirror": false,
++			"pointType": "leg",
+ 			"transforms": [
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": 4,
++						"x": 0,
+ 						"y": -119
+ 					},
+ 					"condition": [
+@@ -6729,7 +6717,7 @@
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": -1,
++						"x": 0,
+ 						"y": -444
+ 					},
+ 					"condition": [
+@@ -6744,7 +6732,7 @@
+ 				{
+ 					"type": "const-shift",
+ 					"value": {
+-						"x": -12,
++						"x": 0,
+ 						"y": -361
+ 					},
+ 					"condition": [
+@@ -6773,11 +6761,6 @@
+ 							"legs": "!kneeling"
+ 						}
+ 					]
+-				},
+-				{
+-					"type": "rotate",
+-					"bone": "leg_r",
+-					"value": -1
+ 				}
+ 			]
+ 		}
