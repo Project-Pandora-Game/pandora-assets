@@ -27,5 +27,6 @@ export const ASSET_DEST_DIR = join(DEST_DIR, 'assets');
 export const OUT_DIR = join(BASE_DIR, 'out');
 
 export const IS_PRODUCTION_BUILD = process.env.NODE_ENV === 'production' || process.argv.includes('--prod');
+export const PRETTY_OUTPUT = !IS_PRODUCTION_BUILD;
 
 export const TRY_AUTOCORRECT_WARNINGS = !IS_PRODUCTION_BUILD && process.env.TRY_AUTOCORRECT_WARNINGS === 'true';

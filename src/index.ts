@@ -10,7 +10,7 @@ import { LoadBackgroundTags, LoadBackgrounds } from './backgrounds/backgrounds.t
 import { BODYPARTS, ValidateBodyparts } from './bodyparts.ts';
 import { LoadBoneNameValidation, boneDefinition } from './bones.ts';
 import { LoadCharacterModifierTemplates } from './characterModifierTemplates.ts';
-import { ASSET_DEST_DIR, ASSET_SRC_DIR, BASE_DIR, IS_PRODUCTION_BUILD, OUT_DIR } from './config.ts';
+import { ASSET_DEST_DIR, ASSET_SRC_DIR, BASE_DIR, IS_PRODUCTION_BUILD, OUT_DIR, PRETTY_OUTPUT } from './config.ts';
 import { POSE_PRESETS } from './posePresets.ts';
 import { APPEARANCE_RANDOMIZATION_CONFIG } from './presets.ts';
 import { LoadTemplates } from './templates/index.ts';
@@ -188,10 +188,10 @@ async function Run() {
 	logger.info('Exporting result...');
 
 	const graphics: Immutable<GraphicsDefinitionFile> = GraphicsDatabase.export();
-	const graphicsFile = DefineResourceInline('graphics.json', JSON.stringify(graphics));
+	const graphicsFile = DefineResourceInline('graphics.json', JSON.stringify(graphics, undefined, PRETTY_OUTPUT ? '\t' : undefined) + (PRETTY_OUTPUT ? '\n' : ''));
 
 	const graphicsSource: Immutable<GraphicsSourceDefinitionFile> = GraphicsDatabase.exportSource();
-	const graphicsSourceFile = DefineResourceInline('graphicsSource.json', JSON.stringify(graphicsSource));
+	const graphicsSourceFile = DefineResourceInline('graphicsSource.json', JSON.stringify(graphicsSource, undefined, PRETTY_OUTPUT ? '\t' : undefined) + (PRETTY_OUTPUT ? '\n' : ''));
 
 	const definitions: AssetsDefinitionFile = {
 		assets: AssetDatabase.export(),
@@ -210,17 +210,17 @@ async function Run() {
 	// Check bodyparts are valid
 	ValidateBodyparts(definitions);
 
-	const definitionsFile = DefineResourceInline('assets.json', JSON.stringify(definitions));
+	const definitionsFile = DefineResourceInline('assets.json', JSON.stringify(definitions, undefined, PRETTY_OUTPUT ? '\t' : undefined) + (PRETTY_OUTPUT ? '\n' : ''));
 
 	// JSON schemas for nicer editing
 	const assetGraphicsWornSchema = z.toJSONSchema(AssetSourceGraphicsDefinitionSchema, { target: 'draft-7' });
-	DefineResourceInline('graphicsSource-worn.schema.json', JSON.stringify(assetGraphicsWornSchema, undefined, '\t'), 'graphicsSource-worn.schema.json');
+	DefineResourceInline('graphicsSource-worn.schema.json', JSON.stringify(assetGraphicsWornSchema, undefined, '\t') + '\n', 'graphicsSource-worn.schema.json');
 
 	const assetGraphicsRoomDeviceSchema = z.toJSONSchema(AssetSourceGraphicsRoomDeviceDefinitionSchema, { target: 'draft-7' });
-	DefineResourceInline('graphicsSource-roomDevice.schema.json', JSON.stringify(assetGraphicsRoomDeviceSchema, undefined, '\t'), 'graphicsSource-roomDevice.schema.json');
+	DefineResourceInline('graphicsSource-roomDevice.schema.json', JSON.stringify(assetGraphicsRoomDeviceSchema, undefined, '\t') + '\n', 'graphicsSource-roomDevice.schema.json');
 
 	const pointTemplateSchema = z.toJSONSchema(PointTemplateSourceSchema, { target: 'draft-7' });
-	DefineResourceInline('graphicsSource-pointTemplate.schema.json', JSON.stringify(pointTemplateSchema, undefined, '\t'), 'graphicsSource-pointTemplate.schema.json');
+	DefineResourceInline('graphicsSource-pointTemplate.schema.json', JSON.stringify(pointTemplateSchema, undefined, '\t') + '\n', 'graphicsSource-pointTemplate.schema.json');
 
 	// Do export of all resources pending so far
 	await ExportAllResources();
