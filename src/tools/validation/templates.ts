@@ -62,5 +62,20 @@ export function TemplateValidate(template: Immutable<PointTemplateSource>, logge
 				pointLogger.warning(`Point's mirror has unknown point type '${pointMirrorType}'`);
 			}
 		}
+
+		// The point transformations should make sense
+		{
+			const firstRotationTransform = point.transforms.findIndex((t) => t.type === 'rotate');
+			for (let ti = 0; ti < point.transforms.length; ti++) {
+				const transformLogger = pointLogger.prefixMessages(`Transform #${ti}:`);
+				const transform = point.transforms[ti];
+
+				if (transform.type === 'shift' || transform.type === 'const-shift') {
+					if (firstRotationTransform >= 0 && ti >= firstRotationTransform) {
+						transformLogger.warning('A shift transform after a rotation transform is not universally supported and is likely unintended.');
+					}
+				}
+			}
+		}
 	}
 }

@@ -12,6 +12,8 @@ import {
 	Logger,
 	ModuleNameSchema,
 	SCHEME_OVERRIDE,
+	type AssetDefinition,
+	type AssetId,
 	type AssetSourceGraphicsDefinition,
 	type AssetSourceGraphicsInfo,
 	type GraphicsBuildContext,
@@ -30,6 +32,7 @@ import { WatchFile } from './watch.ts';
 export async function LoadAssetGraphicsFile(
 	path: string,
 	builtAssetData: Immutable<GraphicsBuildContextAssetData>,
+	assets: Immutable<Record<AssetId, AssetDefinition>>,
 ): Promise<{ graphics: Immutable<AssetGraphicsDefinition>; graphicsSource: AssetSourceGraphicsInfo; }> {
 	const logger = GetLogger('GraphicsValidation').prefixMessages(`Graphics definition '${relative(SRC_DIR, path)}':\n\t`);
 
@@ -87,7 +90,12 @@ export async function LoadAssetGraphicsFile(
 
 	AssetGraphicsValidate(graphicsSource, logger);
 
-	const { graphics, originalImagesMap } = await LoadAssetGraphics(graphicsSource, builtAssetData, logger);
+	const buildAssetManager = new AssetManager('', {
+		assets,
+		bones: boneDefinition,
+	});
+
+	const { graphics, originalImagesMap } = await LoadAssetGraphics(graphicsSource, builtAssetData, buildAssetManager, logger);
 
 	return {
 		graphics,
@@ -102,6 +110,7 @@ export async function LoadAssetGraphicsFile(
 export async function LoadAssetGraphics(
 	source: Immutable<AssetSourceGraphicsDefinition>,
 	builtAssetData: Immutable<GraphicsBuildContextAssetData>,
+	buildAssetManager: AssetManager,
 	logger: Logger,
 ): Promise<{ graphics: Immutable<AssetGraphicsDefinition>; originalImagesMap: Record<string, string>; }> {
 	const originalImagesMap: Record<string, string> = {};
@@ -125,6 +134,7 @@ export async function LoadAssetGraphics(
 			return resource;
 		},
 		builtAssetData,
+		assetManager: buildAssetManager,
 	};
 
 	const layers = (await Promise.all(source.layers.map((l) => LoadAssetLayer(l, assetLoadContext, logger)))).flat();

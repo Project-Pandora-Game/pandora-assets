@@ -11,8 +11,10 @@ import {
 	Logger,
 	ModuleNameSchema,
 	SCHEME_OVERRIDE,
+	type AssetDefinition,
 	type AssetGraphicsRoomDeviceDefinition,
 	type AssetGraphicsWornDefinition,
+	type AssetId,
 	type AssetSourceGraphicsInfo,
 	type AssetSourceGraphicsRoomDeviceDefinition,
 	type GraphicsBuildContext,
@@ -37,6 +39,7 @@ export type RoomDeviceAssetGraphicsLoadResult = {
 export async function LoadRoomDeviceAssetGraphicsFile(
 	path: string,
 	builtAssetData: Immutable<GraphicsBuildContextRoomDeviceData>,
+	assets: Immutable<Record<AssetId, AssetDefinition>>,
 ): Promise<RoomDeviceAssetGraphicsLoadResult> {
 	const logger = GetLogger('RoomDeviceGraphics').prefixMessages(`Graphics definition '${relative(SRC_DIR, path)}':\n\t`);
 
@@ -90,12 +93,18 @@ export async function LoadRoomDeviceAssetGraphicsFile(
 
 	const graphicsSource: AssetSourceGraphicsRoomDeviceDefinition = freeze(parseResult.data, true);
 
-	return await LoadRoomDeviceAssetGraphics(graphicsSource, builtAssetData, logger);
+	const buildAssetManager = new AssetManager('', {
+		assets,
+		bones: boneDefinition,
+	});
+
+	return await LoadRoomDeviceAssetGraphics(graphicsSource, builtAssetData, buildAssetManager, logger);
 }
 
 export async function LoadRoomDeviceAssetGraphics(
 	source: Immutable<AssetSourceGraphicsRoomDeviceDefinition>,
 	builtAssetData: Immutable<GraphicsBuildContextRoomDeviceData>,
+	buildAssetManager: AssetManager,
 	logger: Logger,
 ): Promise<RoomDeviceAssetGraphicsLoadResult> {
 	const originalImagesMap: Record<string, string> = {};
@@ -119,6 +128,7 @@ export async function LoadRoomDeviceAssetGraphics(
 			return resource;
 		},
 		builtAssetData,
+		assetManager: buildAssetManager,
 	};
 
 	const layers = (await Promise.all(source.layers.map((l) => LoadAssetRoomDeviceLayer(l, assetLoadContext, logger)))).flat();
@@ -136,6 +146,7 @@ export async function LoadRoomDeviceAssetGraphics(
 				modules: builtAssetData.modules,
 				colorizationKeys: builtAssetData.colorizationKeys,
 			},
+			buildAssetManager,
 			slotLogger,
 		);
 

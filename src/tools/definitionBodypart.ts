@@ -119,6 +119,7 @@ async function GlobalDefineBodypartProcess(def: IntermediateBodypartAssetDefinit
 		const { graphics, graphicsSource } = await LoadAssetGraphicsFile(
 			join(AssetSourcePath, def.graphics),
 			builtAssetData,
+			{ [id]: asset },
 		);
 
 		GraphicsDatabase.registerAssetGraphics(id, graphics, graphicsSource);

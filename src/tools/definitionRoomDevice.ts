@@ -1,7 +1,7 @@
 import { existsSync, readFileSync, unlinkSync, writeFileSync } from 'fs';
 import { freeze, type Immutable } from 'immer';
 import { cloneDeep, omit, pick } from 'lodash-es';
-import { Assert, AssetId, AssetSourceGraphicsDefinitionSchema, GetLogger, ModuleNameSchema, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition, SCHEME_OVERRIDE, type AssetCreditsInfo, type AssetSourceGraphicsRoomDeviceDefinition, type GraphicsBuildContextRoomDeviceData } from 'pandora-common';
+import { Assert, AssetId, AssetSourceGraphicsDefinitionSchema, GetLogger, ModuleNameSchema, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition, SCHEME_OVERRIDE, type AssetCreditsInfo, type AssetDefinition, type AssetSourceGraphicsRoomDeviceDefinition, type GraphicsBuildContextRoomDeviceData } from 'pandora-common';
 import { join } from 'path';
 import { AssetDatabase } from './assetDatabase.ts';
 import { AssetSourcePath, DefaultId, GetAssetRepositoryPath } from './context.ts';
@@ -65,7 +65,7 @@ function DefineRoomDeviceWearablePart(
 	propertiesValidationMetadata: RoomDevicePropertiesValidationMetadata,
 	preview: string | null,
 	credits: AssetCreditsInfo,
-): AssetId | null {
+): Immutable<RoomDeviceWearablePartAssetDefinition<AssetRepoExtraArgs>> | null {
 	const id: AssetId = `${baseId}/${slot}` as const;
 
 	const logger = GetLogger('RoomDeviceWearablePart', `[Asset ${id}]`);
@@ -107,7 +107,7 @@ function DefineRoomDeviceWearablePart(
 
 	AssetDatabase.registerAsset(id, asset);
 
-	return id;
+	return asset;
 }
 
 export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinition): IntermediateRoomDeviceDefinition {
@@ -147,11 +147,13 @@ async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDef
 
 	//#region Load slots
 
+	const assets: Record<AssetId, Immutable<AssetDefinition>> = {};
+
 	for (const [k, v] of Object.entries(def.slots)) {
 		slotIds.add(k);
 
-		const slotWearableId = DefineRoomDeviceWearablePart(id, k, v.asset, propertiesValidationMetadata, preview, credits);
-		if (slotWearableId == null) {
+		const slotWearableAsset = DefineRoomDeviceWearablePart(id, k, v.asset, propertiesValidationMetadata, preview, credits);
+		if (slotWearableAsset == null) {
 			definitionValid = false;
 			logger.error(`Failed to process asset for slot '${k}'`);
 			continue;
@@ -159,8 +161,9 @@ async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDef
 
 		slots[k] = {
 			name: v.name,
-			wearableAsset: slotWearableId,
+			wearableAsset: slotWearableAsset.id,
 		};
+		assets[slotWearableAsset.id] = slotWearableAsset;
 	}
 
 	//#endregion
@@ -190,6 +193,7 @@ async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDef
 		slots,
 		credits,
 	};
+	assets[id] = asset;
 
 	// Validate properties
 	ValidateAssetChatMessages(logger, '#.chat', omit(def.chat, ['chatDescriptor']));
@@ -286,6 +290,7 @@ async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDef
 		const { graphics, graphicsSource, slotGraphics } = await LoadRoomDeviceAssetGraphicsFile(
 			graphicsPath,
 			builtAssetData,
+			assets,
 		);
 
 		GraphicsDatabase.registerAssetGraphics(id, graphics, graphicsSource);
