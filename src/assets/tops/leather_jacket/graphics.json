@@ -17,9 +17,7 @@
 				"bodyarm_l",
 				"bodyarm_r",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "jacket",
@@ -102,9 +100,7 @@
 				"bodyarm_l",
 				"bodyarm_r",
 				"bodyleg_l",
-				"bodyleg_r",
-				"leg_l",
-				"leg_r"
+				"bodyleg_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "jacket",
