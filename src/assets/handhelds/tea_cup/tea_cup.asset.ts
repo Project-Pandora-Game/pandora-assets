@@ -22,6 +22,56 @@ DefineAsset({
 			'!Hand_restricting_cover',
 		],
 	},
+	posePresets: [
+		{
+			name: 'Holding right hand',
+			bones: {
+				arm_r: 44,
+				elbow_r: 136,
+			},
+			rightArm: {
+				fingers: 'fist',
+				rotation: 'down',
+				position: 'front_above_hair',
+			},
+		},
+		{
+			name: 'Sipping right hand',
+			bones: {
+				arm_r: -21,
+				elbow_r: -156,
+			},
+			rightArm: {
+				fingers: 'fist',
+				rotation: 'down',
+				position: 'front_above_hair',
+			},
+		},
+		{
+			name: 'Holding left hand',
+			bones: {
+				arm_l: 44,
+				elbow_l: 136,
+			},
+			leftArm: {
+				fingers: 'fist',
+				rotation: 'down',
+				position: 'front_above_hair',
+			},
+		},
+		{
+			name: 'Sipping left hand',
+			bones: {
+				arm_l: -21,
+				elbow_l: -156,
+			},
+			leftArm: {
+				fingers: 'fist',
+				rotation: 'down',
+				position: 'front_above_hair',
+			},
+		},
+	],
 	modules: {
 		handUsage_r: {
 			type: 'typed',
@@ -60,8 +110,8 @@ DefineAsset({
 								position: 'front_above_hair',
 							},
 							bones: {
-								arm_r: -21,
-								elbow_r: -156,
+								arm_l: -21,
+								elbow_l: -156,
 							},
 						},
 					},
