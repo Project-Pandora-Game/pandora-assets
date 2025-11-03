@@ -9,7 +9,15 @@
 			"type": "mesh",
 			"name": "legs_front_top",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_tight",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -17,6 +25,12 @@
 				"overrides": [
 					{
 						"image": "legs_top.png",
+						"uvPose": {
+							"bones": {
+								"leg_r": 2,
+								"leg_l": 2
+							}
+						},
 						"condition": [
 							[
 								{
@@ -43,7 +57,15 @@
 			"type": "mesh",
 			"name": "legs_front_top_cinch",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -77,7 +99,15 @@
 			"type": "mesh",
 			"name": "legs_middle_top",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_tight",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -85,6 +115,12 @@
 				"overrides": [
 					{
 						"image": "legs_middle_top.png",
+						"uvPose": {
+							"bones": {
+								"leg_r": 2,
+								"leg_l": 2
+							}
+						},
 						"condition": [
 							[
 								{
@@ -121,7 +157,15 @@
 			"type": "mesh",
 			"name": "legs_middle_top_cinch",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -165,7 +209,15 @@
 			"type": "mesh",
 			"name": "legs_middle_bottom",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_tight",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -173,6 +225,12 @@
 				"overrides": [
 					{
 						"image": "legs_middle_bottom.png",
+						"uvPose": {
+							"bones": {
+								"leg_r": 2,
+								"leg_l": 2
+							}
+						},
 						"condition": [
 							[
 								{
@@ -204,7 +262,15 @@
 			"type": "mesh",
 			"name": "legs_middle_bottom_cinch",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -243,7 +309,15 @@
 			"type": "mesh",
 			"name": "legs_front_bottom",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_tight",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -251,6 +325,12 @@
 				"overrides": [
 					{
 						"image": "legs_bottom.png",
+						"uvPose": {
+							"bones": {
+								"leg_r": 2,
+								"leg_l": 2
+							}
+						},
 						"condition": [
 							[
 								{
@@ -272,7 +352,15 @@
 			"type": "mesh",
 			"name": "legs_front_bottom_cinch",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -301,7 +389,15 @@
 			"type": "mesh",
 			"name": "legs_back_top",
 			"priority": "BELOW_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_tight",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -309,6 +405,12 @@
 				"overrides": [
 					{
 						"image": "legs_top.png",
+						"uvPose": {
+							"bones": {
+								"leg_r": 2,
+								"leg_l": 2
+							}
+						},
 						"condition": [
 							[
 								{
@@ -335,7 +437,15 @@
 			"type": "mesh",
 			"name": "legs_back_top_cinch",
 			"priority": "BELOW_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -369,7 +479,15 @@
 			"type": "mesh",
 			"name": "legs_back_middle_top",
 			"priority": "BELOW_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_tight",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -377,6 +495,12 @@
 				"overrides": [
 					{
 						"image": "legs_middle_top.png",
+						"uvPose": {
+							"bones": {
+								"leg_r": 2,
+								"leg_l": 2
+							}
+						},
 						"condition": [
 							[
 								{
@@ -413,7 +537,15 @@
 			"type": "mesh",
 			"name": "legs_back_middle_top_cinch",
 			"priority": "BELOW_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -457,7 +589,15 @@
 			"type": "mesh",
 			"name": "legs_back_middle_bottom",
 			"priority": "BELOW_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_tight",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -465,6 +605,12 @@
 				"overrides": [
 					{
 						"image": "legs_middle_bottom.png",
+						"uvPose": {
+							"bones": {
+								"leg_r": 2,
+								"leg_l": 2
+							}
+						},
 						"condition": [
 							[
 								{
@@ -496,7 +642,15 @@
 			"type": "mesh",
 			"name": "legs_back_middle_bottom_cinch",
 			"priority": "BELOW_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -535,7 +689,15 @@
 			"type": "mesh",
 			"name": "legs_back_bottom",
 			"priority": "BELOW_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_tight",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -543,6 +705,12 @@
 				"overrides": [
 					{
 						"image": "legs_bottom.png",
+						"uvPose": {
+							"bones": {
+								"leg_r": 2,
+								"leg_l": 2
+							}
+						},
 						"condition": [
 							[
 								{
@@ -564,7 +732,15 @@
 			"type": "mesh",
 			"name": "legs_back_bottom_cinch",
 			"priority": "BELOW_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -593,7 +769,15 @@
 			"type": "mesh",
 			"name": "link_legs&thighs",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -632,7 +816,15 @@
 			"type": "mesh",
 			"name": "legs_link_base",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -671,7 +863,15 @@
 			"type": "mesh",
 			"name": "legs_link_knot_complex",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -715,7 +915,15 @@
 			"type": "mesh",
 			"name": "legs_link_knot_full",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -754,7 +962,15 @@
 			"type": "mesh",
 			"name": "thighs_front_top",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_tight",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -762,6 +978,12 @@
 				"overrides": [
 					{
 						"image": "thighs_top.png",
+						"uvPose": {
+							"bones": {
+								"leg_r": 2,
+								"leg_l": 2
+							}
+						},
 						"condition": [
 							[
 								{
@@ -788,7 +1010,15 @@
 			"type": "mesh",
 			"name": "thighs_front_top_cinch",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -822,7 +1052,15 @@
 			"type": "mesh",
 			"name": "thighs_front_middle",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_tight",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -830,6 +1068,12 @@
 				"overrides": [
 					{
 						"image": "thighs_middle.png",
+						"uvPose": {
+							"bones": {
+								"leg_r": 2,
+								"leg_l": 2
+							}
+						},
 						"condition": [
 							[
 								{
@@ -861,7 +1105,15 @@
 			"type": "mesh",
 			"name": "thighs_front_middle_cinch",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -900,7 +1152,15 @@
 			"type": "mesh",
 			"name": "thighs_front_bottom",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_tight",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -908,6 +1168,12 @@
 				"overrides": [
 					{
 						"image": "thighs_bottom.png",
+						"uvPose": {
+							"bones": {
+								"leg_r": 2,
+								"leg_l": 2
+							}
+						},
 						"condition": [
 							[
 								{
@@ -929,7 +1195,15 @@
 			"type": "mesh",
 			"name": "thighs_front_bottom_cinch",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -958,7 +1232,15 @@
 			"type": "mesh",
 			"name": "thighs_back_top",
 			"priority": "BELOW_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_tight",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -966,6 +1248,12 @@
 				"overrides": [
 					{
 						"image": "thighs_top.png",
+						"uvPose": {
+							"bones": {
+								"leg_r": 2,
+								"leg_l": 2
+							}
+						},
 						"condition": [
 							[
 								{
@@ -992,7 +1280,15 @@
 			"type": "mesh",
 			"name": "thighs_back_top_cinch",
 			"priority": "BELOW_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -1026,7 +1322,15 @@
 			"type": "mesh",
 			"name": "thighs_back_middle",
 			"priority": "BELOW_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_tight",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -1034,6 +1338,12 @@
 				"overrides": [
 					{
 						"image": "thighs_middle.png",
+						"uvPose": {
+							"bones": {
+								"leg_r": 2,
+								"leg_l": 2
+							}
+						},
 						"condition": [
 							[
 								{
@@ -1065,7 +1375,15 @@
 			"type": "mesh",
 			"name": "thighs_back_middle_cinch",
 			"priority": "BELOW_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -1104,7 +1422,15 @@
 			"type": "mesh",
 			"name": "thighs_back_bottom",
 			"priority": "BELOW_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_tight",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -1112,6 +1438,12 @@
 				"overrides": [
 					{
 						"image": "thighs_bottom.png",
+						"uvPose": {
+							"bones": {
+								"leg_r": 2,
+								"leg_l": 2
+							}
+						},
 						"condition": [
 							[
 								{
@@ -1133,7 +1465,15 @@
 			"type": "mesh",
 			"name": "thighs_back_bottom_cinch",
 			"priority": "BELOW_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -1162,7 +1502,15 @@
 			"type": "mesh",
 			"name": "thighs_link_base",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -1201,7 +1549,15 @@
 			"type": "mesh",
 			"name": "thighs_link_middle_knot",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
