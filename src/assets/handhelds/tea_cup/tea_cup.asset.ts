@@ -110,8 +110,8 @@ DefineAsset({
 								position: 'front_above_hair',
 							},
 							bones: {
-								arm_l: -21,
-								elbow_l: -156,
+								arm_r: -21,
+								elbow_r: -156,
 							},
 						},
 					},
