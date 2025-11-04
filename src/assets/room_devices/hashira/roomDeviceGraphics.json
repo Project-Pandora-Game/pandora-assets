@@ -995,7 +995,7 @@
 					"type": "mesh",
 					"name": "Legs tied to Pillar",
 					"priority": "ABOVE_BODY",
-					"points": "custom_foot_restraints_duct_tape",
+					"points": "skirt_static",
 					"mirror": 0,
 					"colorizationKey": "rope",
 					"image": {

@@ -9,7 +9,7 @@
 			"type": "mesh",
 			"name": "calves front",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
 			"mirror": 0,
 			"colorizationKey": "tape",
 			"image": {
@@ -76,7 +76,7 @@
 			"type": "mesh",
 			"name": "thighs front",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
 			"mirror": 0,
 			"colorizationKey": "tape",
 			"image": {
@@ -126,7 +126,7 @@
 			"type": "mesh",
 			"name": "legs front",
 			"priority": "ABOVE_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
 			"mirror": 0,
 			"colorizationKey": "tape",
 			"image": {
@@ -155,7 +155,7 @@
 			"type": "mesh",
 			"name": "calves back",
 			"priority": "BELOW_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
 			"mirror": 0,
 			"colorizationKey": "tape",
 			"image": {
@@ -222,7 +222,7 @@
 			"type": "mesh",
 			"name": "thighs back",
 			"priority": "BELOW_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
 			"mirror": 0,
 			"colorizationKey": "tape",
 			"image": {
@@ -258,7 +258,7 @@
 			"type": "mesh",
 			"name": "legs back",
 			"priority": "BELOW_BODY",
-			"points": "custom_foot_restraints_duct_tape",
+			"points": "skirt_static",
 			"mirror": 0,
 			"colorizationKey": "tape",
 			"image": {

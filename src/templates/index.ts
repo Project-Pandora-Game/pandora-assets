@@ -29,7 +29,6 @@ const templateList: string[] = [
 	'custom_body_nipples',
 	'custom_dresses_latex_dress_breasts',
 	'custom_dresses_nightgown',
-	'custom_foot_restraints_duct_tape',
 	'custom_tops_jeans_jacket_breasts',
 	'custom_tops_leather_jacket_breasts',
 ];
