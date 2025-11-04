@@ -47,7 +47,7 @@
 		"zod": "4.1.12"
 	},
 	"devDependencies": {
-		"@eslint/js": "9.39.0",
+		"@eslint/js": "9.39.1",
 		"@jest/globals": "30.2.0",
 		"@stylistic/eslint-plugin": "5.5.0",
 		"@types/delaunator": "5.0.3",
@@ -55,13 +55,13 @@
 		"@types/json-diff": "1.0.3",
 		"@types/lodash-es": "4.17.12",
 		"@types/node": "22.19.0",
-		"eslint": "9.39.0",
+		"eslint": "9.39.1",
 		"eslint-plugin-import": "2.32.0",
 		"jest": "30.2.0",
 		"ts-jest": "29.4.5",
 		"tsc-watch": "7.2.0",
 		"tslib": "2.8.1",
 		"typescript": "5.9.3",
-		"typescript-eslint": "8.46.2"
+		"typescript-eslint": "8.46.3"
 	}
 }
