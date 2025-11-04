@@ -25,14 +25,7 @@
 								{
 									"module": "handUsage_r",
 									"operator": "=",
-									"value": "hold"
-								}
-							],
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "sip"
+									"value": "cup"
 								}
 							]
 						]
@@ -64,14 +57,7 @@
 								{
 									"module": "handUsage_r",
 									"operator": "=",
-									"value": "hold"
-								}
-							],
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "sip"
+									"value": "cup"
 								}
 							]
 						]
