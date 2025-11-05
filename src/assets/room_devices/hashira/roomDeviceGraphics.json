@@ -996,6 +996,14 @@
 					"name": "Legs tied to Pillar",
 					"priority": "ABOVE_BODY",
 					"points": "skirt_static",
+					"pointType": [
+						"bodyleg",
+						"bodyleg_l",
+						"bodyleg_r",
+						"leg",
+						"leg_l",
+						"leg_r"
+					],
 					"mirror": 0,
 					"colorizationKey": "rope",
 					"image": {

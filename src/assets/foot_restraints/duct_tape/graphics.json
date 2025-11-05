@@ -10,6 +10,14 @@
 			"name": "calves front",
 			"priority": "ABOVE_BODY",
 			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "tape",
 			"image": {
@@ -77,6 +85,19 @@
 			"name": "thighs front",
 			"priority": "ABOVE_BODY",
 			"points": "skirt_static",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "tape",
 			"image": {
@@ -127,6 +148,19 @@
 			"name": "legs front",
 			"priority": "ABOVE_BODY",
 			"points": "skirt_static",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "tape",
 			"image": {
@@ -156,6 +190,14 @@
 			"name": "calves back",
 			"priority": "BELOW_BODY",
 			"points": "skirt_static",
+			"pointType": [
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "tape",
 			"image": {
@@ -223,6 +265,19 @@
 			"name": "thighs back",
 			"priority": "BELOW_BODY",
 			"points": "skirt_static",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "tape",
 			"image": {
@@ -259,6 +314,19 @@
 			"name": "legs back",
 			"priority": "BELOW_BODY",
 			"points": "skirt_static",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg",
+				"bodyleg_l",
+				"bodyleg_r",
+				"leg",
+				"leg_l",
+				"leg_r"
+			],
 			"mirror": 0,
 			"colorizationKey": "tape",
 			"image": {
