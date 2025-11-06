@@ -38,6 +38,12 @@ DefineAsset({
 		],
 	},
 	modules: {
+		content: {
+			type: 'storage',
+			name: 'Dress Pocket',
+			maxCount: 4,
+			maxAcceptedSize: 'small',
+		},
 		lock: {
 			type: 'lockSlot',
 			name: 'Lock',
