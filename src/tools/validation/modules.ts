@@ -81,6 +81,18 @@ export function ValidateTypedModule<TProperties, TStaticData, TPropertiesValidat
 			metadata.validateProperties(logger, `${variantCtx}.properties`, metadata.propertiesValidationMetadata, variant.properties);
 		}
 	}
+
+	// Validate migration
+	if (moduleDefinition.variantMigration != null) {
+		for (const [from, to] of Object.entries(moduleDefinition.variantMigration)) {
+			if (seenIds.has(from)) {
+				logger.warning(`Invalid module variant migration:\n\tMigration '${from}'→'${to}' is attempting to migrate from an existing variant and will never be used.`);
+			}
+			if (!seenIds.has(to)) {
+				logger.warning(`Invalid module variant migration:\n\tMigration '${from}'→'${to}' is attempting to migrate to an unknown variant.`);
+			}
+		}
+	}
 }
 
 export function ValidateLockSlotModule<TProperties, TStaticData, TPropertiesValidationMetadata>(
