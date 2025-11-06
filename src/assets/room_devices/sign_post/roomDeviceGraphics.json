@@ -2,8 +2,27 @@
 	"layers": [
 		{
 			"type": "sprite",
+			"colorizationKey": "post",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "sign_post_post.png",
+					"condition": [
+						[
+							{
+								"module": "signType",
+								"operator": "=",
+								"value": "post"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
 			"colorizationKey": "sign",
-			"image": "sign_post.png"
+			"image": "sign_post_sign.png"
 		},
 		{
 			"type": "text",

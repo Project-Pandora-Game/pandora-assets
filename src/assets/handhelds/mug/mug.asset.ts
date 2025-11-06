@@ -18,6 +18,56 @@ DefineAsset({
 			'!Hand_restricting_cover',
 		],
 	},
+	posePresets: [
+		{
+			name: 'Holding right hand',
+			bones: {
+				arm_r: 44,
+				elbow_r: 136,
+			},
+			rightArm: {
+				fingers: 'fist',
+				rotation: 'down',
+				position: 'front_above_hair',
+			},
+		},
+		{
+			name: 'Sipping right hand',
+			bones: {
+				arm_r: -21,
+				elbow_r: -156,
+			},
+			rightArm: {
+				fingers: 'fist',
+				rotation: 'down',
+				position: 'front_above_hair',
+			},
+		},
+		{
+			name: 'Holding left hand',
+			bones: {
+				arm_l: 44,
+				elbow_l: 136,
+			},
+			leftArm: {
+				fingers: 'fist',
+				rotation: 'down',
+				position: 'front_above_hair',
+			},
+		},
+		{
+			name: 'Sipping left hand',
+			bones: {
+				arm_l: -21,
+				elbow_l: -156,
+			},
+			leftArm: {
+				fingers: 'fist',
+				rotation: 'down',
+				position: 'front_above_hair',
+			},
+		},
+	],
 	modules: {
 		handUsage_r: {
 			type: 'typed',
@@ -29,36 +79,34 @@ DefineAsset({
 					default: true,
 				},
 				{
-					id: 'hold',
-					name: 'Holding',
+					id: 'mug',
+					name: 'Mug',
 					properties: {
 						poseLimits: {
-							rightArm: {
-								fingers: 'fist',
-								rotation: 'down',
-								position: 'front',
-							},
-							bones: {
-								arm_r: 44,
-								elbow_r: 136,
-							},
-						},
-					},
-				},
-				{
-					id: 'sip',
-					name: 'Sipping',
-					properties: {
-						poseLimits: {
-							rightArm: {
-								fingers: 'fist',
-								rotation: 'down',
-								position: 'front_above_hair',
-							},
-							bones: {
-								arm_r: -21,
-								elbow_r: -156,
-							},
+							options: [
+								{
+									bones: {
+										arm_r: 44,
+										elbow_r: 136,
+									},
+									rightArm: {
+										fingers: 'fist',
+										rotation: 'down',
+										position: 'front_above_hair',
+									},
+								},
+								{
+									rightArm: {
+										fingers: 'fist',
+										rotation: 'down',
+										position: 'front_above_hair',
+									},
+									bones: {
+										arm_r: -21,
+										elbow_r: -156,
+									},
+								},
+							],
 						},
 					},
 				},
@@ -74,36 +122,34 @@ DefineAsset({
 					default: true,
 				},
 				{
-					id: 'hold',
-					name: 'Holding',
+					id: 'mug',
+					name: 'Mug',
 					properties: {
 						poseLimits: {
-							leftArm: {
-								fingers: 'fist',
-								rotation: 'down',
-								position: 'front',
-							},
-							bones: {
-								arm_l: 44,
-								elbow_l: 136,
-							},
-						},
-					},
-				},
-				{
-					id: 'sip',
-					name: 'Sipping',
-					properties: {
-						poseLimits: {
-							leftArm: {
-								fingers: 'fist',
-								rotation: 'down',
-								position: 'front_above_hair',
-							},
-							bones: {
-								arm_l: -21,
-								elbow_l: -156,
-							},
+							options: [
+								{
+									leftArm: {
+										fingers: 'fist',
+										rotation: 'down',
+										position: 'front_above_hair',
+									},
+									bones: {
+										arm_l: 44,
+										elbow_l: 136,
+									},
+								},
+								{
+									leftArm: {
+										fingers: 'fist',
+										rotation: 'down',
+										position: 'front_above_hair',
+									},
+									bones: {
+										arm_l: -21,
+										elbow_l: -156,
+									},
+								},
+							],
 						},
 					},
 				},
