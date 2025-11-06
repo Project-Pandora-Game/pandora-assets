@@ -72,6 +72,10 @@ DefineAsset({
 		handUsage_r: {
 			type: 'typed',
 			name: 'Right hand',
+			variantMigration: {
+				'hold': 'mug',
+				'sip': 'mug',
+			},
 			variants: [
 				{
 					id: 'no',
@@ -115,6 +119,10 @@ DefineAsset({
 		handUsage_l: {
 			type: 'typed',
 			name: 'Left hand',
+			variantMigration: {
+				'hold': 'mug',
+				'sip': 'mug',
+			},
 			variants: [
 				{
 					id: 'no',
