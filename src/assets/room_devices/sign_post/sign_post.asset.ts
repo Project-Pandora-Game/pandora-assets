@@ -9,6 +9,7 @@ DefineRoomDeviceAsset({
 		post: {
 			name: 'Post',
 			default: '#FFC591',
+			migrateFrom: ['sign'],
 		},
 		text: {
 			name: 'Text',
