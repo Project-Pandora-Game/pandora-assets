@@ -7,10 +7,10 @@ import {
 	LIMIT_ITEM_MODULE_TEXT_LENGTH,
 	Logger,
 } from 'pandora-common';
-import { IModuleConfigLockSlot } from 'pandora-common/dist/assets/modules/lockSlot.js';
-import { IModuleConfigStorage } from 'pandora-common/dist/assets/modules/storage.js';
-import type { ModuleConfigText } from 'pandora-common/dist/assets/modules/text.js';
-import { IModuleConfigTyped } from 'pandora-common/dist/assets/modules/typed.js';
+import type { IModuleConfigLockSlot } from 'pandora-common/assets/modules/lockSlot';
+import type { IModuleConfigStorage } from 'pandora-common/assets/modules/storage';
+import type { ModuleConfigText } from 'pandora-common/assets/modules/text';
+import type { IModuleConfigTyped } from 'pandora-common/assets/modules/typed';
 
 interface ModuleValidationMetadata<TProperties, TPropertiesValidationMetadata> {
 	baseAssetDefinition: AssetBaseDefinition<AssetType, AssetRepoExtraArgs>;
