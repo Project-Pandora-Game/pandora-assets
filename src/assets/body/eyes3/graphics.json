@@ -205,6 +205,18 @@
 								}
 							]
 						]
+					},
+					{
+						"image": "cornea_cross.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
+								}
+							]
+						]
 					}
 				]
 			}
@@ -374,6 +386,18 @@
 									"module": "eyeDirection",
 									"operator": "=",
 									"value": "rolled"
+								}
+							]
+						]
+					},
+					{
+						"image": "shine_cross.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
 								}
 							]
 						]
@@ -757,6 +781,74 @@
 									"module": "eyeDirection",
 									"operator": "=",
 									"value": "rolled"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupils_cross.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "smallPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupils2_cross.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "largePupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupils3_cross.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "starPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupils4_cross.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "crossPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
 								}
 							]
 						]

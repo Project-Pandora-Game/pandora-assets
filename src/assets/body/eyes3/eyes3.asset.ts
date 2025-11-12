@@ -151,6 +151,10 @@ DefineBodypart({
 					name: 'Down',
 				},
 				{
+					id: 'cross',
+					name: 'Cross-eyed',
+				},
+				{
 					id: 'up',
 					name: 'Up',
 				},
