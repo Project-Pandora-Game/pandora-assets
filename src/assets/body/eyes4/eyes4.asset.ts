@@ -159,6 +159,10 @@ DefineBodypart({
 					name: 'Rolled',
 				},
 				{
+					id: 'cross',
+					name: 'Cross-eyed',
+				},
+				{
 					id: 'wideBig',
 					name: 'Wide (Big)',
 				},

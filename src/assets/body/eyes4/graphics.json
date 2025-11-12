@@ -123,6 +123,18 @@
 						]
 					},
 					{
+						"image": "cornea_cross.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
+								}
+							]
+						]
+					},
+					{
 						"image": "cornea_left.png",
 						"condition": [
 							[
@@ -319,6 +331,18 @@
 						]
 					},
 					{
+						"image": "shine_cross.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
+								}
+							]
+						]
+					},
+					{
 						"image": "shine_left.png",
 						"condition": [
 							[
@@ -422,6 +446,23 @@
 						]
 					},
 					{
+						"image": "pupils_cross.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "smallPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
+								}
+							]
+						]
+					},
+					{
 						"image": "pupils_left.png",
 						"condition": [
 							[
@@ -434,6 +475,23 @@
 									"module": "eyeDirection",
 									"operator": "=",
 									"value": "left"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupils2_cross.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "largePupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
 								}
 							]
 						]
@@ -456,6 +514,23 @@
 						]
 					},
 					{
+						"image": "pupils3_cross.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "starPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
+								}
+							]
+						]
+					},
+					{
 						"image": "pupils3_left.png",
 						"condition": [
 							[
@@ -468,6 +543,23 @@
 									"module": "eyeDirection",
 									"operator": "=",
 									"value": "left"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupils4_cross.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "crossPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
 								}
 							]
 						]
