@@ -18,6 +18,8 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
+	// Add name of the preview file, optimally created using the editor. For other examples look at other assets.
+	preview: undefined,
 	// Info about who owns the asset(s)
 	ownership: {
 		// Same as the author of git commits present in PR, has responsibility for this asset
