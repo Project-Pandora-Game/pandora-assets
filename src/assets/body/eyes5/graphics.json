@@ -100,6 +100,23 @@
 						]
 					},
 					{
+						"image": "eyes_normal/iris_normal_cross.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
+								}
+							]
+						]
+					},
+					{
 						"image": "eyes_normal/iris_normal_left.png",
 						"condition": [
 							[
@@ -197,6 +214,23 @@
 									"module": "eyeDirection",
 									"operator": "=",
 									"value": "straight"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_squint/iris_squint_cross.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "squint"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
 								}
 							]
 						]
@@ -334,6 +368,23 @@
 						]
 					},
 					{
+						"image": "eyes_normal/pupil_normal_cross.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
+								}
+							]
+						]
+					},
+					{
 						"image": "eyes_normal/pupil_normal_left.png",
 						"condition": [
 							[
@@ -431,6 +482,23 @@
 									"module": "eyeDirection",
 									"operator": "=",
 									"value": "straight"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_squint/pupil_squint_cross.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "squint"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
 								}
 							]
 						]
