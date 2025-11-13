@@ -112,6 +112,7 @@ DefineRoomDeviceAsset({
 								},
 								attributes: {
 									requires: ['Collar_front_ring'],
+									hides: ['Leash'],
 								},
 							},
 						},
@@ -186,6 +187,7 @@ DefineRoomDeviceAsset({
 								},
 								attributes: {
 									requires: ['Collar_front_ring'],
+									hides: ['Leash'],
 								},
 							},
 						},
