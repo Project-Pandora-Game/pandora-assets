@@ -4,6 +4,7 @@ const { constants } = require('fs');
 const { copyFile } = require('fs/promises');
 const { resolve } = require('path');
 const { spawnSync } = require('child_process');
+const { simpleGit } = require('simple-git');
 
 postinstall();
 
@@ -12,6 +13,7 @@ async function postinstall() {
 	await copyDotenv('.');
 	if (!isCI) {
 		configureGitHooks();
+		await configureGitUpstream();
 	}
 }
 
@@ -42,4 +44,27 @@ function configureGitHooks() {
 		throw error;
 
 	console.log('Git hooks path configured');
+}
+
+async function configureGitUpstream() {
+	const git = simpleGit('.', { timeout: { block: 60_000 } });
+
+	const remotes = await git.getRemotes();
+	if (remotes.some((r) => r.name.toLowerCase() === 'upstream'))
+		return;
+
+	const { error } = spawnSync('git', [
+		'remote',
+		'add',
+		'-t', 'master',
+		'-m', 'master',
+		'-f',
+		'--tags',
+		'upstream',
+		'https://github.com/Project-Pandora-Game/pandora-assets.git',
+	]);
+	if (error)
+		throw error;
+
+	console.log('Added upstream repository link');
 }
