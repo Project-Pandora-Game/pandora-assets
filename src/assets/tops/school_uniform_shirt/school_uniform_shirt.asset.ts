@@ -36,9 +36,6 @@ DefineAsset({
 			'Clothing',
 			'Clothing_upper',
 		],
-		hides: [
-			'Underwear_bra',
-		],
 	},
 	modules: {
 		sleeves: {
