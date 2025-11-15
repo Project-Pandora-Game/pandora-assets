@@ -21,6 +21,9 @@ DefineAsset({
 			'Mouth_item',
 			'Mouth_cover',
 		],
+		covers: [
+			'Mouth_item',
+		],
 	},
 	modules: {
 		lock: {

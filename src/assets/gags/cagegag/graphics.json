@@ -13,7 +13,7 @@
 			"graphicalLayers": [
 				{
 					"name": "Metal",
-					"colorizationKey": "straps"
+					"colorizationKey": "metal"
 				},
 				{
 					"name": "Leather",
