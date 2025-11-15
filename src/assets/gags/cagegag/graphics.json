@@ -6,15 +6,26 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "cageFront",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "frontAuto",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "metal",
-			"image": {
-				"image": "cagegag_cage_front.png",
-				"overrides": []
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Metal",
+					"colorizationKey": "straps"
+				},
+				{
+					"name": "Leather",
+					"colorizationKey": "straps"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"cagegag_cage_front.png",
+					"cagegag_leather_front.png"
+				]
 			}
 		},
 		{
@@ -22,47 +33,26 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "strapsFront",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "backAuto",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "straps",
-			"image": {
-				"image": "cagegag_leather_front.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "strapsBack",
-			"priority": "BELOW_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "straps",
-			"image": {
-				"image": "cagegag_leather_back.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "metalBack",
-			"priority": "BELOW_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "metal",
-			"image": {
-				"image": "cagegag_metal_back.png",
-				"overrides": []
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "Leather",
+					"colorizationKey": "straps"
+				},
+				{
+					"name": "Metal",
+					"colorizationKey": "metal"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"cagegag_leather_back.png",
+					"cagegag_metal_back.png"
+				]
 			}
 		}
 	]
