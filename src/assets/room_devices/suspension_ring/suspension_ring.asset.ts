@@ -50,10 +50,10 @@ DefineRoomDeviceAsset({
 										pose: ['standing', 'kneeling'],
 									},
 								},
-								stateFlags: {
-									provides: ['front_view'],
-								},
 							},
+						},
+						stateFlags: {
+							provides: ['front_view'],
 						},
 					},
 				},
@@ -69,10 +69,10 @@ DefineRoomDeviceAsset({
 										pose: ['standing', 'kneeling'],
 									},
 								},
-								stateFlags: {
-									provides: ['back_view'],
-								},
 							},
+						},
+						stateFlags: {
+							provides: ['back_view'],
 						},
 					},
 				},
@@ -109,12 +109,8 @@ DefineRoomDeviceAsset({
 					id: 'high',
 					name: 'High',
 					properties: {
-						slotProperties: {
-							under_ring: {
-								stateFlags: {
-									provides: ['height_high'],
-								},
-							},
+						stateFlags: {
+							provides: ['height_high'],
 						},
 					},
 				},
@@ -131,12 +127,8 @@ DefineRoomDeviceAsset({
 					name: 'None',
 					default: true,
 					properties: {
-						slotProperties: {
-							under_ring: {
-								stateFlags: {
-									provides: ['free_wrists', 'not_strappado'],
-								},
-							},
+						stateFlags: {
+							provides: ['free_wrists', 'not_strappado'],
 						},
 					},
 				},
@@ -155,15 +147,15 @@ DefineRoomDeviceAsset({
 										elbow_r: -25,
 									},
 								},
-								stateFlags: {
-									provides: ['suspension_point', 'not_strappado'],
-									requires: {
-										height_high: 'Tying wrists requires Ring in High Height',
-									},
-								},
 								effects: {
 									blockHands: true,
 								},
+							},
+						},
+						stateFlags: {
+							provides: ['suspension_point', 'not_strappado'],
+							requires: {
+								height_high: 'Tying wrists requires Ring in High Height',
 							},
 						},
 					},
@@ -187,10 +179,10 @@ DefineRoomDeviceAsset({
 								attributes: {
 									requires: ['Rope_strappado_anchor_point'],
 								},
-								stateFlags: {
-									provides: ['suspension_point', 'free_wrists'],
-								},
 							},
+						},
+						stateFlags: {
+							provides: ['suspension_point', 'free_wrists'],
 						},
 					},
 				},
@@ -224,10 +216,10 @@ DefineRoomDeviceAsset({
 										pose: ['standing', 'kneeling'],
 									},
 								},
-								stateFlags: {
-									provides: ['suspension_chest', 'suspension_point'],
-								},
 							},
+						},
+						stateFlags: {
+							provides: ['suspension_chest', 'suspension_point'],
 						},
 					},
 				},
@@ -248,14 +240,14 @@ DefineRoomDeviceAsset({
 										pose: ['standing', 'kneeling'],
 									},
 								},
-								stateFlags: {
-									provides: ['suspension_chest', 'suspension_high'],
-									requires: {
-										free_wrists: 'Suspension requires Wrists not tied to ring',
-										height_high: 'Suspension requires Ring in High position',
-										not_strappado: 'This pose cannot be applied while using strappado',
-									},
-								},
+							},
+						},
+						stateFlags: {
+							provides: ['suspension_chest', 'suspension_high'],
+							requires: {
+								free_wrists: 'Suspension requires Wrists not tied to ring',
+								height_high: 'Suspension requires Ring in High position',
+								not_strappado: 'This pose cannot be applied while using strappado',
 							},
 						},
 					},
@@ -289,15 +281,15 @@ DefineRoomDeviceAsset({
 										leg_l: -83,
 									},
 								},
-								stateFlags: {
-									requires: {
-										suspension_chest: 'Thigh cannot be tied without Chest Line Attached',
-										front_view: 'Tying Left Thigh from this side require Front-facing view',
-										not_strappado: 'This pose cannot be applied while using strappado',
-									},
-									provides: ['dangling_right_leg'],
-								},
 							},
+						},
+						stateFlags: {
+							requires: {
+								suspension_chest: 'Thigh cannot be tied without Chest Line Attached',
+								front_view: 'Tying Left Thigh from this side require Front-facing view',
+								not_strappado: 'This pose cannot be applied while using strappado',
+							},
+							provides: ['dangling_right_leg'],
 						},
 					},
 				},
@@ -318,15 +310,15 @@ DefineRoomDeviceAsset({
 										leg_r: -83,
 									},
 								},
-								stateFlags: {
-									requires: {
-										suspension_chest: 'Thigh cannot be tied without Chest Line Attached',
-										front_view: 'Tying Right Thigh from this side require Front-facing view',
-										not_strappado: 'This pose cannot be applied while using strappado',
-									},
-									provides: ['dangling_left_leg'],
-								},
 							},
+						},
+						stateFlags: {
+							requires: {
+								suspension_chest: 'Thigh cannot be tied without Chest Line Attached',
+								front_view: 'Tying Right Thigh from this side require Front-facing view',
+								not_strappado: 'This pose cannot be applied while using strappado',
+							},
+							provides: ['dangling_left_leg'],
 						},
 					},
 				},
@@ -347,15 +339,15 @@ DefineRoomDeviceAsset({
 										leg_l: -83,
 									},
 								},
-								stateFlags: {
-									requires: {
-										suspension_chest: 'Thigh cannot be tied without Chest Line Attached',
-										back_view: 'Tying Left Thigh from this side require Front-facing view',
-										not_strappado: 'This pose cannot be applied while using strappado',
-									},
-									provides: ['dangling_right_leg'],
-								},
 							},
+						},
+						stateFlags: {
+							requires: {
+								suspension_chest: 'Thigh cannot be tied without Chest Line Attached',
+								back_view: 'Tying Left Thigh from this side require Front-facing view',
+								not_strappado: 'This pose cannot be applied while using strappado',
+							},
+							provides: ['dangling_right_leg'],
 						},
 					},
 				},
@@ -376,15 +368,15 @@ DefineRoomDeviceAsset({
 										leg_r: -83,
 									},
 								},
-								stateFlags: {
-									requires: {
-										suspension_chest: 'Thigh cannot be tied without Chest Line Attached',
-										back_view: 'Tying Right Thigh from this side require Front-facing view',
-										not_strappado: 'This pose cannot be applied while using strappado',
-									},
-									provides: ['dangling_left_leg'],
-								},
 							},
+						},
+						stateFlags: {
+							requires: {
+								suspension_chest: 'Thigh cannot be tied without Chest Line Attached',
+								back_view: 'Tying Right Thigh from this side require Front-facing view',
+								not_strappado: 'This pose cannot be applied while using strappado',
+							},
+							provides: ['dangling_left_leg'],
 						},
 					},
 				},
@@ -417,13 +409,13 @@ DefineRoomDeviceAsset({
 										pose: 'kneeling',
 									},
 								},
-								stateFlags: {
-									requires: {
-										suspension_point: 'Ankles cannot be tied without Wrists over head or Chest Line Attached',
-										height_high: 'Tying ankles requires Ring in High Height',
-										not_strappado: 'This pose cannot be applied while using strappado',
-									},
-								},
+							},
+						},
+						stateFlags: {
+							requires: {
+								suspension_point: 'Ankles cannot be tied without Wrists over head or Chest Line Attached',
+								height_high: 'Tying ankles requires Ring in High Height',
+								not_strappado: 'This pose cannot be applied while using strappado',
 							},
 						},
 					},
@@ -444,13 +436,13 @@ DefineRoomDeviceAsset({
 										pose: 'standing',
 									},
 								},
-								stateFlags: {
-									requires: {
-										free_wrists: 'Upside Down tie requires untied Wrists',
-										suspension_point: 'Ankles cannot be tied without Chest line Attached',
-										height_high: 'Upside Down tie requires Ring in High Height',
-									},
-								},
+							},
+						},
+						stateFlags: {
+							requires: {
+								free_wrists: 'Upside Down tie requires untied Wrists',
+								suspension_point: 'Ankles cannot be tied without Chest line Attached',
+								height_high: 'Upside Down tie requires Ring in High Height',
 							},
 						},
 					},
@@ -482,11 +474,11 @@ DefineRoomDeviceAsset({
 										pose: 'standing',
 									},
 								},
-								stateFlags: {
-									requires: {
-										dangling_left_leg: 'Stone cannot be added without Right Thigh Tied',
-									},
-								},
+							},
+						},
+						stateFlags: {
+							requires: {
+								dangling_left_leg: 'Stone cannot be added without Right Thigh Tied',
 							},
 						},
 					},
@@ -505,11 +497,11 @@ DefineRoomDeviceAsset({
 										pose: 'standing',
 									},
 								},
-								stateFlags: {
-									requires: {
-										dangling_right_leg: 'Stone cannot be added without Left Thigh Tied',
-									},
-								},
+							},
+						},
+						stateFlags: {
+							requires: {
+								dangling_right_leg: 'Stone cannot be added without Left Thigh Tied',
 							},
 						},
 					},
@@ -530,11 +522,11 @@ DefineRoomDeviceAsset({
 										pose: 'standing',
 									},
 								},
-								stateFlags: {
-									requires: {
-										suspension_high: 'Rock tied to both ankles requires Chest line being Suspended High',
-									},
-								},
+							},
+						},
+						stateFlags: {
+							requires: {
+								suspension_high: 'Rock tied to both ankles requires Chest line being Suspended High',
 							},
 						},
 					},
@@ -553,16 +545,16 @@ DefineRoomDeviceAsset({
 										pose: 'kneeling',
 									},
 								},
-								stateFlags: {
-									requires: {
-										dangling_left_leg: 'Stone cannot be added without Right Thigh Tied',
-									},
-								},
 								attributes: {
 									requires: [
 										'Frogtie',
 									],
 								},
+							},
+						},
+						stateFlags: {
+							requires: {
+								dangling_left_leg: 'Stone cannot be added without Right Thigh Tied',
 							},
 						},
 					},
@@ -581,16 +573,16 @@ DefineRoomDeviceAsset({
 										pose: 'kneeling',
 									},
 								},
-								stateFlags: {
-									requires: {
-										dangling_right_leg: 'Stone cannot be added without Left Thigh Tied',
-									},
-								},
 								attributes: {
 									requires: [
 										'Frogtie',
 									],
 								},
+							},
+						},
+						stateFlags: {
+							requires: {
+								dangling_right_leg: 'Stone cannot be added without Left Thigh Tied',
 							},
 						},
 					},

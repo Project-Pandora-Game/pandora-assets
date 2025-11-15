@@ -259,10 +259,10 @@ DefineRoomDeviceAsset({
 										'Ankle_cuffs',
 									],
 								},
-								stateFlags: {
-									provides: ['ankles_tied'],
-								},
 							},
+						},
+						stateFlags: {
+							provides: ['ankles_tied'],
 						},
 					},
 				},
@@ -300,11 +300,11 @@ DefineRoomDeviceAsset({
 										character_rotation: 180,
 									},
 								},
-								stateFlags: {
-									requires: {
-										ankles_tied: 'Upside Down position requires both ankles tied to frame',
-									},
-								},
+							},
+						},
+						stateFlags: {
+							requires: {
+								ankles_tied: 'Upside Down position requires both ankles tied to frame',
 							},
 						},
 					},

@@ -94,12 +94,8 @@ DefineRoomDeviceAsset({
 					id: 'extended',
 					name: 'Extended',
 					properties: {
-						slotProperties: {
-							under_winch: {
-								stateFlags: {
-									provides: ['cable_extended'],
-								},
-							},
+						stateFlags: {
+							provides: ['cable_extended'],
 						},
 					},
 				},
@@ -119,12 +115,8 @@ DefineRoomDeviceAsset({
 					id: 'carabiner',
 					name: 'Carabiner',
 					properties: {
-						slotProperties: {
-							under_winch: {
-								stateFlags: {
-									provides: ['carabiner'],
-								},
-							},
+						stateFlags: {
+							provides: ['carabiner'],
 						},
 					},
 				},
@@ -132,12 +124,8 @@ DefineRoomDeviceAsset({
 					id: 'spreader_bar',
 					name: 'Spreader Bar',
 					properties: {
-						slotProperties: {
-							under_winch: {
-								stateFlags: {
-									provides: ['spread_bar'],
-								},
-							},
+						stateFlags: {
+							provides: ['spread_bar'],
 						},
 					},
 				},
@@ -173,14 +161,14 @@ DefineRoomDeviceAsset({
 										'Wrist_cuffs',
 									],
 								},
-								stateFlags: {
-									requires: {
-										carabiner: 'Wrists cannot be chained without the Carabiner attached to the Pulley',
-									},
-								},
 								effects: {
 									blockHands: true,
 								},
+							},
+						},
+						stateFlags: {
+							requires: {
+								carabiner: 'Wrists cannot be chained without the Carabiner attached to the Pulley',
 							},
 						},
 					},
@@ -206,11 +194,11 @@ DefineRoomDeviceAsset({
 										'Ankle_cuffs',
 									],
 								},
-								stateFlags: {
-									requires: {
-										carabiner: 'Ankles cannot be chained without the Carabiner attached to the Pulley',
-									},
-								},
+							},
+						},
+						stateFlags: {
+							requires: {
+								carabiner: 'Ankles cannot be chained without the Carabiner attached to the Pulley',
 							},
 						},
 					},
@@ -236,12 +224,12 @@ DefineRoomDeviceAsset({
 										'Armbinder_chainable',
 									],
 								},
-								stateFlags: {
-									requires: {
-										cable_extended: 'Strappado requires extended cable',
-										carabiner: 'Strappado cannot be applied without an armbinder and the Carabiner attached to the Pulley',
-									},
-								},
+							},
+						},
+						stateFlags: {
+							requires: {
+								cable_extended: 'Strappado requires extended cable',
+								carabiner: 'Strappado cannot be applied without an armbinder and the Carabiner attached to the Pulley',
 							},
 						},
 					},
@@ -278,14 +266,14 @@ DefineRoomDeviceAsset({
 										'Wrist_cuffs',
 									],
 								},
-								stateFlags: {
-									requires: {
-										spread_bar: 'Wrists cannot be cuffed without the Spreader Bar attached to the Pulley',
-									},
-								},
 								effects: {
 									blockHands: true,
 								},
+							},
+						},
+						stateFlags: {
+							requires: {
+								spread_bar: 'Wrists cannot be cuffed without the Spreader Bar attached to the Pulley',
 							},
 						},
 					},
@@ -311,11 +299,11 @@ DefineRoomDeviceAsset({
 										'Ankle_cuffs',
 									],
 								},
-								stateFlags: {
-									requires: {
-										spread_bar: 'Ankles cannot be cuffed without the Spreader Bar attached to the Pulley',
-									},
-								},
+							},
+						},
+						stateFlags: {
+							requires: {
+								spread_bar: 'Ankles cannot be cuffed without the Spreader Bar attached to the Pulley',
 							},
 						},
 					},
