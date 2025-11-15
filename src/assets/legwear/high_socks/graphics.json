@@ -7,12 +7,12 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "Front",
+			"name": "front",
 			"points": "body",
 			"automeshTemplate": "aboveBody",
 			"disabledTemplateParts": [
-				"arms",
-				"body"
+				"body",
+				"arms"
 			],
 			"graphicalLayers": [
 				{
@@ -22,6 +22,10 @@
 			],
 			"variables": [
 				{
+					"type": "typedModule",
+					"module": "worn_l"
+				},
+				{
 					"type": "view"
 				},
 				{
@@ -30,16 +34,28 @@
 				}
 			],
 			"imageMap": {
-				"front:standard": [
+				"yes:front:standard": [
 					"highleg_socks.png"
 				],
-				"front:footless": [
+				"yes:front:footless": [
 					"highleg_socks_footless.png"
 				],
-				"back:standard": [
+				"yes:back:standard": [
 					""
 				],
-				"back:footless": [
+				"yes:back:footless": [
+					""
+				],
+				"no:front:standard": [
+					""
+				],
+				"no:front:footless": [
+					""
+				],
+				"no:back:standard": [
+					""
+				],
+				"no:back:footless": [
 					""
 				]
 			}
@@ -50,12 +66,12 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "Back",
+			"name": "back",
 			"points": "body",
 			"automeshTemplate": "belowBody",
 			"disabledTemplateParts": [
-				"arms",
-				"body"
+				"body",
+				"arms"
 			],
 			"graphicalLayers": [
 				{
@@ -65,7 +81,8 @@
 			],
 			"variables": [
 				{
-					"type": "view"
+					"type": "typedModule",
+					"module": "worn_l"
 				},
 				{
 					"type": "typedModule",
@@ -73,17 +90,17 @@
 				}
 			],
 			"imageMap": {
-				"front:standard": [
-					""
-				],
-				"front:footless": [
-					""
-				],
-				"back:standard": [
+				"yes:standard": [
 					"highleg_socks_back.png"
 				],
-				"back:footless": [
+				"yes:footless": [
 					"highleg_socks_back_footless.png"
+				],
+				"no:standard": [
+					""
+				],
+				"no:footless": [
+					""
 				]
 			}
 		},
@@ -92,36 +109,104 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "soles",
-			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"pointType": [
-				"body_l"
+			"automeshTemplate": "belowSoles",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "socks"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "socks",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "socks_soles.png",
-						"condition": [
-							[
-								{
-									"legs": "kneeling"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"module": "feet",
-									"operator": "=",
-									"value": "standard"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "worn_l"
+				},
+				{
+					"type": "legsState"
+				},
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "feet"
+				}
+			],
+			"imageMap": {
+				"yes:standing:front:standard": [
+					""
+				],
+				"yes:standing:front:footless": [
+					""
+				],
+				"yes:standing:back:standard": [
+					""
+				],
+				"yes:standing:back:footless": [
+					""
+				],
+				"yes:sitting:front:standard": [
+					""
+				],
+				"yes:sitting:front:footless": [
+					""
+				],
+				"yes:sitting:back:standard": [
+					""
+				],
+				"yes:sitting:back:footless": [
+					""
+				],
+				"yes:kneeling:front:standard": [
+					""
+				],
+				"yes:kneeling:front:footless": [
+					""
+				],
+				"yes:kneeling:back:standard": [
+					"socks_soles.png"
+				],
+				"yes:kneeling:back:footless": [
+					""
+				],
+				"no:standing:front:standard": [
+					""
+				],
+				"no:standing:front:footless": [
+					""
+				],
+				"no:standing:back:standard": [
+					""
+				],
+				"no:standing:back:footless": [
+					""
+				],
+				"no:sitting:front:standard": [
+					""
+				],
+				"no:sitting:front:footless": [
+					""
+				],
+				"no:sitting:back:standard": [
+					""
+				],
+				"no:sitting:back:footless": [
+					""
+				],
+				"no:kneeling:front:standard": [
+					""
+				],
+				"no:kneeling:front:footless": [
+					""
+				],
+				"no:kneeling:back:standard": [
+					""
+				],
+				"no:kneeling:back:footless": [
+					""
 				]
 			}
 		}

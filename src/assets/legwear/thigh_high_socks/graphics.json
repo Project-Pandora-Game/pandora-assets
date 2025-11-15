@@ -22,6 +22,10 @@
 			],
 			"variables": [
 				{
+					"type": "typedModule",
+					"module": "worn_l"
+				},
+				{
 					"type": "view"
 				},
 				{
@@ -30,16 +34,28 @@
 				}
 			],
 			"imageMap": {
-				"front:standard": [
+				"yes:front:standard": [
 					"socks.png"
 				],
-				"front:footless": [
+				"yes:front:footless": [
 					"socks_footless.png"
 				],
-				"back:standard": [
+				"no:front:standard": [
 					""
 				],
-				"back:footless": [
+				"no:front:footless": [
+					""
+				],
+				"yes:back:standard": [
+					""
+				],
+				"yes:back:footless": [
+					""
+				],
+				"no:back:standard": [
+					""
+				],
+				"no:back:footless": [
 					""
 				]
 			}
@@ -73,6 +89,10 @@
 			],
 			"variables": [
 				{
+					"type": "typedModule",
+					"module": "worn_l"
+				},
+				{
 					"type": "view"
 				},
 				{
@@ -81,42 +101,82 @@
 				}
 			],
 			"imageMap": {
-				"front:three": [
+				"yes:front:three": [
 					"stripe1.png",
 					"stripe2.png",
 					"stripe3.png"
 				],
-				"front:two": [
+				"yes:front:two": [
 					"stripe1.png",
 					"stripe2.png",
 					""
 				],
-				"front:one": [
+				"yes:front:one": [
 					"stripe1.png",
 					"",
 					""
 				],
-				"front:none": [
+				"yes:front:none": [
 					"",
 					"",
 					""
 				],
-				"back:three": [
+				"no:front:three": [
 					"",
 					"",
 					""
 				],
-				"back:two": [
+				"no:front:two": [
 					"",
 					"",
 					""
 				],
-				"back:one": [
+				"no:front:one": [
 					"",
 					"",
 					""
 				],
-				"back:none": [
+				"no:front:none": [
+					"",
+					"",
+					""
+				],
+				"yes:back:three": [
+					"",
+					"",
+					""
+				],
+				"yes:back:two": [
+					"",
+					"",
+					""
+				],
+				"yes:back:one": [
+					"",
+					"",
+					""
+				],
+				"yes:back:none": [
+					"",
+					"",
+					""
+				],
+				"no:back:three": [
+					"",
+					"",
+					""
+				],
+				"no:back:two": [
+					"",
+					"",
+					""
+				],
+				"no:back:one": [
+					"",
+					"",
+					""
+				],
+				"no:back:none": [
 					"",
 					"",
 					""
@@ -144,6 +204,10 @@
 			],
 			"variables": [
 				{
+					"type": "typedModule",
+					"module": "worn_l"
+				},
+				{
 					"type": "view"
 				},
 				{
@@ -152,17 +216,29 @@
 				}
 			],
 			"imageMap": {
-				"front:standard": [
+				"yes:front:standard": [
 					""
 				],
-				"front:footless": [
+				"yes:front:footless": [
 					""
 				],
-				"back:standard": [
+				"no:front:standard": [
+					""
+				],
+				"no:front:footless": [
+					""
+				],
+				"yes:back:standard": [
 					"socks_back.png"
 				],
-				"back:footless": [
+				"yes:back:footless": [
 					"socks_back_footless.png"
+				],
+				"no:back:standard": [
+					""
+				],
+				"no:back:footless": [
+					""
 				]
 			}
 		},
@@ -195,6 +271,10 @@
 			],
 			"variables": [
 				{
+					"type": "typedModule",
+					"module": "worn_l"
+				},
+				{
 					"type": "view"
 				},
 				{
@@ -203,42 +283,82 @@
 				}
 			],
 			"imageMap": {
-				"front:three": [
+				"yes:front:three": [
 					"",
 					"",
 					""
 				],
-				"front:two": [
+				"yes:front:two": [
 					"",
 					"",
 					""
 				],
-				"front:one": [
+				"yes:front:one": [
 					"",
 					"",
 					""
 				],
-				"front:none": [
+				"yes:front:none": [
 					"",
 					"",
 					""
 				],
-				"back:three": [
+				"no:front:three": [
+					"",
+					"",
+					""
+				],
+				"no:front:two": [
+					"",
+					"",
+					""
+				],
+				"no:front:one": [
+					"",
+					"",
+					""
+				],
+				"no:front:none": [
+					"",
+					"",
+					""
+				],
+				"yes:back:three": [
 					"stripe1.png",
 					"stripe2.png",
 					"stripe3.png"
 				],
-				"back:two": [
+				"yes:back:two": [
 					"stripe1.png",
 					"stripe2.png",
 					""
 				],
-				"back:one": [
+				"yes:back:one": [
 					"stripe1.png",
 					"",
 					""
 				],
-				"back:none": [
+				"yes:back:none": [
+					"",
+					"",
+					""
+				],
+				"no:back:three": [
+					"",
+					"",
+					""
+				],
+				"no:back:two": [
+					"",
+					"",
+					""
+				],
+				"no:back:one": [
+					"",
+					"",
+					""
+				],
+				"no:back:none": [
 					"",
 					"",
 					""
@@ -250,36 +370,104 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "soles",
-			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"pointType": [
-				"body_l"
+			"automeshTemplate": "belowSoles",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "socks"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "socks",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "socks_soles.png",
-						"condition": [
-							[
-								{
-									"legs": "kneeling"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"module": "feet",
-									"operator": "=",
-									"value": "standard"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "worn_l"
+				},
+				{
+					"type": "typedModule",
+					"module": "feet"
+				},
+				{
+					"type": "legsState"
+				},
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"yes:standard:standing:front": [
+					""
+				],
+				"yes:standard:standing:back": [
+					""
+				],
+				"yes:standard:sitting:front": [
+					""
+				],
+				"yes:standard:sitting:back": [
+					""
+				],
+				"yes:standard:kneeling:front": [
+					""
+				],
+				"yes:standard:kneeling:back": [
+					"socks_soles.png"
+				],
+				"yes:footless:standing:front": [
+					""
+				],
+				"yes:footless:standing:back": [
+					""
+				],
+				"yes:footless:sitting:front": [
+					""
+				],
+				"yes:footless:sitting:back": [
+					""
+				],
+				"yes:footless:kneeling:front": [
+					""
+				],
+				"yes:footless:kneeling:back": [
+					""
+				],
+				"no:standard:standing:front": [
+					""
+				],
+				"no:standard:standing:back": [
+					""
+				],
+				"no:standard:sitting:front": [
+					""
+				],
+				"no:standard:sitting:back": [
+					""
+				],
+				"no:standard:kneeling:front": [
+					""
+				],
+				"no:standard:kneeling:back": [
+					""
+				],
+				"no:footless:standing:front": [
+					""
+				],
+				"no:footless:standing:back": [
+					""
+				],
+				"no:footless:sitting:front": [
+					""
+				],
+				"no:footless:sitting:back": [
+					""
+				],
+				"no:footless:kneeling:front": [
+					""
+				],
+				"no:footless:kneeling:back": [
+					""
 				]
 			}
 		}

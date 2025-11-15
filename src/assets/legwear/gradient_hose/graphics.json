@@ -136,31 +136,42 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "soles",
-			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"pointType": [
-				"body_l"
+			"automeshTemplate": "belowSoles",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "pantyhose_2"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "pantyhose_2",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "pantyhose_soles.png",
-						"condition": [
-							[
-								{
-									"legs": "kneeling"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "legsState"
+				},
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"standing:front": [
+					""
+				],
+				"standing:back": [
+					""
+				],
+				"sitting:front": [
+					""
+				],
+				"sitting:back": [
+					""
+				],
+				"kneeling:front": [
+					""
+				],
+				"kneeling:back": [
+					"pantyhose_soles.png"
 				]
 			}
 		}

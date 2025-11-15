@@ -21,6 +21,38 @@ DefineAsset({
 			'Legwear',
 		],
 	},
+	modules: {
+		worn_l: {
+			type: 'typed',
+			name: 'Worn on left leg',
+			variants: [
+				{
+					id: 'yes',
+					name: 'Yes',
+					default: true,
+				},
+				{
+					id: 'no',
+					name: 'No',
+				},
+			],
+		},
+		worn_r: {
+			type: 'typed',
+			name: 'Worn on right leg',
+			variants: [
+				{
+					id: 'yes',
+					name: 'Yes',
+					default: true,
+				},
+				{
+					id: 'no',
+					name: 'No',
+				},
+			],
+		},
+	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
 		credits: ['Taja'],

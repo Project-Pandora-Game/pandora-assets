@@ -26,6 +26,10 @@
 			],
 			"variables": [
 				{
+					"type": "typedModule",
+					"module": "worn_l"
+				},
+				{
 					"type": "view"
 				},
 				{
@@ -34,27 +38,51 @@
 				}
 			],
 			"imageMap": {
-				"front:normal": [
+				"yes:front:normal": [
 					"stocking_f.png",
 					""
 				],
-				"front:seam": [
+				"yes:front:seam": [
 					"stocking_f.png",
 					""
 				],
-				"front:stripes": [
+				"yes:front:stripes": [
 					"stocking_f.png",
 					"stocking_f_stripes.png"
 				],
-				"back:normal": [
+				"no:front:normal": [
 					"",
 					""
 				],
-				"back:seam": [
+				"no:front:seam": [
 					"",
 					""
 				],
-				"back:stripes": [
+				"no:front:stripes": [
+					"",
+					""
+				],
+				"yes:back:normal": [
+					"",
+					""
+				],
+				"yes:back:seam": [
+					"",
+					""
+				],
+				"yes:back:stripes": [
+					"",
+					""
+				],
+				"no:back:normal": [
+					"",
+					""
+				],
+				"no:back:seam": [
+					"",
+					""
+				],
+				"no:back:stripes": [
 					"",
 					""
 				]
@@ -85,6 +113,10 @@
 			],
 			"variables": [
 				{
+					"type": "typedModule",
+					"module": "worn_l"
+				},
+				{
 					"type": "view"
 				},
 				{
@@ -93,29 +125,53 @@
 				}
 			],
 			"imageMap": {
-				"front:normal": [
+				"yes:front:normal": [
 					"",
 					""
 				],
-				"front:seam": [
+				"yes:front:seam": [
 					"",
 					""
 				],
-				"front:stripes": [
+				"yes:front:stripes": [
 					"",
 					""
 				],
-				"back:normal": [
+				"no:front:normal": [
+					"",
+					""
+				],
+				"no:front:seam": [
+					"",
+					""
+				],
+				"no:front:stripes": [
+					"",
+					""
+				],
+				"yes:back:normal": [
 					"stocking_b.png",
 					""
 				],
-				"back:seam": [
+				"yes:back:seam": [
 					"stocking_b.png",
 					"stocking_b_seam.png"
 				],
-				"back:stripes": [
+				"yes:back:stripes": [
 					"stocking_b.png",
 					"stocking_b_stripes.png"
+				],
+				"no:back:normal": [
+					"",
+					""
+				],
+				"no:back:seam": [
+					"",
+					""
+				],
+				"no:back:stripes": [
+					"",
+					""
 				]
 			}
 		},
@@ -124,31 +180,64 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "soles",
-			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"pointType": [
-				"body_l"
+			"automeshTemplate": "belowSoles",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "stocking"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "stocking",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "stocking_soles.png",
-						"condition": [
-							[
-								{
-									"legs": "kneeling"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "worn_l"
+				},
+				{
+					"type": "legsState"
+				},
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"yes:standing:front": [
+					""
+				],
+				"yes:standing:back": [
+					""
+				],
+				"yes:sitting:front": [
+					""
+				],
+				"yes:sitting:back": [
+					""
+				],
+				"yes:kneeling:front": [
+					""
+				],
+				"yes:kneeling:back": [
+					"stocking_soles.png"
+				],
+				"no:standing:front": [
+					""
+				],
+				"no:standing:back": [
+					""
+				],
+				"no:sitting:front": [
+					""
+				],
+				"no:sitting:back": [
+					""
+				],
+				"no:kneeling:front": [
+					""
+				],
+				"no:kneeling:back": [
+					""
 				]
 			}
 		}

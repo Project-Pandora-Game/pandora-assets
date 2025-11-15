@@ -30,6 +30,36 @@ DefineAsset({
 		],
 	},
 	modules: {
+		worn_l: {
+			type: 'typed',
+			name: 'Worn on left leg',
+			variants: [
+				{
+					id: 'yes',
+					name: 'Yes',
+					default: true,
+				},
+				{
+					id: 'no',
+					name: 'No',
+				},
+			],
+		},
+		worn_r: {
+			type: 'typed',
+			name: 'Worn on right leg',
+			variants: [
+				{
+					id: 'yes',
+					name: 'Yes',
+					default: true,
+				},
+				{
+					id: 'no',
+					name: 'No',
+				},
+			],
+		},
 		stripes: {
 			type: 'typed',
 			name: 'Sock Stripes',

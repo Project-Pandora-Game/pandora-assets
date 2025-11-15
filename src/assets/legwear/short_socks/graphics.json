@@ -7,12 +7,12 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "Front",
+			"name": "front",
 			"points": "body",
 			"automeshTemplate": "aboveBody",
 			"disabledTemplateParts": [
-				"arms",
-				"body"
+				"body",
+				"arms"
 			],
 			"graphicalLayers": [
 				{
@@ -22,14 +22,24 @@
 			],
 			"variables": [
 				{
+					"type": "typedModule",
+					"module": "worn_l"
+				},
+				{
 					"type": "view"
 				}
 			],
 			"imageMap": {
-				"front": [
+				"yes:front": [
 					"short_socks.png"
 				],
-				"back": [
+				"no:front": [
+					""
+				],
+				"yes:back": [
+					""
+				],
+				"no:back": [
 					""
 				]
 			}
@@ -40,12 +50,12 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "Back",
+			"name": "back",
 			"points": "body",
 			"automeshTemplate": "belowBody",
 			"disabledTemplateParts": [
-				"arms",
-				"body"
+				"body",
+				"arms"
 			],
 			"graphicalLayers": [
 				{
@@ -55,15 +65,16 @@
 			],
 			"variables": [
 				{
-					"type": "view"
+					"type": "typedModule",
+					"module": "worn_l"
 				}
 			],
 			"imageMap": {
-				"front": [
-					""
-				],
-				"back": [
+				"yes": [
 					"short_socks_back.png"
+				],
+				"no": [
+					""
 				]
 			}
 		},
@@ -72,31 +83,64 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "soles",
-			"priority": "BELOW_SOLE_LEFT",
 			"points": "body_soles_back",
-			"pointType": [
-				"body_l"
+			"automeshTemplate": "belowSoles",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "socks"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "socks",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "socks_soles.png",
-						"condition": [
-							[
-								{
-									"legs": "kneeling"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "worn_l"
+				},
+				{
+					"type": "legsState"
+				},
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"yes:standing:front": [
+					""
+				],
+				"yes:standing:back": [
+					""
+				],
+				"yes:sitting:front": [
+					""
+				],
+				"yes:sitting:back": [
+					""
+				],
+				"yes:kneeling:front": [
+					""
+				],
+				"yes:kneeling:back": [
+					"socks_soles.png"
+				],
+				"no:standing:front": [
+					""
+				],
+				"no:standing:back": [
+					""
+				],
+				"no:sitting:front": [
+					""
+				],
+				"no:sitting:back": [
+					""
+				],
+				"no:kneeling:front": [
+					""
+				],
+				"no:kneeling:back": [
+					""
 				]
 			}
 		}
