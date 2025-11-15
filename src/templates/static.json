@@ -104,6 +104,15 @@
 					"mirror": 1
 				}
 			]
+		},
+		"overlay": {
+			"name": "Overlay",
+			"parts": [
+				{
+					"id": "base",
+					"priority": "OVERLAY"
+				}
+			]
 		}
 	},
 	"points": [
