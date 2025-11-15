@@ -6,27 +6,32 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "Panties Front",
-			"priority": "ABOVE_BODY",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "panties",
-			"image": {
-				"image": "panties_front.png",
-				"overrides": [
-					{
-						"image": "panties_front_white.png",
-						"condition": [
-							[
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "panties"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "color"
+				}
+			],
+			"imageMap": {
+				"black": [
+					"panties_front.png"
+				],
+				"white": [
+					"panties_front_white.png"
 				]
 			}
 		},
@@ -35,128 +40,292 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "Small",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "straponSmall",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "small.png",
-						"condition": [
-							[
-								{
-									"module": "strapons",
-									"operator": "=",
-									"value": "small"
-								}
-							],
-							[
-								{
-									"module": "strapons",
-									"operator": "=",
-									"value": "both"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Large",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "straponLarge",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "large.png",
-						"condition": [
-							[
-								{
-									"module": "strapons",
-									"operator": "=",
-									"value": "large"
-								}
-							],
-							[
-								{
-									"module": "strapons",
-									"operator": "=",
-									"value": "both"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Huge",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "straponHuge",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "huge.png",
-						"condition": [
-							[
-								{
-									"module": "strapons",
-									"operator": "=",
-									"value": "huge"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "Panties Back",
-			"priority": "BELOW_BODY",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "panties",
-			"image": {
-				"image": "panties_back.png",
-				"overrides": [
-					{
-						"image": "panties_back_white.png",
-						"condition": [
-							[
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "panties"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "color"
+				}
+			],
+			"imageMap": {
+				"black": [
+					"panties_back.png"
+				],
+				"white": [
+					"panties_back_white.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Strapon small",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "straponSmall"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "overlay"
+				},
+				{
+					"type": "typedModule",
+					"module": "strapons"
+				}
+			],
+			"imageMap": {
+				"no:none": [
+					""
+				],
+				"yes:none": [
+					""
+				],
+				"no:large": [
+					""
+				],
+				"yes:large": [
+					""
+				],
+				"no:small": [
+					"small.png"
+				],
+				"yes:small": [
+					""
+				],
+				"no:both": [
+					"small.png"
+				],
+				"yes:both": [
+					""
+				],
+				"no:huge": [
+					""
+				],
+				"yes:huge": [
+					""
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Strapon small overlaid",
+			"points": "static",
+			"automeshTemplate": "overlay",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "straponSmall"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "overlay"
+				},
+				{
+					"type": "typedModule",
+					"module": "strapons"
+				}
+			],
+			"imageMap": {
+				"no:none": [
+					""
+				],
+				"yes:none": [
+					""
+				],
+				"no:large": [
+					""
+				],
+				"yes:large": [
+					""
+				],
+				"no:small": [
+					""
+				],
+				"yes:small": [
+					"small.png"
+				],
+				"no:both": [
+					""
+				],
+				"yes:both": [
+					"small.png"
+				],
+				"no:huge": [
+					""
+				],
+				"yes:huge": [
+					""
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Strapons large",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Large",
+					"colorizationKey": "straponLarge"
+				},
+				{
+					"name": "Huge",
+					"colorizationKey": "straponHuge"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "overlay"
+				},
+				{
+					"type": "typedModule",
+					"module": "strapons"
+				}
+			],
+			"imageMap": {
+				"no:none": [
+					"",
+					""
+				],
+				"yes:none": [
+					"",
+					""
+				],
+				"no:large": [
+					"large.png",
+					""
+				],
+				"yes:large": [
+					"",
+					""
+				],
+				"no:small": [
+					"",
+					""
+				],
+				"yes:small": [
+					"",
+					""
+				],
+				"no:both": [
+					"large.png",
+					""
+				],
+				"yes:both": [
+					"",
+					""
+				],
+				"no:huge": [
+					"",
+					"huge.png"
+				],
+				"yes:huge": [
+					"",
+					""
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Strapons large overlaid",
+			"points": "static",
+			"automeshTemplate": "overlay",
+			"graphicalLayers": [
+				{
+					"name": "Large",
+					"colorizationKey": "straponLarge"
+				},
+				{
+					"name": "Huge",
+					"colorizationKey": "straponHuge"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "overlay"
+				},
+				{
+					"type": "typedModule",
+					"module": "strapons"
+				}
+			],
+			"imageMap": {
+				"no:none": [
+					"",
+					""
+				],
+				"yes:none": [
+					"",
+					""
+				],
+				"no:large": [
+					"",
+					""
+				],
+				"yes:large": [
+					"large.png",
+					""
+				],
+				"no:small": [
+					"",
+					""
+				],
+				"yes:small": [
+					"",
+					""
+				],
+				"no:both": [
+					"",
+					""
+				],
+				"yes:both": [
+					"large.png",
+					""
+				],
+				"no:huge": [
+					"",
+					""
+				],
+				"yes:huge": [
+					"",
+					"huge.png"
 				]
 			}
 		}

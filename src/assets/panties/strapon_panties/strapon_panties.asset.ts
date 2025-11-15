@@ -104,6 +104,21 @@ DefineAsset({
 				},
 			],
 		},
+		overlay: {
+			type: 'typed',
+			name: 'Strapons overlaid on top of other items',
+			variants: [
+				{
+					id: 'no',
+					name: 'No',
+					default: true,
+				},
+				{
+					id: 'yes',
+					name: 'Yes',
+				},
+			],
+		},
 		color: {
 			type: 'typed',
 			name: 'Panties Base Color',
