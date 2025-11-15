@@ -6,15 +6,21 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "band",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Band",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "headband",
-			"image": {
-				"image": "maid_headband1.png",
-				"overrides": []
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "headband"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"maid_headband1.png"
+				]
 			}
 		}
 	]
