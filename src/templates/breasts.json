@@ -17,6 +17,60 @@
 			]
 		}
 	},
+	"automeshTemplates": {
+		"aboveBody": {
+			"name": "Above body (mirrored)",
+			"parts": [
+				{
+					"id": "base",
+					"priority": "ABOVE_BODY",
+					"pointType": [
+						"breasts_l"
+					],
+					"mirror": 1
+				}
+			]
+		},
+		"belowBody": {
+			"name": "Below body (mirrored)",
+			"parts": [
+				{
+					"id": "base",
+					"priority": "BELOW_BODY",
+					"pointType": [
+						"breasts_l"
+					],
+					"mirror": 1
+				}
+			]
+		},
+		"breasts": {
+			"name": "Breasts (mirrored)",
+			"parts": [
+				{
+					"id": "base",
+					"priority": "BREASTS",
+					"pointType": [
+						"breasts_l"
+					],
+					"mirror": 1
+				}
+			]
+		},
+		"belowBreasts": {
+			"name": "Below breasts (mirrored)",
+			"parts": [
+				{
+					"id": "base",
+					"priority": "BELOW_BREASTS",
+					"pointType": [
+						"breasts_l"
+					],
+					"mirror": 1
+				}
+			]
+		}
+	},
 	"points": [
 		{
 			"pos": [
