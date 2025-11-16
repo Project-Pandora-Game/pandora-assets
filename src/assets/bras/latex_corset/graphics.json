@@ -6,39 +6,42 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "bra front bottom",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Bra front bottom",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "bra",
-			"image": {
-				"image": "latex_corset_bottom.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "corsetConfig",
-									"operator": "=",
-									"value": "short"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_bottom_bright.png",
-						"condition": [
-							[
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "bra"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "corsetConfig"
+				},
+				{
+					"type": "typedModule",
+					"module": "color"
+				}
+			],
+			"imageMap": {
+				"normal:black": [
+					"latex_corset_bottom.png"
+				],
+				"normal:white": [
+					"latex_corset_bottom_bright.png"
+				],
+				"short:black": [
+					""
+				],
+				"short:white": [
+					""
 				]
 			}
 		},
@@ -47,259 +50,52 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "bra underbust above body",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Bra underbust above body",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
 			],
-			"mirror": 0,
-			"colorizationKey": "bra",
-			"image": {
-				"image": "latex_corset_underbust.png",
-				"overrides": [
-					{
-						"image": "latex_corset_underbust_bright.png",
-						"condition": [
-							[
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					}
-				]
-			},
-			"scaling": {
-				"scaleBone": "breasts",
-				"stops": [
-					[
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "bra"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "color"
+				},
+				{
+					"type": "bone",
+					"bone": "breasts",
+					"stops": [
 						100,
-						{
-							"image": "latex_corset_underbust_huge.png",
-							"overrides": [
-								{
-									"image": "latex_corset_underbust_bright_huge.png",
-									"condition": [
-										[
-											{
-												"module": "color",
-												"operator": "=",
-												"value": "white"
-											}
-										]
-									]
-								}
-							]
-						}
-					],
-					[
-						150,
-						{
-							"image": "latex_corset_underbust_extreme.png",
-							"overrides": [
-								{
-									"image": "latex_corset_underbust_bright_extreme.png",
-									"condition": [
-										[
-											{
-												"module": "color",
-												"operator": "=",
-												"value": "white"
-											}
-										]
-									]
-								}
-							]
-						}
+						150
 					]
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "bra breasts above body",
-			"priority": "ABOVE_BODY",
-			"points": "breasts",
-			"mirror": 0,
-			"colorizationKey": "bra",
-			"image": {
-				"image": "latex_corset.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "bust",
-									"operator": "=",
-									"value": "underbust"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_small_bright.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": -70
-								},
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_bright.png",
-						"condition": [
-							[
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_small.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": -70
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "bra breasts behind",
-			"priority": "BELOW_BREASTS",
-			"points": "breasts",
-			"mirror": 0,
-			"colorizationKey": "bra",
-			"image": {
-				"image": "latex_corset.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "bust",
-									"operator": "=",
-									"value": "underbust"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_small_bright.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": -70
-								},
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_bright.png",
-						"condition": [
-							[
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_small.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": -70
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "bra back view",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "bra",
-			"image": {
-				"image": "latex_corset_back.png",
-				"overrides": [
-					{
-						"image": "latex_corset_back_bright.png",
-						"condition": [
-							[
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					}
+			"imageMap": {
+				"black:-180": [
+					"latex_corset_underbust.png"
+				],
+				"white:-180": [
+					"latex_corset_underbust_bright.png"
+				],
+				"black:100": [
+					"latex_corset_underbust_huge.png"
+				],
+				"black:150": [
+					"latex_corset_underbust_extreme.png"
+				],
+				"white:100": [
+					"latex_corset_underbust_bright_huge.png"
+				],
+				"white:150": [
+					"latex_corset_underbust_bright_extreme.png"
 				]
 			}
 		},
@@ -308,39 +104,57 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "bra back bottom",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "bra",
-			"image": {
-				"image": "latex_corset_back_bottom.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "corsetConfig",
-									"operator": "=",
-									"value": "short"
-								}
-							]
-						]
-					},
-					{
-						"image": "latex_corset_back_bottom_bright.png",
-						"condition": [
-							[
-								{
-									"module": "color",
-									"operator": "=",
-									"value": "white"
-								}
-							]
-						]
-					}
+			"type": "autoMesh",
+			"name": "Bra breasts above body",
+			"points": "breasts",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "bra"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "bust"
+				},
+				{
+					"type": "typedModule",
+					"module": "color"
+				},
+				{
+					"type": "bone",
+					"bone": "breasts",
+					"stops": [
+						-70
+					]
+				}
+			],
+			"imageMap": {
+				"covered:black:-180": [
+					"latex_corset_small.png"
+				],
+				"covered:white:-180": [
+					"latex_corset_small_bright.png"
+				],
+				"underbust:black:-180": [
+					""
+				],
+				"underbust:white:-180": [
+					""
+				],
+				"covered:black:-70": [
+					"latex_corset.png"
+				],
+				"covered:white:-70": [
+					"latex_corset_bright.png"
+				],
+				"underbust:black:-70": [
+					""
+				],
+				"underbust:white:-70": [
+					""
 				]
 			}
 		},
@@ -349,27 +163,143 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "bra back lacing",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Bra breasts behind",
+			"points": "breasts",
+			"automeshTemplate": "belowBreasts",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "bra"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "bust"
+				},
+				{
+					"type": "typedModule",
+					"module": "color"
+				},
+				{
+					"type": "bone",
+					"bone": "breasts",
+					"stops": [
+						-70
+					]
+				}
+			],
+			"imageMap": {
+				"covered:black:-180": [
+					"latex_corset_small.png"
+				],
+				"covered:white:-180": [
+					"latex_corset_small_bright.png"
+				],
+				"underbust:black:-180": [
+					""
+				],
+				"underbust:white:-180": [
+					""
+				],
+				"covered:black:-70": [
+					"latex_corset.png"
+				],
+				"covered:white:-70": [
+					"latex_corset_bright.png"
+				],
+				"underbust:black:-70": [
+					""
+				],
+				"underbust:white:-70": [
+					""
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Bra back view",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "laces",
-			"image": {
-				"image": "latex_corset_back_laces.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "lacing",
-									"operator": "=",
-									"value": "unlaced"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"legs",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "corset",
+					"colorizationKey": "bra"
+				},
+				{
+					"name": "bottom",
+					"colorizationKey": "bra"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "color"
+				},
+				{
+					"type": "typedModule",
+					"module": "corsetConfig"
+				}
+			],
+			"imageMap": {
+				"black:normal": [
+					"latex_corset_back.png",
+					"latex_corset_back_bottom.png"
+				],
+				"black:short": [
+					"latex_corset_back.png",
+					""
+				],
+				"white:normal": [
+					"latex_corset_back_bright.png",
+					"latex_corset_back_bottom_bright.png"
+				],
+				"white:short": [
+					"latex_corset_back_bright.png",
+					""
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Bra back lacing",
+			"points": "body",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "laces"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "lacing"
+				}
+			],
+			"imageMap": {
+				"laced": [
+					"latex_corset_back_laces.png"
+				],
+				"unlaced": [
+					""
 				]
 			}
 		}
