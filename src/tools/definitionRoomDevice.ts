@@ -40,6 +40,7 @@ const ROOM_DEVICE_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'size',
 	'chat',
 	'modules',
+	'stateFlagCombinations',
 	'storageModule',
 	'staticAttributes',
 	'posePresets',
@@ -194,6 +195,15 @@ async function GlobalDefineRoomDeviceAssetProcess(def: IntermediateRoomDeviceDef
 
 	// Validate properties
 	ValidateAssetChatMessages(logger, '#.chat', omit(def.chat, ['chatDescriptor']));
+	if (def.stateFlagCombinations != null) {
+		for (let i = 0; i < def.stateFlagCombinations.length; i++) {
+			const combination = def.stateFlagCombinations[i];
+			combination.requiredFlags.forEach((f) => {
+				propertiesValidationMetadata.requiredStateFlags.add(f);
+			});
+			ValidateRoomDeviceProperties(logger, `#.stateFlagCombinations[${i}]`, propertiesValidationMetadata, combination.properties);
+		}
+	}
 
 	// Validate all modules
 	propertiesValidationMetadata.context = 'module';

@@ -33,6 +33,7 @@ const PERSONAL_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'chat',
 	'posePresets',
 	'modules',
+	'stateFlagCombinations',
 	'storageModule',
 	'preview',
 	'assetPreferenceDefault',
@@ -102,6 +103,15 @@ async function GlobalDefineAssetProcess(def: IntermediatePersonalAssetDefinition
 	// Validate base properties
 	ValidateAssetProperties(logger, '#', propertiesValidationMetadata, def);
 	ValidateAssetChatMessages(logger, '#.chat', omit(def.chat, ['chatDescriptor']));
+	if (def.stateFlagCombinations != null) {
+		for (let i = 0; i < def.stateFlagCombinations.length; i++) {
+			const combination = def.stateFlagCombinations[i];
+			combination.requiredFlags.forEach((f) => {
+				propertiesValidationMetadata.requiredStateFlags.add(f);
+			});
+			ValidateAssetProperties(logger, `#.stateFlagCombinations[${i}]`, propertiesValidationMetadata, combination.properties);
+		}
+	}
 
 	// Validate all modules
 	propertiesValidationMetadata.context = 'module';
