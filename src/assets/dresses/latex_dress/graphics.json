@@ -6,81 +6,38 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Front",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"legs"
 			],
-			"mirror": 0,
-			"colorizationKey": "dress",
-			"image": {
-				"image": "latex_dress_widest.png",
-				"overrides": []
-			},
-			"scaling": {
-				"scaleBone": "breasts",
-				"stops": [
-					[
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "dress"
+				}
+			],
+			"variables": [
+				{
+					"type": "bone",
+					"bone": "breasts",
+					"stops": [
 						-150,
-						{
-							"image": "latex_dress.png",
-							"overrides": []
-						}
-					],
-					[
-						-50,
-						{
-							"image": "latex_dress_wider.png",
-							"overrides": []
-						}
+						-50
 					]
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "front_shoulders",
-			"priority": "ABOVE_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "dress",
-			"image": {
-				"image": "latex_dress_widest.png",
-				"overrides": []
-			},
-			"scaling": {
-				"scaleBone": "breasts",
-				"stops": [
-					[
-						-150,
-						{
-							"image": "latex_dress.png",
-							"overrides": []
-						}
-					],
-					[
-						-50,
-						{
-							"image": "latex_dress_wider.png",
-							"overrides": []
-						}
-					]
+			"imageMap": {
+				"-180": [
+					"latex_dress.png"
+				],
+				"-150": [
+					"latex_dress_wider.png"
+				],
+				"-50": [
+					"latex_dress_widest.png"
 				]
 			}
 		},
@@ -89,40 +46,31 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front skirt",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Front skirt",
 			"points": "skirt_tight",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 0,
-			"colorizationKey": "dress",
-			"image": {
-				"image": "latex_dress_bottom.png",
-				"overrides": [
-					{
-						"image": "latex_dress_bottom_up.png",
-						"condition": [
-							[
-								{
-									"module": "skirtStateFront",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "dress"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "skirtStateFront"
+				}
+			],
+			"imageMap": {
+				"normal": [
+					"latex_dress_bottom.png"
+				],
+				"up": [
+					"latex_dress_bottom_up.png"
 				]
 			}
 		},
@@ -131,35 +79,34 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "back",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Back",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"legs"
 			],
-			"mirror": 0,
-			"colorizationKey": "dress",
-			"image": {
-				"image": "latex_dress_back_wider.png",
-				"overrides": []
-			},
-			"scaling": {
-				"scaleBone": "breasts",
-				"stops": [
-					[
-						-50,
-						{
-							"image": "latex_dress_back.png",
-							"overrides": []
-						}
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "dress"
+				}
+			],
+			"variables": [
+				{
+					"type": "bone",
+					"bone": "breasts",
+					"stops": [
+						-50
 					]
+				}
+			],
+			"imageMap": {
+				"-180": [
+					"latex_dress_back.png"
+				],
+				"-50": [
+					"latex_dress_back_wider.png"
 				]
 			}
 		},
@@ -168,72 +115,31 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "back_shoulders",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "dress",
-			"image": {
-				"image": "latex_dress_back_wider.png",
-				"overrides": []
-			},
-			"scaling": {
-				"scaleBone": "breasts",
-				"stops": [
-					[
-						-50,
-						{
-							"image": "latex_dress_back.png",
-							"overrides": []
-						}
-					]
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "back skirt",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Back skirt",
 			"points": "skirt_tight",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg",
-				"bodyleg_l",
-				"bodyleg_r",
-				"leg",
-				"leg_l",
-				"leg_r"
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms"
 			],
-			"mirror": 0,
-			"colorizationKey": "dress",
-			"image": {
-				"image": "latex_dress_back_bottom.png",
-				"overrides": [
-					{
-						"image": "latex_dress_back_bottom_up.png",
-						"condition": [
-							[
-								{
-									"module": "skirtStateBack",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "dress"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "skirtStateFront"
+				}
+			],
+			"imageMap": {
+				"normal": [
+					"latex_dress_back_bottom.png"
+				],
+				"up": [
+					"latex_dress_back_bottom_up.png"
 				]
 			}
 		},
@@ -242,15 +148,21 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "breasts",
-			"priority": "ABOVE_BODY",
-			"points": "custom_dresses_latex_dress_breasts",
-			"mirror": 0,
-			"colorizationKey": "dress",
-			"image": {
-				"image": "latex_dress_widest.png",
-				"overrides": []
+			"type": "autoMesh",
+			"name": "Breasts",
+			"points": "breasts",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "dress"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"latex_dress_widest.png"
+				]
 			}
 		},
 		{
@@ -258,15 +170,21 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "breasts back",
-			"priority": "BELOW_BREASTS",
-			"points": "custom_dresses_latex_dress_breasts",
-			"mirror": 0,
-			"colorizationKey": "dress",
-			"image": {
-				"image": "latex_dress_widest.png",
-				"overrides": []
+			"type": "autoMesh",
+			"name": "Breasts back",
+			"points": "breasts",
+			"automeshTemplate": "belowBreasts",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "dress"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"latex_dress_widest.png"
+				]
 			}
 		}
 	]

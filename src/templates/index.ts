@@ -27,7 +27,6 @@ const templateList: string[] = [
 	'custom_arm_restraints_straight_jacket_straps', // Based on body, small edits
 	'custom_arm_restraints_torso_ropes', // Based on body, small edits
 	'custom_body_nipples',
-	'custom_dresses_latex_dress_breasts',
 	'custom_dresses_nightgown',
 	'custom_tops_jeans_jacket_breasts',
 	'custom_tops_leather_jacket_breasts',
