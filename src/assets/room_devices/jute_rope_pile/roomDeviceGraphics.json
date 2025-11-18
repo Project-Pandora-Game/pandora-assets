@@ -1,0 +1,51 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"name": "left",
+			"colorizationKey": "rope",
+			"image": "rope_pile_left.png",
+			"imageOverrides": [
+				{
+					"image": "",
+					"condition": [
+						[
+							{
+								"module": "left",
+								"operator": "=",
+								"value": "no"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"name": "right",
+			"colorizationKey": "rope",
+			"image": "rope_pile_right.png",
+			"imageOverrides": [
+				{
+					"image": "",
+					"condition": [
+						[
+							{
+								"module": "right",
+								"operator": "=",
+								"value": "no"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"name": "base",
+			"colorizationKey": "rope",
+			"image": "rope_pile_base.png"
+		}
+	],
+	"slots": {}
+}
