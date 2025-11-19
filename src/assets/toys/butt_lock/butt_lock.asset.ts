@@ -1,11 +1,11 @@
 DefineAsset({
-	name: 'Butt Lock',
+	name: 'Locking Butt Plug',
 	size: 'small',
 	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
-		collar: {
-			name: 'Butt Lock',
+		plug: {
+			name: 'Butt Plug',
 			default: '#B2B6B6',
 		},
 	},

@@ -13,7 +13,7 @@
 			"graphicalLayers": [
 				{
 					"name": "Item",
-					"colorizationKey": "collar"
+					"colorizationKey": "plug"
 				}
 			],
 			"variables": [
