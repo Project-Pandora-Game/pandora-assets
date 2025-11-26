@@ -60,15 +60,15 @@ DefineBodypart({
 		},
 	},
 	ownership: {
-		responsibleContributor: 'Ayesha <ayeshafox44@gmail.com>',
-		credits: ['Ayesha'],
+		responsibleContributor: 'Hareo <59668834+Kane-678@users.noreply.github.com>',
+		credits: ['Hareo'],
 		modificationPolicy: 'Ask first',
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
 				source: 'Self-Made',
-				copyrightHolder: 'Ayesha',
-				editedBy: 'Ayesha',
+				copyrightHolder: 'Hareo',
+				editedBy: 'Hareo',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],

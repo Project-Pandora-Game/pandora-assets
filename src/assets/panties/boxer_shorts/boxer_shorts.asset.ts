@@ -23,15 +23,15 @@ DefineAsset({
 		hides: ['Penis'],
 	},
 	ownership: {
-		responsibleContributor: 'Kane <59668834+Kane-678@users.noreply.github.com>',
-		credits: ['Kane'],
+		responsibleContributor: 'Hareo <59668834+Kane-678@users.noreply.github.com>',
+		credits: ['Hareo'],
 		modificationPolicy: 'Fixes only, otherwise ask',
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
 				source: 'Self-Made',
-				copyrightHolder: 'Kane',
-				editedBy: 'Kane',
+				copyrightHolder: 'Hareo',
+				editedBy: 'Hareo',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
