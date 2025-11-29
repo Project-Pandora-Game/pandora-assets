@@ -131,6 +131,7 @@ DefineRoomDeviceAsset({
 							seated: {
 								attributes: {
 									requires: ['Collar_front_ring'],
+									hides: ['Leash'],
 								},
 							},
 						},
