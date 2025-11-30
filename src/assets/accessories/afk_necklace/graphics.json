@@ -6,25 +6,63 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "chain",
-			"image": {
-				"image": "necklace_chain_front.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "front_mesh_chain",
+					"colorizationKey": "chain"
+				},
+				{
+					"name": "front_mesh_pendant",
+					"colorizationKey": "pendant"
+				},
+				{
+					"name": "front_mesh_pendant_inner",
+					"colorizationKey": "inner"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "pendantType"
+				}
+			],
+			"imageMap": {
+				"front:heart": [
+					"necklace_chain_front.png",
+					"necklace_pendant_heart_outer.png",
+					"necklace_pendant_heart_inner.png"
+				],
+				"back:heart": [
+					"",
+					"",
+					""
+				],
+				"front:jewel": [
+					"necklace_chain_front.png",
+					"necklace_pendant_jewel_outer.png",
+					"necklace_pendant_jewel_inner.png"
+				],
+				"back:jewel": [
+					"",
+					"",
+					""
+				],
+				"front:triangle": [
+					"necklace_chain_front.png",
+					"necklace_pendant.png",
+					""
+				],
+				"back:triangle": [
+					"",
+					"",
+					""
 				]
 			}
 		},
@@ -33,117 +71,27 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "pendant",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "back_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "pendant",
-			"image": {
-				"image": "necklace_pendant_heart_outer.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "necklace_pendant.png",
-						"condition": [
-							[
-								{
-									"module": "pendantType",
-									"operator": "=",
-									"value": "triangle"
-								}
-							]
-						]
-					},
-					{
-						"image": "necklace_pendant_jewel_outer.png",
-						"condition": [
-							[
-								{
-									"module": "pendantType",
-									"operator": "=",
-									"value": "jewel"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "pendant inner",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "inner",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "necklace_pendant_heart_inner.png",
-						"condition": [
-							[
-								{
-									"module": "pendantType",
-									"operator": "=",
-									"value": "heart"
-								}
-							]
-						]
-					},
-					{
-						"image": "necklace_pendant_jewel_inner.png",
-						"condition": [
-							[
-								{
-									"module": "pendantType",
-									"operator": "=",
-									"value": "jewel"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "back",
-			"priority": "BELOW_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "chain",
-			"image": {
-				"image": "necklace_chain_back.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "back_mesh_chain",
+					"colorizationKey": "chain"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"front": [
+					""
+				],
+				"back": [
+					"necklace_chain_back.png"
 				]
 			}
 		}
