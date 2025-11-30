@@ -6,45 +6,36 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "eyes",
-			"priority": "BODY",
+			"type": "autoMesh",
+			"name": "eyes_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "spots",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "beauty_spot_eye_left.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "eyes",
-									"operator": "=",
-									"value": "left"
-								}
-							]
-						]
-					},
-					{
-						"image": "beauty_spot_eye_right.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "eyes",
-									"operator": "=",
-									"value": "right"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms",
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "beauty_spot_eye",
+					"colorizationKey": "spots"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "eyes"
+				}
+			],
+			"imageMap": {
+				"no": [
+					""
+				],
+				"left": [
+					"beauty_spot_eye_left.png"
+				],
+				"right": [
+					"beauty_spot_eye_right.png"
 				]
 			}
 		},
@@ -53,45 +44,43 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "lips",
-			"priority": "BODY",
+			"type": "autoMesh",
+			"name": "lips_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "spots",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "beauty_spot_lip_left.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "lips",
-									"operator": "=",
-									"value": "left"
-								}
-							]
-						]
-					},
-					{
-						"image": "beauty_spot_lip_right.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "lips",
-									"operator": "=",
-									"value": "right"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "beauty_spot_lip",
+					"colorizationKey": "spots"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "lips"
+				}
+			],
+			"imageMap": {
+				"front:no": [
+					""
+				],
+				"front:left": [
+					"beauty_spot_lip_left.png"
+				],
+				"front:right": [
+					"beauty_spot_lip_right.png"
+				],
+				"back:no": [
+					""
+				],
+				"back:left": [
+					""
+				],
+				"back:right": [
+					""
 				]
 			}
 		},
@@ -100,45 +89,43 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "chin",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "chin_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "spots",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "beauty_spot_chin_left.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "chin",
-									"operator": "=",
-									"value": "left"
-								}
-							]
-						]
-					},
-					{
-						"image": "beauty_spot_chin_right.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "chin",
-									"operator": "=",
-									"value": "right"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "beauty_spot_chin",
+					"colorizationKey": "spots"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "chin"
+				}
+			],
+			"imageMap": {
+				"front:no": [
+					""
+				],
+				"front:left": [
+					"beauty_spot_chin_left.png"
+				],
+				"front:right": [
+					"beauty_spot_chin_right.png"
+				],
+				"back:no": [
+					""
+				],
+				"back:left": [
+					""
+				],
+				"back:right": [
+					""
 				]
 			}
 		}
