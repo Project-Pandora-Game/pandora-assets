@@ -76,6 +76,13 @@ DefineAsset({
 				},
 			],
 		},
+		lock: {
+			type: 'lockSlot',
+			name: 'Opening mechanism block',
+			lockedProperties: {
+				blockAddRemove: true,
+			},
+		},
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
