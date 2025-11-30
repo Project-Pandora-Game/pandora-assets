@@ -15,6 +15,14 @@ DefineRoomDeviceAsset({
 			name: 'Curtain cover',
 			default: '#7C0418',
 		},
+		pillow: {
+			name: 'Pillow',
+			default: '#820014',
+		},
+		mattress: {
+			name: 'Mattress',
+			default: '#5D121E',
+		},
 	},
 	staticAttributes: ['Play_furniture', 'Furniture'],
 	preview: 'cage_bench_preview.png',
@@ -182,6 +190,38 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		pillow: {
+			type: 'typed',
+			name: 'Pillow',
+			staticConfig: { slotName: 'character_slot_inside' },
+			variants: [
+				{
+					id: 'yes',
+					name: 'Yes',
+					default: true,
+				},
+				{
+					id: 'no',
+					name: 'No',
+				},
+			],
+		},
+		mattress: {
+			type: 'typed',
+			name: 'Mattress',
+			staticConfig: { slotName: 'character_slot_inside' },
+			variants: [
+				{
+					id: 'yes',
+					name: 'Yes',
+				},
+				{
+					id: 'no',
+					name: 'No',
+					default: true,
+				},
+			],
+		},
 		lock: {
 			type: 'lockSlot',
 			name: 'Door lock',
@@ -221,6 +261,13 @@ DefineRoomDeviceAsset({
 				part: 'curtain',
 				source: 'https://www.flickr.com/photos/tusnelda/4338079314/',
 				copyrightHolder: 'storebukkebruse',
+				editedBy: 'ClaudiaMia',
+				license: 'CC BY',
+			},
+			{
+				part: 'pillow - used 3D model',
+				source: 'https://skfb.ly/6wCnC',
+				copyrightHolder: 'Vegar Svenning',
 				editedBy: 'ClaudiaMia',
 				license: 'CC BY',
 			},

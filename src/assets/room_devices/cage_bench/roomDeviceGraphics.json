@@ -25,6 +25,46 @@
 			]
 		},
 		{
+			"type": "sprite",
+			"name": "pillow",
+			"colorizationKey": "pillow",
+			"image": "pillow.png",
+			"imageOverrides": [
+				{
+					"image": "",
+					"condition": [
+						[
+							{
+								"module": "pillow",
+								"operator": "=",
+								"value": "no"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"name": "mattress",
+			"colorizationKey": "mattress",
+			"image": "mattress.png",
+			"imageOverrides": [
+				{
+					"image": "",
+					"condition": [
+						[
+							{
+								"module": "mattress",
+								"operator": "=",
+								"value": "no"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
 			"type": "slot",
 			"slot": "character_slot_inside",
 			"characterPosition": {
