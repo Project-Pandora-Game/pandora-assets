@@ -35,6 +35,51 @@
 				}
 			]
 		},
+		"frontHair": {
+			"name": "Front hair",
+			"parts": [
+				{
+					"id": "base",
+					"priority": "FRONT_HAIR"
+				}
+			]
+		},
+		"aboveFrontHair": {
+			"name": "Above front hair",
+			"parts": [
+				{
+					"id": "base",
+					"priority": "ABOVE_FRONT_HAIR"
+				}
+			]
+		},
+		"backHair": {
+			"name": "Back hair",
+			"parts": [
+				{
+					"id": "base",
+					"priority": "BACK_HAIR"
+				}
+			]
+		},
+		"aboveBackHair": {
+			"name": "Above back hair",
+			"parts": [
+				{
+					"id": "base",
+					"priority": "ABOVE_BACK_HAIR"
+				}
+			]
+		},
+		"belowBackHair": {
+			"name": "Below back hair",
+			"parts": [
+				{
+					"id": "base",
+					"priority": "BELOW_BACK_HAIR"
+				}
+			]
+		},
 		"aboveArms": {
 			"name": "Above arms (mirrored)",
 			"parts": [
