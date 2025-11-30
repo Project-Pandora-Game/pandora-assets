@@ -322,6 +322,7 @@ DefineRoomDeviceAsset({
 							character_slot: {
 								attributes: {
 									requires: ['Collar_front_ring'],
+									hides: ['Leash'],
 								},
 							},
 						},
