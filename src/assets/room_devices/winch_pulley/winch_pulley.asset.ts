@@ -149,12 +149,24 @@ DefineRoomDeviceAsset({
 						slotProperties: {
 							under_winch: {
 								poseLimits: {
-									bones: {
-										arm_l: -90,
-										elbow_l: -25,
-										arm_r: -90,
-										elbow_r: -25,
-									},
+									options: [
+										{
+											bones: {
+												arm_l: -90,
+												elbow_l: -25,
+												arm_r: -90,
+												elbow_r: -25,
+											},
+										},
+										{
+											bones: {
+												arm_r: -84,
+												arm_l: -84,
+												elbow_r: -30,
+												elbow_l: -30,
+											},
+										},
+									],
 								},
 								attributes: {
 									requires: [
