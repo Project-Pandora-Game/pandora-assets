@@ -6,24 +6,44 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "cuffsFront",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front_mesh",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
 			],
-			"mirror": 0,
-			"colorizationKey": "cuff",
-			"image": {
-				"image": "bondage_belt_cuff.png",
-				"overrides": []
+			"graphicalLayers": [
+				{
+					"name": "cuffs_front",
+					"colorizationKey": "cuff"
+				},
+				{
+					"name": "belts_front",
+					"colorizationKey": "belt"
+				},
+				{
+					"name": "rings_front",
+					"colorizationKey": "smallRings"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"front": [
+					"bondage_belt_cuff.png",
+					"bondage_belt_belts.png",
+					"bondage_belt_front_rings.png"
+				],
+				"back": [
+					"",
+					"",
+					""
+				]
 			}
 		},
 		{
@@ -31,106 +51,44 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "cuffsBack",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "back_mesh",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"legs",
+				"arms"
 			],
-			"mirror": 0,
-			"colorizationKey": "cuff",
-			"image": {
-				"image": "bondage_belt_cuff.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "beltsFront",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
+			"graphicalLayers": [
+				{
+					"name": "cuffs_back",
+					"colorizationKey": "cuff"
+				},
+				{
+					"name": "belts_back",
+					"colorizationKey": "belt"
+				},
+				{
+					"name": "large_rings",
+					"colorizationKey": "largeRings"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "belt",
-			"image": {
-				"image": "bondage_belt_belts.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "beltsBack",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
+			"variables": [
+				{
+					"type": "view"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "belt",
-			"image": {
-				"image": "bondage_belt_belts.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "ringsFront",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 1,
-			"colorizationKey": "smallRings",
-			"image": {
-				"image": "bondage_belt_front_rings.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "large ring",
-			"priority": "BELOW_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "largeRings",
-			"image": {
-				"image": "bondage_belt_back_rings.png",
-				"overrides": []
+			"imageMap": {
+				"front": [
+					"",
+					"",
+					""
+				],
+				"back": [
+					"bondage_belt_cuff.png",
+					"bondage_belt_belts.png",
+					"bondage_belt_back_rings.png"
+				]
 			}
 		}
 	]
