@@ -18,8 +18,8 @@ importers:
         specifier: 7.0.5
         version: 7.0.5
       immer:
-        specifier: 10.2.0
-        version: 10.2.0
+        specifier: 11.0.1
+        version: 11.0.1
       json-diff:
         specifier: 1.0.6
         version: 1.0.6
@@ -28,7 +28,7 @@ importers:
         version: 4.17.21
       pandora-common:
         specifier: github:Project-Pandora-Game/pandora#master&path:pandora-common
-        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/76c459f4427de432b572ba7342a7e3b7c3734df5#path:pandora-common
+        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/5f50b7eb30e07c02e67f694a14f26fcec994cd37#path:pandora-common
       rimraf:
         specifier: 6.1.2
         version: 6.1.2
@@ -1578,6 +1578,9 @@ packages:
   immer@10.2.0:
     resolution: {integrity: sha512-d/+XTN3zfODyjr89gM3mPq1WNX2B8pYsu7eORitdwyA2sBubnTl3laYlBk4sXY5FUa5qTZGBDPJICVbvqzjlbw==}
 
+  immer@11.0.1:
+    resolution: {integrity: sha512-naDCyggtcBWANtIrjQEajhhBEuL9b0Zg4zmlWK2CzS6xCWSE39/vvf4LqnMjUAWHBhot4m9MHCM/Z+mfWhUkiA==}
+
   import-fresh@3.3.1:
     resolution: {integrity: sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==}
     engines: {node: '>=6'}
@@ -2131,8 +2134,8 @@ packages:
   package-json-from-dist@1.0.1:
     resolution: {integrity: sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/76c459f4427de432b572ba7342a7e3b7c3734df5#path:pandora-common:
-    resolution: {path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/76c459f4427de432b572ba7342a7e3b7c3734df5}
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/5f50b7eb30e07c02e67f694a14f26fcec994cd37#path:pandora-common:
+    resolution: {path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/5f50b7eb30e07c02e67f694a14f26fcec994cd37}
     version: 0.1.0
     engines: {node: '>=22.x'}
 
@@ -4438,6 +4441,8 @@ snapshots:
 
   immer@10.2.0: {}
 
+  immer@11.0.1: {}
+
   import-fresh@3.3.1:
     dependencies:
       parent-module: 1.0.1
@@ -5155,7 +5160,7 @@ snapshots:
 
   package-json-from-dist@1.0.1: {}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/76c459f4427de432b572ba7342a7e3b7c3734df5#path:pandora-common:
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/5f50b7eb30e07c02e67f694a14f26fcec994cd37#path:pandora-common:
     dependencies:
       '@types/async-lock': 1.4.2
       '@types/lodash-es': 4.17.12
