@@ -6,124 +6,85 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "laptop",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "laptop.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "laptop_back.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "logo front",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "logo",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "laptop_logo_bdsm.png",
-						"condition": [
-							[
-								{
-									"module": "logoType",
-									"operator": "=",
-									"value": "bdsm"
-								}
-							]
-						]
-					},
-					{
-						"image": "laptop_logo_cuffs.png",
-						"condition": [
-							[
-								{
-									"module": "logoType",
-									"operator": "=",
-									"value": "cuffs"
-								}
-							]
-						]
-					},
-					{
-						"image": "laptop_logo_gag.png",
-						"condition": [
-							[
-								{
-									"module": "logoType",
-									"operator": "=",
-									"value": "gag"
-								}
-							]
-						]
-					},
-					{
-						"image": "laptop_logo_heart.png",
-						"condition": [
-							[
-								{
-									"module": "logoType",
-									"operator": "=",
-									"value": "heart"
-								}
-							]
-						]
-					},
-					{
-						"image": "laptop_logo_tt.png",
-						"condition": [
-							[
-								{
-									"module": "logoType",
-									"operator": "=",
-									"value": "towel"
-								}
-							]
-						]
-					},
-					{
-						"image": "laptop_logo_whips.png",
-						"condition": [
-							[
-								{
-									"module": "logoType",
-									"operator": "=",
-									"value": "whip"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "laptop",
+					"colorizationKey": "laptop"
+				},
+				{
+					"name": "laptop_logo",
+					"colorizationKey": "logo"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "logoType"
+				}
+			],
+			"imageMap": {
+				"front:no": [
+					"laptop.png",
+					""
+				],
+				"front:bdsm": [
+					"laptop.png",
+					"laptop_logo_bdsm.png"
+				],
+				"front:towel": [
+					"laptop.png",
+					"laptop_logo_tt.png"
+				],
+				"front:cuffs": [
+					"laptop.png",
+					"laptop_logo_cuffs.png"
+				],
+				"front:gag": [
+					"laptop.png",
+					"laptop_logo_gag.png"
+				],
+				"front:whip": [
+					"laptop.png",
+					"laptop_logo_whips.png"
+				],
+				"front:heart": [
+					"laptop.png",
+					"laptop_logo_heart.png"
+				],
+				"back:no": [
+					"laptop_back.png",
+					""
+				],
+				"back:bdsm": [
+					"laptop_back.png",
+					""
+				],
+				"back:towel": [
+					"laptop_back.png",
+					""
+				],
+				"back:cuffs": [
+					"laptop_back.png",
+					""
+				],
+				"back:gag": [
+					"laptop_back.png",
+					""
+				],
+				"back:whip": [
+					"laptop_back.png",
+					""
+				],
+				"back:heart": [
+					"laptop_back.png",
+					""
 				]
 			}
 		}
