@@ -31,6 +31,9 @@
 				],
 				"long": [
 					"t-shirt_long.png"
+				],
+				"cropped": [
+					"t-shirt-cropped.png"
 				]
 			}
 		},
@@ -146,6 +149,9 @@
 				],
 				"long": [
 					"t-shirt_long.png"
+				],
+				"cropped": [
+					"t-shirt-cropped.png"
 				]
 			}
 		},

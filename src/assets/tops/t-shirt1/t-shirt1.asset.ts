@@ -74,6 +74,10 @@ DefineAsset({
 					id: 'long',
 					name: 'Long Sleeves',
 				},
+				{
+					id: 'cropped',
+					name: 'Cropped',
+				},
 			],
 		},
 	},
