@@ -7,7 +7,7 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "Bracelets front",
+			"name": "front_mesh",
 			"points": "body",
 			"automeshTemplate": "aboveBody",
 			"disabledTemplateParts": [
@@ -16,7 +16,7 @@
 			],
 			"graphicalLayers": [
 				{
-					"name": "",
+					"name": "bracelets",
 					"colorizationKey": "bracelets"
 				}
 			],
@@ -33,7 +33,7 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "Bracelets back",
+			"name": "back_mesh",
 			"points": "body",
 			"automeshTemplate": "belowBody",
 			"disabledTemplateParts": [
@@ -42,7 +42,7 @@
 			],
 			"graphicalLayers": [
 				{
-					"name": "",
+					"name": "bracelets",
 					"colorizationKey": "bracelets"
 				}
 			],
