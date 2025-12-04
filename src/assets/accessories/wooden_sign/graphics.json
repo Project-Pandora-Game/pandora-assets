@@ -6,31 +6,31 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "ropeFront",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "rope",
-			"image": {
-				"image": "sign_rope_front.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "sign",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "sign",
-			"image": {
-				"image": "sign.png",
-				"overrides": []
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "rope_back",
+					"colorizationKey": "rope"
+				},
+				{
+					"name": "sign",
+					"colorizationKey": "sign"
+				},
+				{
+					"name": "rope_front",
+					"colorizationKey": "rope"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"sign_rope_front.png",
+					"sign.png",
+					"sign_rope_front.png"
+				]
 			}
 		},
 		{
@@ -52,41 +52,27 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "ropeFront",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "back_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "rope",
-			"image": {
-				"image": "sign_rope_front.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "ropeNeckBack",
-			"priority": "BELOW_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "rope",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "sign_rope_back.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "rope",
+					"colorizationKey": "rope"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"front": [
+					""
+				],
+				"back": [
+					"sign_rope_back.png"
 				]
 			}
 		}
