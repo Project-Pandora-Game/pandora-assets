@@ -63,8 +63,12 @@ DefineAsset({
 		},
 		sleeves: {
 			type: 'typed',
-			name: 'T-Shirt Type',
+			name: 'T-Shirt Sleeves Length',
 			variants: [
+				{
+					id: 'sleeveless',
+					name: 'Sleeveless',
+				},
 				{
 					id: 'short',
 					name: 'Short Sleeves',
@@ -73,6 +77,21 @@ DefineAsset({
 				{
 					id: 'long',
 					name: 'Long Sleeves',
+				},
+			],
+		},
+		type: {
+			type: 'typed',
+			name: 'T-Shirt Type',
+			variants: [
+				{
+					id: 'regular',
+					name: 'Regular',
+					default: true,
+				},
+				{
+					id: 'cropped',
+					name: 'Cropped',
 				},
 			],
 		},
@@ -117,6 +136,13 @@ DefineAsset({
 				copyrightHolder: 'Rawpixel.com & Julie de Graag',
 				editedBy: 'ClaudiaMia',
 				license: 'CC BY',
+			},
+			{
+				part: 'separated sleeves from top and made cropped/sleeveless variants',
+				source: 'Self-Made',
+				copyrightHolder: 'Freyja',
+				editedBy: 'Freyja',
+				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
 	},
