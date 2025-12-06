@@ -6,47 +6,31 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front frills front view",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "ribbon",
-			"image": {
-				"image": "neck_ribbon_l2.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "front",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "frills",
-			"image": {
-				"image": "neck_ribbon.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "front frills",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "ribbon",
-			"image": {
-				"image": "neck_ribbon_l2.png",
-				"overrides": []
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "front_ribbon",
+					"colorizationKey": "ribbon"
+				},
+				{
+					"name": "front_frills",
+					"colorizationKey": "frills"
+				},
+				{
+					"name": "ribbon",
+					"colorizationKey": "ribbon"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"neck_ribbon_l2.png",
+					"neck_ribbon.png",
+					"neck_ribbon_l2.png"
+				]
 			}
 		}
 	]

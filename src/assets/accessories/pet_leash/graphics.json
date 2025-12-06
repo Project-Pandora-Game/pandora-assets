@@ -6,68 +6,34 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "chain body",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "leash",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "pet_leash_hanging_leash.png",
-						"condition": [
-							[
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "hanging"
-								}
-							]
-						]
-					},
-					{
-						"image": "pet_leash_fading.png",
-						"condition": [
-							[
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "held"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "handle body",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "pet_leash_hanging_handle.png",
-						"condition": [
-							[
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "hanging"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "leash_body",
+					"colorizationKey": "leash"
+				},
+				{
+					"name": "handle",
+					"colorizationKey": "handle"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "collarConfig"
+				}
+			],
+			"imageMap": {
+				"hanging": [
+					"pet_leash_hanging_leash.png",
+					"pet_leash_hanging_handle.png"
+				],
+				"held": [
+					"pet_leash_fading.png",
+					""
 				]
 			}
 		}
