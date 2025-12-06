@@ -22,15 +22,15 @@
 			"variables": [
 				{
 					"type": "typedModule",
-					"module": "sleeves"
+					"module": "type"
 				}
 			],
 			"imageMap": {
-				"short": [
+				"regular": [
 					"t-shirt.png"
 				],
-				"long": [
-					"t-shirt_long.png"
+				"cropped": [
+					"t-shirt-cropped.png"
 				]
 			}
 		},
@@ -137,15 +137,15 @@
 			"variables": [
 				{
 					"type": "typedModule",
-					"module": "sleeves"
+					"module": "type"
 				}
 			],
 			"imageMap": {
-				"short": [
+				"regular": [
 					"t-shirt.png"
 				],
-				"long": [
-					"t-shirt_long.png"
+				"cropped": [
+					"t-shirt-cropped.png"
 				]
 			}
 		},
@@ -194,6 +194,78 @@
 				],
 				"noPrint": [
 					""
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Sleeves Front",
+			"points": "body",
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Sleeves",
+					"colorizationKey": "shirt"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "sleeves"
+				}
+			],
+			"imageMap": {
+				"sleeveless": [
+					""
+				],
+				"short": [
+					"sleeves_short.png"
+				],
+				"long": [
+					"sleeves_long.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Sleeves Back",
+			"points": "body",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Sleeves",
+					"colorizationKey": "shirt"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "sleeves"
+				}
+			],
+			"imageMap": {
+				"sleeveless": [
+					""
+				],
+				"short": [
+					"sleeves_short.png"
+				],
+				"long": [
+					"sleeves_long.png"
 				]
 			}
 		}
