@@ -30,22 +30,47 @@ DefineAsset({
 					id: 'crown',
 					name: 'Crown',
 					default: true,
+					properties: {
+						stateFlags: {
+							provides: ['small_print'],
+						},
+					},
 				},
 				{
 					id: 'kissingSmilie',
 					name: 'Kissing Smilie',
+					properties: {
+						stateFlags: {
+							provides: ['small_print'],
+						},
+					},
 				},
 				{
 					id: 'afk',
 					name: 'AFK',
+					properties: {
+						stateFlags: {
+							provides: ['small_print'],
+						},
+					},
 				},
 				{
 					id: 'cc',
 					name: 'CC art',
+					properties: {
+						stateFlags: {
+							provides: ['small_print'],
+						},
+					},
 				},
 				{
 					id: 'catHead',
 					name: 'Cat Head',
+					properties: {
+						stateFlags: {
+							provides: ['small_print'],
+						},
+					},
 				},
 				{
 					id: 'sittingCat',
@@ -54,10 +79,20 @@ DefineAsset({
 				{
 					id: 'flogger',
 					name: 'Flogger',
+					properties: {
+						stateFlags: {
+							provides: ['small_print'],
+						},
+					},
 				},
 				{
 					id: 'noPrint',
 					name: 'No Print',
+					properties: {
+						stateFlags: {
+							provides: ['small_print'],
+						},
+					},
 				},
 			],
 		},
@@ -92,6 +127,13 @@ DefineAsset({
 				{
 					id: 'cropped',
 					name: 'Cropped',
+					properties: {
+						stateFlags: {
+							requires: {
+								small_print: 'Cropped T-Shirts must have a smaller print.',
+							},
+						},
+					},
 				},
 			],
 		},
