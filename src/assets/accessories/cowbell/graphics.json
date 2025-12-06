@@ -6,15 +6,21 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "bell",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "metal",
-			"image": {
-				"image": "cowbell.png",
-				"overrides": []
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "bell_front",
+					"colorizationKey": "metal"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"cowbell.png"
+				]
 			}
 		}
 	]

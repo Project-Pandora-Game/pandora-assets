@@ -6,27 +6,37 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "patch",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "patch",
-			"image": {
-				"image": "eye_patch_left.png",
-				"overrides": [
-					{
-						"image": "eye_patch_right.png",
-						"condition": [
-							[
-								{
-									"module": "direction",
-									"operator": "=",
-									"value": "right"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "patch_front",
+					"colorizationKey": "patch"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "direction"
+				}
+			],
+			"imageMap": {
+				"front:left": [
+					"eye_patch_left.png"
+				],
+				"front:right": [
+					"eye_patch_right.png"
+				],
+				"back:left": [
+					""
+				],
+				"back:right": [
+					""
 				]
 			}
 		},
@@ -35,25 +45,27 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "patch_back",
-			"priority": "BELOW_BACK_HAIR",
+			"type": "autoMesh",
+			"name": "back_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "patch",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "eye_patch_back.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "eye_patch",
+					"colorizationKey": "patch"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"front": [
+					""
+				],
+				"back": [
+					"eye_patch_back.png"
 				]
 			}
 		}

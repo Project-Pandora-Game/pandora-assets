@@ -6,31 +6,38 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front",
-			"priority": "ABOVE_ARM_LEFT",
+			"type": "autoMesh",
+			"name": "front_mesh",
 			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"automeshTemplate": "aboveBodyMirror",
+			"disabledTemplateParts": [
+				"body",
+				"legs"
 			],
-			"mirror": 1,
-			"colorizationKey": "frills",
-			"image": {
-				"image": "frilly_bracelets.png",
-				"overrides": [
-					{
-						"image": "frilly_bracelets_up.png",
-						"condition": [
-							[
-								{
-									"module": "braceState",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "front_frills",
+					"colorizationKey": "frills"
+				},
+				{
+					"name": "front_bracelet",
+					"colorizationKey": "bracelets"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "braceState"
+				}
+			],
+			"imageMap": {
+				"up": [
+					"frilly_bracelets_up.png",
+					"frilly_bracelets_up_l2.png"
+				],
+				"down": [
+					"frilly_bracelets.png",
+					"frilly_bracelets_l2.png"
 				]
 			}
 		},
@@ -39,97 +46,38 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front frills",
-			"priority": "ABOVE_ARM_LEFT",
+			"type": "autoMesh",
+			"name": "back_mesh",
 			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"automeshTemplate": "belowBodyMirror",
+			"disabledTemplateParts": [
+				"body",
+				"legs"
 			],
-			"mirror": 1,
-			"colorizationKey": "bracelets",
-			"image": {
-				"image": "frilly_bracelets_l2.png",
-				"overrides": [
-					{
-						"image": "frilly_bracelets_up_l2.png",
-						"condition": [
-							[
-								{
-									"module": "braceState",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "back",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"graphicalLayers": [
+				{
+					"name": "back_frills",
+					"colorizationKey": "frills"
+				},
+				{
+					"name": "back_bracelet",
+					"colorizationKey": "bracelets"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "frills",
-			"image": {
-				"image": "frilly_bracelets.png",
-				"overrides": [
-					{
-						"image": "frilly_bracelets_up.png",
-						"condition": [
-							[
-								{
-									"module": "braceState",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "back frills",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "braceState"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "bracelets",
-			"image": {
-				"image": "frilly_bracelets_l2.png",
-				"overrides": [
-					{
-						"image": "frilly_bracelets_up_l2.png",
-						"condition": [
-							[
-								{
-									"module": "braceState",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					}
+			"imageMap": {
+				"up": [
+					"frilly_bracelets_up.png",
+					"frilly_bracelets_up_l2.png"
+				],
+				"down": [
+					"frilly_bracelets.png",
+					"frilly_bracelets_l2.png"
 				]
 			}
 		}
