@@ -6,15 +6,21 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "cloth",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "cloth",
-			"image": {
-				"image": "cloth_blindfold.png",
-				"overrides": []
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "cloth",
+					"colorizationKey": "cloth"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"cloth_blindfold.png"
+				]
 			}
 		},
 		{
@@ -22,15 +28,21 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "cloth back",
-			"priority": "BELOW_BACK_HAIR",
+			"type": "autoMesh",
+			"name": "back_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "cloth",
-			"image": {
-				"image": "cloth_blindfold_back.png",
-				"overrides": []
+			"automeshTemplate": "belowBackHair",
+			"graphicalLayers": [
+				{
+					"name": "cloth",
+					"colorizationKey": "cloth"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"cloth_blindfold_back.png"
+				]
 			}
 		}
 	]

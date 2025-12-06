@@ -6,15 +6,41 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "collarFront",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "collar",
-			"image": {
-				"image": "steel_sphere_collar.png",
-				"overrides": []
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "collar",
+					"colorizationKey": "collar"
+				},
+				{
+					"name": "sphere",
+					"colorizationKey": "sphere"
+				},
+				{
+					"name": "ring",
+					"colorizationKey": "ring"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "collarConfig"
+				}
+			],
+			"imageMap": {
+				"collar": [
+					"steel_sphere_collar.png",
+					"steel_sphere.png",
+					""
+				],
+				"ring": [
+					"steel_sphere_collar.png",
+					"steel_sphere.png",
+					"steel_sphere_collar_ring.png"
+				]
 			}
 		},
 		{
@@ -22,75 +48,25 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "collarBack",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "back_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "collar",
-			"image": {
-				"image": "steel_sphere_collar_back.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "sphereFront",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "sphere",
-			"image": {
-				"image": "steel_sphere.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "sphereBack",
-			"priority": "BELOW_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "sphere",
-			"image": {
-				"image": "steel_sphere_back.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "ring",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "ring",
-			"image": {
-				"image": "steel_sphere_collar_ring.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "collar"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBackHair",
+			"graphicalLayers": [
+				{
+					"name": "collar",
+					"colorizationKey": "collar"
+				},
+				{
+					"name": "sphere",
+					"colorizationKey": "sphere"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"steel_sphere_collar_back.png",
+					"steel_sphere_back.png"
 				]
 			}
 		}

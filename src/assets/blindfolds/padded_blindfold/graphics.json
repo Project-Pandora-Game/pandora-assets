@@ -6,15 +6,30 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "straps",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "straps",
-			"image": {
-				"image": "blindfold_straps.png",
-				"overrides": []
+			"type": "autoMesh",
+			"name": "front_mesh",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "straps",
+					"colorizationKey": "straps"
+				},
+				{
+					"name": "base"
+				},
+				{
+					"name": "cover",
+					"colorizationKey": "blindfold"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"blindfold_straps.png",
+					"blindfold_base.png",
+					"blindfold_cover.png"
+				]
 			}
 		},
 		{
@@ -22,61 +37,25 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "base",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"image": {
-				"image": "blindfold_base.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "base",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "blindfold",
-			"image": {
-				"image": "blindfold_cover.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "straps back",
-			"priority": "BELOW_BACK_HAIR",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "straps",
-			"image": {
-				"image": "blindfold_straps_back.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "buckle",
-			"priority": "BELOW_BACK_HAIR",
-			"points": "body",
-			"mirror": 0,
-			"image": {
-				"image": "blindfold_buckle_back.png",
-				"overrides": []
+			"type": "autoMesh",
+			"name": "back_mesh",
+			"points": "static",
+			"automeshTemplate": "belowBackHair",
+			"graphicalLayers": [
+				{
+					"name": "straps",
+					"colorizationKey": "straps"
+				},
+				{
+					"name": "buckle"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"blindfold_straps_back.png",
+					"blindfold_buckle_back.png"
+				]
 			}
 		}
 	]

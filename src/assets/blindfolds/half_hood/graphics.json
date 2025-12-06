@@ -6,34 +6,20 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "hood",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
+			"type": "autoMesh",
+			"name": "front_mesh",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "hood",
+					"colorizationKey": "hood"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "hood",
-			"image": {
-				"image": "half_hood.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"variables": [],
+			"imageMap": {
+				"": [
+					"half_hood.png"
 				]
 			}
 		},
@@ -42,51 +28,26 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "hood back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
+			"type": "autoMesh",
+			"name": "back_mesh",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "hood",
+					"colorizationKey": "hood"
+				},
+				{
+					"name": "zipper",
+					"colorizationKey": "zipper"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "hood",
-			"image": {
-				"image": "half_hood_back.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
+			"variables": [],
+			"imageMap": {
+				"": [
+					"half_hood_back.png",
+					"half_hood_zipper.png"
 				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "hood back zipper",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "zipper",
-			"image": {
-				"image": "half_hood_zipper.png",
-				"overrides": []
 			}
 		}
 	]
