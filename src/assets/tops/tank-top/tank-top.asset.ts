@@ -39,7 +39,7 @@ DefineAsset({
 		},
 	},
 	ownership: {
-		responsibleContributor: 'Freyja <>',
+		responsibleContributor: 'Freyja <247626786+freyja-veritas@users.noreply.github.com>',
 		credits: ['Freyja'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
