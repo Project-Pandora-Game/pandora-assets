@@ -6,40 +6,21 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "ring leather belt ring",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front_mesh_ring",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "ring",
-			"image": {
-				"image": "ring_leather_belt_ring.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "ring leather belt front",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "ring",
+					"colorizationKey": "ring"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "belt",
-			"image": {
-				"image": "ring_leather_belt.png",
-				"overrides": []
+			"variables": [],
+			"imageMap": {
+				"": [
+					"ring_leather_belt_ring.png"
+				]
 			}
 		},
 		{
@@ -47,60 +28,56 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "ring leather belt front (2)",
-			"priority": "ABOVE_LEG_RIGHT",
+			"type": "autoMesh",
+			"name": "front_mesh_belt",
 			"points": "body",
-			"pointType": [
-				"bodyleg_r",
-				"leg_r"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
 			],
-			"mirror": 0,
-			"colorizationKey": "belt",
-			"image": {
-				"image": "ring_leather_belt.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "ring leather belt rivets front",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "rivets",
-			"image": {
-				"image": "ring_leather_belt_rivets.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "ring leather belt back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
+			"graphicalLayers": [
+				{
+					"name": "belt",
+					"colorizationKey": "belt"
+				},
+				{
+					"name": "rivets",
+					"colorizationKey": "rivets"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "belt",
-			"image": {
-				"image": "ring_leather_belt_back.png",
-				"overrides": []
+			"variables": [],
+			"imageMap": {
+				"": [
+					"ring_leather_belt.png",
+					"ring_leather_belt_rivets.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "back_mesh",
+			"points": "body",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"legs",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "belt",
+					"colorizationKey": "belt"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"ring_leather_belt_back.png"
+				]
 			}
 		}
 	]
