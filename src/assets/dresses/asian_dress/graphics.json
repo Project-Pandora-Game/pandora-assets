@@ -12,7 +12,7 @@
 			"automeshTemplate": "aboveBody",
 			"graphicalLayers": [
 				{
-					"name": "",
+					"name": "dress",
 					"colorizationKey": "dress"
 				}
 			],
@@ -20,6 +20,42 @@
 			"imageMap": {
 				"": [
 					"asian_dress_front.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "front_pattern",
+			"points": "skirt_static",
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "pattern",
+					"colorizationKey": "pattern"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "pattern"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"dragon": [
+					"asian_dress_front_dragon.png"
+				],
+				"lotus": [
+					"asian_dress_front_lotus.png"
 				]
 			}
 		},
@@ -92,7 +128,7 @@
 			"automeshTemplate": "belowBody",
 			"graphicalLayers": [
 				{
-					"name": "",
+					"name": "dress",
 					"colorizationKey": "dress"
 				}
 			],
@@ -100,6 +136,42 @@
 			"imageMap": {
 				"": [
 					"asian_dress_back.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "back_pattern",
+			"points": "skirt_static",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "pattern",
+					"colorizationKey": "pattern"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "pattern"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"dragon": [
+					"asian_dress_back_dragon.png"
+				],
+				"lotus": [
+					"asian_dress_back_lotus.png"
 				]
 			}
 		}

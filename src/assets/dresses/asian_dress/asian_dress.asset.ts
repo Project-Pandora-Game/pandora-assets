@@ -8,6 +8,32 @@ DefineAsset({
 			name: 'Dress',
 			default: '#E54D99',
 		},
+		pattern: {
+			name: 'Pattern',
+			default: '#EEEEEE',
+		},
+	},
+	modules: {
+		pattern:
+		{
+			type: 'typed',
+			name: 'Pattern',
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'dragon',
+					name: 'Dragon',
+				},
+				{
+					id: 'lotus',
+					name: 'Lotus',
+				},
+			],
+		},
 	},
 	preview: 'preview.png',
 	attributes: {
@@ -35,6 +61,20 @@ DefineAsset({
 				copyrightHolder: 'ClaudiaMia',
 				editedBy: 'ClaudiaMia',
 				license: 'Pandora-Use-Only-v1-or-later',
+			},
+			{
+				part: 'Dragon-Pattern',
+				copyrightHolder: 'Image by https://rawpixel.com',
+				source: 'https://www.rawpixel.com/image/7647505/vector-cartoon-illustrations-animal',
+				license: 'CC0',
+				editedBy: 'Sandrine',
+			},
+			{
+				part: 'Lotus-Pattern',
+				copyrightHolder: 'Image by https://rawpixel.com',
+				source: 'https://www.rawpixel.com/image/21173737/png-elegant-red-lotus-design',
+				license: 'CC0',
+				editedBy: 'Sandrine',
 			},
 		],
 	},
