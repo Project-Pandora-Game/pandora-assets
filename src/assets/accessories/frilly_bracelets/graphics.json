@@ -9,7 +9,7 @@
 			"type": "autoMesh",
 			"name": "front_mesh",
 			"points": "body",
-			"automeshTemplate": "aboveBodyMirror",
+			"automeshTemplate": "aboveBody",
 			"disabledTemplateParts": [
 				"body",
 				"legs"
@@ -49,7 +49,7 @@
 			"type": "autoMesh",
 			"name": "back_mesh",
 			"points": "body",
-			"automeshTemplate": "belowBodyMirror",
+			"automeshTemplate": "belowBody",
 			"disabledTemplateParts": [
 				"body",
 				"legs"
