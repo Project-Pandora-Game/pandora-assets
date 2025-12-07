@@ -7,20 +7,34 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "front_mesh",
+			"name": "front",
 			"points": "static",
 			"automeshTemplate": "aboveBody",
 			"graphicalLayers": [
 				{
-					"name": "necklace_chain",
+					"name": "chain",
 					"colorizationKey": "chain"
-				},
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"necklace_chain_front.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "key",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
 				{
-					"name": "necklace",
-					"colorizationKey": "ring"
-				},
-				{
-					"name": "necklace_key",
+					"name": "key",
 					"colorizationKey": "key"
 				}
 			],
@@ -32,13 +46,9 @@
 			],
 			"imageMap": {
 				"key_m": [
-					"necklace_chain_front.png",
-					"necklace_ring.png",
 					"necklace_key_modern.png"
 				],
 				"key_o": [
-					"necklace_chain_front.png",
-					"necklace_ring.png",
 					"necklace_key_old.png"
 				]
 			}
@@ -49,12 +59,34 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "back_mesh",
+			"name": "ring",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "ring",
+					"colorizationKey": "ring"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"necklace_ring.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "back",
 			"points": "static",
 			"automeshTemplate": "belowBody",
 			"graphicalLayers": [
 				{
-					"name": "necklace_chain",
+					"name": "chain",
 					"colorizationKey": "chain"
 				}
 			],
