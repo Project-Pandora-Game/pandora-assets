@@ -7,16 +7,68 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "front_mesh",
+			"name": "body",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "chain",
+					"colorizationKey": "chains"
+				},
+				{
+					"name": "handle",
+					"colorizationKey": "handle"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "collarConfig"
+				}
+			],
+			"imageMap": {
+				"hanging": [
+					"chain_leash_hanging_chain.png",
+					"chain_leash_hanging_handle.png"
+				],
+				"left": [
+					"",
+					""
+				],
+				"right": [
+					"",
+					""
+				],
+				"left_up": [
+					"",
+					""
+				],
+				"right_up": [
+					"",
+					""
+				],
+				"held": [
+					"chain_leash_hanging_fading.png",
+					""
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "front",
 			"points": "static",
 			"automeshTemplate": "overlay",
 			"graphicalLayers": [
 				{
-					"name": "front_chain",
+					"name": "chain",
 					"colorizationKey": "chains"
 				},
 				{
-					"name": "front_handle",
+					"name": "handle",
 					"colorizationKey": "handle"
 				}
 			],
@@ -31,8 +83,8 @@
 			],
 			"imageMap": {
 				"front:hanging": [
-					"chain_leash_hanging_chain.png",
-					"chain_leash_hanging_handle.png"
+					"",
+					""
 				],
 				"front:left": [
 					"chain_leash_stand_stand_left_chain.png",
@@ -51,12 +103,12 @@
 					"chain_leash_stand_kneel_right_handle.png"
 				],
 				"front:held": [
-					"chain_leash_hanging_fading.png",
+					"",
 					""
 				],
 				"back:hanging": [
-					"chain_leash_hanging_chain.png",
-					"chain_leash_hanging_handle.png"
+					"",
+					""
 				],
 				"back:left": [
 					"chain_leash_stand_stand_right_chain.png",
@@ -75,7 +127,7 @@
 					"chain_leash_stand_kneel_left_handle.png"
 				],
 				"back:held": [
-					"chain_leash_hanging_fading.png",
+					"",
 					""
 				]
 			}
