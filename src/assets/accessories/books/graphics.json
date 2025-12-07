@@ -6,143 +6,138 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "reading",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front_reading_mesh",
 			"points": "static",
-			"mirror": 0,
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "books_open_lap.png",
-						"condition": [
-							[
-								{
-									"module": "read",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "balancing",
-			"priority": "FRONT_HAIR",
-			"points": "static",
-			"mirror": 0,
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "books_head_front.png",
-						"condition": [
-							[
-								{
-									"module": "balance",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "balancing back",
-			"priority": "BACK_HAIR",
-			"points": "static",
-			"mirror": 0,
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "books_head_back.png",
-						"condition": [
-							[
-								{
-									"module": "balance",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "hold front",
-			"priority": "ABOVE_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "book_reading"
+				}
 			],
-			"mirror": 1,
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "books_hold_1_front.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "one"
-								}
-							]
-						]
-					},
-					{
-						"image": "books_hold_2_front.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "two"
-								}
-							]
-						]
-					},
-					{
-						"image": "books_hold_3_front.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "three"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "read"
+				}
+			],
+			"imageMap": {
+				"yes": [
+					"books_open_lap.png"
+				],
+				"no": [
+					""
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "front_balance_mesh",
+			"points": "static",
+			"automeshTemplate": "aboveFrontHair",
+			"graphicalLayers": [
+				{
+					"name": "balance_front"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "balance"
+				}
+			],
+			"imageMap": {
+				"front:yes": [
+					"books_head_front.png"
+				],
+				"back:yes": [
+					""
+				],
+				"front:no": [
+					""
+				],
+				"back:no": [
+					""
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "back_balance_mesh",
+			"points": "static",
+			"automeshTemplate": "belowBackHair",
+			"graphicalLayers": [
+				{
+					"name": "balance_back"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "balance"
+				}
+			],
+			"imageMap": {
+				"front:yes": [
+					""
+				],
+				"back:yes": [
+					"books_head_back.png"
+				],
+				"front:no": [
+					""
+				],
+				"back:no": [
+					""
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "front_hold_mesh",
+			"points": "handheld",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "hold_front"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "handUsage_l"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"one": [
+					"books_hold_1_front.png"
+				],
+				"two": [
+					"books_hold_2_front.png"
+				],
+				"three": [
+					"books_hold_3_front.png"
 				]
 			}
 		}

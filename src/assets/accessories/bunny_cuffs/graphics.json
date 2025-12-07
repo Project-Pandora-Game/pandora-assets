@@ -6,19 +6,30 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "cuffsFront",
-			"priority": "ABOVE_ARM_LEFT",
+			"type": "autoMesh",
+			"name": "front_mesh",
 			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"body",
+				"legs"
 			],
-			"mirror": 1,
-			"colorizationKey": "cuffs",
-			"image": {
-				"image": "bunny_cuffs.png",
-				"overrides": []
+			"graphicalLayers": [
+				{
+					"name": "cuffs_front",
+					"colorizationKey": "cuffs"
+				},
+				{
+					"name": "buttons_front",
+					"colorizationKey": "buttons"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"bunny_cuffs.png",
+					"bunny_cuffs_button.png"
+				]
 			}
 		},
 		{
@@ -26,59 +37,30 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "buttonsFront",
-			"priority": "ABOVE_ARM_LEFT",
+			"type": "autoMesh",
+			"name": "back_mesh",
 			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"body",
+				"legs"
 			],
-			"mirror": 1,
-			"colorizationKey": "buttons",
-			"image": {
-				"image": "bunny_cuffs_button.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "cuffsBack",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"graphicalLayers": [
+				{
+					"name": "cuffs_back",
+					"colorizationKey": "cuffs"
+				},
+				{
+					"name": "buttons_back",
+					"colorizationKey": "buttons"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "cuffs",
-			"image": {
-				"image": "bunny_cuffs.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "buttonsBack",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "buttons",
-			"image": {
-				"image": "bunny_cuffs_button.png",
-				"overrides": []
+			"variables": [],
+			"imageMap": {
+				"": [
+					"bunny_cuffs.png",
+					"bunny_cuffs_button.png"
+				]
 			}
 		}
 	]

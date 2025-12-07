@@ -6,376 +6,77 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "chain body",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "chains",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "chain_leash_hanging_chain.png",
-						"condition": [
-							[
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "hanging"
-								}
-							]
-						]
-					},
-					{
-						"image": "chain_leash_hanging_fading.png",
-						"condition": [
-							[
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "held"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "handle body",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "chain_leash_hanging_handle.png",
-						"condition": [
-							[
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "hanging"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "chain front",
-			"priority": "OVERLAY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "chains",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "chain_leash_stand_stand_left_chain.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "left"
-								}
-							]
-						]
-					},
-					{
-						"image": "chain_leash_stand_stand_right_chain.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "right"
-								}
-							]
-						]
-					},
-					{
-						"image": "chain_leash_stand_kneel_left_chain.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "left_up"
-								}
-							]
-						]
-					},
-					{
-						"image": "chain_leash_stand_kneel_right_chain.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "right_up"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "handle front",
-			"priority": "OVERLAY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "chain_leash_stand_stand_left_handle.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "left"
-								}
-							]
-						]
-					},
-					{
-						"image": "chain_leash_stand_stand_right_handle.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "right"
-								}
-							]
-						]
-					},
-					{
-						"image": "chain_leash_stand_kneel_left_handle.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "left_up"
-								}
-							]
-						]
-					},
-					{
-						"image": "chain_leash_stand_kneel_right_handle.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "right_up"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "chain back",
-			"priority": "OVERLAY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "chains",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "chain_leash_stand_stand_left_chain.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "right"
-								}
-							]
-						]
-					},
-					{
-						"image": "chain_leash_stand_stand_right_chain.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "left"
-								}
-							]
-						]
-					},
-					{
-						"image": "chain_leash_stand_kneel_left_chain.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "right_up"
-								}
-							]
-						]
-					},
-					{
-						"image": "chain_leash_stand_kneel_right_chain.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "left_up"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "handle back",
-			"priority": "OVERLAY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "chain_leash_stand_stand_left_handle.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "right"
-								}
-							]
-						]
-					},
-					{
-						"image": "chain_leash_stand_stand_right_handle.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "left"
-								}
-							]
-						]
-					},
-					{
-						"image": "chain_leash_stand_kneel_left_handle.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "right_up"
-								}
-							]
-						]
-					},
-					{
-						"image": "chain_leash_stand_kneel_right_handle.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "collarConfig",
-									"operator": "=",
-									"value": "left_up"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "overlay",
+			"graphicalLayers": [
+				{
+					"name": "front_chain",
+					"colorizationKey": "chains"
+				},
+				{
+					"name": "front_handle",
+					"colorizationKey": "handle"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "collarConfig"
+				}
+			],
+			"imageMap": {
+				"front:hanging": [
+					"chain_leash_hanging_chain.png",
+					"chain_leash_hanging_handle.png"
+				],
+				"front:left": [
+					"chain_leash_stand_stand_left_chain.png",
+					"chain_leash_stand_stand_left_handle.png"
+				],
+				"front:right": [
+					"chain_leash_stand_stand_right_chain.png",
+					"chain_leash_stand_stand_right_handle.png"
+				],
+				"front:left_up": [
+					"chain_leash_stand_kneel_left_chain.png",
+					"chain_leash_stand_kneel_left_handle.png"
+				],
+				"front:right_up": [
+					"chain_leash_stand_kneel_right_chain.png",
+					"chain_leash_stand_kneel_right_handle.png"
+				],
+				"front:held": [
+					"chain_leash_hanging_fading.png",
+					""
+				],
+				"back:hanging": [
+					"chain_leash_hanging_chain.png",
+					"chain_leash_hanging_handle.png"
+				],
+				"back:left": [
+					"chain_leash_stand_stand_right_chain.png",
+					"chain_leash_stand_stand_right_handle.png"
+				],
+				"back:right": [
+					"chain_leash_stand_stand_left_chain.png",
+					"chain_leash_stand_stand_left_handle.png"
+				],
+				"back:left_up": [
+					"chain_leash_stand_kneel_right_chain.png",
+					"chain_leash_stand_kneel_right_handle.png"
+				],
+				"back:right_up": [
+					"chain_leash_stand_kneel_left_chain.png",
+					"chain_leash_stand_kneel_left_handle.png"
+				],
+				"back:held": [
+					"chain_leash_hanging_fading.png",
+					""
 				]
 			}
 		}
