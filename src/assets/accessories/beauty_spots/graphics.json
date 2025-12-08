@@ -9,7 +9,7 @@
 			"type": "autoMesh",
 			"name": "eyes_mesh",
 			"points": "static",
-			"automeshTemplate": "aboveBody",
+			"automeshTemplate": "body",
 			"disabledTemplateParts": [
 				"body",
 				"arms",
@@ -47,7 +47,7 @@
 			"type": "autoMesh",
 			"name": "lips_mesh",
 			"points": "static",
-			"automeshTemplate": "aboveBody",
+			"automeshTemplate": "body",
 			"graphicalLayers": [
 				{
 					"name": "beauty_spot_lip",
@@ -92,7 +92,7 @@
 			"type": "autoMesh",
 			"name": "chin_mesh",
 			"points": "static",
-			"automeshTemplate": "aboveBody",
+			"automeshTemplate": "body",
 			"graphicalLayers": [
 				{
 					"name": "beauty_spot_chin",
