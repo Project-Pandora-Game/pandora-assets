@@ -513,6 +513,22 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 					},
 				},
 				{
+					name: 'Arms boxed behind',
+					bones: {
+						arm_r: 85,
+						arm_l: 85,
+						elbow_r: 97,
+						elbow_l: 97,
+					},
+					optional: {
+						arms: {
+							position: 'back',
+							rotation: 'down',
+							fingers: 'fist',
+						},
+					},
+				},
+				{
 					name: 'Elbows together',
 					bones: {
 						arm_r: 104,
@@ -542,16 +558,19 @@ export const POSE_PRESETS: AssetsPosePresets<AllBones> =
 						fingers: 'spread',
 					},
 				},
-				//  TODO: Hands are under the back hair; arms need to be split at the elbows most likely
 				{
 					name: 'Hands behind head',
 					bones: {
-						arm_r: -35,
-						arm_l: -35,
-						elbow_r: -135,
-						elbow_l: -135,
+						arm_r: -31,
+						arm_l: -31,
+						elbow_r: -134,
+						elbow_l: -134,
 					},
-					arms: { position: 'back' },
+					arms: {
+						position: 'back_below_hair',
+						rotation: 'up',
+						fingers: 'spread',
+					},
 				},
 			],
 		},
