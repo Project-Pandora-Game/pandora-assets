@@ -6,84 +6,25 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "hood front",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
+			"type": "autoMesh",
+			"name": "front_mesh",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "latex_hood",
+					"colorizationKey": "hood"
+				},
+				{
+					"name": "latex_hood_reflections",
+					"colorizationKey": "reflection"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "hood",
-			"image": {
-				"image": "latex_hood_front.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "hood front reflection",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
-			],
-			"mirror": 0,
-			"colorizationKey": "reflection",
-			"image": {
-				"image": "latex_hood_reflections_front.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "hood back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
-			],
-			"mirror": 0,
-			"colorizationKey": "hood",
-			"image": {
-				"image": "latex_hood_back.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
+			"variables": [],
+			"imageMap": {
+				"": [
+					"latex_hood_front.png",
+					"latex_hood_reflections_front.png"
 				]
 			}
 		},
@@ -92,24 +33,26 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "hood back reflection",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
+			"type": "autoMesh",
+			"name": "back_mesh",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "latex_hood",
+					"colorizationKey": "hood"
+				},
+				{
+					"name": "latex_hood_reflections",
+					"colorizationKey": "reflection"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "reflection",
-			"image": {
-				"image": "latex_hood_reflections_back.png",
-				"overrides": []
+			"variables": [],
+			"imageMap": {
+				"": [
+					"latex_hood_back.png",
+					"latex_hood_reflections_back.png"
+				]
 			}
 		}
 	]
