@@ -21,6 +21,7 @@ DefineAsset({
 	preview: 'preview.png',
 	attributes: {
 		provides: [
+			'Restraint',
 			'Accessory',
 		],
 		requires: [
@@ -28,6 +29,13 @@ DefineAsset({
 		],
 	},
 	modules: {
+		lock: {
+			type: 'lockSlot',
+			name: 'Lock',
+			lockedProperties: {
+				blockAddRemove: true,
+			},
+		},
 		text: {
 			type: 'text',
 			name: 'Text',
