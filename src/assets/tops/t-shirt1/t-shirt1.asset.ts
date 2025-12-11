@@ -30,22 +30,47 @@ DefineAsset({
 					id: 'crown',
 					name: 'Crown',
 					default: true,
+					properties: {
+						stateFlags: {
+							provides: ['small_print'],
+						},
+					},
 				},
 				{
 					id: 'kissingSmilie',
 					name: 'Kissing Smilie',
+					properties: {
+						stateFlags: {
+							provides: ['small_print'],
+						},
+					},
 				},
 				{
 					id: 'afk',
 					name: 'AFK',
+					properties: {
+						stateFlags: {
+							provides: ['small_print'],
+						},
+					},
 				},
 				{
 					id: 'cc',
 					name: 'CC art',
+					properties: {
+						stateFlags: {
+							provides: ['small_print'],
+						},
+					},
 				},
 				{
 					id: 'catHead',
 					name: 'Cat Head',
+					properties: {
+						stateFlags: {
+							provides: ['small_print'],
+						},
+					},
 				},
 				{
 					id: 'sittingCat',
@@ -54,17 +79,31 @@ DefineAsset({
 				{
 					id: 'flogger',
 					name: 'Flogger',
+					properties: {
+						stateFlags: {
+							provides: ['small_print'],
+						},
+					},
 				},
 				{
 					id: 'noPrint',
 					name: 'No Print',
+					properties: {
+						stateFlags: {
+							provides: ['small_print'],
+						},
+					},
 				},
 			],
 		},
 		sleeves: {
 			type: 'typed',
-			name: 'T-Shirt Type',
+			name: 'T-Shirt Sleeves Length',
 			variants: [
+				{
+					id: 'sleeveless',
+					name: 'Sleeveless',
+				},
 				{
 					id: 'short',
 					name: 'Short Sleeves',
@@ -73,6 +112,28 @@ DefineAsset({
 				{
 					id: 'long',
 					name: 'Long Sleeves',
+				},
+			],
+		},
+		type: {
+			type: 'typed',
+			name: 'T-Shirt Type',
+			variants: [
+				{
+					id: 'regular',
+					name: 'Regular',
+					default: true,
+				},
+				{
+					id: 'cropped',
+					name: 'Cropped',
+					properties: {
+						stateFlags: {
+							requires: {
+								small_print: 'Cropped T-Shirts must have a smaller print.',
+							},
+						},
+					},
 				},
 			],
 		},
@@ -117,6 +178,13 @@ DefineAsset({
 				copyrightHolder: 'Rawpixel.com & Julie de Graag',
 				editedBy: 'ClaudiaMia',
 				license: 'CC BY',
+			},
+			{
+				part: 'separated sleeves from top and made cropped/sleeveless variants',
+				source: 'Self-Made',
+				copyrightHolder: 'Freyja',
+				editedBy: 'Freyja',
+				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
 	},
