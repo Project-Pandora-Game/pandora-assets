@@ -524,11 +524,6 @@
 					}
 				},
 				{
-					"type": "rotate",
-					"bone": "arm_r",
-					"value": -0.12
-				},
-				{
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
@@ -540,8 +535,8 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": -36,
-						"y": 30
+						"x": -25,
+						"y": 36
 					},
 					"condition": [
 						{
@@ -555,8 +550,8 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": 20,
-						"y": 0
+						"x": 18,
+						"y": 4
 					},
 					"condition": [
 						{
@@ -565,6 +560,12 @@
 							"value": 0
 						}
 					]
+				}
+			],
+			"skinning": [
+				{
+					"bone": "arm_r",
+					"weight": 0.16
 				}
 			]
 		},
@@ -585,16 +586,11 @@
 					}
 				},
 				{
-					"type": "rotate",
-					"bone": "arm_r",
-					"value": -0.7
-				},
-				{
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": -10,
-						"y": 50
+						"x": 40,
+						"y": 30
 					},
 					"condition": [
 						{
@@ -608,8 +604,8 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": 20,
-						"y": 0
+						"x": 10,
+						"y": 18
 					},
 					"condition": [
 						{
@@ -618,6 +614,12 @@
 							"value": 0
 						}
 					]
+				}
+			],
+			"skinning": [
+				{
+					"bone": "arm_r",
+					"weight": 0.7
 				}
 			]
 		},
@@ -638,16 +640,11 @@
 					}
 				},
 				{
-					"type": "rotate",
-					"bone": "arm_r",
-					"value": -0.8
-				},
-				{
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": -14,
-						"y": 46
+						"x": 40,
+						"y": 26
 					},
 					"condition": [
 						{
@@ -661,8 +658,8 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": 20,
-						"y": 0
+						"x": 6,
+						"y": 18
 					},
 					"condition": [
 						{
@@ -671,6 +668,12 @@
 							"value": 0
 						}
 					]
+				}
+			],
+			"skinning": [
+				{
+					"bone": "arm_r",
+					"weight": 0.8
 				}
 			]
 		},
@@ -689,35 +692,16 @@
 						"x": 0,
 						"y": -4
 					}
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "elbow_r",
-					"value": -0.05,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": ">",
-							"value": 0
-						}
-					]
+					"weight": 0.05
 				},
 				{
-					"type": "rotate",
-					"bone": "elbow_r",
-					"value": -0.1,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": "<",
-							"value": 0
-						}
-					]
-				},
-				{
-					"type": "rotate",
 					"bone": "arm_r",
-					"value": -1
+					"weight": 0.95
 				}
 			]
 		},
@@ -736,35 +720,16 @@
 						"x": 0,
 						"y": -4
 					}
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "elbow_r",
-					"value": -0.6,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": ">",
-							"value": 0
-						}
-					]
+					"weight": 0.15
 				},
 				{
-					"type": "rotate",
-					"bone": "elbow_r",
-					"value": -0.15,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": "<",
-							"value": 0
-						}
-					]
-				},
-				{
-					"type": "rotate",
 					"bone": "arm_r",
-					"value": -1
+					"weight": 0.85
 				}
 			]
 		},
@@ -783,35 +748,16 @@
 						"x": 0,
 						"y": -4
 					}
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "elbow_r",
-					"value": -0.6,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": ">",
-							"value": 0
-						}
-					]
+					"weight": 0.3
 				},
 				{
-					"type": "rotate",
-					"bone": "elbow_r",
-					"value": -0.15,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": "<",
-							"value": 0
-						}
-					]
-				},
-				{
-					"type": "rotate",
 					"bone": "arm_r",
-					"value": -1
+					"weight": 0.7
 				}
 			]
 		},
@@ -830,35 +776,16 @@
 						"x": 0,
 						"y": -4
 					}
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "elbow_r",
-					"value": -1.08,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": ">",
-							"value": 0
-						}
-					]
+					"weight": 0.5
 				},
 				{
-					"type": "rotate",
-					"bone": "elbow_r",
-					"value": -0.6,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": "<",
-							"value": 0
-						}
-					]
-				},
-				{
-					"type": "rotate",
 					"bone": "arm_r",
-					"value": -1
+					"weight": 0.5
 				}
 			]
 		},
@@ -877,35 +804,16 @@
 						"x": 0,
 						"y": -4
 					}
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "elbow_r",
-					"value": -1,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": ">",
-							"value": 0
-						}
-					]
+					"weight": 0.7
 				},
 				{
-					"type": "rotate",
-					"bone": "elbow_r",
-					"value": -0.8,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": "<",
-							"value": 0
-						}
-					]
-				},
-				{
-					"type": "rotate",
 					"bone": "arm_r",
-					"value": -1
+					"weight": 0.3
 				}
 			]
 		},
@@ -1068,35 +976,16 @@
 						"x": 0,
 						"y": 4
 					}
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "elbow_r",
-					"value": -0.8,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": ">",
-							"value": 0
-						}
-					]
+					"weight": 0.7
 				},
 				{
-					"type": "rotate",
-					"bone": "elbow_r",
-					"value": -1,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": "<",
-							"value": 0
-						}
-					]
-				},
-				{
-					"type": "rotate",
 					"bone": "arm_r",
-					"value": -1
+					"weight": 0.3
 				}
 			]
 		},
@@ -1115,35 +1004,16 @@
 						"x": 0,
 						"y": 4
 					}
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "elbow_r",
-					"value": -0.6,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": ">",
-							"value": 0
-						}
-					]
+					"weight": 0.5
 				},
 				{
-					"type": "rotate",
-					"bone": "elbow_r",
-					"value": -1.08,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": "<",
-							"value": 0
-						}
-					]
-				},
-				{
-					"type": "rotate",
 					"bone": "arm_r",
-					"value": -1
+					"weight": 0.5
 				}
 			]
 		},
@@ -1162,35 +1032,16 @@
 						"x": 0,
 						"y": 4
 					}
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "elbow_r",
-					"value": -0.15,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": ">",
-							"value": 0
-						}
-					]
+					"weight": 0.3
 				},
 				{
-					"type": "rotate",
-					"bone": "elbow_r",
-					"value": -0.6,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": "<",
-							"value": 0
-						}
-					]
-				},
-				{
-					"type": "rotate",
 					"bone": "arm_r",
-					"value": -1
+					"weight": 0.7
 				}
 			]
 		},
@@ -1209,35 +1060,16 @@
 						"x": 0,
 						"y": 4
 					}
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "elbow_r",
-					"value": -0.15,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": ">",
-							"value": 0
-						}
-					]
+					"weight": 0.1
 				},
 				{
-					"type": "rotate",
-					"bone": "elbow_r",
-					"value": -0.6,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": "<",
-							"value": 0
-						}
-					]
-				},
-				{
-					"type": "rotate",
 					"bone": "arm_r",
-					"value": -1
+					"weight": 0.9
 				}
 			]
 		},
@@ -1256,35 +1088,35 @@
 						"x": 0,
 						"y": 4
 					}
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "elbow_r",
-					"value": -0.1,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": ">",
-							"value": 0
-						}
-					]
+					"weight": 0.05
 				},
 				{
-					"type": "rotate",
-					"bone": "elbow_r",
-					"value": -0.05,
-					"condition": [
-						{
-							"bone": "elbow_r",
-							"operator": "<",
-							"value": 0
-						}
-					]
-				},
-				{
-					"type": "rotate",
 					"bone": "arm_r",
-					"value": -1
+					"weight": 0.95
+				}
+			]
+		},
+		{
+			"pos": [
+				280,
+				434
+			],
+			"mirror": true,
+			"pointType": "arm_r",
+			"transforms": [],
+			"skinning": [
+				{
+					"bone": "elbow_r",
+					"weight": 0.1
+				},
+				{
+					"bone": "arm_r",
+					"weight": 0.9
 				}
 			]
 		},
@@ -1298,8 +1130,12 @@
 			"transforms": [],
 			"skinning": [
 				{
+					"bone": "elbow_r",
+					"weight": 0.3
+				},
+				{
 					"bone": "arm_r",
-					"weight": 1
+					"weight": 0.7
 				}
 			]
 		},
@@ -3050,35 +2886,11 @@
 					}
 				},
 				{
-					"type": "rotate",
-					"bone": "arm_r",
-					"value": -1,
-					"condition": [
-						{
-							"bone": "arm_r",
-							"operator": "<",
-							"value": 0
-						}
-					]
-				},
-				{
-					"type": "rotate",
-					"bone": "arm_r",
-					"value": -0.7,
-					"condition": [
-						{
-							"bone": "arm_r",
-							"operator": ">",
-							"value": 0
-						}
-					]
-				},
-				{
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": -16,
-						"y": 50
+						"x": 58,
+						"y": 40
 					},
 					"condition": [
 						{
@@ -3092,8 +2904,8 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": 10,
-						"y": 0
+						"x": -12,
+						"y": -5
 					},
 					"condition": [
 						{
@@ -3102,6 +2914,12 @@
 							"value": 0
 						}
 					]
+				}
+			],
+			"skinning": [
+				{
+					"bone": "arm_r",
+					"weight": 0.85
 				}
 			]
 		},
@@ -5705,16 +5523,11 @@
 					}
 				},
 				{
-					"type": "rotate",
-					"bone": "arm_r",
-					"value": -0.6
-				},
-				{
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": -10,
-						"y": 60
+						"x": 20,
+						"y": 50
 					},
 					"condition": [
 						{
@@ -5728,8 +5541,8 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": 20,
-						"y": -14
+						"x": 23,
+						"y": 8
 					},
 					"condition": [
 						{
@@ -5738,6 +5551,12 @@
 							"value": 0
 						}
 					]
+				}
+			],
+			"skinning": [
+				{
+					"bone": "arm_r",
+					"weight": 0.45
 				}
 			]
 		},
@@ -5758,16 +5577,11 @@
 					}
 				},
 				{
-					"type": "rotate",
-					"bone": "arm_r",
-					"value": -0.6
-				},
-				{
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": -10,
-						"y": 60
+						"x": 44,
+						"y": 44
 					},
 					"condition": [
 						{
@@ -5781,8 +5595,8 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": 20,
-						"y": 0
+						"x": 12,
+						"y": 16
 					},
 					"condition": [
 						{
@@ -5791,6 +5605,12 @@
 							"value": 0
 						}
 					]
+				}
+			],
+			"skinning": [
+				{
+					"bone": "arm_r",
+					"weight": 0.6
 				}
 			]
 		},
