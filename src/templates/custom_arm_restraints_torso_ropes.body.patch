@@ -91,7 +91,7 @@
  		"aboveBody": {
  			"name": "Above body",
  			"parts": [
-@@ -623,8 +665,8 @@
+@@ -625,8 +667,8 @@
  		},
  		{
  			"pos": [
@@ -102,16 +102,38 @@
  			],
  			"mirror": true,
  			"pointType": "arm_r",
-@@ -640,7 +682,7 @@
- 				{
- 					"type": "rotate",
- 					"bone": "arm_r",
--					"value": -0.8
-+					"value": -0.9
- 				},
- 				{
+@@ -643,8 +685,8 @@
  					"type": "shift",
-@@ -1380,8 +1422,8 @@
+ 					"bone": "arm_r",
+ 					"value": {
+-						"x": 40,
+-						"y": 26
++						"x": 44,
++						"y": 20
+ 					},
+ 					"condition": [
+ 						{
+@@ -658,8 +700,8 @@
+ 					"type": "shift",
+ 					"bone": "arm_r",
+ 					"value": {
+-						"x": 6,
+-						"y": 18
++						"x": 4,
++						"y": 20
+ 					},
+ 					"condition": [
+ 						{
+@@ -673,7 +715,7 @@
+ 			"skinning": [
+ 				{
+ 					"bone": "arm_r",
+-					"weight": 0.8
++					"weight": 0.9
+ 				}
+ 			]
+ 		},
+@@ -1192,12 +1234,21 @@
  		},
  		{
  			"pos": [
@@ -122,22 +144,21 @@
  			],
  			"mirror": true,
  			"pointType": "arm_r",
-@@ -1390,6 +1432,14 @@
- 					"type": "rotate",
- 					"bone": "arm_r",
- 					"value": -1
-+				},
+-			"transforms": [],
++			"transforms": [
 +				{
 +					"type": "shift",
 +					"bone": "arm_r",
 +					"value": {
-+						"x": -1,
-+						"y": -19
++						"x": 19,
++						"y": -1
 +					}
- 				}
- 			]
- 		},
-@@ -3043,8 +3093,8 @@
++				}
++			],
+ 			"skinning": [
+ 				{
+ 					"bone": "arm_r",
+@@ -2802,8 +2853,8 @@
  		},
  		{
  			"pos": [
@@ -148,3 +169,25 @@
  			],
  			"mirror": true,
  			"pointType": "arm_r",
+@@ -2820,8 +2871,8 @@
+ 					"type": "shift",
+ 					"bone": "arm_r",
+ 					"value": {
+-						"x": 58,
+-						"y": 40
++						"x": 56,
++						"y": 36
+ 					},
+ 					"condition": [
+ 						{
+@@ -2835,8 +2886,8 @@
+ 					"type": "shift",
+ 					"bone": "arm_r",
+ 					"value": {
+-						"x": -12,
+-						"y": -5
++						"x": -10,
++						"y": -2
+ 					},
+ 					"condition": [
+ 						{
