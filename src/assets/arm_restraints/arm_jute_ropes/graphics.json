@@ -720,7 +720,7 @@
 			"type": "mesh",
 			"name": "waist_cinched_back",
 			"priority": "BELOW_BODY",
-			"points": "custom_arm_restraints_torso_ropes",
+			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
