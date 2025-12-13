@@ -6,30 +6,83 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "liquids service (back)",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front_tray_contents_backview_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "liquids",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "tray_contents_service_liquid.png",
-						"condition": [
-							[
-								{
-									"module": "content",
-									"operator": "=",
-									"value": "teaService"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "tea_liquids",
+					"colorizationKey": "liquids"
+				},
+				{
+					"name": "tray_contents",
+					"colorizationKey": "content"
+				},
+				{
+					"name": "decanter_liquids",
+					"colorizationKey": "liquids"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "content"
+				}
+			],
+			"imageMap": {
+				"front:nothing": [
+					"",
+					"",
+					""
+				],
+				"front:teaService": [
+					"",
+					"",
+					""
+				],
+				"front:decanter": [
+					"",
+					"",
+					""
+				],
+				"front:beverages": [
+					"",
+					"",
+					""
+				],
+				"front:toys": [
+					"",
+					"",
+					""
+				],
+				"back:nothing": [
+					"",
+					"",
+					""
+				],
+				"back:teaService": [
+					"tray_contents_service_liquid.png",
+					"tray_contents_service.png",
+					""
+				],
+				"back:decanter": [
+					"",
+					"tray_contents_decanter.png",
+					""
+				],
+				"back:beverages": [
+					"",
+					"tray_contents_decanter.png",
+					"tray_contents_beverages.png"
+				],
+				"back:toys": [
+					"",
+					"tray_contents_dildos.png",
+					""
 				]
 			}
 		},
@@ -38,70 +91,25 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "content (back)",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front_tray_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "content",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "tray_contents_service.png",
-						"condition": [
-							[
-								{
-									"module": "content",
-									"operator": "=",
-									"value": "teaService"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "tray_contents_dildos.png",
-						"condition": [
-							[
-								{
-									"module": "content",
-									"operator": "=",
-									"value": "toys"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "tray_contents_decanter.png",
-						"condition": [
-							[
-								{
-									"module": "content",
-									"operator": "=",
-									"value": "decanter"
-								},
-								{
-									"view": "back"
-								}
-							],
-							[
-								{
-									"module": "content",
-									"operator": "=",
-									"value": "beverages"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "frame",
+					"colorizationKey": "frame"
+				},
+				{
+					"name": "bottom",
+					"colorizationKey": "bottom"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"tray_frame.png",
+					"tray_bottom.png"
 				]
 			}
 		},
@@ -110,30 +118,83 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "liquids decanter (back)",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front_tray_contents_frontview_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "liquids",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "tray_contents_beverages.png",
-						"condition": [
-							[
-								{
-									"module": "content",
-									"operator": "=",
-									"value": "beverages"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "decanter_liquids",
+					"colorizationKey": "liquids"
+				},
+				{
+					"name": "tray_content",
+					"colorizationKey": "content"
+				},
+				{
+					"name": "service_liquids",
+					"colorizationKey": "liquids"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "content"
+				}
+			],
+			"imageMap": {
+				"front:nothing": [
+					"",
+					"",
+					""
+				],
+				"front:teaService": [
+					"",
+					"tray_contents_service.png",
+					"tray_contents_service_liquid.png"
+				],
+				"front:decanter": [
+					"",
+					"tray_contents_decanter.png",
+					""
+				],
+				"front:beverages": [
+					"tray_contents_beverages.png",
+					"tray_contents_decanter.png",
+					""
+				],
+				"front:toys": [
+					"",
+					"tray_contents_dildos.png",
+					""
+				],
+				"back:nothing": [
+					"",
+					"",
+					""
+				],
+				"back:teaService": [
+					"",
+					"",
+					""
+				],
+				"back:decanter": [
+					"",
+					"",
+					""
+				],
+				"back:beverages": [
+					"",
+					"",
+					""
+				],
+				"back:toys": [
+					"",
+					"",
+					""
 				]
 			}
 		},
@@ -142,62 +203,20 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "tray frame",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front_chains_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "frame",
-			"image": {
-				"image": "tray_frame.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "tray bottom",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "bottom",
-			"image": {
-				"image": "tray_bottom.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "liquids decanter",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "liquids",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "tray_contents_beverages.png",
-						"condition": [
-							[
-								{
-									"module": "content",
-									"operator": "=",
-									"value": "beverages"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "chains",
+					"colorizationKey": "chains"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"tray_chain_front.png"
 				]
 			}
 		},
@@ -206,156 +225,27 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "content",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "back_chains_mesh",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "content",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "tray_contents_service.png",
-						"condition": [
-							[
-								{
-									"module": "content",
-									"operator": "=",
-									"value": "teaService"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "tray_contents_dildos.png",
-						"condition": [
-							[
-								{
-									"module": "content",
-									"operator": "=",
-									"value": "toys"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "tray_contents_decanter.png",
-						"condition": [
-							[
-								{
-									"module": "content",
-									"operator": "=",
-									"value": "decanter"
-								},
-								{
-									"view": "front"
-								}
-							],
-							[
-								{
-									"module": "content",
-									"operator": "=",
-									"value": "beverages"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "liquids service",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "liquids",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "tray_contents_service_liquid.png",
-						"condition": [
-							[
-								{
-									"module": "content",
-									"operator": "=",
-									"value": "teaService"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "chainsFront",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "chains",
-			"image": {
-				"image": "tray_chain_front.png",
-				"overrides": [
-					{
-						"image": "tray_chain_back.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "chainsNeckBack",
-			"priority": "BELOW_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "chains",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "tray_chain_neck_back.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "chains",
+					"colorizationKey": "chains"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"front": [
+					""
+				],
+				"back": [
+					"tray_chain_neck_back.png"
 				]
 			}
 		}
