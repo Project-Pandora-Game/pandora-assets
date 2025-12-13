@@ -10,6 +10,10 @@ DefineAsset({
 			name: 'Collar',
 			default: '#FFFFFF',
 		},
+		text: {
+			name: 'Engraving',
+			default: '#494949',
+		},
 		ring: {
 			name: 'Ring',
 			default: '#FFFFFF',
@@ -68,6 +72,10 @@ DefineAsset({
 					name: 'Thick Collar',
 				},
 			],
+		},
+		text: {
+			type: 'text',
+			name: 'Engraving',
 		},
 	},
 	chat: {
