@@ -64,11 +64,12 @@
 							"view": "back"
 						}
 					]
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "leg_r",
-					"value": -1
+					"weight": 1
 				}
 			]
 		},
@@ -94,11 +95,12 @@
 							"view": "back"
 						}
 					]
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "leg_r",
-					"value": -1
+					"weight": 1
 				}
 			]
 		},
@@ -124,11 +126,12 @@
 							"view": "back"
 						}
 					]
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "leg_r",
-					"value": -1
+					"weight": 1
 				}
 			]
 		},
@@ -154,11 +157,12 @@
 							"view": "back"
 						}
 					]
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "leg_r",
-					"value": -1
+					"weight": 1
 				}
 			]
 		},
@@ -184,11 +188,12 @@
 							"view": "back"
 						}
 					]
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "leg_r",
-					"value": -1
+					"weight": 1
 				}
 			]
 		}
