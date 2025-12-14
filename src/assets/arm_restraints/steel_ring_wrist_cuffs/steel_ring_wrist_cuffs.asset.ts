@@ -65,6 +65,7 @@ DefineAsset({
 					name: 'Chained in front',
 					properties: {
 						poseLimits: {
+							armsOrder: { upper: 'right' },
 							options: [
 								{
 									arms: {
