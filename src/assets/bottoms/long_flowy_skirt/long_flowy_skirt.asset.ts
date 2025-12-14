@@ -17,6 +17,12 @@ DefineAsset({
 			'Clothing_lower',
 		],
 	},
+	poseLimits: {
+		bones: {
+			leg_l: [[-85, 80]],
+			leg_r: [[-85, 80]],
+		},
+	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia', 'Jomshir'],
