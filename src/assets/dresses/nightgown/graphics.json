@@ -34,13 +34,11 @@
 			"type": "mesh",
 			"name": "front",
 			"priority": "ABOVE_BODY",
-			"points": "custom_dresses_nightgown",
+			"points": "skirt_long",
 			"pointType": [
 				"body",
 				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r"
+				"body_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "nightgown",
@@ -82,13 +80,11 @@
 			"type": "mesh",
 			"name": "back",
 			"priority": "BELOW_BODY",
-			"points": "custom_dresses_nightgown",
+			"points": "skirt_long",
 			"pointType": [
 				"body",
 				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r"
+				"body_r"
 			],
 			"mirror": 0,
 			"colorizationKey": "nightgown",
