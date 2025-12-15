@@ -72,8 +72,7 @@ export function TemplateValidate(template: Immutable<PointTemplateSource>, logge
 
 				if (transform.type === 'shift' || transform.type === 'const-shift') {
 					if (firstRotationTransform >= 0 && ti >= firstRotationTransform) {
-						// TODO: Make this a warning after existing point templates are fixed
-						transformLogger.debug('[FUTURE WARNING] A shift transform after a rotation transform is not universally supported and is likely unintended.');
+						transformLogger.warning('A shift transform after a rotation transform is not universally supported and is likely unintended.');
 					}
 				}
 			}
