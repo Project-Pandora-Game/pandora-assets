@@ -35,11 +35,6 @@
 			"name": "front",
 			"priority": "ABOVE_BODY",
 			"points": "skirt_long",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r"
-			],
 			"mirror": 0,
 			"colorizationKey": "nightgown",
 			"image": {
@@ -81,11 +76,6 @@
 			"name": "back",
 			"priority": "BELOW_BODY",
 			"points": "skirt_long",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r"
-			],
 			"mirror": 0,
 			"colorizationKey": "nightgown",
 			"image": {
