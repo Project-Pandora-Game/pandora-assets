@@ -33,6 +33,7 @@ DefineAsset({
 			name: 'Lock',
 			lockedProperties: {
 				blockAddRemove: true,
+				blockModules: ['text'],
 			},
 		},
 		collarConfig: {
