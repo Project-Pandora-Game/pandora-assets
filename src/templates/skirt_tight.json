@@ -582,7 +582,7 @@
 					"bone": "arm_r",
 					"value": {
 						"x": -36,
-						"y": 20
+						"y": 10
 					},
 					"condition": [
 						{
@@ -623,7 +623,7 @@
 					"bone": "arm_r",
 					"value": {
 						"x": -25,
-						"y": 36
+						"y": 25
 					},
 					"condition": [
 						{
@@ -676,8 +676,8 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": 40,
-						"y": 30
+						"x": 36,
+						"y": 26
 					},
 					"condition": [
 						{
@@ -731,7 +731,7 @@
 					"bone": "arm_r",
 					"value": {
 						"x": 40,
-						"y": 26
+						"y": 21
 					},
 					"condition": [
 						{
@@ -746,7 +746,7 @@
 					"bone": "arm_r",
 					"value": {
 						"x": 6,
-						"y": 18
+						"y": 14
 					},
 					"condition": [
 						{
@@ -1285,6 +1285,54 @@
 			"mirror": true,
 			"pointType": "arm_r",
 			"transforms": [],
+			"skinning": [
+				{
+					"bone": "arm_r",
+					"weight": 1
+				}
+			]
+		},
+		{
+			"pos": [
+				357,
+				404
+			],
+			"mirror": true,
+			"pointType": "arm_r",
+			"transforms": [
+				{
+					"type": "shift",
+					"bone": "arm_width",
+					"value": {
+						"x": 0,
+						"y": -4
+					}
+				}
+			],
+			"skinning": [
+				{
+					"bone": "arm_r",
+					"weight": 1
+				}
+			]
+		},
+		{
+			"pos": [
+				357,
+				462
+			],
+			"mirror": true,
+			"pointType": "arm_r",
+			"transforms": [
+				{
+					"type": "shift",
+					"bone": "arm_width",
+					"value": {
+						"x": 0,
+						"y": 4
+					}
+				}
+			],
 			"skinning": [
 				{
 					"bone": "arm_r",
@@ -2868,28 +2916,13 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": 58,
-						"y": 40
+						"x": 48,
+						"y": 30
 					},
 					"condition": [
 						{
 							"bone": "arm_r",
 							"operator": "<",
-							"value": 0
-						}
-					]
-				},
-				{
-					"type": "shift",
-					"bone": "arm_r",
-					"value": {
-						"x": -12,
-						"y": -5
-					},
-					"condition": [
-						{
-							"bone": "arm_r",
-							"operator": ">",
 							"value": 0
 						}
 					]
@@ -5496,7 +5529,7 @@
 					"bone": "arm_r",
 					"value": {
 						"x": 20,
-						"y": 50
+						"y": 40
 					},
 					"condition": [
 						{
@@ -5525,7 +5558,7 @@
 			"skinning": [
 				{
 					"bone": "arm_r",
-					"weight": 0.45
+					"weight": 0.5
 				}
 			]
 		},
@@ -5549,8 +5582,8 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": 44,
-						"y": 44
+						"x": 24,
+						"y": 39
 					},
 					"condition": [
 						{
