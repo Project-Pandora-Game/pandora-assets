@@ -140,6 +140,55 @@
 				"image": "leathercuffs_large_ring.png",
 				"overrides": []
 			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "chain",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "chain",
+					"colorizationKey": "chain"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "cuffState"
+				},
+				{
+					"type": "bone",
+					"bone": "arm_l",
+					"stops": [
+						105
+					]
+				}
+			],
+			"imageMap": {
+				"unchained:-180": [
+					""
+				],
+				"chained_back:-180": [
+					"leathercuffs_chain_100_104.png"
+				],
+				"chained_back_strict:-180": [
+					""
+				],
+				"unchained:105": [
+					""
+				],
+				"chained_back:105": [
+					"leathercuffs_chain_110_hanging.png"
+				],
+				"chained_back_strict:105": [
+					"leathercuffs_chain_110.png"
+				]
+			}
 		}
 	]
 }

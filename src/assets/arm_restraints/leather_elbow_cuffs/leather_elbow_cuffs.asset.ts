@@ -25,8 +25,8 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
-	// size:320, y:549, centered
-	preview: null,
+	// size:320, y:377, centered
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Restraint',
@@ -89,6 +89,35 @@ DefineAsset({
 										{ arms: { position: 'back_below_hair' } },
 									],
 								},
+								{
+									bones: {
+										arm_r: 110,
+										arm_l: 110,
+									},
+									options: [
+										{ arms: { position: 'back' } },
+										{ arms: { position: 'back_below_hair' } },
+									],
+								},
+							],
+						},
+						stateFlags: {
+							provides: ['chain'],
+						},
+					},
+				},
+				{
+					id: 'chained_back_strict',
+					name: 'Chained behind strict',
+					properties: {
+						poseLimits: {
+							bones: {
+								arm_r: 110,
+								arm_l: 110,
+							},
+							options: [
+								{ arms: { position: 'back' } },
+								{ arms: { position: 'back_below_hair' } },
 							],
 						},
 						stateFlags: {
