@@ -581,7 +581,7 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": -36,
+						"x": -46,
 						"y": 10
 					},
 					"condition": [
@@ -623,7 +623,7 @@
 					"bone": "arm_r",
 					"value": {
 						"x": -25,
-						"y": 25
+						"y": 28
 					},
 					"condition": [
 						{
@@ -652,7 +652,7 @@
 			"skinning": [
 				{
 					"bone": "arm_r",
-					"weight": 0.16
+					"weight": 0.25
 				}
 			]
 		},
@@ -676,8 +676,8 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": 36,
-						"y": 26
+						"x": 10,
+						"y": 39
 					},
 					"condition": [
 						{
@@ -706,7 +706,7 @@
 			"skinning": [
 				{
 					"bone": "arm_r",
-					"weight": 0.7
+					"weight": 0.55
 				}
 			]
 		},
@@ -2916,7 +2916,7 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": 48,
+						"x": 8,
 						"y": 30
 					},
 					"condition": [
@@ -5448,6 +5448,12 @@
 						}
 					]
 				}
+			],
+			"skinning": [
+				{
+					"bone": "arm_r",
+					"weight": 0.05
+				}
 			]
 		},
 		{
@@ -5528,8 +5534,8 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": 20,
-						"y": 40
+						"x": 10,
+						"y": 45
 					},
 					"condition": [
 						{
@@ -5543,8 +5549,8 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": 23,
-						"y": 8
+						"x": 3,
+						"y": 20
 					},
 					"condition": [
 						{
@@ -5558,7 +5564,7 @@
 			"skinning": [
 				{
 					"bone": "arm_r",
-					"weight": 0.5
+					"weight": 0.55
 				}
 			]
 		},
@@ -5597,7 +5603,7 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": 12,
+						"x": 2,
 						"y": 16
 					},
 					"condition": [
@@ -5612,7 +5618,7 @@
 			"skinning": [
 				{
 					"bone": "arm_r",
-					"weight": 0.6
+					"weight": 0.75
 				}
 			]
 		},
