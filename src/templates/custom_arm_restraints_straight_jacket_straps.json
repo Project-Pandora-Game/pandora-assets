@@ -588,8 +588,8 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": 6,
-						"y": 14
+						"x": -16,
+						"y": 20
 					},
 					"condition": [
 						{
@@ -1127,7 +1127,23 @@
 			],
 			"mirror": true,
 			"pointType": "arm_r",
-			"transforms": [],
+			"transforms": [
+				{
+					"type": "shift",
+					"bone": "arm_r",
+					"value": {
+						"x": 7,
+						"y": 0
+					},
+					"condition": [
+						{
+							"bone": "arm_r",
+							"operator": ">",
+							"value": 0
+						}
+					]
+				}
+			],
 			"skinning": [
 				{
 					"bone": "arm_r",
@@ -2805,6 +2821,21 @@
 						{
 							"bone": "arm_r",
 							"operator": "<",
+							"value": 0
+						}
+					]
+				},
+				{
+					"type": "shift",
+					"bone": "arm_r",
+					"value": {
+						"x": 10,
+						"y": 0
+					},
+					"condition": [
+						{
+							"bone": "arm_r",
+							"operator": ">",
 							"value": 0
 						}
 					]
@@ -5485,8 +5516,8 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": 2,
-						"y": 16
+						"x": -14,
+						"y": 22
 					},
 					"condition": [
 						{

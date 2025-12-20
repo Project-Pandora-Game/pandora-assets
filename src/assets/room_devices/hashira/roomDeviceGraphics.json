@@ -416,7 +416,7 @@
 					"type": "mesh",
 					"name": "Arms Behind Pillar",
 					"priority": "ABOVE_ARM_LEFT",
-					"points": "custom_arm_restraints_torso_ropes",
+					"points": "body",
 					"pointType": [
 						"bodyarm_l",
 						"arm_l"
