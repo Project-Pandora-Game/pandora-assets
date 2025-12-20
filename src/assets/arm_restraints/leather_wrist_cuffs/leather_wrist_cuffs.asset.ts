@@ -140,6 +140,18 @@ DefineAsset({
 										{ arms: { position: 'back_below_hair' } },
 									],
 								},
+								{
+									bones: {
+										arm_r: 110,
+										arm_l: 110,
+										elbow_r: -20,
+										elbow_l: -20,
+									},
+									options: [
+										{ arms: { position: 'back' } },
+										{ arms: { position: 'back_below_hair' } },
+									],
+								},
 							],
 						},
 						stateFlags: {
