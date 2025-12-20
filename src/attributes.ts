@@ -403,6 +403,11 @@ const ATTRIBUTES_DEFINITION_BASE = DefineAttributes({
 		description: 'A pair of wrist cuffs',
 		parentAttributes: ['Restraint_arms'],
 	},
+	Elbow_cuffs: {
+		name: 'Elbow cuffs',
+		description: 'A pair of elbow cuffs',
+		parentAttributes: ['Restraint_arms'],
+	},
 	Restraint_torso: {
 		name: 'Torso restraint',
 		description: 'An item that restrains the body\'s torso',

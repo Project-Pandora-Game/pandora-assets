@@ -33,10 +33,12 @@ DefineAsset({
 			'Hand_cover',
 			'Handheld',
 			'Wrist_cuffs',
+			'Elbow_cuffs',
 		],
 		hides: [
 			'Hand_item',
 			'Wrist_cuffs',
+			'Elbow_cuffs',
 		],
 	},
 	effects: {

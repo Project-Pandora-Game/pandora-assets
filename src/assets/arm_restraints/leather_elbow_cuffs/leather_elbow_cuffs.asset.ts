@@ -31,6 +31,7 @@ DefineAsset({
 		provides: [
 			'Restraint',
 			'Restraint_arms',
+			'Elbow_cuffs',
 		],
 	},
 	modules: {
