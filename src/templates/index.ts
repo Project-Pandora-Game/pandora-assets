@@ -24,7 +24,6 @@ const templateList: string[] = [
 	'custom_arm_restraints_armbinder_glove',
 	'custom_arm_restraints_pet_crawler_armbinders_outwards',
 	'custom_arm_restraints_pet_crawler_armbinders_inwards',
-	'custom_arm_restraints_straight_jacket_straps', // Based on body, small edits
 	'custom_body_nipples',
 	'custom_tops_jeans_jacket_breasts',
 	'custom_tops_leather_jacket_breasts',

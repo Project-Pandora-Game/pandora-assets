@@ -745,8 +745,8 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": -16,
-						"y": 20
+						"x": -14,
+						"y": 18
 					},
 					"condition": [
 						{
@@ -1261,21 +1261,12 @@
 		},
 		{
 			"pos": [
-				426,
-				440
+				422,
+				432
 			],
 			"mirror": true,
 			"pointType": "bodyarm_r",
-			"transforms": [
-				{
-					"type": "shift",
-					"bone": "arm_width",
-					"value": {
-						"x": 0,
-						"y": 5
-					}
-				}
-			]
+			"transforms": []
 		},
 		{
 			"pos": [
@@ -5634,8 +5625,8 @@
 					"type": "shift",
 					"bone": "arm_r",
 					"value": {
-						"x": -14,
-						"y": 22
+						"x": -10,
+						"y": 14
 					},
 					"condition": [
 						{
