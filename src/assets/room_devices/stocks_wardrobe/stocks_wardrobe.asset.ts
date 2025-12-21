@@ -8,7 +8,7 @@ DefineRoomDeviceAsset({
 			default: '#A16B4B',
 		},
 	},
-	staticAttributes: ['Play_furniture'],
+	staticAttributes: ['Play_furniture', 'Storage'],
 	preview: 'preview.png',
 	slots: {
 		character_slot: {
