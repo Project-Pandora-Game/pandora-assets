@@ -8,7 +8,7 @@ DefineRoomDeviceAsset({
 			default: '#A16B4B',
 		},
 	},
-	staticAttributes: ['Play_furniture'],
+	staticAttributes: ['Play_furniture', 'Storage'],
 	preview: 'preview.png',
 	slots: {
 		character_slot: {
@@ -57,7 +57,7 @@ DefineRoomDeviceAsset({
 					name: 'Closed',
 					properties: {
 						blockSlotsEnterLeave: ['character_slot'],
-						blockModules: ['position'],
+						blockModules: ['position', 'storage'],
 					},
 				},
 				{
@@ -120,7 +120,15 @@ DefineRoomDeviceAsset({
 				blockModules: ['position'],
 			},
 		},
+		storage: {
+			type: 'storage',
+			name: `Wardrobe contents`,
+			staticConfig: { slotName: null },
+			maxAcceptedSize: 'large',
+			maxCount: 20,
+		},
 	},
+	storageModule: 'storage',
 	pivot: {
 		x: 500,
 		y: 1300,

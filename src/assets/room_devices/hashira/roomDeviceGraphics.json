@@ -416,7 +416,7 @@
 					"type": "mesh",
 					"name": "Arms Behind Pillar",
 					"priority": "ABOVE_ARM_LEFT",
-					"points": "custom_arm_restraints_torso_ropes",
+					"points": "body",
 					"pointType": [
 						"bodyarm_l",
 						"arm_l"
@@ -536,7 +536,7 @@
 					"type": "mesh",
 					"name": "Waist rope",
 					"priority": "ABOVE_BODY",
-					"points": "custom_arm_restraints_torso_ropes",
+					"points": "body",
 					"mirror": 0,
 					"colorizationKey": "rope",
 					"image": {

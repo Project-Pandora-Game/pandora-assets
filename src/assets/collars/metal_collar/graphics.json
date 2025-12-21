@@ -32,6 +32,20 @@
 			}
 		},
 		{
+			"x": 504,
+			"y": 386,
+			"width": 20,
+			"height": 7,
+			"type": "text",
+			"name": "Text",
+			"priority": "ABOVE_BODY",
+			"angle": -17,
+			"dataModule": "text",
+			"followBone": null,
+			"fontSize": 12,
+			"colorizationKey": "text"
+		},
+		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,

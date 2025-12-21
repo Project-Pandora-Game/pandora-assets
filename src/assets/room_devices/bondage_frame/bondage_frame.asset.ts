@@ -127,6 +127,7 @@ DefineRoomDeviceAsset({
 										leg_l: -33,
 										character_rotation: 0,
 									},
+									legs: { pose: 'standing' },
 								},
 								effects: {
 								},
@@ -157,6 +158,7 @@ DefineRoomDeviceAsset({
 										leg_l: -33,
 										character_rotation: 0,
 									},
+									legs: { pose: 'standing' },
 								},
 								effects: {
 									blockHands: true,
@@ -218,6 +220,7 @@ DefineRoomDeviceAsset({
 										leg_l: -30,
 										character_rotation: 0,
 									},
+									legs: { pose: 'standing' },
 								},
 								effects: {
 									blockHands: true,
