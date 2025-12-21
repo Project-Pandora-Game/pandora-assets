@@ -215,7 +215,15 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		storage: {
+			type: 'storage',
+			name: `Under the couch`,
+			staticConfig: { slotName: null },
+			maxAcceptedSize: 'medium',
+			maxCount: 5,
+		},
 	},
+	storageModule: 'storage',
 	pivot: {
 		x: 1200,
 		y: 870,
