@@ -64,19 +64,13 @@ export function TemplateValidate(template: Immutable<PointTemplateSource>, logge
 		}
 
 		// The point transformations should make sense
-		{
-			const firstRotationTransform = point.transforms.findIndex((t) => t.type === 'rotate');
-			for (let ti = 0; ti < point.transforms.length; ti++) {
-				const transformLogger = pointLogger.prefixMessages(`Transform #${ti}:`);
-				const transform = point.transforms[ti];
+		for (let ti = 0; ti < point.transforms.length; ti++) {
+			// eslint-disable-next-line @typescript-eslint/no-unused-vars
+			const transformLogger = pointLogger.prefixMessages(`Transform #${ti}:`);
+			// eslint-disable-next-line @typescript-eslint/no-unused-vars
+			const transform = point.transforms[ti];
 
-				if (transform.type === 'shift' || transform.type === 'const-shift') {
-					if (firstRotationTransform >= 0 && ti >= firstRotationTransform) {
-						// TODO: Make this a warning after existing point templates are fixed
-						transformLogger.debug('[FUTURE WARNING] A shift transform after a rotation transform is not universally supported and is likely unintended.');
-					}
-				}
-			}
+			// Nothing here currently
 		}
 	}
 }

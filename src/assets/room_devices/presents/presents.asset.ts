@@ -27,6 +27,14 @@ DefineRoomDeviceAsset({
 			maxCount: 7,
 			maxAcceptedSize: 'large',
 		},
+		lock: {
+			type: 'lockSlot',
+			name: 'Seal that guarantees the original wrapping',
+			staticConfig: { slotName: null },
+			lockedProperties: {
+				blockModules: ['content'],
+			},
+		},
 	},
 	storageModule: 'content',
 	pivot: {

@@ -6,48 +6,35 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "sex",
-			"priority": "BODY",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
+			"automeshTemplate": "body",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
 			],
-			"mirror": 0,
-			"colorizationKey": "mark",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "privates1.png",
-						"condition": [
-							[
-								{
-									"module": "sexColor",
-									"operator": "=",
-									"value": "one"
-								}
-							]
-						]
-					},
-					{
-						"image": "privates2.png",
-						"condition": [
-							[
-								{
-									"module": "sexColor",
-									"operator": "=",
-									"value": "multi"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "mark"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "sexColor"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"one": [
+					"privates1.png"
+				],
+				"multi": [
+					"privates2.png"
 				]
 			}
 		},
@@ -56,42 +43,34 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "breasts",
-			"priority": "BREASTS",
 			"points": "breasts",
-			"pointType": [
-				"breasts_l"
+			"automeshTemplate": "breasts",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "mark"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "mark",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "breasts1.png",
-						"condition": [
-							[
-								{
-									"module": "breastColor_l",
-									"operator": "=",
-									"value": "one"
-								}
-							]
-						]
-					},
-					{
-						"image": "breasts2.png",
-						"condition": [
-							[
-								{
-									"module": "breastColor_l",
-									"operator": "=",
-									"value": "multi"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "breastColor_l"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"one": [
+					"breasts1.png"
+				],
+				"few": [
+					"breasts2.png"
+				],
+				"multi": [
+					"breasts3.png"
 				]
 			}
 		},
@@ -172,45 +151,44 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "butt",
-			"priority": "BELOW_BODY",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"bodyarm_l",
-				"bodyleg_l"
+			"automeshTemplate": "belowBodyMirror",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
 			],
-			"mirror": 1,
-			"colorizationKey": "mark",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "butt1.png",
-						"condition": [
-							[
-								{
-									"module": "buttColor_l",
-									"operator": "=",
-									"value": "one"
-								}
-							]
-						]
-					},
-					{
-						"image": "butt2.png",
-						"condition": [
-							[
-								{
-									"module": "buttColor_l",
-									"operator": "=",
-									"value": "multi"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "mark"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "buttColor_l"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"one": [
+					"butt1.png"
+				],
+				"few": [
+					"butt2.png"
+				],
+				"multi": [
+					"butt3.png"
+				],
+				"many": [
+					"butt4.png"
+				],
+				"fading": [
+					"butt5.png"
 				]
 			}
 		},
@@ -219,48 +197,35 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "back",
-			"priority": "BELOW_BODY",
 			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
 			],
-			"mirror": 0,
-			"colorizationKey": "mark",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "back1.png",
-						"condition": [
-							[
-								{
-									"module": "backColor",
-									"operator": "=",
-									"value": "one"
-								}
-							]
-						]
-					},
-					{
-						"image": "back2.png",
-						"condition": [
-							[
-								{
-									"module": "backColor",
-									"operator": "=",
-									"value": "multi"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "mark"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "backColor"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"one": [
+					"back1.png"
+				],
+				"multi": [
+					"back2.png"
 				]
 			}
 		},
@@ -269,72 +234,34 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "soles kneeling sole",
-			"priority": "BELOW_SOLE_LEFT",
+			"type": "autoMesh",
+			"name": "soles kneeling",
 			"points": "body_soles_back",
-			"pointType": [
-				"body_l"
+			"automeshTemplate": "body",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "mark"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "mark",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "soles_one.png",
-						"condition": [
-							[
-								{
-									"legs": "kneeling"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"module": "soleColor_l",
-									"operator": "=",
-									"value": "one"
-								}
-							]
-						]
-					},
-					{
-						"image": "soles_few.png",
-						"condition": [
-							[
-								{
-									"legs": "kneeling"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"module": "soleColor_l",
-									"operator": "=",
-									"value": "multi"
-								}
-							]
-						]
-					},
-					{
-						"image": "soles_many.png",
-						"condition": [
-							[
-								{
-									"legs": "kneeling"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"module": "soleColor_l",
-									"operator": "=",
-									"value": "many"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "soleColor_l"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"one": [
+					"soles_one.png"
+				],
+				"multi": [
+					"soles_few.png"
+				],
+				"many": [
+					"soles_many.png"
 				]
 			}
 		}

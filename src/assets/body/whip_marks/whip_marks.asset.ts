@@ -1,14 +1,14 @@
 import { ItemInteractionType } from 'pandora-common';
 
 DefineBodypart({
-	name: 'Whip Marks',
+	name: 'Cane Marks',
 	bodypart: 'bodymarks',
 	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
 	colorization: {
 		mark: {
 			name: 'Color',
-			default: '#DC8374B3',
+			default: '#F36954B3',
 			minAlpha: 0.1,
 		},
 	},
@@ -37,8 +37,20 @@ DefineBodypart({
 					name: 'One',
 				},
 				{
+					id: 'few',
+					name: 'Few',
+				},
+				{
 					id: 'multi',
 					name: 'Multiple',
+				},
+				{
+					id: 'many',
+					name: 'Many',
+				},
+				{
+					id: 'fading',
+					name: 'Many- Fading',
 				},
 			],
 		},
@@ -58,8 +70,20 @@ DefineBodypart({
 					name: 'One',
 				},
 				{
+					id: 'few',
+					name: 'Few',
+				},
+				{
 					id: 'multi',
 					name: 'Multiple',
+				},
+				{
+					id: 'many',
+					name: 'Many',
+				},
+				{
+					id: 'fading',
+					name: 'Many- Fading',
 				},
 			],
 		},
@@ -234,6 +258,10 @@ DefineBodypart({
 					name: 'One',
 				},
 				{
+					id: 'few',
+					name: 'Few',
+				},
+				{
 					id: 'multi',
 					name: 'Multiple',
 				},
@@ -253,6 +281,10 @@ DefineBodypart({
 				{
 					id: 'one',
 					name: 'One',
+				},
+				{
+					id: 'few',
+					name: 'Few',
 				},
 				{
 					id: 'multi',

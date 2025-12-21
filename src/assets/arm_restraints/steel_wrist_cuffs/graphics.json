@@ -58,8 +58,25 @@
 								},
 								{
 									"bone": "arm_l",
+									"operator": "<",
+									"value": 100
+								}
+							]
+						]
+					},
+					{
+						"image": "steelcuffs_chained_closed.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "chained_back"
+								},
+								{
+									"bone": "arm_l",
 									"operator": ">=",
-									"value": 0
+									"value": 100
 								}
 							]
 						]
@@ -145,8 +162,25 @@
 								},
 								{
 									"bone": "arm_l",
+									"operator": "<",
+									"value": 100
+								}
+							]
+						]
+					},
+					{
+						"image": "steelcuffs_chained_closed.png",
+						"condition": [
+							[
+								{
+									"module": "cuffState",
+									"operator": "=",
+									"value": "chained_back"
+								},
+								{
+									"bone": "arm_l",
 									"operator": ">=",
-									"value": 0
+									"value": 100
 								}
 							]
 						]

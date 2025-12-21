@@ -145,6 +145,7 @@ DefineRoomDeviceAsset({
 										elbow_l: -25,
 										arm_r: -90,
 										elbow_r: -25,
+										// no fix possible: rotation cannot be forced to 0 due to other combinations
 									},
 								},
 								effects: {
@@ -174,6 +175,7 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_l: [[-10, 10]],
 										leg_r: [[-10, 10]],
+										// no fix possible: rotation cannot be forced to 0 due to other combinations
 									},
 								},
 								attributes: {

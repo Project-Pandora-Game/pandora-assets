@@ -27,7 +27,15 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		storage: {
+			type: 'storage',
+			name: `Under the rug`,
+			staticConfig: { slotName: null },
+			maxAcceptedSize: 'medium',
+			maxCount: 3,
+		},
 	},
+	storageModule: 'storage',
 	pivot: {
 		x: 650,
 		y: -50,

@@ -6,52 +6,64 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "hood",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
+			"type": "autoMesh",
+			"name": "front_mesh",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "hood",
+					"colorizationKey": "hood"
+				},
+				{
+					"name": "eye_cover",
+					"colorizationKey": "eyeCover"
+				},
+				{
+					"name": "mouth_cover",
+					"colorizationKey": "mouthCover"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "hood",
-			"image": {
-				"image": "hood.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "eye cover",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "eyeCover",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "hood_eyes.png",
-						"condition": [
-							[
-								{
-									"module": "hoodEyeCover",
-									"operator": "=",
-									"value": "eye"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "hoodEyeCover"
+				},
+				{
+					"type": "typedModule",
+					"module": "hoodMouthCover"
+				}
+			],
+			"imageMap": {
+				"eye_free:mouth_free": [
+					"hood.png",
+					"",
+					""
+				],
+				"eye_free:mouth": [
+					"hood.png",
+					"",
+					"hood_mouth.png"
+				],
+				"eye_free:mouth_plug": [
+					"hood.png",
+					"",
+					"hood_mouth.png"
+				],
+				"eye:mouth_free": [
+					"hood.png",
+					"hood_eyes.png",
+					""
+				],
+				"eye:mouth": [
+					"hood.png",
+					"hood_eyes.png",
+					"hood_mouth.png"
+				],
+				"eye:mouth_plug": [
+					"hood.png",
+					"hood_eyes.png",
+					"hood_mouth.png"
 				]
 			}
 		},
@@ -60,69 +72,26 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "mouth cover",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "mouthCover",
-			"image": {
-				"image": "hood_mouth.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "hoodMouthCover",
-									"operator": "=",
-									"value": "mouth_free"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "hood back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
+			"type": "autoMesh",
+			"name": "back_mesh",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "hood",
+					"colorizationKey": "hood"
+				},
+				{
+					"name": "zipper",
+					"colorizationKey": "zipper"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "hood",
-			"image": {
-				"image": "hood_back.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "hood back zipper",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "zipper",
-			"image": {
-				"image": "hood_zipper.png",
-				"overrides": []
+			"variables": [],
+			"imageMap": {
+				"": [
+					"hood_back.png",
+					"hood_zipper.png"
+				]
 			}
 		}
 	]

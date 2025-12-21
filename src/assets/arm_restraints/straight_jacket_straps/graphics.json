@@ -31,19 +31,25 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "front arms",
-			"priority": "ABOVE_ARM_LEFT",
-			"points": "custom_arm_restraints_straight_jacket_straps",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"points": "body",
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"body",
+				"legs"
 			],
-			"mirror": 1,
-			"colorizationKey": "straps",
-			"image": {
-				"image": "s_j_back_arms.png",
-				"overrides": []
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "straps"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"s_j_back_arms.png"
+				]
 			}
 		},
 		{
@@ -108,19 +114,25 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "back arms",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "custom_arm_restraints_straight_jacket_straps",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"points": "body",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"body",
+				"legs"
 			],
-			"mirror": 1,
-			"colorizationKey": "straps",
-			"image": {
-				"image": "s_j_back_arms.png",
-				"overrides": []
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "straps"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"s_j_back_arms.png"
+				]
 			}
 		}
 	]
