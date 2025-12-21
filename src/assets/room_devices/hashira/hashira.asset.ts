@@ -48,6 +48,17 @@ DefineRoomDeviceAsset({
 					id: 'none',
 					name: 'None',
 					default: true,
+					properties: {
+						slotProperties: {
+							front: {
+								poseLimits: {
+									bones: {
+										character_rotation: 0,
+									},
+								},
+							},
+						},
+					},
 				},
 				{
 					id: 'rope',
@@ -56,6 +67,11 @@ DefineRoomDeviceAsset({
 						blockSlotsEnterLeave: ['front'],
 						slotProperties: {
 							front: {
+								poseLimits: {
+									bones: {
+										character_rotation: 0,
+									},
+								},
 								attributes: {
 									requires: [
 										'Back_knot_anchor_point',
@@ -103,6 +119,7 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_l: [[-100, -12]],
 										leg_r: [[-100, -12]],
+										character_rotation: 0,
 									},
 								},
 							},

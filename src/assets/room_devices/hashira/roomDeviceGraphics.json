@@ -143,53 +143,6 @@
 			]
 		},
 		{
-			"type": "slot",
-			"slot": "front",
-			"characterPosition": {
-				"offsetX": 0,
-				"offsetY": 0,
-				"relativeScale": 1,
-				"pivotOffset": {
-					"x": 0,
-					"y": 0
-				}
-			},
-			"characterPositionOverrides": [
-				{
-					"position": {
-						"offsetX": 0,
-						"offsetY": -1240,
-						"disablePoseOffset": true
-					},
-					"condition": [
-						[
-							{
-								"module": "suspension",
-								"operator": "=",
-								"value": "upside_down"
-							}
-						]
-					]
-				},
-				{
-					"position": {
-						"offsetX": 0,
-						"offsetY": 0,
-						"disablePoseOffset": true
-					},
-					"condition": [
-						[
-							{
-								"module": "suspension",
-								"operator": "!=",
-								"value": "none"
-							}
-						]
-					]
-				}
-			]
-		},
-		{
 			"type": "sprite",
 			"offset": {
 				"x": -142,
@@ -281,6 +234,53 @@
 			]
 		},
 		{
+			"type": "slot",
+			"slot": "front",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": 0,
+				"relativeScale": 1,
+				"pivotOffset": {
+					"x": 0,
+					"y": 0
+				}
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": -1240,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "suspension",
+								"operator": "=",
+								"value": "upside_down"
+							}
+						]
+					]
+				},
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": 0,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "suspension",
+								"operator": "!=",
+								"value": "none"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
 			"type": "sprite",
 			"offset": {
 				"x": -500,
@@ -321,6 +321,157 @@
 	"slots": {
 		"front": {
 			"layers": [
+				{
+					"x": 358,
+					"y": 690,
+					"width": 284,
+					"height": 284,
+					"type": "mesh",
+					"name": "Saddle Base",
+					"priority": "ABOVE_BODY",
+					"points": "skirt_static",
+					"pointType": [
+						"body",
+						"bodyleg",
+						"bodyleg_l",
+						"bodyleg_r",
+						"leg",
+						"leg_l",
+						"leg_r"
+					],
+					"mirror": 0,
+					"colorizationKey": "hashira",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "saddle_base.png",
+								"condition": [
+									[
+										{
+											"module": "suspension",
+											"operator": "=",
+											"value": "saddle"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 358,
+					"y": 690,
+					"width": 284,
+					"height": 284,
+					"type": "mesh",
+					"name": "Saddle Leather",
+					"priority": "ABOVE_BODY",
+					"points": "skirt_static",
+					"pointType": [
+						"body",
+						"bodyleg",
+						"bodyleg_l",
+						"bodyleg_r",
+						"leg",
+						"leg_l",
+						"leg_r"
+					],
+					"mirror": 0,
+					"colorizationKey": "leather",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "saddle_leather.png",
+								"condition": [
+									[
+										{
+											"module": "suspension",
+											"operator": "=",
+											"value": "saddle"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 358,
+					"y": 690,
+					"width": 284,
+					"height": 284,
+					"type": "mesh",
+					"name": "Saddle Leather Reflections",
+					"priority": "ABOVE_BODY",
+					"points": "skirt_static",
+					"pointType": [
+						"body",
+						"bodyleg",
+						"bodyleg_l",
+						"bodyleg_r",
+						"leg",
+						"leg_l",
+						"leg_r"
+					],
+					"mirror": 0,
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "saddle_leather_reflection.png",
+								"condition": [
+									[
+										{
+											"module": "suspension",
+											"operator": "=",
+											"value": "saddle"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 358,
+					"y": 690,
+					"width": 284,
+					"height": 284,
+					"type": "mesh",
+					"name": "Saddle Bolts",
+					"priority": "ABOVE_BODY",
+					"points": "skirt_static",
+					"pointType": [
+						"body",
+						"bodyleg",
+						"bodyleg_l",
+						"bodyleg_r",
+						"leg",
+						"leg_l",
+						"leg_r"
+					],
+					"mirror": 0,
+					"colorizationKey": "bolts",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "saddle_bolts.png",
+								"condition": [
+									[
+										{
+											"module": "suspension",
+											"operator": "=",
+											"value": "saddle"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
 				{
 					"x": 0,
 					"y": 0,
