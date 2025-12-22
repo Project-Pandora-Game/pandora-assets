@@ -16,7 +16,8 @@
 			],
 			"graphicalLayers": [
 				{
-					"name": "rings"
+					"name": "rings",
+					"colorizationKey": "buckles"
 				},
 				{
 					"name": "straps",
@@ -77,7 +78,8 @@
 					"colorizationKey": "straps"
 				},
 				{
-					"name": "buckle"
+					"name": "buckle",
+					"colorizationKey": "buckles"
 				}
 			],
 			"variables": [

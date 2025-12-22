@@ -14,6 +14,10 @@ DefineAsset({
 			name: 'Straps',
 			default: '#444444',
 		},
+		buckles: {
+			name: 'Buckles/Rings',
+			default: '#FFFFFF',
+		},
 	},
 	preview: 'wiffle_preview.png',
 	attributes: {
