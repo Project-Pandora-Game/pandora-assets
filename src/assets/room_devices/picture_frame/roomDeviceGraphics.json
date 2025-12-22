@@ -599,6 +599,516 @@
 					]
 				},
 				{
+					"image": "naera_avalanche.png",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_avalanche"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "large"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_avalanche.png@700x1000",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_avalanche"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "medium"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_avalanche.png@350x500",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_avalanche"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "small"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_catch.png",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_catch"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "large"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_catch.png@700x1000",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_catch"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "medium"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_catch.png@350x500",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_catch"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "small"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_cinder.png",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_cinder"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "large"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_cinder.png@700x1000",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_cinder"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "medium"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_cinder.png@350x500",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_cinder"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "small"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_demon.png",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_demon"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "large"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_demon.png@700x1000",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_demon"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "medium"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_demon.png@350x500",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_demon"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "small"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_eternal.png",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_eternal"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "large"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_eternal.png@700x1000",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_eternal"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "medium"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_eternal.png@350x500",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_eternal"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "small"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_her.png",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_her"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "large"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_her.png@700x1000",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_her"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "medium"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_her.png@350x500",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_her"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "small"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_kitten.png",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_kitten"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "large"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_kitten.png@700x1000",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_kitten"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "medium"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_kitten.png@350x500",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_kitten"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "small"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_maid.png",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_maid"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "large"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_maid.png@700x1000",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_maid"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "medium"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_maid.png@350x500",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_maid"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "small"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_mouse.png",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_mouse"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "large"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_mouse.png@700x1000",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_mouse"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "medium"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_mouse.png@350x500",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_mouse"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "small"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_wolf.png",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_wolf"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "large"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_wolf.png@700x1000",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_wolf"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "medium"
+							}
+						]
+					]
+				},
+				{
+					"image": "naera_wolf.png@350x500",
+					"condition": [
+						[
+							{
+								"module": "picture",
+								"operator": "=",
+								"value": "naera_wolf"
+							},
+							{
+								"module": "size",
+								"operator": "=",
+								"value": "small"
+							}
+						]
+					]
+				},
+				{
 					"image": "mirror.png",
 					"condition": [
 						[
