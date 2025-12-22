@@ -1,0 +1,15 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"colorizationKey": "box",
+			"image": "box.png"
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "latch",
+			"image": "box_latch.png"
+		}
+	],
+	"slots": {}
+}

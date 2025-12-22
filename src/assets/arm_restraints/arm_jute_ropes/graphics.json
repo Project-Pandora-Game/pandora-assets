@@ -208,52 +208,47 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "takate_front_arms_left",
-			"priority": "ABOVE_ARM_LEFT",
-			"points": "custom_arm_restraints_torso_ropes",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"type": "autoMesh",
+			"name": "takate_front_arms",
+			"points": "body",
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"legs",
+				"body"
 			],
-			"mirror": 0,
-			"colorizationKey": "rope",
-			"image": {
-				"image": "takate_kote_front_arms_left_v2.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "arms",
-									"operator": "=",
-									"value": "arms_high"
-								}
-							],
-							[
-								{
-									"module": "arms",
-									"operator": "=",
-									"value": "armbinder"
-								}
-							],
-							[
-								{
-									"module": "arms",
-									"operator": "=",
-									"value": "hands_front"
-								}
-							],
-							[
-								{
-									"module": "arms",
-									"operator": "=",
-									"value": "hands_back"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "rope"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "arms"
+				}
+			],
+			"imageMap": {
+				"hands_front": [
+					""
+				],
+				"arms_high": [
+					""
+				],
+				"hands_back": [
+					""
+				],
+				"wrists_low": [
+					"takate_kote_front_arms.png"
+				],
+				"wrists_normal": [
+					"takate_kote_front_arms.png"
+				],
+				"wrists_high": [
+					"takate_kote_front_arms.png"
+				],
+				"armbinder": [
+					""
 				]
 			}
 		},
@@ -299,60 +294,6 @@
 									"module": "cinch",
 									"operator": "=",
 									"value": "yes"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "takate_front_arms_right",
-			"priority": "ABOVE_ARM_RIGHT",
-			"points": "custom_arm_restraints_torso_ropes",
-			"pointType": [
-				"bodyarm_r",
-				"arm_r"
-			],
-			"mirror": 0,
-			"colorizationKey": "rope",
-			"image": {
-				"image": "takate_kote_front_arms_right_v2.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "arms",
-									"operator": "=",
-									"value": "arms_high"
-								}
-							],
-							[
-								{
-									"module": "arms",
-									"operator": "=",
-									"value": "armbinder"
-								}
-							],
-							[
-								{
-									"module": "arms",
-									"operator": "=",
-									"value": "hands_front"
-								}
-							],
-							[
-								{
-									"module": "arms",
-									"operator": "=",
-									"value": "hands_back"
 								}
 							]
 						]
@@ -720,7 +661,7 @@
 			"type": "mesh",
 			"name": "waist_cinched_back",
 			"priority": "BELOW_BODY",
-			"points": "custom_arm_restraints_torso_ropes",
+			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -2374,106 +2315,47 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "back_arms_left",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "custom_arm_restraints_torso_ropes",
-			"pointType": [
-				"bodyarm_r",
-				"arm_r"
+			"type": "autoMesh",
+			"name": "back_arms",
+			"points": "body",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"body",
+				"legs"
 			],
-			"mirror": 0,
-			"colorizationKey": "rope",
-			"image": {
-				"image": "takate_kote_back_arms_left_v2.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "arms",
-									"operator": "=",
-									"value": "arms_high"
-								}
-							],
-							[
-								{
-									"module": "arms",
-									"operator": "=",
-									"value": "armbinder"
-								}
-							],
-							[
-								{
-									"module": "arms",
-									"operator": "=",
-									"value": "hands_front"
-								}
-							],
-							[
-								{
-									"module": "arms",
-									"operator": "=",
-									"value": "hands_back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "back_arms_right",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "custom_arm_restraints_torso_ropes",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "rope"
+				}
 			],
-			"mirror": 0,
-			"colorizationKey": "rope",
-			"image": {
-				"image": "takate_kote_back_arms_right_v2.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "arms",
-									"operator": "=",
-									"value": "arms_high"
-								}
-							],
-							[
-								{
-									"module": "arms",
-									"operator": "=",
-									"value": "armbinder"
-								}
-							],
-							[
-								{
-									"module": "arms",
-									"operator": "=",
-									"value": "hands_front"
-								}
-							],
-							[
-								{
-									"module": "arms",
-									"operator": "=",
-									"value": "hands_back"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "arms"
+				}
+			],
+			"imageMap": {
+				"hands_front": [
+					""
+				],
+				"arms_high": [
+					""
+				],
+				"hands_back": [
+					""
+				],
+				"wrists_low": [
+					"takate_kote_back_arms.png"
+				],
+				"wrists_normal": [
+					"takate_kote_back_arms.png"
+				],
+				"wrists_high": [
+					"takate_kote_back_arms.png"
+				],
+				"armbinder": [
+					""
 				]
 			}
 		},

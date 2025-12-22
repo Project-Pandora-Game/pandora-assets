@@ -10,6 +10,16 @@ DefineRoomDeviceAsset({
 	staticAttributes: ['Furniture'],
 	preview: 'couch_preview.png',
 	slots: {},
+	modules: {
+		storage: {
+			type: 'storage',
+			name: `Under the couch`,
+			staticConfig: { slotName: null },
+			maxAcceptedSize: 'medium',
+			maxCount: 5,
+		},
+	},
+	storageModule: 'storage',
 	pivot: {
 		x: 1400,
 		y: 950,

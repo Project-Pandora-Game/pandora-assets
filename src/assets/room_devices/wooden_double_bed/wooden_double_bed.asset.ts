@@ -389,7 +389,23 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		lock: {
+			type: 'lockSlot',
+			name: 'Drawer lock',
+			staticConfig: { slotName: null },
+			lockedProperties: {
+				blockModules: ['storage'],
+			},
+		},
+		storage: {
+			type: 'storage',
+			name: `Bed drawer`,
+			staticConfig: { slotName: null },
+			maxAcceptedSize: 'large',
+			maxCount: 20,
+		},
 	},
+	storageModule: 'storage',
 	pivot: {
 		x: 920,
 		y: 1730,

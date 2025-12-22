@@ -34,14 +34,7 @@
 			"type": "mesh",
 			"name": "front",
 			"priority": "ABOVE_BODY",
-			"points": "custom_dresses_nightgown",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r"
-			],
+			"points": "skirt_long",
 			"mirror": 0,
 			"colorizationKey": "nightgown",
 			"image": {
@@ -82,14 +75,7 @@
 			"type": "mesh",
 			"name": "back",
 			"priority": "BELOW_BODY",
-			"points": "custom_dresses_nightgown",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r"
-			],
+			"points": "skirt_long",
 			"mirror": 0,
 			"colorizationKey": "nightgown",
 			"image": {

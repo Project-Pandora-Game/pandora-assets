@@ -36,6 +36,18 @@ DefineAsset({
 		],
 	},
 	modules: {
+		leftPocket: {
+			type: 'storage',
+			name: 'Left pocket',
+			maxCount: 1,
+			maxAcceptedSize: 'small',
+		},
+		rightPocket: {
+			type: 'storage',
+			name: 'Right pocket',
+			maxCount: 1,
+			maxAcceptedSize: 'small',
+		},
 		flap: {
 			type: 'typed',
 			name: 'Flap',

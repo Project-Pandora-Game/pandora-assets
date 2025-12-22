@@ -29,11 +29,12 @@
 						"x": -3,
 						"y": -5
 					}
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "arm_r",
-					"value": -1
+					"weight": 1
 				}
 			]
 		},
@@ -52,11 +53,12 @@
 						"x": 0,
 						"y": 3
 					}
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "arm_r",
-					"value": -1
+					"weight": 1
 				}
 			]
 		},
@@ -75,18 +77,19 @@
 						"x": 0,
 						"y": -5
 					}
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "arm_r",
-					"value": -1
+					"weight": 1
 				}
 			]
 		},
 		{
 			"pos": [
 				246,
-				450
+				454
 			],
 			"mirror": true,
 			"pointType": "arm_r",
@@ -98,11 +101,12 @@
 						"x": -4,
 						"y": 3
 					}
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "arm_r",
-					"value": -1
+					"weight": 1
 				}
 			]
 		},
@@ -121,11 +125,12 @@
 						"x": 0,
 						"y": 1
 					}
-				},
+				}
+			],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "arm_r",
-					"value": -1
+					"weight": 1
 				}
 			]
 		},
@@ -136,11 +141,11 @@
 			],
 			"mirror": true,
 			"pointType": "arm_r",
-			"transforms": [
+			"transforms": [],
+			"skinning": [
 				{
-					"type": "rotate",
 					"bone": "arm_r",
-					"value": -1
+					"weight": 1
 				}
 			]
 		}

@@ -26,24 +26,6 @@ DefineRoomDeviceAsset({
 						pose: ['standing', 'kneeling'],
 					},
 				},
-				posePresets: [
-					{
-						name: 'Holding hands up in the barrel',
-						bones: {
-							arm_r: 14,
-							arm_l: 14,
-							elbow_r: -119,
-							elbow_l: -119,
-						},
-						optional: {
-							arms: {
-								position: 'front_above_hair',
-								rotation: 'up',
-								fingers: 'fist',
-							},
-						},
-					},
-				],
 			},
 		},
 	},

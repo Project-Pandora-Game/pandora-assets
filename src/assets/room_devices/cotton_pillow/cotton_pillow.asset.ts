@@ -10,6 +10,16 @@ DefineRoomDeviceAsset({
 	staticAttributes: ['Floor'],
 	preview: 'preview.png',
 	slots: {},
+	modules: {
+		storage: {
+			type: 'storage',
+			name: `Under the pillow`,
+			staticConfig: { slotName: null },
+			maxAcceptedSize: 'medium',
+			maxCount: 1,
+		},
+	},
+	storageModule: 'storage',
 	pivot: {
 		x: 400,
 		y: -80,

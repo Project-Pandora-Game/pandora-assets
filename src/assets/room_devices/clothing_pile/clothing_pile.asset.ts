@@ -36,7 +36,15 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		storage: {
+			type: 'storage',
+			name: `Inside the pile`,
+			staticConfig: { slotName: null },
+			maxAcceptedSize: 'medium',
+			maxCount: 20,
+		},
 	},
+	storageModule: 'storage',
 	pivot: {
 		x: 175,
 		y: 30,

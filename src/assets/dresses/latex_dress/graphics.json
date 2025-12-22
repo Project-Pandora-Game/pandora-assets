@@ -131,7 +131,7 @@
 			"variables": [
 				{
 					"type": "typedModule",
-					"module": "skirtStateFront"
+					"module": "skirtStateBack"
 				}
 			],
 			"imageMap": {
