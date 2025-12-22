@@ -6,7 +6,7 @@ DefineAsset({
 	colorization: {
 		shirt: {
 			name: 'Shirt',
-			default: '#1D564A',
+			default: '#1e1e1e',
 		},
 	},
 	// size:350, y:380, centered
