@@ -495,7 +495,7 @@ const ATTRIBUTES_DEFINITION_BASE = DefineAttributes({
 			tabs: ['worn', 'storage'],
 		},
 		icon: 'gag',
-		parentAttributes: ['Restraint'],
+		parentAttributes: ['Restraint', 'Mouth_item'],
 	},
 	Mouth_insert: {
 		name: 'An item inserted in the mouth',

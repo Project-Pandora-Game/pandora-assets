@@ -19,7 +19,6 @@ DefineAsset({
 	attributes: {
 		provides: [
 			'Restraint',
-			'Restraint_mouth',
 		],
 	},
 	modules: {
@@ -51,6 +50,7 @@ DefineAsset({
 						},
 						attributes: {
 							provides: [
+								'Restraint_mouth',
 								'Mouth_item',
 								'Mouth_insert',
 								'Mouth_cover',
@@ -86,6 +86,7 @@ DefineAsset({
 						},
 						attributes: {
 							provides: [
+								'Restraint_mouth',
 								'Mouth_item',
 								'Mouth_insert',
 								'Mouth_cover',
