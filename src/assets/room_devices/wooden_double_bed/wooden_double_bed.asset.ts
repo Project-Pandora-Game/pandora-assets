@@ -15,13 +15,21 @@ DefineRoomDeviceAsset({
 			name: 'Pillows',
 			default: '#ffffff',
 		},
+		blankets: {
+			name: 'Blankets',
+			default: '#ebebeb',
+		},
 		ropes_left: {
 			name: 'Left ropes',
-			default: '#666666',
+			default: '#777777',
+		},
+		ropes_middle: {
+			name: 'Middle ropes',
+			default: '#777777',
 		},
 		ropes_right: {
 			name: 'Right ropes',
-			default: '#ffffff',
+			default: '#777777',
 		},
 	},
 	staticAttributes: ['Furniture', 'Play_furniture'],
@@ -65,6 +73,30 @@ DefineRoomDeviceAsset({
 		},
 	},
 	modules: {
+		blankets: {
+			type: 'typed',
+			name: 'Blankets',
+			staticConfig: { slotName: null },
+			variants: [
+				{
+					id: 'no',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'left',
+					name: 'Left side',
+				},
+				{
+					id: 'right',
+					name: 'Right side',
+				},
+				{
+					id: 'both',
+					name: 'Both sides',
+				},
+			],
+		},
 		ropes_left: {
 			type: 'typed',
 			name: 'Bed ropes - left side',
@@ -217,6 +249,72 @@ DefineRoomDeviceAsset({
 										pose: 'standing',
 									},
 									view: 'back',
+								},
+								effects: {
+									blockHands: true,
+								},
+							},
+						},
+					},
+				},
+			],
+		},
+		ropes_middle: {
+			type: 'typed',
+			name: 'Bed ropes - middle',
+			staticConfig: { slotName: 'character_slot_middle' },
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'tied_legs',
+					name: 'Tied spread (Legs)',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_middle'],
+						slotProperties: {
+							character_slot_middle: {
+								poseLimits: {
+									bones: {
+										leg_r: -80,
+										leg_l: -80,
+										character_rotation: 0,
+									},
+									legs: {
+										pose: 'standing',
+									},
+									view: 'front',
+								},
+							},
+						},
+					},
+				},
+				{
+					id: 'tied_both',
+					name: 'Tied spread (Legs & Arms)',
+					properties: {
+						blockSlotsEnterLeave: ['character_slot_middle'],
+						slotProperties: {
+							character_slot_middle: {
+								poseLimits: {
+									bones: {
+										arm_l: 84,
+										arm_r: 84,
+										elbow_l: -1,
+										elbow_r: -1,
+										leg_r: -80,
+										leg_l: -80,
+										character_rotation: 0,
+									},
+									legs: {
+										pose: 'standing',
+									},
+									arms: {
+										position: 'back',
+									},
+									view: 'front',
 								},
 								effects: {
 									blockHands: true,
@@ -435,6 +533,13 @@ DefineRoomDeviceAsset({
 				part: 'used 3D model - pillow',
 				source: 'https://skfb.ly/6ZJuI',
 				copyrightHolder: 'Susidko Studio',
+				editedBy: 'ClaudiaMia',
+				license: 'CC BY',
+			},
+			{
+				part: 'used 3D model - blanket',
+				source: 'https://skfb.ly/pxIqD',
+				copyrightHolder: 'kiu (kenlaukkl)',
 				editedBy: 'ClaudiaMia',
 				license: 'CC BY',
 			},

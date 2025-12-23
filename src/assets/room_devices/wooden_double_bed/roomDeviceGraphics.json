@@ -16,6 +16,51 @@
 			"image": "wooden_double_bed_pillows.png"
 		},
 		{
+			"type": "sprite",
+			"colorizationKey": "ropes_middle",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "ropes_top_middle.png",
+					"condition": [
+						[
+							{
+								"module": "ropes_middle",
+								"operator": "=",
+								"value": "tied_both"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "ropes_middle",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "ropes_bottom_middle.png",
+					"condition": [
+						[
+							{
+								"module": "ropes_middle",
+								"operator": "=",
+								"value": "tied_legs"
+							}
+						],
+						[
+							{
+								"module": "ropes_middle",
+								"operator": "=",
+								"value": "tied_both"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
 			"type": "slot",
 			"slot": "character_slot_left",
 			"characterPosition": {
@@ -51,18 +96,6 @@
 		},
 		{
 			"type": "slot",
-			"slot": "character_slot_middle",
-			"characterPosition": {
-				"offsetX": 0,
-				"offsetY": -670,
-				"pivotOffset": {
-					"x": 0,
-					"y": -500
-				}
-			}
-		},
-		{
-			"type": "slot",
 			"slot": "character_slot_right",
 			"characterPosition": {
 				"offsetX": 288,
@@ -89,6 +122,117 @@
 								"module": "ropes_right",
 								"operator": "!=",
 								"value": "none"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "slot",
+			"slot": "character_slot_middle",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": -670,
+				"pivotOffset": {
+					"x": 0,
+					"y": -500
+				}
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": -4,
+						"offsetY": -1010,
+						"pivotOffset": {
+							"x": 0,
+							"y": -500
+						}
+					},
+					"condition": [
+						[
+							{
+								"module": "ropes_middle",
+								"operator": "!=",
+								"value": "none"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "ropes_middle",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "ankles_middle.png",
+					"condition": [
+						[
+							{
+								"module": "ropes_middle",
+								"operator": "=",
+								"value": "tied_legs"
+							}
+						],
+						[
+							{
+								"module": "ropes_middle",
+								"operator": "=",
+								"value": "tied_both"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "blankets",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "blanket_left.png",
+					"condition": [
+						[
+							{
+								"module": "blankets",
+								"operator": "=",
+								"value": "left"
+							}
+						],
+						[
+							{
+								"module": "blankets",
+								"operator": "=",
+								"value": "both"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"type": "sprite",
+			"colorizationKey": "blankets",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "blanket_right.png",
+					"condition": [
+						[
+							{
+								"module": "blankets",
+								"operator": "=",
+								"value": "right"
+							}
+						],
+						[
+							{
+								"module": "blankets",
+								"operator": "=",
+								"value": "both"
 							}
 						]
 					]
