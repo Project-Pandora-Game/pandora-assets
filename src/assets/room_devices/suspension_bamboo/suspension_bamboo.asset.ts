@@ -165,6 +165,11 @@ DefineRoomDeviceAsset({
 					id: 'none',
 					name: 'None',
 					default: true,
+					properties: {
+						stateFlags: {
+							provides: ['straight_thighs'],
+						},
+					},
 				},
 				{
 					id: 'thigh_front_left',
@@ -315,6 +320,11 @@ DefineRoomDeviceAsset({
 					id: 'none',
 					name: 'None',
 					default: true,
+					properties: {
+						stateFlags: {
+							provides: ['straight_ankles'],
+						},
+					},
 				},
 				{
 					id: 'ankle_front_left',
@@ -503,6 +513,22 @@ DefineRoomDeviceAsset({
 		x: 750,
 		y: 1300,
 	},
+	stateFlagCombinations: [
+		{
+			requiredFlags: ['suspension_chest', 'straight_thighs', 'straight_ankles'],
+			properties: {
+				slotProperties: {
+					under_bamboo: {
+						poseLimits: {
+							bones: {
+								character_rotation: 0,
+							},
+						},
+					},
+				},
+			},
+		},
+	],
 	ownership: {
 		responsibleContributor: 'Shikifet <shikifet@gmail.com>',
 		credits: ['Shikifet'],
