@@ -187,36 +187,6 @@
 			"width": 1777,
 			"height": 1810,
 			"type": "sprite",
-			"colorizationKey": "ropes_middle",
-			"image": "",
-			"imageOverrides": [
-				{
-					"image": "ankles_middle.png",
-					"condition": [
-						[
-							{
-								"module": "ropes_middle",
-								"operator": "=",
-								"value": "tied_legs"
-							}
-						],
-						[
-							{
-								"module": "ropes_middle",
-								"operator": "=",
-								"value": "tied_both"
-							}
-						]
-					]
-				}
-			]
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1777,
-			"height": 1810,
-			"type": "sprite",
 			"colorizationKey": "blankets",
 			"image": "",
 			"imageOverrides": [
@@ -235,6 +205,18 @@
 								"module": "blankets",
 								"operator": "=",
 								"value": "both"
+							}
+						]
+					]
+				},
+				{
+					"image": "blanket_big.png",
+					"condition": [
+						[
+							{
+								"module": "blankets",
+								"operator": "=",
+								"value": "big"
 							}
 						]
 					]
@@ -948,6 +930,47 @@
 									]
 								]
 							}
+						]
+					}
+				}
+			]
+		},
+		"character_slot_middle": {
+			"layers": [
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "Ankle wrap",
+					"points": "body",
+					"automeshTemplate": "aboveBody",
+					"disabledTemplateParts": [
+						"body",
+						"arms"
+					],
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "ropes_middle"
+						}
+					],
+					"variables": [
+						{
+							"type": "typedModule",
+							"module": "ropes_middle"
+						}
+					],
+					"imageMap": {
+						"none": [
+							""
+						],
+						"tied_legs": [
+							"ankles_middle.png"
+						],
+						"tied_both": [
+							"ankles_middle.png"
 						]
 					}
 				}

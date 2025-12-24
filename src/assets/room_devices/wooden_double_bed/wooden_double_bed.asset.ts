@@ -95,6 +95,10 @@ DefineRoomDeviceAsset({
 					id: 'both',
 					name: 'Both sides',
 				},
+				{
+					id: 'big',
+					name: 'One big blanket',
+				},
 			],
 		},
 		ropes_left: {
