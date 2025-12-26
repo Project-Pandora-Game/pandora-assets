@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 768,
 			"type": "sprite",
 			"colorizationKey": "table",
 			"image": "pillory_table_back.png"
@@ -15,6 +19,10 @@
 			}
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 768,
 			"type": "sprite",
 			"colorizationKey": "table",
 			"image": "pillory_table_front.png"

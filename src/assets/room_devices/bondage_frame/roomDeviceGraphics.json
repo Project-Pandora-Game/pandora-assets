@@ -1,36 +1,64 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1400,
+			"height": 2000,
 			"type": "sprite",
 			"colorizationKey": "rings",
 			"image": "frame_rings_side.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1400,
+			"height": 2000,
 			"type": "sprite",
 			"colorizationKey": "frame",
 			"image": "frame.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1400,
+			"height": 2000,
 			"type": "sprite",
 			"colorizationKey": "rings",
 			"image": "frame_ring_left.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1400,
+			"height": 2000,
 			"type": "sprite",
 			"colorizationKey": "rings",
 			"image": "frame_ring_right.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1400,
+			"height": 2000,
 			"type": "sprite",
 			"colorizationKey": "sockets",
 			"image": "frame_sockets.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1400,
+			"height": 2000,
 			"type": "sprite",
 			"colorizationKey": "rings",
 			"image": "frame_rings_top.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1400,
+			"height": 2000,
 			"type": "sprite",
 			"colorizationKey": "chains",
 			"image": "",
@@ -57,6 +85,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1400,
+			"height": 2000,
 			"type": "sprite",
 			"colorizationKey": "chains",
 			"image": "",
@@ -83,6 +115,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1400,
+			"height": 2000,
 			"type": "sprite",
 			"colorizationKey": "chains",
 			"image": "",
@@ -109,6 +145,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1400,
+			"height": 2000,
 			"type": "sprite",
 			"colorizationKey": "chains",
 			"image": "",
@@ -135,6 +175,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1400,
+			"height": 2000,
 			"type": "sprite",
 			"colorizationKey": "chains",
 			"image": "frame_chains_top_hanging.png",
@@ -185,6 +229,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1400,
+			"height": 2000,
 			"type": "sprite",
 			"colorizationKey": "chains",
 			"image": "frame_chains_bottom_hanging.png",

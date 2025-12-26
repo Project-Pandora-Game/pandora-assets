@@ -1,11 +1,19 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 750,
+			"height": 425,
 			"type": "sprite",
 			"colorizationKey": "leafs",
 			"image": "flower_bed_leafs.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 750,
+			"height": 425,
 			"type": "sprite",
 			"colorizationKey": "flowers",
 			"image": "flower_bed_flowers.png"

@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 857,
+			"height": 1423,
 			"type": "sprite",
 			"colorizationKey": "frame",
 			"image": "frame.png",
@@ -20,6 +24,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 27,
+			"height": 1387,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -57,6 +65,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 27,
+			"height": 1387,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -94,6 +106,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 857,
+			"height": 1423,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -130,6 +146,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 857,
+			"height": 1423,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -166,16 +186,28 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 857,
+			"height": 1423,
 			"type": "sprite",
 			"colorizationKey": "cross",
 			"image": "cross.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 857,
+			"height": 1423,
 			"type": "sprite",
 			"colorizationKey": "nails",
 			"image": "nails.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 857,
+			"height": 1423,
 			"type": "sprite",
 			"colorizationKey": "padding",
 			"image": "",
@@ -195,6 +227,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 857,
+			"height": 1423,
 			"type": "sprite",
 			"colorizationKey": "padding",
 			"image": "",
@@ -214,6 +250,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 857,
+			"height": 1423,
 			"type": "sprite",
 			"colorizationKey": "chains",
 			"image": "chains.png"

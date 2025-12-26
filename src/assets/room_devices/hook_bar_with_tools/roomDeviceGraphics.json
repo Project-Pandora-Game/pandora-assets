@@ -1,18 +1,30 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 840,
+			"height": 700,
 			"type": "sprite",
 			"colorizationKey": "bar",
 			"image": "hookbar_bar.png",
 			"imageOverrides": []
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 840,
+			"height": 700,
 			"type": "sprite",
 			"colorizationKey": "hooks",
 			"image": "hookbar_hooks.png",
 			"imageOverrides": []
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 840,
+			"height": 700,
 			"type": "sprite",
 			"image": "",
 			"imageOverrides": [
@@ -31,6 +43,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 840,
+			"height": 700,
 			"type": "sprite",
 			"image": "",
 			"imageOverrides": [
@@ -49,6 +65,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 840,
+			"height": 700,
 			"type": "sprite",
 			"colorizationKey": "paddle",
 			"image": "",
@@ -68,6 +88,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 840,
+			"height": 700,
 			"type": "sprite",
 			"image": "",
 			"imageOverrides": [
@@ -86,6 +110,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 840,
+			"height": 700,
 			"type": "sprite",
 			"colorizationKey": "flogger",
 			"image": "",
@@ -105,6 +133,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 840,
+			"height": 700,
 			"type": "sprite",
 			"image": "",
 			"imageOverrides": [
@@ -123,6 +155,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 840,
+			"height": 700,
 			"type": "sprite",
 			"colorizationKey": "heart",
 			"image": "",
@@ -142,6 +178,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 840,
+			"height": 700,
 			"type": "sprite",
 			"image": "",
 			"imageOverrides": [
@@ -160,6 +200,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 840,
+			"height": 700,
 			"type": "sprite",
 			"colorizationKey": "cane",
 			"image": "",

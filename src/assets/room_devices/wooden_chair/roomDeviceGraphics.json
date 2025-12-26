@@ -1,11 +1,11 @@
 {
 	"layers": [
 		{
+			"x": -216,
+			"y": -740,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -740
-			},
 			"colorizationKey": "rope",
 			"image": "",
 			"imageOverrides": [
@@ -24,20 +24,20 @@
 			]
 		},
 		{
+			"x": -216,
+			"y": -745,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -745
-			},
 			"colorizationKey": "chair",
 			"image": "chair_base.png@432x811"
 		},
 		{
+			"x": -216,
+			"y": -745,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -745
-			},
 			"colorizationKey": "chair",
 			"image": "",
 			"imageOverrides": [
@@ -78,11 +78,11 @@
 			]
 		},
 		{
+			"x": -216,
+			"y": -745,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -745
-			},
 			"colorizationKey": "plug",
 			"image": "",
 			"imageOverrides": [
@@ -108,11 +108,11 @@
 			]
 		},
 		{
+			"x": -216,
+			"y": -745,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -745
-			},
 			"colorizationKey": "dildo",
 			"image": "",
 			"imageOverrides": [
@@ -138,11 +138,11 @@
 			]
 		},
 		{
+			"x": -216,
+			"y": -745,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -745
-			},
 			"colorizationKey": "cushion",
 			"image": "",
 			"imageOverrides": [
@@ -183,11 +183,11 @@
 			]
 		},
 		{
+			"x": -216,
+			"y": -740,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -740
-			},
 			"colorizationKey": "rope",
 			"image": "",
 			"imageOverrides": [
@@ -206,11 +206,11 @@
 			]
 		},
 		{
+			"x": -216,
+			"y": -740,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -740
-			},
 			"colorizationKey": "chair",
 			"image": "",
 			"imageOverrides": [
@@ -259,11 +259,11 @@
 			]
 		},
 		{
+			"x": -216,
+			"y": -760,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -760
-			},
 			"colorizationKey": "rope",
 			"image": "",
 			"imageOverrides": [
@@ -282,11 +282,11 @@
 			]
 		},
 		{
+			"x": -216,
+			"y": -740,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -740
-			},
 			"colorizationKey": "rope",
 			"image": "",
 			"imageOverrides": [
@@ -305,11 +305,11 @@
 			]
 		},
 		{
+			"x": -216,
+			"y": -760,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -760
-			},
 			"colorizationKey": "rope",
 			"image": "",
 			"imageOverrides": [

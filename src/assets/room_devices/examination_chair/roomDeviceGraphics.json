@@ -1,24 +1,40 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"name": "Frame base",
 			"colorizationKey": "frame",
 			"image": "chair_base_frame.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"name": "Frame footstool cover",
 			"colorizationKey": "stool",
 			"image": "chair_footstool.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"name": "Frame base cover",
 			"colorizationKey": "base",
 			"image": "chair_base_cover.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"name": "Seat frame",
 			"offsetOverrides": [
@@ -72,6 +88,10 @@
 			"image": "chair_seat_frame.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"name": "Seat cover",
 			"offsetOverrides": [
@@ -125,6 +145,10 @@
 			"image": "chair_seat_cover.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"name": "Seat holders",
 			"offsetOverrides": [
@@ -192,6 +216,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"name": "Seat leg rests",
 			"offsetOverrides": [

@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 768,
 			"type": "sprite",
 			"colorizationKey": "table",
 			"image": "wooden_table.png"

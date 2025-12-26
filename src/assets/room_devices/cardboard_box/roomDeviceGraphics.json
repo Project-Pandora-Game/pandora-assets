@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 966,
+			"height": 762,
 			"type": "sprite",
 			"colorizationKey": "box",
 			"image": "cardbox_back.png"
@@ -56,11 +60,19 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 966,
+			"height": 762,
 			"type": "sprite",
 			"colorizationKey": "box",
 			"image": "cardbox_front.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 966,
+			"height": 762,
 			"type": "sprite",
 			"colorizationKey": "box",
 			"image": "cardbox_lid.png",

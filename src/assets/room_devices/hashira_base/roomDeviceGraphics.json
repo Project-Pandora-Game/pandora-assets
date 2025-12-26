@@ -1,11 +1,11 @@
 {
 	"layers": [
 		{
+			"x": -142,
+			"y": -180,
+			"width": 284,
+			"height": 284,
 			"type": "sprite",
-			"offset": {
-				"x": -142,
-				"y": -180
-			},
 			"colorizationKey": "hashira",
 			"image": "hashira_base.png",
 			"imageOverrides": [

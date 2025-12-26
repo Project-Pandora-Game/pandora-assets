@@ -2,7 +2,7 @@ import { createHash } from 'crypto';
 import { readFileSync, statSync } from 'fs';
 import { copyFile, readdir, stat, unlink, writeFile } from 'fs/promises';
 import { availableParallelism } from 'os';
-import { Assert, GetLogger, SplitStringFirstOccurrence, type GraphicsBuildImageResource, type ImageBoundingBox } from 'pandora-common';
+import { Assert, GetLogger, SplitStringFirstOccurrence, type GraphicsBuildImageResource, type ImageBoundingBox, type Size } from 'pandora-common';
 import { basename, join } from 'path';
 import sharp, { type AvifOptions, type Sharp } from 'sharp';
 import { GENERATE_AVIF } from '../config.ts';
@@ -204,6 +204,16 @@ class ImageManipulators {
 		return new GeneratedImageResource(baseImage, `_r${resolution}`, generator);
 	}
 
+	public static async getSize(imageResource: IImageResource): Promise<Size> {
+		const image = await imageResource.loadImageSharp();
+		const { width, height } = await image.metadata();
+
+		return {
+			width,
+			height,
+		};
+	}
+
 	public static async getContentBoundingBox(imageResource: IImageResource): Promise<ImageBoundingBox> {
 		const image = await imageResource.loadImageSharp();
 		const { data, info } = await image
@@ -214,8 +224,8 @@ class ImageManipulators {
 
 		Assert(data.length === (info.width * info.height));
 
-		let left = info.width - 1;
-		let top = info.height - 1;
+		let left = info.width;
+		let top = info.height;
 		let rightExclusive = 0;
 		let bottomExclusive = 0;
 
@@ -234,7 +244,7 @@ class ImageManipulators {
 		}
 
 		// Special case if the image is empty
-		if (left === (info.width - 1) && top === (info.height - 1) && rightExclusive === 0 && bottomExclusive === 0) {
+		if (left === info.width && top === info.height && rightExclusive === 0 && bottomExclusive === 0) {
 			return {
 				left: 0,
 				top: 0,
@@ -275,6 +285,10 @@ class ImageResource extends FileResource implements IImageResource {
 
 	public addDownscaledImage(resolution: number): IImageResource {
 		return ImageManipulators.addDownscaledImage(this, resolution);
+	}
+
+	public getSize(): Promise<Size> {
+		return ImageManipulators.getSize(this);
 	}
 
 	public getContentBoundingBox(): Promise<ImageBoundingBox> {
@@ -353,6 +367,10 @@ class GeneratedImageResource extends Resource implements IImageResource {
 
 	public addDownscaledImage(resolution: number): IImageResource {
 		return ImageManipulators.addDownscaledImage(this, resolution);
+	}
+
+	public getSize(): Promise<Size> {
+		return ImageManipulators.getSize(this);
 	}
 
 	public getContentBoundingBox(): Promise<ImageBoundingBox> {

@@ -1,11 +1,11 @@
 {
 	"layers": [
 		{
+			"x": -160,
+			"y": -75,
+			"width": 320,
+			"height": 150,
 			"type": "sprite",
-			"offset": {
-				"x": -160,
-				"y": -75
-			},
 			"clipToRoom": false,
 			"colorizationKey": "soroban",
 			"image": "soroban.png"

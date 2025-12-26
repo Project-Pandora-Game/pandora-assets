@@ -1,38 +1,38 @@
 {
 	"layers": [
 		{
+			"x": -500,
+			"y": -900,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
-			"offset": {
-				"x": -500,
-				"y": -900
-			},
 			"colorizationKey": "base",
 			"image": "base.png"
 		},
 		{
+			"x": -500,
+			"y": -900,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
-			"offset": {
-				"x": -500,
-				"y": -900
-			},
 			"colorizationKey": "cover",
 			"image": "top.png"
 		},
 		{
+			"x": -500,
+			"y": -900,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
-			"offset": {
-				"x": -500,
-				"y": -900
-			},
 			"colorizationKey": "base",
 			"image": "front.png"
 		},
 		{
+			"x": -500,
+			"y": -900,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
-			"offset": {
-				"x": -500,
-				"y": -900
-			},
 			"colorizationKey": "ring",
 			"image": "",
 			"imageOverrides": [
@@ -97,11 +97,11 @@
 			]
 		},
 		{
+			"x": -500,
+			"y": -900,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
-			"offset": {
-				"x": -500,
-				"y": -900
-			},
 			"image": "",
 			"imageOverrides": [
 				{
@@ -124,20 +124,20 @@
 			]
 		},
 		{
+			"x": -500,
+			"y": -900,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
-			"offset": {
-				"x": -500,
-				"y": -900
-			},
 			"colorizationKey": "dildo",
 			"image": "vibration_base.png"
 		},
 		{
+			"x": -500,
+			"y": -900,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
-			"offset": {
-				"x": -500,
-				"y": -900
-			},
 			"colorizationKey": "dildo",
 			"image": "",
 			"imageOverrides": [
@@ -161,11 +161,11 @@
 			]
 		},
 		{
+			"x": -500,
+			"y": -930,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
-			"offset": {
-				"x": -500,
-				"y": -930
-			},
 			"colorizationKey": "dildo",
 			"image": "",
 			"imageOverrides": [
@@ -217,11 +217,11 @@
 			]
 		},
 		{
+			"x": -500,
+			"y": -900,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
-			"offset": {
-				"x": -500,
-				"y": -900
-			},
 			"image": "",
 			"imageOverrides": [
 				{
@@ -244,11 +244,11 @@
 			]
 		},
 		{
+			"x": -500,
+			"y": -900,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
-			"offset": {
-				"x": -500,
-				"y": -900
-			},
 			"image": "",
 			"imageOverrides": [
 				{

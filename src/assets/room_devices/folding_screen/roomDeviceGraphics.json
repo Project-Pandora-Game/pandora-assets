@@ -1,16 +1,28 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1440,
+			"height": 1350,
 			"type": "sprite",
 			"colorizationKey": "frame",
 			"image": "screen_frame.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1440,
+			"height": 1350,
 			"type": "sprite",
 			"colorizationKey": "paper",
 			"image": "screen_paper.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1440,
+			"height": 1350,
 			"type": "sprite",
 			"colorizationKey": "overlay",
 			"image": "screen_paper_overlay.png"

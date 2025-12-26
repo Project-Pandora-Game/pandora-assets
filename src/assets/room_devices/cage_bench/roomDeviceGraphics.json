@@ -1,11 +1,19 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1058,
+			"height": 850,
 			"type": "sprite",
 			"colorizationKey": "cage",
 			"image": "bench_open.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1058,
+			"height": 850,
 			"type": "sprite",
 			"colorizationKey": "cage",
 			"image": "bench_closed.png",
@@ -25,6 +33,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1058,
+			"height": 850,
 			"type": "sprite",
 			"name": "pillow",
 			"colorizationKey": "pillow",
@@ -45,6 +57,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1058,
+			"height": 850,
 			"type": "sprite",
 			"name": "mattress",
 			"colorizationKey": "mattress",
@@ -79,16 +95,28 @@
 			}
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1058,
+			"height": 850,
 			"type": "sprite",
 			"colorizationKey": "cage",
 			"image": "bench_overlay.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1058,
+			"height": 850,
 			"type": "sprite",
 			"colorizationKey": "cushion",
 			"image": "bench_cushion.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1058,
+			"height": 850,
 			"type": "sprite",
 			"colorizationKey": "curtain",
 			"image": "bench_curtain.png",

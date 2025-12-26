@@ -1,11 +1,19 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1148,
+			"height": 1123,
 			"type": "sprite",
 			"colorizationKey": "inside",
 			"image": "hut_back.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1148,
+			"height": 1123,
 			"type": "sprite",
 			"colorizationKey": "cushion",
 			"image": "hut_cushion.png"
@@ -34,6 +42,10 @@
 			}
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1148,
+			"height": 1123,
 			"type": "sprite",
 			"colorizationKey": "outside",
 			"image": "hut_front_ears.png",
@@ -53,6 +65,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1148,
+			"height": 1123,
 			"type": "sprite",
 			"colorizationKey": "outside",
 			"image": "hut_front.png"

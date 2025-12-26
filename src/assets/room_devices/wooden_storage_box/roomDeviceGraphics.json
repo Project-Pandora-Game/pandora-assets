@@ -1,11 +1,19 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 791,
+			"height": 505,
 			"type": "sprite",
 			"colorizationKey": "box",
 			"image": "box.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 791,
+			"height": 505,
 			"type": "sprite",
 			"colorizationKey": "latch",
 			"image": "box_latch.png"

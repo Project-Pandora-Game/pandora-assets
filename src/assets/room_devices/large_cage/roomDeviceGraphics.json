@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1900,
+			"height": 1700,
 			"type": "sprite",
 			"colorizationKey": "cage",
 			"image": "small_cage.png"
@@ -79,6 +83,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1900,
+			"height": 1700,
 			"type": "sprite",
 			"colorizationKey": "cage_door",
 			"image": "small_cage_door.png",

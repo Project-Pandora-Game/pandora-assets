@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 696,
+			"height": 1128,
 			"type": "sprite",
 			"colorizationKey": "tripod",
 			"image": "camera_tripod_l.png",
@@ -20,6 +24,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 696,
+			"height": 1128,
 			"type": "sprite",
 			"colorizationKey": "module",
 			"image": "",

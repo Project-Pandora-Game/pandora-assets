@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1327,
+			"height": 2047,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -49,6 +53,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1327,
+			"height": 2047,
 			"type": "sprite",
 			"offsetOverrides": [
 				{

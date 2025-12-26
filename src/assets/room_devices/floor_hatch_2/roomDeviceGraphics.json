@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1027,
+			"height": 268,
 			"type": "sprite",
 			"colorizationKey": "base",
 			"image": "floor_hatch_2.png",
@@ -20,11 +24,11 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": -600,
+			"width": 1027,
+			"height": 268,
 			"type": "sprite",
-			"offset": {
-				"x": 0,
-				"y": -600
-			},
 			"clipToRoom": true,
 			"colorizationKey": "base",
 			"image": "floor_hatch_2_upside-down.png",

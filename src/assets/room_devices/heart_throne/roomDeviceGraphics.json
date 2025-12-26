@@ -1,15 +1,27 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 713,
+			"height": 1323,
 			"type": "sprite",
 			"image": "queen_throne.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 713,
+			"height": 1323,
 			"type": "sprite",
 			"colorizationKey": "cushion",
 			"image": "queen_throne_cushion.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 713,
+			"height": 1323,
 			"type": "sprite",
 			"colorizationKey": "gem",
 			"image": "queen_throne_gem.png"

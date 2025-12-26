@@ -1,11 +1,19 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1500,
+			"height": 250,
 			"type": "sprite",
 			"colorizationKey": "bamboo",
 			"image": "bamboo.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 60,
+			"height": 1150,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -43,6 +51,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 60,
+			"height": 1150,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -80,6 +92,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 60,
+			"height": 1150,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -117,6 +133,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 60,
+			"height": 1150,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -154,6 +174,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 2022,
+			"height": 1600,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -190,6 +214,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 2022,
+			"height": 368,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -226,11 +254,19 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1500,
+			"height": 250,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "bamboo_rope_sides.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1500,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "",
@@ -469,6 +505,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1500,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "",
@@ -580,6 +620,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1500,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "",
@@ -645,6 +689,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1500,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "",
@@ -710,6 +758,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1500,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "",
@@ -729,6 +781,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1500,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "",
@@ -748,6 +804,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1500,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "",

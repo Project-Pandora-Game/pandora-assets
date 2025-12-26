@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1600,
+			"height": 838,
 			"type": "sprite",
 			"clipToRoom": true,
 			"colorizationKey": "fence",

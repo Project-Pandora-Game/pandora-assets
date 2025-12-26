@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 377,
+			"height": 950,
 			"type": "sprite",
 			"colorizationKey": "chair",
 			"image": "white_chair.png"

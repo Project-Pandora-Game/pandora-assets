@@ -1,11 +1,19 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1003,
+			"height": 1553,
 			"type": "sprite",
 			"colorizationKey": "door",
 			"image": "door_1.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1003,
+			"height": 1553,
 			"type": "sprite",
 			"colorizationKey": "knob",
 			"image": "door_1_knob.png"

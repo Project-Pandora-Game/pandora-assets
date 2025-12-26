@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 500,
+			"height": 700,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -59,6 +63,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 500,
+			"height": 700,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -95,6 +103,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 500,
+			"height": 700,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -153,6 +165,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 500,
+			"height": 700,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -189,6 +205,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 500,
+			"height": 980,
 			"type": "sprite",
 			"offsetOverrides": [
 				{

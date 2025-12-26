@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 2841,
+			"height": 1292,
 			"type": "sprite",
 			"colorizationKey": "couch",
 			"image": "couch.png"
