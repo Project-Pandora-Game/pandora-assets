@@ -9,7 +9,6 @@ DefineRoomDeviceAsset({
 		pole: {
 			name: 'Stand inner pole',
 			default: '#CECCCA',
-			migrateFrom: ['sign'],
 		},
 		connector: {
 			name: 'Stand-body joint',
