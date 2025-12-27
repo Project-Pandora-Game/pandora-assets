@@ -6,38 +6,6 @@
 			"width": 30,
 			"height": 2100,
 			"type": "sprite",
-			"offsetOverrides": [
-				{
-					"offset": {
-						"x": 23,
-						"y": 0
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				},
-				{
-					"offset": {
-						"x": 8,
-						"y": 0
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
-				}
-			],
 			"clipToRoom": true,
 			"colorizationKey": "chain",
 			"image": "",
@@ -53,9 +21,21 @@
 							}
 						]
 					]
-				},
+				}
+			]
+		},
+		{
+			"x": 8,
+			"y": 0,
+			"width": 22,
+			"height": 1575,
+			"type": "sprite",
+			"clipToRoom": true,
+			"colorizationKey": "chain",
+			"image": "",
+			"imageOverrides": [
 				{
-					"image": "chain.png@22x1575",
+					"image": "chain.png",
 					"condition": [
 						[
 							{
@@ -65,9 +45,21 @@
 							}
 						]
 					]
-				},
+				}
+			]
+		},
+		{
+			"x": 23,
+			"y": 0,
+			"width": 15,
+			"height": 1050,
+			"type": "sprite",
+			"clipToRoom": true,
+			"colorizationKey": "chain",
+			"image": "",
+			"imageOverrides": [
 				{
-					"image": "chain.png@15x1050",
+					"image": "chain.png",
 					"condition": [
 						[
 							{

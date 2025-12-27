@@ -6,23 +6,6 @@
 			"width": 250,
 			"height": 97,
 			"type": "sprite",
-			"offsetOverrides": [
-				{
-					"offset": {
-						"x": 40,
-						"y": 30
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				}
-			],
 			"colorizationKey": "bowl",
 			"image": "",
 			"imageOverrides": [
@@ -37,9 +20,20 @@
 							}
 						]
 					]
-				},
+				}
+			]
+		},
+		{
+			"x": 40,
+			"y": 30,
+			"width": 187,
+			"height": 72,
+			"type": "sprite",
+			"colorizationKey": "bowl",
+			"image": "",
+			"imageOverrides": [
 				{
-					"image": "pet_bowl.png@187x72",
+					"image": "pet_bowl.png",
 					"condition": [
 						[
 							{
@@ -58,23 +52,6 @@
 			"width": 250,
 			"height": 97,
 			"type": "sprite",
-			"offsetOverrides": [
-				{
-					"offset": {
-						"x": 40,
-						"y": 30
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				}
-			],
 			"colorizationKey": "interior",
 			"image": "",
 			"imageOverrides": [
@@ -89,9 +66,20 @@
 							}
 						]
 					]
-				},
+				}
+			]
+		},
+		{
+			"x": 40,
+			"y": 30,
+			"width": 187,
+			"height": 72,
+			"type": "sprite",
+			"colorizationKey": "interior",
+			"image": "",
+			"imageOverrides": [
 				{
-					"image": "pet_bowl_interior.png@187x72",
+					"image": "pet_bowl_interior.png",
 					"condition": [
 						[
 							{

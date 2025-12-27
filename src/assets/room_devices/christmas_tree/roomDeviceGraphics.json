@@ -6,23 +6,6 @@
 			"width": 1327,
 			"height": 2047,
 			"type": "sprite",
-			"offsetOverrides": [
-				{
-					"offset": {
-						"x": 260,
-						"y": 735
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				}
-			],
 			"colorizationKey": "tree",
 			"image": "",
 			"imageOverrides": [
@@ -37,9 +20,20 @@
 							}
 						]
 					]
-				},
+				}
+			]
+		},
+		{
+			"x": 260,
+			"y": 735,
+			"width": 797,
+			"height": 1229,
+			"type": "sprite",
+			"colorizationKey": "tree",
+			"image": "",
+			"imageOverrides": [
 				{
-					"image": "tree_base.png@797x1229",
+					"image": "tree_base.png",
 					"condition": [
 						[
 							{
@@ -58,23 +52,6 @@
 			"width": 1327,
 			"height": 2047,
 			"type": "sprite",
-			"offsetOverrides": [
-				{
-					"offset": {
-						"x": 260,
-						"y": 735
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				}
-			],
 			"colorizationKey": "accent",
 			"image": "",
 			"imageOverrides": [
@@ -89,9 +66,20 @@
 							}
 						]
 					]
-				},
+				}
+			]
+		},
+		{
+			"x": 260,
+			"y": 735,
+			"width": 797,
+			"height": 1229,
+			"type": "sprite",
+			"colorizationKey": "accent",
+			"image": "",
+			"imageOverrides": [
 				{
-					"image": "tree_accent.png@797x1229",
+					"image": "tree_accent.png",
 					"condition": [
 						[
 							{

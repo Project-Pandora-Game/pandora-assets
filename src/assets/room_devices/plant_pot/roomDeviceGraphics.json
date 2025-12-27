@@ -5,598 +5,204 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1027,
-			"type": "sprite",
-			"offsetOverrides": [
+			"type": "autoSprite",
+			"name": "Plant (normal)",
+			"graphicalLayers": [
 				{
-					"offset": {
-						"x": 256,
-						"y": 440
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				}
-			],
-			"colorizationKey": "plant",
-			"image": "",
-			"imageOverrides": [
-				{
-					"image": "split_leaf_plant.png",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "normal"
-							},
-							{
-								"module": "type",
-								"operator": "=",
-								"value": "leaf"
-							}
-						]
-					]
+					"name": "Plant",
+					"colorizationKey": "plant"
 				},
 				{
-					"image": "split_leaf_plant.png@500x514",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							},
-							{
-								"module": "type",
-								"operator": "=",
-								"value": "leaf"
-							}
-						]
-					]
+					"name": "Flower 1",
+					"colorizationKey": "flower1"
+				},
+				{
+					"name": "Flower 2",
+					"colorizationKey": "flower2"
+				},
+				{
+					"name": "Flower 3",
+					"colorizationKey": "flower3"
 				}
-			]
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "size"
+				},
+				{
+					"type": "typedModule",
+					"module": "type"
+				}
+			],
+			"imageMap": {
+				"normal:rose": [
+					"rose_bush_plant.png",
+					"rose_bush_flower1.png",
+					"rose_bush_flower2.png",
+					"rose_bush_flower3.png"
+				],
+				"normal:paulia": [
+					"saintpaulias_plant.png",
+					"saintpaulias_flower1.png",
+					"saintpaulias_flower2.png",
+					"saintpaulias_flower3.png"
+				],
+				"normal:leaf": [
+					"split_leaf_plant.png",
+					"",
+					"",
+					""
+				],
+				"small:rose": [
+					"",
+					"",
+					"",
+					""
+				],
+				"small:paulia": [
+					"",
+					"",
+					"",
+					""
+				],
+				"small:leaf": [
+					"",
+					"",
+					"",
+					""
+				]
+			}
+		},
+		{
+			"x": 256,
+			"y": 440,
+			"width": 500,
+			"height": 514,
+			"type": "autoSprite",
+			"name": "Plant (small)",
+			"graphicalLayers": [
+				{
+					"name": "Plant",
+					"colorizationKey": "plant"
+				},
+				{
+					"name": "Flower 1",
+					"colorizationKey": "flower1"
+				},
+				{
+					"name": "Flower 2",
+					"colorizationKey": "flower2"
+				},
+				{
+					"name": "Flower 3",
+					"colorizationKey": "flower3"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "size"
+				},
+				{
+					"type": "typedModule",
+					"module": "type"
+				}
+			],
+			"imageMap": {
+				"normal:rose": [
+					"",
+					"",
+					"",
+					""
+				],
+				"normal:paulia": [
+					"",
+					"",
+					"",
+					""
+				],
+				"normal:leaf": [
+					"",
+					"",
+					"",
+					""
+				],
+				"small:rose": [
+					"rose_bush_plant.png",
+					"rose_bush_flower1.png",
+					"rose_bush_flower2.png",
+					"rose_bush_flower3.png"
+				],
+				"small:paulia": [
+					"saintpaulias_plant.png",
+					"saintpaulias_flower1.png",
+					"saintpaulias_flower2.png",
+					"saintpaulias_flower3.png"
+				],
+				"small:leaf": [
+					"split_leaf_plant.png",
+					"",
+					"",
+					""
+				]
+			}
 		},
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1027,
-			"type": "sprite",
-			"offsetOverrides": [
+			"type": "autoSprite",
+			"name": "Pot (normal)",
+			"graphicalLayers": [
 				{
-					"offset": {
-						"x": 256,
-						"y": 440
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
+					"name": "Pot",
+					"colorizationKey": "pot"
 				}
 			],
-			"colorizationKey": "plant",
-			"image": "",
-			"imageOverrides": [
+			"variables": [
 				{
-					"image": "rose_bush_plant.png",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "normal"
-							},
-							{
-								"module": "type",
-								"operator": "=",
-								"value": "rose"
-							}
-						]
-					]
-				},
-				{
-					"image": "rose_bush_plant.png@500x514",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							},
-							{
-								"module": "type",
-								"operator": "=",
-								"value": "rose"
-							}
-						]
-					]
+					"type": "typedModule",
+					"module": "size"
 				}
-			]
+			],
+			"imageMap": {
+				"normal": [
+					"split_leaf_pot.png"
+				],
+				"small": [
+					""
+				]
+			}
 		},
 		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1027,
-			"type": "sprite",
-			"offsetOverrides": [
+			"x": 256,
+			"y": 440,
+			"width": 500,
+			"height": 514,
+			"type": "autoSprite",
+			"name": "Pot (small)",
+			"graphicalLayers": [
 				{
-					"offset": {
-						"x": 256,
-						"y": 440
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
+					"name": "Pot",
+					"colorizationKey": "pot"
 				}
 			],
-			"colorizationKey": "plant",
-			"image": "",
-			"imageOverrides": [
+			"variables": [
 				{
-					"image": "saintpaulias_plant.png",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "normal"
-							},
-							{
-								"module": "type",
-								"operator": "=",
-								"value": "paulia"
-							}
-						]
-					]
-				},
-				{
-					"image": "saintpaulias_plant.png@500x514",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							},
-							{
-								"module": "type",
-								"operator": "=",
-								"value": "paulia"
-							}
-						]
-					]
-				}
-			]
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1027,
-			"type": "sprite",
-			"offsetOverrides": [
-				{
-					"offset": {
-						"x": 256,
-						"y": 440
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
+					"type": "typedModule",
+					"module": "size"
 				}
 			],
-			"colorizationKey": "flower1",
-			"image": "",
-			"imageOverrides": [
-				{
-					"image": "rose_bush_flower1.png",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "normal"
-							},
-							{
-								"module": "type",
-								"operator": "=",
-								"value": "rose"
-							}
-						]
-					]
-				},
-				{
-					"image": "rose_bush_flower1.png@500x514",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							},
-							{
-								"module": "type",
-								"operator": "=",
-								"value": "rose"
-							}
-						]
-					]
-				}
-			]
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1027,
-			"type": "sprite",
-			"offsetOverrides": [
-				{
-					"offset": {
-						"x": 256,
-						"y": 440
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				}
-			],
-			"colorizationKey": "flower1",
-			"image": "",
-			"imageOverrides": [
-				{
-					"image": "saintpaulias_flower1.png",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "normal"
-							},
-							{
-								"module": "type",
-								"operator": "=",
-								"value": "paulia"
-							}
-						]
-					]
-				},
-				{
-					"image": "saintpaulias_flower1.png@500x514",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							},
-							{
-								"module": "type",
-								"operator": "=",
-								"value": "paulia"
-							}
-						]
-					]
-				}
-			]
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1027,
-			"type": "sprite",
-			"offsetOverrides": [
-				{
-					"offset": {
-						"x": 256,
-						"y": 440
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				}
-			],
-			"colorizationKey": "flower2",
-			"image": "",
-			"imageOverrides": [
-				{
-					"image": "rose_bush_flower2.png",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "normal"
-							},
-							{
-								"module": "type",
-								"operator": "=",
-								"value": "rose"
-							}
-						]
-					]
-				},
-				{
-					"image": "rose_bush_flower2.png@500x514",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							},
-							{
-								"module": "type",
-								"operator": "=",
-								"value": "rose"
-							}
-						]
-					]
-				}
-			]
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1027,
-			"type": "sprite",
-			"offsetOverrides": [
-				{
-					"offset": {
-						"x": 256,
-						"y": 440
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				}
-			],
-			"colorizationKey": "flower2",
-			"image": "",
-			"imageOverrides": [
-				{
-					"image": "saintpaulias_flower2.png",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "normal"
-							},
-							{
-								"module": "type",
-								"operator": "=",
-								"value": "paulia"
-							}
-						]
-					]
-				},
-				{
-					"image": "saintpaulias_flower2.png@500x514",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							},
-							{
-								"module": "type",
-								"operator": "=",
-								"value": "paulia"
-							}
-						]
-					]
-				}
-			]
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1027,
-			"type": "sprite",
-			"offsetOverrides": [
-				{
-					"offset": {
-						"x": 256,
-						"y": 440
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				}
-			],
-			"colorizationKey": "flower3",
-			"image": "",
-			"imageOverrides": [
-				{
-					"image": "rose_bush_flower3.png",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "normal"
-							},
-							{
-								"module": "type",
-								"operator": "=",
-								"value": "rose"
-							}
-						]
-					]
-				},
-				{
-					"image": "rose_bush_flower3.png@500x514",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							},
-							{
-								"module": "type",
-								"operator": "=",
-								"value": "rose"
-							}
-						]
-					]
-				}
-			]
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1027,
-			"type": "sprite",
-			"offsetOverrides": [
-				{
-					"offset": {
-						"x": 256,
-						"y": 440
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				}
-			],
-			"colorizationKey": "flower3",
-			"image": "",
-			"imageOverrides": [
-				{
-					"image": "saintpaulias_flower3.png",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "normal"
-							},
-							{
-								"module": "type",
-								"operator": "=",
-								"value": "paulia"
-							}
-						]
-					]
-				},
-				{
-					"image": "saintpaulias_flower3.png@500x514",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							},
-							{
-								"module": "type",
-								"operator": "=",
-								"value": "paulia"
-							}
-						]
-					]
-				}
-			]
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1027,
-			"type": "sprite",
-			"offsetOverrides": [
-				{
-					"offset": {
-						"x": 256,
-						"y": 440
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				}
-			],
-			"colorizationKey": "pot",
-			"image": "split_leaf_pot.png",
-			"imageOverrides": [
-				{
-					"image": "split_leaf_pot.png@500x514",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				}
-			]
+			"imageMap": {
+				"normal": [
+					""
+				],
+				"small": [
+					"split_leaf_pot.png"
+				]
+			}
 		}
 	],
 	"slots": {}
