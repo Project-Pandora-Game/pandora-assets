@@ -28,7 +28,7 @@ DefineRoomDeviceAsset({
 			default: '#333333',
 		},
 	},
-	staticAttributes: [],
+	staticAttributes: ['Play_furniture'],
 	preview: 'preview.png',
 	slots: {},
 	modules: {
