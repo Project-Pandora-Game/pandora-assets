@@ -1,0 +1,353 @@
+{
+	"layers": [
+		{
+			"x": -750,
+			"y": -820,
+			"width": 1500,
+			"height": 1000,
+			"type": "autoSprite",
+			"name": "Upper pole",
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": -750,
+						"y": -900
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "butt"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": -750,
+						"y": -1100
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "breasts"
+							}
+						]
+					]
+				}
+			],
+			"graphicalLayers": [
+				{
+					"name": "device_stand_upper",
+					"colorizationKey": "pole"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "orientation"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 0.6,
+				"roughness": 0.4
+			},
+			"imageMap": {
+				"front": [
+					"device_stand_upper_front.png"
+				],
+				"back": [
+					"device_stand_upper_back.png"
+				]
+			}
+		},
+		{
+			"x": -750,
+			"y": -820,
+			"width": 1500,
+			"height": 1000,
+			"type": "autoSprite",
+			"name": "Body",
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": -750,
+						"y": -900
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "butt"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": -750,
+						"y": -1100
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "breasts"
+							}
+						]
+					]
+				}
+			],
+			"graphicalLayers": [
+				{
+					"name": "device_connector",
+					"colorizationKey": "connector"
+				},
+				{
+					"name": "device_body",
+					"colorizationKey": "body"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "orientation"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 0.2,
+				"roughness": 0.6
+			},
+			"imageMap": {
+				"front": [
+					"device_connector_front.png",
+					"device_body_front.png"
+				],
+				"back": [
+					"device_connector_back.png",
+					"device_body_back.png"
+				]
+			}
+		},
+		{
+			"x": -750,
+			"y": -820,
+			"width": 1500,
+			"height": 1000,
+			"type": "autoSprite",
+			"name": "Arm",
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": -750,
+						"y": -900
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "butt"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": -750,
+						"y": -1100
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "breasts"
+							}
+						]
+					]
+				}
+			],
+			"graphicalLayers": [
+				{
+					"name": "device_arm",
+					"colorizationKey": "arm"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "state"
+				},
+				{
+					"type": "typedModule",
+					"module": "orientation"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 0.6,
+				"roughness": 0.4
+			},
+			"imageMap": {
+				"ready:front": [
+					"device_arm_ready_front.png"
+				],
+				"ready:back": [
+					"device_arm_ready_back.png"
+				],
+				"swing:front": [
+					"device_arm_swing_front.png"
+				],
+				"swing:back": [
+					"device_arm_swing_back.png"
+				],
+				"swing_rest:front": [
+					"device_arm_swing_rest_front.png"
+				],
+				"swing_rest:back": [
+					"device_arm_swing_rest_back.png"
+				]
+			}
+		},
+		{
+			"x": -750,
+			"y": -820,
+			"width": 1500,
+			"height": 1000,
+			"type": "autoSprite",
+			"name": "Tool",
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": -750,
+						"y": -900
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "butt"
+							}
+						]
+					]
+				},
+				{
+					"offset": {
+						"x": -750,
+						"y": -1100
+					},
+					"condition": [
+						[
+							{
+								"module": "height",
+								"operator": "=",
+								"value": "breasts"
+							}
+						]
+					]
+				}
+			],
+			"graphicalLayers": [
+				{
+					"name": "device_tool",
+					"colorizationKey": "tool"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "tool"
+				},
+				{
+					"type": "typedModule",
+					"module": "state"
+				},
+				{
+					"type": "typedModule",
+					"module": "orientation"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 0.2,
+				"roughness": 0.8
+			},
+			"imageMap": {
+				"slapper:ready:front": [
+					"device_tool_slapper_ready_front.png"
+				],
+				"slapper:ready:back": [
+					"device_tool_slapper_ready_back.png"
+				],
+				"slapper:swing:front": [
+					"device_tool_slapper_swing_front.png"
+				],
+				"slapper:swing:back": [
+					"device_tool_slapper_swing_back.png"
+				],
+				"slapper:swing_rest:front": [
+					"device_tool_slapper_swing_rest_front.png"
+				],
+				"slapper:swing_rest:back": [
+					"device_tool_slapper_swing_rest_back.png"
+				],
+				"whip:ready:front": [
+					"device_tool_whip_ready_front.png"
+				],
+				"whip:ready:back": [
+					"device_tool_whip_ready_back.png"
+				],
+				"whip:swing:front": [
+					"device_tool_whip_swing_front.png"
+				],
+				"whip:swing:back": [
+					"device_tool_whip_swing_back.png"
+				],
+				"whip:swing_rest:front": [
+					"device_tool_whip_swing_rest_front.png"
+				],
+				"whip:swing_rest:back": [
+					"device_tool_whip_swing_rest_back.png"
+				]
+			}
+		},
+		{
+			"x": -750,
+			"y": -820,
+			"width": 1500,
+			"height": 1000,
+			"type": "autoSprite",
+			"name": "Stand",
+			"graphicalLayers": [
+				{
+					"name": "device_stand",
+					"colorizationKey": "stand"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "orientation"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 0.6,
+				"roughness": 0.6
+			},
+			"imageMap": {
+				"front": [
+					"device_stand_front.png"
+				],
+				"back": [
+					"device_stand_back.png"
+				]
+			}
+		}
+	],
+	"slots": {}
+}
