@@ -6,58 +6,56 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "rings",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front",
 			"points": "body",
-			"mirror": 0,
-			"image": {
-				"image": "wifflegag_rings.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "straps",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "straps",
-			"image": {
-				"image": "wifflegag_straps.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "harness straps",
-			"priority": "ABOVE_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "straps",
-			"image": {
-				"image": "front_harness_straps.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "gagType",
-									"operator": "=",
-									"value": "standard"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "rings",
+					"colorizationKey": "buckles"
+				},
+				{
+					"name": "straps",
+					"colorizationKey": "straps"
+				},
+				{
+					"name": "ball",
+					"colorizationKey": "ball"
+				},
+				{
+					"name": "harness",
+					"colorizationKey": "straps"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "gagType"
+				}
+			],
+			"imageMap": {
+				"standard": [
+					"wifflegag_rings.png",
+					"wifflegag_straps.png",
+					"wifflegag_ball.png",
+					""
+				],
+				"thigh": [
+					"wifflegag_rings.png",
+					"wifflegag_straps.png",
+					"wifflegag_ball.png",
+					"front_harness_straps.png"
+				],
+				"neck": [
+					"wifflegag_rings_hanging.png",
+					"wifflegag_straps_hanging.png",
+					"wifflegag_ball_hanging.png",
+					""
 				]
 			}
 		},
@@ -66,46 +64,43 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "ball",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "back",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "ball",
-			"image": {
-				"image": "wifflegag_ball.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "straps back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "straps",
-			"image": {
-				"image": "wifflegag_straps_back.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "buckle",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"image": {
-				"image": "wifflegag_buckle_back.png",
-				"overrides": []
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "straps",
+					"colorizationKey": "straps"
+				},
+				{
+					"name": "buckle",
+					"colorizationKey": "buckles"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "gagType"
+				}
+			],
+			"imageMap": {
+				"standard": [
+					"wifflegag_straps_back.png",
+					"wifflegag_buckle_back.png"
+				],
+				"thigh": [
+					"wifflegag_straps_back.png",
+					"wifflegag_buckle_back.png"
+				],
+				"neck": [
+					"wifflegag_straps_hanging_back.png",
+					"wifflegag_buckle_hanging_back.png"
+				]
 			}
 		}
 	]

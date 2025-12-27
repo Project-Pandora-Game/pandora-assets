@@ -152,6 +152,46 @@ DefineAsset({
 					},
 				},
 				{
+					id: 'clipped_back',
+					name: 'Clipped together behind',
+					properties: {
+						effects: {
+							blockHands: true,
+						},
+						poseLimits: {
+							options: [
+								{
+									bones: {
+										arm_r: 104,
+										arm_l: 104,
+										elbow_r: -4,
+										elbow_l: -4,
+									},
+									options: [
+										{ arms: { position: 'back' } },
+										{ arms: { position: 'back_below_hair' } },
+									],
+								},
+								{
+									bones: {
+										arm_r: 110,
+										arm_l: 110,
+										elbow_r: -20,
+										elbow_l: -20,
+									},
+									options: [
+										{ arms: { position: 'back' } },
+										{ arms: { position: 'back_below_hair' } },
+									],
+								},
+							],
+						},
+						stateFlags: {
+							provides: ['chain'],
+						},
+					},
+				},
+				{
 					id: 'reverse_prayer',
 					name: 'Reverse prayer',
 					properties: {

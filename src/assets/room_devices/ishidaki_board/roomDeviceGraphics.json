@@ -1,0 +1,43 @@
+{
+	"layers": [
+		{
+			"type": "sprite",
+			"offset": {
+				"x": -160,
+				"y": -75
+			},
+			"clipToRoom": false,
+			"colorizationKey": "soroban",
+			"image": "soroban.png"
+		},
+		{
+			"type": "slot",
+			"slot": "over_board",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": 0,
+				"relativeScale": 1,
+				"pivotOffset": {
+					"x": 0,
+					"y": 0
+				}
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": -100
+					},
+					"condition": [
+						[
+							{
+								"view": "back"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {}
+}
