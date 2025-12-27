@@ -2,7 +2,7 @@ import { createHash } from 'crypto';
 import { readFileSync, statSync } from 'fs';
 import { copyFile, readdir, stat, unlink, writeFile } from 'fs/promises';
 import { availableParallelism } from 'os';
-import { Assert, GetLogger, SplitStringFirstOccurrence, type GraphicsBuildImageResource, type ImageBoundingBox, type Size } from 'pandora-common';
+import { Assert, GetLogger, type GraphicsBuildImageResource, type ImageBoundingBox, type Size } from 'pandora-common';
 import { basename, join } from 'path';
 import sharp, { type AvifOptions, type Sharp } from 'sharp';
 import { GENERATE_AVIF } from '../config.ts';
@@ -456,34 +456,18 @@ function CheckMaxSize(resource: Resource, name: string, category: ImageCategory)
 	}
 }
 
-export function ProcessImageResource(resource: IImageResource, args: string = ''): IImageResource {
-	if (args) {
-		const resizeMatch = /^(\d+)x(\d+)$/.exec(args);
-		if (resizeMatch) {
-			const sizeX = Number.parseInt(resizeMatch[1]);
-			const sizeY = Number.parseInt(resizeMatch[2]);
-			Assert(Number.isInteger(sizeX));
-			Assert(Number.isInteger(sizeY));
-
-			return resource.addResizedImage(sizeX, sizeY, args);
-		} else {
-			throw new Error(`Invalid arguments '${args}' for resource.`);
-		}
-	}
-
-	return resource;
-}
-
 export function DefineImageResource(name: string, category: ImageCategory, expectedFormat: 'png' | 'jpg'): IImageResource {
-	const [baseName, args] = SplitStringFirstOccurrence(name, '@');
-
-	if (!baseName.endsWith('.' + expectedFormat)) {
+	if (!name.endsWith('.' + expectedFormat)) {
 		throw new Error(`Resource ${name} is not a ${expectedFormat.toUpperCase()} file.`);
 	}
 
-	const resource = new ImageResource(baseName, category);
+	const resource = new ImageResource(name, category);
 
-	return ProcessImageResource(resource, args);
+	if (category === 'preview') {
+		resource.addSizeCheck(PREVIEW_SIZE, PREVIEW_SIZE);
+	}
+
+	return resource;
 }
 
 export function DefinePngResource(name: string, category: ImageCategory): string {
@@ -491,18 +475,7 @@ export function DefinePngResource(name: string, category: ImageCategory): string
 }
 
 export function DefineJpgResource(name: string, category: ImageCategory): string {
-	const [baseName, args] = SplitStringFirstOccurrence(name, '@');
-
-	if (!baseName.endsWith('.jpg')) {
-		throw new Error(`Resource ${name} is not a JPG file.`);
-	}
-	const resource = new ImageResource(baseName, category);
-
-	if (category === 'preview') {
-		resource.addSizeCheck(PREVIEW_SIZE, PREVIEW_SIZE);
-	}
-
-	return ProcessImageResource(resource, args).resultName;
+	return DefineImageResource(name, category, 'jpg').resultName;
 }
 
 export function ClearAllResources(): void {

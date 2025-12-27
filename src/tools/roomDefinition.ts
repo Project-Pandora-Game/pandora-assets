@@ -6,7 +6,7 @@ import { BACKGROUNDS_SRC_DIR } from '../config.ts';
 import { SetCurrentContext } from './context.ts';
 import { GitValidateResponsibleContributor } from './git.ts';
 import { GENERATED_RESOLUTIONS } from './graphicsConstants.ts';
-import { DefineImageResource, DefineJpgResource } from './resources.ts';
+import { DefineImageResource } from './resources.ts';
 import { RoomDatabase } from './roomDatabase.ts';
 
 const PREVIEW_WIDTH = 200;
@@ -71,7 +71,7 @@ export function DefineRoomBackground(def: IntermediateRoomBackgroundDefinition):
 		imageResource.addDownscaledImage(resolution);
 	}
 
-	const preview = DefineJpgResource(`${def.image}@${PREVIEW_WIDTH}x${PREVIEW_HEIGHT}`, 'background');
+	const preview = imageResource.addResizedImage(PREVIEW_WIDTH, PREVIEW_HEIGHT, `${PREVIEW_WIDTH}x${PREVIEW_HEIGHT}`).resultName;
 
 	const background: RoomBackgroundInfo = {
 		...CalculateBackgroundDataFromCalibrationData(imageResource.resultName, parsedCalibration.data),
