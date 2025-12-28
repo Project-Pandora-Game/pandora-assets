@@ -4,7 +4,7 @@
 	"private": true,
 	"packageManager": "pnpm@10.26.2+sha512.0e308ff2005fc7410366f154f625f6631ab2b16b1d2e70238444dd6ae9d630a8482d92a451144debc492416896ed16f7b114a86ec68b8404b2443869e68ffda6",
 	"engines": {
-		"node": ">=22.x"
+		"node": ">=24.x"
 	},
 	"repository": "git@github.com:Project-Pandora-Game/tooling-template.git",
 	"license": "MIT",
@@ -54,7 +54,7 @@
 		"@types/express": "5.0.6",
 		"@types/json-diff": "1.0.3",
 		"@types/lodash-es": "4.17.12",
-		"@types/node": "22.19.3",
+		"@types/node": "24.10.4",
 		"eslint": "9.39.2",
 		"eslint-plugin-import": "2.32.0",
 		"jest": "30.2.0",
