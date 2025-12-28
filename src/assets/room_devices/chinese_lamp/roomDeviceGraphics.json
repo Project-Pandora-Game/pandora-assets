@@ -1,24 +1,11 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 500,
+			"height": 700,
 			"type": "sprite",
-			"offsetOverrides": [
-				{
-					"offset": {
-						"x": 62,
-						"y": 10
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				}
-			],
 			"colorizationKey": "shine",
 			"image": "",
 			"imageOverrides": [
@@ -38,9 +25,20 @@
 							}
 						]
 					]
-				},
+				}
+			]
+		},
+		{
+			"x": 62,
+			"y": 10,
+			"width": 375,
+			"height": 525,
+			"type": "sprite",
+			"colorizationKey": "shine",
+			"image": "",
+			"imageOverrides": [
 				{
-					"image": "lamp_shine_outer.png@375x525",
+					"image": "lamp_shine_outer.png",
 					"condition": [
 						[
 							{
@@ -59,29 +57,39 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 500,
+			"height": 700,
 			"type": "sprite",
-			"offsetOverrides": [
+			"colorizationKey": "lamp",
+			"image": "",
+			"imageOverrides": [
 				{
-					"offset": {
-						"x": 62,
-						"y": 10
-					},
+					"image": "lamp_base.png",
 					"condition": [
 						[
 							{
 								"module": "size",
 								"operator": "=",
-								"value": "small"
+								"value": "normal"
 							}
 						]
 					]
 				}
-			],
+			]
+		},
+		{
+			"x": 62,
+			"y": 10,
+			"width": 375,
+			"height": 525,
+			"type": "sprite",
 			"colorizationKey": "lamp",
-			"image": "lamp_base.png",
+			"image": "",
 			"imageOverrides": [
 				{
-					"image": "lamp_base.png@375x525",
+					"image": "lamp_base.png",
 					"condition": [
 						[
 							{
@@ -95,24 +103,11 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 500,
+			"height": 700,
 			"type": "sprite",
-			"offsetOverrides": [
-				{
-					"offset": {
-						"x": 62,
-						"y": 10
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				}
-			],
 			"colorizationKey": "shine_inner",
 			"image": "",
 			"imageOverrides": [
@@ -132,9 +127,20 @@
 							}
 						]
 					]
-				},
+				}
+			]
+		},
+		{
+			"x": 62,
+			"y": 10,
+			"width": 375,
+			"height": 525,
+			"type": "sprite",
+			"colorizationKey": "shine_inner",
+			"image": "",
+			"imageOverrides": [
 				{
-					"image": "lamp_shine_inner.png@375x525",
+					"image": "lamp_shine_inner.png",
 					"condition": [
 						[
 							{
@@ -153,29 +159,39 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 500,
+			"height": 700,
 			"type": "sprite",
-			"offsetOverrides": [
+			"colorizationKey": "lamp",
+			"image": "",
+			"imageOverrides": [
 				{
-					"offset": {
-						"x": 62,
-						"y": 10
-					},
+					"image": "lamp_overlay.png",
 					"condition": [
 						[
 							{
 								"module": "size",
 								"operator": "=",
-								"value": "small"
+								"value": "normal"
 							}
 						]
 					]
 				}
-			],
+			]
+		},
+		{
+			"x": 62,
+			"y": 10,
+			"width": 375,
+			"height": 525,
+			"type": "sprite",
 			"colorizationKey": "lamp",
-			"image": "lamp_overlay.png",
+			"image": "",
 			"imageOverrides": [
 				{
-					"image": "lamp_overlay.png@375x525",
+					"image": "lamp_overlay.png",
 					"condition": [
 						[
 							{
@@ -189,6 +205,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 500,
+			"height": 980,
 			"type": "sprite",
 			"offsetOverrides": [
 				{

@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "barrel",
 			"image": "barrel-background.png"
@@ -56,6 +60,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "barrel",
 			"image": "barrel-lid.png",
@@ -75,6 +83,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "barrel",
 			"image": "barrel.png"

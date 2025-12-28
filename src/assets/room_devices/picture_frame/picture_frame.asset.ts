@@ -109,6 +109,46 @@ DefineRoomDeviceAsset({
 					id: 'mirror',
 					name: 'Mirror',
 				},
+				{
+					id: 'naera_maid',
+					name: 'At your service',
+				},
+				{
+					id: 'naera_demon',
+					name: 'Hot demon wife',
+				},
+				{
+					id: 'naera_kitten',
+					name: 'Brave little kitten',
+				},
+				{
+					id: 'naera_cinder',
+					name: 'The Cinder Queen',
+				},
+				{
+					id: 'naera_catch',
+					name: 'Catch a mouse by the toe',
+				},
+				{
+					id: 'naera_wolf',
+					name: 'Hold that wolf!',
+				},
+				{
+					id: 'naera_mouse',
+					name: 'Sweet little mouse',
+				},
+				{
+					id: 'naera_eternal',
+					name: 'Eternal beauty',
+				},
+				{
+					id: 'naera_her',
+					name: 'Her',
+				},
+				{
+					id: 'naera_avalanche',
+					name: 'Midnight avalance',
+				},
 			],
 		},
 		size: {
@@ -205,6 +245,20 @@ DefineRoomDeviceAsset({
 				copyrightHolder: 'The Metropolitan Museum of Art, New York, OA',
 				editedBy: 'ClaudiaMia',
 				license: 'Public Domain',
+			},
+			{
+				part: 'Naera`s pictures, except "naera_demon"',
+				source: 'https://www.pixiv.net/en/users/46159785/artworks',
+				copyrightHolder: 'Naera Nen',
+				editedBy: 'Sandrine',
+				license: 'Pandora-Use-Only-NoModify-v1-or-later',
+			},
+			{
+				part: '"naera_demon" picture',
+				source: 'https://www.pixiv.net/en/users/46159785/artworks',
+				copyrightHolder: 'Naera Nen',
+				editedBy: 'Sandrine',
+				license: 'Pandora-Use-Only-Reserved-v1-or-later',
 			},
 		],
 	},

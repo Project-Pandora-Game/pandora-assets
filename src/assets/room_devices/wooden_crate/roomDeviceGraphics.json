@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1062,
+			"height": 844,
 			"type": "sprite",
 			"colorizationKey": "crate",
 			"image": "wooden_crate.png"

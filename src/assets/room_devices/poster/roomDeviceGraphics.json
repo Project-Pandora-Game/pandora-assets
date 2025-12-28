@@ -1,438 +1,262 @@
 {
 	"layers": [
 		{
-			"type": "sprite",
-			"offsetOverrides": [
+			"x": 0,
+			"y": 0,
+			"width": 1400,
+			"height": 2000,
+			"type": "autoSprite",
+			"name": "Poster (large)",
+			"graphicalLayers": [
 				{
-					"offset": {
-						"x": 525,
-						"y": 300
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
+					"name": "",
+					"colorizationKey": "background_1"
 				},
 				{
-					"offset": {
-						"x": 350,
-						"y": 150
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
+					"name": ""
+				},
+				{
+					"name": "",
+					"colorizationKey": "color_1"
+				},
+				{
+					"name": "",
+					"colorizationKey": "color_2"
 				}
 			],
-			"colorizationKey": "background_1",
-			"image": "",
-			"imageOverrides": [
+			"variables": [
 				{
-					"image": "t-and-t_background.png",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							},
-							{
-								"module": "posterType",
-								"operator": "=",
-								"value": "TowelAndTowelAdvert"
-							}
-						]
-					]
+					"type": "typedModule",
+					"module": "size"
 				},
 				{
-					"image": "t-and-t_background.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							},
-							{
-								"module": "posterType",
-								"operator": "=",
-								"value": "TowelAndTowelAdvert"
-							}
-						]
-					]
-				},
-				{
-					"image": "t-and-t_background.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							},
-							{
-								"module": "posterType",
-								"operator": "=",
-								"value": "TowelAndTowelAdvert"
-							}
-						]
-					]
+					"type": "typedModule",
+					"module": "posterType"
 				}
-			]
+			],
+			"imageMap": {
+				"large:TowelAndTowelAdvert": [
+					"t-and-t_background.png",
+					"t-and-t_towel.png",
+					"t-and-t_slogan.png",
+					"t-and-t_worship.png"
+				],
+				"medium:TowelAndTowelAdvert": [
+					"",
+					"",
+					"",
+					""
+				],
+				"small:TowelAndTowelAdvert": [
+					"",
+					"",
+					"",
+					""
+				]
+			}
 		},
 		{
-			"type": "sprite",
-			"offsetOverrides": [
+			"x": 350,
+			"y": 150,
+			"width": 700,
+			"height": 1000,
+			"type": "autoSprite",
+			"name": "Poster (medium)",
+			"graphicalLayers": [
 				{
-					"offset": {
-						"x": 525,
-						"y": 300
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
+					"name": "",
+					"colorizationKey": "background_1"
 				},
 				{
-					"offset": {
-						"x": 350,
-						"y": 150
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
+					"name": ""
+				},
+				{
+					"name": "",
+					"colorizationKey": "color_1"
+				},
+				{
+					"name": "",
+					"colorizationKey": "color_2"
 				}
 			],
-			"image": "",
-			"imageOverrides": [
+			"variables": [
 				{
-					"image": "t-and-t_towel.png",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							},
-							{
-								"module": "posterType",
-								"operator": "=",
-								"value": "TowelAndTowelAdvert"
-							}
-						]
-					]
+					"type": "typedModule",
+					"module": "size"
 				},
 				{
-					"image": "t-and-t_towel.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							},
-							{
-								"module": "posterType",
-								"operator": "=",
-								"value": "TowelAndTowelAdvert"
-							}
-						]
-					]
-				},
-				{
-					"image": "t-and-t_towel.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							},
-							{
-								"module": "posterType",
-								"operator": "=",
-								"value": "TowelAndTowelAdvert"
-							}
-						]
-					]
+					"type": "typedModule",
+					"module": "posterType"
 				}
-			]
+			],
+			"imageMap": {
+				"large:TowelAndTowelAdvert": [
+					"",
+					"",
+					"",
+					""
+				],
+				"medium:TowelAndTowelAdvert": [
+					"t-and-t_background.png",
+					"t-and-t_towel.png",
+					"t-and-t_slogan.png",
+					"t-and-t_worship.png"
+				],
+				"small:TowelAndTowelAdvert": [
+					"",
+					"",
+					"",
+					""
+				]
+			}
 		},
 		{
-			"type": "sprite",
-			"offsetOverrides": [
+			"x": 525,
+			"y": 300,
+			"width": 350,
+			"height": 500,
+			"type": "autoSprite",
+			"name": "Poster (small)",
+			"graphicalLayers": [
 				{
-					"offset": {
-						"x": 525,
-						"y": 300
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
+					"name": "",
+					"colorizationKey": "background_1"
 				},
 				{
-					"offset": {
-						"x": 350,
-						"y": 150
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
+					"name": ""
+				},
+				{
+					"name": "",
+					"colorizationKey": "color_1"
+				},
+				{
+					"name": "",
+					"colorizationKey": "color_2"
 				}
 			],
-			"colorizationKey": "color_1",
-			"image": "",
-			"imageOverrides": [
+			"variables": [
 				{
-					"image": "t-and-t_slogan.png",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							},
-							{
-								"module": "posterType",
-								"operator": "=",
-								"value": "TowelAndTowelAdvert"
-							}
-						]
-					]
+					"type": "typedModule",
+					"module": "size"
 				},
 				{
-					"image": "t-and-t_slogan.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							},
-							{
-								"module": "posterType",
-								"operator": "=",
-								"value": "TowelAndTowelAdvert"
-							}
-						]
-					]
-				},
-				{
-					"image": "t-and-t_slogan.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							},
-							{
-								"module": "posterType",
-								"operator": "=",
-								"value": "TowelAndTowelAdvert"
-							}
-						]
-					]
+					"type": "typedModule",
+					"module": "posterType"
 				}
-			]
+			],
+			"imageMap": {
+				"large:TowelAndTowelAdvert": [
+					"",
+					"",
+					"",
+					""
+				],
+				"medium:TowelAndTowelAdvert": [
+					"",
+					"",
+					"",
+					""
+				],
+				"small:TowelAndTowelAdvert": [
+					"t-and-t_background.png",
+					"t-and-t_towel.png",
+					"t-and-t_slogan.png",
+					"t-and-t_worship.png"
+				]
+			}
 		},
 		{
-			"type": "sprite",
-			"offsetOverrides": [
+			"x": 0,
+			"y": 0,
+			"width": 1400,
+			"height": 2000,
+			"type": "autoSprite",
+			"name": "Passepartout (large)",
+			"graphicalLayers": [
 				{
-					"offset": {
-						"x": 525,
-						"y": 300
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				},
-				{
-					"offset": {
-						"x": 350,
-						"y": 150
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
+					"name": "",
+					"colorizationKey": "passe_partout"
 				}
 			],
-			"colorizationKey": "color_2",
-			"image": "",
-			"imageOverrides": [
+			"variables": [
 				{
-					"image": "t-and-t_worship.png",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							},
-							{
-								"module": "posterType",
-								"operator": "=",
-								"value": "TowelAndTowelAdvert"
-							}
-						]
-					]
-				},
-				{
-					"image": "t-and-t_worship.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							},
-							{
-								"module": "posterType",
-								"operator": "=",
-								"value": "TowelAndTowelAdvert"
-							}
-						]
-					]
-				},
-				{
-					"image": "t-and-t_worship.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							},
-							{
-								"module": "posterType",
-								"operator": "=",
-								"value": "TowelAndTowelAdvert"
-							}
-						]
-					]
+					"type": "typedModule",
+					"module": "size"
 				}
-			]
+			],
+			"imageMap": {
+				"large": [
+					"passepartout1.png"
+				],
+				"medium": [
+					""
+				],
+				"small": [
+					""
+				]
+			}
 		},
 		{
-			"type": "sprite",
-			"offsetOverrides": [
+			"x": 350,
+			"y": 150,
+			"width": 700,
+			"height": 1000,
+			"type": "autoSprite",
+			"name": "Passepartout (medium)",
+			"graphicalLayers": [
 				{
-					"offset": {
-						"x": 525,
-						"y": 300
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				},
-				{
-					"offset": {
-						"x": 350,
-						"y": 150
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
+					"name": "",
+					"colorizationKey": "passe_partout"
 				}
 			],
-			"colorizationKey": "passe_partout",
-			"image": "",
-			"imageOverrides": [
+			"variables": [
 				{
-					"image": "passepartout1.png",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							}
-						]
-					]
-				},
-				{
-					"image": "passepartout1.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
-				},
-				{
-					"image": "passepartout1.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
+					"type": "typedModule",
+					"module": "size"
 				}
-			]
+			],
+			"imageMap": {
+				"large": [
+					""
+				],
+				"medium": [
+					"passepartout1.png"
+				],
+				"small": [
+					""
+				]
+			}
+		},
+		{
+			"x": 525,
+			"y": 300,
+			"width": 350,
+			"height": 500,
+			"type": "autoSprite",
+			"name": "Passepartout (small)",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "passe_partout"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"large": [
+					""
+				],
+				"medium": [
+					""
+				],
+				"small": [
+					"passepartout1.png"
+				]
+			}
 		}
 	],
 	"slots": {}

@@ -1,16 +1,16 @@
 {
 	"layers": [
 		{
+			"x": -216,
+			"y": -740,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -740
-			},
 			"colorizationKey": "rope",
 			"image": "",
 			"imageOverrides": [
 				{
-					"image": "ankles_together_back.png@432x811",
+					"image": "ankles_together_back.png",
 					"condition": [
 						[
 							{
@@ -24,25 +24,25 @@
 			]
 		},
 		{
+			"x": -216,
+			"y": -745,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -745
-			},
 			"colorizationKey": "chair",
-			"image": "chair_base.png@432x811"
+			"image": "chair_base.png"
 		},
 		{
+			"x": -216,
+			"y": -745,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -745
-			},
 			"colorizationKey": "chair",
 			"image": "",
 			"imageOverrides": [
 				{
-					"image": "cushion_normal_shadow.png@432x811",
+					"image": "cushion_normal_shadow.png",
 					"condition": [
 						[
 							{
@@ -59,7 +59,7 @@
 					]
 				},
 				{
-					"image": "cushion_arms_shadow.png@432x811",
+					"image": "cushion_arms_shadow.png",
 					"condition": [
 						[
 							{
@@ -78,16 +78,16 @@
 			]
 		},
 		{
+			"x": -216,
+			"y": -745,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -745
-			},
 			"colorizationKey": "plug",
 			"image": "",
 			"imageOverrides": [
 				{
-					"image": "dildo_2.png@432x811",
+					"image": "dildo_2.png",
 					"condition": [
 						[
 							{
@@ -108,16 +108,16 @@
 			]
 		},
 		{
+			"x": -216,
+			"y": -745,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -745
-			},
 			"colorizationKey": "dildo",
 			"image": "",
 			"imageOverrides": [
 				{
-					"image": "dildo_1.png@432x811",
+					"image": "dildo_1.png",
 					"condition": [
 						[
 							{
@@ -138,16 +138,16 @@
 			]
 		},
 		{
+			"x": -216,
+			"y": -745,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -745
-			},
 			"colorizationKey": "cushion",
 			"image": "",
 			"imageOverrides": [
 				{
-					"image": "cushion_normal.png@432x811",
+					"image": "cushion_normal.png",
 					"condition": [
 						[
 							{
@@ -164,7 +164,7 @@
 					]
 				},
 				{
-					"image": "cushion_arms.png@432x811",
+					"image": "cushion_arms.png",
 					"condition": [
 						[
 							{
@@ -183,11 +183,11 @@
 			]
 		},
 		{
+			"x": -216,
+			"y": -740,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -740
-			},
 			"colorizationKey": "rope",
 			"image": "",
 			"imageOverrides": [
@@ -206,16 +206,16 @@
 			]
 		},
 		{
+			"x": -216,
+			"y": -740,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -740
-			},
 			"colorizationKey": "chair",
 			"image": "",
 			"imageOverrides": [
 				{
-					"image": "chair_arms.png@432x811",
+					"image": "chair_arms.png",
 					"condition": [
 						[
 							{
@@ -259,11 +259,11 @@
 			]
 		},
 		{
+			"x": -216,
+			"y": -760,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -760
-			},
 			"colorizationKey": "rope",
 			"image": "",
 			"imageOverrides": [
@@ -282,11 +282,11 @@
 			]
 		},
 		{
+			"x": -216,
+			"y": -740,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -740
-			},
 			"colorizationKey": "rope",
 			"image": "",
 			"imageOverrides": [
@@ -305,16 +305,16 @@
 			]
 		},
 		{
+			"x": -216,
+			"y": -760,
+			"width": 432,
+			"height": 811,
 			"type": "sprite",
-			"offset": {
-				"x": -216,
-				"y": -760
-			},
 			"colorizationKey": "rope",
 			"image": "",
 			"imageOverrides": [
 				{
-					"image": "ankles_split.png@432x811",
+					"image": "ankles_split.png",
 					"condition": [
 						[
 							{
@@ -326,7 +326,7 @@
 					]
 				},
 				{
-					"image": "ankles_together.png@432x811",
+					"image": "ankles_together.png",
 					"condition": [
 						[
 							{

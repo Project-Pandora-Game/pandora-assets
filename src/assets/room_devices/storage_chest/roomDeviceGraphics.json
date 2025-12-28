@@ -1,11 +1,19 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 700,
+			"height": 497,
 			"type": "sprite",
 			"colorizationKey": "chest",
 			"image": "chest.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 700,
+			"height": 497,
 			"type": "sprite",
 			"colorizationKey": "color",
 			"image": "chest_overlay.png"

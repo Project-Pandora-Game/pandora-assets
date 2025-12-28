@@ -1,18 +1,17 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1300,
+			"height": 673,
 			"type": "sprite",
 			"name": "Rug",
-			"offset": {
-				"x": 0,
-				"y": 0
-			},
-			"offsetOverrides": [
+			"colorizationKey": "rug",
+			"image": "fluffy_rug.png",
+			"imageOverrides": [
 				{
-					"offset": {
-						"x": -790,
-						"y": -30
-					},
+					"image": "",
 					"condition": [
 						[
 							{
@@ -23,9 +22,17 @@
 						]
 					]
 				}
-			],
+			]
+		},
+		{
+			"x": -790,
+			"y": -30,
+			"width": 2880,
+			"height": 952,
+			"type": "sprite",
+			"name": "Rug",
 			"colorizationKey": "rug",
-			"image": "fluffy_rug.png",
+			"image": "",
 			"imageOverrides": [
 				{
 					"image": "fluffy_rug_large.png",

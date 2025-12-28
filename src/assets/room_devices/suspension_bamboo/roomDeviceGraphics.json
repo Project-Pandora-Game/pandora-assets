@@ -1,11 +1,19 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1500,
+			"height": 250,
 			"type": "sprite",
 			"colorizationKey": "bamboo",
 			"image": "bamboo.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 64,
+			"height": 1150,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -29,7 +37,7 @@
 			"image": "",
 			"imageOverrides": [
 				{
-					"image": "long_vertical_rope.png@64x1150",
+					"image": "long_vertical_rope.png",
 					"condition": [
 						[
 							{
@@ -43,6 +51,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 64,
+			"height": 1150,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -66,7 +78,7 @@
 			"image": "",
 			"imageOverrides": [
 				{
-					"image": "long_vertical_rope.png@64x1150",
+					"image": "long_vertical_rope.png",
 					"condition": [
 						[
 							{
@@ -80,6 +92,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 64,
+			"height": 1150,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -103,7 +119,7 @@
 			"image": "",
 			"imageOverrides": [
 				{
-					"image": "long_vertical_rope.png@64x1150",
+					"image": "long_vertical_rope.png",
 					"condition": [
 						[
 							{
@@ -117,6 +133,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 64,
+			"height": 1150,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -140,7 +160,7 @@
 			"image": "",
 			"imageOverrides": [
 				{
-					"image": "long_vertical_rope.png@64x1150",
+					"image": "long_vertical_rope.png",
 					"condition": [
 						[
 							{
@@ -154,6 +174,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 2000,
+			"height": 1600,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -176,7 +200,7 @@
 			"image": "",
 			"imageOverrides": [
 				{
-					"image": "bamboo_frame.png@2000x1600",
+					"image": "bamboo_frame.png",
 					"condition": [
 						[
 							{
@@ -190,6 +214,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 2020,
+			"height": 350,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -212,7 +240,7 @@
 			"image": "",
 			"imageOverrides": [
 				{
-					"image": "bamboo_rope_frame.png@2020x350",
+					"image": "bamboo_rope_frame.png",
 					"condition": [
 						[
 							{
@@ -226,11 +254,19 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1500,
+			"height": 250,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "bamboo_rope_sides.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1500,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "",
@@ -469,6 +505,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1500,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "",
@@ -580,6 +620,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1500,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "",
@@ -645,6 +689,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1500,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "",
@@ -710,6 +758,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1500,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "",
@@ -729,6 +781,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1500,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "",
@@ -748,6 +804,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1500,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "",

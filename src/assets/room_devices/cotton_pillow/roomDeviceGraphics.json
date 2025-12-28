@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 816,
+			"height": 400,
 			"type": "sprite",
 			"name": "Pillow",
 			"colorizationKey": "pillow",

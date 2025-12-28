@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 360,
+			"height": 500,
 			"type": "sprite",
 			"name": "left",
 			"colorizationKey": "rope",
@@ -21,6 +25,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 360,
+			"height": 500,
 			"type": "sprite",
 			"name": "right",
 			"colorizationKey": "rope",
@@ -41,6 +49,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 360,
+			"height": 500,
 			"type": "sprite",
 			"name": "base",
 			"colorizationKey": "rope",

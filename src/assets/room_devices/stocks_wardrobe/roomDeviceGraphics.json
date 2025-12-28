@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "wardrobe",
 			"image": "wardrobe_back.png"
@@ -14,11 +18,19 @@
 			}
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "wardrobe",
 			"image": "wardrobe_front.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "wardrobe",
 			"image": "",

@@ -1,11 +1,11 @@
 {
 	"layers": [
 		{
+			"x": 483,
+			"y": -1580,
+			"width": 35,
+			"height": 2000,
 			"type": "sprite",
-			"offset": {
-				"x": 483,
-				"y": -1580
-			},
 			"offsetOverrides": [
 				{
 					"offset": {
@@ -28,6 +28,10 @@
 			"image": "ceiling_line.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -50,6 +54,10 @@
 			"image": "rope_ring_top_end.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -91,6 +99,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -127,6 +139,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -163,6 +179,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -263,6 +283,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -304,6 +328,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -622,6 +650,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -663,6 +695,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -699,6 +735,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -735,6 +775,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"colorizationKey": "rock",
 			"image": "",
@@ -848,6 +892,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "",
@@ -1011,6 +1059,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "",
@@ -1174,6 +1226,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "",
@@ -1504,6 +1560,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -1545,6 +1605,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -1581,6 +1645,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -1617,6 +1685,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -1658,6 +1730,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -1743,6 +1819,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -1843,6 +1923,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -1884,6 +1968,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -2202,6 +2290,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -2470,6 +2562,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -2511,6 +2607,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -2610,6 +2710,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"offsetOverrides": [
 				{
@@ -2697,6 +2801,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "",
@@ -2810,6 +2918,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
 			"colorizationKey": "rope",
 			"image": "",

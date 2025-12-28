@@ -1,24 +1,40 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 400,
+			"height": 200,
 			"type": "sprite",
 			"colorizationKey": "cable",
 			"image": "cable_drum.png",
 			"imageOverrides": []
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 400,
+			"height": 200,
 			"type": "sprite",
 			"colorizationKey": "engine",
 			"image": "engine.png",
 			"imageOverrides": []
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 400,
+			"height": 200,
 			"type": "sprite",
 			"colorizationKey": "shell",
 			"image": "shell.png",
 			"imageOverrides": []
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 400,
+			"height": 200,
 			"type": "sprite",
 			"image": "shell_shine.png"
 		}

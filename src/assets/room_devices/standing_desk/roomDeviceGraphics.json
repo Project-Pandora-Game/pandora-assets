@@ -1,11 +1,19 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "desk",
 			"image": "standing_desk_base.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "desk",
 			"image": "standing_desk_cover.png",
@@ -54,6 +62,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "desk",
 			"image": "standing_desk_top.png"

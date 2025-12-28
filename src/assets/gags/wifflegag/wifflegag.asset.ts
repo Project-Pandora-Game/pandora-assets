@@ -14,24 +14,15 @@ DefineAsset({
 			name: 'Straps',
 			default: '#444444',
 		},
+		buckles: {
+			name: 'Buckles/Rings',
+			default: '#FFFFFF',
+		},
 	},
 	preview: 'wiffle_preview.png',
 	attributes: {
 		provides: [
 			'Restraint',
-			'Restraint_mouth',
-			'Mouth_item',
-			'Mouth_insert',
-			'Mouth_cover',
-		],
-		requires: [
-			'Mouth_open_wide',
-			'!Mouth_tongue_out',
-			'!Mouth_protruding',
-			'!Mouth_cover',
-		],
-		covers: [
-			'Mouth_item',
 		],
 	},
 	modules: {
@@ -51,22 +42,73 @@ DefineAsset({
 					id: 'standard',
 					name: 'Standard',
 					default: true,
+					properties: {
+						effects: {
+							lipsTouch: 7,
+							jawMove: 7,
+							tongueRoof: 6,
+							mouthBreath: 2,
+							throatBreath: 2,
+							coherency: 4,
+							stimulus: 2,
+						},
+						attributes: {
+							provides: [
+								'Restraint_mouth',
+								'Mouth_item',
+								'Mouth_insert',
+								'Mouth_cover',
+							],
+							requires: [
+								'Mouth_open_wide',
+								'!Mouth_tongue_out',
+								'!Mouth_protruding',
+								'!Mouth_cover',
+							],
+							covers: [
+								'Mouth_item',
+							],
+						},
+					},
+				},
+				{
+					id: 'neck',
+					name: 'Standard around the neck',
 				},
 				{
 					id: 'thigh',
 					name: 'Harness',
+					properties: {
+						effects: {
+							lipsTouch: 7,
+							jawMove: 7,
+							tongueRoof: 6,
+							mouthBreath: 2,
+							throatBreath: 2,
+							coherency: 4,
+							stimulus: 2,
+						},
+						attributes: {
+							provides: [
+								'Restraint_mouth',
+								'Mouth_item',
+								'Mouth_insert',
+								'Mouth_cover',
+							],
+							requires: [
+								'Mouth_open_wide',
+								'!Mouth_tongue_out',
+								'!Mouth_protruding',
+								'!Mouth_cover',
+							],
+							covers: [
+								'Mouth_item',
+							],
+						},
+					},
 				},
 			],
 		},
-	},
-	effects: {
-		lipsTouch: 7,
-		jawMove: 7,
-		tongueRoof: 6,
-		mouthBreath: 2,
-		throatBreath: 2,
-		coherency: 4,
-		stimulus: 2,
 	},
 	chat: {
 		actionAdd: 'SOURCE_CHARACTER strapped ITEM_ASSET_NAME tightly between TARGET_CHARACTER_DYNAMIC_POSSESSIVE lips.',

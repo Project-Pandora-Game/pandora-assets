@@ -1,11 +1,11 @@
 {
 	"layers": [
 		{
+			"x": -142,
+			"y": -3584,
+			"width": 284,
+			"height": 4096,
 			"type": "sprite",
-			"offset": {
-				"x": -142,
-				"y": -3584
-			},
 			"offsetOverrides": [
 				{
 					"offset": {
@@ -28,11 +28,11 @@
 			"image": "hashira.png"
 		},
 		{
+			"x": -142,
+			"y": -180,
+			"width": 284,
+			"height": 284,
 			"type": "sprite",
-			"offset": {
-				"x": -142,
-				"y": -180
-			},
 			"colorizationKey": "hashira",
 			"image": "",
 			"imageOverrides": [
@@ -63,11 +63,11 @@
 			]
 		},
 		{
+			"x": -500,
+			"y": -2000,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
-			"offset": {
-				"x": -500,
-				"y": -2000
-			},
 			"colorizationKey": "rope",
 			"image": "",
 			"imageOverrides": [
@@ -98,11 +98,11 @@
 			]
 		},
 		{
+			"x": -142,
+			"y": -600,
+			"width": 284,
+			"height": 284,
 			"type": "sprite",
-			"offset": {
-				"x": -142,
-				"y": -600
-			},
 			"colorizationKey": "leather",
 			"image": "",
 			"imageOverrides": [
@@ -121,11 +121,11 @@
 			]
 		},
 		{
+			"x": -142,
+			"y": -600,
+			"width": 284,
+			"height": 284,
 			"type": "sprite",
-			"offset": {
-				"x": -142,
-				"y": -600
-			},
 			"image": "",
 			"imageOverrides": [
 				{
@@ -143,11 +143,11 @@
 			]
 		},
 		{
+			"x": -142,
+			"y": -600,
+			"width": 284,
+			"height": 284,
 			"type": "sprite",
-			"offset": {
-				"x": -142,
-				"y": -600
-			},
 			"colorizationKey": "hashira",
 			"image": "",
 			"imageOverrides": [
@@ -166,11 +166,11 @@
 			]
 		},
 		{
+			"x": -142,
+			"y": -600,
+			"width": 284,
+			"height": 284,
 			"type": "sprite",
-			"offset": {
-				"x": -142,
-				"y": -600
-			},
 			"colorizationKey": "leather",
 			"image": "",
 			"imageOverrides": [
@@ -189,11 +189,11 @@
 			]
 		},
 		{
+			"x": -142,
+			"y": -600,
+			"width": 284,
+			"height": 284,
 			"type": "sprite",
-			"offset": {
-				"x": -142,
-				"y": -600
-			},
 			"image": "",
 			"imageOverrides": [
 				{
@@ -211,11 +211,11 @@
 			]
 		},
 		{
+			"x": -142,
+			"y": -600,
+			"width": 284,
+			"height": 284,
 			"type": "sprite",
-			"offset": {
-				"x": -142,
-				"y": -600
-			},
 			"colorizationKey": "bolts",
 			"image": "",
 			"imageOverrides": [
@@ -281,11 +281,11 @@
 			]
 		},
 		{
+			"x": -500,
+			"y": -2000,
+			"width": 1000,
+			"height": 2000,
 			"type": "sprite",
-			"offset": {
-				"x": -500,
-				"y": -2000
-			},
 			"colorizationKey": "rope",
 			"image": "hashira_rope_top_normal.png",
 			"imageOverrides": [

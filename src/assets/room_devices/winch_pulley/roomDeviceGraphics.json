@@ -1,11 +1,11 @@
 {
 	"layers": [
 		{
+			"x": -16,
+			"y": -1950,
+			"width": 35,
+			"height": 2000,
 			"type": "sprite",
-			"offset": {
-				"x": -16,
-				"y": -1950
-			},
 			"offsetOverrides": [
 				{
 					"offset": {
@@ -62,11 +62,11 @@
 			]
 		},
 		{
+			"x": -16,
+			"y": -3840,
+			"width": 35,
+			"height": 2000,
 			"type": "sprite",
-			"offset": {
-				"x": -16,
-				"y": -3840
-			},
 			"offsetOverrides": [
 				{
 					"offset": {
@@ -123,11 +123,11 @@
 			]
 		},
 		{
+			"x": -250,
+			"y": 0,
+			"width": 500,
+			"height": 250,
 			"type": "sprite",
-			"offset": {
-				"x": -250,
-				"y": 0
-			},
 			"offsetOverrides": [
 				{
 					"offset": {
@@ -163,11 +163,11 @@
 			]
 		},
 		{
+			"x": -250,
+			"y": 0,
+			"width": 500,
+			"height": 250,
 			"type": "sprite",
-			"offset": {
-				"x": -250,
-				"y": 0
-			},
 			"offsetOverrides": [
 				{
 					"offset": {
@@ -208,11 +208,11 @@
 			]
 		},
 		{
+			"x": -250,
+			"y": 5,
+			"width": 500,
+			"height": 250,
 			"type": "sprite",
-			"offset": {
-				"x": -250,
-				"y": 5
-			},
 			"offsetOverrides": [
 				{
 					"offset": {
@@ -265,11 +265,11 @@
 			]
 		},
 		{
+			"x": -25,
+			"y": 5,
+			"width": 50,
+			"height": 120,
 			"type": "sprite",
-			"offset": {
-				"x": -25,
-				"y": 5
-			},
 			"offsetOverrides": [
 				{
 					"offset": {
@@ -325,11 +325,11 @@
 			]
 		},
 		{
+			"x": -25,
+			"y": 5,
+			"width": 50,
+			"height": 120,
 			"type": "sprite",
-			"offset": {
-				"x": -25,
-				"y": 5
-			},
 			"offsetOverrides": [
 				{
 					"offset": {
@@ -533,11 +533,11 @@
 			]
 		},
 		{
+			"x": -16,
+			"y": -1950,
+			"width": 35,
+			"height": 2000,
 			"type": "sprite",
-			"offset": {
-				"x": -16,
-				"y": -1950
-			},
 			"offsetOverrides": [
 				{
 					"offset": {
@@ -594,11 +594,11 @@
 			]
 		},
 		{
+			"x": -16,
+			"y": -3840,
+			"width": 35,
+			"height": 2000,
 			"type": "sprite",
-			"offset": {
-				"x": -16,
-				"y": -3840
-			},
 			"offsetOverrides": [
 				{
 					"offset": {
@@ -655,11 +655,11 @@
 			]
 		},
 		{
+			"x": -25,
+			"y": 5,
+			"width": 50,
+			"height": 120,
 			"type": "sprite",
-			"offset": {
-				"x": -25,
-				"y": 5
-			},
 			"offsetOverrides": [
 				{
 					"offset": {
@@ -715,11 +715,11 @@
 			]
 		},
 		{
+			"x": -25,
+			"y": 5,
+			"width": 50,
+			"height": 120,
 			"type": "sprite",
-			"offset": {
-				"x": -25,
-				"y": 5
-			},
 			"offsetOverrides": [
 				{
 					"offset": {

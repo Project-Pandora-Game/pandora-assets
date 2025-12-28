@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 351,
+			"height": 286,
 			"type": "sprite",
 			"name": "bottom",
 			"colorizationKey": "bottom",
@@ -21,6 +25,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 351,
+			"height": 286,
 			"type": "sprite",
 			"name": "middle",
 			"colorizationKey": "middle",
@@ -41,6 +49,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 351,
+			"height": 286,
 			"type": "sprite",
 			"name": "top",
 			"colorizationKey": "top",

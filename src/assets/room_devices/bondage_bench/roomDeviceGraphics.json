@@ -1,11 +1,19 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "bench",
 			"image": "bench.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "bench",
 			"image": "",
@@ -25,11 +33,19 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "ring",
 			"image": "bench_ring_background.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "belts",
 			"image": "bench_ring_background_strap.png"

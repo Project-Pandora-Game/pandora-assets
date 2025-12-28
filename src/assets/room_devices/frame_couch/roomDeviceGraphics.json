@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 2400,
+			"height": 1200,
 			"type": "sprite",
 			"colorizationKey": "frame",
 			"image": "couch_frame.png",
@@ -20,6 +24,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 2400,
+			"height": 1200,
 			"type": "sprite",
 			"colorizationKey": "cushion",
 			"image": "couch_cushion.png",
@@ -80,6 +88,10 @@
 			}
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 2400,
+			"height": 1200,
 			"type": "sprite",
 			"colorizationKey": "ropes",
 			"image": "",
@@ -106,6 +118,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 2400,
+			"height": 1200,
 			"type": "sprite",
 			"colorizationKey": "ropes",
 			"image": "",

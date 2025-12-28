@@ -1,940 +1,944 @@
 {
 	"layers": [
 		{
-			"type": "sprite",
-			"offsetOverrides": [
+			"x": 0,
+			"y": 0,
+			"width": 1400,
+			"height": 2000,
+			"type": "autoSprite",
+			"name": "Image (large)",
+			"graphicalLayers": [
 				{
-					"offset": {
-						"x": 525,
-						"y": 300
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				},
-				{
-					"offset": {
-						"x": 350,
-						"y": 150
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
+					"name": "Image",
+					"colorizationKey": "image"
 				}
 			],
-			"colorizationKey": "image",
-			"image": "",
-			"imageOverrides": [
+			"variables": [
 				{
-					"image": "pandora.png",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "pandora"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							}
-						]
-					]
+					"type": "typedModule",
+					"module": "size"
 				},
 				{
-					"image": "pandora.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "pandora"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
-				},
-				{
-					"image": "pandora.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "pandora"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				},
-				{
-					"image": "mistress.png",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "mistress"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							}
-						]
-					]
-				},
-				{
-					"image": "mistress.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "mistress"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
-				},
-				{
-					"image": "mistress.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "mistress"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				},
-				{
-					"image": "heel.png",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "heel"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							}
-						]
-					]
-				},
-				{
-					"image": "heel.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "heel"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
-				},
-				{
-					"image": "heel.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "heel"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				},
-				{
-					"image": "fruits.png",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "fruit"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							}
-						]
-					]
-				},
-				{
-					"image": "fruits.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "fruit"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
-				},
-				{
-					"image": "fruits.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "fruit"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				},
-				{
-					"image": "anime.png",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "anime1"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							}
-						]
-					]
-				},
-				{
-					"image": "anime.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "anime1"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
-				},
-				{
-					"image": "anime.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "anime1"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				},
-				{
-					"image": "blacklady.png",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "blacklady"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							}
-						]
-					]
-				},
-				{
-					"image": "blacklady.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "blacklady"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
-				},
-				{
-					"image": "blacklady.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "blacklady"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				},
-				{
-					"image": "carnival.png",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "carnival"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							}
-						]
-					]
-				},
-				{
-					"image": "carnival.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "carnival"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
-				},
-				{
-					"image": "carnival.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "carnival"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				},
-				{
-					"image": "chair.png",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "chair"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							}
-						]
-					]
-				},
-				{
-					"image": "chair.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "chair"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
-				},
-				{
-					"image": "chair.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "chair"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				},
-				{
-					"image": "countryside.png",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "countryside"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							}
-						]
-					]
-				},
-				{
-					"image": "countryside.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "countryside"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
-				},
-				{
-					"image": "countryside.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "countryside"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				},
-				{
-					"image": "horsewoman.png",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "horsewoman"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							}
-						]
-					]
-				},
-				{
-					"image": "horsewoman.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "horsewoman"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
-				},
-				{
-					"image": "horsewoman.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "horsewoman"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				},
-				{
-					"image": "village.png",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "village"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							}
-						]
-					]
-				},
-				{
-					"image": "village.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "village"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
-				},
-				{
-					"image": "village.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "village"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				},
-				{
-					"image": "mirror.png",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "mirror"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							}
-						]
-					]
-				},
-				{
-					"image": "mirror.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "mirror"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
-				},
-				{
-					"image": "mirror.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "picture",
-								"operator": "=",
-								"value": "mirror"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
+					"type": "typedModule",
+					"module": "picture"
 				}
-			]
+			],
+			"imageMap": {
+				"large:pandora": [
+					"pandora.png"
+				],
+				"medium:pandora": [
+					""
+				],
+				"small:pandora": [
+					""
+				],
+				"large:mistress": [
+					"mistress.png"
+				],
+				"medium:mistress": [
+					""
+				],
+				"small:mistress": [
+					""
+				],
+				"large:heel": [
+					"heel.png"
+				],
+				"medium:heel": [
+					""
+				],
+				"small:heel": [
+					""
+				],
+				"large:fruit": [
+					"fruits.png"
+				],
+				"medium:fruit": [
+					""
+				],
+				"small:fruit": [
+					""
+				],
+				"large:anime1": [
+					"anime.png"
+				],
+				"medium:anime1": [
+					""
+				],
+				"small:anime1": [
+					""
+				],
+				"large:blacklady": [
+					"blacklady.png"
+				],
+				"medium:blacklady": [
+					""
+				],
+				"small:blacklady": [
+					""
+				],
+				"large:carnival": [
+					"carnival.png"
+				],
+				"medium:carnival": [
+					""
+				],
+				"small:carnival": [
+					""
+				],
+				"large:chair": [
+					"chair.png"
+				],
+				"medium:chair": [
+					""
+				],
+				"small:chair": [
+					""
+				],
+				"large:countryside": [
+					"countryside.png"
+				],
+				"medium:countryside": [
+					""
+				],
+				"small:countryside": [
+					""
+				],
+				"large:horsewoman": [
+					"horsewoman.png"
+				],
+				"medium:horsewoman": [
+					""
+				],
+				"small:horsewoman": [
+					""
+				],
+				"large:village": [
+					"village.png"
+				],
+				"medium:village": [
+					""
+				],
+				"small:village": [
+					""
+				],
+				"large:mirror": [
+					"mirror.png"
+				],
+				"medium:mirror": [
+					""
+				],
+				"small:mirror": [
+					""
+				],
+				"large:naera_maid": [
+					"naera_maid.png"
+				],
+				"medium:naera_maid": [
+					""
+				],
+				"small:naera_maid": [
+					""
+				],
+				"large:naera_demon": [
+					"naera_demon.png"
+				],
+				"medium:naera_demon": [
+					""
+				],
+				"small:naera_demon": [
+					""
+				],
+				"large:naera_kitten": [
+					"naera_kitten.png"
+				],
+				"medium:naera_kitten": [
+					""
+				],
+				"small:naera_kitten": [
+					""
+				],
+				"large:naera_cinder": [
+					"naera_cinder.png"
+				],
+				"medium:naera_cinder": [
+					""
+				],
+				"small:naera_cinder": [
+					""
+				],
+				"large:naera_catch": [
+					"naera_catch.png"
+				],
+				"medium:naera_catch": [
+					""
+				],
+				"small:naera_catch": [
+					""
+				],
+				"large:naera_wolf": [
+					"naera_wolf.png"
+				],
+				"medium:naera_wolf": [
+					""
+				],
+				"small:naera_wolf": [
+					""
+				],
+				"large:naera_mouse": [
+					"naera_mouse.png"
+				],
+				"medium:naera_mouse": [
+					""
+				],
+				"small:naera_mouse": [
+					""
+				],
+				"large:naera_eternal": [
+					"naera_eternal.png"
+				],
+				"medium:naera_eternal": [
+					""
+				],
+				"small:naera_eternal": [
+					""
+				],
+				"large:naera_her": [
+					"naera_her.png"
+				],
+				"medium:naera_her": [
+					""
+				],
+				"small:naera_her": [
+					""
+				],
+				"large:naera_avalanche": [
+					"naera_avalanche.png"
+				],
+				"medium:naera_avalanche": [
+					""
+				],
+				"small:naera_avalanche": [
+					""
+				]
+			}
 		},
 		{
-			"type": "sprite",
-			"offsetOverrides": [
+			"x": 350,
+			"y": 150,
+			"width": 700,
+			"height": 1000,
+			"type": "autoSprite",
+			"name": "Image (medium)",
+			"graphicalLayers": [
 				{
-					"offset": {
-						"x": 525,
-						"y": 300
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				},
-				{
-					"offset": {
-						"x": 350,
-						"y": 150
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
+					"name": "Image",
+					"colorizationKey": "image"
 				}
 			],
-			"colorizationKey": "passe_partout",
-			"image": "",
-			"imageOverrides": [
+			"variables": [
 				{
-					"image": "passepartout1.png",
-					"condition": [
-						[
-							{
-								"module": "pp",
-								"operator": "=",
-								"value": "pp1"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							}
-						]
-					]
+					"type": "typedModule",
+					"module": "size"
 				},
 				{
-					"image": "passepartout1.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "pp",
-								"operator": "=",
-								"value": "pp1"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
-				},
-				{
-					"image": "passepartout1.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "pp",
-								"operator": "=",
-								"value": "pp1"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				},
-				{
-					"image": "passepartout2.png",
-					"condition": [
-						[
-							{
-								"module": "pp",
-								"operator": "=",
-								"value": "pp2"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							}
-						]
-					]
-				},
-				{
-					"image": "passepartout2.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "pp",
-								"operator": "=",
-								"value": "pp2"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
-				},
-				{
-					"image": "passepartout2.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "pp",
-								"operator": "=",
-								"value": "pp2"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
+					"type": "typedModule",
+					"module": "picture"
 				}
-			]
+			],
+			"imageMap": {
+				"large:pandora": [
+					""
+				],
+				"medium:pandora": [
+					"pandora.png"
+				],
+				"small:pandora": [
+					""
+				],
+				"large:mistress": [
+					""
+				],
+				"medium:mistress": [
+					"mistress.png"
+				],
+				"small:mistress": [
+					""
+				],
+				"large:heel": [
+					""
+				],
+				"medium:heel": [
+					"heel.png"
+				],
+				"small:heel": [
+					""
+				],
+				"large:fruit": [
+					""
+				],
+				"medium:fruit": [
+					"fruits.png"
+				],
+				"small:fruit": [
+					""
+				],
+				"large:anime1": [
+					""
+				],
+				"medium:anime1": [
+					"anime.png"
+				],
+				"small:anime1": [
+					""
+				],
+				"large:blacklady": [
+					""
+				],
+				"medium:blacklady": [
+					"blacklady.png"
+				],
+				"small:blacklady": [
+					""
+				],
+				"large:carnival": [
+					""
+				],
+				"medium:carnival": [
+					"carnival.png"
+				],
+				"small:carnival": [
+					""
+				],
+				"large:chair": [
+					""
+				],
+				"medium:chair": [
+					"chair.png"
+				],
+				"small:chair": [
+					""
+				],
+				"large:countryside": [
+					""
+				],
+				"medium:countryside": [
+					"countryside.png"
+				],
+				"small:countryside": [
+					""
+				],
+				"large:horsewoman": [
+					""
+				],
+				"medium:horsewoman": [
+					"horsewoman.png"
+				],
+				"small:horsewoman": [
+					""
+				],
+				"large:village": [
+					""
+				],
+				"medium:village": [
+					"village.png"
+				],
+				"small:village": [
+					""
+				],
+				"large:mirror": [
+					""
+				],
+				"medium:mirror": [
+					"mirror.png"
+				],
+				"small:mirror": [
+					""
+				],
+				"large:naera_maid": [
+					""
+				],
+				"medium:naera_maid": [
+					"naera_maid.png"
+				],
+				"small:naera_maid": [
+					""
+				],
+				"large:naera_demon": [
+					""
+				],
+				"medium:naera_demon": [
+					"naera_demon.png"
+				],
+				"small:naera_demon": [
+					""
+				],
+				"large:naera_kitten": [
+					""
+				],
+				"medium:naera_kitten": [
+					"naera_kitten.png"
+				],
+				"small:naera_kitten": [
+					""
+				],
+				"large:naera_cinder": [
+					""
+				],
+				"medium:naera_cinder": [
+					"naera_cinder.png"
+				],
+				"small:naera_cinder": [
+					""
+				],
+				"large:naera_catch": [
+					""
+				],
+				"medium:naera_catch": [
+					"naera_catch.png"
+				],
+				"small:naera_catch": [
+					""
+				],
+				"large:naera_wolf": [
+					""
+				],
+				"medium:naera_wolf": [
+					"naera_wolf.png"
+				],
+				"small:naera_wolf": [
+					""
+				],
+				"large:naera_mouse": [
+					""
+				],
+				"medium:naera_mouse": [
+					"naera_mouse.png"
+				],
+				"small:naera_mouse": [
+					""
+				],
+				"large:naera_eternal": [
+					""
+				],
+				"medium:naera_eternal": [
+					"naera_eternal.png"
+				],
+				"small:naera_eternal": [
+					""
+				],
+				"large:naera_her": [
+					""
+				],
+				"medium:naera_her": [
+					"naera_her.png"
+				],
+				"small:naera_her": [
+					""
+				],
+				"large:naera_avalanche": [
+					""
+				],
+				"medium:naera_avalanche": [
+					"naera_avalanche.png"
+				],
+				"small:naera_avalanche": [
+					""
+				]
+			}
 		},
 		{
-			"type": "sprite",
-			"offsetOverrides": [
+			"x": 525,
+			"y": 300,
+			"width": 350,
+			"height": 500,
+			"type": "autoSprite",
+			"name": "Image (small)",
+			"graphicalLayers": [
 				{
-					"offset": {
-						"x": 525,
-						"y": 300
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				},
-				{
-					"offset": {
-						"x": 350,
-						"y": 150
-					},
-					"condition": [
-						[
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
+					"name": "Image",
+					"colorizationKey": "image"
 				}
 			],
-			"colorizationKey": "frame",
-			"image": "",
-			"imageOverrides": [
+			"variables": [
 				{
-					"image": "pictureframe1.png",
-					"condition": [
-						[
-							{
-								"module": "frame",
-								"operator": "=",
-								"value": "frame1"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							}
-						]
-					]
+					"type": "typedModule",
+					"module": "size"
 				},
 				{
-					"image": "pictureframe1.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "frame",
-								"operator": "=",
-								"value": "frame1"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
-				},
-				{
-					"image": "pictureframe1.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "frame",
-								"operator": "=",
-								"value": "frame1"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
-				},
-				{
-					"image": "pictureframe2.png",
-					"condition": [
-						[
-							{
-								"module": "frame",
-								"operator": "=",
-								"value": "frame2"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "large"
-							}
-						]
-					]
-				},
-				{
-					"image": "pictureframe2.png@700x1000",
-					"condition": [
-						[
-							{
-								"module": "frame",
-								"operator": "=",
-								"value": "frame2"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "medium"
-							}
-						]
-					]
-				},
-				{
-					"image": "pictureframe2.png@350x500",
-					"condition": [
-						[
-							{
-								"module": "frame",
-								"operator": "=",
-								"value": "frame2"
-							},
-							{
-								"module": "size",
-								"operator": "=",
-								"value": "small"
-							}
-						]
-					]
+					"type": "typedModule",
+					"module": "picture"
 				}
-			]
+			],
+			"imageMap": {
+				"large:pandora": [
+					""
+				],
+				"medium:pandora": [
+					""
+				],
+				"small:pandora": [
+					"pandora.png"
+				],
+				"large:mistress": [
+					""
+				],
+				"medium:mistress": [
+					""
+				],
+				"small:mistress": [
+					"mistress.png"
+				],
+				"large:heel": [
+					""
+				],
+				"medium:heel": [
+					""
+				],
+				"small:heel": [
+					"heel.png"
+				],
+				"large:fruit": [
+					""
+				],
+				"medium:fruit": [
+					""
+				],
+				"small:fruit": [
+					"fruits.png"
+				],
+				"large:anime1": [
+					""
+				],
+				"medium:anime1": [
+					""
+				],
+				"small:anime1": [
+					"anime.png"
+				],
+				"large:blacklady": [
+					""
+				],
+				"medium:blacklady": [
+					""
+				],
+				"small:blacklady": [
+					"blacklady.png"
+				],
+				"large:carnival": [
+					""
+				],
+				"medium:carnival": [
+					""
+				],
+				"small:carnival": [
+					"carnival.png"
+				],
+				"large:chair": [
+					""
+				],
+				"medium:chair": [
+					""
+				],
+				"small:chair": [
+					"chair.png"
+				],
+				"large:countryside": [
+					""
+				],
+				"medium:countryside": [
+					""
+				],
+				"small:countryside": [
+					"countryside.png"
+				],
+				"large:horsewoman": [
+					""
+				],
+				"medium:horsewoman": [
+					""
+				],
+				"small:horsewoman": [
+					"horsewoman.png"
+				],
+				"large:village": [
+					""
+				],
+				"medium:village": [
+					""
+				],
+				"small:village": [
+					"village.png"
+				],
+				"large:mirror": [
+					""
+				],
+				"medium:mirror": [
+					""
+				],
+				"small:mirror": [
+					"mirror.png"
+				],
+				"large:naera_maid": [
+					""
+				],
+				"medium:naera_maid": [
+					""
+				],
+				"small:naera_maid": [
+					"naera_maid.png"
+				],
+				"large:naera_demon": [
+					""
+				],
+				"medium:naera_demon": [
+					""
+				],
+				"small:naera_demon": [
+					"naera_demon.png"
+				],
+				"large:naera_kitten": [
+					""
+				],
+				"medium:naera_kitten": [
+					""
+				],
+				"small:naera_kitten": [
+					"naera_kitten.png"
+				],
+				"large:naera_cinder": [
+					""
+				],
+				"medium:naera_cinder": [
+					""
+				],
+				"small:naera_cinder": [
+					"naera_cinder.png"
+				],
+				"large:naera_catch": [
+					""
+				],
+				"medium:naera_catch": [
+					""
+				],
+				"small:naera_catch": [
+					"naera_catch.png"
+				],
+				"large:naera_wolf": [
+					""
+				],
+				"medium:naera_wolf": [
+					""
+				],
+				"small:naera_wolf": [
+					"naera_wolf.png"
+				],
+				"large:naera_mouse": [
+					""
+				],
+				"medium:naera_mouse": [
+					""
+				],
+				"small:naera_mouse": [
+					"naera_mouse.png"
+				],
+				"large:naera_eternal": [
+					""
+				],
+				"medium:naera_eternal": [
+					""
+				],
+				"small:naera_eternal": [
+					"naera_eternal.png"
+				],
+				"large:naera_her": [
+					""
+				],
+				"medium:naera_her": [
+					""
+				],
+				"small:naera_her": [
+					"naera_her.png"
+				],
+				"large:naera_avalanche": [
+					""
+				],
+				"medium:naera_avalanche": [
+					""
+				],
+				"small:naera_avalanche": [
+					"naera_avalanche.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1400,
+			"height": 2000,
+			"type": "autoSprite",
+			"name": "Passepartout (large)",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "passe_partout"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "size"
+				},
+				{
+					"type": "typedModule",
+					"module": "pp"
+				}
+			],
+			"imageMap": {
+				"large:pp1": [
+					"passepartout1.png"
+				],
+				"large:pp2": [
+					"passepartout2.png"
+				],
+				"medium:pp1": [
+					""
+				],
+				"medium:pp2": [
+					""
+				],
+				"small:pp1": [
+					""
+				],
+				"small:pp2": [
+					""
+				]
+			}
+		},
+		{
+			"x": 350,
+			"y": 150,
+			"width": 700,
+			"height": 1000,
+			"type": "autoSprite",
+			"name": "Passepartout (medium)",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "passe_partout"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "size"
+				},
+				{
+					"type": "typedModule",
+					"module": "pp"
+				}
+			],
+			"imageMap": {
+				"large:pp1": [
+					""
+				],
+				"large:pp2": [
+					""
+				],
+				"medium:pp1": [
+					"passepartout1.png"
+				],
+				"medium:pp2": [
+					"passepartout2.png"
+				],
+				"small:pp1": [
+					""
+				],
+				"small:pp2": [
+					""
+				]
+			}
+		},
+		{
+			"x": 525,
+			"y": 300,
+			"width": 350,
+			"height": 500,
+			"type": "autoSprite",
+			"name": "Passepartout (small)",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "passe_partout"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "size"
+				},
+				{
+					"type": "typedModule",
+					"module": "pp"
+				}
+			],
+			"imageMap": {
+				"large:pp1": [
+					""
+				],
+				"large:pp2": [
+					""
+				],
+				"medium:pp1": [
+					""
+				],
+				"medium:pp2": [
+					""
+				],
+				"small:pp1": [
+					"passepartout1.png"
+				],
+				"small:pp2": [
+					"passepartout2.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1400,
+			"height": 2000,
+			"type": "autoSprite",
+			"name": "Frame (large)",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "frame"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "size"
+				},
+				{
+					"type": "typedModule",
+					"module": "frame"
+				}
+			],
+			"imageMap": {
+				"large:frame1": [
+					"pictureframe1.png"
+				],
+				"large:frame2": [
+					"pictureframe2.png"
+				],
+				"medium:frame1": [
+					""
+				],
+				"medium:frame2": [
+					""
+				],
+				"small:frame1": [
+					""
+				],
+				"small:frame2": [
+					""
+				]
+			}
+		},
+		{
+			"x": 350,
+			"y": 150,
+			"width": 700,
+			"height": 1000,
+			"type": "autoSprite",
+			"name": "Frame (medium)",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "frame"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "size"
+				},
+				{
+					"type": "typedModule",
+					"module": "frame"
+				}
+			],
+			"imageMap": {
+				"large:frame1": [
+					""
+				],
+				"large:frame2": [
+					""
+				],
+				"medium:frame1": [
+					"pictureframe1.png"
+				],
+				"medium:frame2": [
+					"pictureframe2.png"
+				],
+				"small:frame1": [
+					""
+				],
+				"small:frame2": [
+					""
+				]
+			}
+		},
+		{
+			"x": 525,
+			"y": 300,
+			"width": 350,
+			"height": 500,
+			"type": "autoSprite",
+			"name": "Frame (small)",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "frame"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "size"
+				},
+				{
+					"type": "typedModule",
+					"module": "frame"
+				}
+			],
+			"imageMap": {
+				"large:frame1": [
+					""
+				],
+				"large:frame2": [
+					""
+				],
+				"medium:frame1": [
+					""
+				],
+				"medium:frame2": [
+					""
+				],
+				"small:frame1": [
+					"pictureframe1.png"
+				],
+				"small:frame2": [
+					"pictureframe2.png"
+				]
+			}
 		},
 		{
 			"type": "text",
+			"name": "Writing (large)",
 			"dataModule": "text",
 			"offset": {
 				"x": 502,
@@ -949,6 +953,7 @@
 		},
 		{
 			"type": "text",
+			"name": "Writing (medium)",
 			"dataModule": "text2",
 			"offset": {
 				"x": 602,

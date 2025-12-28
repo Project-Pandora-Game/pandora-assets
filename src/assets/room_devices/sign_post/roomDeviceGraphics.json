@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 371,
+			"height": 427,
 			"type": "sprite",
 			"colorizationKey": "post",
 			"image": "",
@@ -20,6 +24,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 371,
+			"height": 427,
 			"type": "sprite",
 			"colorizationKey": "sign",
 			"image": "sign_post_sign.png"

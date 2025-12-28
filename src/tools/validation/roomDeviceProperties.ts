@@ -25,6 +25,14 @@ export function ValidateRoomDeviceProperties(
 		}
 	}
 
+	if (properties.stateFlags !== undefined) {
+		if (metadata.context === 'base') {
+			logger.warning(`[State flags] ${context}.stateFlags:\n\tState flags shouldn't be used directly on the asset.`);
+		}
+		properties.stateFlags.provides?.forEach((flag) => metadata.providedStateFlags.add(flag));
+		Object.keys(properties.stateFlags.requires ?? {}).forEach((flag) => metadata.requiredStateFlags.add(flag));
+	}
+
 	for (const moduleName of properties.blockModules ?? []) {
 		if (!metadata.getModuleNames().includes(moduleName)) {
 			logger.warning(`Invalid configuration: ${context}.blockModules:\n\tUnknown module '${moduleName}'`);

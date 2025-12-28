@@ -9,26 +9,53 @@
 			"type": "autoMesh",
 			"name": "front",
 			"points": "body",
-			"automeshTemplate": "belowBreasts",
+			"automeshTemplate": "aboveBody",
 			"disabledTemplateParts": [
 				"arms",
 				"legs"
 			],
 			"graphicalLayers": [
 				{
-					"name": "buckles",
-					"colorizationKey": "buckles"
-				},
-				{
 					"name": "corset",
 					"colorizationKey": "corset"
+				},
+				{
+					"name": "buckles",
+					"colorizationKey": "buckles"
 				}
 			],
-			"variables": [],
+			"variables": [
+				{
+					"type": "bone",
+					"bone": "breasts",
+					"stops": [
+						-110,
+						-40,
+						40,
+						110
+					]
+				}
+			],
 			"imageMap": {
-				"": [
-					"classic_corset_buckles_front.png",
-					"classic_corset_front.png"
+				"40": [
+					"classic_corset_front_large.png",
+					"classic_corset_buckles_front.png"
+				],
+				"110": [
+					"classic_corset_front_extreme.png",
+					"classic_corset_buckles_front.png"
+				],
+				"-180": [
+					"classic_corset_front.png",
+					"classic_corset_buckles_front.png"
+				],
+				"-110": [
+					"classic_corset_front_small.png",
+					"classic_corset_buckles_front.png"
+				],
+				"-40": [
+					"classic_corset_front_normal.png",
+					"classic_corset_buckles_front.png"
 				]
 			}
 		},

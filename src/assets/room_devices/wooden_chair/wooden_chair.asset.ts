@@ -206,9 +206,6 @@ DefineRoomDeviceAsset({
 								},
 							},
 						},
-						stateFlags: {
-							provides: ['tied_wrists'],
-						},
 					},
 				},
 				{
@@ -235,7 +232,6 @@ DefineRoomDeviceAsset({
 							},
 						},
 						stateFlags: {
-							provides: ['tied_wrists'],
 							requires: {
 								armrests: 'Wrists cannot be tied without armrests',
 							},

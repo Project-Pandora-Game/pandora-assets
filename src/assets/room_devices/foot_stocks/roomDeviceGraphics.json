@@ -1,6 +1,10 @@
 {
 	"layers": [
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "stocks",
 			"image": "wooden_stocks.png"
@@ -35,6 +39,10 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "stocks",
 			"image": "",
@@ -54,11 +62,19 @@
 			]
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "chains",
 			"image": "wooden_stocks_chain.png"
 		},
 		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "sprite",
 			"colorizationKey": "braces",
 			"image": "",
