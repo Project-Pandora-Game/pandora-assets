@@ -2,6 +2,7 @@ import { freeze, type Immutable } from 'immer';
 import { cloneDeep, omit, pick } from 'lodash-es';
 import { AssetId, BodypartAssetDefinition, GetLogger, type GraphicsBuildContextAssetData } from 'pandora-common';
 import { join } from 'path';
+import { BUILD_FOR_TEST } from '../config.ts';
 import { AssetDatabase } from './assetDatabase.ts';
 import { AssetSourcePath, DefaultId, GetAssetRepositoryPath } from './context.ts';
 import { LoadAssetGraphicsFile } from './graphics.ts';
@@ -41,7 +42,13 @@ export type BodypartDefinitionFallthroughProperties = (typeof BODYPART_DEFINITIO
 
 export function GlobalDefineBodypart(def: IntermediateBodypartAssetDefinition): IntermediateBodypartAssetDefinition {
 	freeze(def, true);
-	RegisterImportContextProcess(() => GlobalDefineBodypartProcess(cloneDeep(def)));
+
+	if (BUILD_FOR_TEST && def.useForTesting !== true) {
+		// Do not use this asset when building for test
+	} else {
+		RegisterImportContextProcess(() => GlobalDefineBodypartProcess(cloneDeep(def)));
+	}
+
 	return def;
 }
 

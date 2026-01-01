@@ -1,6 +1,7 @@
 DefineBodypart({
 	name: 'Ears',
 	bodypart: 'ears',
+	useForTesting: true,
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: {

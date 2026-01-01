@@ -73,6 +73,11 @@ type AssetOwnershipData = {
 
 interface IntermediateBodypartAssetDefinition extends Pick<import('pandora-common').BodypartAssetDefinition<AssetRepoExtraArgs>, import('./tools/definitionBodypart.ts').BodypartDefinitionFallthroughProperties> {
 	id?: string;
+	/**
+	 * If set, then this asset is being used for automated testing.
+	 * That means, that it is included in the "test bundle" and care should be taken when changing it, as doing so might require regenerating the bundle and affect existing automated tests.
+	 */
+	useForTesting?: boolean;
 	graphics?: string;
 	/** Info about who owns the asset(s) */
 	ownership: AssetOwnershipData;
@@ -81,6 +86,11 @@ interface IntermediateBodypartAssetDefinition extends Pick<import('pandora-commo
 
 interface IntermediatePersonalAssetDefinition extends Pick<import('pandora-common').PersonalAssetDefinition<AssetRepoExtraArgs>, import('./tools/definitionPersonal.ts').PersonalAssetDefinitionFallthroughProperties> {
 	id?: string;
+	/**
+	 * If set, then this asset is being used for automated testing.
+	 * That means, that it is included in the "test bundle" and care should be taken when changing it, as doing so might require regenerating the bundle and affect existing automated tests.
+	 */
+	useForTesting?: boolean;
 	graphics?: string;
 	/** Info about who owns the asset(s) */
 	ownership: AssetOwnershipData;
@@ -102,6 +112,11 @@ interface IntermediateRoomDeviceSlotDefinition {
 
 interface IntermediateRoomDeviceDefinition extends Pick<import('pandora-common').RoomDeviceAssetDefinition<AssetRepoExtraArgs>, import('./tools/definitionRoomDevice.ts').AssetRoomDeviceDefinitionFallthroughProperties> {
 	id?: string;
+	/**
+	 * If set, then this asset is being used for automated testing.
+	 * That means, that it is included in the "test bundle" and care should be taken when changing it, as doing so might require regenerating the bundle and affect existing automated tests.
+	 */
+	useForTesting?: boolean;
 	slots: Record<string, IntermediateRoomDeviceSlotDefinition>;
 	/** Info about who owns the asset(s) */
 	ownership: AssetOwnershipData;
@@ -116,6 +131,11 @@ interface IntermediateRoomDeviceDefinition extends Pick<import('pandora-common')
 
 interface IntermediateLockAssetDefinition extends Pick<import('pandora-common').LockAssetDefinition, import('./tools/definitionLock.ts').LockAssetDefinitionFallthroughProperties> {
 	id?: string;
+	/**
+	 * If set, then this asset is being used for automated testing.
+	 * That means, that it is included in the "test bundle" and care should be taken when changing it, as doing so might require regenerating the bundle and affect existing automated tests.
+	 */
+	useForTesting?: boolean;
 	/** Info about who owns the asset(s) */
 	ownership: AssetOwnershipData;
 }
@@ -129,6 +149,11 @@ interface IntermediateRoomBackgroundDefinition extends Pick<import('pandora-comm
 	tags: import('./backgrounds/backgrounds.ts').BackgroundTagNames[];
 	/** Data needed for correctly positioning characters and room devices inside the room */
 	calibration: import('pandora-common').RoomBackgroundCalibrationData;
+	/**
+	 * If set, then this asset is being used for automated testing.
+	 * That means, that it is included in the "test bundle" and care should be taken when changing it, as doing so might require regenerating the bundle and affect existing automated tests.
+	 */
+	useForTesting?: boolean;
 	/** Info about who owns the asset(s) */
 	ownership: {
 		/** Same as author of git commits present in PR, has responsibility for this asset */
@@ -148,6 +173,11 @@ interface IntermediateTileTextureDefinition extends Pick<import('pandora-common'
 > {
 	/** The background image of the tile; must be in `png` format */
 	image: `${string}.png`;
+	/**
+	 * If set, then this asset is being used for automated testing.
+	 * That means, that it is included in the "test bundle" and care should be taken when changing it, as doing so might require regenerating the bundle and affect existing automated tests.
+	 */
+	useForTesting?: boolean;
 	/** Info about who owns the asset(s) */
 	ownership: {
 		/** Same as author of git commits present in PR, has responsibility for this asset */

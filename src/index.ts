@@ -1,3 +1,4 @@
+import { spawnSync } from 'child_process';
 import * as fs from 'fs';
 import ignore from 'ignore';
 import type { Immutable } from 'immer';
@@ -10,7 +11,7 @@ import { LoadBackgroundTags, LoadBackgrounds } from './backgrounds/backgrounds.t
 import { BODYPARTS, ValidateBodyparts } from './bodyparts.ts';
 import { LoadBoneNameValidation, boneDefinition } from './bones.ts';
 import { LoadCharacterModifierTemplates } from './characterModifierTemplates.ts';
-import { ASSET_DEST_DIR, ASSET_SRC_DIR, BASE_DIR, IS_PRODUCTION_BUILD, OUT_DIR, PRETTY_OUTPUT } from './config.ts';
+import { ASSET_DEST_DIR, ASSET_SRC_DIR, BASE_DIR, BUILD_FOR_TEST, IS_PRODUCTION_BUILD, OUT_DIR, PRETTY_OUTPUT } from './config.ts';
 import { POSE_PRESETS } from './posePresets.ts';
 import { APPEARANCE_RANDOMIZATION_CONFIG } from './presets.ts';
 import { LoadTemplates } from './templates/index.ts';
@@ -102,7 +103,7 @@ async function Run() {
 
 	// Load backgrounds
 	logger.info('Loading backgrounds...');
-	const tags = LoadBackgroundTags();
+	const backgroundTags = LoadBackgroundTags();
 	LoadBackgrounds();
 	LoadTileTextures();
 
@@ -153,7 +154,13 @@ async function Run() {
 				try {
 					const moduleName = pathToFileURL(join(assetDestPath, `${asset}.asset.js`)).href;
 					await import(moduleName);
-					assetProcesses.push(assetContext);
+
+					if (assetContext.processes.length > 0) {
+						assetProcesses.push(assetContext);
+					} else if (!BUILD_FOR_TEST) {
+						// This warning is ignored when building for tests, because tests intentionally skip most assets.
+						logger.warning(`Asset file assets/${category}/${asset} registered no assets for processing`);
+					}
 				} catch (error) {
 					logger.error(`Error while importing assets/${category}/${asset}\n`, error);
 				}
@@ -198,7 +205,7 @@ async function Run() {
 		bones: boneDefinition,
 		posePresets: POSE_PRESETS,
 		bodyparts: BODYPARTS,
-		backgroundTags: tags,
+		backgroundTags,
 		backgrounds: RoomDatabase.exportBackgrounds(),
 		tileTextures: RoomDatabase.exportTileTextures(),
 		graphicsId: graphicsFile.hash,
@@ -236,6 +243,34 @@ async function Run() {
 
 	if (!CheckErrors())
 		return;
+
+	if (BUILD_FOR_TEST) {
+		// Create final archive
+		if (process.platform !== 'linux') {
+			logger.alert('Creating final test archive is only supported on linux');
+		} else {
+			const tarArchivePath = join(BASE_DIR, 'out-for-test.tar');
+
+			// Create tar archive, making it as reproducible as possible
+			const { error, stdout } = spawnSync('tar', [
+				'--sort=name',
+				'--format=posix', '--pax-option=exthdr.name=%d/PaxHeaders/%f', '--pax-option=delete=atime,delete=ctime',
+				`--mtime=@0`,
+				'--numeric-owner', '--owner=0', '--group=0',
+				'--mode=go+u,go-w',
+				'-cf', '-',
+				'-C', OUT_DIR,
+				'.',
+			], {
+				stdio: ['ignore', 'pipe', 'inherit'],
+				maxBuffer: 64 * 1024 * 1024,
+			});
+			if (error)
+				throw error;
+
+			fs.writeFileSync(tarArchivePath, stdout);
+		}
+	}
 
 	logger.info('Done!');
 }
