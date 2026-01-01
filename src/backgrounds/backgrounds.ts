@@ -1,4 +1,5 @@
 import { RoomBackgroundTagDefinition } from 'pandora-common';
+import { BUILD_FOR_TEST } from '../config.ts';
 import { DefineRoomBackground } from '../tools/roomDefinition.ts';
 
 type CategoryDefinition = {
@@ -174,6 +175,7 @@ const BACKGROUNDS: IntermediateRoomBackgroundDefinition[] = [
 			fov: 80,
 		},
 		tags: ['inside', 'livingroom', 'day', 'space_small'],
+		useForTesting: true,
 		ownership: {
 			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 			licensing: [
@@ -2152,6 +2154,10 @@ export function LoadBackgroundTags() {
 
 export function LoadBackgrounds() {
 	for (const background of BACKGROUNDS) {
-		DefineRoomBackground(background);
+		if (BUILD_FOR_TEST && background.useForTesting !== true) {
+			// Do not use this background when building for test
+		} else {
+			DefineRoomBackground(background);
+		}
 	}
 }

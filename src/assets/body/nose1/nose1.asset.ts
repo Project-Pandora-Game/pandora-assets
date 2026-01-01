@@ -1,6 +1,7 @@
 DefineBodypart({
 	name: 'Nose 1',
 	bodypart: 'nose',
+	useForTesting: true,
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: {

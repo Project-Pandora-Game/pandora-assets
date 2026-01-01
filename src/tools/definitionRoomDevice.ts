@@ -3,6 +3,7 @@ import { freeze, type Immutable } from 'immer';
 import { cloneDeep, omit, pick } from 'lodash-es';
 import { Assert, AssetId, AssetSourceGraphicsDefinitionSchema, GetLogger, ModuleNameSchema, RoomDeviceAssetDefinition, RoomDeviceModuleStaticData, RoomDeviceProperties, RoomDeviceWearablePartAssetDefinition, SCHEME_OVERRIDE, type AssetCreditsInfo, type AssetDefinition, type AssetSourceGraphicsRoomDeviceDefinition, type GraphicsBuildContextRoomDeviceData } from 'pandora-common';
 import { join } from 'path';
+import { BUILD_FOR_TEST } from '../config.ts';
 import { AssetDatabase } from './assetDatabase.ts';
 import { AssetSourcePath, DefaultId, GetAssetRepositoryPath } from './context.ts';
 import { GraphicsDatabase } from './graphicsDatabase.ts';
@@ -110,7 +111,13 @@ function DefineRoomDeviceWearablePart(
 
 export function GlobalDefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinition): IntermediateRoomDeviceDefinition {
 	freeze(def, true);
-	RegisterImportContextProcess(() => GlobalDefineRoomDeviceAssetProcess(cloneDeep(def)));
+
+	if (BUILD_FOR_TEST && def.useForTesting !== true) {
+		// Do not use this asset when building for test
+	} else {
+		RegisterImportContextProcess(() => GlobalDefineRoomDeviceAssetProcess(cloneDeep(def)));
+	}
+
 	return def;
 }
 

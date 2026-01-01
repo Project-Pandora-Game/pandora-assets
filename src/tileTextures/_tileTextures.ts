@@ -1,3 +1,4 @@
+import { BUILD_FOR_TEST } from '../config.ts';
 import { DefineTileTexture } from '../tools/tileTextureDefinition.ts';
 
 const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
@@ -5,6 +6,7 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 		id: 'black_white_marble_tiles_01',
 		name: 'Diamond alternating marble tile',
 		image: 'black_white_marble_tiles_01.png',
+		useForTesting: true,
 		ownership: {
 			responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 			licensing: [
@@ -1371,6 +1373,10 @@ const TILE_TEXTURES: IntermediateTileTextureDefinition[] = [
 
 export function LoadTileTextures() {
 	for (const texture of TILE_TEXTURES) {
-		DefineTileTexture(texture);
+		if (BUILD_FOR_TEST && texture.useForTesting !== true) {
+			// Do not use this texture when building for test
+		} else {
+			DefineTileTexture(texture);
+		}
 	}
 }

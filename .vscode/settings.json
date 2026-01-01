@@ -16,7 +16,8 @@
 		"node_modules/**": true,
 		"coverage/**": true,
 		"dist/**": true,
-		"out/**": true
+		"out/**": true,
+		"out-for-test/**": true
 	},
 	"git.rebaseWhenSync": true,
 	"git.branchProtection": [

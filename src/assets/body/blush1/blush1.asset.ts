@@ -1,6 +1,7 @@
 DefineBodypart({
 	name: 'Blush 1',
 	bodypart: 'blush',
+	useForTesting: true,
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: {

@@ -1,6 +1,7 @@
 DefineBodypart({
 	name: 'Eyebrows 3',
 	bodypart: 'eyebrows',
+	useForTesting: true,
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: {
