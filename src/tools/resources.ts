@@ -2,10 +2,10 @@ import { createHash } from 'crypto';
 import { readFileSync, statSync } from 'fs';
 import { copyFile, readdir, stat, unlink, writeFile } from 'fs/promises';
 import { availableParallelism } from 'os';
-import { Assert, GetLogger, type GraphicsBuildImageResource, type ImageBoundingBox, type Size } from 'pandora-common';
+import { Assert, AssertNever, GetLogger, type GraphicsBuildImageResource, type ImageBoundingBox, type Size } from 'pandora-common';
 import { basename, join } from 'path';
 import sharp, { type AvifOptions, type Sharp } from 'sharp';
-import { GENERATE_AVIF } from '../config.ts';
+import { BUILD_FOR_TEST, GENERATE_AVIF } from '../config.ts';
 import { AssetSourcePath } from './context.ts';
 import { WatchFile } from './watch.ts';
 
@@ -54,15 +54,13 @@ export abstract class Resource {
 	public readonly baseName: string;
 	public readonly extension: string;
 
-	public readonly size: number;
 	public readonly hash: string;
 	private _processes: (() => Promise<void>)[] = [];
 
-	constructor(resultName: string, size: number, hash: string) {
+	constructor(resultName: string, hash: string) {
 		this.resultName = resultName;
 		this.baseName = resultName.replace(/\.[^.]*$/, '');
 		this.extension = resultName.replace(/^.*\.([^.]+)$/, '$1');
-		this.size = size;
 		this.hash = hash;
 		resources.push(this);
 	}
@@ -76,9 +74,15 @@ export abstract class Resource {
 	}
 }
 
-export interface IImageResource extends Resource, GraphicsBuildImageResource {
-	loadImageSharp(): Sharp | Promise<Sharp>;
+export interface ImageProvider {
+	readonly baseName: string;
+	readonly extension: string;
+	readonly hash: string;
 
+	loadImageSharp(): Sharp | Promise<Sharp>;
+}
+
+export interface IImageResource extends Resource, GraphicsBuildImageResource, ImageProvider {
 	addCutImageRelative(left: number, top: number, right: number, bottom: number): IImageResource;
 	addResizedImage(maxWidth: number, maxHeight: number, suffix: string): IImageResource;
 	addDownscaledImage(resolution: number): IImageResource;
@@ -86,6 +90,7 @@ export interface IImageResource extends Resource, GraphicsBuildImageResource {
 
 class FileResource extends Resource {
 	protected readonly sourcePath: string;
+	public readonly size: number;
 
 	constructor(path: string) {
 		const sourcePath = join(AssetSourcePath, path);
@@ -98,9 +103,10 @@ class FileResource extends Resource {
 		const size = GetResourceFileSize(sourcePath);
 		const resultName = basename(sourcePath).replace(/(?=(?:\.[^.]*)?$)/, `_${hash}`);
 
-		super(resultName, size, hash);
+		super(resultName, hash);
 
 		this.sourcePath = sourcePath;
+		this.size = size;
 
 		WatchFile(sourcePath);
 
@@ -130,7 +136,7 @@ class InlineResource extends Resource {
 	private readonly value: Buffer;
 
 	constructor(resultName: string, hash: string, value: Buffer) {
-		super(resultName, value.byteLength, hash);
+		super(resultName, hash);
 		this.value = value;
 		this.addProcess(() => this._process());
 	}
@@ -330,11 +336,11 @@ class ImageResource extends FileResource implements IImageResource {
 }
 
 class GeneratedImageResource extends Resource implements IImageResource {
-	private readonly _baseImage: IImageResource;
+	private readonly _baseImage: ImageProvider;
 	private readonly _generator: SharpImageGenerator;
 
-	constructor(baseImage: IImageResource, suffix: string, generator: SharpImageGenerator) {
-		super(baseImage.baseName + suffix + '.' + baseImage.extension, baseImage.size, baseImage.hash);
+	constructor(baseImage: ImageProvider, suffix: string, generator: SharpImageGenerator) {
+		super(baseImage.baseName + suffix + '.' + baseImage.extension, baseImage.hash);
 		this._baseImage = baseImage;
 		this._generator = generator;
 
@@ -443,7 +449,7 @@ export function DefineResourceInline(name: string, value: string | Buffer, resul
 	return resource;
 }
 
-function CheckMaxSize(resource: Resource, name: string, category: ImageCategory) {
+function CheckMaxSize(resource: FileResource, name: string, category: ImageCategory) {
 	const maxBytes = MAX_SIZES[category];
 	if (resource.size > maxBytes) {
 		let limitSize = maxBytes;
@@ -461,7 +467,46 @@ export function DefineImageResource(name: string, category: ImageCategory, expec
 		throw new Error(`Resource ${name} is not a ${expectedFormat.toUpperCase()} file.`);
 	}
 
-	const resource = new ImageResource(name, category);
+	let resource: IImageResource;
+
+	if (BUILD_FOR_TEST) {
+		const sourcePath = join(AssetSourcePath, name);
+
+		if (!statSync(sourcePath).isFile()) {
+			throw new Error(`Resource ${name} not found (looking for '${sourcePath}')`);
+		}
+
+		const hash = GetResourceFileHash(sourcePath);
+		const resultName = basename(sourcePath).replace(/(?=(?:\.[^.]*)?$)/, `_${hash}`);
+
+		WatchFile(sourcePath);
+
+		const provider: ImageProvider = {
+			baseName: resultName.replace(/\.[^.]*$/, ''),
+			extension: resultName.replace(/^.*\.([^.]+)$/, '$1'),
+			hash,
+			loadImageSharp() {
+				if (expectedFormat === 'png') {
+					return sharp(sourcePath)
+						.gamma()
+						.greyscale()
+						.toColourspace('b-w')
+						.toFormat('png', { compressionLevel: 9 });
+				} else if (expectedFormat === 'jpg') {
+					return sharp(sourcePath)
+						.gamma()
+						.greyscale()
+						.toColourspace('b-w')
+						.toFormat('jpg', { quality: 40 });
+				}
+				AssertNever(expectedFormat);
+			},
+		};
+
+		resource = new GeneratedImageResource(provider, '', (s) => s);
+	} else {
+		resource = new ImageResource(name, category);
+	}
 
 	if (category === 'preview') {
 		resource.addSizeCheck(PREVIEW_SIZE, PREVIEW_SIZE);

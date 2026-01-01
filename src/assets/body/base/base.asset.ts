@@ -3,6 +3,7 @@ import { ItemInteractionType } from 'pandora-common';
 DefineBodypart({
 	name: 'Base Body',
 	bodypart: 'base',
+	useForTesting: true,
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: {

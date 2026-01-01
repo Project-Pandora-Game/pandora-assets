@@ -5,6 +5,7 @@ const { colorization, modules } = CreateHairColor(false);
 DefineBodypart({
 	name: 'Female Sex 1',
 	bodypart: 'sex',
+	useForTesting: true,
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: {

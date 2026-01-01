@@ -1,6 +1,7 @@
 import { freeze } from 'immer';
 import { cloneDeep, omit, pick } from 'lodash-es';
 import { AssetId, GetLogger, LockAssetDefinition } from 'pandora-common';
+import { BUILD_FOR_TEST } from '../config.ts';
 import { AssetDatabase } from './assetDatabase.ts';
 import { DefaultId, GetAssetRepositoryPath } from './context.ts';
 import { RegisterImportContextProcess } from './importContext.ts';
@@ -22,7 +23,13 @@ export type LockAssetDefinitionFallthroughProperties = typeof LOCK_DEFINITION_FA
 
 export function GlobalDefineLockAsset(def: IntermediateLockAssetDefinition): IntermediateLockAssetDefinition {
 	freeze(def, true);
-	RegisterImportContextProcess(() => GlobalDefineLockAssetProcess(cloneDeep(def)));
+
+	if (BUILD_FOR_TEST && def.useForTesting !== true) {
+		// Do not use this asset when building for test
+	} else {
+		RegisterImportContextProcess(() => GlobalDefineLockAssetProcess(cloneDeep(def)));
+	}
+
 	return def;
 }
 

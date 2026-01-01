@@ -1,6 +1,7 @@
 /.idea
 /dist
 /out
+/out-for-test*
 /node_modules
 /coverage
 /.env
