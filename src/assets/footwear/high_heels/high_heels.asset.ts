@@ -127,7 +127,7 @@ DefineAsset({
 			{
 				source: 'Self-Made',
 				copyrightHolder: 'ClaudiaMia',
-				editedBy: 'ClaudiaMia',
+				editedBy: 'ClaudiaMia, Sandrine',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
