@@ -39,6 +39,25 @@ DefineAsset({
 				},
 			},
 		},
+		shoeDesign: {
+			type: 'typed',
+			name: 'Design',
+			variants: [
+				{
+					id: 'heel',
+					name: 'Pumps',
+					default: true,
+				},
+				{
+					id: 'sandal',
+					name: 'Sandal',
+				},
+				{
+					id: 'peepToe',
+					name: 'Peep toe',
+				},
+			],
+		},
 		heelLength: {
 			type: 'typed',
 			name: 'Heel Length',

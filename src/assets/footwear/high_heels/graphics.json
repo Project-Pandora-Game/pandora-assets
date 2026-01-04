@@ -91,22 +91,58 @@
 				{
 					"type": "typedModule",
 					"module": "heelType"
+				},
+				{
+					"type": "typedModule",
+					"module": "shoeDesign"
 				}
 			],
 			"imageMap": {
-				"front:noStrap": [
+				"front:noStrap:heel": [
 					"heels.png",
 					""
 				],
-				"front:strap": [
+				"front:noStrap:sandal": [
+					"sandals.png",
+					""
+				],
+				"front:noStrap:peepToe": [
+					"peep_toes.png",
+					""
+				],
+				"front:strap:heel": [
 					"heels.png",
 					"heels_straps.png"
 				],
-				"back:noStrap": [
+				"front:strap:sandal": [
+					"sandals.png",
+					"heels_straps.png"
+				],
+				"front:strap:peepToe": [
+					"peep_toes.png",
+					"heels_straps.png"
+				],
+				"back:noStrap:heel": [
 					"",
 					""
 				],
-				"back:strap": [
+				"back:noStrap:sandal": [
+					"",
+					""
+				],
+				"back:noStrap:peepToe": [
+					"",
+					""
+				],
+				"back:strap:heel": [
+					"",
+					""
+				],
+				"back:strap:sandal": [
+					"",
+					""
+				],
+				"back:strap:peepToe": [
 					"",
 					""
 				]
@@ -264,6 +300,43 @@
 							]
 						]
 					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "soles front",
+			"points": "body",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"body",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "soles",
+					"colorizationKey": "soles"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "shoeDesign"
+				}
+			],
+			"imageMap": {
+				"heel": [
+					""
+				],
+				"sandal": [
+					"heels_soles_front.png"
+				],
+				"peepToe": [
+					"heels_soles_front.png"
 				]
 			}
 		}
