@@ -39,6 +39,25 @@ DefineAsset({
 				},
 			},
 		},
+		shoeDesign: {
+			type: 'typed',
+			name: 'Design',
+			variants: [
+				{
+					id: 'heel',
+					name: 'Pumps',
+					default: true,
+				},
+				{
+					id: 'sandal',
+					name: 'High heeled sandal',
+				},
+				{
+					id: 'peepToe',
+					name: 'Peep toe',
+				},
+			],
+		},
 		heelLength: {
 			type: 'typed',
 			name: 'Heel Length',
@@ -101,15 +120,21 @@ DefineAsset({
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-		credits: ['ClaudiaMia'],
+		credits: ['ClaudiaMia', 'Sandrine'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
 				source: 'Self-Made',
 				copyrightHolder: 'ClaudiaMia',
-				editedBy: 'ClaudiaMia',
+				editedBy: 'ClaudiaMia, Sandrine',
 				license: 'Pandora-Use-Only-v1-or-later',
+			},
+			{
+				part: 'Sandal & Peep toe',
+				source: 'Self-Made',
+				copyrightHolder: 'Sandrine',
+				license: 'Pandora-Use-Only-NoModify-v1-or-later',
 			},
 		],
 	},
