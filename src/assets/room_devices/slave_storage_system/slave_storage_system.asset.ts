@@ -127,19 +127,6 @@ DefineRoomDeviceAsset({
 						stateFlags: {
 							provides: ['gagged'],
 						},
-						slotProperties: {
-							inside: {
-								effects: {
-									lipsTouch: 9,
-									jawMove: 9,
-									tongueRoof: 7,
-									mouthBreath: 6,
-									throatBreath: 4,
-									coherency: 7,
-									stimulus: 6,
-								},
-							},
-						},
 					},
 				},
 			],
@@ -274,6 +261,15 @@ DefineRoomDeviceAsset({
 							covers: [
 								'Mouth_item',
 							],
+						},
+						effects: {
+							lipsTouch: 9,
+							jawMove: 9,
+							tongueRoof: 7,
+							mouthBreath: 6,
+							throatBreath: 4,
+							coherency: 7,
+							stimulus: 6,
 						},
 					},
 				},
