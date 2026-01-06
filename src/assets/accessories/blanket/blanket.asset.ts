@@ -14,11 +14,6 @@ DefineAsset({
 	},
 	// size:350, y:375, centered
 	preview: 'preview.png',
-	attributes: {
-		provides: [
-			'Accessory',
-		],
-	},
 	modules: {
 		state: {
 			type: 'typed',
@@ -42,6 +37,25 @@ DefineAsset({
 								leg_l: [[2, 6]],
 								leg_r: [[2, 6]],
 							},
+							legs: {
+								pose: 'standing',
+							},
+						},
+						attributes: {
+							provides: [
+								'Hand_cover',
+								'Anus_cover',
+								'Vulva_cover',
+								'Breast_cover',
+							],
+							hides: [
+								'Clothing_lower',
+								'Hand_item',
+								'Handheld',
+								'Restraint_arms',
+								'Restraint_legs',
+								'Restraint_torso',
+							],
 						},
 					},
 				},
@@ -60,6 +74,9 @@ DefineAsset({
 								elbow_l: [[-12, 16]],
 								leg_l: [[2, 6]],
 								leg_r: [[2, 6]],
+							},
+							legs: {
+								pose: 'standing',
 							},
 						},
 						attributes: {

@@ -103,6 +103,9 @@ DefineAsset({
 		armsOrder: {
 			upper: 'left',
 		},
+		legs: {
+			pose: 'standing',
+		},
 	},
 	effects: {
 		blockHands: true,
