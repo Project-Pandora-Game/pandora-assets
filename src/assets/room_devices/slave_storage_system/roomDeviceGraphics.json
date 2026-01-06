@@ -1,0 +1,752 @@
+{
+	"layers": [
+		{
+			"x": -250,
+			"y": -850,
+			"width": 500,
+			"height": 850,
+			"type": "sprite",
+			"colorizationKey": "suitcase_background",
+			"image": "suitcase_bottom.png"
+		},
+		{
+			"x": -250,
+			"y": -850,
+			"width": 500,
+			"height": 850,
+			"type": "sprite",
+			"colorizationKey": "belts_buckles",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "suitcase_belts_anchor_spread.png",
+					"condition": [
+						[
+							{
+								"module": "restraints",
+								"operator": "!=",
+								"value": "filler"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"x": -250,
+			"y": -850,
+			"width": 500,
+			"height": 850,
+			"type": "sprite",
+			"colorizationKey": "filler",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "suitcase_filler_foam_spread.png",
+					"condition": [
+						[
+							{
+								"module": "filler",
+								"operator": "=",
+								"value": "foam"
+							},
+							{
+								"module": "restraints",
+								"operator": "!=",
+								"value": "belts"
+							}
+						]
+					]
+				},
+				{
+					"image": "suitcase_filler_spread.png",
+					"condition": [
+						[
+							{
+								"module": "restraints",
+								"operator": "!=",
+								"value": "belts"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"x": -250,
+			"y": -850,
+			"width": 520,
+			"height": 850,
+			"type": "sprite",
+			"colorizationKey": "suitcase",
+			"image": "suitcase_frame.png"
+		},
+		{
+			"type": "slot",
+			"slot": "inside",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": -140,
+				"relativeScale": 1
+			}
+		},
+		{
+			"x": -610,
+			"y": -950,
+			"width": 354,
+			"height": 1050,
+			"type": "sprite",
+			"colorizationKey": "suitcase_background",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "suitcase_door_bottom_glass_window.png",
+					"condition": [
+						[
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "open"
+							},
+							{
+								"module": "door_window",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"x": -610,
+			"y": -950,
+			"width": 354,
+			"height": 1050,
+			"type": "sprite",
+			"colorizationKey": "suitcase_background",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "suitcase_door_bottom_translucent.png",
+					"condition": [
+						[
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "open"
+							},
+							{
+								"module": "door_window",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				},
+				{
+					"image": "suitcase_door_bottom.png",
+					"condition": [
+						[
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"x": -610,
+			"y": -950,
+			"width": 354,
+			"height": 1050,
+			"type": "sprite",
+			"colorizationKey": "filler",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "suitcase_side_filler_spread.png",
+					"condition": [
+						[
+							{
+								"module": "restraints",
+								"operator": "!=",
+								"value": "belts"
+							},
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"x": -610,
+			"y": -950,
+			"width": 354,
+			"height": 1050,
+			"type": "sprite",
+			"colorizationKey": "dildo",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "suitcase_door_breasts_stimulator.png",
+					"condition": [
+						[
+							{
+								"module": "breast",
+								"operator": "=",
+								"value": "yes"
+							},
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"x": -610,
+			"y": -950,
+			"width": 354,
+			"height": 1050,
+			"type": "sprite",
+			"colorizationKey": "dildo",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "suitcase_door_penis_stimulator.png",
+					"condition": [
+						[
+							{
+								"module": "toys",
+								"operator": "=",
+								"value": "penis_stimulator"
+							},
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"x": -610,
+			"y": -950,
+			"width": 354,
+			"height": 1050,
+			"type": "sprite",
+			"colorizationKey": "filler",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "suitcase_door_filler_foam_spread.png",
+					"condition": [
+						[
+							{
+								"module": "restraints",
+								"operator": "!=",
+								"value": "belts"
+							},
+							{
+								"module": "filler",
+								"operator": "=",
+								"value": "foam"
+							},
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				},
+				{
+					"image": "suitcase_door_filler_spread.png",
+					"condition": [
+						[
+							{
+								"module": "restraints",
+								"operator": "!=",
+								"value": "belts"
+							},
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"x": -610,
+			"y": -950,
+			"width": 354,
+			"height": 1050,
+			"type": "sprite",
+			"colorizationKey": "suitcase",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "suitcase_door_frame.png",
+					"condition": [
+						[
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"x": -610,
+			"y": -950,
+			"width": 354,
+			"height": 1050,
+			"type": "sprite",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "suitcase_door_breathing_rack.png",
+					"condition": [
+						[
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"x": -610,
+			"y": -950,
+			"width": 354,
+			"height": 1050,
+			"type": "sprite",
+			"colorizationKey": "dildo",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "suitcase_door_gag_dildo.png",
+					"condition": [
+						[
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "open"
+							},
+							{
+								"module": "gag",
+								"operator": "=",
+								"value": "dildo"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"x": -610,
+			"y": -950,
+			"width": 354,
+			"height": 1050,
+			"type": "sprite",
+			"colorizationKey": "dildo",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "suitcase_door_dildo.png",
+					"condition": [
+						[
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "open"
+							},
+							{
+								"module": "toys",
+								"operator": "=",
+								"value": "dildo"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"x": -610,
+			"y": -950,
+			"width": 354,
+			"height": 1050,
+			"type": "sprite",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "suitcase_door_latch.png",
+					"condition": [
+						[
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"x": -250,
+			"y": -850,
+			"width": 520,
+			"height": 850,
+			"type": "sprite",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "suitcase_door_glass_window.png",
+					"condition": [
+						[
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "closed"
+							},
+							{
+								"module": "door_window",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"x": -610,
+			"y": -950,
+			"width": 354,
+			"height": 1050,
+			"type": "sprite",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "suitcase_door_latch.png",
+					"condition": [
+						[
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"x": -250,
+			"y": -850,
+			"width": 520,
+			"height": 850,
+			"type": "sprite",
+			"colorizationKey": "suitcase",
+			"image": "",
+			"imageOverrides": [
+				{
+					"image": "suitcase_door_front_translucent.png",
+					"condition": [
+						[
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "closed"
+							},
+							{
+								"module": "door_window",
+								"operator": "=",
+								"value": "open"
+							}
+						]
+					]
+				},
+				{
+					"image": "suitcase_door_front.png",
+					"condition": [
+						[
+							{
+								"module": "door",
+								"operator": "=",
+								"value": "closed"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"x": -256,
+			"y": -850,
+			"width": 6,
+			"height": 850,
+			"type": "sprite",
+			"image": "suitcase_hinges.png"
+		}
+	],
+	"slots": {
+		"inside": {
+			"layers": [
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Belts Body",
+					"priority": "ABOVE_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "belts",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "inside_belts_body_4.png",
+								"condition": [
+									[
+										{
+											"bone": "waist",
+											"operator": ">=",
+											"value": 60
+										},
+										{
+											"module": "restraints",
+											"operator": "!=",
+											"value": "filler"
+										}
+									]
+								]
+							},
+							{
+								"image": "inside_belts_body_3.png",
+								"condition": [
+									[
+										{
+											"bone": "waist",
+											"operator": ">=",
+											"value": -80
+										},
+										{
+											"module": "restraints",
+											"operator": "!=",
+											"value": "filler"
+										}
+									]
+								]
+							},
+							{
+								"image": "inside_belts_body_2.png",
+								"condition": [
+									[
+										{
+											"bone": "waist",
+											"operator": ">=",
+											"value": -160
+										},
+										{
+											"module": "restraints",
+											"operator": "!=",
+											"value": "filler"
+										}
+									]
+								]
+							},
+							{
+								"image": "inside_belts_body_1.png",
+								"condition": [
+									[
+										{
+											"module": "restraints",
+											"operator": "!=",
+											"value": "filler"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Belts Arms",
+					"priority": "ABOVE_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "belts",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "inside_belts_arms_2.png",
+								"condition": [
+									[
+										{
+											"bone": "arm_width",
+											"operator": ">=",
+											"value": 0
+										},
+										{
+											"module": "restraints",
+											"operator": "!=",
+											"value": "filler"
+										}
+									]
+								]
+							},
+							{
+								"image": "inside_belts_arms_1.png",
+								"condition": [
+									[
+										{
+											"module": "restraints",
+											"operator": "!=",
+											"value": "filler"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Belts Legs Spread",
+					"priority": "ABOVE_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "belts",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "inside_belts_spread_legs_2.png",
+								"condition": [
+									[
+										{
+											"bone": "leg_width",
+											"operator": ">=",
+											"value": 40
+										},
+										{
+											"module": "restraints",
+											"operator": "!=",
+											"value": "filler"
+										}
+									]
+								]
+							},
+							{
+								"image": "inside_belts_spread_legs_1.png",
+								"condition": [
+									[
+										{
+											"module": "restraints",
+											"operator": "!=",
+											"value": "filler"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Belts",
+					"priority": "ABOVE_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "belts_buckles",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "inside_belts_buckles_spread.png",
+								"condition": [
+									[
+										{
+											"module": "restraints",
+											"operator": "!=",
+											"value": "filler"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Belts Details",
+					"priority": "ABOVE_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "belts",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "inside_belts_details_spread.png",
+								"condition": [
+									[
+										{
+											"module": "restraints",
+											"operator": "!=",
+											"value": "filler"
+										}
+									]
+								]
+							}
+						]
+					}
+				}
+			]
+		}
+	}
+}
