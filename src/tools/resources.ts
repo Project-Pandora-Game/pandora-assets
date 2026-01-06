@@ -299,7 +299,7 @@ class ImageResource extends FileResource implements IImageResource {
 		this.addProcess(async () => {
 			const { width, height } = await this.loadImageSharp().metadata();
 			if (width !== exactWidth || height !== exactHeight) {
-				logger.alert(`[FUTURE WARNING] Image '${this.sourcePath}' has size ${width}x${height}, expected ${exactWidth}x${exactHeight}.`);
+				logger.warning(`Image '${this.sourcePath}' has size ${width}x${height}, expected ${exactWidth}x${exactHeight}.`);
 			}
 		});
 	}
