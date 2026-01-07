@@ -113,7 +113,7 @@ DefineRoomDeviceAsset({
 		},
 		anchor_rear: {
 			type: 'typed',
-			name: 'Rear spot',
+			name: 'Lying spot',
 			staticConfig: { slotName: 'character_slot_inside' },
 			variants: [
 				{
@@ -132,7 +132,7 @@ DefineRoomDeviceAsset({
 		},
 		lock_rear: {
 			type: 'lockSlot',
-			name: 'Rear anchor lock',
+			name: 'Lying spot anchor lock',
 			staticConfig: { slotName: 'character_slot_inside' },
 			lockedProperties: {
 				blockModules: ['anchor_rear'],
@@ -140,7 +140,7 @@ DefineRoomDeviceAsset({
 		},
 		anchor_front: {
 			type: 'typed',
-			name: 'Front spot',
+			name: 'Kneeling spot',
 			staticConfig: { slotName: 'character_slot_kneeling' },
 			variants: [
 				{
@@ -159,7 +159,7 @@ DefineRoomDeviceAsset({
 		},
 		lock_front: {
 			type: 'lockSlot',
-			name: 'Front anchor lock',
+			name: 'Kneeling spot anchor lock',
 			staticConfig: { slotName: 'character_slot_kneeling' },
 			lockedProperties: {
 				blockModules: ['anchor_front'],
