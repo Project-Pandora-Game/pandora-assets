@@ -3,7 +3,7 @@
 		{
 			"x": 0,
 			"y": 0,
-			"width": 1528,
+			"width": 1148,
 			"height": 1123,
 			"type": "sprite",
 			"colorizationKey": "inside",
@@ -12,7 +12,7 @@
 		{
 			"x": 0,
 			"y": 0,
-			"width": 1528,
+			"width": 1148,
 			"height": 1123,
 			"type": "sprite",
 			"colorizationKey": "cushion",
@@ -44,7 +44,7 @@
 		{
 			"x": 0,
 			"y": 0,
-			"width": 1528,
+			"width": 1148,
 			"height": 1123,
 			"type": "sprite",
 			"colorizationKey": "outside",
@@ -67,7 +67,7 @@
 		{
 			"x": 0,
 			"y": 0,
-			"width": 1528,
+			"width": 1148,
 			"height": 1123,
 			"type": "sprite",
 			"colorizationKey": "outside",
