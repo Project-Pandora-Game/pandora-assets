@@ -107,13 +107,13 @@
 					""
 				],
 				"doorOpen": [
-					"hut_front_metal_frame_opened.png",
 					"hut_front_metal_bars_opened.png",
+					"hut_front_metal_frame_opened.png",
 					"hut_front_metal_rivets_opened.png"
 				],
 				"doorClosed": [
-					"hut_front_metal_frame_closed.png",
 					"hut_front_metal_bars_closed.png",
+					"hut_front_metal_frame_closed.png",
 					"hut_front_metal_rivets_closed.png"
 				]
 			}
