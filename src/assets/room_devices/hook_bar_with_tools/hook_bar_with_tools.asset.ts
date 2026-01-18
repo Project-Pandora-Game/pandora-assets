@@ -31,6 +31,13 @@ DefineRoomDeviceAsset({
 	preview: 'hookbar_preview.png',
 	slots: {},
 	modules: {
+		content: {
+			type: 'storage',
+			name: 'Items on the hooks',
+			staticConfig: { slotName: null },
+			maxCount: 5,
+			maxAcceptedSize: 'medium',
+		},
 		crop: {
 			type: 'typed',
 			name: 'Long Crop',
@@ -112,6 +119,7 @@ DefineRoomDeviceAsset({
 			],
 		},
 	},
+	storageModule: 'content',
 	pivot: {
 		x: 420,
 		y: 1040,
