@@ -8,6 +8,10 @@ DefineAsset({
 			name: 'Pants',
 			default: '#7396B3',
 		},
+		inside: {
+			name: 'Fabric reverse side',
+			default: '#c2cfdaff',
+		},
 		button: {
 			name: 'Button',
 			default: '#666666',

@@ -138,7 +138,8 @@
 			"automeshTemplate": "aboveBody",
 			"graphicalLayers": [
 				{
-					"name": ""
+					"name": "",
+					"colorizationKey": "inside"
 				}
 			],
 			"variables": [
@@ -167,7 +168,8 @@
 			"automeshTemplate": "belowBody",
 			"graphicalLayers": [
 				{
-					"name": ""
+					"name": "",
+					"colorizationKey": "inside"
 				}
 			],
 			"variables": [
