@@ -30,6 +30,7 @@ const PERSONAL_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	'name',
 	'wearable',
 	'allowRandomizerUsage',
+	'roomDeployment',
 	'size',
 	'chat',
 	'posePresets',
