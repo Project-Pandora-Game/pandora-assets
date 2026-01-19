@@ -6,109 +6,40 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "Paper front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "Present",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "color_1",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "present_christmas_paper.png",
-						"condition": [
-							[
-								{
-									"module": "variant",
-									"operator": "=",
-									"value": "christmas"
-								}
-							]
-						]
-					},
-					{
-						"image": "present_plain_paper.png",
-						"condition": [
-							[
-								{
-									"module": "variant",
-									"operator": "=",
-									"value": "plain"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Bow front",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "color_2",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "present_christmas_bow.png",
-						"condition": [
-							[
-								{
-									"module": "variant",
-									"operator": "=",
-									"value": "christmas"
-								}
-							]
-						]
-					},
-					{
-						"image": "present_plain_bow.png",
-						"condition": [
-							[
-								{
-									"module": "variant",
-									"operator": "=",
-									"value": "plain"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Deco front",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "color_3",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "present_christmas_deco.png",
-						"condition": [
-							[
-								{
-									"module": "variant",
-									"operator": "=",
-									"value": "christmas"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Paper front",
+					"colorizationKey": "color_1"
+				},
+				{
+					"name": "Bow front",
+					"colorizationKey": "color_2"
+				},
+				{
+					"name": "Deco front",
+					"colorizationKey": "color_3"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "variant"
+				}
+			],
+			"imageMap": {
+				"christmas": [
+					"present_christmas_paper.png",
+					"present_christmas_bow.png",
+					"present_christmas_deco.png"
+				],
+				"plain": [
+					"present_plain_paper.png",
+					"present_plain_bow.png",
+					""
 				]
 			}
 		}
