@@ -6,27 +6,28 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front hair",
-			"priority": "FRONT_HAIR",
+			"type": "autoMesh",
+			"name": "Front Hair",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "hair",
-			"image": {
-				"image": "hair_13_work_v2-50.png",
-				"overrides": [
-					{
-						"image": "hair_13_work_v2-50_r.png",
-						"condition": [
-							[
-								{
-									"module": "brushed_to",
-									"operator": "=",
-									"value": "right"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "frontHair",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "hair"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "brushed_to"
+				}
+			],
+			"imageMap": {
+				"right": [
+					"front_hair_13_right.png"
+				],
+				"left": [
+					"front_hair_13_left.png"
 				]
 			}
 		}
