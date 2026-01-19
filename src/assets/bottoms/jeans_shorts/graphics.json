@@ -7,6 +7,31 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
+			"name": "Jeans front",
+			"points": "body",
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "pants"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"Jeans_Shorts.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
 			"name": "Jeans back",
 			"points": "body",
 			"automeshTemplate": "belowBody",
@@ -32,22 +57,57 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "Jeans front",
-			"points": "body",
+			"name": "Belt Front",
+			"points": "static",
 			"automeshTemplate": "aboveBody",
-			"disabledTemplateParts": [
-				"arms"
-			],
 			"graphicalLayers": [
 				{
 					"name": "",
-					"colorizationKey": "pants"
+					"colorizationKey": "belt"
 				}
 			],
-			"variables": [],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "type"
+				}
+			],
 			"imageMap": {
-				"": [
-					"Jeans_Shorts.png"
+				"none": [
+					""
+				],
+				"belted": [
+					"Jeans_Shorts_Belt_Front.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Belt Back",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "belt"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "type"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"belted": [
+					"Jeans_Shorts_Belt_Back.png"
 				]
 			}
 		},
@@ -65,6 +125,64 @@
 			"image": {
 				"image": "Button.png",
 				"overrides": []
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Folded Ends Front",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": ""
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "folded_ends"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"folded": [
+					"Jeans_Shorts_Fold.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Folded Ends Back",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": ""
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "folded_ends"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"folded": [
+					"Jeans_Shorts_Fold.png"
+				]
 			}
 		}
 	]
