@@ -230,6 +230,12 @@
 				],
 				"long": [
 					"sleeves_long.png"
+				],
+				"cap": [
+					"sleeves_cap.png"
+				],
+				"three-quarter": [
+					"sleeves_three_quarter.png"
 				]
 			}
 		},
@@ -266,6 +272,90 @@
 				],
 				"long": [
 					"sleeves_long.png"
+				],
+				"cap": [
+					"sleeves_cap.png"
+				],
+				"three-quarter": [
+					"sleeves_three_quarter.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Neckline Front",
+			"points": "body",
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Neckline",
+					"colorizationKey": "shirt"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "neckline"
+				}
+			],
+			"imageMap": {
+				"jewel": [
+					"neckline_jewel.png"
+				],
+				"boat": [
+					"neckline_boat.png"
+				],
+				"v-neck": [
+					"neckline_vneck.png"
+				],
+				"round": [
+					"neckline_round.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Neckline Back",
+			"points": "body",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Neckline",
+					"colorizationKey": "shirt"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "neckline"
+				}
+			],
+			"imageMap": {
+				"jewel": [
+					"neckline_jewel.png"
+				],
+				"round": [
+					"neckline_round.png"
+				],
+				"boat": [
+					"neckline_boat.png"
+				],
+				"v-neck": [
+					"neckline_jewel.png"
 				]
 			}
 		}
