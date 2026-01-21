@@ -26,7 +26,7 @@ const bodypart = DefineBodypart({
 		},
 	},
 	ownership: {
-		responsibleContributor: 'Oblique <obliquebc@hotmail.com>',
+		responsibleContributor: 'ObliqueBC <obliquebc@hotmail.com>',
 		credits: ['Oblique'],
 		modificationPolicy: 'Fixes and New uses, otherwise ask',
 		reusePolicy: 'Ask first',
