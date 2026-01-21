@@ -9,6 +9,7 @@ import {
 	AssetSourceGraphicsDefinitionSchema,
 	GetLogger,
 	LoadAssetLayer,
+	LoadAssetRoomDeviceLayer,
 	Logger,
 	ModuleNameSchema,
 	SCHEME_OVERRIDE,
@@ -16,16 +17,15 @@ import {
 	type AssetId,
 	type AssetSourceGraphicsDefinition,
 	type AssetSourceGraphicsInfo,
-	type GraphicsBuildContext,
 	type GraphicsBuildContextAssetData,
+	type GraphicsBuildContextRoomDeviceData,
+	type Writable,
 } from 'pandora-common';
 import { basename, relative } from 'path';
 import * as z from 'zod';
 import { boneDefinition } from '../bones.ts';
-import { IS_PRODUCTION_BUILD, OPTIMIZE_TEXTURES, SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../config.ts';
-import { GENERATED_RESOLUTIONS } from './graphicsConstants.ts';
-import { GraphicsDatabase } from './graphicsDatabase.ts';
-import { LoadLayerImageResource } from './load_helpers/layer_common.ts';
+import { SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../config.ts';
+import { MakeGraphicsBuildContext } from './load_helpers/graphicsBuildContext.ts';
 import { AssetGraphicsValidate } from './validation/assetGraphics.ts';
 import { WatchFile } from './watch.ts';
 
@@ -115,35 +115,45 @@ export async function LoadAssetGraphics(
 ): Promise<{ graphics: Immutable<AssetGraphicsDefinition>; originalImagesMap: Record<string, string>; }> {
 	const originalImagesMap: Record<string, string> = {};
 
-	const assetLoadContext: GraphicsBuildContext<Immutable<GraphicsBuildContextAssetData>> = {
-		runImageBasedChecks: IS_PRODUCTION_BUILD || OPTIMIZE_TEXTURES,
-		generateOptimizedTextures: OPTIMIZE_TEXTURES,
-		generateResolutions: GENERATED_RESOLUTIONS,
-		getBones() {
-			return Array.from(AssetManager.loadBones(boneDefinition).values());
-		},
-		getPointTemplate(name) {
-			return GraphicsDatabase.getPointTemplate(name);
-		},
-		bufferToBase64(buffer) {
-			return Buffer.from(buffer).toString('base64');
-		},
-		loadImage(image) {
-			const resource = LoadLayerImageResource(image);
-			originalImagesMap[image] = resource.resultName;
-			return resource;
-		},
+	const assetLoadContext = MakeGraphicsBuildContext<Immutable<GraphicsBuildContextAssetData>>(
 		builtAssetData,
-		assetManager: buildAssetManager,
-	};
+		buildAssetManager,
+		'asset',
+		originalImagesMap,
+	);
 
 	const layers = (await Promise.all(source.layers.map((l) => LoadAssetLayer(l, assetLoadContext, logger)))).flat();
 
+	const graphics: Writable<Immutable<AssetGraphicsDefinition>> = {
+		type: 'worn',
+		layers,
+	};
+
+	const roomLayers = source.roomLayers;
+	if (roomLayers != null) {
+		if (!builtAssetData.supportsInRoomGraphics) {
+			logger.warning('Room graphics is defined, but asset does not support room deployment');
+		}
+
+		const roomLoadContext = MakeGraphicsBuildContext<Immutable<GraphicsBuildContextRoomDeviceData>>(
+			{
+				modules: builtAssetData.modules,
+				colorizationKeys: builtAssetData.colorizationKeys,
+				slotIds: new Set(),
+			},
+			buildAssetManager,
+			'roomDevice',
+			originalImagesMap,
+		);
+		const roomLayersLogger = logger.prefixMessages(`Room graphics:\n\t\t`);
+
+		graphics.roomLayers = (await Promise.all(roomLayers.map((l) => LoadAssetRoomDeviceLayer(l, roomLoadContext, roomLayersLogger)))).flat();
+	} else if (builtAssetData.supportsInRoomGraphics) {
+		logger.warning('Asset supports room deployment, but in-room graphics are not defined');
+	}
+
 	return {
-		graphics: {
-			type: 'worn',
-			layers,
-		},
+		graphics,
 		originalImagesMap,
 	};
 }

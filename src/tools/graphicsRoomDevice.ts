@@ -17,17 +17,14 @@ import {
 	type AssetId,
 	type AssetSourceGraphicsInfo,
 	type AssetSourceGraphicsRoomDeviceDefinition,
-	type GraphicsBuildContext,
 	type GraphicsBuildContextRoomDeviceData,
 } from 'pandora-common';
 import { basename, relative } from 'path';
 import * as z from 'zod';
 import { boneDefinition } from '../bones.ts';
-import { IS_PRODUCTION_BUILD, OPTIMIZE_TEXTURES, SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../config.ts';
+import { SRC_DIR, TRY_AUTOCORRECT_WARNINGS } from '../config.ts';
 import { LoadAssetGraphics } from './graphics.ts';
-import { GENERATED_RESOLUTIONS } from './graphicsConstants.ts';
-import { GraphicsDatabase } from './graphicsDatabase.ts';
-import { DefineImageResource } from './resources.ts';
+import { MakeGraphicsBuildContext } from './load_helpers/graphicsBuildContext.ts';
 import { WatchFile } from './watch.ts';
 
 export type RoomDeviceAssetGraphicsLoadResult = {
@@ -109,27 +106,12 @@ export async function LoadRoomDeviceAssetGraphics(
 ): Promise<RoomDeviceAssetGraphicsLoadResult> {
 	const originalImagesMap: Record<string, string> = {};
 
-	const assetLoadContext: GraphicsBuildContext<Immutable<GraphicsBuildContextRoomDeviceData>> = {
-		runImageBasedChecks: IS_PRODUCTION_BUILD || OPTIMIZE_TEXTURES,
-		generateOptimizedTextures: OPTIMIZE_TEXTURES,
-		generateResolutions: GENERATED_RESOLUTIONS,
-		getBones() {
-			return Array.from(AssetManager.loadBones(boneDefinition).values());
-		},
-		getPointTemplate(name) {
-			return GraphicsDatabase.getPointTemplate(name);
-		},
-		bufferToBase64(buffer) {
-			return Buffer.from(buffer).toString('base64');
-		},
-		loadImage(image) {
-			const resource = DefineImageResource(image, 'roomDevice', 'png');
-			originalImagesMap[image] = resource.resultName;
-			return resource;
-		},
+	const assetLoadContext = MakeGraphicsBuildContext<Immutable<GraphicsBuildContextRoomDeviceData>>(
 		builtAssetData,
-		assetManager: buildAssetManager,
-	};
+		buildAssetManager,
+		'roomDevice',
+		originalImagesMap,
+	);
 
 	const layers = (await Promise.all(source.layers.map((l) => LoadAssetRoomDeviceLayer(l, assetLoadContext, logger)))).flat();
 
@@ -145,6 +127,7 @@ export async function LoadRoomDeviceAssetGraphics(
 			{
 				modules: builtAssetData.modules,
 				colorizationKeys: builtAssetData.colorizationKeys,
+				supportsInRoomGraphics: false,
 			},
 			buildAssetManager,
 			slotLogger,

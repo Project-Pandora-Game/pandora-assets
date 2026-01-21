@@ -131,6 +131,7 @@ async function GlobalDefineBodypartProcess(def: IntermediateBodypartAssetDefinit
 		const builtAssetData: Immutable<GraphicsBuildContextAssetData> = {
 			modules: asset.modules,
 			colorizationKeys: new Set(Object.keys(colorization ?? {})),
+			supportsInRoomGraphics: false,
 		};
 
 		const { graphics, graphicsSource } = await LoadAssetGraphicsFile(
