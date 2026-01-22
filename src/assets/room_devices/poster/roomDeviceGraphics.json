@@ -52,6 +52,24 @@
 					"",
 					"",
 					""
+				],
+				"large:NythacorpAdvert": [
+					"t-and-t_background.png",
+					"nythacorp_logo.png",
+					"nythacorp_name.png",
+					"nythacorp_tagline.png"
+				],
+				"medium:NythacorpAdvert": [
+					"",
+					"",
+					"",
+					""
+				],
+				"small:NythacorpAdvert": [
+					"",
+					"",
+					"",
+					""
 				]
 			}
 		},
@@ -103,6 +121,24 @@
 					"t-and-t_worship.png"
 				],
 				"small:TowelAndTowelAdvert": [
+					"",
+					"",
+					"",
+					""
+				],
+				"large:NythacorpAdvert": [
+					"",
+					"",
+					"",
+					""
+				],
+				"medium:NythacorpAdvert": [
+					"t-and-t_background.png",
+					"nythacorp_logo.png",
+					"nythacorp_name.png",
+					"nythacorp_tagline.png"
+				],
+				"small:NythacorpAdvert": [
 					"",
 					"",
 					"",
@@ -162,6 +198,24 @@
 					"t-and-t_towel.png",
 					"t-and-t_slogan.png",
 					"t-and-t_worship.png"
+				],
+				"large:NythacorpAdvert": [
+					"",
+					"",
+					"",
+					""
+				],
+				"medium:NythacorpAdvert": [
+					"",
+					"",
+					"",
+					""
+				],
+				"small:NythacorpAdvert": [
+					"t-and-t_background.png",
+					"nythacorp_logo.png",
+					"nythacorp_name.png",
+					"nythacorp_tagline.png"
 				]
 			}
 		},
