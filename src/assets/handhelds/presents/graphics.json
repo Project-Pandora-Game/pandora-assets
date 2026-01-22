@@ -43,5 +43,47 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -710,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Present",
+			"graphicalLayers": [
+				{
+					"name": "Paper",
+					"colorizationKey": "color_1"
+				},
+				{
+					"name": "Bow",
+					"colorizationKey": "color_2"
+				},
+				{
+					"name": "Deco",
+					"colorizationKey": "color_3"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "variant"
+				}
+			],
+			"imageMap": {
+				"christmas": [
+					"present_christmas_paper.png",
+					"present_christmas_bow.png",
+					"present_christmas_deco.png"
+				],
+				"plain": [
+					"present_plain_paper.png",
+					"present_plain_bow.png",
+					""
+				]
+			}
+		}
 	]
 }
