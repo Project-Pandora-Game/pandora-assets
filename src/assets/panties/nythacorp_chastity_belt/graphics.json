@@ -6,59 +6,32 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "Belt Front",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "Metal",
-			"image": {
-				"image": "belt_front.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Belt Front Lining",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "Lining",
-			"image": {
-				"image": "belt_front_lining.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Front Crotchplate",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "Crotchplate",
-			"image": {
-				"image": "belt_front_covered.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "crotchPlate",
-									"operator": "!=",
-									"value": "covered"
-								}
-							]
-						]
-					}
+			"type": "autoMesh",
+			"name": "Metal Front Horizontal",
+			"points": "body",
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Metal",
+					"colorizationKey": "Metal"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "beltType"
+				}
+			],
+			"imageMap": {
+				"standard": [
+					"metal_front_horizontal.png"
+				],
+				"wire": [
+					""
 				]
 			}
 		},
@@ -67,75 +40,322 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
+			"name": "Metal Front Vertical",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Metal",
+					"colorizationKey": "Metal"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "beltType"
+				}
+			],
+			"imageMap": {
+				"standard": [
+					"metal_front_vertical.png"
+				],
+				"wire": [
+					"metal_front_wire.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Metal Back Horizontal",
+			"points": "body",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Metal",
+					"colorizationKey": "Metal"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "beltType"
+				}
+			],
+			"imageMap": {
+				"standard": [
+					"metal_back_horizontal.png"
+				],
+				"wire": [
+					""
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Metal Back Vertical",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "Metal",
+					"colorizationKey": "Metal"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "beltType"
+				}
+			],
+			"imageMap": {
+				"standard": [
+					"metal_back_vertical.png"
+				],
+				"wire": [
+					"metal_back_wire.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Lining Front Horizontal",
+			"points": "body",
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Lining",
+					"colorizationKey": "Lining"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "beltType"
+				}
+			],
+			"imageMap": {
+				"standard": [
+					"lining_front_horizontal.png"
+				],
+				"wire": [
+					"lining_front_wire_horizontal.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Lining Front Vertical",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Lining",
+					"colorizationKey": "Lining"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "beltType"
+				}
+			],
+			"imageMap": {
+				"standard": [
+					"lining_front_vertical.png"
+				],
+				"wire": [
+					"lining_front_wire_vertical.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Lining Back Horizontal",
+			"points": "body",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Lining",
+					"colorizationKey": "Lining"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "beltType"
+				}
+			],
+			"imageMap": {
+				"standard": [
+					"lining_back_horizontal.png"
+				],
+				"wire": [
+					"lining_back_wire_horizontal.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Lining Back Vertical",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Lining",
+					"colorizationKey": "Lining"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "beltType"
+				}
+			],
+			"imageMap": {
+				"standard": [
+					"lining_back_vertical.png"
+				],
+				"wire": [
+					"lining_back_wire_vertical.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Crotchplate Front",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Crotchplate",
+					"colorizationKey": "Crotchplate"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "crotchPlate"
+				}
+			],
+			"imageMap": {
+				"open": [
+					""
+				],
+				"covered": [
+					"covered_front.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Crotchplate Back",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "Crotchplate",
+					"colorizationKey": "Crotchplate"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "crotchPlate"
+				}
+			],
+			"imageMap": {
+				"open": [
+					""
+				],
+				"covered": [
+					"covered_back.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
 			"name": "Locking Clasp",
-			"priority": "ABOVE_BODY",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "Clasp",
-			"image": {
-				"image": "lockingclasp.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Belt Rear",
-			"priority": "BELOW_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "Metal",
-			"image": {
-				"image": "belt_back.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Belt Rear Lining",
-			"priority": "BELOW_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "Lining",
-			"image": {
-				"image": "belt_rear_lining.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "Rear Crotchplate",
-			"priority": "BELOW_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "Crotchplate",
-			"image": {
-				"image": "belt_rear_covered.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "crotchPlate",
-									"operator": "!=",
-									"value": "covered"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Locking Clasp",
+					"colorizationKey": "Clasp"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "beltType"
+				}
+			],
+			"imageMap": {
+				"standard": [
+					"lockingclasp.png"
+				],
+				"wire": [
+					"lockingclasp_wire.png"
 				]
 			}
 		}

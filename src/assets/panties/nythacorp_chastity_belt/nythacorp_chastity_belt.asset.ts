@@ -1,3 +1,5 @@
+import { ItemInteractionType } from 'pandora-common';
+
 DefineAsset({
 	name: 'Nythacorp Chastity Belt',
 	size: 'medium',
@@ -46,6 +48,22 @@ DefineAsset({
 			lockedProperties: {
 				blockModules: ['crotchPlate'],
 			},
+		},
+		beltType: {
+			type: 'typed',
+			name: 'Belt Type',
+			interactionType: ItemInteractionType.ADD_REMOVE,
+			variants: [
+				{
+					id: 'standard',
+					name: 'Standard',
+					default: true,
+				},
+				{
+					id: 'wire',
+					name: 'Wire',
+				},
+			],
 		},
 		crotchPlate: {
 			type: 'typed',
