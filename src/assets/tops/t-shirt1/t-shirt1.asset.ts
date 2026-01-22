@@ -112,6 +112,15 @@ DefineAsset({
 					},
 				},
 				{
+					id: 'nythacorp',
+					name: 'Nythacorp Logo',
+					properties: {
+						stateFlags: {
+							provides: ['small_print'],
+						},
+					},
+				},
+				{
 					id: 'noPrint',
 					name: 'No Print',
 					properties: {
@@ -225,6 +234,13 @@ DefineAsset({
 				source: 'Self-Made',
 				copyrightHolder: 'Klewdia',
 				editedBy: 'Klewdia',
+				license: 'Pandora-Use-Only-v1-or-later',
+			},
+			{
+				part: 'Nythacorp Logo',
+				source: 'Self-Made',
+				copyrightHolder: 'Nythaleath',
+				editedBy: 'Nythaleath',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
