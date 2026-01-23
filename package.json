@@ -49,12 +49,12 @@
 		"rimraf": "6.1.2",
 		"sharp": "0.34.5",
 		"simple-git": "3.30.0",
-		"zod": "4.3.5"
+		"zod": "4.3.6"
 	},
 	"devDependencies": {
 		"@eslint/js": "9.39.2",
 		"@jest/globals": "30.2.0",
-		"@stylistic/eslint-plugin": "5.7.0",
+		"@stylistic/eslint-plugin": "5.7.1",
 		"@types/delaunator": "5.0.3",
 		"@types/express": "5.0.6",
 		"@types/json-diff": "1.0.3",
