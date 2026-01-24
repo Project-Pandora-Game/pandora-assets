@@ -101,7 +101,7 @@ DefineAsset({
 		actionRemove: 'SOURCE_CHARACTER opened and then removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',
 	},
 	ownership: {
-		responsibleContributor: 'Oblique <obliquebc@hotmail.com',
+		responsibleContributor: 'ObliqueBC <obliquebc@hotmail.com>',
 		credits: ['Oblique'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
