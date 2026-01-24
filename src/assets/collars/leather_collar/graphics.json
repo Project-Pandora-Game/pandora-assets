@@ -227,19 +227,57 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "padlock back",
+			"name": "padlock back body",
 			"points": "static",
 			"automeshTemplate": "belowBody",
 			"graphicalLayers": [
 				{
 					"name": "padlock_b",
-					"colorizationKey": "padlock"
+					"colorizationKey": "padlock_body"
 				}
 			],
-			"variables": [],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "padlockConfig"
+				}
+			],
 			"imageMap": {
-				"": [
-					"back_collar_padlock.png"
+				"padlock_no": [
+					""
+				],
+				"padlock_yes": [
+					"back_collar_padlock_body.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "padlock back shackle",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "padlock_b",
+					"colorizationKey": "padlock_shackle"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "padlockConfig"
+				}
+			],
+			"imageMap": {
+				"padlock_no": [
+					""
+				],
+				"padlock_yes": [
+					"back_collar_padlock_shackle.png"
 				]
 			}
 		}

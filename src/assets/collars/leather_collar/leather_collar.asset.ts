@@ -22,9 +22,13 @@ DefineAsset({
 			name: 'Ring',
 			default: '#DDDDDD',
 		},
-		padlock: {
-			name: 'Padlock',
-			default: '#999999',
+		padlock_body: {
+			name: 'Lock Body',
+			default: '#FFED83',
+		},
+		padlock_shackle: {
+			name: 'Lock Shackle',
+			default: '#FFFFFF',
 		},
 	},
 	// size:150, y:309, centered
@@ -73,6 +77,21 @@ DefineAsset({
 							],
 						},
 					},
+				},
+			],
+		},
+		padlockConfig: {
+			type: 'typed',
+			name: 'Display Padlock',
+			variants: [
+				{
+					id: 'padlock_no',
+					name: 'No',
+					default: true,
+				},
+				{
+					id: 'padlock_yes',
+					name: 'Yes',
 				},
 			],
 		},
