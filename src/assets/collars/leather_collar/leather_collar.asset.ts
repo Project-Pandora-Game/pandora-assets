@@ -55,6 +55,13 @@ DefineAsset({
 				{
 					id: 'ringD',
 					name: 'D-Ring',
+					properties: {
+						attributes: {
+							provides: [
+								'Collar_front_ring',
+							],
+						},
+					},
 				},
 				{
 					id: 'ringsDO',
