@@ -296,5 +296,67 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -1350,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Floor",
+			"graphicalLayers": [
+				{
+					"name": "Sole",
+					"colorizationKey": "sole"
+				},
+				{
+					"name": "Support Bottom",
+					"colorizationKey": "support"
+				},
+				{
+					"name": "Inner",
+					"colorizationKey": "inner"
+				},
+				{
+					"name": "Outer",
+					"colorizationKey": "outer"
+				},
+				{
+					"name": "Support Top",
+					"colorizationKey": "support"
+				},
+				{
+					"name": "Laces",
+					"colorizationKey": "laces"
+				},
+				{
+					"name": "Shine",
+					"colorizationKey": "shine"
+				},
+				{
+					"name": "Belt",
+					"colorizationKey": "belt"
+				},
+				{
+					"name": "Buckle",
+					"colorizationKey": "buckle"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"balletboots_front_sole.png",
+					"balletboots_front_box_bottom.png",
+					"balletboots_front_inner.png",
+					"balletboots_front_outer.png",
+					"balletboots_front_box_top.png",
+					"balletboots_front_laces.png",
+					"balletboots_front_shine.png",
+					"balletboots_belt.png",
+					"balletboots_buckle.png"
+				]
+			}
+		}
 	]
 }

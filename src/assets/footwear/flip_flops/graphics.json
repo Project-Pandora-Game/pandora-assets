@@ -166,5 +166,32 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -1350,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Floor",
+			"graphicalLayers": [
+				{
+					"name": "Soles",
+					"colorizationKey": "soles"
+				},
+				{
+					"name": "Straps",
+					"colorizationKey": "straps"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"flip-flops_back.png",
+					"flip-flops_straps_floor.png"
+				]
+			}
+		}
 	]
 }

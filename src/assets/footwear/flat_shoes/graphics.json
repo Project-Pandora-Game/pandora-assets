@@ -32,7 +32,7 @@
 			"imageMap": {
 				"front": [
 					"flat_shoes.png",
-					"flat_shoes_ Highlights.png"
+					"flat_shoes_highlights.png"
 				],
 				"back": [
 					"",
@@ -75,7 +75,7 @@
 				],
 				"back": [
 					"flat_shoes_back.png",
-					"flat_shoes_back_Highlights.png"
+					"flat_shoes_back_highlights.png"
 				]
 			}
 		},
@@ -109,6 +109,38 @@
 							]
 						]
 					}
+				]
+			}
+		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -1350,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Floor",
+			"graphicalLayers": [
+				{
+					"name": "Shoe",
+					"colorizationKey": "shoes"
+				},
+				{
+					"name": "Highlights",
+					"colorizationKey": "shoesHighlights"
+				},
+				{
+					"name": "Shoe Background",
+					"colorizationKey": "shoes"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"flat_shoes.png",
+					"flat_shoes_highlights.png",
+					"flat_shoes_floor_bg.png"
 				]
 			}
 		}

@@ -267,5 +267,47 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -1350,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Floor",
+			"graphicalLayers": [
+				{
+					"name": "Shoe",
+					"colorizationKey": "shoe"
+				},
+				{
+					"name": "Rings",
+					"colorizationKey": "smallRings"
+				},
+				{
+					"name": "Strings",
+					"colorizationKey": "strings"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "bootType"
+				}
+			],
+			"imageMap": {
+				"knee": [
+					"boots.png",
+					"boots_rings.png",
+					"boots_strings.png"
+				],
+				"thigh": [
+					"boots_long.png",
+					"boots_rings_long.png",
+					"boots_strings_long.png"
+				]
+			}
+		}
 	]
 }

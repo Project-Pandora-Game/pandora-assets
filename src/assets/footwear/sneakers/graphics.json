@@ -151,5 +151,37 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -1350,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Floor",
+			"graphicalLayers": [
+				{
+					"name": "Shoes",
+					"colorizationKey": "primary"
+				},
+				{
+					"name": "Laces",
+					"colorizationKey": "shoelaces"
+				},
+				{
+					"name": "Soles",
+					"colorizationKey": "secondary"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"sneakers.png",
+					"sneakers_shoelaces.png",
+					"sneakers_soles.png"
+				]
+			}
+		}
 	]
 }

@@ -112,5 +112,32 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -1350,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Floor",
+			"graphicalLayers": [
+				{
+					"name": "Shoes",
+					"colorizationKey": "shoes"
+				},
+				{
+					"name": "Straps",
+					"colorizationKey": "belts"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"fluffy_shoes_back.png",
+					"fluffy_shoes_back_belts.png"
+				]
+			}
+		}
 	]
 }
