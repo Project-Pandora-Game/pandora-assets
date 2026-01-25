@@ -9,6 +9,9 @@ DefineAsset({
 			default: '#5278A3',
 		},
 	},
+	roomDeployment: {
+		autoDeployRelativePosition: [-150, -130, 0],
+	},
 	// size:500, y:336, centered
 	preview: 'preview.png',
 	attributes: {

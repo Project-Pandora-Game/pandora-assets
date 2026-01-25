@@ -674,5 +674,32 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -780,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Floor",
+			"graphicalLayers": [
+				{
+					"name": "frills",
+					"colorizationKey": "frills"
+				},
+				{
+					"name": "dress",
+					"colorizationKey": "dress"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"floor.png",
+					"floor_l2.png"
+				]
+			}
+		}
 	]
 }

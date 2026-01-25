@@ -1454,5 +1454,27 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -1330,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Floor",
+			"graphicalLayers": [
+				{
+					"name": "shirt",
+					"colorizationKey": "shirt"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"floor.png"
+				]
+			}
+		}
 	]
 }
