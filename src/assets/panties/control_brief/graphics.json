@@ -116,5 +116,27 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -550,
+			"y": -1400,
+			"width": 1100,
+			"height": 1650,
+			"type": "autoSprite",
+			"name": "Floor",
+			"graphicalLayers": [
+				{
+					"name": "panties",
+					"colorizationKey": "panties"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"control_brief_ankle.png"
+				]
+			}
+		}
 	]
 }
