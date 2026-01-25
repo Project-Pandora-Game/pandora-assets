@@ -15,9 +15,13 @@ DefineRoomDeviceAsset({
 			name: 'Ring',
 			default: '#D0D0D0',
 		},
+		chains: {
+			name: 'Chains',
+			default: '#D0D0D0',
+		},
 		dildo: {
 			name: 'Dildo',
-			default: '#FFFFFF',
+			default: '#EBC68F',
 		},
 	},
 	staticAttributes: ['Play_furniture'],
@@ -126,7 +130,6 @@ DefineRoomDeviceAsset({
 					name: 'Attached to Collar',
 					properties: {
 						blockSlotsEnterLeave: ['seated'],
-						blockModules: ['position'],
 						slotProperties: {
 							seated: {
 								attributes: {
@@ -166,7 +169,6 @@ DefineRoomDeviceAsset({
 					name: 'Attached to Wrist Cuffs',
 					properties: {
 						blockSlotsEnterLeave: ['seated'],
-						blockModules: ['position'],
 						slotProperties: {
 							seated: {
 								attributes: {
@@ -183,6 +185,20 @@ DefineRoomDeviceAsset({
 										position: 'back',
 										rotation: 'forward',
 									},
+								},
+							},
+						},
+					},
+				},
+				{
+					id: 'attached_armbinder',
+					name: 'Attached to Armbinder',
+					properties: {
+						blockSlotsEnterLeave: ['seated'],
+						slotProperties: {
+							seated: {
+								attributes: {
+									requires: ['Armbinder_chainable'],
 								},
 							},
 						},

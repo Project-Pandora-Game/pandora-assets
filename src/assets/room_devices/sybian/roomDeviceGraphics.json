@@ -215,61 +215,370 @@
 					]
 				}
 			]
-		},
-		{
-			"x": -500,
-			"y": -900,
-			"width": 1000,
-			"height": 1500,
-			"type": "sprite",
-			"image": "",
-			"imageOverrides": [
+		}
+	],
+	"slots": {
+		"seated": {
+			"layers": [
 				{
-					"image": "chain_collar.png",
-					"condition": [
-						[
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Dildo",
+					"priority": "ABOVE_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "dildo",
+					"image": {
+						"image": "",
+						"overrides": [
 							{
-								"module": "front_ring",
-								"operator": "=",
-								"value": "attached"
-							},
-							{
-								"module": "position",
-								"operator": "=",
-								"value": "front"
+								"image": "dildo_inside_front.png",
+								"condition": [
+									[
+										{
+											"module": "vibration",
+											"operator": "=",
+											"value": "dildo"
+										},
+										{
+											"module": "position",
+											"operator": "=",
+											"value": "front"
+										}
+									]
+								]
 							}
 						]
-					]
-				}
-			]
-		},
-		{
-			"x": -500,
-			"y": -900,
-			"width": 1000,
-			"height": 1500,
-			"type": "sprite",
-			"image": "",
-			"imageOverrides": [
+					}
+				},
 				{
-					"image": "chain_wrists.png",
-					"condition": [
-						[
+					"x": 0,
+					"y": 25,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Chain wrists",
+					"priority": "BELOW_ARM_LEFT",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "chains",
+					"image": {
+						"image": "",
+						"overrides": [
 							{
-								"module": "back_ring",
-								"operator": "=",
-								"value": "attached"
-							},
-							{
-								"module": "position",
-								"operator": "=",
-								"value": "back"
+								"image": "chain_wrists.png",
+								"condition": [
+									[
+										{
+											"module": "back_ring",
+											"operator": "=",
+											"value": "attached"
+										},
+										{
+											"module": "position",
+											"operator": "=",
+											"value": "back"
+										}
+									]
+								]
 							}
 						]
-					]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Chain collar",
+					"priority": "OVERLAY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "chains",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "chain_collar.png",
+								"condition": [
+									[
+										{
+											"module": "front_ring",
+											"operator": "=",
+											"value": "attached"
+										},
+										{
+											"module": "position",
+											"operator": "=",
+											"value": "front"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Vibration Base Front View",
+					"priority": "BELOW_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "dildo",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "vibration_base.png",
+								"condition": [
+									[
+										{
+											"view": "front"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Ring Front View",
+					"priority": "BELOW_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "ring",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "ring_front_down.png",
+								"condition": [
+									[
+										{
+											"module": "front_ring",
+											"operator": "=",
+											"value": "show"
+										},
+										{
+											"module": "position",
+											"operator": "=",
+											"value": "front"
+										}
+									]
+								]
+							},
+							{
+								"image": "ring_front_up.png",
+								"condition": [
+									[
+										{
+											"module": "front_ring",
+											"operator": "=",
+											"value": "attached"
+										},
+										{
+											"module": "position",
+											"operator": "=",
+											"value": "front"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 25,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Ring Back View",
+					"priority": "BELOW_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "ring",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "ring_front_down.png",
+								"condition": [
+									[
+										{
+											"module": "back_ring",
+											"operator": "=",
+											"value": "show"
+										},
+										{
+											"module": "position",
+											"operator": "=",
+											"value": "back"
+										}
+									],
+									[
+										{
+											"module": "back_ring",
+											"operator": "=",
+											"value": "attached_armbinder"
+										},
+										{
+											"module": "position",
+											"operator": "=",
+											"value": "back"
+										}
+									]
+								]
+							},
+							{
+								"image": "ring_front_up.png",
+								"condition": [
+									[
+										{
+											"module": "back_ring",
+											"operator": "=",
+											"value": "attached"
+										},
+										{
+											"module": "position",
+											"operator": "=",
+											"value": "back"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 25,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Armbinder_clip",
+					"priority": "BELOW_ARM_LEFT",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "ring",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "armbinder_clip.png",
+								"condition": [
+									[
+										{
+											"module": "back_ring",
+											"operator": "=",
+											"value": "attached_armbinder"
+										},
+										{
+											"module": "position",
+											"operator": "=",
+											"value": "back"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Front Front View",
+					"priority": "BELOW_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "base",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "front.png",
+								"condition": [
+									[
+										{
+											"view": "front"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Top Front View",
+					"priority": "BELOW_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "cover",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "top.png",
+								"condition": [
+									[
+										{
+											"view": "front"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Base Front View",
+					"priority": "BELOW_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "base",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "base.png",
+								"condition": [
+									[
+										{
+											"view": "front"
+										}
+									]
+								]
+							}
+						]
+					}
 				}
 			]
 		}
-	],
-	"slots": {}
+	}
 }
