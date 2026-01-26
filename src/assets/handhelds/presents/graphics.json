@@ -47,11 +47,28 @@
 	"roomLayers": [
 		{
 			"x": -500,
-			"y": -710,
+			"y": -680,
 			"width": 1000,
 			"height": 1500,
 			"type": "autoSprite",
 			"name": "Present",
+			"offsetOverrides": [
+				{
+					"offset": {
+						"x": -500,
+						"y": -720
+					},
+					"condition": [
+						[
+							{
+								"module": "variant",
+								"operator": "=",
+								"value": "plain"
+							}
+						]
+					]
+				}
+			],
 			"graphicalLayers": [
 				{
 					"name": "Paper",
