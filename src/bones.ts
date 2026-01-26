@@ -1,5 +1,4 @@
-// TODO: Re-add `import type` after ESLint gets fixed
-import { Immutable } from 'immer';
+import type { Immutable } from 'immer';
 import { BoneDefinitionCompressed, BoneNameSchema, BoneType, CoordinatesCompressed, IsNotNullable, SCHEME_OVERRIDE, type InversePosingHandle } from 'pandora-common';
 
 const boneDefinitionImpl = {
