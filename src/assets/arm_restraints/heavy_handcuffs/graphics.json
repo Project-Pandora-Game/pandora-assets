@@ -420,5 +420,37 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -720,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Floor",
+			"graphicalLayers": [
+				{
+					"name": "Back",
+					"colorizationKey": "cuffs"
+				},
+				{
+					"name": "Chain",
+					"colorizationKey": "cuffs"
+				},
+				{
+					"name": "Front",
+					"colorizationKey": "cuffs"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"handcuffs_background.png",
+					"handcuffs_chain.png",
+					"handcuffs_front.png"
+				]
+			}
+		}
 	]
 }
