@@ -7,35 +7,8 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "Back Ring",
-			"priority": "BELOW_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "metal",
-			"image": {
-				"image": "panel_back_ring.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
 			"name": "Back Straps",
-			"priority": "BELOW_BODY",
+			"priority": "BELOW_BACK_HAIR",
 			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "straps",
@@ -60,25 +33,20 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "Back Rivets",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Back Buckle",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "metal",
-			"image": {
-				"image": "panel_back_rivets.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBackHair",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "metal"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"panel_back_straps_buckle.png"
 				]
 			}
 		},
@@ -87,25 +55,28 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "Back Buckles",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "Back Head Harness Ring",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "metal",
-			"image": {
-				"image": "panel_back_buckles.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "metal"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "headHarness"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"harness": [
+					"panel_back_head_harness_ring.png"
 				]
 			}
 		},
@@ -114,37 +85,200 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
+			"name": "Back Head Harness",
+			"points": "static",
+			"automeshTemplate": "belowBackHair",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "straps"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "headHarness"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"harness": [
+					"panel_back_head_harness.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Back Head Harness Rivets",
+			"points": "static",
+			"automeshTemplate": "belowBackHair",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "metal"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "headHarness"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"harness": [
+					"panel_back_rivets.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Back Head Harness Buckles",
+			"points": "static",
+			"automeshTemplate": "belowBackHair",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "metal"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "headHarness"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"harness": [
+					"panel_back_head_harness_buckles.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Back Chin Collar",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "straps"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "chinStrap"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"chin": [
+					""
+				],
+				"collar": [
+					"panel_back_chin_collar.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Back Chin Collar Buckle",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "metal"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "chinStrap"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"chin": [
+					""
+				],
+				"collar": [
+					"panel_back_chin_collar_buckle.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
 			"name": "Ballgag Straps",
-			"priority": "ABOVE_BODY",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "straps",
-			"image": {
-				"image": "panel_front_straps_ball.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "ballgag",
-									"operator": "=",
-									"value": "false"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "straps"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "ballgag"
+				},
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"false:small": [
+					""
+				],
+				"true:small": [
+					"panel_front_straps_ball.png"
+				],
+				"false:large": [
+					""
+				],
+				"true:large": [
+					"panel_front_large_straps_ball.png"
+				],
+				"false:xlarge": [
+					""
+				],
+				"true:xlarge": [
+					"panel_front_large_straps_ball.png"
 				]
 			}
 		},
@@ -230,52 +364,28 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "Front Panel",
-			"priority": "ABOVE_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "panel",
-			"image": {
-				"image": "panel_front_panel.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "Front Ring",
-			"priority": "ABOVE_BODY",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "metal",
-			"image": {
-				"image": "panel_front_ring.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "frontHair",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "metal"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "headHarness"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"harness": [
+					"panel_front_ring.png"
 				]
 			}
 		},
@@ -284,25 +394,31 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "Front Straps",
-			"priority": "ABOVE_BODY",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "straps",
-			"image": {
-				"image": "panel_front_straps.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveFrontHair",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "straps"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"small": [
+					"panel_front_straps.png"
+				],
+				"large": [
+					"panel_front_large_straps.png"
+				],
+				"xlarge": [
+					"panel_front_large_straps.png"
 				]
 			}
 		},
@@ -311,25 +427,211 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
+			"name": "Front Head Harness",
+			"points": "static",
+			"automeshTemplate": "aboveFrontHair",
+			"graphicalLayers": [
+				{
+					"name": "Head Harness",
+					"colorizationKey": "straps"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "headHarness"
+				},
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"none:small": [
+					""
+				],
+				"none:large": [
+					""
+				],
+				"harness:small": [
+					"panel_front_head_harness.png"
+				],
+				"harness:large": [
+					"panel_front_large_head_harness.png"
+				],
+				"none:xlarge": [
+					""
+				],
+				"harness:xlarge": [
+					"panel_front_large_head_harness.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Front Head Harness Rivets",
+			"points": "static",
+			"automeshTemplate": "aboveFrontHair",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "metal"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "headHarness"
+				},
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"none:small": [
+					""
+				],
+				"none:large": [
+					""
+				],
+				"harness:small": [
+					"panel_front_head_harness_rivets.png"
+				],
+				"harness:large": [
+					"panel_front_large_head_harness_rivets.png"
+				],
+				"harness:xlarge": [
+					"panel_front_large_head_harness_rivets.png"
+				],
+				"none:xlarge": [
+					""
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Front Chin Strap",
+			"points": "static",
+			"automeshTemplate": "aboveFrontHair",
+			"graphicalLayers": [
+				{
+					"name": "Chin Strap",
+					"colorizationKey": "straps"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "chinStrap"
+				},
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"none:small": [
+					""
+				],
+				"none:large": [
+					""
+				],
+				"chin:small": [
+					"panel_front_chin_strap.png"
+				],
+				"chin:large": [
+					"panel_front_large_chin_strap.png"
+				],
+				"collar:small": [
+					"panel_front_chin_collar.png"
+				],
+				"collar:large": [
+					"panel_front_large_chin_collar.png"
+				],
+				"chin:xlarge": [
+					"panel_front_large_chin_strap.png"
+				],
+				"collar:xlarge": [
+					"panel_front_large_chin_collar.png"
+				],
+				"none:xlarge": [
+					""
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Front Panel",
+			"points": "static",
+			"automeshTemplate": "aboveFrontHair",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "panel"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"small": [
+					"panel_front_panel.png"
+				],
+				"large": [
+					"panel_front_large_panel.png"
+				],
+				"xlarge": [
+					"panel_front_xlarge_panel.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
 			"name": "Front Strap Cover",
-			"priority": "ABOVE_BODY",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "panel",
-			"image": {
-				"image": "panel_front_strapcover.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveFrontHair",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "panel"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"small": [
+					"panel_front_strapcover.png"
+				],
+				"large": [
+					"panel_front_large_strapcover.png"
+				],
+				"xlarge": [
+					"panel_front_xlarge_strapcover.png"
 				]
 			}
 		},
@@ -338,25 +640,31 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "Front Rivets",
-			"priority": "ABOVE_BODY",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "metal",
-			"image": {
-				"image": "panel_front_rivets.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveFrontHair",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "metal"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"small": [
+					"panel_front_rivets.png"
+				],
+				"large": [
+					"panel_front_large_rivets.png"
+				],
+				"xlarge": [
+					"panel_front_xlarge_rivets.png"
 				]
 			}
 		}
