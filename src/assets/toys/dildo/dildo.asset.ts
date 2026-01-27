@@ -12,6 +12,9 @@ DefineAsset({
 			default: '#3F3A44',
 		},
 	},
+	roomDeployment: {
+		autoDeployRelativePosition: [0, -1, 0],
+	},
 	// size:250, y:650, centered
 	preview: 'preview.png',
 	attributes: {
@@ -132,6 +135,21 @@ DefineAsset({
 							provides: ['Crotch_protruding'],
 						},
 					},
+				},
+			],
+		},
+		room_view: {
+			type: 'typed',
+			name: 'Room orientation',
+			variants: [
+				{
+					id: 'front',
+					name: 'Front side',
+					default: true,
+				},
+				{
+					id: 'back',
+					name: 'Back side',
 				},
 			],
 		},
