@@ -184,9 +184,6 @@ DefineRoomDeviceAsset({
 								effects: {
 									blind: 9.6,
 								},
-								attributes: {
-									hides: ['Hair'],
-								},
 							},
 						},
 					},
