@@ -100,6 +100,9 @@ DefineAsset({
 					name: 'Cuffed in front',
 					default: true,
 					properties: {
+						attributes: {
+							provides: ['Wrist_cuffs_front'],
+						},
 						poseLimits: {
 							armsOrder: { upper: 'right' },
 							options: [
@@ -235,7 +238,7 @@ DefineAsset({
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
-		credits: ['taja'],
+		credits: ['taja', 'Sandrine'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
