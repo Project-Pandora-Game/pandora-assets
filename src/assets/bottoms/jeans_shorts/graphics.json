@@ -137,7 +137,8 @@
 			"points": "body",
 			"automeshTemplate": "aboveBody",
 			"disabledTemplateParts": [
-				"arms"
+				"arms",
+				"body"
 			],
 			"graphicalLayers": [
 				{
@@ -170,7 +171,8 @@
 			"points": "body",
 			"automeshTemplate": "belowBody",
 			"disabledTemplateParts": [
-				"arms"
+				"arms",
+				"body"
 			],
 			"graphicalLayers": [
 				{
