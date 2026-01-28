@@ -19,6 +19,9 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
+	roomDeployment: {
+		autoDeployRelativePosition: [-50, -100, 0],
+	},
 	preview: 'wiffle_preview.png',
 	attributes: {
 		provides: [
