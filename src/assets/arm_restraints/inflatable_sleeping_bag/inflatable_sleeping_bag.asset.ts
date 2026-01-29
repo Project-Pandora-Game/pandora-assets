@@ -3,7 +3,6 @@ DefineAsset({
 	size: 'medium',
 	graphics: 'graphics.json',
 	requireFreeHandsToUseDefault: true,
-	assetPreferenceDefault: 'maybe',
 	colorization: {
 		bag: {
 			name: 'Bag',
@@ -109,7 +108,6 @@ DefineAsset({
 	},
 	effects: {
 		blockHands: true,
-		blockSpaceLeave: true,
 		blockRoomMovement: true,
 	},
 	chat: {
