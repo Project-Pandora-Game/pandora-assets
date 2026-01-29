@@ -49,6 +49,59 @@ DefineAsset({
 				blockAddRemove: true,
 			},
 		},
+		size: {
+			type: 'typed',
+			name: 'Size',
+			variants: [
+				{
+					id: 'small',
+					name: 'Small',
+					default: true,
+				},
+				{
+					id: 'large',
+					name: 'Large',
+				},
+				{
+					id: 'xlarge',
+					name: 'Extra Large',
+				},
+			],
+		},
+		headHarness: {
+			type: 'typed',
+			name: 'Head Harness',
+			variants: [
+				{
+					id: 'none',
+					name: 'Without',
+				},
+				{
+					id: 'harness',
+					name: 'With',
+					default: true,
+				},
+			],
+		},
+		chinStrap: {
+			type: 'typed',
+			name: 'Chin Strap',
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+				},
+				{
+					id: 'chin',
+					name: 'Chin',
+				},
+				{
+					id: 'collar',
+					name: 'Cross-Wrap Collar',
+					default: true,
+				},
+			],
+		},
 		ballgag: {
 			type: 'typed',
 			name: 'Ball Gag',
@@ -91,7 +144,7 @@ DefineAsset({
 	},
 	ownership: {
 		responsibleContributor: 'Livie53 <itsalive53.cr1mson@gmail.com>',
-		credits: ['Livie53'],
+		credits: ['Livie53', 'Klewdia'],
 		modificationPolicy: 'Free to change',
 		reusePolicy: 'Free to use',
 		licensing: [
@@ -99,6 +152,13 @@ DefineAsset({
 				source: 'Self-Made',
 				copyrightHolder: 'Livie53',
 				editedBy: 'Livie53',
+				license: 'Pandora-Use-Only-v1-or-later',
+			},
+			{
+				part: 'separated chin straps and head harness in modules, large and x-large gags',
+				source: 'Self-Made',
+				copyrightHolder: 'Klewdia',
+				editedBy: 'Klewdia',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
