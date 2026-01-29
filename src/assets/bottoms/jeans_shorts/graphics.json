@@ -134,8 +134,12 @@
 			"height": 1500,
 			"type": "autoMesh",
 			"name": "Folded Ends Front",
-			"points": "static",
+			"points": "body",
 			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"body"
+			],
 			"graphicalLayers": [
 				{
 					"name": "",
@@ -164,8 +168,12 @@
 			"height": 1500,
 			"type": "autoMesh",
 			"name": "Folded Ends Back",
-			"points": "static",
+			"points": "body",
 			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms",
+				"body"
+			],
 			"graphicalLayers": [
 				{
 					"name": "",

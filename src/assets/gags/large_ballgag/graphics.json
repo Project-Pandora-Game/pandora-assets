@@ -103,5 +103,42 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -410,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Floor",
+			"graphicalLayers": [
+				{
+					"name": "rings",
+					"colorizationKey": "buckles"
+				},
+				{
+					"name": "straps extension",
+					"colorizationKey": "straps"
+				},
+				{
+					"name": "straps",
+					"colorizationKey": "straps"
+				},
+				{
+					"name": "ball",
+					"colorizationKey": "ball"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"ballgag_rings_hanging.png",
+					"ballgag_straps_hanging_floor.png",
+					"ballgag_straps_hanging.png",
+					"ballgag_ball_hanging.png"
+				]
+			}
+		}
 	]
 }
