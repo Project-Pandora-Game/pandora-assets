@@ -395,39 +395,6 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "Front Straps",
-			"points": "static",
-			"automeshTemplate": "aboveFrontHair",
-			"graphicalLayers": [
-				{
-					"name": "",
-					"colorizationKey": "straps"
-				}
-			],
-			"variables": [
-				{
-					"type": "typedModule",
-					"module": "size"
-				}
-			],
-			"imageMap": {
-				"small": [
-					"panel_front_straps.png"
-				],
-				"large": [
-					"panel_front_large_straps.png"
-				],
-				"xlarge": [
-					"panel_front_large_straps.png"
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "autoMesh",
 			"name": "Front Head Harness",
 			"points": "static",
 			"automeshTemplate": "aboveFrontHair",
@@ -599,6 +566,39 @@
 				],
 				"xlarge": [
 					"panel_front_xlarge_panel.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Front Straps",
+			"points": "static",
+			"automeshTemplate": "aboveFrontHair",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "straps"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"small": [
+					"panel_front_straps.png"
+				],
+				"large": [
+					"panel_front_large_straps.png"
+				],
+				"xlarge": [
+					"panel_front_large_straps.png"
 				]
 			}
 		},
