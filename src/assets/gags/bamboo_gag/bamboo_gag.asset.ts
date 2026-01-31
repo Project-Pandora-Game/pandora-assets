@@ -14,7 +14,7 @@ DefineAsset({
 		...baseColorization,
 	},
 	roomDeployment: {
-		autoDeployRelativePosition: [-60, -100, 0],
+		autoDeployRelativePosition: [-180, -60, 0],
 	},
 	// size:200, y:197, centered
 	preview: 'preview.png',

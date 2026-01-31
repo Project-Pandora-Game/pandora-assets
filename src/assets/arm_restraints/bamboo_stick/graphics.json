@@ -615,5 +615,215 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -125,
+			"y": -100,
+			"width": 250,
+			"height": 250,
+			"type": "autoSprite",
+			"name": "Rope",
+			"graphicalLayers": [
+				{
+					"name": "Rope",
+					"colorizationKey": "rope"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"rope_tangled.png"
+				]
+			}
+		},
+		{
+			"x": -60,
+			"y": -1200,
+			"width": 120,
+			"height": 1200,
+			"type": "autoSprite",
+			"name": "Wall Horizontal Bamboo",
+			"graphicalLayers": [
+				{
+					"name": "Bamboo",
+					"colorizationKey": "bamboo"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "room_placement"
+				},
+				{
+					"type": "typedModule",
+					"module": "horizontal_bamboo"
+				}
+			],
+			"imageMap": {
+				"wall:short": [
+					"wall_h_short.png"
+				],
+				"wall:medium": [
+					"wall_h_medium.png"
+				],
+				"wall:long": [
+					"wall_h_long.png"
+				],
+				"floor:short": [
+					""
+				],
+				"floor:medium": [
+					""
+				],
+				"floor:long": [
+					""
+				]
+			}
+		},
+		{
+			"x": -60,
+			"y": -1200,
+			"width": 120,
+			"height": 1200,
+			"type": "autoSprite",
+			"name": "Wall Vertical Bamboo",
+			"graphicalLayers": [
+				{
+					"name": "Bamboo",
+					"colorizationKey": "bamboo"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "room_placement"
+				},
+				{
+					"type": "typedModule",
+					"module": "vertical_bamboo"
+				}
+			],
+			"imageMap": {
+				"wall:none": [
+					""
+				],
+				"wall:short": [
+					"wall_v_short.png"
+				],
+				"wall:medium": [
+					"wall_v_medium.png"
+				],
+				"wall:long": [
+					"wall_v_long.png"
+				],
+				"floor:none": [
+					""
+				],
+				"floor:short": [
+					""
+				],
+				"floor:medium": [
+					""
+				],
+				"floor:long": [
+					""
+				]
+			}
+		},
+		{
+			"x": -600,
+			"y": 0,
+			"width": 1200,
+			"height": 120,
+			"type": "autoSprite",
+			"name": "Floor Horizontal Bamboo",
+			"graphicalLayers": [
+				{
+					"name": "Bamboo",
+					"colorizationKey": "bamboo"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "room_placement"
+				},
+				{
+					"type": "typedModule",
+					"module": "horizontal_bamboo"
+				}
+			],
+			"imageMap": {
+				"wall:short": [
+					""
+				],
+				"wall:medium": [
+					""
+				],
+				"wall:long": [
+					""
+				],
+				"floor:short": [
+					"floor_h_short.png"
+				],
+				"floor:medium": [
+					"floor_h_medium.png"
+				],
+				"floor:long": [
+					"floor_h_long.png"
+				]
+			}
+		},
+		{
+			"x": -600,
+			"y": 0,
+			"width": 1200,
+			"height": 120,
+			"type": "autoSprite",
+			"name": "Floor Vertical Bamboo",
+			"graphicalLayers": [
+				{
+					"name": "Bamboo",
+					"colorizationKey": "bamboo"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "room_placement"
+				},
+				{
+					"type": "typedModule",
+					"module": "vertical_bamboo"
+				}
+			],
+			"imageMap": {
+				"wall:none": [
+					""
+				],
+				"wall:short": [
+					""
+				],
+				"wall:medium": [
+					""
+				],
+				"wall:long": [
+					""
+				],
+				"floor:none": [
+					""
+				],
+				"floor:short": [
+					"floor_v_short.png"
+				],
+				"floor:medium": [
+					"floor_v_medium.png"
+				],
+				"floor:long": [
+					"floor_v_long.png"
+				]
+			}
+		}
 	]
 }

@@ -1841,5 +1841,131 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -125,
+			"y": -140,
+			"width": 250,
+			"height": 281,
+			"type": "autoSprite",
+			"name": "Left chopstick",
+			"graphicalLayers": [
+				{
+					"name": "Chopsticks",
+					"colorizationKey": "chopsticks"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "attach"
+				}
+			],
+			"imageMap": {
+				"both": [
+					"chopsticks_diagonal_right.png"
+				],
+				"left": [
+					"chopsticks_diagonal_right.png"
+				],
+				"right": [
+					""
+				]
+			}
+		},
+		{
+			"x": -125,
+			"y": -140,
+			"width": 250,
+			"height": 281,
+			"type": "autoSprite",
+			"name": "Left string",
+			"graphicalLayers": [
+				{
+					"name": "Strings",
+					"colorizationKey": "strings"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "attach"
+				}
+			],
+			"imageMap": {
+				"both": [
+					"strings_diagonal_right.png"
+				],
+				"left": [
+					"strings_diagonal_right.png"
+				],
+				"right": [
+					""
+				]
+			}
+		},
+		{
+			"x": -140,
+			"y": -140,
+			"width": 250,
+			"height": 281,
+			"type": "autoSprite",
+			"name": "Right chopstick",
+			"graphicalLayers": [
+				{
+					"name": "Chopsticks",
+					"colorizationKey": "chopsticks"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "attach"
+				}
+			],
+			"imageMap": {
+				"both": [
+					"chopsticks_diagonal_right.png"
+				],
+				"left": [
+					""
+				],
+				"right": [
+					"chopsticks_diagonal_right.png"
+				]
+			}
+		},
+		{
+			"x": -140,
+			"y": -140,
+			"width": 250,
+			"height": 281,
+			"type": "autoSprite",
+			"name": "Right string",
+			"graphicalLayers": [
+				{
+					"name": "Strings",
+					"colorizationKey": "strings"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "attach"
+				}
+			],
+			"imageMap": {
+				"both": [
+					"strings_diagonal_right.png"
+				],
+				"left": [
+					""
+				],
+				"right": [
+					"strings_diagonal_right.png"
+				]
+			}
+		}
 	]
 }

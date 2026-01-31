@@ -12,6 +12,9 @@ DefineAsset({
 		},
 		...baseColorization,
 	},
+	roomDeployment: {
+		autoDeployRelativePosition: [150, -60, 0],
+	},
 	// size:350, y:455, centered
 	preview: 'preview.png',
 	attributes: {
@@ -223,6 +226,21 @@ DefineAsset({
 							},
 						},
 					},
+				},
+			],
+		},
+		room_placement: {
+			type: 'typed',
+			name: 'Room Placement',
+			variants: [
+				{
+					id: 'floor',
+					name: 'Floor',
+					default: true,
+				},
+				{
+					id: 'wall',
+					name: 'Wall',
 				},
 			],
 		},
