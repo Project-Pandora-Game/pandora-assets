@@ -47,7 +47,7 @@ DefineAsset({
 		},
 		shine: {
 			name: 'Eye Shine',
-			default: '#A8CEE4CC',
+			default: '#FFFFFFCC',
 			minAlpha: 0,
 		},
 		nose: {
@@ -64,7 +64,13 @@ DefineAsset({
 			default: '#FCB6B4',
 			minAlpha: 0,
 		},
-
+		dildo: {
+			name: 'Lips',
+			default: '#FF7BE6',
+		},
+	},
+	roomDeployment: {
+		autoDeployRelativePosition: [-100, -80, 0],
 	},
 	// size:200, y:189, centered
 	preview: 'preview.png',
@@ -162,6 +168,17 @@ DefineAsset({
 							provides: [
 								'mask_on',
 							],
+						},
+					},
+				},
+				{
+					id: 'side',
+					name: 'Side',
+					properties: {
+						stateFlags: {
+							requires: {
+								helmet: 'Side mask cannot be applied without helmet',
+							},
 						},
 					},
 				},
@@ -305,34 +322,10 @@ DefineAsset({
 					id: 'dildo',
 					name: 'Dildo',
 					properties: {
-						attributes: {
-							requires: [
-								'Mouth_open_wide',
-								'!Mouth_tongue_out',
-								'!Mouth_protruding',
-								'!Mouth_cover',
-							],
-							provides: [
-								'Restraint',
-								'Restraint_mouth',
-								'Mouth_item',
-								'Mouth_insert',
-								'Mouth_insert_deep',
-							],
-						},
 						stateFlags: {
-							requires: {
-								mask_on: 'Gag cannot be used without mask',
-							},
-						},
-						effects: {
-							lipsTouch: 9,
-							jawMove: 9,
-							tongueRoof: 7,
-							mouthBreath: 6,
-							throatBreath: 4,
-							coherency: 7,
-							stimulus: 6,
+							provides: [
+								'gag_dildo',
+							],
 						},
 					},
 				},
@@ -382,6 +375,37 @@ DefineAsset({
 			},
 		},
 	},
+	stateFlagCombinations: [
+		{
+			requiredFlags: ['mask_on', 'gag_dildo'],
+			properties: {
+				attributes: {
+					requires: [
+						'Mouth_open_wide',
+						'!Mouth_tongue_out',
+						'!Mouth_protruding',
+						'!Mouth_cover',
+					],
+					provides: [
+						'Restraint',
+						'Restraint_mouth',
+						'Mouth_item',
+						'Mouth_insert',
+						'Mouth_insert_deep',
+					],
+				},
+				effects: {
+					lipsTouch: 9,
+					jawMove: 9,
+					tongueRoof: 7,
+					mouthBreath: 6,
+					throatBreath: 4,
+					coherency: 7,
+					stimulus: 6,
+				},
+			},
+		},
+	],
 	chat: {
 		actionAdd: 'SOURCE_CHARACTER put ITEM_ASSET_NAME over TARGET_CHARACTER_DYNAMIC_POSSESSIVE face.',
 		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE face.',

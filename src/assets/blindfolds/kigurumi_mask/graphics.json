@@ -491,16 +491,20 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "eyelashess",
+			"name": "pupils",
 			"priority": "ABOVE_BODY",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "lashes",
+			"pointType": [
+				"static",
+				"static_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "eyeColor_l",
 			"image": {
 				"image": "",
 				"overrides": [
 					{
-						"image": "eyelashes.png",
+						"image": "cornea.png",
 						"condition": [
 							[
 								{
@@ -520,20 +524,16 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "pupils",
+			"name": "eyelashess",
 			"priority": "ABOVE_BODY",
 			"points": "static",
-			"pointType": [
-				"static",
-				"static_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "eyeColor_l",
+			"mirror": 0,
+			"colorizationKey": "lashes",
 			"image": {
 				"image": "",
 				"overrides": [
 					{
-						"image": "cornea.png",
+						"image": "eyelashes.png",
 						"condition": [
 							[
 								{
@@ -820,6 +820,731 @@
 							]
 						]
 					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Shine Side back",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "shine",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "shine_side.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Pupils Side back L",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 1,
+			"colorizationKey": "eyeColor_l",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "cornea_side_l.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Pupils Side back R",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 1,
+			"colorizationKey": "eyeColor_r",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "cornea_side_r.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Eyes Side back",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "eyeBackground",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "eyebase_side.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Eyelashes Side back",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "lashes",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "eyelashes_side.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": -4,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Nose Side back",
+			"priority": "OVERLAY",
+			"points": "static",
+			"previewOverrides": {
+				"alpha": 0
+			},
+			"mirror": 0,
+			"colorizationKey": "nose",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "nose1_side.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 5,
+			"y": 2,
+			"width": 990,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Blush side back",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "blush",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "blush_faint_side.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								},
+								{
+									"module": "blush",
+									"operator": "=",
+									"value": "faint"
+								}
+							]
+						]
+					},
+					{
+						"image": "blush_medium_side.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								},
+								{
+									"module": "blush",
+									"operator": "=",
+									"value": "medium"
+								}
+							]
+						]
+					},
+					{
+						"image": "blush_strong_side.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								},
+								{
+									"module": "blush",
+									"operator": "=",
+									"value": "strong"
+								}
+							]
+						]
+					},
+					{
+						"image": "blush_full_side.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								},
+								{
+									"module": "blush",
+									"operator": "=",
+									"value": "full"
+								}
+							]
+						]
+					},
+					{
+						"image": "blush_deep_side.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								},
+								{
+									"module": "blush",
+									"operator": "=",
+									"value": "deep"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 3,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Lips Side back",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 0,
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "lips_bg_grin_side.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								},
+								{
+									"module": "mouth",
+									"operator": "=",
+									"value": "grin"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 3,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Lips Side back",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "lips",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "lips_smile_side.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								},
+								{
+									"module": "mouth",
+									"operator": "=",
+									"value": "smile"
+								}
+							]
+						]
+					},
+					{
+						"image": "lips_base_grin_side.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								},
+								{
+									"module": "mouth",
+									"operator": "=",
+									"value": "grin"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 5,
+			"y": 2,
+			"width": 990,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Mask Side",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "mask",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "mask_side.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Eyelashes Side",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "lashes",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "eyelashes_side.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Eyes Side",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "eyeBackground",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "eyebase_side.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Pupils Side L",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 1,
+			"colorizationKey": "eyeColor_r",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "cornea_side_l.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Pupils Side R",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 1,
+			"colorizationKey": "eyeColor_l",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "cornea_side_r.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": -4,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Nose Side",
+			"priority": "OVERLAY",
+			"points": "static",
+			"previewOverrides": {
+				"alpha": 0
+			},
+			"mirror": 0,
+			"colorizationKey": "nose",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "nose1_side.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 5,
+			"y": 2,
+			"width": 990,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Mask Front Opacity",
+			"priority": "OVERLAY",
+			"points": "static",
+			"mirror": 0,
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "mask_side_opacity.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": -4,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Dildo",
+			"priority": "OVERLAY",
+			"points": "static",
+			"previewOverrides": {
+				"alpha": 0
+			},
+			"mirror": 0,
+			"colorizationKey": "dildo",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "dildo_side.png",
+						"condition": [
+							[
+								{
+									"module": "mask",
+									"operator": "=",
+									"value": "side"
+								},
+								{
+									"module": "gag",
+									"operator": "=",
+									"value": "dildo"
+								}
+							]
+						]
+					}
+				]
+			}
+		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -300,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Base",
+			"graphicalLayers": [
+				{
+					"name": "Mask",
+					"colorizationKey": "mask"
+				},
+				{
+					"name": "Eye background",
+					"colorizationKey": "eyeBackground"
+				},
+				{
+					"name": "Cornea L",
+					"colorizationKey": "eyeColor_l"
+				},
+				{
+					"name": "Cornea R",
+					"colorizationKey": "eyeColor_r"
+				},
+				{
+					"name": "Eyelashes",
+					"colorizationKey": "lashes"
+				},
+				{
+					"name": "Shine",
+					"colorizationKey": "shine"
+				},
+				{
+					"name": "Nose",
+					"colorizationKey": "nose"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"mask_side.png",
+					"eyebase_side.png",
+					"cornea_side_r.png",
+					"cornea_side_l.png",
+					"eyelashes_side.png",
+					"shine_side.png",
+					"nose1_side.png"
+				]
+			}
+		},
+		{
+			"x": -500,
+			"y": -300,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Blush",
+			"graphicalLayers": [
+				{
+					"name": "Blush",
+					"colorizationKey": "blush"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "blush"
+				}
+			],
+			"imageMap": {
+				"noBlush": [
+					""
+				],
+				"faint": [
+					"blush_faint_side.png"
+				],
+				"medium": [
+					"blush_medium_side.png"
+				],
+				"strong": [
+					"blush_strong_side.png"
+				],
+				"full": [
+					"blush_full_side.png"
+				],
+				"deep": [
+					"blush_deep_side.png"
+				]
+			}
+		},
+		{
+			"x": -500,
+			"y": -300,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Mouth",
+			"graphicalLayers": [
+				{
+					"name": "Lips",
+					"colorizationKey": "lips"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "mouth"
+				}
+			],
+			"imageMap": {
+				"smile": [
+					"lips_smile_side.png"
+				],
+				"grin": [
+					"lips_base_grin_side.png"
 				]
 			}
 		}
