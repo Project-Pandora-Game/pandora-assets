@@ -329,8 +329,9 @@ DefineAsset({
 		},
 	],
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER placed ITEM_ASSET_NAME near TARGET_CHARACTER_DYNAMIC',
-		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER',
+		actionAdd: 'SOURCE_CHARACTER put TARGET_CHARACTER_DYNAMIC_REFLEXIVE in ITEM_ASSET_NAME',
+		actionRemove: 'SOURCE_CHARACTER took TARGET_CHARACTER_DYNAMIC_REFLEXIVE out of ITEM_ASSET_NAME',
+		actionAddCreate: 'SOURCE_CHARACTER created ITEM_ASSET_NAME and put TARGET_CHARACTER_DYNAMIC_REFLEXIVE inside',
 	},
 	ownership: {
 		responsibleContributor: 'Shikifet <shikifet@gmail.com>',
