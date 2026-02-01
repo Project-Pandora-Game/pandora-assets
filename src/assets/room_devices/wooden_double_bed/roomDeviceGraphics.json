@@ -440,7 +440,7 @@
 						"image": "",
 						"overrides": [
 							{
-								"image": "ropes_bottom_left.png",
+								"image": "ropes_bottom_left_backfacing.png",
 								"condition": [
 									[
 										{
@@ -780,7 +780,7 @@
 						"image": "",
 						"overrides": [
 							{
-								"image": "ropes_bottom_right.png",
+								"image": "ropes_bottom_right_backfacing.png",
 								"condition": [
 									[
 										{
