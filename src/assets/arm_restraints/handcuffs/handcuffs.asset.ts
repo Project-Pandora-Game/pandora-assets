@@ -162,6 +162,9 @@ DefineAsset({
 					id: 'back',
 					name: 'Cuffed behind',
 					properties: {
+						attributes: {
+							provides: ['Wrist_cuffs_back'],
+						},
 						poseLimits: {
 							armsOrder: { upper: 'right' },
 							options: [
