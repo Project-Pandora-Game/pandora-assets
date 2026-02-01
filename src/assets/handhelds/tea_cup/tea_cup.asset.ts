@@ -130,7 +130,7 @@ DefineAsset({
 			variants: [
 				{
 					id: 'no',
-					name: 'No mug',
+					name: 'No cup',
 					default: true,
 				},
 				{
