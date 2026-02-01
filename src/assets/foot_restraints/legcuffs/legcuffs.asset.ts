@@ -13,7 +13,7 @@ DefineAsset({
 			default: '#FFFFFF',
 		},
 	},
-	preview: null,
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Restraint',
@@ -67,13 +67,29 @@ DefineAsset({
 					name: 'Long Chain',
 					properties: {
 						poseLimits: {
-							bones: {
-								leg_l: -5,
-								leg_r: -5,
-							},
+							options: [
+								{
+									bones: {
+										leg_l: [[-5, 0]],
+										leg_r: [[-5, 0]],
+									},
+									legs: {
+										pose: ['standing', 'sitting'],
+									},
+								},
+								{
+									bones: {
+										leg_l: 0,
+										leg_r: 0,
+									},
+									legs: {
+										pose: 'kneeling',
+									},
+								},
+							],
 						},
 						stateFlags: {
-							provides: ['chain', 'Ankle_cuffs_chain'],
+							provides: ['chain'],
 						},
 					},
 				},
@@ -82,10 +98,26 @@ DefineAsset({
 					name: 'Short Chain',
 					properties: {
 						poseLimits: {
-							bones: {
-								leg_l: -2,
-								leg_r: -2,
-							},
+							options: [
+								{
+									bones: {
+										leg_l: [[-5, 0]],
+										leg_r: [[-5, 0]],
+									},
+									legs: {
+										pose: ['standing', 'sitting'],
+									},
+								},
+								{
+									bones: {
+										leg_l: 0,
+										leg_r: 0,
+									},
+									legs: {
+										pose: 'kneeling',
+									},
+								},
+							],
 						},
 						stateFlags: {
 							provides: ['chain'],
@@ -122,8 +154,8 @@ DefineAsset({
 					default: true,
 				},
 				{
-					id: 'full',
-					name: 'Connected to wrists',
+					id: 'front',
+					name: 'Connected to wrists in front',
 					properties: {
 						attributes: {
 							requires: ['Wrist_cuffs_front'],
@@ -131,6 +163,56 @@ DefineAsset({
 						stateFlags: {
 							requires: {
 								connector: 'Hands need to be cuffed in front to be connected to the ankle chain.',
+								chain: 'The cuffs must be connected by a chain.',
+							},
+							provides: ['connector'],
+						},
+						poseLimits: {
+							options: [
+								{
+									bones: {
+										arm_l: [[-9, 180]],
+										arm_r: [[-9, 180]],
+										elbow_l: [[-13, 161]],
+										elbow_r: [[-13, 161]],
+										leg_l: 0,
+										leg_r: 0,
+									},
+								},
+								{
+									bones: {
+										arm_l: [[-9, 180]],
+										arm_r: [[-9, 180]],
+										elbow_l: [[-13, 161]],
+										elbow_r: [[-13, 161]],
+										leg_l: -2,
+										leg_r: -2,
+									},
+								},
+								{
+									bones: {
+										arm_l: [[-9, 180]],
+										arm_r: [[-9, 180]],
+										elbow_l: [[-13, 161]],
+										elbow_r: [[-13, 161]],
+										leg_l: -5,
+										leg_r: -5,
+									},
+								},
+							],
+						},
+					},
+				},
+				{
+					id: 'back',
+					name: 'Connected to wrists behind',
+					properties: {
+						attributes: {
+							requires: ['Wrist_cuffs_back'],
+						},
+						stateFlags: {
+							requires: {
+								connector: 'Hands need to be cuffed behind to be connected to the ankle chain.',
 								chain: 'The cuffs must be connected by a chain.',
 							},
 							provides: ['connector'],
@@ -147,8 +229,8 @@ DefineAsset({
 										elbow_l: 20,
 									},
 									options: [
-										{ arms: { position: 'front_above_hair' } },
-										{ arms: { position: 'front' } },
+										{ arms: { position: 'back_below_hair' } },
+										{ arms: { position: 'back' } },
 									],
 								},
 								{
@@ -161,8 +243,8 @@ DefineAsset({
 										elbow_l: 20,
 									},
 									options: [
-										{ arms: { position: 'front_above_hair' } },
-										{ arms: { position: 'front' } },
+										{ arms: { position: 'back_below_hair' } },
+										{ arms: { position: 'back' } },
 									],
 								},
 								{
@@ -175,8 +257,8 @@ DefineAsset({
 										elbow_l: 20,
 									},
 									options: [
-										{ arms: { position: 'front_above_hair' } },
-										{ arms: { position: 'front' } },
+										{ arms: { position: 'back_below_hair' } },
+										{ arms: { position: 'back' } },
 									],
 								},
 							],
