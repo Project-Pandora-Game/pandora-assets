@@ -7,6 +7,12 @@ const bodypart = DefineBodypart({
 	graphics: 'graphics.json',
 	colorization,
 	preview: 'preview.png',
+	attributes: {
+		provides: [
+			'Hair',
+			'Hair_back',
+		],
+	},
 	modules: {
 		...modules,
 		brushed_to: {
@@ -49,10 +55,10 @@ DefineAsset({
 	attributes: {
 		provides: [
 			'Wig',
-			'Wig_front',
+			'Wig_back',
 		],
 		hides: [
-			'Hair_front',
+			'Hair_back',
 		],
 	},
 });

@@ -7,6 +7,12 @@ const bodypart = DefineBodypart({
 	graphics: 'graphics.json',
 	colorization,
 	preview: 'preview.png',
+	attributes: {
+		provides: [
+			'Hair',
+			'Hair_front',
+		],
+	},
 	modules: {
 		...modules,
 		brushed_to: {
