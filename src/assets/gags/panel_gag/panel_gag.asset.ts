@@ -25,6 +25,9 @@ DefineAsset({
 			default: '#D52828',
 		},
 	},
+	roomDeployment: {
+		autoDeployRelativePosition: [-50, -120, 0],
+	},
 	preview: 'preview.png',
 	attributes: {
 		provides: [
@@ -156,6 +159,13 @@ DefineAsset({
 			},
 			{
 				part: 'separated chin straps and head harness in modules, large and x-large gags',
+				source: 'Self-Made',
+				copyrightHolder: 'Klewdia',
+				editedBy: 'Klewdia',
+				license: 'Pandora-Use-Only-v1-or-later',
+			},
+			{
+				part: 'room item',
 				source: 'Self-Made',
 				copyrightHolder: 'Klewdia',
 				editedBy: 'Klewdia',

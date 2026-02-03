@@ -668,5 +668,552 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -125,
+			"y": -146,
+			"width": 250,
+			"height": 250,
+			"type": "autoSprite",
+			"name": "Straps Back",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "straps"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"room_straps_back.png"
+				]
+			}
+		},
+		{
+			"x": -125,
+			"y": -146,
+			"width": 250,
+			"height": 250,
+			"type": "autoSprite",
+			"name": "Straps Buckle",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "metal"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"room_straps_buckle.png"
+				]
+			}
+		},
+		{
+			"x": -125,
+			"y": -146,
+			"width": 250,
+			"height": 250,
+			"type": "autoSprite",
+			"name": "Chin Strap",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "straps"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "chinStrap"
+				},
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"none:small": [
+					""
+				],
+				"none:large": [
+					""
+				],
+				"none:xlarge": [
+					""
+				],
+				"chin:small": [
+					"room_chin_strap.png"
+				],
+				"chin:large": [
+					"room_large_chin_strap.png"
+				],
+				"chin:xlarge": [
+					"room_large_chin_strap.png"
+				],
+				"collar:small": [
+					"room_chin_collar.png"
+				],
+				"collar:large": [
+					"room_large_chin_collar.png"
+				],
+				"collar:xlarge": [
+					"room_large_chin_collar.png"
+				]
+			}
+		},
+		{
+			"x": -125,
+			"y": -146,
+			"width": 250,
+			"height": 250,
+			"type": "autoSprite",
+			"name": "Chin Strap Buckle",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "metal"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "chinStrap"
+				},
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"none:small": [
+					""
+				],
+				"none:large": [
+					""
+				],
+				"none:xlarge": [
+					""
+				],
+				"chin:small": [
+					"room_chin_strap_buckle.png"
+				],
+				"chin:large": [
+					"room_large_chin_strap_buckle.png"
+				],
+				"chin:xlarge": [
+					"room_large_chin_strap_buckle.png"
+				],
+				"collar:small": [
+					"room_chin_collar_buckle.png"
+				],
+				"collar:large": [
+					"room_large_chin_collar_buckle.png"
+				],
+				"collar:xlarge": [
+					"room_large_chin_collar_buckle.png"
+				]
+			}
+		},
+		{
+			"x": -125,
+			"y": -146,
+			"width": 250,
+			"height": 250,
+			"type": "autoSprite",
+			"name": "Head Harness Rings",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "metal"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "headHarness"
+				},
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"none:small": [
+					""
+				],
+				"none:large": [
+					""
+				],
+				"none:xlarge": [
+					""
+				],
+				"harness:small": [
+					"room_head_harness_rings.png"
+				],
+				"harness:large": [
+					"room_head_harness_rings.png"
+				],
+				"harness:xlarge": [
+					"room_head_harness_rings.png"
+				]
+			}
+		},
+		{
+			"x": -125,
+			"y": -146,
+			"width": 250,
+			"height": 250,
+			"type": "autoSprite",
+			"name": "Head Harness Straps",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "straps"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "headHarness"
+				},
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"none:small": [
+					""
+				],
+				"none:large": [
+					""
+				],
+				"none:xlarge": [
+					""
+				],
+				"harness:small": [
+					"room_head_harness_straps.png"
+				],
+				"harness:large": [
+					"room_large_head_harness_straps.png"
+				],
+				"harness:xlarge": [
+					"room_large_head_harness_straps.png"
+				]
+			}
+		},
+		{
+			"x": -125,
+			"y": -146,
+			"width": 250,
+			"height": 250,
+			"type": "autoSprite",
+			"name": "Head Harness Buckle",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "metal"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "headHarness"
+				},
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"none:small": [
+					""
+				],
+				"none:large": [
+					""
+				],
+				"none:xlarge": [
+					""
+				],
+				"harness:small": [
+					"room_head_harness_buckles.png"
+				],
+				"harness:large": [
+					"room_head_harness_buckles.png"
+				],
+				"harness:xlarge": [
+					"room_head_harness_buckles.png"
+				]
+			}
+		},
+		{
+			"x": -125,
+			"y": -146,
+			"width": 250,
+			"height": 250,
+			"type": "autoSprite",
+			"name": "Head Harness Rivets",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "metal"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "headHarness"
+				},
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"none:small": [
+					""
+				],
+				"none:large": [
+					""
+				],
+				"none:xlarge": [
+					""
+				],
+				"harness:small": [
+					"room_head_harness_rivets.png"
+				],
+				"harness:large": [
+					"room_large_head_harness_rivets.png"
+				],
+				"harness:xlarge": [
+					"room_large_head_harness_rivets.png"
+				]
+			}
+		},
+		{
+			"x": -125,
+			"y": -146,
+			"width": 250,
+			"height": 250,
+			"type": "autoSprite",
+			"name": "Ballgag Straps",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "straps"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "ballgag"
+				},
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"false:small": [
+					""
+				],
+				"false:large": [
+					""
+				],
+				"false:xlarge": [
+					""
+				],
+				"true:small": [
+					"room_straps_ball.png"
+				],
+				"true:large": [
+					"room_large_straps_ball.png"
+				],
+				"true:xlarge": [
+					"room_large_straps_ball.png"
+				]
+			}
+		},
+		{
+			"x": -125,
+			"y": -146,
+			"width": 250,
+			"height": 250,
+			"type": "autoSprite",
+			"name": "Ballgag",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "ball"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "ballgag"
+				}
+			],
+			"imageMap": {
+				"false": [
+					""
+				],
+				"true": [
+					"room_ballgag.png"
+				]
+			}
+		},
+		{
+			"x": -125,
+			"y": -146,
+			"width": 250,
+			"height": 250,
+			"type": "autoSprite",
+			"name": "Ballgag Shine",
+			"graphicalLayers": [
+				{
+					"name": ""
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "ballgag"
+				}
+			],
+			"imageMap": {
+				"false": [
+					""
+				],
+				"true": [
+					"room_ballgag_shine.png"
+				]
+			}
+		},
+		{
+			"x": -125,
+			"y": -146,
+			"width": 250,
+			"height": 250,
+			"type": "autoSprite",
+			"name": "Panel",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "panel"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"small": [
+					"room_panel.png"
+				],
+				"large": [
+					"room_large_panel.png"
+				],
+				"xlarge": [
+					"room_xlarge_panel.png"
+				]
+			}
+		},
+		{
+			"x": -125,
+			"y": -146,
+			"width": 250,
+			"height": 250,
+			"type": "autoSprite",
+			"name": "Straps Front",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "straps"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"small": [
+					"room_straps_front.png"
+				],
+				"large": [
+					"room_large_straps_front.png"
+				],
+				"xlarge": [
+					"room_large_straps_front.png"
+				]
+			}
+		},
+		{
+			"x": -125,
+			"y": -146,
+			"width": 250,
+			"height": 250,
+			"type": "autoSprite",
+			"name": "Strap Cover",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "panel"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"small": [
+					"room_strapcover.png"
+				],
+				"large": [
+					"room_large_strapcover.png"
+				],
+				"xlarge": [
+					"room_xlarge_strapcover.png"
+				]
+			}
+		},
+		{
+			"x": -125,
+			"y": -146,
+			"width": 250,
+			"height": 250,
+			"type": "autoSprite",
+			"name": "Rivets",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "metal"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "size"
+				}
+			],
+			"imageMap": {
+				"small": [
+					"room_rivets.png"
+				],
+				"large": [
+					"room_large_rivets.png"
+				],
+				"xlarge": [
+					"room_xlarge_rivets.png"
+				]
+			}
+		}
 	]
 }
