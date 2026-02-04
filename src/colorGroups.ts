@@ -4,7 +4,7 @@ export const COLOR_GROUP_DEFINITION = {
 	skin: '#ECC7BA',
 	hair: '#444444',
 	hairShine: '#FFFFFF55',
-	rope: '#D7AC4DFF',
+	rope: '#D7AC4D',
 } as const satisfies Readonly<Record<string, HexRGBAColorString>>;
 
 if (Object.values(COLOR_GROUP_DEFINITION).some((color) => !HexRGBAColorStringSchema.safeParse(color).success)) {
