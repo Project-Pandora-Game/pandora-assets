@@ -310,7 +310,7 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "Open Side Inside",
-			"priority": "ABOVE_BODY",
+			"priority": "BELOW_BACK_HAIR",
 			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "suitcase",
@@ -319,6 +319,40 @@
 				"overrides": [
 					{
 						"image": "open_side.png",
+						"condition": [
+							[
+								{
+									"module": "door",
+									"operator": "=",
+									"value": "opened"
+								},
+								{
+									"module": "status",
+									"operator": "=",
+									"value": "front"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Open Side Front",
+			"priority": "ABOVE_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "suitcase",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "open_side_front.png",
 						"condition": [
 							[
 								{

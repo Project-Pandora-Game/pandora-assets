@@ -90,8 +90,8 @@
 	],
 	"roomLayers": [
 		{
-			"x": -170,
-			"y": -150,
+			"x": -125,
+			"y": -125,
 			"width": 250,
 			"height": 250,
 			"type": "autoSprite",

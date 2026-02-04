@@ -17,7 +17,7 @@ DefineAsset({
 		],
 	},
 	roomDeployment: {
-		autoDeployRelativePosition: [-90, -100, 0],
+		autoDeployRelativePosition: [-75, -40, 0],
 	},
 	// size:260, y:560, centered
 	preview: 'preview.png',
@@ -135,11 +135,11 @@ DefineAsset({
 				{
 					id: 'coiled',
 					name: 'Coiled',
-					default: true,
 				},
 				{
 					id: 'tangled',
 					name: 'Tangled',
+					default: true,
 				},
 			],
 		},
