@@ -82,6 +82,15 @@
 		},
 		{
 			"type": "slot",
+			"enableCond": [
+				[
+					{
+						"module": "curtain",
+						"operator": "=",
+						"value": "open"
+					}
+				]
+			],
 			"slot": "character_slot_inside",
 			"characterPosition": {
 				"offsetX": 0,
