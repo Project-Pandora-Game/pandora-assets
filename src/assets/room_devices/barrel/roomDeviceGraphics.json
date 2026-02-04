@@ -11,6 +11,15 @@
 		},
 		{
 			"type": "slot",
+			"enableCond": [
+				[
+					{
+						"module": "lid",
+						"operator": "!=",
+						"value": "closed"
+					}
+				]
+			],
 			"slot": "character_slot_inside",
 			"characterPosition": {
 				"offsetX": 0,
@@ -22,23 +31,6 @@
 				}
 			},
 			"characterPositionOverrides": [
-				{
-					"position": {
-						"offsetX": 0,
-						"offsetY": -50,
-						"relativeScale": 0.01,
-						"disablePoseOffset": true
-					},
-					"condition": [
-						[
-							{
-								"module": "lid",
-								"operator": "=",
-								"value": "closed"
-							}
-						]
-					]
-				},
 				{
 					"position": {
 						"offsetX": 0,
