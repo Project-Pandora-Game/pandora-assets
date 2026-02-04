@@ -7,6 +7,15 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"module": "tip_material",
+						"operator": "=",
+						"value": "rubber"
+					}
+				]
+			],
 			"name": "Tip back rubber",
 			"points": "static",
 			"automeshTemplate": "aboveBody",
@@ -17,10 +26,6 @@
 				}
 			],
 			"variables": [
-				{
-					"type": "typedModule",
-					"module": "tip_material"
-				},
 				{
 					"type": "typedModule",
 					"module": "tip"
@@ -38,197 +43,101 @@
 				"roughness": 0.6
 			},
 			"imageMap": {
-				"rubber:smooth:out:front": [
+				"smooth:out:front": [
 					"back_tip_smooth_out_front.png"
 				],
-				"rubber:smooth:out:back": [
+				"smooth:out:back": [
 					"back_tip_smooth_out_back.png"
 				],
-				"rubber:smooth:touch:front": [
+				"smooth:touch:front": [
 					"back_tip_smooth_touch_front.png"
 				],
-				"rubber:smooth:touch:back": [
+				"smooth:touch:back": [
 					"back_tip_smooth_touch_back.png"
 				],
-				"rubber:smooth:half:front": [
+				"smooth:half:front": [
 					"back_tip_smooth_half_front.png"
 				],
-				"rubber:smooth:half:back": [
+				"smooth:half:back": [
 					"back_tip_smooth_half_back.png"
 				],
-				"rubber:smooth:in:front": [
+				"smooth:in:front": [
 					"back_tip_smooth_in_front.png"
 				],
-				"rubber:smooth:in:back": [
+				"smooth:in:back": [
 					"back_tip_smooth_in_back.png"
 				],
-				"metal:smooth:out:front": [
-					""
-				],
-				"metal:smooth:out:back": [
-					""
-				],
-				"metal:smooth:touch:front": [
-					""
-				],
-				"metal:smooth:touch:back": [
-					""
-				],
-				"metal:smooth:half:front": [
-					""
-				],
-				"metal:smooth:half:back": [
-					""
-				],
-				"metal:smooth:in:front": [
-					""
-				],
-				"metal:smooth:in:back": [
-					""
-				],
-				"rubber:tipped:out:front": [
+				"tipped:out:front": [
 					"back_tip_tipped_out_front.png"
 				],
-				"rubber:tipped:out:back": [
+				"tipped:out:back": [
 					"back_tip_tipped_out_back.png"
 				],
-				"rubber:tipped:touch:front": [
+				"tipped:touch:front": [
 					"back_tip_tipped_touch_front.png"
 				],
-				"rubber:tipped:touch:back": [
+				"tipped:touch:back": [
 					"back_tip_tipped_touch_back.png"
 				],
-				"rubber:tipped:half:front": [
+				"tipped:half:front": [
 					"back_tip_tipped_half_front.png"
 				],
-				"rubber:tipped:half:back": [
+				"tipped:half:back": [
 					"back_tip_tipped_half_back.png"
 				],
-				"rubber:tipped:in:front": [
+				"tipped:in:front": [
 					"back_tip_tipped_in_front.png"
 				],
-				"rubber:tipped:in:back": [
+				"tipped:in:back": [
 					"back_tip_tipped_in_back.png"
 				],
-				"metal:tipped:out:front": [
-					""
-				],
-				"metal:tipped:out:back": [
-					""
-				],
-				"metal:tipped:touch:front": [
-					""
-				],
-				"metal:tipped:touch:back": [
-					""
-				],
-				"metal:tipped:half:front": [
-					""
-				],
-				"metal:tipped:half:back": [
-					""
-				],
-				"metal:tipped:in:front": [
-					""
-				],
-				"metal:tipped:in:back": [
-					""
-				],
-				"rubber:rabbit:out:front": [
+				"rabbit:out:front": [
 					"back_tip_rabbit_out_front.png"
 				],
-				"rubber:rabbit:out:back": [
+				"rabbit:out:back": [
 					"back_tip_rabbit_out_back.png"
 				],
-				"rubber:rabbit:touch:front": [
+				"rabbit:touch:front": [
 					"back_tip_rabbit_touch_front.png"
 				],
-				"rubber:rabbit:touch:back": [
+				"rabbit:touch:back": [
 					"back_tip_rabbit_touch_back.png"
 				],
-				"rubber:rabbit:half:front": [
+				"rabbit:half:front": [
 					"back_tip_rabbit_half_front.png"
 				],
-				"rubber:rabbit:half:back": [
+				"rabbit:half:back": [
 					"back_tip_rabbit_half_back.png"
 				],
-				"rubber:rabbit:in:front": [
+				"rabbit:in:front": [
 					"back_tip_rabbit_in_front.png"
 				],
-				"rubber:rabbit:in:back": [
+				"rabbit:in:back": [
 					"back_tip_rabbit_in_back.png"
 				],
-				"metal:rabbit:out:front": [
-					""
-				],
-				"metal:rabbit:out:back": [
-					""
-				],
-				"metal:rabbit:touch:front": [
-					""
-				],
-				"metal:rabbit:touch:back": [
-					""
-				],
-				"metal:rabbit:half:front": [
-					""
-				],
-				"metal:rabbit:half:back": [
-					""
-				],
-				"metal:rabbit:in:front": [
-					""
-				],
-				"metal:rabbit:in:back": [
-					""
-				],
-				"rubber:beaded:out:front": [
+				"beaded:out:front": [
 					"back_tip_beaded_out_front.png"
 				],
-				"rubber:beaded:out:back": [
+				"beaded:out:back": [
 					"back_tip_beaded_out_back.png"
 				],
-				"rubber:beaded:touch:front": [
+				"beaded:touch:front": [
 					"back_tip_beaded_touch_front.png"
 				],
-				"rubber:beaded:touch:back": [
+				"beaded:touch:back": [
 					"back_tip_beaded_touch_back.png"
 				],
-				"rubber:beaded:half:front": [
+				"beaded:half:front": [
 					"back_tip_beaded_half_front.png"
 				],
-				"rubber:beaded:half:back": [
+				"beaded:half:back": [
 					"back_tip_beaded_half_back.png"
 				],
-				"rubber:beaded:in:front": [
+				"beaded:in:front": [
 					"back_tip_beaded_in_front.png"
 				],
-				"rubber:beaded:in:back": [
+				"beaded:in:back": [
 					"back_tip_beaded_in_back.png"
-				],
-				"metal:beaded:out:front": [
-					""
-				],
-				"metal:beaded:out:back": [
-					""
-				],
-				"metal:beaded:touch:front": [
-					""
-				],
-				"metal:beaded:touch:back": [
-					""
-				],
-				"metal:beaded:half:front": [
-					""
-				],
-				"metal:beaded:half:back": [
-					""
-				],
-				"metal:beaded:in:front": [
-					""
-				],
-				"metal:beaded:in:back": [
-					""
 				]
 			}
 		},
@@ -238,6 +147,15 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"module": "tip_material",
+						"operator": "=",
+						"value": "metal"
+					}
+				]
+			],
 			"name": "Tip back metal",
 			"points": "static",
 			"automeshTemplate": "aboveBody",
@@ -248,10 +166,6 @@
 				}
 			],
 			"variables": [
-				{
-					"type": "typedModule",
-					"module": "tip_material"
-				},
 				{
 					"type": "typedModule",
 					"module": "tip"
@@ -269,196 +183,100 @@
 				"roughness": 0.2
 			},
 			"imageMap": {
-				"rubber:smooth:out:front": [
-					""
-				],
-				"rubber:smooth:out:back": [
-					""
-				],
-				"rubber:smooth:touch:front": [
-					""
-				],
-				"rubber:smooth:touch:back": [
-					""
-				],
-				"rubber:smooth:half:front": [
-					""
-				],
-				"rubber:smooth:half:back": [
-					""
-				],
-				"rubber:smooth:in:front": [
-					""
-				],
-				"rubber:smooth:in:back": [
-					""
-				],
-				"metal:smooth:out:front": [
+				"smooth:out:front": [
 					"back_tip_smooth_out_front.png"
 				],
-				"metal:smooth:out:back": [
+				"smooth:out:back": [
 					"back_tip_smooth_out_back.png"
 				],
-				"metal:smooth:touch:front": [
+				"smooth:touch:front": [
 					"back_tip_smooth_touch_front.png"
 				],
-				"metal:smooth:touch:back": [
+				"smooth:touch:back": [
 					"back_tip_smooth_touch_back.png"
 				],
-				"metal:smooth:half:front": [
+				"smooth:half:front": [
 					"back_tip_smooth_half_front.png"
 				],
-				"metal:smooth:half:back": [
+				"smooth:half:back": [
 					"back_tip_smooth_half_back.png"
 				],
-				"metal:smooth:in:front": [
+				"smooth:in:front": [
 					"back_tip_smooth_in_front.png"
 				],
-				"metal:smooth:in:back": [
+				"smooth:in:back": [
 					"back_tip_smooth_in_back.png"
 				],
-				"rubber:tipped:out:front": [
-					""
-				],
-				"rubber:tipped:out:back": [
-					""
-				],
-				"rubber:tipped:touch:front": [
-					""
-				],
-				"rubber:tipped:touch:back": [
-					""
-				],
-				"rubber:tipped:half:front": [
-					""
-				],
-				"rubber:tipped:half:back": [
-					""
-				],
-				"rubber:tipped:in:front": [
-					""
-				],
-				"rubber:tipped:in:back": [
-					""
-				],
-				"metal:tipped:out:front": [
+				"tipped:out:front": [
 					"back_tip_tipped_out_front.png"
 				],
-				"metal:tipped:out:back": [
+				"tipped:out:back": [
 					"back_tip_tipped_out_back.png"
 				],
-				"metal:tipped:touch:front": [
+				"tipped:touch:front": [
 					"back_tip_tipped_touch_front.png"
 				],
-				"metal:tipped:touch:back": [
+				"tipped:touch:back": [
 					"back_tip_tipped_touch_back.png"
 				],
-				"metal:tipped:half:front": [
+				"tipped:half:front": [
 					"back_tip_tipped_half_front.png"
 				],
-				"metal:tipped:half:back": [
+				"tipped:half:back": [
 					"back_tip_tipped_half_back.png"
 				],
-				"metal:tipped:in:front": [
+				"tipped:in:front": [
 					"back_tip_tipped_in_front.png"
 				],
-				"metal:tipped:in:back": [
+				"tipped:in:back": [
 					"back_tip_tipped_in_back.png"
 				],
-				"rubber:rabbit:out:front": [
-					""
-				],
-				"rubber:rabbit:out:back": [
-					""
-				],
-				"rubber:rabbit:touch:front": [
-					""
-				],
-				"rubber:rabbit:touch:back": [
-					""
-				],
-				"rubber:rabbit:half:front": [
-					""
-				],
-				"rubber:rabbit:half:back": [
-					""
-				],
-				"rubber:rabbit:in:front": [
-					""
-				],
-				"rubber:rabbit:in:back": [
-					""
-				],
-				"metal:rabbit:out:front": [
+				"rabbit:out:front": [
 					"back_tip_rabbit_out_front.png"
 				],
-				"metal:rabbit:out:back": [
+				"rabbit:out:back": [
 					"back_tip_rabbit_out_back.png"
 				],
-				"metal:rabbit:touch:front": [
+				"rabbit:touch:front": [
 					"back_tip_rabbit_touch_front.png"
 				],
-				"metal:rabbit:touch:back": [
+				"rabbit:touch:back": [
 					"back_tip_rabbit_touch_back.png"
 				],
-				"metal:rabbit:half:front": [
+				"rabbit:half:front": [
 					"back_tip_rabbit_half_front.png"
 				],
-				"metal:rabbit:half:back": [
+				"rabbit:half:back": [
 					"back_tip_rabbit_half_back.png"
 				],
-				"metal:rabbit:in:front": [
+				"rabbit:in:front": [
 					"back_tip_rabbit_in_front.png"
 				],
-				"metal:rabbit:in:back": [
+				"rabbit:in:back": [
 					"back_tip_rabbit_in_back.png"
 				],
-				"rubber:beaded:out:front": [
-					""
-				],
-				"rubber:beaded:out:back": [
-					""
-				],
-				"rubber:beaded:touch:front": [
-					""
-				],
-				"rubber:beaded:touch:back": [
-					""
-				],
-				"rubber:beaded:half:front": [
-					""
-				],
-				"rubber:beaded:half:back": [
-					""
-				],
-				"rubber:beaded:in:front": [
-					""
-				],
-				"rubber:beaded:in:back": [
-					""
-				],
-				"metal:beaded:out:front": [
+				"beaded:out:front": [
 					"back_tip_beaded_out_front.png"
 				],
-				"metal:beaded:out:back": [
+				"beaded:out:back": [
 					"back_tip_beaded_out_back.png"
 				],
-				"metal:beaded:touch:front": [
+				"beaded:touch:front": [
 					"back_tip_beaded_touch_front.png"
 				],
-				"metal:beaded:touch:back": [
+				"beaded:touch:back": [
 					"back_tip_beaded_touch_back.png"
 				],
-				"metal:beaded:half:front": [
+				"beaded:half:front": [
 					"back_tip_beaded_half_front.png"
 				],
-				"metal:beaded:half:back": [
+				"beaded:half:back": [
 					"back_tip_beaded_half_back.png"
 				],
-				"metal:beaded:in:front": [
+				"beaded:in:front": [
 					"back_tip_beaded_in_front.png"
 				],
-				"metal:beaded:in:back": [
+				"beaded:in:back": [
 					"back_tip_beaded_in_back.png"
 				]
 			}
@@ -604,6 +422,15 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"module": "tip_material",
+						"operator": "=",
+						"value": "rubber"
+					}
+				]
+			],
 			"name": "Tip front rubber",
 			"points": "static",
 			"automeshTemplate": "aboveBody",
@@ -614,10 +441,6 @@
 				}
 			],
 			"variables": [
-				{
-					"type": "typedModule",
-					"module": "tip_material"
-				},
 				{
 					"type": "typedModule",
 					"module": "tip"
@@ -635,197 +458,101 @@
 				"roughness": 0.6
 			},
 			"imageMap": {
-				"rubber:smooth:out:front": [
+				"smooth:out:front": [
 					"front_tip_smooth_out_front.png"
 				],
-				"rubber:smooth:out:back": [
+				"smooth:out:back": [
 					"front_tip_smooth_out_back.png"
 				],
-				"rubber:smooth:touch:front": [
+				"smooth:touch:front": [
 					"front_tip_smooth_touch_front.png"
 				],
-				"rubber:smooth:touch:back": [
+				"smooth:touch:back": [
 					"front_tip_smooth_touch_back.png"
 				],
-				"rubber:smooth:half:front": [
+				"smooth:half:front": [
 					"front_tip_smooth_half_front.png"
 				],
-				"rubber:smooth:half:back": [
+				"smooth:half:back": [
 					"front_tip_smooth_half_back.png"
 				],
-				"rubber:smooth:in:front": [
+				"smooth:in:front": [
 					"front_tip_smooth_in_front.png"
 				],
-				"rubber:smooth:in:back": [
+				"smooth:in:back": [
 					"front_tip_smooth_in_back.png"
 				],
-				"metal:smooth:out:front": [
-					""
-				],
-				"metal:smooth:out:back": [
-					""
-				],
-				"metal:smooth:touch:front": [
-					""
-				],
-				"metal:smooth:touch:back": [
-					""
-				],
-				"metal:smooth:half:front": [
-					""
-				],
-				"metal:smooth:half:back": [
-					""
-				],
-				"metal:smooth:in:front": [
-					""
-				],
-				"metal:smooth:in:back": [
-					""
-				],
-				"rubber:tipped:out:front": [
+				"tipped:out:front": [
 					"front_tip_tipped_out_front.png"
 				],
-				"rubber:tipped:out:back": [
+				"tipped:out:back": [
 					"front_tip_tipped_out_back.png"
 				],
-				"rubber:tipped:touch:front": [
+				"tipped:touch:front": [
 					"front_tip_tipped_touch_front.png"
 				],
-				"rubber:tipped:touch:back": [
+				"tipped:touch:back": [
 					"front_tip_tipped_touch_back.png"
 				],
-				"rubber:tipped:half:front": [
+				"tipped:half:front": [
 					"front_tip_tipped_half_front.png"
 				],
-				"rubber:tipped:half:back": [
+				"tipped:half:back": [
 					"front_tip_tipped_half_back.png"
 				],
-				"rubber:tipped:in:front": [
+				"tipped:in:front": [
 					"front_tip_tipped_in_front.png"
 				],
-				"rubber:tipped:in:back": [
+				"tipped:in:back": [
 					"front_tip_tipped_in_back.png"
 				],
-				"metal:tipped:out:front": [
-					""
-				],
-				"metal:tipped:out:back": [
-					""
-				],
-				"metal:tipped:touch:front": [
-					""
-				],
-				"metal:tipped:touch:back": [
-					""
-				],
-				"metal:tipped:half:front": [
-					""
-				],
-				"metal:tipped:half:back": [
-					""
-				],
-				"metal:tipped:in:front": [
-					""
-				],
-				"metal:tipped:in:back": [
-					""
-				],
-				"rubber:rabbit:out:front": [
+				"rabbit:out:front": [
 					"front_tip_rabbit_out_front.png"
 				],
-				"rubber:rabbit:out:back": [
+				"rabbit:out:back": [
 					"front_tip_rabbit_out_back.png"
 				],
-				"rubber:rabbit:touch:front": [
+				"rabbit:touch:front": [
 					"front_tip_rabbit_touch_front.png"
 				],
-				"rubber:rabbit:touch:back": [
+				"rabbit:touch:back": [
 					"front_tip_rabbit_touch_back.png"
 				],
-				"rubber:rabbit:half:front": [
+				"rabbit:half:front": [
 					"front_tip_rabbit_half_front.png"
 				],
-				"rubber:rabbit:half:back": [
+				"rabbit:half:back": [
 					"front_tip_rabbit_half_back.png"
 				],
-				"rubber:rabbit:in:front": [
+				"rabbit:in:front": [
 					"front_tip_rabbit_in_front.png"
 				],
-				"rubber:rabbit:in:back": [
+				"rabbit:in:back": [
 					"front_tip_rabbit_in_back.png"
 				],
-				"metal:rabbit:out:front": [
-					""
-				],
-				"metal:rabbit:out:back": [
-					""
-				],
-				"metal:rabbit:touch:front": [
-					""
-				],
-				"metal:rabbit:touch:back": [
-					""
-				],
-				"metal:rabbit:half:front": [
-					""
-				],
-				"metal:rabbit:half:back": [
-					""
-				],
-				"metal:rabbit:in:front": [
-					""
-				],
-				"metal:rabbit:in:back": [
-					""
-				],
-				"rubber:beaded:out:front": [
+				"beaded:out:front": [
 					"front_tip_beaded_out_front.png"
 				],
-				"rubber:beaded:out:back": [
+				"beaded:out:back": [
 					"front_tip_beaded_out_back.png"
 				],
-				"rubber:beaded:touch:front": [
+				"beaded:touch:front": [
 					"front_tip_beaded_touch_front.png"
 				],
-				"rubber:beaded:touch:back": [
+				"beaded:touch:back": [
 					"front_tip_beaded_touch_back.png"
 				],
-				"rubber:beaded:half:front": [
+				"beaded:half:front": [
 					"front_tip_beaded_half_front.png"
 				],
-				"rubber:beaded:half:back": [
+				"beaded:half:back": [
 					"front_tip_beaded_half_back.png"
 				],
-				"rubber:beaded:in:front": [
+				"beaded:in:front": [
 					"front_tip_beaded_in_front.png"
 				],
-				"rubber:beaded:in:back": [
+				"beaded:in:back": [
 					"front_tip_beaded_in_back.png"
-				],
-				"metal:beaded:out:front": [
-					""
-				],
-				"metal:beaded:out:back": [
-					""
-				],
-				"metal:beaded:touch:front": [
-					""
-				],
-				"metal:beaded:touch:back": [
-					""
-				],
-				"metal:beaded:half:front": [
-					""
-				],
-				"metal:beaded:half:back": [
-					""
-				],
-				"metal:beaded:in:front": [
-					""
-				],
-				"metal:beaded:in:back": [
-					""
 				]
 			}
 		},
@@ -835,6 +562,15 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"module": "tip_material",
+						"operator": "=",
+						"value": "metal"
+					}
+				]
+			],
 			"name": "Tip front metal",
 			"points": "static",
 			"automeshTemplate": "aboveBody",
@@ -845,10 +581,6 @@
 				}
 			],
 			"variables": [
-				{
-					"type": "typedModule",
-					"module": "tip_material"
-				},
 				{
 					"type": "typedModule",
 					"module": "tip"
@@ -866,196 +598,100 @@
 				"roughness": 0.2
 			},
 			"imageMap": {
-				"rubber:smooth:out:front": [
-					""
-				],
-				"rubber:smooth:out:back": [
-					""
-				],
-				"rubber:smooth:touch:front": [
-					""
-				],
-				"rubber:smooth:touch:back": [
-					""
-				],
-				"rubber:smooth:half:front": [
-					""
-				],
-				"rubber:smooth:half:back": [
-					""
-				],
-				"rubber:smooth:in:front": [
-					""
-				],
-				"rubber:smooth:in:back": [
-					""
-				],
-				"metal:smooth:out:front": [
+				"smooth:out:front": [
 					"front_tip_smooth_out_front.png"
 				],
-				"metal:smooth:out:back": [
+				"smooth:out:back": [
 					"front_tip_smooth_out_back.png"
 				],
-				"metal:smooth:touch:front": [
+				"smooth:touch:front": [
 					"front_tip_smooth_touch_front.png"
 				],
-				"metal:smooth:touch:back": [
+				"smooth:touch:back": [
 					"front_tip_smooth_touch_back.png"
 				],
-				"metal:smooth:half:front": [
+				"smooth:half:front": [
 					"front_tip_smooth_half_front.png"
 				],
-				"metal:smooth:half:back": [
+				"smooth:half:back": [
 					"front_tip_smooth_half_back.png"
 				],
-				"metal:smooth:in:front": [
+				"smooth:in:front": [
 					"front_tip_smooth_in_front.png"
 				],
-				"metal:smooth:in:back": [
+				"smooth:in:back": [
 					"front_tip_smooth_in_back.png"
 				],
-				"rubber:tipped:out:front": [
-					""
-				],
-				"rubber:tipped:out:back": [
-					""
-				],
-				"rubber:tipped:touch:front": [
-					""
-				],
-				"rubber:tipped:touch:back": [
-					""
-				],
-				"rubber:tipped:half:front": [
-					""
-				],
-				"rubber:tipped:half:back": [
-					""
-				],
-				"rubber:tipped:in:front": [
-					""
-				],
-				"rubber:tipped:in:back": [
-					""
-				],
-				"metal:tipped:out:front": [
+				"tipped:out:front": [
 					"front_tip_tipped_out_front.png"
 				],
-				"metal:tipped:out:back": [
+				"tipped:out:back": [
 					"front_tip_tipped_out_back.png"
 				],
-				"metal:tipped:touch:front": [
+				"tipped:touch:front": [
 					"front_tip_tipped_touch_front.png"
 				],
-				"metal:tipped:touch:back": [
+				"tipped:touch:back": [
 					"front_tip_tipped_touch_back.png"
 				],
-				"metal:tipped:half:front": [
+				"tipped:half:front": [
 					"front_tip_tipped_half_front.png"
 				],
-				"metal:tipped:half:back": [
+				"tipped:half:back": [
 					"front_tip_tipped_half_back.png"
 				],
-				"metal:tipped:in:front": [
+				"tipped:in:front": [
 					"front_tip_tipped_in_front.png"
 				],
-				"metal:tipped:in:back": [
+				"tipped:in:back": [
 					"front_tip_tipped_in_back.png"
 				],
-				"rubber:rabbit:out:front": [
-					""
-				],
-				"rubber:rabbit:out:back": [
-					""
-				],
-				"rubber:rabbit:touch:front": [
-					""
-				],
-				"rubber:rabbit:touch:back": [
-					""
-				],
-				"rubber:rabbit:half:front": [
-					""
-				],
-				"rubber:rabbit:half:back": [
-					""
-				],
-				"rubber:rabbit:in:front": [
-					""
-				],
-				"rubber:rabbit:in:back": [
-					""
-				],
-				"metal:rabbit:out:front": [
+				"rabbit:out:front": [
 					"front_tip_rabbit_out_front.png"
 				],
-				"metal:rabbit:out:back": [
+				"rabbit:out:back": [
 					"front_tip_rabbit_out_back.png"
 				],
-				"metal:rabbit:touch:front": [
+				"rabbit:touch:front": [
 					"front_tip_rabbit_touch_front.png"
 				],
-				"metal:rabbit:touch:back": [
+				"rabbit:touch:back": [
 					"front_tip_rabbit_touch_back.png"
 				],
-				"metal:rabbit:half:front": [
+				"rabbit:half:front": [
 					"front_tip_rabbit_half_front.png"
 				],
-				"metal:rabbit:half:back": [
+				"rabbit:half:back": [
 					"front_tip_rabbit_half_back.png"
 				],
-				"metal:rabbit:in:front": [
+				"rabbit:in:front": [
 					"front_tip_rabbit_in_front.png"
 				],
-				"metal:rabbit:in:back": [
+				"rabbit:in:back": [
 					"front_tip_rabbit_in_back.png"
 				],
-				"rubber:beaded:out:front": [
-					""
-				],
-				"rubber:beaded:out:back": [
-					""
-				],
-				"rubber:beaded:touch:front": [
-					""
-				],
-				"rubber:beaded:touch:back": [
-					""
-				],
-				"rubber:beaded:half:front": [
-					""
-				],
-				"rubber:beaded:half:back": [
-					""
-				],
-				"rubber:beaded:in:front": [
-					""
-				],
-				"rubber:beaded:in:back": [
-					""
-				],
-				"metal:beaded:out:front": [
+				"beaded:out:front": [
 					"front_tip_beaded_out_front.png"
 				],
-				"metal:beaded:out:back": [
+				"beaded:out:back": [
 					"front_tip_beaded_out_back.png"
 				],
-				"metal:beaded:touch:front": [
+				"beaded:touch:front": [
 					"front_tip_beaded_touch_front.png"
 				],
-				"metal:beaded:touch:back": [
+				"beaded:touch:back": [
 					"front_tip_beaded_touch_back.png"
 				],
-				"metal:beaded:half:front": [
+				"beaded:half:front": [
 					"front_tip_beaded_half_front.png"
 				],
-				"metal:beaded:half:back": [
+				"beaded:half:back": [
 					"front_tip_beaded_half_back.png"
 				],
-				"metal:beaded:in:front": [
+				"beaded:in:front": [
 					"front_tip_beaded_in_front.png"
 				],
-				"metal:beaded:in:back": [
+				"beaded:in:back": [
 					"front_tip_beaded_in_back.png"
 				]
 			}
@@ -1068,6 +704,15 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoSprite",
+			"enableCond": [
+				[
+					{
+						"module": "tip_material",
+						"operator": "=",
+						"value": "rubber"
+					}
+				]
+			],
 			"name": "Tip back rubber",
 			"offsetOverrides": [
 				{
@@ -1110,10 +755,6 @@
 			"variables": [
 				{
 					"type": "typedModule",
-					"module": "tip_material"
-				},
-				{
-					"type": "typedModule",
 					"module": "tip"
 				},
 				{
@@ -1126,53 +767,29 @@
 				"roughness": 0.6
 			},
 			"imageMap": {
-				"rubber:smooth:front": [
+				"smooth:front": [
 					"back_tip_smooth_out_front.png"
 				],
-				"rubber:smooth:back": [
+				"smooth:back": [
 					"front_tip_smooth_out_back.png"
 				],
-				"rubber:tipped:front": [
+				"tipped:front": [
 					"back_tip_tipped_out_front.png"
 				],
-				"rubber:tipped:back": [
+				"tipped:back": [
 					"front_tip_tipped_out_back.png"
 				],
-				"rubber:rabbit:front": [
+				"rabbit:front": [
 					"back_tip_rabbit_out_front.png"
 				],
-				"rubber:rabbit:back": [
+				"rabbit:back": [
 					"front_tip_rabbit_out_back.png"
 				],
-				"rubber:beaded:front": [
+				"beaded:front": [
 					"back_tip_beaded_out_front.png"
 				],
-				"rubber:beaded:back": [
+				"beaded:back": [
 					"front_tip_beaded_out_back.png"
-				],
-				"metal:smooth:front": [
-					""
-				],
-				"metal:smooth:back": [
-					""
-				],
-				"metal:tipped:front": [
-					""
-				],
-				"metal:tipped:back": [
-					""
-				],
-				"metal:rabbit:front": [
-					""
-				],
-				"metal:rabbit:back": [
-					""
-				],
-				"metal:beaded:front": [
-					""
-				],
-				"metal:beaded:back": [
-					""
 				]
 			}
 		},
@@ -1182,6 +799,15 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoSprite",
+			"enableCond": [
+				[
+					{
+						"module": "tip_material",
+						"operator": "=",
+						"value": "metal"
+					}
+				]
+			],
 			"name": "Tip back metal",
 			"offsetOverrides": [
 				{
@@ -1224,10 +850,6 @@
 			"variables": [
 				{
 					"type": "typedModule",
-					"module": "tip_material"
-				},
-				{
-					"type": "typedModule",
 					"module": "tip"
 				},
 				{
@@ -1240,52 +862,28 @@
 				"roughness": 0.2
 			},
 			"imageMap": {
-				"rubber:smooth:front": [
-					""
-				],
-				"rubber:smooth:back": [
-					""
-				],
-				"rubber:tipped:front": [
-					""
-				],
-				"rubber:tipped:back": [
-					""
-				],
-				"rubber:rabbit:front": [
-					""
-				],
-				"rubber:rabbit:back": [
-					""
-				],
-				"rubber:beaded:front": [
-					""
-				],
-				"rubber:beaded:back": [
-					""
-				],
-				"metal:smooth:front": [
+				"smooth:front": [
 					"back_tip_smooth_out_front.png"
 				],
-				"metal:smooth:back": [
+				"smooth:back": [
 					"front_tip_smooth_out_back.png"
 				],
-				"metal:tipped:front": [
+				"tipped:front": [
 					"back_tip_tipped_out_front.png"
 				],
-				"metal:tipped:back": [
+				"tipped:back": [
 					"front_tip_tipped_out_back.png"
 				],
-				"metal:rabbit:front": [
+				"rabbit:front": [
 					"back_tip_rabbit_out_front.png"
 				],
-				"metal:rabbit:back": [
+				"rabbit:back": [
 					"front_tip_rabbit_out_back.png"
 				],
-				"metal:beaded:front": [
+				"beaded:front": [
 					"back_tip_beaded_out_front.png"
 				],
-				"metal:beaded:back": [
+				"beaded:back": [
 					"front_tip_beaded_out_back.png"
 				]
 			}
@@ -1386,6 +984,15 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoSprite",
+			"enableCond": [
+				[
+					{
+						"module": "tip_material",
+						"operator": "=",
+						"value": "rubber"
+					}
+				]
+			],
 			"name": "Tip front rubber",
 			"offsetOverrides": [
 				{
@@ -1428,10 +1035,6 @@
 			"variables": [
 				{
 					"type": "typedModule",
-					"module": "tip_material"
-				},
-				{
-					"type": "typedModule",
 					"module": "tip"
 				},
 				{
@@ -1444,53 +1047,29 @@
 				"roughness": 0.6
 			},
 			"imageMap": {
-				"rubber:smooth:front": [
+				"smooth:front": [
 					"front_tip_smooth_out_front.png"
 				],
-				"rubber:smooth:back": [
+				"smooth:back": [
 					"back_tip_smooth_out_back.png"
 				],
-				"rubber:tipped:front": [
+				"tipped:front": [
 					"front_tip_tipped_out_front.png"
 				],
-				"rubber:tipped:back": [
+				"tipped:back": [
 					"back_tip_tipped_out_back.png"
 				],
-				"rubber:rabbit:front": [
+				"rabbit:front": [
 					"front_tip_rabbit_out_front.png"
 				],
-				"rubber:rabbit:back": [
+				"rabbit:back": [
 					"back_tip_rabbit_out_back.png"
 				],
-				"rubber:beaded:front": [
+				"beaded:front": [
 					"front_tip_beaded_out_front.png"
 				],
-				"rubber:beaded:back": [
+				"beaded:back": [
 					"back_tip_beaded_out_back.png"
-				],
-				"metal:smooth:front": [
-					""
-				],
-				"metal:smooth:back": [
-					""
-				],
-				"metal:tipped:front": [
-					""
-				],
-				"metal:tipped:back": [
-					""
-				],
-				"metal:rabbit:front": [
-					""
-				],
-				"metal:rabbit:back": [
-					""
-				],
-				"metal:beaded:front": [
-					""
-				],
-				"metal:beaded:back": [
-					""
 				]
 			}
 		},
@@ -1500,6 +1079,15 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoSprite",
+			"enableCond": [
+				[
+					{
+						"module": "tip_material",
+						"operator": "=",
+						"value": "metal"
+					}
+				]
+			],
 			"name": "Tip front metal",
 			"offsetOverrides": [
 				{
@@ -1542,10 +1130,6 @@
 			"variables": [
 				{
 					"type": "typedModule",
-					"module": "tip_material"
-				},
-				{
-					"type": "typedModule",
 					"module": "tip"
 				},
 				{
@@ -1558,52 +1142,28 @@
 				"roughness": 0.2
 			},
 			"imageMap": {
-				"rubber:smooth:front": [
-					""
-				],
-				"rubber:smooth:back": [
-					""
-				],
-				"rubber:tipped:front": [
-					""
-				],
-				"rubber:tipped:back": [
-					""
-				],
-				"rubber:rabbit:front": [
-					""
-				],
-				"rubber:rabbit:back": [
-					""
-				],
-				"rubber:beaded:front": [
-					""
-				],
-				"rubber:beaded:back": [
-					""
-				],
-				"metal:smooth:front": [
+				"smooth:front": [
 					"front_tip_smooth_out_front.png"
 				],
-				"metal:smooth:back": [
+				"smooth:back": [
 					"back_tip_smooth_out_back.png"
 				],
-				"metal:tipped:front": [
+				"tipped:front": [
 					"front_tip_tipped_out_front.png"
 				],
-				"metal:tipped:back": [
+				"tipped:back": [
 					"back_tip_tipped_out_back.png"
 				],
-				"metal:rabbit:front": [
+				"rabbit:front": [
 					"front_tip_rabbit_out_front.png"
 				],
-				"metal:rabbit:back": [
+				"rabbit:back": [
 					"back_tip_rabbit_out_back.png"
 				],
-				"metal:beaded:front": [
+				"beaded:front": [
 					"front_tip_beaded_out_front.png"
 				],
-				"metal:beaded:back": [
+				"beaded:back": [
 					"back_tip_beaded_out_back.png"
 				]
 			}
