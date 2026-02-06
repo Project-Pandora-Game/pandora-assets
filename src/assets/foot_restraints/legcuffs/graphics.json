@@ -7,6 +7,13 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"view": "front"
+					}
+				]
+			],
 			"name": "front_cuffs",
 			"points": "body",
 			"automeshTemplate": "aboveBodyMirror",
@@ -22,29 +29,48 @@
 			],
 			"variables": [
 				{
-					"type": "view"
+					"type": "legsState"
 				},
 				{
-					"type": "legsState"
+					"type": "typedModule",
+					"module": "chainState"
 				}
 			],
 			"imageMap": {
-				"front:standing": [
+				"standing:none": [
+					"leg_cuffs_no_chain.png"
+				],
+				"standing:long": [
 					"leg_cuffs.png"
 				],
-				"front:sitting": [
+				"standing:short": [
 					"leg_cuffs.png"
 				],
-				"front:kneeling": [
+				"standing:clipped": [
+					"leg_cuffs.png"
+				],
+				"sitting:none": [
+					"leg_cuffs_no_chain.png"
+				],
+				"sitting:long": [
+					"leg_cuffs.png"
+				],
+				"sitting:short": [
+					"leg_cuffs.png"
+				],
+				"sitting:clipped": [
+					"leg_cuffs.png"
+				],
+				"kneeling:none": [
 					""
 				],
-				"back:standing": [
+				"kneeling:long": [
 					""
 				],
-				"back:sitting": [
+				"kneeling:short": [
 					""
 				],
-				"back:kneeling": [
+				"kneeling:clipped": [
 					""
 				]
 			}
@@ -55,6 +81,13 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"view": "back"
+					}
+				]
+			],
 			"name": "back_cuffs",
 			"points": "body",
 			"automeshTemplate": "belowBodyMirror",
@@ -70,29 +103,48 @@
 			],
 			"variables": [
 				{
-					"type": "view"
+					"type": "legsState"
 				},
 				{
-					"type": "legsState"
+					"type": "typedModule",
+					"module": "chainState"
 				}
 			],
 			"imageMap": {
-				"front:standing": [
-					""
+				"standing:none": [
+					"leg_cuffs_no_chain.png"
 				],
-				"front:sitting": [
-					""
-				],
-				"front:kneeling": [
-					""
-				],
-				"back:standing": [
+				"standing:long": [
 					"leg_cuffs.png"
 				],
-				"back:sitting": [
+				"standing:short": [
 					"leg_cuffs.png"
 				],
-				"back:kneeling": [
+				"standing:clipped": [
+					"leg_cuffs.png"
+				],
+				"sitting:none": [
+					"leg_cuffs_no_chain.png"
+				],
+				"sitting:long": [
+					"leg_cuffs.png"
+				],
+				"sitting:short": [
+					"leg_cuffs.png"
+				],
+				"sitting:clipped": [
+					"leg_cuffs.png"
+				],
+				"kneeling:none": [
+					""
+				],
+				"kneeling:long": [
+					""
+				],
+				"kneeling:short": [
+					""
+				],
+				"kneeling:clipped": [
 					""
 				]
 			}
@@ -103,6 +155,16 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"view": "back"
+					},
+					{
+						"legs": "kneeling"
+					}
+				]
+			],
 			"name": "kneel_back_cuffs",
 			"points": "static",
 			"automeshTemplate": "belowBody",
@@ -114,30 +176,22 @@
 			],
 			"variables": [
 				{
-					"type": "view"
-				},
-				{
-					"type": "legsState"
+					"type": "typedModule",
+					"module": "chainState"
 				}
 			],
 			"imageMap": {
-				"front:standing": [
-					""
-				],
-				"front:sitting": [
-					""
-				],
-				"front:kneeling": [
-					""
-				],
-				"back:standing": [
-					""
-				],
-				"back:sitting": [
-					""
-				],
-				"back:kneeling": [
+				"none": [
 					"leg_cuffs_kneeling_back.png"
+				],
+				"long": [
+					"leg_cuffs_kneeling_back.png"
+				],
+				"short": [
+					"leg_cuffs_kneeling_back.png"
+				],
+				"clipped": [
+					"leg_cuffs_kneeling_back_clipped.png"
 				]
 			}
 		},
@@ -147,6 +201,18 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"view": "front"
+					},
+					{
+						"module": "chainState",
+						"operator": "=",
+						"value": "long"
+					}
+				]
+			],
 			"name": "chains_long_front",
 			"points": "static",
 			"automeshTemplate": "belowBody",
@@ -159,234 +225,100 @@
 			"variables": [
 				{
 					"type": "typedModule",
-					"module": "chainState"
-				},
-				{
-					"type": "typedModule",
 					"module": "connectors"
 				},
 				{
 					"type": "legsState"
 				},
 				{
-					"type": "view"
+					"type": "bone",
+					"bone": "leg_l",
+					"stops": [
+						0,
+						5
+					]
 				}
 			],
 			"imageMap": {
-				"none:notConnected:standing:front": [
-					""
-				],
-				"none:notConnected:standing:back": [
-					""
-				],
-				"none:notConnected:sitting:front": [
-					""
-				],
-				"none:notConnected:sitting:back": [
-					""
-				],
-				"none:notConnected:kneeling:front": [
-					""
-				],
-				"none:notConnected:kneeling:back": [
-					""
-				],
-				"none:front:standing:front": [
-					""
-				],
-				"none:front:standing:back": [
-					""
-				],
-				"none:front:sitting:front": [
-					""
-				],
-				"none:front:sitting:back": [
-					""
-				],
-				"none:front:kneeling:front": [
-					""
-				],
-				"none:front:kneeling:back": [
-					""
-				],
-				"none:back:standing:front": [
-					""
-				],
-				"none:back:standing:back": [
-					""
-				],
-				"none:back:sitting:front": [
-					""
-				],
-				"none:back:sitting:back": [
-					""
-				],
-				"none:back:kneeling:front": [
-					""
-				],
-				"none:back:kneeling:back": [
-					""
-				],
-				"long:notConnected:standing:front": [
+				"notConnected:standing:-180": [
 					"chain_long_taunt.png"
 				],
-				"long:notConnected:standing:back": [
-					""
-				],
-				"long:notConnected:sitting:front": [
+				"notConnected:sitting:-180": [
 					"chain_short_taunt_sitting.png"
 				],
-				"long:notConnected:sitting:back": [
-					""
-				],
-				"long:notConnected:kneeling:front": [
+				"notConnected:kneeling:-180": [
 					"chain_taunt_kneeling_front.png"
 				],
-				"long:notConnected:kneeling:back": [
-					""
-				],
-				"long:front:standing:front": [
+				"front:standing:-180": [
 					"chain_long_slag.png"
 				],
-				"long:front:standing:back": [
-					""
-				],
-				"long:front:sitting:front": [
+				"front:sitting:-180": [
 					"chain_long_slag_sitting.png"
 				],
-				"long:front:sitting:back": [
-					""
+				"front:kneeling:-180": [
+					"chain_long_slag_kneeling_front.png"
 				],
-				"long:front:kneeling:front": [
-					"chain_taunt_kneeling_front.png"
-				],
-				"long:front:kneeling:back": [
-					""
-				],
-				"long:back:standing:front": [
+				"back:standing:-180": [
 					"chain_long_slag.png"
 				],
-				"long:back:standing:back": [
+				"back:sitting:-180": [
+					"chain_long_slag_sitting.png"
+				],
+				"back:kneeling:-180": [
+					"chain_long_slag_kneeling_front.png"
+				],
+				"notConnected:sitting:0": [
 					""
 				],
-				"long:back:sitting:front": [
+				"notConnected:sitting:5": [
 					""
 				],
-				"long:back:sitting:back": [
+				"notConnected:standing:0": [
 					""
 				],
-				"long:back:kneeling:front": [
-					"chain_taunt_kneeling_back.png"
-				],
-				"long:back:kneeling:back": [
+				"notConnected:standing:5": [
 					""
 				],
-				"short:notConnected:standing:front": [
+				"notConnected:kneeling:0": [
 					""
 				],
-				"short:notConnected:standing:back": [
+				"notConnected:kneeling:5": [
 					""
 				],
-				"short:notConnected:sitting:front": [
+				"front:standing:0": [
 					""
 				],
-				"short:notConnected:sitting:back": [
+				"front:standing:5": [
 					""
 				],
-				"short:notConnected:kneeling:front": [
+				"front:sitting:0": [
 					""
 				],
-				"short:notConnected:kneeling:back": [
+				"front:sitting:5": [
 					""
 				],
-				"short:front:standing:front": [
+				"front:kneeling:0": [
 					""
 				],
-				"short:front:standing:back": [
+				"front:kneeling:5": [
 					""
 				],
-				"short:front:sitting:front": [
+				"back:standing:0": [
 					""
 				],
-				"short:front:sitting:back": [
+				"back:standing:5": [
 					""
 				],
-				"short:front:kneeling:front": [
+				"back:sitting:0": [
 					""
 				],
-				"short:front:kneeling:back": [
+				"back:sitting:5": [
 					""
 				],
-				"short:back:standing:front": [
+				"back:kneeling:0": [
 					""
 				],
-				"short:back:standing:back": [
-					""
-				],
-				"short:back:sitting:front": [
-					""
-				],
-				"short:back:sitting:back": [
-					""
-				],
-				"short:back:kneeling:front": [
-					""
-				],
-				"short:back:kneeling:back": [
-					""
-				],
-				"clipped:notConnected:standing:front": [
-					""
-				],
-				"clipped:notConnected:standing:back": [
-					""
-				],
-				"clipped:notConnected:sitting:front": [
-					""
-				],
-				"clipped:notConnected:sitting:back": [
-					""
-				],
-				"clipped:notConnected:kneeling:front": [
-					""
-				],
-				"clipped:notConnected:kneeling:back": [
-					""
-				],
-				"clipped:front:standing:front": [
-					""
-				],
-				"clipped:front:standing:back": [
-					""
-				],
-				"clipped:front:sitting:front": [
-					""
-				],
-				"clipped:front:sitting:back": [
-					""
-				],
-				"clipped:front:kneeling:front": [
-					""
-				],
-				"clipped:front:kneeling:back": [
-					""
-				],
-				"clipped:back:standing:front": [
-					""
-				],
-				"clipped:back:standing:back": [
-					""
-				],
-				"clipped:back:sitting:front": [
-					""
-				],
-				"clipped:back:sitting:back": [
-					""
-				],
-				"clipped:back:kneeling:front": [
-					""
-				],
-				"clipped:back:kneeling:back": [
+				"back:kneeling:5": [
 					""
 				]
 			}
@@ -397,6 +329,18 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"view": "back"
+					},
+					{
+						"module": "chainState",
+						"operator": "=",
+						"value": "long"
+					}
+				]
+			],
 			"name": "chains_long_back",
 			"points": "static",
 			"automeshTemplate": "aboveBody",
@@ -409,235 +353,39 @@
 			"variables": [
 				{
 					"type": "typedModule",
-					"module": "chainState"
-				},
-				{
-					"type": "typedModule",
 					"module": "connectors"
 				},
 				{
 					"type": "legsState"
-				},
-				{
-					"type": "view"
 				}
 			],
 			"imageMap": {
-				"none:notConnected:standing:front": [
-					""
-				],
-				"none:notConnected:standing:back": [
-					""
-				],
-				"none:notConnected:sitting:front": [
-					""
-				],
-				"none:notConnected:sitting:back": [
-					""
-				],
-				"none:notConnected:kneeling:front": [
-					""
-				],
-				"none:notConnected:kneeling:back": [
-					""
-				],
-				"none:front:standing:front": [
-					""
-				],
-				"none:front:standing:back": [
-					""
-				],
-				"none:front:sitting:front": [
-					""
-				],
-				"none:front:sitting:back": [
-					""
-				],
-				"none:front:kneeling:front": [
-					""
-				],
-				"none:front:kneeling:back": [
-					""
-				],
-				"none:back:standing:front": [
-					""
-				],
-				"none:back:standing:back": [
-					""
-				],
-				"none:back:sitting:front": [
-					""
-				],
-				"none:back:sitting:back": [
-					""
-				],
-				"none:back:kneeling:front": [
-					""
-				],
-				"none:back:kneeling:back": [
-					""
-				],
-				"long:notConnected:standing:front": [
-					""
-				],
-				"long:notConnected:standing:back": [
+				"notConnected:standing": [
 					"chain_long_taunt.png"
 				],
-				"long:notConnected:sitting:front": [
-					""
-				],
-				"long:notConnected:sitting:back": [
+				"notConnected:sitting": [
 					"chain_short_taunt_sitting.png"
 				],
-				"long:notConnected:kneeling:front": [
-					""
-				],
-				"long:notConnected:kneeling:back": [
+				"notConnected:kneeling": [
 					"chain_taunt_kneeling_back.png"
 				],
-				"long:front:standing:front": [
-					""
-				],
-				"long:front:standing:back": [
+				"front:standing": [
 					"chain_long_slag.png"
 				],
-				"long:front:sitting:front": [
-					""
-				],
-				"long:front:sitting:back": [
+				"front:sitting": [
 					"chain_long_slag_sitting.png"
 				],
-				"long:front:kneeling:front": [
-					""
-				],
-				"long:front:kneeling:back": [
-					"chain_taunt_kneeling_front.png"
-				],
-				"long:back:standing:front": [
-					""
-				],
-				"long:back:standing:back": [
-					"chain_long_slag.png"
-				],
-				"long:back:sitting:front": [
-					""
-				],
-				"long:back:sitting:back": [
-					""
-				],
-				"long:back:kneeling:front": [
-					""
-				],
-				"long:back:kneeling:back": [
+				"front:kneeling": [
 					"chain_taunt_kneeling_back.png"
 				],
-				"short:notConnected:standing:front": [
+				"back:standing": [
+					"chain_long_slag.png"
+				],
+				"back:sitting": [
 					""
 				],
-				"short:notConnected:standing:back": [
-					""
-				],
-				"short:notConnected:sitting:front": [
-					""
-				],
-				"short:notConnected:sitting:back": [
-					""
-				],
-				"short:notConnected:kneeling:front": [
-					""
-				],
-				"short:notConnected:kneeling:back": [
-					""
-				],
-				"short:front:standing:front": [
-					""
-				],
-				"short:front:standing:back": [
-					""
-				],
-				"short:front:sitting:front": [
-					""
-				],
-				"short:front:sitting:back": [
-					""
-				],
-				"short:front:kneeling:front": [
-					""
-				],
-				"short:front:kneeling:back": [
-					""
-				],
-				"short:back:standing:front": [
-					""
-				],
-				"short:back:standing:back": [
-					""
-				],
-				"short:back:sitting:front": [
-					""
-				],
-				"short:back:sitting:back": [
-					""
-				],
-				"short:back:kneeling:front": [
-					""
-				],
-				"short:back:kneeling:back": [
-					""
-				],
-				"clipped:notConnected:standing:front": [
-					""
-				],
-				"clipped:notConnected:standing:back": [
-					""
-				],
-				"clipped:notConnected:sitting:front": [
-					""
-				],
-				"clipped:notConnected:sitting:back": [
-					""
-				],
-				"clipped:notConnected:kneeling:front": [
-					""
-				],
-				"clipped:notConnected:kneeling:back": [
-					""
-				],
-				"clipped:front:standing:front": [
-					""
-				],
-				"clipped:front:standing:back": [
-					""
-				],
-				"clipped:front:sitting:front": [
-					""
-				],
-				"clipped:front:sitting:back": [
-					""
-				],
-				"clipped:front:kneeling:front": [
-					""
-				],
-				"clipped:front:kneeling:back": [
-					""
-				],
-				"clipped:back:standing:front": [
-					""
-				],
-				"clipped:back:standing:back": [
-					""
-				],
-				"clipped:back:sitting:front": [
-					""
-				],
-				"clipped:back:sitting:back": [
-					""
-				],
-				"clipped:back:kneeling:front": [
-					""
-				],
-				"clipped:back:kneeling:back": [
-					""
+				"back:kneeling": [
+					"chain_taunt_kneeling_back.png"
 				]
 			}
 		},
@@ -647,6 +395,18 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"view": "front"
+					},
+					{
+						"module": "chainState",
+						"operator": "=",
+						"value": "short"
+					}
+				]
+			],
 			"name": "chains_short_front",
 			"points": "static",
 			"automeshTemplate": "belowBody",
@@ -658,88 +418,18 @@
 			],
 			"variables": [
 				{
-					"type": "typedModule",
-					"module": "chainState"
-				},
-				{
 					"type": "legsState"
-				},
-				{
-					"type": "view"
 				}
 			],
 			"imageMap": {
-				"none:standing:front": [
-					""
-				],
-				"none:standing:back": [
-					""
-				],
-				"none:sitting:front": [
-					""
-				],
-				"none:sitting:back": [
-					""
-				],
-				"none:kneeling:front": [
-					""
-				],
-				"none:kneeling:back": [
-					""
-				],
-				"long:standing:front": [
-					""
-				],
-				"long:standing:back": [
-					""
-				],
-				"long:sitting:front": [
-					""
-				],
-				"long:sitting:back": [
-					""
-				],
-				"long:kneeling:front": [
-					""
-				],
-				"long:kneeling:back": [
-					""
-				],
-				"short:standing:front": [
+				"standing": [
 					"chain_short_taunt.png"
 				],
-				"short:standing:back": [
-					""
-				],
-				"short:sitting:front": [
+				"sitting": [
 					"chain_short_taunt_sitting.png"
 				],
-				"short:sitting:back": [
-					""
-				],
-				"short:kneeling:front": [
+				"kneeling": [
 					"chain_taunt_kneeling_front.png"
-				],
-				"short:kneeling:back": [
-					""
-				],
-				"clipped:standing:front": [
-					""
-				],
-				"clipped:standing:back": [
-					""
-				],
-				"clipped:sitting:front": [
-					""
-				],
-				"clipped:sitting:back": [
-					""
-				],
-				"clipped:kneeling:front": [
-					"chain_taunt_kneeling_front.png"
-				],
-				"clipped:kneeling:back": [
-					""
 				]
 			}
 		},
@@ -749,6 +439,18 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"view": "back"
+					},
+					{
+						"module": "chainState",
+						"operator": "=",
+						"value": "short"
+					}
+				]
+			],
 			"name": "chains_short_back",
 			"points": "static",
 			"automeshTemplate": "aboveBody",
@@ -760,88 +462,18 @@
 			],
 			"variables": [
 				{
-					"type": "typedModule",
-					"module": "chainState"
-				},
-				{
 					"type": "legsState"
-				},
-				{
-					"type": "view"
 				}
 			],
 			"imageMap": {
-				"none:standing:front": [
-					""
-				],
-				"none:standing:back": [
-					""
-				],
-				"none:sitting:front": [
-					""
-				],
-				"none:sitting:back": [
-					""
-				],
-				"none:kneeling:front": [
-					""
-				],
-				"none:kneeling:back": [
-					""
-				],
-				"long:standing:front": [
-					""
-				],
-				"long:standing:back": [
-					""
-				],
-				"long:sitting:front": [
-					""
-				],
-				"long:sitting:back": [
-					""
-				],
-				"long:kneeling:front": [
-					""
-				],
-				"long:kneeling:back": [
-					""
-				],
-				"short:standing:front": [
-					""
-				],
-				"short:standing:back": [
+				"standing": [
 					"chain_short_taunt.png"
 				],
-				"short:sitting:front": [
-					""
+				"sitting": [
+					"chain_short_taunt_sitting.png"
 				],
-				"short:sitting:back": [
-					""
-				],
-				"short:kneeling:front": [
-					""
-				],
-				"short:kneeling:back": [
-					"chain_taunt_kneeling_front.png"
-				],
-				"clipped:standing:front": [
-					""
-				],
-				"clipped:standing:back": [
-					""
-				],
-				"clipped:sitting:front": [
-					""
-				],
-				"clipped:sitting:back": [
-					""
-				],
-				"clipped:kneeling:front": [
-					""
-				],
-				"clipped:kneeling:back": [
-					"chain_taunt_kneeling_front.png"
+				"kneeling": [
+					"chain_taunt_kneeling_back.png"
 				]
 			}
 		},
@@ -851,6 +483,18 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"view": "front"
+					},
+					{
+						"module": "connectors",
+						"operator": "!=",
+						"value": "notConnected"
+					}
+				]
+			],
 			"name": "connector_front",
 			"points": "static",
 			"automeshTemplate": "aboveBody",
@@ -862,40 +506,18 @@
 			],
 			"variables": [
 				{
-					"type": "typedModule",
-					"module": "connectors"
-				},
-				{
 					"type": "legsState"
 				}
 			],
 			"imageMap": {
-				"notConnected:standing": [
-					""
-				],
-				"notConnected:sitting": [
-					""
-				],
-				"notConnected:kneeling": [
-					""
-				],
-				"front:standing": [
+				"standing": [
 					"vertical_connection_chain.png"
 				],
-				"front:sitting": [
+				"sitting": [
 					"vertical_connection_chain_sitting short.png"
 				],
-				"front:kneeling": [
+				"kneeling": [
 					"vertical_connection_chain_kneeling_front short.png"
-				],
-				"back:standing": [
-					""
-				],
-				"back:sitting": [
-					""
-				],
-				"back:kneeling": [
-					""
 				]
 			}
 		},
@@ -905,6 +527,18 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"view": "back"
+					},
+					{
+						"module": "connectors",
+						"operator": "!=",
+						"value": "notConnected"
+					}
+				]
+			],
 			"name": "connector_back",
 			"points": "static",
 			"automeshTemplate": "belowBody",
@@ -916,39 +550,17 @@
 			],
 			"variables": [
 				{
-					"type": "typedModule",
-					"module": "connectors"
-				},
-				{
 					"type": "legsState"
 				}
 			],
 			"imageMap": {
-				"notConnected:standing": [
-					""
-				],
-				"notConnected:sitting": [
-					""
-				],
-				"notConnected:kneeling": [
-					""
-				],
-				"front:standing": [
-					""
-				],
-				"front:sitting": [
-					""
-				],
-				"front:kneeling": [
-					""
-				],
-				"back:standing": [
+				"standing": [
 					"vertical_connection_chain.png"
 				],
-				"back:sitting": [
+				"sitting": [
 					"vertical_connection_chain_sitting short.png"
 				],
-				"back:kneeling": [
+				"kneeling": [
 					"vertical_connection_chain_kneeling_back short.png"
 				]
 			}

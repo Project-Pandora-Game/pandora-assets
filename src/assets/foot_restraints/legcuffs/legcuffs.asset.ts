@@ -101,8 +101,8 @@ DefineAsset({
 							options: [
 								{
 									bones: {
-										leg_l: [[-5, 0]],
-										leg_r: [[-5, 0]],
+										leg_l: [[-2, 0]],
+										leg_r: [[-2, 0]],
 									},
 									legs: {
 										pose: ['standing', 'sitting'],
@@ -129,10 +129,26 @@ DefineAsset({
 					name: 'Clipped together',
 					properties: {
 						poseLimits: {
-							bones: {
-								leg_l: 0,
-								leg_r: 0,
-							},
+							options: [
+								{
+									bones: {
+										leg_l: 1,
+										leg_r: 1,
+									},
+									legs: {
+										pose: ['standing', 'sitting'],
+									},
+								},
+								{
+									bones: {
+										leg_l: 5,
+										leg_r: 5,
+									},
+									legs: {
+										pose: ['kneeling'],
+									},
+								},
+							],
 						},
 						stateFlags: {
 							provides: ['chain'],
@@ -175,8 +191,18 @@ DefineAsset({
 										arm_r: [[-9, 180]],
 										elbow_l: [[-13, 161]],
 										elbow_r: [[-13, 161]],
-										leg_l: 0,
-										leg_r: 0,
+										leg_l: 5,
+										leg_r: 5,
+									},
+								},
+								{
+									bones: {
+										arm_l: [[-9, 180]],
+										arm_r: [[-9, 180]],
+										elbow_l: [[-13, 161]],
+										elbow_r: [[-13, 161]],
+										leg_l: [[0,1]],
+										leg_r: [[0,1]],
 									},
 								},
 								{
