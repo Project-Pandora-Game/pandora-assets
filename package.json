@@ -67,6 +67,6 @@
 		"tsc-watch": "7.2.0",
 		"tslib": "2.8.1",
 		"typescript": "5.9.3",
-		"typescript-eslint": "8.54.0"
+		"typescript-eslint": "8.55.0"
 	}
 }
