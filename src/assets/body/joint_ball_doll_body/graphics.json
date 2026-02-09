@@ -7,7 +7,7 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "Joints",
+			"name": "Joints Front",
 			"points": "body",
 			"automeshTemplate": "body",
 			"disabledTemplateParts": [
@@ -17,29 +17,16 @@
 				{
 					"name": "",
 					"colorizationKey": "joints"
-				},
-				{
-					"name": "",
-					"colorizationKey": "body"
-				},
-				{
-					"name": "",
-					"colorizationKey": "body"
-				},
-				{
-					"name": "",
-					"colorizationKey": "body"
 				}
 			],
 			"variables": [
-
+				{
+					"type": "view"
+				}
 			],
 			"imageMap": {
-				"": [
-					"joints.png",
-					"arms.png",
-					"abdomen.png",
-					"legs.png"
+				"front": [
+					"joints.png"
 				]
 			}
 		},
@@ -49,7 +36,7 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "Body Front",
+			"name": "Body Static Back",
 			"points": "static",
 			"automeshTemplate": "body",
 			"disabledTemplateParts": [
@@ -71,6 +58,152 @@
 				"": [
 					"torso.png",
 					"crotch.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Base Body",
+			"points": "body",
+			"automeshTemplate": "body",
+			"disabledTemplateParts": [
+
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "body"
+				}
+			],
+			"variables": [
+
+			],
+			"imageMap": {
+				"": [
+					"body.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Body Static Front",
+			"points": "static",
+			"automeshTemplate": "body",
+			"disabledTemplateParts": [
+
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "body"
+				},
+				{
+					"name": "",
+					"colorizationKey": "body"
+				}
+			],
+			"variables": [
+			],
+			"imageMap": {
+				"": [
+					"torso.png",
+					"crotch.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Hands",
+			"points": "body",
+			"automeshTemplate": "body",
+			"disabledTemplateParts": [
+
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "body"
+				}
+			],
+			"variables": [
+
+			],
+			"imageMap": {
+				"": [
+					"hands_up.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Feet",
+			"points": "body",
+			"automeshTemplate": "body",
+			"disabledTemplateParts": [
+
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "body"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"front": [
+					"feet_front.png"
+				],
+				"back": [
+					"feet_back.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Joints Back",
+			"points": "body",
+			"automeshTemplate": "body",
+			"disabledTemplateParts": [
+
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "joints"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"back": [
+					"joints.png"
 				]
 			}
 		},
