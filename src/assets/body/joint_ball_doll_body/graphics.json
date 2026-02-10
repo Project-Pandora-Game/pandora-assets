@@ -119,30 +119,358 @@
 				]
 			}
 		},
+
 		{
 			"x": 0,
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "autoMesh",
-			"name": "Hands",
+			"type": "mesh",
+			"name": "Arms",
+			"priority": "ARM_LEFT",
 			"points": "body",
-			"automeshTemplate": "body",
-			"disabledTemplateParts": [
-
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
 			],
-			"graphicalLayers": [
-				{
-					"name": "",
-					"colorizationKey": "body"
-				}
-			],
-			"variables": [
-
-			],
-			"imageMap": {
-				"": [
-					"hands_up.png"
+			"previewOverrides": {
+				"color": 5461849
+			},
+			"mirror": 1,
+			"colorizationKey": "body",
+			"image": {
+				"image": "hands_front.png",
+				"overrides": [
+					{
+						"image": "hands_fists_down.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								}
+							]
+						]
+					},
+					{
+						"image": "hands_down.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								}
+							]
+						]
+					},
+					{
+						"image": "hands_back.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								}
+							]
+						]
+					},
+					{
+						"image": "hands_fists_up.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								}
+							]
+						]
+					},
+					{
+						"image": "hands_up.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								}
+							]
+						]
+					},
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								}
+							]
+						]
+					},
+					{
+						"image": "hands_fists_down.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								}
+							]
+						]
+					},
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								}
+							]
+						]
+					},
+					{
+						"image": "hands_up.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								}
+							]
+						]
+					},
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								}
+							]
+						]
+					},
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "forward"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								}
+							]
+						]
+					},
+					{
+						"image": "hands_front.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "forward"
+								}
+							]
+						]
+					},
+					{
+						"image": "hands_up.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								}
+							]
+						]
+					},
+					{
+						"image": "hands_fists_turned.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								}
+							]
+						]
+					},
+					{
+						"image": "hands_fists.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "forward"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								}
+							]
+						]
+					}
 				]
 			}
 		},
@@ -204,6 +532,38 @@
 			"imageMap": {
 				"back": [
 					"joints.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Belly Button",
+			"points": "body",
+			"automeshTemplate": "body",
+			"disabledTemplateParts": [
+
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "body"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"front": [
+					"belly_button.png"
+				],
+				"back": [
+					""
 				]
 			}
 		},
