@@ -42,7 +42,7 @@
 		"delaunator": "5.0.1",
 		"express": "5.2.1",
 		"ignore": "7.0.5",
-		"immer": "11.1.3",
+		"immer": "11.1.4",
 		"json-diff": "1.0.6",
 		"lodash-es": "4.17.23",
 		"pandora-common": "github:Project-Pandora-Game/pandora#master&path:pandora-common",
