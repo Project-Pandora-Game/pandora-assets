@@ -274,7 +274,7 @@
 						]
 					},
 					{
-						"image": "hands_fists_down.png",
+						"image": "hands_down.png",
 						"condition": [
 							[
 								{
@@ -406,7 +406,7 @@
 						]
 					},
 					{
-						"image": "hands_up.png",
+						"image": "hands_back.png",
 						"condition": [
 							[
 								{
