@@ -46,18 +46,19 @@
 				{
 					"name": "",
 					"colorizationKey": "body"
-				},
-				{
-					"name": "",
-					"colorizationKey": "body"
 				}
 			],
 			"variables": [
+				{
+					"type": "view"
+				}
 			],
 			"imageMap": {
-				"": [
-					"torso.png",
-					"crotch.png"
+				"front": [
+					""
+				],
+				"back": [
+					"torso.png"
 				]
 			}
 		},
@@ -111,11 +112,18 @@
 				}
 			],
 			"variables": [
+				{
+					"type": "view"
+				}
 			],
 			"imageMap": {
-				"": [
+				"front": [
 					"torso.png",
 					"crotch.png"
+				],
+				"back": [
+					"",
+					""
 				]
 			}
 		},
@@ -604,6 +612,36 @@
 									"bone": "breasts",
 									"operator": "<=",
 									"value": -70
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Ass",
+			"priority": "BELOW_BODY",
+			"points": "body",
+			"previewOverrides": {
+				"color": 5461849
+			},
+			"mirror": 0,
+			"colorizationKey": "body",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "ass.png",
+						"condition": [
+							[
+								{
+									"view": "back"
 								}
 							]
 						]

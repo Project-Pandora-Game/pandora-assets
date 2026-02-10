@@ -5,10 +5,6 @@ DefineBodypart({
 	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
 	colorization: {
-		template: {
-			name: 'Body',
-			default: '#ffffff',
-		},
 		body: {
 			name: 'Body',
 			default: '#FFE3D2',
