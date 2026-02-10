@@ -252,7 +252,7 @@
 						]
 					},
 					{
-						"image": "",
+						"image": "hands_back_fists_up.png",
 						"condition": [
 							[
 								{
@@ -296,7 +296,7 @@
 						]
 					},
 					{
-						"image": "",
+						"image": "hands_back_fists_down.png",
 						"condition": [
 							[
 								{
@@ -340,7 +340,7 @@
 						]
 					},
 					{
-						"image": "",
+						"image": "hands_back_fists_turned.png",
 						"condition": [
 							[
 								{
@@ -362,7 +362,7 @@
 						]
 					},
 					{
-						"image": "",
+						"image": "hands_back_fists.png",
 						"condition": [
 							[
 								{
