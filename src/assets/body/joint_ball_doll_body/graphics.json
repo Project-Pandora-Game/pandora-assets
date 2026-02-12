@@ -6,6 +6,42 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"type": "mesh",
+			"name": "Soles",
+			"priority": "SOLE_LEFT",
+			"points": "body_soles_back",
+			"pointType": [
+				"body_l"
+			],
+			"previewOverrides": {
+				"color": 5461849
+			},
+			"mirror": 1,
+			"colorizationKey": "body",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "body_soles_back.png",
+						"condition": [
+							[
+								{
+									"legs": "kneeling"
+								},
+								{
+									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "autoMesh",
 			"name": "Joints Front",
 			"points": "body",
