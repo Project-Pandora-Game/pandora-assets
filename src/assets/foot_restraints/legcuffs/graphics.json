@@ -490,14 +490,58 @@
 					},
 					{
 						"module": "connectors",
-						"operator": "!=",
-						"value": "notConnected"
+						"operator": "=",
+						"value": "front"
 					}
 				]
 			],
-			"name": "connector_front",
+			"name": "connector_front_front",
 			"points": "static",
 			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "chains",
+					"colorizationKey": "chains"
+				}
+			],
+			"variables": [
+				{
+					"type": "legsState"
+				}
+			],
+			"imageMap": {
+				"standing": [
+					"vertical_connection_chain.png"
+				],
+				"sitting": [
+					"vertical_connection_chain_sitting short.png"
+				],
+				"kneeling": [
+					"vertical_connection_chain_kneeling_front short.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"view": "front"
+					},
+					{
+						"module": "connectors",
+						"operator": "=",
+						"value": "back"
+					}
+				]
+			],
+			"name": "connector_front_back",
+			"points": "static",
+			"automeshTemplate": "belowBody",
 			"graphicalLayers": [
 				{
 					"name": "chains",
@@ -534,12 +578,56 @@
 					},
 					{
 						"module": "connectors",
-						"operator": "!=",
-						"value": "notConnected"
+						"operator": "=",
+						"value": "front"
 					}
 				]
 			],
-			"name": "connector_back",
+			"name": "connector_back_front",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "chains",
+					"colorizationKey": "chains"
+				}
+			],
+			"variables": [
+				{
+					"type": "legsState"
+				}
+			],
+			"imageMap": {
+				"standing": [
+					"vertical_connection_chain.png"
+				],
+				"sitting": [
+					"vertical_connection_chain_sitting short.png"
+				],
+				"kneeling": [
+					"vertical_connection_chain_kneeling_back short.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"view": "back"
+					},
+					{
+						"module": "connectors",
+						"operator": "=",
+						"value": "back"
+					}
+				]
+			],
+			"name": "connector_back_back",
 			"points": "static",
 			"automeshTemplate": "belowBody",
 			"graphicalLayers": [
