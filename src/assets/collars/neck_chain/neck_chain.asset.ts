@@ -1,5 +1,3 @@
-import { ItemInteractionType } from 'pandora-common';
-
 DefineAsset({
 	name: 'Nech Chain',
 	size: 'small',
