@@ -72,6 +72,48 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
+			"name": "Pattern Static Back",
+			"points": "static",
+			"automeshTemplate": "body",
+			"disabledTemplateParts": [
+
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "body"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "pattern"
+				}
+			],
+			"imageMap": {
+				"front:none": [
+					""
+				],
+				"back:none": [
+					""
+				],
+				"front:dried": [
+					""
+				],
+				"back:dried": [
+					"dried_torso_pattern.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
 			"name": "Body Static Back",
 			"points": "static",
 			"automeshTemplate": "body",
@@ -117,11 +159,77 @@
 				}
 			],
 			"variables": [
+				{
+					"type": "typedModule",
+					"module": "pattern"
+				}
+			],
+			"imageMap": {
+				"": [
+					""
+				],
+				"dried": [
+					"dried_pattern.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Base Body",
+			"points": "body",
+			"automeshTemplate": "body",
+			"disabledTemplateParts": [
+
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "body"
+				}
+			],
+			"variables": [
 
 			],
 			"imageMap": {
 				"": [
 					"body.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Base Body",
+			"points": "body",
+			"automeshTemplate": "body",
+			"disabledTemplateParts": [
+
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "body"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "pattern"
+				}
+			],
+			"imageMap": {
+				"": [
+					""
+				],
+				"dried": [
+					"dried_pattern.png"
 				]
 			}
 		},
@@ -163,7 +271,56 @@
 				]
 			}
 		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Pattern Static Front",
+			"points": "static",
+			"automeshTemplate": "body",
+			"disabledTemplateParts": [
 
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "body"
+				},
+				{
+					"name": "",
+					"colorizationKey": "body"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "pattern"
+				}
+			],
+			"imageMap": {
+				"front:none": [
+					"",
+					""
+				],
+				"back:none": [
+					"",
+					""
+				],
+				"front:dried": [
+					"dried_torso_pattern.png",
+					"dried_crotch_pattern.png"
+				],
+				"back:dried": [
+					"",
+					""
+				]
+			}
+		},
 		{
 			"x": 0,
 			"y": 0,

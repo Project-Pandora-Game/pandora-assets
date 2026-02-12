@@ -12,7 +12,7 @@ DefineBodypart({
 		joints: {
 			name: 'Joints',
 			default: '#F0CAB4',
-		},
+		}
 	},
 	// size:320, y:383, centered
 	preview: null,//'preview.png',
@@ -22,7 +22,21 @@ DefineBodypart({
 		],
 	},
 	modules: {
-
+		pattern: {
+			type: 'typed',
+			name: 'Body posing limits: Legs',
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'dried',
+					name: 'Dried',
+				},
+			],
+		},
 	},
 	ownership: {
 		responsibleContributor: 'Shikifet <shikifet@gmail.com>',
