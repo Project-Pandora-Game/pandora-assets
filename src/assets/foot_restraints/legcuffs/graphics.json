@@ -653,5 +653,27 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Floor",
+			"graphicalLayers": [
+				{
+					"name": "Floor",
+					"colorizationKey": "chains"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"floor_cuffs_combo.png"
+				]
+			}
+		}
 	]
 }
