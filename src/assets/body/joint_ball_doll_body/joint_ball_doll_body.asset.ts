@@ -32,8 +32,8 @@ DefineBodypart({
 					default: true,
 				},
 				{
-					id: 'dried',
-					name: 'Dried',
+					id: 'cracked',
+					name: 'Cracked',
 				},
 			],
 		},

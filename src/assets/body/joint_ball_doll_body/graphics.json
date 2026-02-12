@@ -100,11 +100,11 @@
 				"back:none": [
 					""
 				],
-				"front:dried": [
+				"front:cracked": [
 					""
 				],
-				"back:dried": [
-					"dried_torso_pattern.png"
+				"back:cracked": [
+					"cracked_torso_pattern.png"
 				]
 			}
 		},
@@ -168,8 +168,8 @@
 				"": [
 					""
 				],
-				"dried": [
-					"dried_pattern.png"
+				"cracked": [
+					"cracked_pattern.png"
 				]
 			}
 		},
@@ -228,8 +228,8 @@
 				"": [
 					""
 				],
-				"dried": [
-					"dried_pattern.png"
+				"cracked": [
+					"cracked_pattern.png"
 				]
 			}
 		},
@@ -311,11 +311,11 @@
 					"",
 					""
 				],
-				"front:dried": [
-					"dried_torso_pattern.png",
-					"dried_crotch_pattern.png"
+				"front:cracked": [
+					"cracked_torso_pattern.png",
+					"cracked_crotch_pattern.png"
 				],
-				"back:dried": [
+				"back:cracked": [
 					"",
 					""
 				]
@@ -827,7 +827,7 @@
 			"mirror": 0,
 			"colorizationKey": "body",
 			"image": {
-				"image": "bust_dried.png",
+				"image": "",
 				"overrides": [
 					{
 						"image": "",
@@ -836,7 +836,7 @@
 								{
 									"module": "pattern",
 									"operator": "=",
-									"value": "dried"
+									"value": "cracked"
 								},
 								{
 									"bone": "breasts",
@@ -847,18 +847,30 @@
 						]
 					},
 					{
-						"image": "bust_small_dried.png",
+						"image": "bust_small_cracked.png",
 						"condition": [
 							[
 								{
 									"module": "pattern",
 									"operator": "=",
-									"value": "dried"
+									"value": "cracked"
 								},
 								{
 									"bone": "breasts",
 									"operator": "<=",
 									"value": -70
+								}
+							]
+						]
+					},
+					{
+						"image": "bust_cracked.png",
+						"condition": [
+							[
+								{
+									"module": "pattern",
+									"operator": "=",
+									"value": "cracked"
 								}
 							]
 						]
@@ -914,7 +926,7 @@
 				"image": "",
 				"overrides": [
 					{
-						"image": "ass_dried.png",
+						"image": "ass_cracked.png",
 						"condition": [
 							[
 								{
@@ -923,7 +935,7 @@
 								{
 									"module": "pattern",
 									"operator": "=",
-									"value": "dried"
+									"value": "cracked"
 								}
 							]
 						]
