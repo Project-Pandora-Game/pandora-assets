@@ -148,7 +148,7 @@ DefineAsset({
 										leg_r: 5,
 									},
 									legs: {
-										pose: ['kneeling'],
+										pose: 'kneeling',
 									},
 								},
 							],
