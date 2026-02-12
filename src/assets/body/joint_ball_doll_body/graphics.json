@@ -818,6 +818,60 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
+			"name": "Breasts pattern",
+			"priority": "BREASTS",
+			"points": "breasts",
+			"previewOverrides": {
+				"color": 5461849
+			},
+			"mirror": 0,
+			"colorizationKey": "body",
+			"image": {
+				"image": "bust_dried.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "pattern",
+									"operator": "=",
+									"value": "dried"
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -180
+								}
+							]
+						]
+					},
+					{
+						"image": "bust_small_dried.png",
+						"condition": [
+							[
+								{
+									"module": "pattern",
+									"operator": "=",
+									"value": "dried"
+								},
+								{
+									"bone": "breasts",
+									"operator": "<=",
+									"value": -70
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
 			"name": "Ass",
 			"priority": "BELOW_BODY",
 			"points": "body",
@@ -835,6 +889,41 @@
 							[
 								{
 									"view": "back"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Ass Pattern",
+			"priority": "BELOW_BODY",
+			"points": "body",
+			"previewOverrides": {
+				"color": 5461849
+			},
+			"mirror": 0,
+			"colorizationKey": "body",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "ass_dried.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "pattern",
+									"operator": "=",
+									"value": "dried"
 								}
 							]
 						]
