@@ -55,6 +55,7 @@ DefineAsset({
 		size: {
 			type: 'typed',
 			name: 'Size',
+			interactionType: ItemInteractionType.ADD_REMOVE,
 			variants: [
 				{
 					id: 'small',
@@ -74,6 +75,7 @@ DefineAsset({
 		headHarness: {
 			type: 'typed',
 			name: 'Head Harness',
+			interactionType: ItemInteractionType.ADD_REMOVE,
 			variants: [
 				{
 					id: 'none',
