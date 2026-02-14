@@ -1,3 +1,5 @@
+import { ItemInteractionType } from 'pandora-common';
+
 DefineAsset({
 	name: 'Latex Hood',
 	size: 'small',
@@ -43,7 +45,6 @@ DefineAsset({
 		],
 	},
 	effects: {
-		blind: 10,
 		lipsTouch: 1,
 		jawMove: 2,
 		tongueRoof: 0,
@@ -59,6 +60,32 @@ DefineAsset({
 			lockedProperties: {
 				blockAddRemove: true,
 			},
+		},
+		blinding: {
+			type: 'typed',
+			name: 'Material\'s Light Translucence',
+			interactionType: ItemInteractionType.ADD_REMOVE,
+			variants: [
+				{
+					id: 'light',
+					name: 'Slight transparency',
+					properties: {
+						effects: {
+							blind: 9.5,
+						},
+					},
+				},
+				{
+					id: 'full',
+					name: 'Fully blinding',
+					default: true,
+					properties: {
+						effects: {
+							blind: 10,
+						},
+					},
+				},
+			],
 		},
 	},
 	chat: {
