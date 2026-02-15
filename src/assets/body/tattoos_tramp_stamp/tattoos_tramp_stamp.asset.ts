@@ -1,5 +1,5 @@
 DefineBodypart({
-	name: 'Tramp stamp',
+	name: 'Tramp Stamp',
 	bodypart: 'bodymarks',
 	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
@@ -13,7 +13,6 @@ DefineBodypart({
 	attributes: {
 		provides: [
 			'Body_tattoo',
-			'Body_texture',
 		],
 	},
 	modules: {
