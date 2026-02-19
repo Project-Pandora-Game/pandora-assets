@@ -942,6 +942,38 @@
 					}
 				]
 			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Nipples",
+			"priority": "BREASTS",
+			"points": "custom_body_nipples",
+			"previewOverrides": {
+				"alpha": 0
+			},
+			"mirror": 0,
+			"colorizationKey": "nipples",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "bust_center.png",
+						"condition": [
+							[
+								{
+									"module": "nipples",
+									"operator": "=",
+									"value": "show"
+								}
+							]
+						]
+					}
+				]
+			}
 		}
 	]
 }

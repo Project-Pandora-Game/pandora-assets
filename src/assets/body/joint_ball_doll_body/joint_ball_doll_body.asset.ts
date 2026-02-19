@@ -12,7 +12,11 @@ DefineBodypart({
 		joints: {
 			name: 'Joints',
 			default: '#F0CAB4',
-		}
+		},
+		nipples: {
+			name: 'Nipples',
+			default: '#BC8659',
+		},
 	},
 	// size:320, y:383, centered
 	preview: null,//'preview.png',
@@ -34,6 +38,21 @@ DefineBodypart({
 				{
 					id: 'cracked',
 					name: 'Cracked',
+				},
+			],
+		},
+		nipples: {
+			type: 'typed',
+			name: 'Body posing limits: Legs',
+			variants: [
+				{
+					id: 'show',
+					name: 'Show',
+					default: true,
+				},
+				{
+					id: 'hide',
+					name: 'Hide',
 				},
 			],
 		},
