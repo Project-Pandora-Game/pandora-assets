@@ -46,9 +46,7 @@
 			"name": "Joints Front",
 			"points": "body",
 			"automeshTemplate": "body",
-			"disabledTemplateParts": [
-
-			],
+			"disabledTemplateParts": [],
 			"graphicalLayers": [
 				{
 					"name": "",
@@ -63,6 +61,9 @@
 			"imageMap": {
 				"front": [
 					"joints.png"
+				],
+				"back": [
+					""
 				]
 			}
 		},
@@ -75,9 +76,7 @@
 			"name": "Pattern Static Back",
 			"points": "static",
 			"automeshTemplate": "body",
-			"disabledTemplateParts": [
-
-			],
+			"disabledTemplateParts": [],
 			"graphicalLayers": [
 				{
 					"name": "",
@@ -117,9 +116,7 @@
 			"name": "Body Static Back",
 			"points": "static",
 			"automeshTemplate": "body",
-			"disabledTemplateParts": [
-
-			],
+			"disabledTemplateParts": [],
 			"graphicalLayers": [
 				{
 					"name": "",
@@ -146,12 +143,10 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "Base Body",
+			"name": "Base Body 1",
 			"points": "body",
 			"automeshTemplate": "body",
-			"disabledTemplateParts": [
-
-			],
+			"disabledTemplateParts": [],
 			"graphicalLayers": [
 				{
 					"name": "",
@@ -165,11 +160,11 @@
 				}
 			],
 			"imageMap": {
-				"": [
-					""
-				],
 				"cracked": [
 					"cracked_pattern.png"
+				],
+				"none": [
+					""
 				]
 			}
 		},
@@ -179,21 +174,17 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "Base Body",
+			"name": "Base Body 2",
 			"points": "body",
 			"automeshTemplate": "body",
-			"disabledTemplateParts": [
-
-			],
+			"disabledTemplateParts": [],
 			"graphicalLayers": [
 				{
 					"name": "",
 					"colorizationKey": "body"
 				}
 			],
-			"variables": [
-
-			],
+			"variables": [],
 			"imageMap": {
 				"": [
 					"body.png"
@@ -206,12 +197,10 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "Base Body",
+			"name": "Base Body 3",
 			"points": "body",
 			"automeshTemplate": "body",
-			"disabledTemplateParts": [
-
-			],
+			"disabledTemplateParts": [],
 			"graphicalLayers": [
 				{
 					"name": "",
@@ -225,11 +214,11 @@
 				}
 			],
 			"imageMap": {
-				"": [
-					""
-				],
 				"cracked": [
 					"cracked_pattern.png"
+				],
+				"none": [
+					""
 				]
 			}
 		},
@@ -242,9 +231,7 @@
 			"name": "Body Static Front",
 			"points": "static",
 			"automeshTemplate": "body",
-			"disabledTemplateParts": [
-
-			],
+			"disabledTemplateParts": [],
 			"graphicalLayers": [
 				{
 					"name": "",
@@ -280,9 +267,7 @@
 			"name": "Pattern Static Front",
 			"points": "static",
 			"automeshTemplate": "body",
-			"disabledTemplateParts": [
-
-			],
+			"disabledTemplateParts": [],
 			"graphicalLayers": [
 				{
 					"name": "",
@@ -684,9 +669,7 @@
 			"name": "Feet",
 			"points": "body",
 			"automeshTemplate": "body",
-			"disabledTemplateParts": [
-
-			],
+			"disabledTemplateParts": [],
 			"graphicalLayers": [
 				{
 					"name": "",
@@ -716,9 +699,7 @@
 			"name": "Joints Back",
 			"points": "body",
 			"automeshTemplate": "body",
-			"disabledTemplateParts": [
-
-			],
+			"disabledTemplateParts": [],
 			"graphicalLayers": [
 				{
 					"name": "",
@@ -733,6 +714,9 @@
 			"imageMap": {
 				"back": [
 					"joints.png"
+				],
+				"front": [
+					""
 				]
 			}
 		},
@@ -745,9 +729,7 @@
 			"name": "Belly Button",
 			"points": "body",
 			"automeshTemplate": "body",
-			"disabledTemplateParts": [
-
-			],
+			"disabledTemplateParts": [],
 			"graphicalLayers": [
 				{
 					"name": "",
