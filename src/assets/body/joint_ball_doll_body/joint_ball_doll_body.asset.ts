@@ -1,4 +1,3 @@
-
 DefineBodypart({
 	name: 'Joint Ball Doll Body',
 	bodypart: 'base',
