@@ -18,8 +18,8 @@ DefineBodypart({
 			default: '#BC8659',
 		},
 	},
-	// size:320, y:383, centered
-	preview: null,//'preview.png',
+	// size:1200, y:180, x:-100
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Body_texture',
