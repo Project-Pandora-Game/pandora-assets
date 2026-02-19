@@ -729,7 +729,10 @@
 			"name": "Belly Button",
 			"points": "body",
 			"automeshTemplate": "body",
-			"disabledTemplateParts": [],
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
+			],
 			"graphicalLayers": [
 				{
 					"name": "",
@@ -869,6 +872,15 @@
 			"name": "Ass",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg_l",
+				"bodyleg_r"
+			],
 			"previewOverrides": {
 				"color": 5461849
 			},
@@ -899,6 +911,15 @@
 			"name": "Ass Pattern",
 			"priority": "BELOW_BODY",
 			"points": "body",
+			"pointType": [
+				"body",
+				"body_l",
+				"body_r",
+				"bodyarm_l",
+				"bodyarm_r",
+				"bodyleg_l",
+				"bodyleg_r"
+			],
 			"previewOverrides": {
 				"color": 5461849
 			},
