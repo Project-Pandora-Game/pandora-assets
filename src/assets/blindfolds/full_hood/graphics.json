@@ -75,7 +75,7 @@
 			"type": "autoMesh",
 			"name": "back_mesh",
 			"points": "static",
-			"automeshTemplate": "belowBody",
+			"automeshTemplate": "belowBackHair",
 			"graphicalLayers": [
 				{
 					"name": "hood",

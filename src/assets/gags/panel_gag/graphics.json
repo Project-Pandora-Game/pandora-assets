@@ -367,7 +367,7 @@
 			"type": "autoMesh",
 			"name": "Front Ring",
 			"points": "static",
-			"automeshTemplate": "frontHair",
+			"automeshTemplate": "aboveBody",
 			"graphicalLayers": [
 				{
 					"name": "",
@@ -397,7 +397,7 @@
 			"type": "autoMesh",
 			"name": "Front Head Harness",
 			"points": "static",
-			"automeshTemplate": "aboveFrontHair",
+			"automeshTemplate": "aboveBody",
 			"graphicalLayers": [
 				{
 					"name": "Head Harness",
@@ -443,7 +443,7 @@
 			"type": "autoMesh",
 			"name": "Front Head Harness Rivets",
 			"points": "static",
-			"automeshTemplate": "aboveFrontHair",
+			"automeshTemplate": "aboveBody",
 			"graphicalLayers": [
 				{
 					"name": "",
@@ -489,7 +489,7 @@
 			"type": "autoMesh",
 			"name": "Front Chin Strap",
 			"points": "static",
-			"automeshTemplate": "aboveFrontHair",
+			"automeshTemplate": "aboveBody",
 			"graphicalLayers": [
 				{
 					"name": "Chin Strap",
@@ -544,7 +544,7 @@
 			"type": "autoMesh",
 			"name": "Front Panel",
 			"points": "static",
-			"automeshTemplate": "aboveFrontHair",
+			"automeshTemplate": "aboveBody",
 			"graphicalLayers": [
 				{
 					"name": "",
@@ -577,7 +577,7 @@
 			"type": "autoMesh",
 			"name": "Front Straps",
 			"points": "static",
-			"automeshTemplate": "aboveFrontHair",
+			"automeshTemplate": "aboveBody",
 			"graphicalLayers": [
 				{
 					"name": "",
@@ -610,7 +610,7 @@
 			"type": "autoMesh",
 			"name": "Front Strap Cover",
 			"points": "static",
-			"automeshTemplate": "aboveFrontHair",
+			"automeshTemplate": "aboveBody",
 			"graphicalLayers": [
 				{
 					"name": "",
@@ -643,7 +643,7 @@
 			"type": "autoMesh",
 			"name": "Front Rivets",
 			"points": "static",
-			"automeshTemplate": "aboveFrontHair",
+			"automeshTemplate": "aboveBody",
 			"graphicalLayers": [
 				{
 					"name": "",
