@@ -26,6 +26,7 @@ DefineBodypart({
 	attributes: {
 		provides: [
 			'Body_base',
+			'Body_texture',
 		],
 	},
 	modules: {
