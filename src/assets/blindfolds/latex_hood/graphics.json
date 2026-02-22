@@ -36,7 +36,7 @@
 			"type": "autoMesh",
 			"name": "back_mesh",
 			"points": "static",
-			"automeshTemplate": "belowBackHair",
+			"automeshTemplate": "belowBody",
 			"graphicalLayers": [
 				{
 					"name": "latex_hood",
