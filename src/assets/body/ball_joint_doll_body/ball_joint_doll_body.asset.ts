@@ -1,5 +1,5 @@
 DefineBodypart({
-	name: 'Joint Ball Doll Body',
+	name: 'Ball-joint Doll Body',
 	bodypart: 'base',
 	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
