@@ -27,7 +27,7 @@ DefineBodypart({
 	modules: {
 		pattern: {
 			type: 'typed',
-			name: 'Body posing limits: Legs',
+			name: 'Pattern',
 			variants: [
 				{
 					id: 'none',
@@ -42,7 +42,7 @@ DefineBodypart({
 		},
 		nipples: {
 			type: 'typed',
-			name: 'Body posing limits: Legs',
+			name: 'Nipples',
 			variants: [
 				{
 					id: 'show',
