@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Nech Chain',
+	name: 'Neck Chain',
 	size: 'small',
 	graphics: 'graphics.json',
 	requireFreeHandsToUseDefault: true,
