@@ -43,6 +43,37 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
+			"name": "Handles",
+			"points": "body",
+			"automeshTemplate": "body",
+			"disabledTemplateParts": [],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "handles"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "handles"
+				}
+			],
+			"imageMap": {
+				"yes": [
+					"handles.png"
+				],
+				"no": [
+					""
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
 			"name": "Joints Front",
 			"points": "body",
 			"automeshTemplate": "body",

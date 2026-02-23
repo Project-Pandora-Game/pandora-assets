@@ -16,6 +16,10 @@ DefineBodypart({
 			name: 'Nipples',
 			default: '#BC8659',
 		},
+		handles: {
+			name: 'Handles',
+			default: '#8C8C8C',
+		},
 	},
 	// size:1200, y:180, x:-100
 	preview: 'preview.png',
@@ -52,6 +56,37 @@ DefineBodypart({
 				{
 					id: 'hide',
 					name: 'Hide',
+				},
+			],
+		},
+		handles: {
+			type: 'typed',
+			name: 'Handles',
+			variants: [
+				{
+					id: 'no',
+					name: 'No',
+					default: true,
+				},
+				{
+					id: 'yes',
+					name: 'Yes',
+					properties: {
+						attributes: {
+							provides: [
+								'Restraint',
+								'Restraint_arms',
+								'Wrist_cuffs',
+								'Wrist_cuffs_chainable',
+								'Elbow_cuffs',
+								'Restraint_legs',
+								'Ankle_cuffs',
+								'Ankle_cuffs_chainable',
+								'Thigh_cuffs',
+								'Belt_chainable',
+							],
+						},
+					},
 				},
 			],
 		},
