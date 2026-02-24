@@ -44,12 +44,12 @@ DefineAsset({
 	},
 	posePresets: [
 		{
-			name: 'Hug Normal',
+			name: 'Hug tightly',
 			bones: {
-				arm_l: 84,
-				arm_r: 85,
+				arm_l: 85,
+				arm_r: 90,
 				elbow_l: 53,
-				elbow_r: 85,
+				elbow_r: 88,
 			},
 			leftArm: {
 				fingers: 'spread',
@@ -63,12 +63,12 @@ DefineAsset({
 			},
 		},
 		{
-			name: 'Hug tightly',
+			name: 'Hug Normal',
 			bones: {
-				arm_l: 85,
-				arm_r: 90,
-				elbow_l: 52,
-				elbow_r: 96,
+				arm_l: 84,
+				arm_r: 85,
+				elbow_l: 53,
+				elbow_r: 85,
 			},
 			leftArm: {
 				fingers: 'spread',

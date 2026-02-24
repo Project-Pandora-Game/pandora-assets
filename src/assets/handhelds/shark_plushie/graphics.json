@@ -2,10 +2,10 @@
 {
   "layers": [
     {
-      "x": 0,
-      "y": 0,
-      "width": 1000,
-      "height": 1500,
+      "x": 250,
+      "y": 248,
+      "width": 500,
+      "height": 668,
       "type": "autoMesh",
       "name": "body",
       "points": "static",
@@ -27,17 +27,17 @@
       "variables": [],
       "imageMap": {
         "": [
-          "shark_big/body_upper.png",
-          "shark_big/body_details.png",
-          "shark_big/body_lower.png"
+          "body_upper.png",
+          "body_details.png",
+          "body_lower.png"
         ]
       }
     },
     {
-      "x": 0,
-      "y": 0,
-      "width": 1000,
-      "height": 1500,
+      "x": 250,
+      "y": 248,
+      "width": 500,
+      "height": 668,
       "type": "autoMesh",
       "name": "fins",
       "points": "static",
@@ -59,17 +59,17 @@
       "variables": [],
       "imageMap": {
         "": [
-          "shark_big/fin_upper.png",
-          "shark_big/fin_lower.png",
-          "shark_big/fin_details.png"
+          "fin_upper.png",
+          "fin_lower.png",
+          "fin_details.png"
         ]
       }
     },
     {
-      "x": 0,
-      "y": 0,
-      "width": 1000,
-      "height": 1500,
+      "x": 250,
+      "y": 248,
+      "width": 500,
+      "height": 668,
       "type": "autoMesh",
       "enableCond": [
         [
@@ -110,20 +110,20 @@
       "variables": [],
       "imageMap": {
         "": [
-          "shark_big/face_cavity.png",
-          "shark_big/face_teeth.png",
-          "shark_big/face_sclera.png",
-          "shark_big/face_iris.png",
-          "shark_big/face_pupil.png",
-          "shark_big/face_details.png"
+          "face_cavity.png",
+          "face_teeth.png",
+          "face_sclera.png",
+          "face_iris.png",
+          "face_pupil.png",
+          "face_details.png"
         ]
       }
     },
     {
-      "x": 0,
-      "y": 0,
-      "width": 1000,
-      "height": 1500,
+      "x": 250,
+      "y": 248,
+      "width": 500,
+      "height": 668,
       "type": "autoMesh",
       "enableCond": [
         [
@@ -164,15 +164,121 @@
       "variables": [],
       "imageMap": {
         "": [
-          "shark_big/face_sclera.png",
-          "shark_big/face_iris.png",
-          "shark_big/face_pupil.png",
-          "shark_big/face_details.png",
-          "shark_big/face_teeth.png",
-          "shark_big/face_cavity.png"
+          "face_sclera.png",
+          "face_iris.png",
+          "face_pupil.png",
+          "face_details.png",
+          "face_teeth.png",
+          "face_cavity.png"
         ]
       }
     }
   ],
-  "roomLayers": []
+  "roomLayers": [
+    {
+      "x": -250,
+      "y": -185,
+      "width": 500,
+      "height": 325,
+      "type": "autoSprite",
+      "name": "body",
+      "graphicalLayers": [
+        {
+          "name": "body_upper",
+          "colorizationKey": "body"
+        },
+        {
+          "name": "body_details",
+          "colorizationKey": "body"
+        },
+        {
+          "name": "body_lower",
+          "colorizationKey": "belly"
+        }
+      ],
+      "variables": [],
+      "imageMap": {
+        "": [
+          "room_graphics/body_upper.png",
+          "room_graphics/body_details.png",
+          "room_graphics/body_lower.png"
+        ]
+      }
+    },
+    {
+      "x": -250,
+      "y": -185,
+      "width": 500,
+      "height": 325,
+      "type": "autoSprite",
+      "name": "fins",
+      "graphicalLayers": [
+        {
+          "name": "fin_upper",
+          "colorizationKey": "body"
+        },
+        {
+          "name": "fin_lower",
+          "colorizationKey": "body"
+        },
+        {
+          "name": "fin_details",
+          "colorizationKey": "body"
+        }
+      ],
+      "variables": [],
+      "imageMap": {
+        "": [
+          "room_graphics/fin_upper.png",
+          "room_graphics/fin_lower.png",
+          "room_graphics/fin_details.png"
+        ]
+      }
+    },
+    {
+      "x": -250,
+      "y": -185,
+      "width": 500,
+      "height": 325,
+      "type": "autoSprite",
+      "name": "face",
+      "graphicalLayers": [
+        {
+          "name": "cavity",
+          "colorizationKey": "cavity"
+        },
+        {
+          "name": "teeth",
+          "colorizationKey": "teeth"
+        },
+        {
+          "name": "sclera",
+          "colorizationKey": "sclera"
+        },
+        {
+          "name": "iris",
+          "colorizationKey": "iris"
+        },
+        {
+          "name": "pupil",
+          "colorizationKey": "pupil"
+        },
+        {
+          "name": "body_details",
+          "colorizationKey": "body"
+        }
+      ],
+      "variables": [],
+      "imageMap": {
+        "": [
+          "room_graphics/face_cavity.png",
+          "room_graphics/face_teeth.png",
+          "room_graphics/face_sclera.png",
+          "room_graphics/face_iris.png",
+          "room_graphics/face_pupil.png",
+          "room_graphics/face_details.png"
+        ]
+      }
+    }
+  ]
 }
