@@ -37,9 +37,6 @@
 				}
 			],
 			"imageMap": {
-				"standing:none": [
-					"leg_cuffs_no_chain.png"
-				],
 				"standing:long": [
 					"leg_cuffs.png"
 				],
@@ -49,9 +46,6 @@
 				"standing:clipped": [
 					"leg_cuffs.png"
 				],
-				"sitting:none": [
-					"leg_cuffs_no_chain.png"
-				],
 				"sitting:long": [
 					"leg_cuffs.png"
 				],
@@ -60,9 +54,6 @@
 				],
 				"sitting:clipped": [
 					"leg_cuffs.png"
-				],
-				"kneeling:none": [
-					""
 				],
 				"kneeling:long": [
 					""
@@ -111,9 +102,6 @@
 				}
 			],
 			"imageMap": {
-				"standing:none": [
-					"leg_cuffs_no_chain.png"
-				],
 				"standing:long": [
 					"leg_cuffs.png"
 				],
@@ -123,9 +111,6 @@
 				"standing:clipped": [
 					"leg_cuffs.png"
 				],
-				"sitting:none": [
-					"leg_cuffs_no_chain.png"
-				],
 				"sitting:long": [
 					"leg_cuffs.png"
 				],
@@ -134,9 +119,6 @@
 				],
 				"sitting:clipped": [
 					"leg_cuffs.png"
-				],
-				"kneeling:none": [
-					""
 				],
 				"kneeling:long": [
 					""
@@ -181,9 +163,6 @@
 				}
 			],
 			"imageMap": {
-				"none": [
-					"leg_cuffs_kneeling_back.png"
-				],
 				"long": [
 					"leg_cuffs_kneeling_back.png"
 				],

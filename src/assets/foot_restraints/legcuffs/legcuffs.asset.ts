@@ -61,13 +61,9 @@ DefineAsset({
 			name: 'Chains',
 			variants: [
 				{
-					id: 'none',
-					name: 'No Chain',
-					default: true,
-				},
-				{
 					id: 'long',
 					name: 'Long Chain',
+					default: true,
 					properties: {
 						poseLimits: {
 							options: [
@@ -250,45 +246,43 @@ DefineAsset({
 							options: [
 								{
 									bones: {
-										leg_l: 0,
-										leg_r: 0,
-										arm_r: 88,
-										arm_l: 88,
-										elbow_r: 20,
-										elbow_l: 20,
+										arm_l: [[-9, 180]],
+										arm_r: [[-9, 180]],
+										elbow_l: [[-13, 161]],
+										elbow_r: [[-13, 161]],
+										leg_l: 5,
+										leg_r: 5,
 									},
-									options: [
-										{ arms: { position: 'back_below_hair' } },
-										{ arms: { position: 'back' } },
-									],
 								},
 								{
 									bones: {
+										arm_l: [[-9, 180]],
+										arm_r: [[-9, 180]],
+										elbow_l: [[-13, 161]],
+										elbow_r: [[-13, 161]],
+										leg_l: [[0, 1]],
+										leg_r: [[0, 1]],
+									},
+								},
+								{
+									bones: {
+										arm_l: [[-9, 180]],
+										arm_r: [[-9, 180]],
+										elbow_l: [[-13, 161]],
+										elbow_r: [[-13, 161]],
 										leg_l: -2,
 										leg_r: -2,
-										arm_r: 88,
-										arm_l: 88,
-										elbow_r: 20,
-										elbow_l: 20,
 									},
-									options: [
-										{ arms: { position: 'back_below_hair' } },
-										{ arms: { position: 'back' } },
-									],
 								},
 								{
 									bones: {
+										arm_l: [[-9, 180]],
+										arm_r: [[-9, 180]],
+										elbow_l: [[-13, 161]],
+										elbow_r: [[-13, 161]],
 										leg_l: -5,
 										leg_r: -5,
-										arm_r: 88,
-										arm_l: 88,
-										elbow_r: 20,
-										elbow_l: 20,
 									},
-									options: [
-										{ arms: { position: 'back_below_hair' } },
-										{ arms: { position: 'back' } },
-									],
 								},
 							],
 						},
