@@ -25,7 +25,7 @@ DefineBodypart({
 	preview: 'preview.png',
 	attributes: {
 		provides: [
-			'Body_texture',
+			'Body_base',
 		],
 	},
 	modules: {
@@ -84,7 +84,47 @@ DefineBodypart({
 								'Ankle_cuffs_chainable',
 								'Thigh_cuffs',
 								'Belt_chainable',
+								'Back_knot_anchor_point',
 							],
+						},
+					},
+				},
+			],
+		},
+		arms: {
+			type: 'typed',
+			name: 'Arms',
+			variants: [
+				{
+					id: 'free',
+					name: 'Free',
+					default: true,
+				},
+				{
+					id: 'clipBack',
+					name: 'Clipped to back handle',
+					properties: {
+						poseLimits: {
+							bones: {
+								arm_l: 100,
+								elbow_l: 138,
+								arm_r: 100,
+								elbow_r: 138,
+							},
+						},
+					},
+				},
+				{
+					id: 'clipArmbinder',
+					name: 'Clipped Armbinder',
+					properties: {
+						poseLimits: {
+							bones: {
+								arm_r: 104,
+								arm_l: 104,
+								elbow_r: -4,
+								elbow_l: -4,
+							},
 						},
 					},
 				},
