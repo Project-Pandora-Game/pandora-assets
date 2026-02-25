@@ -140,6 +140,9 @@ DefineBodypart({
 					id: 'clipBack',
 					name: 'Clipped to back handle',
 					properties: {
+						effects: {
+							blockHands: true,
+						},
 						stateFlags: {
 							requires: {
 								handles: 'Tying wrists requires handles',
@@ -161,8 +164,16 @@ DefineBodypart({
 				},
 				{
 					id: 'clipTogether',
-					name: 'Clipped together',
+					name: 'Clipped together behind',
 					properties: {
+						effects: {
+							blockHands: true,
+						},
+						stateFlags: {
+							requires: {
+								handles: 'Tying wrists requires handles',
+							},
+						},
 						poseLimits: {
 							arms: {
 								position: 'back',
