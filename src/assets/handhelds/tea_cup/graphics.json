@@ -65,5 +65,32 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -1300,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Floor",
+			"graphicalLayers": [
+				{
+					"name": "Cup",
+					"colorizationKey": "china"
+				},
+				{
+					"name": "Tea",
+					"colorizationKey": "liquid"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"tea_cup_floor.png",
+					"tea_cup_liquid_floor.png"
+				]
+			}
+		}
 	]
 }
