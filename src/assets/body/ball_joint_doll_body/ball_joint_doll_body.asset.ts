@@ -101,6 +101,10 @@ DefineBodypart({
 					name: 'Clipped to back handle',
 					properties: {
 						poseLimits: {
+							arms: {
+								position: 'back',
+								rotation: 'forward',
+							},
 							bones: {
 								arm_l: 100,
 								elbow_l: 138,
@@ -111,10 +115,14 @@ DefineBodypart({
 					},
 				},
 				{
-					id: 'clipArmbinder',
-					name: 'Clipped Armbinder',
+					id: 'clipWrists',
+					name: 'Clipped Wrists',
 					properties: {
 						poseLimits: {
+							arms: {
+								position: 'back',
+								rotation: 'forward',
+							},
 							bones: {
 								arm_r: 104,
 								arm_l: 104,
