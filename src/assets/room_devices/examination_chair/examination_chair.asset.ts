@@ -318,7 +318,7 @@ DefineRoomDeviceAsset({
 								},
 								attributes: {
 									requires: [
-										'Wrist_cuffs',
+										'Wrist_cuffs_chainable',
 									],
 								},
 							},

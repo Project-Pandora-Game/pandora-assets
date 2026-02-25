@@ -76,13 +76,9 @@ DefineBodypart({
 							provides: [
 								'Restraint',
 								'Restraint_arms',
-								'Wrist_cuffs',
 								'Wrist_cuffs_chainable',
-								'Elbow_cuffs',
 								'Restraint_legs',
-								'Ankle_cuffs',
 								'Ankle_cuffs_chainable',
-								'Thigh_cuffs',
 								'Belt_chainable',
 								'Back_knot_anchor_point',
 							],

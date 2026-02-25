@@ -106,7 +106,7 @@ DefineRoomDeviceAsset({
 								},
 								attributes: {
 									requires: [
-										'Wrist_cuffs',
+										'Wrist_cuffs_chainable',
 									],
 								},
 							},
@@ -165,8 +165,8 @@ DefineRoomDeviceAsset({
 								},
 								attributes: {
 									requires: [
-										'Wrist_cuffs',
-										'Ankle_cuffs',
+										'Wrist_cuffs_chainable',
+										'Ankle_cuffs_chainable',
 									],
 								},
 							},
@@ -195,7 +195,7 @@ DefineRoomDeviceAsset({
 								},
 								attributes: {
 									requires: [
-										'Wrist_cuffs',
+										'Wrist_cuffs_chainable',
 									],
 								},
 							},
@@ -227,8 +227,8 @@ DefineRoomDeviceAsset({
 								},
 								attributes: {
 									requires: [
-										'Wrist_cuffs',
-										'Ankle_cuffs',
+										'Wrist_cuffs_chainable',
+										'Ankle_cuffs_chainable',
 									],
 								},
 							},
@@ -340,7 +340,7 @@ DefineRoomDeviceAsset({
 								},
 								attributes: {
 									requires: [
-										'Wrist_cuffs',
+										'Wrist_cuffs_chainable',
 									],
 								},
 							},
@@ -393,8 +393,8 @@ DefineRoomDeviceAsset({
 								},
 								attributes: {
 									requires: [
-										'Wrist_cuffs',
-										'Ankle_cuffs',
+										'Wrist_cuffs_chainable',
+										'Ankle_cuffs_chainable',
 									],
 								},
 							},
@@ -472,7 +472,7 @@ DefineRoomDeviceAsset({
 								},
 								attributes: {
 									requires: [
-										'Wrist_cuffs',
+										'Wrist_cuffs_chainable',
 									],
 								},
 							},
@@ -525,8 +525,8 @@ DefineRoomDeviceAsset({
 								},
 								attributes: {
 									requires: [
-										'Ankle_cuffs',
-										'Wrist_cuffs',
+										'Ankle_cuffs_chainable',
+										'Wrist_cuffs_chainable',
 									],
 								},
 							},
