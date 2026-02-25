@@ -75,6 +75,7 @@ DefineBodypart({
 						attributes: {
 							provides: [
 								'Restraint',
+								'Collar',
 								'Collar_front_ring',
 								'Restraint_arms',
 								'Wrist_cuffs_chainable',

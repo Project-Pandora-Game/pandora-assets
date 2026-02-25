@@ -1018,7 +1018,10 @@
 			"name": "Handles Front",
 			"points": "body",
 			"automeshTemplate": "body",
-			"disabledTemplateParts": [],
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
+			],
 			"graphicalLayers": [
 				{
 					"name": "",
