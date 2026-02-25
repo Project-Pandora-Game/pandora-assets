@@ -1014,6 +1014,37 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
+			"type": "autoMesh",
+			"name": "Handles Front",
+			"points": "body",
+			"automeshTemplate": "body",
+			"disabledTemplateParts": [],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "handles"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "handles"
+				}
+			],
+			"imageMap": {
+				"yes": [
+					"handles_front.png"
+				],
+				"no": [
+					""
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
 			"type": "mesh",
 			"name": "Clip Elbows",
 			"priority": "BELOW_ARM_LEFT",
