@@ -69,8 +69,8 @@ DefineAsset({
 							options: [
 								{
 									bones: {
-										leg_l: [[-5, 0]],
-										leg_r: [[-5, 0]],
+										leg_l: [[-10, 0]],
+										leg_r: [[-10, 0]],
 									},
 									legs: {
 										pose: ['standing', 'sitting'],

@@ -277,7 +277,7 @@
 					""
 				],
 				"front:kneeling:0": [
-					""
+					"chain_taunt_kneeling_front.png"
 				],
 				"front:kneeling:5": [
 					""
@@ -295,7 +295,7 @@
 					""
 				],
 				"back:kneeling:0": [
-					""
+					"chain_taunt_kneeling_front.png"
 				],
 				"back:kneeling:5": [
 					""
@@ -608,7 +608,7 @@
 			],
 			"name": "connector_back_back",
 			"points": "static",
-			"automeshTemplate": "belowBody",
+			"automeshTemplate": "belowBackHair",
 			"graphicalLayers": [
 				{
 					"name": "chains",
@@ -628,7 +628,7 @@
 					"vertical_connection_chain_sitting short.png"
 				],
 				"kneeling": [
-					"vertical_connection_chain_kneeling_back short.png"
+					"vertical_connection_chain_kneeling_back_long.png"
 				]
 			}
 		}
