@@ -83,13 +83,53 @@ DefineBodypart({
 								'Back_knot_anchor_point',
 							],
 						},
+						stateFlags: {
+							provides: ['handles'],
+						},
 					},
 				},
 			],
 		},
-		arms: {
+		elbows: {
 			type: 'typed',
-			name: 'Arms',
+			name: 'Elbows',
+			variants: [
+				{
+					id: 'free',
+					name: 'Free',
+					default: true,
+				},
+				{
+					id: 'clipTogether',
+					name: 'Clipped together',
+					properties: {
+						stateFlags: {
+							requires: {
+								handles: 'Tying elbows requires handles',
+							},
+						},
+						poseLimits: {
+							armsOrder: {
+								upper: 'right',
+							},
+							arms: {
+								position: 'back',
+								rotation: 'forward',
+							},
+							bones: {
+								arm_r: 110,
+								arm_l: 110,
+								elbow_l: [[-180, 105]],
+								elbow_r: [[-180, 105]],
+							},
+						},
+					},
+				},
+			],
+		},
+		wrists: {
+			type: 'typed',
+			name: 'Wrists',
 			variants: [
 				{
 					id: 'free',
@@ -100,6 +140,11 @@ DefineBodypart({
 					id: 'clipBack',
 					name: 'Clipped to back handle',
 					properties: {
+						stateFlags: {
+							requires: {
+								handles: 'Tying wrists requires handles',
+							},
+						},
 						poseLimits: {
 							arms: {
 								position: 'back',
@@ -115,8 +160,8 @@ DefineBodypart({
 					},
 				},
 				{
-					id: 'clipWrists',
-					name: 'Clipped Wrists',
+					id: 'clipTogether',
+					name: 'Clipped together',
 					properties: {
 						poseLimits: {
 							arms: {
@@ -124,10 +169,10 @@ DefineBodypart({
 								rotation: 'forward',
 							},
 							bones: {
-								arm_r: 104,
-								arm_l: 104,
-								elbow_r: -4,
-								elbow_l: -4,
+								arm_r: 110,
+								arm_l: 110,
+								elbow_r: -22,
+								elbow_l: -22,
 							},
 						},
 					},

@@ -1008,6 +1008,35 @@
 					}
 				]
 			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Clip Elbows",
+			"priority": "BELOW_ARM_LEFT",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "handles",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "elbow_clip.png",
+						"condition": [
+							[
+								{
+									"module": "elbows",
+									"operator": "=",
+									"value": "clipTogether"
+								}
+							]
+						]
+					}
+				]
+			}
 		}
 	]
 }
