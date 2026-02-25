@@ -33,9 +33,6 @@ DefineAsset({
 			'Ear_item',
 		],
 	},
-	effects: {
-		blind: 9.9,
-	},
 	modules: {
 		lock: {
 			type: 'lockSlot',
@@ -43,6 +40,31 @@ DefineAsset({
 			lockedProperties: {
 				blockAddRemove: true,
 			},
+		},
+		blinding: {
+			type: 'typed',
+			name: 'Blinding Strictness',
+			variants: [
+				{
+					id: 'light',
+					name: 'Loosely covering the eyes',
+					properties: {
+						effects: {
+							blind: 9.5,
+						},
+					},
+				},
+				{
+					id: 'full',
+					name: 'Fully covering the eyes',
+					default: true,
+					properties: {
+						effects: {
+							blind: 9.9,
+						},
+					},
+				},
+			],
 		},
 	},
 	chat: {

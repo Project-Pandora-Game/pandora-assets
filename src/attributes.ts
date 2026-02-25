@@ -12,6 +12,9 @@ const ATTRIBUTES_DEFINITION_BASE = DefineAttributes({
 	Body_base: {
 		name: 'Base body',
 		description: 'A body',
+		useAsWardrobeFilter: {
+			tabs: ['body'],
+		},
 		icon: 'body',
 		useAsAssetPreference: false,
 	},
