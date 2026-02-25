@@ -249,5 +249,108 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -700,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "tray_floor",
+			"graphicalLayers": [
+				{
+					"name": "tray frame",
+					"colorizationKey": "frame"
+				},
+				{
+					"name": "tray bottom",
+					"colorizationKey": "bottom"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "content"
+				}
+			],
+			"imageMap": {
+				"nothing": [
+					"tray_frame.png",
+					"tray_bottom.png"
+				],
+				"teaService": [
+					"tray_frame.png",
+					"tray_bottom.png"
+				],
+				"decanter": [
+					"tray_frame.png",
+					"tray_bottom.png"
+				],
+				"beverages": [
+					"tray_frame.png",
+					"tray_bottom.png"
+				],
+				"toys": [
+					"tray_frame.png",
+					"tray_bottom.png"
+				]
+			}
+		},
+		{
+			"x": -500,
+			"y": -700,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "tray_contents_floor",
+			"graphicalLayers": [
+				{
+					"name": "decanter_liquids_floor",
+					"colorizationKey": "liquids"
+				},
+				{
+					"name": "tray_contents_floor",
+					"colorizationKey": "content"
+				},
+				{
+					"name": "service_liquids_floor",
+					"colorizationKey": "liquids"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "content"
+				}
+			],
+			"imageMap": {
+				"nothing": [
+					"",
+					"",
+					""
+				],
+				"teaService": [
+					"",
+					"tray_contents_service.png",
+					"tray_contents_service_liquid.png"
+				],
+				"decanter": [
+					"",
+					"tray_contents_decanter.png",
+					""
+				],
+				"beverages": [
+					"tray_contents_beverages.png",
+					"tray_contents_decanter.png",
+					""
+				],
+				"toys": [
+					"",
+					"tray_contents_dildos.png",
+					""
+				]
+			}
+		}
 	]
 }
