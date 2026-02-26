@@ -114,46 +114,24 @@ DefineAsset({
 					name: 'Both hands',
 					default: true,
 					properties: {
-						poseLimits:
-							[
-								{
-								// Hug Normal
-									bones: {
-										arm_l: 84,
-										elbow_l: 53,
-										arm_r: 85,
-										elbow_r: 88,
-									},
-									leftArm: {
-										fingers: 'spread',
-										rotation: 'forward',
-										position: 'front',
-									},
-									rightArm: {
-										fingers: 'fist',
-										rotation: 'down',
-										position: 'front_above_hair',
-									},
-								},
-								{
-									bones: {
-										arm_l: [[76, 85]],
-										elbow_l: [[53, 67]],
-										arm_r: [[79, 90]],
-										elbow_r: [[85, 88]],
-									},
-									leftArm: {
-										fingers: 'spread',
-										rotation: 'forward',
-										position: 'front',
-									},
-									rightArm: {
-										fingers: 'fist',
-										rotation: 'down',
-										position: 'front_above_hair',
-									},
-								},
-							],
+						poseLimits: {
+							bones: {
+								arm_l: [[76, 85]],
+								elbow_l: [[53, 67]],
+								arm_r: [[79, 90]],
+								elbow_r: [[85, 88]],
+							},
+							leftArm: {
+								fingers: 'spread',
+								rotation: 'forward',
+								position: 'front',
+							},
+							rightArm: {
+								fingers: 'fist',
+								rotation: 'down',
+								position: 'front_above_hair',
+							},
+						},
 					},
 				},
 				{
