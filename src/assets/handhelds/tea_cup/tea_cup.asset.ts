@@ -12,6 +12,9 @@ DefineAsset({
 			default: '#FFC38B',
 		},
 	},
+	roomDeployment: {
+		autoDeployRelativePosition: [350, -50, 0],
+	},
 	// size:200, y:250, X:0
 	preview: 'preview.png',
 	attributes: {
@@ -174,7 +177,7 @@ DefineAsset({
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
-		credits: ['Taja'],
+		credits: ['Taja', 'Sandrine'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
