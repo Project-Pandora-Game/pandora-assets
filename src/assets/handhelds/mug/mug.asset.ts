@@ -19,7 +19,7 @@ DefineAsset({
 		],
 	},
 	roomDeployment: {
-		autoDeployRelativePosition: [250, -1, 0],
+		autoDeployRelativePosition: [350, -50, 0],
 	},
 	posePresets: [
 		{
