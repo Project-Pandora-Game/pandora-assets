@@ -24,6 +24,9 @@ DefineAsset({
 			default: '#B98484',
 		},
 	},
+	roomDeployment: {
+		autoDeployRelativePosition: [250, -1, 0],
+	},
 	// size:375, y:375, centered
 	preview: 'preview.png',
 	attributes: {
@@ -66,7 +69,7 @@ DefineAsset({
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
-		credits: ['Taja'],
+		credits: ['Taja', 'Sandrine'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
