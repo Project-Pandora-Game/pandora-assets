@@ -105,7 +105,7 @@ DefineAsset({
 		autoDeployRelativePosition: [330, -150, 0],
 	},
 	modules: {
-		handUsage_r: {
+		handUsage: {
 			type: 'typed',
 			name: 'Hug state',
 			variants: [
