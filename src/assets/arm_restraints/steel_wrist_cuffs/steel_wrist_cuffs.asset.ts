@@ -27,6 +27,27 @@ DefineAsset({
 			'Wrist_cuffs_chainable',
 		],
 	},
+	posePresets: [
+		{
+			name: 'In-front Down',
+			bones: {
+				arm_r: 74,
+				arm_l: 74,
+				elbow_r: 43,
+				elbow_l: 43,
+			},
+		},
+		{
+			name: 'In-front Overhead',
+			bones: {
+				arm_r: -74,
+				arm_l: -74,
+				elbow_r: -46,
+				elbow_l: -47,
+			},
+			optional: { arms: { position: 'front' } },
+		},
+	],
 	modules: {
 		lock: {
 			type: 'lockSlot',
