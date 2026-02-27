@@ -43,6 +43,7 @@ DefineRoomDeviceAsset({
 							},
 						},
 						{
+							// armbinders
 							bones: {
 								arm_l: [[104, 110]],
 								arm_r: [[104, 110]],
@@ -61,6 +62,16 @@ DefineRoomDeviceAsset({
 
 						},
 						{
+							// boxtie armbinder
+							bones: {
+								arm_r: 85,
+								arm_l: 85,
+								elbow_r: 98,
+								elbow_l: 98,
+							},
+						},
+						{
+							//arm jute ropes
 							bones: {
 								arm_r: -90,
 								arm_l: -90,
@@ -70,11 +81,21 @@ DefineRoomDeviceAsset({
 
 						},
 						{
+							//connecting chains
 							bones: {
-								arm_r: 100,
+								arm_r: 95,
+								arm_l: 95,
+								elbow_r: 128,
+								elbow_l: 128,
+							},
+						},
+						{
+							//connecting chains
+							bones: {
 								arm_l: 100,
-								elbow_r: 130,
-								elbow_l: 130,
+								arm_r: 100,
+								elbow_l: 150,
+								elbow_r: 151,
 							},
 						},
 					],
