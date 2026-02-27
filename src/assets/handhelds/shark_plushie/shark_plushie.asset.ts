@@ -104,72 +104,31 @@ DefineAsset({
 	roomDeployment: {
 		autoDeployRelativePosition: [330, -150, 0],
 	},
-	modules: {
-		handUsage_r: {
-			type: 'typed',
-			name: 'Hug state',
-			variants: [
-				{
-					id: 'hug',
-					name: 'Both hands',
-					default: true,
-					properties: {
-						poseLimits: {
-							bones: {
-								arm_l: [[76, 85]],
-								elbow_l: [[53, 67]],
-								arm_r: [[79, 90]],
-								elbow_r: [[85, 88]],
-							},
-							leftArm: {
-								fingers: 'spread',
-								rotation: 'forward',
-								position: 'front',
-							},
-							rightArm: {
-								fingers: 'fist',
-								rotation: 'down',
-								position: 'front_above_hair',
-							},
-						},
-					},
+	poseLimits: {
+		options: [
+			{
+				bones: {
+					arm_l: [[76, 85]],
+					elbow_l: [[53, 88]],
 				},
-				{
-					id: 'left',
-					name: 'Left hand',
-					properties: {
-						poseLimits: {
-							bones: {
-								arm_l: [[76, 85]],
-								elbow_l: [[53, 88]],
-							},
-							leftArm: {
-								fingers: 'spread',
-								rotation: 'forward',
-								position: 'front',
-							},
-						},
-					},
+				leftArm: {
+					fingers: 'spread',
+					rotation: 'forward',
+					position: 'front',
 				},
-				{
-					id: 'right',
-					name: 'Right hand',
-					properties: {
-						poseLimits: {
-							bones: {
-								arm_r: [[79, 90]],
-								elbow_r: [[85, 88]],
-							},
-							rightArm: {
-								fingers: 'fist',
-								rotation: 'down',
-								position: 'front_above_hair',
-							},
-						},
-					},
+			},
+			{
+				bones: {
+					arm_r: [[79, 90]],
+					elbow_r: [[85, 88]],
 				},
-			],
-		},
+				rightArm: {
+					fingers: 'fist',
+					rotation: 'down',
+					position: 'front_above_hair',
+				},
+			},
+		],
 	},
 	ownership:
         {
