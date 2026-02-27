@@ -232,7 +232,7 @@ DefineRoomDeviceAsset({
 								},
 								attributes: {
 									requires: [
-										'Ankle_cuffs',
+										'Ankle_cuffs_chainable',
 									],
 								},
 							},

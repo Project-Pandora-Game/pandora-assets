@@ -205,7 +205,7 @@ DefineRoomDeviceAsset({
 								},
 								attributes: {
 									requires: [
-										'Ankle_cuffs',
+										'Ankle_cuffs_chainable',
 									],
 								},
 							},
@@ -230,7 +230,7 @@ DefineRoomDeviceAsset({
 								},
 								attributes: {
 									requires: [
-										'Ankle_cuffs',
+										'Ankle_cuffs_chainable',
 									],
 								},
 							},
@@ -256,7 +256,7 @@ DefineRoomDeviceAsset({
 								},
 								attributes: {
 									requires: [
-										'Ankle_cuffs',
+										'Ankle_cuffs_chainable',
 									],
 								},
 							},

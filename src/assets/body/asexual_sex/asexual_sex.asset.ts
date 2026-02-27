@@ -1,5 +1,5 @@
 DefineBodypart({
-	name: 'Asexual Sex 1',
+	name: 'Asexual Sex',
 	bodypart: 'sex',
 	useForTesting: true,
 	allowRandomizerUsage: false,
@@ -8,6 +8,9 @@ DefineBodypart({
 	},
 	preview: null,
 	attributes: {
+		provides: [
+			'Sex',
+		],
 	},
 	modules: {
 	},
