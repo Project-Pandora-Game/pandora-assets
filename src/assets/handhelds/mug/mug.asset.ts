@@ -18,6 +18,9 @@ DefineAsset({
 			'!Hand_restricting_cover',
 		],
 	},
+	roomDeployment: {
+		autoDeployRelativePosition: [350, -50, 0],
+	},
 	posePresets: [
 		{
 			name: 'Holding right hand',
@@ -170,7 +173,7 @@ DefineAsset({
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
-		credits: ['Taja'],
+		credits: ['Taja', 'Sandrine'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
