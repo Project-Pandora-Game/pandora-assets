@@ -52,7 +52,7 @@
 		"zod": "4.3.6"
 	},
 	"devDependencies": {
-		"@eslint/js": "9.39.3",
+		"@eslint/js": "10.0.1",
 		"@jest/globals": "30.2.0",
 		"@stylistic/eslint-plugin": "5.9.0",
 		"@types/delaunator": "5.0.3",
@@ -60,7 +60,7 @@
 		"@types/json-diff": "1.0.3",
 		"@types/lodash-es": "4.17.12",
 		"@types/node": "24.11.0",
-		"eslint": "9.39.3",
+		"eslint": "10.0.2",
 		"eslint-plugin-import": "2.32.0",
 		"jest": "30.2.0",
 		"ts-jest": "29.4.6",
