@@ -316,5 +316,52 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -625,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "",
+			"graphicalLayers": [
+				{
+					"name": "Glove",
+					"colorizationKey": "glove"
+				},
+				{
+					"name": "Shine",
+					"colorizationKey": "glove"
+				},
+				{
+					"name": "Strap",
+					"colorizationKey": "straps"
+				},
+				{
+					"name": "Seam",
+					"colorizationKey": "glove"
+				},
+				{
+					"name": "Rings",
+					"colorizationKey": "smallRings"
+				},
+				{
+					"name": "Strings",
+					"colorizationKey": "strings"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"armbinder_glove_floor.png",
+					"armbinder_shine_floor.png",
+					"armbinder_straps_floor.png",
+					"armbinder_seam_floor.png",
+					"armbinder_rings_floor.png",
+					"armbinder_strings_floor.png"
+				]
+			}
+		}
 	]
 }
