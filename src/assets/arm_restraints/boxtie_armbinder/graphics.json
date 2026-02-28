@@ -135,5 +135,42 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -520,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "",
+			"graphicalLayers": [
+				{
+					"name": "Glove",
+					"colorizationKey": "glove"
+				},
+				{
+					"name": "Shine",
+					"colorizationKey": "glove"
+				},
+				{
+					"name": "Straps",
+					"colorizationKey": "straps"
+				},
+				{
+					"name": "Buckles",
+					"colorizationKey": "buckles"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"box_glove_floor.png",
+					"box_glove_shine_floor.png",
+					"box_straps_floor.png",
+					"box_buckles_floor.png"
+				]
+			}
+		}
 	]
 }

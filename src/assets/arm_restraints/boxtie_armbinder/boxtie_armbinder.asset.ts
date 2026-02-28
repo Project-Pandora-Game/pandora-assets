@@ -17,6 +17,9 @@ DefineAsset({
 			default: '#CFD8DC',
 		},
 	},
+	roomDeployment: {
+		autoDeployRelativePosition: [100, -80, 0],
+	},
 	// size:300, y:345, centered
 	preview: 'preview.png',
 	attributes: {
