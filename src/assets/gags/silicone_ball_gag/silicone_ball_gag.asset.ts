@@ -29,8 +29,8 @@ DefineAsset({
 	roomDeployment: {
 		autoDeployRelativePosition: [-50, -100, 0],
 	},
-	// size:200, y:197, centered
-	preview: null, //'preview.png',
+	// size:180, y:200, centered
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Restraint',
