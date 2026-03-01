@@ -107,6 +107,10 @@
 					"back_straps.png",
 					"back_buckle.png"
 				],
+				"harness": [
+					"harness_back.png",
+					"back_buckle_harness.png"
+				],
 				"neck": [
 					"back_straps_hanging.png",
 					"back_buckle_hanging.png"
