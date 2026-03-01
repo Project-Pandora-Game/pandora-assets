@@ -30,7 +30,7 @@ DefineAsset({
 		autoDeployRelativePosition: [-50, -100, 0],
 	},
 	// size:200, y:197, centered
-	preview: null,//'preview.png',
+	preview: null, //'preview.png',
 	attributes: {
 		provides: [
 			'Restraint',
@@ -65,7 +65,7 @@ DefineAsset({
 				{
 					id: 'neck',
 					name: 'Standard around the neck',
-				}
+				},
 			],
 		},
 	},
