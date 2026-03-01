@@ -146,10 +146,6 @@
 				{
 					"name": "ball reflection",
 					"colorizationKey": "reflection"
-				},
-				{
-					"name": "lips",
-					"colorizationKey": "lips"
 				}
 			],
 			"variables": [],
@@ -159,8 +155,7 @@
 					"ball_straps_hanging.png",
 					"bolts_hanging.png",
 					"ball_hanging.png",
-					"ball_reflection_hanging.png",
-					""
+					"ball_reflection_hanging.png"
 				]
 			}
 		}
