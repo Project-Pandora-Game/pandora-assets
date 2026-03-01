@@ -6,7 +6,7 @@ DefineBodypart({
 	colorization: {
 		lips: {
 			name: 'Lips',
-			default: '#FCB6B4',
+			group: 'lips',
 		},
 	},
 	// size:200, y:195, centered
