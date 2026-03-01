@@ -136,6 +136,10 @@
 					"colorizationKey": "ball"
 				},
 				{
+					"name": "buckle",
+					"colorizationKey": "bolts"
+				},
+				{
 					"name": "bolts",
 					"colorizationKey": "bolts"
 				},
@@ -153,6 +157,7 @@
 				"": [
 					"floor_straps.png",
 					"ball_straps_hanging.png",
+					"buckle_floor.png",
 					"bolts_hanging.png",
 					"ball_hanging.png",
 					"ball_reflection_hanging.png"
