@@ -55,6 +55,14 @@
 					"ball_reflection.png",
 					"lips.png"
 				],
+				"harness": [
+					"harness_front.png",
+					"ball_straps.png",
+					"bolts_harness.png",
+					"ball.png",
+					"ball_reflection.png",
+					"lips.png"
+				],
 				"neck": [
 					"front_straps_hanging.png",
 					"ball_straps_hanging.png",

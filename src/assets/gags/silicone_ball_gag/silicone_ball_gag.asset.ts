@@ -54,6 +54,15 @@ DefineAsset({
 					},
 				},
 				{
+					id: 'harness',
+					name: 'Harness',
+					properties: {
+						stateFlags: {
+							provides: ['gagged'],
+						},
+					},
+				},
+				{
 					id: 'neck',
 					name: 'Standard around the neck',
 				}
