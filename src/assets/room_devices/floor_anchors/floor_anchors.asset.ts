@@ -28,11 +28,6 @@ DefineRoomDeviceAsset({
 			asset: {
 				name: 'Floor anchor',
 				size: 'huge',
-				poseLimits: {
-					legs: {
-						pose: ['standing', 'kneeling'],
-					},
-				},
 			},
 		},
 		character_slot_middle: {
@@ -52,11 +47,6 @@ DefineRoomDeviceAsset({
 			asset: {
 				name: 'Floor anchor',
 				size: 'huge',
-				poseLimits: {
-					legs: {
-						pose: ['standing', 'kneeling'],
-					},
-				},
 			},
 		},
 	},

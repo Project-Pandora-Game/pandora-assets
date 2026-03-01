@@ -90,7 +90,7 @@
 											"value": "tied_left_long"
 										},
 										{
-											"legs": "!kneeling"
+											"legs": "standing"
 										},
 										{
 											"view": "front"
@@ -171,7 +171,25 @@
 											"value": "tied_left_long"
 										},
 										{
-											"legs": "!kneeling"
+											"legs": "standing"
+										},
+										{
+											"view": "front"
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_sitting.png",
+								"condition": [
+									[
+										{
+											"module": "left",
+											"operator": "=",
+											"value": "tied_left_long"
+										},
+										{
+											"legs": "sitting"
 										},
 										{
 											"view": "front"
@@ -239,7 +257,7 @@
 											"value": "tied_left_long"
 										},
 										{
-											"legs": "!kneeling"
+											"legs": "standing"
 										},
 										{
 											"view": "back"
@@ -320,7 +338,25 @@
 											"value": "tied_left_long"
 										},
 										{
-											"legs": "!kneeling"
+											"legs": "standing"
+										},
+										{
+											"view": "back"
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_sitting_back.png",
+								"condition": [
+									[
+										{
+											"module": "left",
+											"operator": "=",
+											"value": "tied_left_long"
+										},
+										{
+											"legs": "sitting"
 										},
 										{
 											"view": "back"
@@ -392,7 +428,7 @@
 											"value": "tied_right_long"
 										},
 										{
-											"legs": "!kneeling"
+											"legs": "standing"
 										},
 										{
 											"view": "front"
@@ -473,7 +509,25 @@
 											"value": "tied_right_long"
 										},
 										{
-											"legs": "!kneeling"
+											"legs": "standing"
+										},
+										{
+											"view": "front"
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_sitting_back.png",
+								"condition": [
+									[
+										{
+											"module": "right",
+											"operator": "=",
+											"value": "tied_right_long"
+										},
+										{
+											"legs": "sitting"
 										},
 										{
 											"view": "front"
@@ -541,7 +595,7 @@
 											"value": "tied_right_long"
 										},
 										{
-											"legs": "!kneeling"
+											"legs": "standing"
 										},
 										{
 											"view": "back"
@@ -622,7 +676,25 @@
 											"value": "tied_right_long"
 										},
 										{
-											"legs": "!kneeling"
+											"legs": "standing"
+										},
+										{
+											"view": "back"
+										}
+									]
+								]
+							},
+							{
+								"image": "chain_hanging_sitting.png",
+								"condition": [
+									[
+										{
+											"module": "right",
+											"operator": "=",
+											"value": "tied_right_long"
+										},
+										{
+											"legs": "sitting"
 										},
 										{
 											"view": "back"
