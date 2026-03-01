@@ -1,3 +1,5 @@
+import { ItemInteractionType } from 'pandora-common';
+
 DefineAsset({
 	name: 'Silicone Ball Gag',
 	size: 'small',
@@ -39,9 +41,17 @@ DefineAsset({
 		],
 	},
 	modules: {
+		lock: {
+			type: 'lockSlot',
+			name: 'Lock',
+			lockedProperties: {
+				blockAddRemove: true,
+			},
+		},
 		gagType: {
 			type: 'typed',
 			name: 'Gag Type',
+			interactionType: ItemInteractionType.ADD_REMOVE,
 			variants: [
 				{
 					id: 'standard',
