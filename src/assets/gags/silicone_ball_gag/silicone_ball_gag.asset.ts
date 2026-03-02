@@ -8,7 +8,7 @@ DefineAsset({
 	colorization: {
 		ball: {
 			name: 'Ball',
-			default: '#B00000',
+			default: '#C91F1F',
 		},
 		straps: {
 			name: 'Straps',
