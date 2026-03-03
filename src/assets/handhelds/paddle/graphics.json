@@ -289,5 +289,27 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -331,
+			"y": -220,
+			"width": 672,
+			"height": 420,
+			"type": "autoSprite",
+			"name": "",
+			"graphicalLayers": [
+				{
+					"name": "paddle",
+					"colorizationKey": "handle"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"paddle_floor.png"
+				]
+			}
+		}
 	]
 }

@@ -345,5 +345,32 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -331,
+			"y": -220,
+			"width": 672,
+			"height": 420,
+			"type": "autoSprite",
+			"name": "",
+			"graphicalLayers": [
+				{
+					"name": "cane",
+					"colorizationKey": "cane"
+				},
+				{
+					"name": "handle",
+					"colorizationKey": "handle"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"cane_base_floor.png",
+					"cane_handle_floor.png"
+				]
+			}
+		}
 	]
 }

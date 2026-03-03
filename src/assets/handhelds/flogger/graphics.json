@@ -425,5 +425,32 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -331,
+			"y": -220,
+			"width": 672,
+			"height": 420,
+			"type": "autoSprite",
+			"name": "",
+			"graphicalLayers": [
+				{
+					"name": "handle",
+					"colorizationKey": "handle"
+				},
+				{
+					"name": "flogger",
+					"colorizationKey": "slapper"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"flogger_handle_floor.png",
+					"flogger_floor.png"
+				]
+			}
+		}
 	]
 }

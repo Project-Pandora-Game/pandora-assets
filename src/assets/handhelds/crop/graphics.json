@@ -503,5 +503,52 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -331,
+			"y": -220,
+			"width": 672,
+			"height": 420,
+			"type": "autoSprite",
+			"name": "",
+			"graphicalLayers": [
+				{
+					"name": "base",
+					"colorizationKey": "cane"
+				},
+				{
+					"name": "handle",
+					"colorizationKey": "handle"
+				},
+				{
+					"name": "tip",
+					"colorizationKey": "cane"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "type"
+				}
+			],
+			"imageMap": {
+				"wide": [
+					"cane_base_floor.png",
+					"cane_handle_floor.png",
+					"tip2_floor.png"
+				],
+				"long": [
+					"cane_base_floor.png",
+					"cane_handle_floor.png",
+					"tip1_floor.png"
+				],
+				"heart": [
+					"cane_base_floor.png",
+					"cane_handle_floor.png",
+					"tip3_floor.png"
+				]
+			}
+		}
 	]
 }
