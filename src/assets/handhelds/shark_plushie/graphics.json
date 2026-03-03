@@ -7,6 +7,60 @@
 			"width": 500,
 			"height": 668,
 			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"view": "back"
+					}
+				]
+			],
+			"name": "face_back",
+			"points": "static",
+			"automeshTemplate": "aboveFrontHair",
+			"graphicalLayers": [
+				{
+					"name": "sclera",
+					"colorizationKey": "sclera"
+				},
+				{
+					"name": "iris",
+					"colorizationKey": "iris"
+				},
+				{
+					"name": "pupil",
+					"colorizationKey": "pupil"
+				},
+				{
+					"name": "body_details",
+					"colorizationKey": "body"
+				},
+				{
+					"name": "teeth",
+					"colorizationKey": "teeth"
+				},
+				{
+					"name": "cavity",
+					"colorizationKey": "cavity"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"face_sclera.png",
+					"face_iris.png",
+					"face_pupil.png",
+					"face_details.png",
+					"face_teeth.png",
+					"face_cavity.png"
+				]
+			}
+		},
+		{
+			"x": 250,
+			"y": 248,
+			"width": 500,
+			"height": 668,
+			"type": "autoMesh",
 			"name": "body",
 			"points": "static",
 			"automeshTemplate": "aboveFrontHair",
@@ -116,60 +170,6 @@
 					"face_iris.png",
 					"face_pupil.png",
 					"face_details.png"
-				]
-			}
-		},
-		{
-			"x": 250,
-			"y": 248,
-			"width": 500,
-			"height": 668,
-			"type": "autoMesh",
-			"enableCond": [
-				[
-					{
-						"view": "back"
-					}
-				]
-			],
-			"name": "face_back",
-			"points": "static",
-			"automeshTemplate": "aboveFrontHair",
-			"graphicalLayers": [
-				{
-					"name": "sclera",
-					"colorizationKey": "sclera"
-				},
-				{
-					"name": "iris",
-					"colorizationKey": "iris"
-				},
-				{
-					"name": "pupil",
-					"colorizationKey": "pupil"
-				},
-				{
-					"name": "body_details",
-					"colorizationKey": "body"
-				},
-				{
-					"name": "teeth",
-					"colorizationKey": "teeth"
-				},
-				{
-					"name": "cavity",
-					"colorizationKey": "cavity"
-				}
-			],
-			"variables": [],
-			"imageMap": {
-				"": [
-					"face_sclera.png",
-					"face_iris.png",
-					"face_pupil.png",
-					"face_details.png",
-					"face_teeth.png",
-					"face_cavity.png"
 				]
 			}
 		}
