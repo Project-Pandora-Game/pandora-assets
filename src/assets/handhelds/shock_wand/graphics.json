@@ -421,5 +421,37 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -331,
+			"y": -220,
+			"width": 672,
+			"height": 420,
+			"type": "autoSprite",
+			"name": "",
+			"graphicalLayers": [
+				{
+					"name": "base",
+					"colorizationKey": "wand"
+				},
+				{
+					"name": "handle",
+					"colorizationKey": "handle"
+				},
+				{
+					"name": "cc",
+					"colorizationKey": "contacts"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"wand_base_floor.png",
+					"wand_handle_floor.png",
+					"wand_cc_floor.png"
+				]
+			}
+		}
 	]
 }
