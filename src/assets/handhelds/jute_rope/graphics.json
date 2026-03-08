@@ -290,5 +290,61 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -180,
+			"y": -50,
+			"width": 360,
+			"height": 500,
+			"type": "autoSprite",
+			"name": "",
+			"graphicalLayers": [
+				{
+					"name": "left",
+					"colorizationKey": "rope"
+				},
+				{
+					"name": "right",
+					"colorizationKey": "rope"
+				},
+				{
+					"name": "main",
+					"colorizationKey": "rope"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "end"
+				},
+				{
+					"type": "typedModule",
+					"module": "other"
+				}
+			],
+			"imageMap": {
+				"yes:yes": [
+					"rope_pile_left.png",
+					"rope_pile_right.png",
+					"rope_pile_base.png"
+				],
+				"yes:no": [
+					"",
+					"rope_pile_right.png",
+					"rope_pile_base.png"
+				],
+				"no:yes": [
+					"rope_pile_left.png",
+					"",
+					"rope_pile_base.png"
+				],
+				"no:no": [
+					"",
+					"",
+					"rope_pile_base.png"
+				]
+			}
+		}
 	]
 }

@@ -6,6 +6,9 @@ DefineAsset({
 	size: 'medium',
 	graphics: 'graphics.json',
 	colorization,
+	roomDeployment: {
+		autoDeployRelativePosition: [240, 0, 0],
+	},
 	// size:300, y:681, X:168
 	preview: 'preview.png',
 	attributes: {
@@ -18,21 +21,6 @@ DefineAsset({
 	},
 	modules: {
 		...baseModules,
-		end: {
-			type: 'typed',
-			name: 'Hanging Rope End',
-			variants: [
-				{
-					id: 'yes',
-					name: 'Yes',
-					default: true,
-				},
-				{
-					id: 'no',
-					name: 'No',
-				},
-			],
-		},
 		handUsage_r: {
 			type: 'typed',
 			name: 'Held in right hand',
@@ -88,6 +76,36 @@ DefineAsset({
 					name: 'No',
 					default: true,
 
+				},
+			],
+		},
+		end: {
+			type: 'typed',
+			name: 'Hanging Rope End',
+			variants: [
+				{
+					id: 'yes',
+					name: 'Visible',
+					default: true,
+				},
+				{
+					id: 'no',
+					name: 'Hidden',
+				},
+			],
+		},
+		other: {
+			type: 'typed',
+			name: 'Other Rope End',
+			variants: [
+				{
+					id: 'yes',
+					name: 'Visible on the floor',
+					default: true,
+				},
+				{
+					id: 'no',
+					name: 'Hidden beneath the pile',
 				},
 			],
 		},
