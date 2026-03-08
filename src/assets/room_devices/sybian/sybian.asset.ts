@@ -172,7 +172,7 @@ DefineRoomDeviceAsset({
 						slotProperties: {
 							seated: {
 								attributes: {
-									requires: ['Wrist_cuffs'],
+									requires: ['Wrist_cuffs_chainable'],
 								},
 								poseLimits: {
 									bones: {

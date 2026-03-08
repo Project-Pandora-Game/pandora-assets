@@ -714,9 +714,17 @@ const ATTRIBUTES_DEFINITION_BASE = DefineAttributes({
 		name: 'Chainable wrist cuffs',
 		description: 'A cuff that is chainable to another item',
 	},
+	Elbow_cuffs_chainable: {
+		name: 'Chainable elbow cuffs',
+		description: 'A cuff that is chainable to another item',
+	},
 	Belt_chainable: {
 		name: 'A chainable belt',
 		description: 'A belt that is chainable to another item',
+	},
+	Thigh_cuffs_chainable: {
+		name: 'Chainable thigh cuffs',
+		description: 'A cuff that is chainable to another item',
 	},
 	Ankle_cuffs_chainable: {
 		name: 'Chainable ankle cuffs',
