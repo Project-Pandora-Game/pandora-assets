@@ -1,6 +1,8 @@
 import { CreateRopeColor } from '../../../helpers/rope_base.ts';
 const { colorization, modules: baseModules } = CreateRopeColor();
 
+DefineAssetAlias('room_devices/jute_rope_pile');
+
 DefineAsset({
 	name: 'Jute Rope (handheld)',
 	size: 'medium',
