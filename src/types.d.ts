@@ -29,6 +29,16 @@ declare function DefineRoomDeviceAsset(def: IntermediateRoomDeviceDefinition): I
  * @returns The asset definition, for potential chaining
  */
 declare function DefineLockAsset(def: IntermediateLockAssetDefinition): IntermediateLockAssetDefinition;
+/**
+ * Define a new asset alias, primarily for migration. Any references to the aliased asset will be treated as if target asset was specified instead.
+ *
+ * Specify the asset ids **without the `a/` prefix**.
+ * @param aliasedAsset - The asset that is being replaced.
+ * @param targetAsset - The asset that should be used instead. Leaving this empty uses the default id of the current asset file.
+ * @param useForTesting - If set, then this asset is being used for automated testing.
+ * That means, that it is included in the "test bundle" and care should be taken when changing it, as doing so might require regenerating the bundle and affect existing automated tests.
+ */
+declare function DefineAssetAlias(aliasedAsset: string, targetAsset?: string, useForTesting?: 'useForTesting'): void;
 
 interface AssetRepoExtraArgs {
 	bones: AllBones;
