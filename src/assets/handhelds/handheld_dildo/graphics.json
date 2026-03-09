@@ -1121,5 +1121,297 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -880,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"enableCond": [
+				[
+					{
+						"module": "tip_material",
+						"operator": "=",
+						"value": "rubber"
+					}
+				]
+			],
+			"name": "Tip back rubber",
+			"graphicalLayers": [
+				{
+					"name": "Tip",
+					"colorizationKey": "tip"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "type"
+				},
+				{
+					"type": "typedModule",
+					"module": "room_view"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 0.4,
+				"roughness": 0.6
+			},
+			"imageMap": {
+				"smooth:front": [
+					"back_tip_smooth_out_front.png"
+				],
+				"smooth:back": [
+					"front_tip_smooth_out_back.png"
+				],
+				"tipped:front": [
+					"back_tip_tipped_out_front.png"
+				],
+				"tipped:back": [
+					"front_tip_tipped_out_back.png"
+				],
+				"rabbit:front": [
+					"back_tip_rabbit_out_front.png"
+				],
+				"rabbit:back": [
+					"front_tip_rabbit_out_back.png"
+				],
+				"beaded:front": [
+					"back_tip_beaded_out_front.png"
+				],
+				"beaded:back": [
+					"front_tip_beaded_out_back.png"
+				]
+			}
+		},
+		{
+			"x": -500,
+			"y": -880,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"enableCond": [
+				[
+					{
+						"module": "tip_material",
+						"operator": "=",
+						"value": "metal"
+					}
+				]
+			],
+			"name": "Tip back metal",
+			"graphicalLayers": [
+				{
+					"name": "Tip",
+					"colorizationKey": "tip"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "type"
+				},
+				{
+					"type": "typedModule",
+					"module": "room_view"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 1,
+				"roughness": 0.2
+			},
+			"imageMap": {
+				"smooth:front": [
+					"back_tip_smooth_out_front.png"
+				],
+				"smooth:back": [
+					"front_tip_smooth_out_back.png"
+				],
+				"tipped:front": [
+					"back_tip_tipped_out_front.png"
+				],
+				"tipped:back": [
+					"front_tip_tipped_out_back.png"
+				],
+				"rabbit:front": [
+					"back_tip_rabbit_out_front.png"
+				],
+				"rabbit:back": [
+					"front_tip_rabbit_out_back.png"
+				],
+				"beaded:front": [
+					"back_tip_beaded_out_front.png"
+				],
+				"beaded:back": [
+					"front_tip_beaded_out_back.png"
+				]
+			}
+		},
+		{
+			"x": -500,
+			"y": -880,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Grip",
+			"graphicalLayers": [
+				{
+					"name": "Grip back",
+					"colorizationKey": "grip"
+				},
+				{
+					"name": "Grip front",
+					"colorizationKey": "grip"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "room_view"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 0.4,
+				"roughness": 0.6
+			},
+			"imageMap": {
+				"front": [
+					"back_cap_grip_out_front.png",
+					"front_cap_grip_out_front.png"
+				],
+				"back": [
+					"front_cap_grip_out_back.png",
+					"back_cap_grip_out_back.png"
+				]
+			}
+		},
+		{
+			"x": -500,
+			"y": -880,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"enableCond": [
+				[
+					{
+						"module": "tip_material",
+						"operator": "=",
+						"value": "rubber"
+					}
+				]
+			],
+			"name": "Tip front rubber",
+			"graphicalLayers": [
+				{
+					"name": "Tip",
+					"colorizationKey": "tip"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "type"
+				},
+				{
+					"type": "typedModule",
+					"module": "room_view"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 0.4,
+				"roughness": 0.6
+			},
+			"imageMap": {
+				"smooth:front": [
+					"front_tip_smooth_out_front.png"
+				],
+				"smooth:back": [
+					"back_tip_smooth_out_back.png"
+				],
+				"tipped:front": [
+					"front_tip_tipped_out_front.png"
+				],
+				"tipped:back": [
+					"back_tip_tipped_out_back.png"
+				],
+				"rabbit:front": [
+					"front_tip_rabbit_out_front.png"
+				],
+				"rabbit:back": [
+					"back_tip_rabbit_out_back.png"
+				],
+				"beaded:front": [
+					"front_tip_beaded_out_front.png"
+				],
+				"beaded:back": [
+					"back_tip_beaded_out_back.png"
+				]
+			}
+		},
+		{
+			"x": -500,
+			"y": -880,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"enableCond": [
+				[
+					{
+						"module": "tip_material",
+						"operator": "=",
+						"value": "metal"
+					}
+				]
+			],
+			"name": "Tip front metal",
+			"graphicalLayers": [
+				{
+					"name": "Tip",
+					"colorizationKey": "tip"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "type"
+				},
+				{
+					"type": "typedModule",
+					"module": "room_view"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 1,
+				"roughness": 0.2
+			},
+			"imageMap": {
+				"smooth:front": [
+					"front_tip_smooth_out_front.png"
+				],
+				"smooth:back": [
+					"back_tip_smooth_out_back.png"
+				],
+				"tipped:front": [
+					"front_tip_tipped_out_front.png"
+				],
+				"tipped:back": [
+					"back_tip_tipped_out_back.png"
+				],
+				"rabbit:front": [
+					"front_tip_rabbit_out_front.png"
+				],
+				"rabbit:back": [
+					"back_tip_rabbit_out_back.png"
+				],
+				"beaded:front": [
+					"front_tip_beaded_out_front.png"
+				],
+				"beaded:back": [
+					"back_tip_beaded_out_back.png"
+				]
+			}
+		}
 	]
 }
