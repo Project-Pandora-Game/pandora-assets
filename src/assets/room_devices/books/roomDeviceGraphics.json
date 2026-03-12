@@ -1,0 +1,123 @@
+{
+	"layers": [
+		{
+			"x": 0,
+			"y": 0,
+			"width": 400,
+			"height": 395,
+			"type": "autoSprite",
+			"name": "Books",
+			"graphicalLayers": [
+				{
+					"name": "BookOne",
+					"colorizationKey": "BookOne"
+				},
+				{
+					"name": "BookTwo",
+					"colorizationKey": "BookTwo"
+				},
+				{
+					"name": "BookThree",
+					"colorizationKey": "BookThree"
+				},
+				{
+					"name": "BookFour",
+					"colorizationKey": "BookFour"
+				},
+				{
+					"name": "StripesOne",
+					"colorizationKey": "StripesOne"
+				},
+				{
+					"name": "StripesTwo",
+					"colorizationKey": "StripesTwo"
+				},
+				{
+					"name": "StripesThree",
+					"colorizationKey": "StripesThree"
+				},
+				{
+					"name": "StripesFour",
+					"colorizationKey": "StripesFour"
+				},
+				{
+					"name": "PaperOne"
+				},
+				{
+					"name": "PaperTwo"
+				},
+				{
+					"name": "PaperThree"
+				},
+				{
+					"name": "PaperFour"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "numbers"
+				}
+			],
+			"imageMap": {
+				"one": [
+					"book_one.png",
+					"",
+					"",
+					"",
+					"book_stripes_one.png",
+					"",
+					"",
+					"",
+					"book_paper_one.png",
+					"",
+					"",
+					""
+				],
+				"two": [
+					"book_one.png",
+					"book_two.png",
+					"",
+					"",
+					"book_stripes_one.png",
+					"book_stripes_two.png",
+					"",
+					"",
+					"book_paper_one.png",
+					"book_paper_two.png",
+					"",
+					""
+				],
+				"three": [
+					"book_one.png",
+					"book_two.png",
+					"book_three.png",
+					"",
+					"book_stripes_one.png",
+					"book_stripes_two.png",
+					"book_stripes_three.png",
+					"",
+					"book_paper_one.png",
+					"book_paper_two.png",
+					"book_paper_three.png",
+					""
+				],
+				"four": [
+					"book_one.png",
+					"book_two.png",
+					"book_three.png",
+					"book_four.png",
+					"book_stripes_one.png",
+					"book_stripes_two.png",
+					"book_stripes_three.png",
+					"book_stripes_four.png",
+					"book_paper_one.png",
+					"book_paper_two.png",
+					"book_paper_three.png",
+					"book_paper_four.png"
+				]
+			}
+		}
+	],
+	"slots": {}
+}
