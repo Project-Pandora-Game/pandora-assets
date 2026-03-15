@@ -3,8 +3,8 @@
 		{
 			"x": 0,
 			"y": 0,
-			"width": 400,
-			"height": 395,
+			"width": 360,
+			"height": 356,
 			"type": "autoSprite",
 			"name": "Books",
 			"graphicalLayers": [

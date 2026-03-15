@@ -37,7 +37,7 @@ DefineRoomDeviceAsset({
 			default: '#FFF02D',
 		},
 	},
-	staticAttributes: ['Room_device'],
+	staticAttributes: ['Floor'],
 	slots: {},
 	modules: {
 		numbers: {
@@ -66,8 +66,8 @@ DefineRoomDeviceAsset({
 		},
 	},
 	pivot: {
-		x: 250,
-		y: 500,
+		x: 180,
+		y: 250,
 	},
 	preview: 'books_preview.png',
 	ownership: {
