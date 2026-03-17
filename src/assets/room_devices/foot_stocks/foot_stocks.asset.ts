@@ -94,7 +94,7 @@ DefineRoomDeviceAsset({
 		},
 		lock: {
 			type: 'lockSlot',
-			name: 'Table lock',
+			name: 'Stocks lock',
 			staticConfig: { slotName: 'character_slot' },
 			lockedProperties: {
 				blockSlotsEnterLeave: ['character_slot'],
