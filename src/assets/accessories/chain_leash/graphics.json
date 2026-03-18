@@ -111,20 +111,20 @@
 					""
 				],
 				"back:left": [
-					"chain_leash_stand_stand_right_chain.png",
-					"chain_leash_stand_stand_right_handle.png"
-				],
-				"back:right": [
 					"chain_leash_stand_stand_left_chain.png",
 					"chain_leash_stand_stand_left_handle.png"
 				],
-				"back:left_up": [
-					"chain_leash_stand_kneel_right_chain.png",
-					"chain_leash_stand_kneel_right_handle.png"
+				"back:right": [
+					"chain_leash_stand_stand_right_chain.png",
+					"chain_leash_stand_stand_right_handle.png"
 				],
-				"back:right_up": [
+				"back:left_up": [
 					"chain_leash_stand_kneel_left_chain.png",
 					"chain_leash_stand_kneel_left_handle.png"
+				],
+				"back:right_up": [
+					"chain_leash_stand_kneel_right_chain.png",
+					"chain_leash_stand_kneel_right_handle.png"
 				],
 				"back:held": [
 					"",
