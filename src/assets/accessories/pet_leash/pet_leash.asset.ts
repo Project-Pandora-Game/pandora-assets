@@ -38,12 +38,28 @@ DefineAsset({
 			variants: [
 				{
 					id: 'hanging',
-					name: 'Leash Hanging',
+					name: 'Leash hanging',
 					default: true,
 				},
 				{
+					id: 'left',
+					name: 'Leash held right',
+				},
+				{
+					id: 'right',
+					name: 'Leash held left',
+				},
+				{
+					id: 'left_up',
+					name: 'Leash held high right',
+				},
+				{
+					id: 'right_up',
+					name: 'Leash held high left',
+				},
+				{
 					id: 'held',
-					name: 'Leash Held (with separate handheld item)',
+					name: 'Leash held (with separate handheld item)',
 				},
 			],
 		},
