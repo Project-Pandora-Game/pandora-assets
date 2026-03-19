@@ -132,5 +132,32 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -400,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "",
+			"graphicalLayers": [
+				{
+					"name": "leash",
+					"colorizationKey": "leash"
+				},
+				{
+					"name": "handle",
+					"colorizationKey": "handle"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"floor_leash.png",
+					"floor_handle.png"
+				]
+			}
+		}
 	]
 }
