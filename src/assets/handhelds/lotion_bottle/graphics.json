@@ -173,5 +173,37 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -100,
+			"y": -1300,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Floor",
+			"graphicalLayers": [
+				{
+					"name": "Lotion",
+					"colorizationKey": "lotion"
+				},
+				{
+					"name": "Bottle",
+					"colorizationKey": "bottle"
+				},
+				{
+					"name": "Nozzle",
+					"colorizationKey": "nozzle"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"lotion_bottle_lotion_floor.png",
+					"lotion_bottle_bottle_floor.png",
+					"lotion_bottle_nozzle_floor.png"
+				]
+			}
+		}
 	]
 }
