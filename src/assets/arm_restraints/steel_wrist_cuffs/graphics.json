@@ -269,5 +269,27 @@
 				"overrides": []
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -840,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "cuff"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"steelcuffs_floor.png"
+				]
+			}
+		}
 	]
 }
