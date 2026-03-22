@@ -143,5 +143,42 @@
 				"overrides": []
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -350,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "",
+			"graphicalLayers": [
+				{
+					"name": "bar",
+					"colorizationKey": "bar"
+				},
+				{
+					"name": "cuffs",
+					"colorizationKey": "cuffs"
+				},
+				{
+					"name": "collar",
+					"colorizationKey": "collar"
+				},
+				{
+					"name": "ring",
+					"colorizationKey": "ring"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"yoke_bar_normal.png",
+					"yoke_metal_cuffs_floor.png",
+					"yoke_metal_collar_floor.png",
+					"thick_metal_collar_ring.png"
+				]
+			}
+		}
 	]
 }
