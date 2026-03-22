@@ -498,5 +498,70 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -1180,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Floor Front",
+			"graphicalLayers": [
+				{
+					"name": "Ring",
+					"colorizationKey": "ring"
+				},
+				{
+					"name": "Nub",
+					"colorizationKey": "nub"
+				},
+				{
+					"name": "Cuff",
+					"colorizationKey": "collar"
+				}
+			],
+			"variables": [],
+			"normalMap": {
+				"specularStrength": 1,
+				"roughness": 0.2
+			},
+			"imageMap": {
+				"": [
+					"ring_front.png",
+					"nub_front.png",
+					"front_front.png"
+				]
+			}
+		},
+		{
+			"x": -500,
+			"y": -1180,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Floor Back",
+			"graphicalLayers": [
+				{
+					"name": "Nub",
+					"colorizationKey": "nub"
+				},
+				{
+					"name": "Cuff",
+					"colorizationKey": "collar"
+				}
+			],
+			"variables": [],
+			"normalMap": {
+				"specularStrength": 1,
+				"roughness": 0.2
+			},
+			"imageMap": {
+				"": [
+					"",
+					"back_front.png"
+				]
+			}
+		}
 	]
 }
