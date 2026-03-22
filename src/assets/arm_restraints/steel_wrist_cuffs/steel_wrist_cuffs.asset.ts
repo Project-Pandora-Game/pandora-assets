@@ -18,7 +18,7 @@ DefineAsset({
 		},
 	},
 	roomDeployment: {
-		autoDeployRelativePosition: [150, -10, 0],
+		autoDeployRelativePosition: [170, -50, 0],
 	},
 	// size:320, y:549, centered
 	preview: 'preview.png',
