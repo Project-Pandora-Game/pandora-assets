@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      delaunator:
-        specifier: 5.1.0
-        version: 5.1.0
       express:
         specifier: 5.2.1
         version: 5.2.1
@@ -51,9 +48,6 @@ importers:
       '@stylistic/eslint-plugin':
         specifier: 5.10.0
         version: 5.10.0(eslint@9.39.4)
-      '@types/delaunator':
-        specifier: 5.0.3
-        version: 5.0.3
       '@types/express':
         specifier: 5.0.6
         version: 5.0.6
@@ -645,9 +639,6 @@ packages:
 
   '@types/connect@3.4.38':
     resolution: {integrity: sha512-K6uROf1LD88uDQqJCktA4yzL1YYAK6NgfsI0v/mTgyPKWsX1CnJ0XPSDhViejru1GcRkLWb8RlzFYJRqGUbaug==}
-
-  '@types/delaunator@5.0.3':
-    resolution: {integrity: sha512-6tTLP8NX0OwtB/fmW9bXp4EWPptawTSsrSGjboWRuzqkxNEEJGyzRPHbr8wnV2DBWfAZ+EPTOvW3B/KysJrl2g==}
 
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
@@ -3343,8 +3334,6 @@ snapshots:
   '@types/connect@3.4.38':
     dependencies:
       '@types/node': 24.12.0
-
-  '@types/delaunator@5.0.3': {}
 
   '@types/estree@1.0.8': {}
 

@@ -39,7 +39,6 @@
 		"normalize": "node --enable-source-maps ./dist/tools/normalize"
 	},
 	"dependencies": {
-		"delaunator": "5.1.0",
 		"express": "5.2.1",
 		"ignore": "7.0.5",
 		"immer": "11.1.4",
@@ -55,7 +54,6 @@
 		"@eslint/js": "9.39.4",
 		"@jest/globals": "30.3.0",
 		"@stylistic/eslint-plugin": "5.10.0",
-		"@types/delaunator": "5.0.3",
 		"@types/express": "5.0.6",
 		"@types/json-diff": "1.0.3",
 		"@types/lodash-es": "4.17.12",
