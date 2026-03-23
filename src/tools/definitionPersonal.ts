@@ -3,6 +3,7 @@ import { cloneDeep, omit, pick } from 'lodash-es';
 import { AssetId, GetLogger, PersonalAssetDefinition, type GraphicsBuildContextAssetData } from 'pandora-common';
 import { join } from 'path';
 import { BUILD_FOR_TEST } from '../config.ts';
+import { APPEARANCE_RANDOMIZATION_CONFIG } from '../presets.ts';
 import { AssetDatabase } from './assetDatabase.ts';
 import { AssetSourcePath, DefaultId, GetAssetRepositoryPath } from './context.ts';
 import { LoadAssetGraphicsFile } from './graphics.ts';
@@ -135,6 +136,16 @@ async function GlobalDefineAssetProcess(def: IntermediatePersonalAssetDefinition
 	}
 
 	ValidateAssetPropertiesFinalize(logger, propertiesValidationMetadata);
+
+	// Validate randomness
+	if (def.allowRandomizerUsage) {
+		const canBeUsed = APPEARANCE_RANDOMIZATION_CONFIG.clothes.some((randomizationAttribute) => asset.attributes?.provides?.includes(randomizationAttribute));
+		if (!canBeUsed) {
+			logger.warning(`'allowRandomizerUsage' is specified, but this asset doesn't have any attribute that qualifies it for randomization. Note, that only attributes directly provided by the asset count - modules do not.`);
+		}
+	} else if (def.allowRandomizerUsage !== undefined) {
+		logger.warning(`'allowRandomizerUsage' is false by default. To prevent item from being used by randomization, do not specify the flag at all.`);
+	}
 
 	// Validate ownership data
 	ValidateOwnershipData(def.ownership, logger, def.graphics != null);

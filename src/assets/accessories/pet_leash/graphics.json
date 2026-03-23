@@ -7,12 +7,12 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "front_mesh",
+			"name": "body",
 			"points": "static",
 			"automeshTemplate": "aboveBody",
 			"graphicalLayers": [
 				{
-					"name": "leash_body",
+					"name": "leash",
 					"colorizationKey": "leash"
 				},
 				{
@@ -28,12 +28,134 @@
 			],
 			"imageMap": {
 				"hanging": [
-					"pet_leash_hanging_leash.png",
-					"pet_leash_hanging_handle.png"
+					"hanging_leash.png",
+					"hanging_handle.png"
+				],
+				"left": [
+					"",
+					""
+				],
+				"right": [
+					"",
+					""
+				],
+				"left_up": [
+					"",
+					""
+				],
+				"right_up": [
+					"",
+					""
 				],
 				"held": [
-					"pet_leash_fading.png",
+					"fading.png",
 					""
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "front",
+			"points": "static",
+			"automeshTemplate": "overlay",
+			"graphicalLayers": [
+				{
+					"name": "leash",
+					"colorizationKey": "leash"
+				},
+				{
+					"name": "handle",
+					"colorizationKey": "handle"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "collarConfig"
+				}
+			],
+			"imageMap": {
+				"front:hanging": [
+					"",
+					""
+				],
+				"front:left": [
+					"stand_stand_left_leash.png",
+					"stand_stand_left_handle.png"
+				],
+				"front:right": [
+					"stand_stand_right_leash.png",
+					"stand_stand_right_handle.png"
+				],
+				"front:left_up": [
+					"stand_kneel_left_leash.png",
+					"stand_kneel_left_handle.png"
+				],
+				"front:right_up": [
+					"stand_kneel_right_leash.png",
+					"stand_kneel_right_handle.png"
+				],
+				"front:held": [
+					"",
+					""
+				],
+				"back:hanging": [
+					"",
+					""
+				],
+				"back:left": [
+					"stand_stand_left_leash.png",
+					"stand_stand_left_handle.png"
+				],
+				"back:right": [
+					"stand_stand_right_leash.png",
+					"stand_stand_right_handle.png"
+				],
+				"back:left_up": [
+					"stand_kneel_left_leash.png",
+					"stand_kneel_left_handle.png"
+				],
+				"back:right_up": [
+					"stand_kneel_right_leash.png",
+					"stand_kneel_right_handle.png"
+				],
+				"back:held": [
+					"",
+					""
+				]
+			}
+		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -400,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "",
+			"graphicalLayers": [
+				{
+					"name": "leash",
+					"colorizationKey": "leash"
+				},
+				{
+					"name": "handle",
+					"colorizationKey": "handle"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"floor_leash.png",
+					"floor_handle.png"
 				]
 			}
 		}

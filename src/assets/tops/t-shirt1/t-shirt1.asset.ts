@@ -121,6 +121,15 @@ DefineAsset({
 					},
 				},
 				{
+					id: 'nobrat',
+					name: 'Brat',
+					properties: {
+						stateFlags: {
+							provides: ['small_print'],
+						},
+					},
+				},
+				{
 					id: 'noPrint',
 					name: 'No Print',
 					properties: {

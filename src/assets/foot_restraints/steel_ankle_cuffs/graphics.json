@@ -872,5 +872,27 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -840,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "",
+			"graphicalLayers": [
+				{
+					"name": "Cuffs",
+					"colorizationKey": "cuffs"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"steelanklecuffs_floor.png"
+				]
+			}
+		}
 	]
 }

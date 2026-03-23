@@ -1,7 +1,6 @@
 DefineAsset({
 	name: 'Onesie',
 	size: 'medium',
-	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
 	colorization: {
 		onesie: {

@@ -1,7 +1,6 @@
 DefineAsset({
 	name: 'Nurse Cap',
 	size: 'small',
-	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
 	colorization: {
 		cap: {

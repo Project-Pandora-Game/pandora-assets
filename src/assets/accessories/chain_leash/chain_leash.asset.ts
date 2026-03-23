@@ -13,6 +13,9 @@ DefineAsset({
 			default: '#FF6565',
 		},
 	},
+	roomDeployment: {
+		autoDeployRelativePosition: [0, -10, 0],
+	},
 	preview: 'chain_preview.png',
 	attributes: {
 		provides: [

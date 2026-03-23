@@ -17,6 +17,7 @@ import { APPEARANCE_RANDOMIZATION_CONFIG } from './presets.ts';
 import { LoadTemplates } from './templates/index.ts';
 import { LoadTileTextures } from './tileTextures/_tileTextures.ts';
 import { AssetDatabase } from './tools/assetDatabase.ts';
+import { GlobalDefineAssetAlias, VerifyAssetAliasLinkage } from './tools/definitionAlias.ts';
 import { GlobalDefineBodypart } from './tools/definitionBodypart.ts';
 import { GlobalDefineLockAsset } from './tools/definitionLock.ts';
 import { GlobalDefineRoomDeviceAsset } from './tools/definitionRoomDevice.ts';
@@ -79,6 +80,7 @@ async function Run() {
 	globalThis.DefineBodypart = GlobalDefineBodypart;
 	globalThis.DefineRoomDeviceAsset = GlobalDefineRoomDeviceAsset;
 	globalThis.DefineLockAsset = GlobalDefineLockAsset;
+	globalThis.DefineAssetAlias = GlobalDefineAssetAlias;
 	SetResourceDestinationDirectory(OUT_DIR);
 
 	// Clear old data
@@ -186,6 +188,8 @@ async function Run() {
 			}
 		}
 	}
+
+	VerifyAssetAliasLinkage();
 
 	const characterModifierTemplates = LoadCharacterModifierTemplates();
 

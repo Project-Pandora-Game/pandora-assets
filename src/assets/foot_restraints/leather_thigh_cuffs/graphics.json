@@ -290,5 +290,42 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -840,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "",
+			"graphicalLayers": [
+				{
+					"name": "large ring",
+					"colorizationKey": "largeRings"
+				},
+				{
+					"name": "cuffs",
+					"colorizationKey": "cuff"
+				},
+				{
+					"name": "belt",
+					"colorizationKey": "belt"
+				},
+				{
+					"name": "rings",
+					"colorizationKey": "smallRings"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"floor_large_ring.png",
+					"floor_cuff.png",
+					"floor_belt.png",
+					"floor_rings.png"
+				]
+			}
+		}
 	]
 }

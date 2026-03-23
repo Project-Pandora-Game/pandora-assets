@@ -1,7 +1,6 @@
 DefineAsset({
 	name: 'Pull-up Diaper',
 	size: 'small',
-	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
 	colorization: {
 		diaper: {

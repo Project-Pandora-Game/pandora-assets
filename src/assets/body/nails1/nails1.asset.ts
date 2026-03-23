@@ -3,7 +3,6 @@ import { ItemInteractionType } from 'pandora-common';
 DefineBodypart({
 	name: 'Nails',
 	bodypart: 'bodymarks',
-	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: {
 		nails: {

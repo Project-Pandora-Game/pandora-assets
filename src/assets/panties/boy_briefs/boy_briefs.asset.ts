@@ -1,7 +1,6 @@
 DefineAsset({
 	name: 'Boy Briefs',
 	size: 'medium',
-	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: {
 		panties: {

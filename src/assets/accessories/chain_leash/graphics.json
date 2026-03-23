@@ -111,24 +111,51 @@
 					""
 				],
 				"back:left": [
-					"chain_leash_stand_stand_right_chain.png",
-					"chain_leash_stand_stand_right_handle.png"
-				],
-				"back:right": [
 					"chain_leash_stand_stand_left_chain.png",
 					"chain_leash_stand_stand_left_handle.png"
 				],
-				"back:left_up": [
-					"chain_leash_stand_kneel_right_chain.png",
-					"chain_leash_stand_kneel_right_handle.png"
+				"back:right": [
+					"chain_leash_stand_stand_right_chain.png",
+					"chain_leash_stand_stand_right_handle.png"
 				],
-				"back:right_up": [
+				"back:left_up": [
 					"chain_leash_stand_kneel_left_chain.png",
 					"chain_leash_stand_kneel_left_handle.png"
+				],
+				"back:right_up": [
+					"chain_leash_stand_kneel_right_chain.png",
+					"chain_leash_stand_kneel_right_handle.png"
 				],
 				"back:held": [
 					"",
 					""
+				]
+			}
+		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -530,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "",
+			"graphicalLayers": [
+				{
+					"name": "chain",
+					"colorizationKey": "chains"
+				},
+				{
+					"name": "handle",
+					"colorizationKey": "handle"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"floor_leash.png",
+					"floor_handle.png"
 				]
 			}
 		}
