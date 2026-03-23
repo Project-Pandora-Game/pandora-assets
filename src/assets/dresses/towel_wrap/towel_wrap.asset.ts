@@ -1,7 +1,6 @@
 DefineAsset({
 	name: 'Towel Wrap (dress)',
 	size: 'medium',
-	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
 	colorization: {
 		towel: {

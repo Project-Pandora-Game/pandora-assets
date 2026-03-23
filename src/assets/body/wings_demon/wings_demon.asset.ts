@@ -1,7 +1,6 @@
 DefineBodypart({
 	name: 'Demon Wings',
 	bodypart: 'wings',
-	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
 	colorization: {
 		bones: {

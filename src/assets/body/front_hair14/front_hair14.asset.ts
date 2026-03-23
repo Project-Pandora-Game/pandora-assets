@@ -36,6 +36,7 @@ DefineAsset({
 	...bodypart, // Reuse most of bodypart definition
 	id: 'body/front_hair14/wig',
 	name: 'Front Wig 14',
+	allowRandomizerUsage: undefined,
 	size: 'small',
 	attributes: {
 		provides: [

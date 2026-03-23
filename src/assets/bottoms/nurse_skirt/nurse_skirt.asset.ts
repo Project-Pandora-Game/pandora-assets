@@ -1,7 +1,6 @@
 DefineAsset({
 	name: 'Nurse Skirt',
 	size: 'medium',
-	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
 	colorization: {
 		skirt: {

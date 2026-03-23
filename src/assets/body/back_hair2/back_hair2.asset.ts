@@ -4,6 +4,7 @@ const { colorization, modules } = CreateHairColor(true);
 const bodypart = DefineBodypart({
 	name: 'Back Hair 2',
 	bodypart: 'backhair',
+	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization,
 	// size:280, y:139, centered
@@ -35,6 +36,7 @@ DefineAsset({
 	...bodypart, // Reuse most of bodypart definition
 	id: 'body/back_hair2/wig',
 	name: 'Back Wig 2',
+	allowRandomizerUsage: undefined,
 	size: 'small',
 	attributes: {
 		provides: [

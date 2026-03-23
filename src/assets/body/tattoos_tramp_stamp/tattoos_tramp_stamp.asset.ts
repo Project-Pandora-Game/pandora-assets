@@ -1,7 +1,6 @@
 DefineBodypart({
 	name: 'Tramp Stamp',
 	bodypart: 'bodymarks',
-	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
 	colorization: {
 		tattoo: {

@@ -4,6 +4,7 @@ const { colorization, modules } = CreateHairColor(false);
 const bodypart = DefineBodypart({
 	name: 'Front Hair 13 (paired)',
 	bodypart: 'fronthair',
+	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization,
 	preview: 'preview.png',
@@ -51,6 +52,7 @@ DefineAsset({
 	...bodypart,
 	id: 'body/front_hair13/wig',
 	name: 'Front Wig 13',
+	allowRandomizerUsage: undefined,
 	size: 'small',
 	attributes: {
 		provides: [

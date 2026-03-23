@@ -3,7 +3,6 @@ import { ItemInteractionType } from 'pandora-common';
 DefineAsset({
 	name: 'Latex Catsuit',
 	size: 'medium',
-	allowRandomizerUsage: false,
 	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {

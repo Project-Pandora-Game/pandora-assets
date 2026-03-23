@@ -3,7 +3,6 @@ import { ItemInteractionType } from 'pandora-common';
 DefineBodypart({
 	name: 'Rope Marks',
 	bodypart: 'bodymarks',
-	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
 	colorization: {
 		mark: {

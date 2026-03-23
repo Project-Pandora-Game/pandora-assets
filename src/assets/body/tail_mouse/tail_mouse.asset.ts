@@ -1,7 +1,6 @@
 DefineBodypart({
 	name: 'Mouse Tail',
 	bodypart: 'tail',
-	allowRandomizerUsage: false,
 	graphics: 'graphics.json',
 	colorization: {
 		tail: {

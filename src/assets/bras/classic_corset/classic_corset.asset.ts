@@ -2,7 +2,6 @@ DefineAsset({
 	name: 'Classic Corset',
 	size: 'medium',
 	requireFreeHandsToUseDefault: true,
-	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: {
 		corset: {
