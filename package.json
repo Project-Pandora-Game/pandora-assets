@@ -39,7 +39,7 @@
 		"normalize": "node --enable-source-maps ./dist/tools/normalize"
 	},
 	"dependencies": {
-		"delaunator": "5.0.1",
+		"delaunator": "5.1.0",
 		"express": "5.2.1",
 		"ignore": "7.0.5",
 		"immer": "11.1.4",
