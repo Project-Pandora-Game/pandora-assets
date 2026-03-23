@@ -276,10 +276,6 @@
 			"name": "Floor Back",
 			"graphicalLayers": [
 				{
-					"name": "Nub",
-					"colorizationKey": "nub"
-				},
-				{
 					"name": "Cuff",
 					"colorizationKey": "collar"
 				}
@@ -291,7 +287,6 @@
 			},
 			"imageMap": {
 				"": [
-					"",
 					"floor_back_front.png"
 				]
 			}
