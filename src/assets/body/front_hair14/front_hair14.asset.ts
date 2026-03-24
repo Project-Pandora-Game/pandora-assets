@@ -3,7 +3,7 @@ const { colorization, modules } = CreateHairColor(true);
 
 const bodypart = DefineBodypart({
 	name: 'Front Hair 14',
-	bodypart: 'backhair',
+	bodypart: 'fronthair',
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization,
