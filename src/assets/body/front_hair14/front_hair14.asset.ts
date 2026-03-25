@@ -7,7 +7,7 @@ const bodypart = DefineBodypart({
 	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization,
-	// size:280, y:176, centered
+	// size:286, y:184, centered
 	preview: 'preview.png',
 	attributes: {
 		provides: [
