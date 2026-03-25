@@ -13,7 +13,7 @@ const bodypart = DefineBodypart({
 			default: '#FFFFFF',
 		},
 	},
-	// size:426, y:189, centered
+	// size:468, y:187, centered
 	preview: 'preview.png',
 	attributes: {
 		provides: [
