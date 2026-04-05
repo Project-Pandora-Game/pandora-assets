@@ -14,6 +14,9 @@ DefineAsset({
 			default: '#444444',
 		},
 	},
+	roomDeployment: {
+		autoDeployRelativePosition: [-155, -20, 0],
+	},
 	// size:200, y:197, centered
 	preview: 'preview.png',
 	attributes: {
@@ -30,6 +33,27 @@ DefineAsset({
 				blockAddRemove: true,
 			},
 		},
+		placement: {
+			type: 'typed',
+			name: 'Blindfold Placement',
+			interactionType: ItemInteractionType.ADD_REMOVE,
+			variants: [
+				{
+					id: 'standard',
+					name: 'Over the eyes',
+					default: true,
+					properties: {
+						effects: {
+							blind: 9.4,
+						},
+					},
+				},
+				{
+					id: 'forehead',
+					name: 'On the forehead',
+				},
+			],
+		},
 		blinding: {
 			type: 'typed',
 			name: 'Blinding Strictness',
@@ -39,27 +63,18 @@ DefineAsset({
 					id: 'light',
 					name: 'Thin Padding',
 					default: true,
-					properties: {
-						effects: {
-							blind: 9.4,
-						},
-					},
 				},
 				{
 					id: 'full',
 					name: 'Thick Padding',
 					properties: {
 						effects: {
-							blind: 10,
+							blind: 0.6,
 						},
 					},
 				},
 			],
 		},
-	},
-	chat: {
-		actionAdd: 'SOURCE_CHARACTER strapped ITEM_ASSET_NAME around TARGET_CHARACTER_DYNAMIC_POSSESSIVE head, covering the eyes.',
-		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE head.',
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',

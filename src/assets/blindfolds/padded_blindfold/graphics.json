@@ -23,12 +23,22 @@
 					"colorizationKey": "blindfold"
 				}
 			],
-			"variables": [],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "placement"
+				}
+			],
 			"imageMap": {
-				"": [
+				"standard": [
 					"blindfold_straps.png",
 					"blindfold_base.png",
 					"blindfold_cover.png"
+				],
+				"forehead": [
+					"blindfold_straps_up.png",
+					"blindfold_base_up.png",
+					"blindfold_cover_up.png"
 				]
 			}
 		},
@@ -55,6 +65,37 @@
 				"": [
 					"blindfold_straps_back.png",
 					"blindfold_buckle_back.png"
+				]
+			}
+		}
+	],
+	"roomLayers": [
+		{
+			"x": -500,
+			"y": -210,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Floor",
+			"graphicalLayers": [
+				{
+					"name": "straps",
+					"colorizationKey": "straps"
+				},
+				{
+					"name": "base"
+				},
+				{
+					"name": "cover",
+					"colorizationKey": "blindfold"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"blindfold_straps_floor.png",
+					"blindfold_base_floor.png",
+					"blindfold_cover_floor.png"
 				]
 			}
 		}
