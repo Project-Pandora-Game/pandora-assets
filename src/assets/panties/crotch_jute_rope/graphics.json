@@ -119,7 +119,7 @@
 			"type": "mesh",
 			"name": "vulva_rope_front",
 			"priority": "ABOVE_BODY",
-			"points": "body",
+			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -155,7 +155,7 @@
 			"type": "mesh",
 			"name": "vulva_rope_knot",
 			"priority": "ABOVE_BODY",
-			"points": "body",
+			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
