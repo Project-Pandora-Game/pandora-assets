@@ -8,7 +8,7 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "hips_single",
-			"priority": "ABOVE_BODY",
+			"priority": "BODY",
 			"points": "body",
 			"pointType": [
 				"body",
@@ -24,23 +24,6 @@
 			"image": {
 				"image": "",
 				"overrides": [
-					{
-						"image": "hips_open_linked_thighs.png",
-						"condition": [
-							[
-								{
-									"module": "hips",
-									"operator": "=",
-									"value": "single"
-								},
-								{
-									"module": "legs",
-									"operator": "=",
-									"value": "attached"
-								}
-							]
-						]
-					},
 					{
 						"image": "hips_open.png",
 						"condition": [
@@ -62,63 +45,8 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "hips_single_back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
-			],
-			"mirror": 0,
-			"colorizationKey": "rope",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "hips_open_linked_thighs_back.png",
-						"condition": [
-							[
-								{
-									"module": "hips",
-									"operator": "=",
-									"value": "single"
-								},
-								{
-									"module": "legs",
-									"operator": "=",
-									"value": "attached"
-								}
-							]
-						]
-					},
-					{
-						"image": "hips_open_back.png",
-						"condition": [
-							[
-								{
-									"module": "hips",
-									"operator": "=",
-									"value": "single"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
 			"name": "vulva_rope_front",
-			"priority": "ABOVE_BODY",
+			"priority": "BODY",
 			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "rope",
@@ -133,6 +61,11 @@
 									"module": "crotch",
 									"operator": "=",
 									"value": "rope"
+								},
+								{
+									"module": "hips",
+									"operator": "=",
+									"value": "none"
 								}
 							],
 							[
@@ -184,7 +117,7 @@
 			"type": "mesh",
 			"name": "vulva_rope_back",
 			"priority": "BELOW_BODY",
-			"points": "body",
+			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "rope",
 			"image": {
@@ -198,6 +131,11 @@
 									"module": "crotch",
 									"operator": "=",
 									"value": "rope"
+								},
+								{
+									"module": "hips",
+									"operator": "=",
+									"value": "none"
 								}
 							],
 							[
@@ -205,6 +143,35 @@
 									"module": "crotch",
 									"operator": "=",
 									"value": "knot"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "waist_upper_back",
+			"priority": "ABOVE_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "rope",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "waist_upper_bottom.png",
+						"condition": [
+							[
+								{
+									"module": "waist",
+									"operator": "=",
+									"value": "rope"
 								}
 							]
 						]
@@ -309,6 +276,35 @@
 			"type": "mesh",
 			"name": "waist_upper_back",
 			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "rope",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "waist_upper_bottom.png",
+						"condition": [
+							[
+								{
+									"module": "waist",
+									"operator": "=",
+									"value": "rope"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "waist_upper_back",
+			"priority": "BELOW_BODY",
 			"points": "body",
 			"mirror": 0,
 			"colorizationKey": "rope",
@@ -362,13 +358,18 @@
 				"image": "waist_normal.png",
 				"overrides": [
 					{
-						"image": "waist_tight.png",
+						"image": "crotch_rope_hips_back.png",
 						"condition": [
 							[
 								{
 									"module": "crotch",
 									"operator": "=",
 									"value": "rope"
+								},
+								{
+									"module": "hips",
+									"operator": "=",
+									"value": "single"
 								}
 							],
 							[
@@ -376,13 +377,40 @@
 									"module": "crotch",
 									"operator": "=",
 									"value": "knot"
-								}
-							],
-							[
+								},
 								{
 									"module": "hips",
 									"operator": "=",
 									"value": "single"
+								}
+							]
+						]
+					},
+					{
+						"image": "crotch_rope_back.png",
+						"condition": [
+							[
+								{
+									"module": "crotch",
+									"operator": "=",
+									"value": "rope"
+								},
+								{
+									"module": "hips",
+									"operator": "=",
+									"value": "none"
+								}
+							],
+							[
+								{
+									"module": "crotch",
+									"operator": "=",
+									"value": "knot"
+								},
+								{
+									"module": "hips",
+									"operator": "=",
+									"value": "none"
 								}
 							]
 						]

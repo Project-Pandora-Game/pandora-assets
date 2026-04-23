@@ -12,9 +12,6 @@ DefineAsset({
 			'Restraint_torso',
 			'Chastity',
 		],
-		requires: [
-			'!Penis',
-		],
 	},
 	roomDeployment: {
 		autoDeployRelativePosition: [-75, -40, 0],
@@ -65,6 +62,9 @@ DefineAsset({
 								'Rope_vulva_anchor_point',
 							],
 						},
+						stateFlags: {
+							provides: ['free_vulva_rope'],
+						},
 					},
 				},
 				{
@@ -95,33 +95,8 @@ DefineAsset({
 					name: 'Single',
 					properties: {
 						stateFlags: {
-							provides: ['hips_single'],
-						},
-					},
-				},
-			],
-		},
-		legs: {
-			type: 'typed',
-			name: 'Thighs',
-			variants: [
-				{
-					id: 'none',
-					name: 'None',
-					default: true,
-				},
-				{
-					id: 'attached',
-					name: 'Attached',
-					properties: {
-						attributes: {
-							requires: [
-								'Rope_thighs_anchor_point',
-							],
-						},
-						stateFlags: {
 							requires: {
-								hips_single: 'Attaching crotch rope to thighs requires "Hips: Single" rope',
+								free_vulva_rope: 'Hips rope requires vulva rope',
 							},
 						},
 					},
