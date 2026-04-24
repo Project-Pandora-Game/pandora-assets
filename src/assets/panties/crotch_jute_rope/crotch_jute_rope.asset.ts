@@ -12,6 +12,9 @@ DefineAsset({
 			'Restraint_torso',
 			'Chastity',
 		],
+		requires: [
+			'!Penis',
+		],
 	},
 	roomDeployment: {
 		autoDeployRelativePosition: [-75, -40, 0],
