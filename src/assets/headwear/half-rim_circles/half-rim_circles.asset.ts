@@ -1,6 +1,5 @@
-
 DefineAsset({
-	name: 'Half-Rim Circles',
+	name: 'Half-rim Circles',
 	size: 'small',
 	graphics: 'graphics.json',
 	colorization: {
