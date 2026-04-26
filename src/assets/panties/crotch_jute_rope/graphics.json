@@ -172,6 +172,11 @@
 									"module": "waist",
 									"operator": "=",
 									"value": "rope"
+								},
+								{
+									"module": "crotch",
+									"operator": "!=",
+									"value": "open"
 								}
 							]
 						]
@@ -290,6 +295,11 @@
 									"module": "waist",
 									"operator": "=",
 									"value": "rope"
+								},
+								{
+									"module": "crotch",
+									"operator": "!=",
+									"value": "open"
 								}
 							]
 						]
