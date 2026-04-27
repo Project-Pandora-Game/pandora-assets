@@ -43,8 +43,10 @@ DefineAsset({
 					name: 'Over the eyes',
 					default: true,
 					properties: {
-						effects: {
-							blind: 9.4,
+						stateFlags: {
+							provides: [
+								'placement_standard',
+							],
 						},
 					},
 				},
@@ -63,19 +65,46 @@ DefineAsset({
 					id: 'light',
 					name: 'Thin Padding',
 					default: true,
+					properties: {
+						stateFlags: {
+							provides: [
+								'blinding_light',
+							],
+						},
+					},
 				},
 				{
 					id: 'full',
 					name: 'Thick Padding',
 					properties: {
-						effects: {
-							blind: 0.6,
+						stateFlags: {
+							provides: [
+								'blinding_full',
+							],
 						},
 					},
 				},
 			],
 		},
 	},
+	stateFlagCombinations: [
+		{
+			requiredFlags: ['placement_standard', 'blinding_light'],
+			properties: {
+				effects: {
+					blind: 9.4,
+				},
+			},
+		},
+		{
+			requiredFlags: ['placement_standard', 'blinding_full'],
+			properties: {
+				effects: {
+					blind: 10,
+				},
+			},
+		},
+	],
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],
