@@ -6,51 +6,34 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "front",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "vibrator",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "egg_out.png",
-						"condition": [
-							[
-								{
-									"module": "insertedVibrator",
-									"operator": "=",
-									"value": "out"
-								}
-							]
-						]
-					},
-					{
-						"image": "egg_half.png",
-						"condition": [
-							[
-								{
-									"module": "insertedVibrator",
-									"operator": "=",
-									"value": "half"
-								}
-							]
-						]
-					},
-					{
-						"image": "egg_in.png",
-						"condition": [
-							[
-								{
-									"module": "insertedVibrator",
-									"operator": "=",
-									"value": "in"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "vibrator"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "insertedVibrator"
+				}
+			],
+			"imageMap": {
+				"out": [
+					"egg_out.png"
+				],
+				"half": [
+					"egg_half.png"
+				],
+				"in": [
+					"egg_in.png"
+				],
+				"deep": [
+					""
 				]
 			}
 		}
