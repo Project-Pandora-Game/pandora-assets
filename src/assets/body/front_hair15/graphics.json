@@ -16,9 +16,17 @@
 					"colorizationKey": "hair"
 				}
 			],
-			"variables": [],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "stray_hair"
+				}
+			],
 			"imageMap": {
-				"": [
+				"yes": [
+					"front_hair_15_stray.png"
+				],
+				"no": [
 					"front_hair_15.png"
 				]
 			}

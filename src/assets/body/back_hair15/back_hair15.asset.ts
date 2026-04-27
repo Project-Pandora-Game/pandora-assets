@@ -1,5 +1,5 @@
 import { CreateHairColor } from '../../../helpers/hair_base.ts';
-const { colorization } = CreateHairColor(false);
+const { colorization, modules } = CreateHairColor(false);
 
 const bodypart = DefineBodypart({
 	name: 'Back Hair 15',
@@ -14,6 +14,24 @@ const bodypart = DefineBodypart({
 			'Hair',
 			'Hair_back',
 		],
+	},
+	modules: {
+		...modules,
+		stray_hair: {
+			type: 'typed',
+			name: 'Stray Hair',
+			variants: [
+				{
+					id: 'yes',
+					name: 'Yes',
+					default: true,
+				},
+				{
+					id: 'no',
+					name: 'No',
+				},
+			],
+		},
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
