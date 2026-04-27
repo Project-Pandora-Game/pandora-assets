@@ -6,15 +6,30 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "glass",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "front",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "glass",
-			"image": {
-				"image": "glass.png",
-				"overrides": []
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "glass",
+					"colorizationKey": "glass"
+				},
+				{
+					"name": "frame",
+					"colorizationKey": "frame"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"glass.png",
+					"frame.png"
+				]
 			}
 		},
 		{
@@ -22,31 +37,25 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "frame",
-			"priority": "ABOVE_BODY",
+			"type": "autoMesh",
+			"name": "back",
 			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "frame",
-			"image": {
-				"image": "frame.png",
-				"overrides": []
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "frame back",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "frame",
-			"image": {
-				"image": "frame_back.png",
-				"overrides": []
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms",
+				"legs"
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "frame"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"frame_back.png"
+				]
 			}
 		}
 	]

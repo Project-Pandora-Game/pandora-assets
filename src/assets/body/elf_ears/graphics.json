@@ -6,28 +6,27 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "",
-			"priority": "BELOW_BODY",
 			"points": "static",
-			"previewOverrides": {
-				"alpha": 0
-			},
-			"mirror": 0,
-			"colorizationKey": "skin",
-			"image": {
-				"image": "ears_front.png",
-				"overrides": [
-					{
-						"image": "ears_back.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "skin"
+				}
+			],
+			"variables": [
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"front": [
+					"ears_front.png"
+				],
+				"back": [
+					"ears_back.png"
 				]
 			}
 		}
