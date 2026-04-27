@@ -19,7 +19,7 @@ const bodypart = DefineBodypart({
 		...modules,
 		stray_hair: {
 			type: 'typed',
-			name: 'Stray Hair',
+			name: 'Stray Hairs',
 			variants: [
 				{
 					id: 'yes',
