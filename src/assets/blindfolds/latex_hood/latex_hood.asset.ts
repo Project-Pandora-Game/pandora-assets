@@ -34,10 +34,12 @@ DefineAsset({
 			'Wig',
 			'Ears',
 			'Fantasy_ears',
+			'Restraint_mouth', // only for full hoods
 		],
 		covers: [
 			'Ear_item',
 			'Mouth_item',
+			'Restraint_eyes', // only for full hoods
 		],
 		requires: [
 			'!Mouth_tongue_out',

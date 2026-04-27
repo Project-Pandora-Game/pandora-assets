@@ -82,5 +82,27 @@
 				"overrides": []
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -331,
+			"y": -220,
+			"width": 672,
+			"height": 420,
+			"type": "autoSprite",
+			"name": "",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "cloth"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"floor.png"
+				]
+			}
+		}
 	]
 }
