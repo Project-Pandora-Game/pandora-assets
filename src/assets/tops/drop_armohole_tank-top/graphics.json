@@ -66,22 +66,6 @@
 					"dropped_armhole_tank_top.png"
 				]
 			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "bust back",
-			"priority": "BELOW_BREASTS",
-			"points": "breasts",
-			"mirror": 0,
-			"colorizationKey": "drop_armohole_tank_top",
-			"image": {
-				"image": "dropped_armhole_tank_top_bust.png",
-				"overrides": []
-			}
 		}
 	],
 	"roomLayers": [

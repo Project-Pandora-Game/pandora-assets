@@ -20,19 +20,6 @@ DefineAsset({
 			'Clothing_upper',
 		],
 	},
-	modules: {
-		type: {
-			type: 'typed',
-			name: 'Drop Armhole Tank Top Type',
-			variants: [
-				{
-					id: 'regular',
-					name: 'Regular',
-					default: true,
-				},
-			],
-		},
-	},
 	ownership: {
 		responsibleContributor: 'Freyja <247626786+freyja-veritas@users.noreply.github.com>',
 		credits: ['Freyja'],
