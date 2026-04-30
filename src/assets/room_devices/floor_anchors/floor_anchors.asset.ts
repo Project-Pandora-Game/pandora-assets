@@ -70,6 +70,7 @@ DefineRoomDeviceAsset({
 							character_slot_left: {
 								poseLimits: {
 									bones: {
+										character_rotation: [[-4, 4]],
 										leg_r: [[-30, 0]],
 										leg_l: [[-30, 0]],
 									},
@@ -94,6 +95,7 @@ DefineRoomDeviceAsset({
 							character_slot_left: {
 								poseLimits: {
 									bones: {
+										character_rotation: [[-4, 4]],
 										leg_r: [[-30, 0]],
 										leg_l: [[-30, 0]],
 									},
@@ -146,6 +148,7 @@ DefineRoomDeviceAsset({
 							character_slot_right: {
 								poseLimits: {
 									bones: {
+										character_rotation: [[-4, 4]],
 										leg_r: [[-30, 0]],
 										leg_l: [[-30, 0]],
 									},
@@ -170,6 +173,7 @@ DefineRoomDeviceAsset({
 							character_slot_right: {
 								poseLimits: {
 									bones: {
+										character_rotation: [[-4, 4]],
 										leg_r: [[-30, 0]],
 										leg_l: [[-30, 0]],
 									},
@@ -223,6 +227,7 @@ DefineRoomDeviceAsset({
 							character_slot_middle: {
 								poseLimits: {
 									bones: {
+										character_rotation: 0,
 										leg_r: -18,
 										leg_l: -18,
 									},

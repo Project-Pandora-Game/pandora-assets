@@ -64,19 +64,8 @@ DefineAsset({
 						poseLimits: {
 							leftArm: {
 								fingers: 'fist',
+								rotation: ['up', 'down'],
 							},
-							options: [
-								{
-									leftArm: {
-										rotation: 'up',
-									},
-								},
-								{
-									leftArm: {
-										rotation: 'down',
-									},
-								},
-							],
 						},
 					},
 				},

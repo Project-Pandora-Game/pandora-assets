@@ -1,0 +1,289 @@
+{
+	"layers": [
+		{
+			"x": 318,
+			"y": -155,
+			"width": 121,
+			"height": 137,
+			"type": "autoSprite",
+			"name": "ring",
+			"graphicalLayers": [
+				{
+					"name": "Plate",
+					"colorizationKey": "plate"
+				},
+				{
+					"name": "Screws",
+					"colorizationKey": "screws"
+				},
+				{
+					"name": "Ring",
+					"colorizationKey": "ring"
+				},
+				{
+					"name": "Nub",
+					"colorizationKey": "nub"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"wr_plate.png",
+					"wr_screws.png",
+					"wr_ring.png",
+					"wr_nub.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": -203,
+			"width": 1000,
+			"height": 2000,
+			"type": "autoSprite",
+			"name": "chain long",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "chain"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "chain"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"tied_long": [
+					"wr_chain_long_overlay.png"
+				],
+				"tied_short": [
+					""
+				],
+				"tied_wrists": [
+					""
+				],
+				"strappado": [
+					""
+				]
+			}
+		},
+		{
+			"type": "slot",
+			"name": "character",
+			"slot": "character_slot",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": 0,
+				"disablePoseOffset": true
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": 0,
+						"offsetY": 0
+					},
+					"condition": [
+						[
+							{
+								"legs": "kneeling"
+							}
+						]
+					]
+				},
+				{
+					"position": {
+						"offsetX": -120,
+						"offsetY": 0,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+							{
+								"module": "chain",
+								"operator": "=",
+								"value": "tied_wrists"
+							}
+						],
+						[
+							{
+								"module": "chain",
+								"operator": "=",
+								"value": "strappado"
+							}
+						]
+					]
+				}
+			]
+		}
+	],
+	"slots": {
+		"character_slot": {
+			"layers": [
+				{
+					"x": 0,
+					"y": -500,
+					"width": 1000,
+					"height": 2000,
+					"type": "autoMesh",
+					"name": "front chain",
+					"points": "static",
+					"automeshTemplate": "overlay",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "chain"
+						}
+					],
+					"variables": [
+						{
+							"type": "typedModule",
+							"module": "chain"
+						},
+						{
+							"type": "view"
+						},
+						{
+							"type": "legsState"
+						}
+					],
+					"imageMap": {
+						"none:front:standing": [
+							""
+						],
+						"none:front:sitting": [
+							""
+						],
+						"none:front:kneeling": [
+							""
+						],
+						"none:back:standing": [
+							""
+						],
+						"none:back:sitting": [
+							""
+						],
+						"none:back:kneeling": [
+							""
+						],
+						"tied_long:front:standing": [
+							"wr_chain_long_standing.png"
+						],
+						"tied_long:front:sitting": [
+							""
+						],
+						"tied_long:front:kneeling": [
+							"wr_chain_long_kneeling.png"
+						],
+						"tied_long:back:standing": [
+							"wr_chain_long_standing_back.png"
+						],
+						"tied_long:back:sitting": [
+							""
+						],
+						"tied_long:back:kneeling": [
+							"wr_chain_long_kneeling_back.png"
+						],
+						"tied_short:front:standing": [
+							"wr_chain_short.png"
+						],
+						"tied_short:front:sitting": [
+							""
+						],
+						"tied_short:front:kneeling": [
+							""
+						],
+						"tied_short:back:standing": [
+							"wr_chain_short_back.png"
+						],
+						"tied_short:back:sitting": [
+							""
+						],
+						"tied_short:back:kneeling": [
+							""
+						],
+						"tied_wrists:front:standing": [
+							"wr_chain_wrists.png"
+						],
+						"tied_wrists:front:sitting": [
+							""
+						],
+						"tied_wrists:front:kneeling": [
+							""
+						],
+						"tied_wrists:back:standing": [
+							"wr_chain_wrists.png"
+						],
+						"tied_wrists:back:sitting": [
+							""
+						],
+						"tied_wrists:back:kneeling": [
+							""
+						],
+						"strappado:front:standing": [
+							""
+						],
+						"strappado:front:sitting": [
+							""
+						],
+						"strappado:front:kneeling": [
+							""
+						],
+						"strappado:back:standing": [
+							""
+						],
+						"strappado:back:sitting": [
+							""
+						],
+						"strappado:back:kneeling": [
+							""
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": -500,
+					"width": 1000,
+					"height": 2000,
+					"type": "autoMesh",
+					"name": "strappado chain",
+					"points": "static",
+					"automeshTemplate": "background",
+					"graphicalLayers": [
+						{
+							"name": "",
+							"colorizationKey": "chain"
+						}
+					],
+					"variables": [
+						{
+							"type": "typedModule",
+							"module": "chain"
+						}
+					],
+					"imageMap": {
+						"none": [
+							""
+						],
+						"tied_long": [
+							""
+						],
+						"tied_short": [
+							""
+						],
+						"tied_wrists": [
+							""
+						],
+						"strappado": [
+							"wr_chain_strappado.png"
+						]
+					}
+				}
+			]
+		}
+	}
+}

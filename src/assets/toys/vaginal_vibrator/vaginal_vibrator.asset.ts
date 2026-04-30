@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Vaginal vibrator',
+	name: 'Vaginal Vibrator',
 	size: 'small',
 	graphics: 'graphics.json',
 	colorization: {

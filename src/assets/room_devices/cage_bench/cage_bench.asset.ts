@@ -98,6 +98,24 @@ DefineRoomDeviceAsset({
 								elbow_r: 151,
 							},
 						},
+						{
+							//clipped cuffs
+							bones: {
+								arm_r: 110,
+								arm_l: 110,
+								elbow_r: -20,
+								elbow_l: -20,
+							},
+						},
+						{
+							//clipped doll body
+							bones: {
+								arm_r: 110,
+								arm_l: 110,
+								elbow_r: -22,
+								elbow_l: -22,
+							},
+						},
 					],
 					bones: {
 						leg_r: [[-10, 10]],

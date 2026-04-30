@@ -35,7 +35,6 @@ DefineAsset({
 					properties: {
 						attributes: {
 							provides: ['Crotch_protruding'],
-							requires: [],
 						},
 					},
 				},

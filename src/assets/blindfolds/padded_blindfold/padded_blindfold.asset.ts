@@ -14,6 +14,9 @@ DefineAsset({
 			default: '#444444',
 		},
 	},
+	roomDeployment: {
+		autoDeployRelativePosition: [-155, -20, 0],
+	},
 	// size:200, y:197, centered
 	preview: 'preview.png',
 	attributes: {
@@ -30,6 +33,29 @@ DefineAsset({
 				blockAddRemove: true,
 			},
 		},
+		placement: {
+			type: 'typed',
+			name: 'Blindfold Placement',
+			interactionType: ItemInteractionType.ADD_REMOVE,
+			variants: [
+				{
+					id: 'standard',
+					name: 'Over the eyes',
+					default: true,
+					properties: {
+						stateFlags: {
+							provides: [
+								'placement_standard',
+							],
+						},
+					},
+				},
+				{
+					id: 'forehead',
+					name: 'On the forehead',
+				},
+			],
+		},
 		blinding: {
 			type: 'typed',
 			name: 'Blinding Strictness',
@@ -40,8 +66,10 @@ DefineAsset({
 					name: 'Thin Padding',
 					default: true,
 					properties: {
-						effects: {
-							blind: 9.4,
+						stateFlags: {
+							provides: [
+								'blinding_light',
+							],
 						},
 					},
 				},
@@ -49,18 +77,34 @@ DefineAsset({
 					id: 'full',
 					name: 'Thick Padding',
 					properties: {
-						effects: {
-							blind: 10,
+						stateFlags: {
+							provides: [
+								'blinding_full',
+							],
 						},
 					},
 				},
 			],
 		},
 	},
-	chat: {
-		actionAdd: 'SOURCE_CHARACTER strapped ITEM_ASSET_NAME around TARGET_CHARACTER_DYNAMIC_POSSESSIVE head, covering the eyes.',
-		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE head.',
-	},
+	stateFlagCombinations: [
+		{
+			requiredFlags: ['placement_standard', 'blinding_light'],
+			properties: {
+				effects: {
+					blind: 9.4,
+				},
+			},
+		},
+		{
+			requiredFlags: ['placement_standard', 'blinding_full'],
+			properties: {
+				effects: {
+					blind: 10,
+				},
+			},
+		},
+	],
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
 		credits: ['ClaudiaMia'],
