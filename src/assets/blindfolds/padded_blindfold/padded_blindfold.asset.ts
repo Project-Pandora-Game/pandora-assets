@@ -51,8 +51,12 @@ DefineAsset({
 					},
 				},
 				{
-					id: 'forehead',
-					name: 'On the forehead',
+					id: 'forehead_under',
+					name: 'On the forehead (under the hair)',
+				},
+				{
+					id: 'forehead_over',
+					name: 'On the forehead (over the hair)',
 				},
 			],
 		},

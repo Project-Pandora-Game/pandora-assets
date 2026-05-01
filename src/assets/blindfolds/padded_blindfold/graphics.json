@@ -35,7 +35,58 @@
 					"blindfold_base.png",
 					"blindfold_cover.png"
 				],
-				"forehead": [
+				"forehead_under": [
+					"blindfold_straps_up.png",
+					"blindfold_base_up.png",
+					"blindfold_cover_up.png"
+				],
+				"forehead_over": [
+					"",
+					"",
+					""
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "front_mesh (above hair)",
+			"points": "static",
+			"automeshTemplate": "aboveFrontHair",
+			"graphicalLayers": [
+				{
+					"name": "straps",
+					"colorizationKey": "straps"
+				},
+				{
+					"name": "base"
+				},
+				{
+					"name": "cover",
+					"colorizationKey": "blindfold"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "placement"
+				}
+			],
+			"imageMap": {
+				"standard": [
+					"",
+					"",
+					""
+				],
+				"forehead_under": [
+					"",
+					"",
+					""
+				],
+				"forehead_over": [
 					"blindfold_straps_up.png",
 					"blindfold_base_up.png",
 					"blindfold_cover_up.png"
