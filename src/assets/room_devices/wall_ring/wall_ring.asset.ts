@@ -196,6 +196,22 @@ DefineRoomDeviceAsset({
 				},
 			},
 		},
+		base: {
+			type: 'typed',
+			name: 'Base Plate',
+			staticConfig: { slotName: 'character_slot' },
+			variants: [
+				{
+					id: 'yes',
+					name: 'Yes',
+					default: true,
+				},
+				{
+					id: 'no',
+					name: 'No',
+				},
+			],
+		},
 	},
 	pivot: {
 		x: 500,
