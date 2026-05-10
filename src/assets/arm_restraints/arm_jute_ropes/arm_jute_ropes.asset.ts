@@ -69,10 +69,10 @@ DefineAsset({
 										rotation: ['up', 'backward'],
 									},
 									bones: {
-										arm_l: -95,
-										elbow_l: -17,
-										arm_r: -95,
-										elbow_r: -17,
+										arm_l: [[-95, -90]],
+										elbow_l: [[-25, -17]],
+										arm_r: [[-95, -90]],
+										elbow_r: [[-25, -17]],
 									},
 									armsOrder: {
 										upper: ['left', 'right'],
