@@ -19,7 +19,7 @@ DefineAsset({
 	},
 	posePresets: [
 		{
-			name: 'Down',
+			name: 'Wrists Front Down',
 			arms: {
 				rotation: 'forward',
 			},
@@ -29,9 +29,10 @@ DefineAsset({
 				elbow_r: 20,
 				elbow_l: 20,
 			},
+			optional: { arms: { position: 'front' } },
 		},
 		{
-			name: 'Overhead',
+			name: 'Wrists Front Overhead',
 			arms: {
 				rotation: 'backward',
 			},
