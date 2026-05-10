@@ -28,8 +28,8 @@ DefineAsset({
 	roomDeployment: {
 		autoDeployRelativePosition: [-310, -30, 0],
 	},
-	// size:260, y:560, centered
-	preview: null, //'preview.png',
+	// size:260, y:646, centered
+	preview: 'preview.png',
 	modules: {
 		...baseModules,
 		attachment: {
@@ -43,21 +43,6 @@ DefineAsset({
 				{
 					id: 'thighs',
 					name: 'Thighs',
-					default: true,
-				},
-			],
-		},
-		room_placement: {
-			type: 'typed',
-			name: 'Room Placement',
-			variants: [
-				{
-					id: 'coiled',
-					name: 'Coiled',
-				},
-				{
-					id: 'tangled',
-					name: 'Tangled',
 					default: true,
 				},
 			],
