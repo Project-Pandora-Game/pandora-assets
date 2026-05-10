@@ -20,6 +20,8 @@ DefineAsset({
 		provides: [
 			'Restraint',
 			'Restraint_torso',
+			'Vulva_item',
+			'Toy',
 		],
 		requires: [
 			'!Penis',
