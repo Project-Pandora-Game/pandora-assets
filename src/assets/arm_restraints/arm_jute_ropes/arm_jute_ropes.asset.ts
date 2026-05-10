@@ -85,6 +85,12 @@ DefineAsset({
 									armsOrder: {
 										upper: 'right',
 									},
+									options: [
+										{ arms: { position: 'front_above_hair' } },
+										{ arms: { position: 'front' } },
+										{ arms: { position: 'back' } },
+										{ arms: { position: 'back_below_hair' } },
+									],
 								},
 								{
 									arms: {
