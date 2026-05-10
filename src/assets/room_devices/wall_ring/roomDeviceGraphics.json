@@ -25,11 +25,22 @@
 					"colorizationKey": "nub"
 				}
 			],
-			"variables": [],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "base"
+				}
+			],
 			"imageMap": {
-				"": [
+				"yes": [
 					"wr_plate.png",
 					"wr_screws.png",
+					"wr_ring.png",
+					"wr_nub.png"
+				],
+				"no": [
+					"",
+					"",
 					"wr_ring.png",
 					"wr_nub.png"
 				]

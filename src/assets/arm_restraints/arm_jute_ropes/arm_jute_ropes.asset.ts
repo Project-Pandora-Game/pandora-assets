@@ -17,6 +17,34 @@ DefineAsset({
 			'Restraint_arms',
 		],
 	},
+	posePresets: [
+		{
+			name: 'Wrists Front Down',
+			arms: {
+				rotation: 'forward',
+			},
+			bones: {
+				arm_r: 90,
+				arm_l: 90,
+				elbow_r: 20,
+				elbow_l: 20,
+			},
+			optional: { arms: { position: 'front' } },
+		},
+		{
+			name: 'Wrists Front Overhead',
+			arms: {
+				rotation: 'backward',
+			},
+			bones: {
+				arm_l: -80,
+				elbow_l: -40,
+				arm_r: -80,
+				elbow_r: -40,
+			},
+			optional: { arms: { position: 'front' } },
+		},
+	],
 	modules: {
 		...baseModules,
 		arms: {
@@ -55,7 +83,7 @@ DefineAsset({
 										elbow_r: -40,
 									},
 									armsOrder: {
-										upper: ['left', 'right'],
+										upper: 'right',
 									},
 									options: [
 										{ arms: { position: 'front_above_hair' } },
