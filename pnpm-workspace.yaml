@@ -1,0 +1,12 @@
+allowBuilds:
+  pandora-common: true
+  sharp: true
+  unrs-resolver: true
+
+updateNotifier: false
+strictPeerDependencies: true
+allowUnusedPatches: false
+verifyDepsBeforeRun: error
+injectWorkspacePackages: false
+forceLegacyDeploy: true
+nodeOptions: --no-warnings=ExperimentalWarning --experimental-vm-modules
