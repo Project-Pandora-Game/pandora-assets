@@ -174,5 +174,42 @@
 				"overrides": []
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -331,
+			"y": -220,
+			"width": 672,
+			"height": 420,
+			"type": "autoSprite",
+			"name": "",
+			"graphicalLayers": [
+				{
+					"name": "front_rope",
+					"colorizationKey": "rope"
+				},
+				{
+					"name": "wand",
+					"colorizationKey": "wand"
+				},
+				{
+					"name": "handle",
+					"colorizationKey": "handle"
+				},
+				{
+					"name": "back_rope",
+					"colorizationKey": "rope"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"rope_floor_back.png",
+					"wand_base_floor.png",
+					"wand_handle_floor.png",
+					"rope_floor_front.png"
+				]
+			}
+		}
 	]
 }

@@ -74,6 +74,14 @@ DefineAsset({
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
+				part: 'Wand',
+				source: 'Self-Made',
+				copyrightHolder: 'ClaudiaMia',
+				editedBy: 'Shikifet',
+				license: 'Pandora-Use-Only-v1-or-later',
+			},
+			{
+				part: 'Rope',
 				source: 'Self-Made',
 				copyrightHolder: 'Shikifet',
 				editedBy: 'Shikifet',
