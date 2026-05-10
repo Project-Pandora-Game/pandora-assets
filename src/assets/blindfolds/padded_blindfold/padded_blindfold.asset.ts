@@ -36,6 +36,9 @@ DefineAsset({
 		placement: {
 			type: 'typed',
 			name: 'Blindfold Placement',
+			variantMigration: {
+				'forehead': 'forehead_under',
+			},
 			interactionType: ItemInteractionType.ADD_REMOVE,
 			variants: [
 				{
