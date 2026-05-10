@@ -2617,6 +2617,36 @@
 						]
 					},
 					{
+						"image": "wrist_front_pillar.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"module": "cinch",
+									"operator": "=",
+									"value": "no"
+								},
+								{
+									"bone": "arm_r",
+									"operator": "=",
+									"value": -95
+								},
+								{
+									"bone": "elbow_r",
+									"operator": "=",
+									"value": -17
+								}
+							]
+						]
+					},
+					{
 						"image": "wrist_front_ring_cinched.png",
 						"condition": [
 							[
@@ -2642,6 +2672,36 @@
 									"bone": "elbow_r",
 									"operator": "=",
 									"value": -25
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_front_pillar_cinched.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"module": "cinch",
+									"operator": "=",
+									"value": "yes"
+								},
+								{
+									"bone": "arm_r",
+									"operator": "=",
+									"value": -95
+								},
+								{
+									"bone": "elbow_r",
+									"operator": "=",
+									"value": -17
 								}
 							]
 						]
