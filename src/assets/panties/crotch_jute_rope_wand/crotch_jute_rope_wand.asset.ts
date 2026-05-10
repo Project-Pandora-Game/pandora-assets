@@ -14,7 +14,7 @@ DefineAsset({
 			name: 'Handle',
 			default: '#FEFCFC',
 		},
-		...baseColorization
+		...baseColorization,
 	},
 	attributes: {
 		provides: [
@@ -26,10 +26,10 @@ DefineAsset({
 		],
 	},
 	roomDeployment: {
-		autoDeployRelativePosition: [-75, -40, 0],
+		autoDeployRelativePosition: [-310, -30, 0],
 	},
 	// size:260, y:560, centered
-	preview: null,//'preview.png',
+	preview: null, //'preview.png',
 	modules: {
 		...baseModules,
 		attachment: {
