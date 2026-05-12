@@ -2,7 +2,7 @@
 	"name": "pandora-assets",
 	"version": "0.1.0",
 	"private": true,
-	"packageManager": "pnpm@10.33.3+sha512.a19744364a7e248b92657a4ca5973f9354d21caf982579674b1c539f32c7420c47138ad8b1254df07aba9bc782d9b3029e3db34d5dbff974326eb74dac8ff489",
+	"packageManager": "pnpm@10.33.4+sha512.1c67b3b359b2d408119ba1ed289f34b8fc3c6873412bec6fd264fbdc82489e510fcbecb9ce9d22dae7f3b76269d8441046014bdca53b9979cd7a561ad631b800",
 	"engines": {
 		"node": ">=24.x"
 	},
@@ -34,7 +34,7 @@
 	"dependencies": {
 		"express": "5.2.1",
 		"ignore": "7.0.5",
-		"immer": "11.1.6",
+		"immer": "11.1.8",
 		"json-diff": "1.0.6",
 		"lodash-es": "4.18.1",
 		"pandora-common": "github:Project-Pandora-Game/pandora#master&path:pandora-common",
@@ -45,19 +45,19 @@
 	},
 	"devDependencies": {
 		"@eslint/js": "9.39.4",
-		"@jest/globals": "30.4.0",
+		"@jest/globals": "30.4.1",
 		"@stylistic/eslint-plugin": "5.10.0",
 		"@types/express": "5.0.6",
 		"@types/json-diff": "1.0.3",
 		"@types/lodash-es": "4.17.12",
-		"@types/node": "24.12.2",
+		"@types/node": "24.12.4",
 		"eslint": "9.39.4",
 		"eslint-plugin-import": "2.32.0",
-		"jest": "30.4.0",
+		"jest": "30.4.2",
 		"ts-jest": "29.4.9",
 		"tsc-watch": "7.2.0",
 		"tslib": "2.8.1",
 		"typescript": "5.9.3",
-		"typescript-eslint": "8.59.2"
+		"typescript-eslint": "8.59.3"
 	}
 }
