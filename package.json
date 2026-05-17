@@ -19,8 +19,8 @@
 		"build-for-test:package": "pnpm run --silent build-for-test && node --enable-source-maps --env-file=.env ./tools/testing/prepareTestingAssets.js",
 		"build-for-test:check": "pnpm run --silent build-for-test && node --enable-source-maps --env-file=.env ./tools/testing/checkTestingAssets.js",
 		"build-for-test:check-no-compile": "pnpm run --silent build-for-test:run-build && node --enable-source-maps --env-file=.env ./tools/testing/checkTestingAssets.js",
-		"dev": "rimraf dist && tsc-watch -p ./tsconfig.json --onSuccess \"node --enable-source-maps --env-file=.env ./dist/index --watch\"",
-		"dev:inspect": "rimraf dist && tsc-watch -p ./tsconfig.json --onSuccess \"node --inspect=26958 --enable-source-maps --env-file=.env ./dist/index --watch\"",
+		"dev": "rimraf dist && tsc-watch -p ./tsconfig.json --skipLibCheck --onSuccess \"node --enable-source-maps --env-file=.env ./dist/index --watch\"",
+		"dev:inspect": "rimraf dist && tsc-watch -p ./tsconfig.json --skipLibCheck --onSuccess \"node --inspect=26958 --enable-source-maps --env-file=.env ./dist/index --watch\"",
 		"lint": "eslint --max-warnings 0 .",
 		"lint:fix": "eslint --fix .",
 		"type-check": "pnpm run '/type-check:.*/'",
@@ -41,7 +41,7 @@
 		"rimraf": "6.1.3",
 		"sharp": "0.34.5",
 		"simple-git": "3.36.0",
-		"zod": "4.3.6"
+		"zod": "4.4.3"
 	},
 	"devDependencies": {
 		"@eslint/js": "9.39.4",

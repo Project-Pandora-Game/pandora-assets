@@ -11,8 +11,7 @@
 			"port": 26958,
 			"sourceMaps": true,
 			"internalConsoleOptions": "neverOpen",
-			"preLaunchTask": "Asset development server",
-			"postDebugTask": "Terminate All Tasks"
+			"preLaunchTask": "Asset development server"
 		},
 	]
 }

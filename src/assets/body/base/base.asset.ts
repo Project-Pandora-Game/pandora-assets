@@ -167,6 +167,15 @@ DefineBodypart({
 										leg_r: [[-50, 50]],
 									},
 								},
+								{
+									legs: {
+										pose: 'heel_kneeling',
+									},
+									bones: {
+										leg_l: [[-50, 50]],
+										leg_r: [[-50, 50]],
+									},
+								},
 							],
 						},
 					},

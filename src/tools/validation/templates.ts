@@ -64,13 +64,17 @@ export function TemplateValidate(template: Immutable<PointTemplateSource>, logge
 		}
 
 		// The point transformations should make sense
-		for (let ti = 0; ti < point.transforms.length; ti++) {
-			// eslint-disable-next-line @typescript-eslint/no-unused-vars
-			const transformLogger = pointLogger.prefixMessages(`Transform #${ti}:`);
-			// eslint-disable-next-line @typescript-eslint/no-unused-vars
-			const transform = point.transforms[ti];
+		if (point.transforms != null) {
+			// TODO: Warn about empty transforms
 
-			// Nothing here currently
+			for (let ti = 0; ti < point.transforms.length; ti++) {
+				// eslint-disable-next-line @typescript-eslint/no-unused-vars
+				const transformLogger = pointLogger.prefixMessages(`Transform #${ti}:`);
+				// eslint-disable-next-line @typescript-eslint/no-unused-vars
+				const transform = point.transforms[ti];
+
+				// Nothing here currently
+			}
 		}
 	}
 }

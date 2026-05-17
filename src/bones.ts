@@ -14,11 +14,47 @@ const boneDefinitionImpl = {
 		type: 'pose',
 	},
 	leg_l: {
-		pos: [521, 735],
+		pos: [540, 735],
 		uiPositionOffset: [24, -28],
 		mirror: 'leg_r',
 		baseRotation: 90,
 		type: 'pose',
+		poseTransforms: [
+			{
+				axis: [1, 0, 0],
+				rotation: -90,
+				condition: [{ legs: 'sitting' }],
+			},
+			{
+				axis: [1, 0, 0],
+				rotation: -80,
+				condition: [{ legs: 'heel_kneeling' }],
+			},
+		],
+	},
+	lowerleg_l: {
+		pos: [550, 975],
+		mirror: 'lowerleg_r',
+		parent: 'leg_l',
+		baseRotation: 90,
+		type: 'pose',
+		poseTransforms: [
+			{
+				axis: [1, 0, 0],
+				rotation: 90,
+				condition: [{ legs: 'kneeling' }],
+			},
+			{
+				axis: [1, 0, 0],
+				rotation: 90,
+				condition: [{ legs: 'sitting' }],
+			},
+			{
+				axis: [1, 0, 0],
+				rotation: 170,
+				condition: [{ legs: 'heel_kneeling' }],
+			},
+		],
 	},
 	arm_width: { type: 'body' },
 	leg_width: { type: 'body' },
