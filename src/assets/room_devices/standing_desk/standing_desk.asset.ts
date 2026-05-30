@@ -51,7 +51,7 @@ DefineRoomDeviceAsset({
 			name: 'Drawer lock',
 			staticConfig: { slotName: null },
 			lockedProperties: {
-				blockModules: [ 'drawer' ],
+				blockModules: ['drawer'],
 			},
 		},
 		drawer: {
