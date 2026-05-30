@@ -54,7 +54,7 @@ DefineRoomDeviceAsset({
 				blockModules: [ 'drawer' ],
 			},
 		},
-		storage: {
+		drawer: {
 			type: 'storage',
 			name: `Drawer`,
 			staticConfig: { slotName: null },
