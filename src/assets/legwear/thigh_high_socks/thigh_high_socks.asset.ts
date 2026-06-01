@@ -20,6 +20,10 @@ DefineAsset({
 			name: 'Stripe Bottom (3)',
 			default: '#83a3cc',
 		},
+		cowPrint: {
+			name: 'Cow pattern',
+			default: '#202020',
+		},
 	},
 	// size:600, y:763, centered
 	preview: 'preview.png',
@@ -62,7 +66,7 @@ DefineAsset({
 		},
 		stripes: {
 			type: 'typed',
-			name: 'Sock Stripes',
+			name: 'Sock Pattern',
 			variants: [
 				{
 					id: 'three',
@@ -78,8 +82,12 @@ DefineAsset({
 					name: '1 Stripe',
 				},
 				{
+					id: 'cow',
+					name: 'Cow Print',
+				},
+				{
 					id: 'none',
-					name: 'No Stripes',
+					name: 'No Pattern',
 				},
 			],
 		},
@@ -118,6 +126,13 @@ DefineAsset({
 				copyrightHolder: 'Izzi Button',
 				editedBy: 'Sandrine',
 				license: 'Pandora-Use-Only-v1-or-later',
+			},
+			{
+				part: 'cow patterm',
+				source: 'Self-Made',
+				copyrightHolder: 'Sandrine',
+				editedBy: 'Sandrine',
+				license: 'Pandora-Use-Only-NoModify-v1-or-later',
 			},
 		],
 	},

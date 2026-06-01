@@ -66,7 +66,14 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "Front Stripes",
+			"enableCond": [
+				[
+					{
+						"view": "front"
+					}
+				]
+			],
+			"name": "Front pattern",
 			"points": "body",
 			"automeshTemplate": "aboveBody",
 			"disabledTemplateParts": [
@@ -85,6 +92,10 @@
 				{
 					"name": "Stripe 3",
 					"colorizationKey": "stripeBottom"
+				},
+				{
+					"name": "Cow pattern",
+					"colorizationKey": "cowPrint"
 				}
 			],
 			"variables": [
@@ -93,90 +104,131 @@
 					"module": "worn_l"
 				},
 				{
-					"type": "view"
+					"type": "typedModule",
+					"module": "stripes"
 				},
 				{
 					"type": "typedModule",
-					"module": "stripes"
+					"module": "feet"
 				}
 			],
 			"imageMap": {
-				"yes:front:three": [
+				"yes:three:standard": [
 					"stripe1.png",
 					"stripe2.png",
-					"stripe3.png"
+					"stripe3.png",
+					""
 				],
-				"yes:front:two": [
+				"yes:three:footless": [
 					"stripe1.png",
 					"stripe2.png",
+					"stripe3.png",
 					""
 				],
-				"yes:front:one": [
+				"yes:two:standard": [
+					"stripe1.png",
+					"stripe2.png",
+					"",
+					""
+				],
+				"yes:two:footless": [
+					"stripe1.png",
+					"stripe2.png",
+					"",
+					""
+				],
+				"yes:one:standard": [
 					"stripe1.png",
 					"",
-					""
-				],
-				"yes:front:none": [
-					"",
 					"",
 					""
 				],
-				"no:front:three": [
+				"yes:one:footless": [
+					"stripe1.png",
 					"",
 					"",
 					""
 				],
-				"no:front:two": [
+				"yes:cow:standard": [
+					"",
+					"",
+					"",
+					"socks_cow_pattern.png"
+				],
+				"yes:cow:footless": [
+					"",
+					"",
+					"",
+					"socks_footless_cow_pattern.png"
+				],
+				"yes:none:standard": [
+					"",
 					"",
 					"",
 					""
 				],
-				"no:front:one": [
+				"yes:none:footless": [
 					"",
-					"",
-					""
-				],
-				"no:front:none": [
 					"",
 					"",
 					""
 				],
-				"yes:back:three": [
+				"no:three:standard": [
 					"",
-					"",
-					""
-				],
-				"yes:back:two": [
 					"",
 					"",
 					""
 				],
-				"yes:back:one": [
+				"no:three:footless": [
 					"",
-					"",
-					""
-				],
-				"yes:back:none": [
 					"",
 					"",
 					""
 				],
-				"no:back:three": [
+				"no:two:standard": [
 					"",
-					"",
-					""
-				],
-				"no:back:two": [
 					"",
 					"",
 					""
 				],
-				"no:back:one": [
+				"no:two:footless": [
+					"",
 					"",
 					"",
 					""
 				],
-				"no:back:none": [
+				"no:one:standard": [
+					"",
+					"",
+					"",
+					""
+				],
+				"no:one:footless": [
+					"",
+					"",
+					"",
+					""
+				],
+				"no:cow:standard": [
+					"",
+					"",
+					"",
+					""
+				],
+				"no:cow:footless": [
+					"",
+					"",
+					"",
+					""
+				],
+				"no:none:standard": [
+					"",
+					"",
+					"",
+					""
+				],
+				"no:none:footless": [
+					"",
 					"",
 					"",
 					""
@@ -248,7 +300,14 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "Back stripes",
+			"enableCond": [
+				[
+					{
+						"view": "back"
+					}
+				]
+			],
+			"name": "Back pattern",
 			"points": "body",
 			"automeshTemplate": "belowBody",
 			"disabledTemplateParts": [
@@ -267,6 +326,10 @@
 				{
 					"name": "Stripe 3",
 					"colorizationKey": "stripeBottom"
+				},
+				{
+					"name": "Cow pattern",
+					"colorizationKey": "cowPrint"
 				}
 			],
 			"variables": [
@@ -275,90 +338,131 @@
 					"module": "worn_l"
 				},
 				{
-					"type": "view"
+					"type": "typedModule",
+					"module": "stripes"
 				},
 				{
 					"type": "typedModule",
-					"module": "stripes"
+					"module": "feet"
 				}
 			],
 			"imageMap": {
-				"yes:front:three": [
-					"",
-					"",
-					""
-				],
-				"yes:front:two": [
-					"",
-					"",
-					""
-				],
-				"yes:front:one": [
-					"",
-					"",
-					""
-				],
-				"yes:front:none": [
-					"",
-					"",
-					""
-				],
-				"no:front:three": [
-					"",
-					"",
-					""
-				],
-				"no:front:two": [
-					"",
-					"",
-					""
-				],
-				"no:front:one": [
-					"",
-					"",
-					""
-				],
-				"no:front:none": [
-					"",
-					"",
-					""
-				],
-				"yes:back:three": [
+				"yes:three:standard": [
 					"stripe1.png",
 					"stripe2.png",
-					"stripe3.png"
+					"stripe3.png",
+					""
 				],
-				"yes:back:two": [
+				"yes:three:footless": [
 					"stripe1.png",
 					"stripe2.png",
+					"stripe3.png",
 					""
 				],
-				"yes:back:one": [
+				"yes:two:standard": [
+					"stripe1.png",
+					"stripe2.png",
+					"",
+					""
+				],
+				"yes:two:footless": [
+					"stripe1.png",
+					"stripe2.png",
+					"",
+					""
+				],
+				"yes:one:standard": [
 					"stripe1.png",
 					"",
-					""
-				],
-				"yes:back:none": [
-					"",
 					"",
 					""
 				],
-				"no:back:three": [
+				"yes:one:footless": [
+					"stripe1.png",
 					"",
 					"",
 					""
 				],
-				"no:back:two": [
+				"yes:cow:standard": [
+					"",
+					"",
+					"",
+					"socks_back_cow_pattern.png"
+				],
+				"yes:cow:footless": [
+					"",
+					"",
+					"",
+					"socks_back_footless_cow_pattern.png"
+				],
+				"yes:none:standard": [
+					"",
 					"",
 					"",
 					""
 				],
-				"no:back:one": [
+				"yes:none:footless": [
+					"",
 					"",
 					"",
 					""
 				],
-				"no:back:none": [
+				"no:three:standard": [
+					"",
+					"",
+					"",
+					""
+				],
+				"no:three:footless": [
+					"",
+					"",
+					"",
+					""
+				],
+				"no:two:standard": [
+					"",
+					"",
+					"",
+					""
+				],
+				"no:two:footless": [
+					"",
+					"",
+					"",
+					""
+				],
+				"no:one:standard": [
+					"",
+					"",
+					"",
+					""
+				],
+				"no:one:footless": [
+					"",
+					"",
+					"",
+					""
+				],
+				"no:cow:standard": [
+					"",
+					"",
+					"",
+					""
+				],
+				"no:cow:footless": [
+					"",
+					"",
+					"",
+					""
+				],
+				"no:none:standard": [
+					"",
+					"",
+					"",
+					""
+				],
+				"no:none:footless": [
+					"",
 					"",
 					"",
 					""
