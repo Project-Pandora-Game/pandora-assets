@@ -2,6 +2,7 @@
 	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
 	"extends": [
 		"config:recommended",
+		":configMigration",
 		":disableDependencyDashboard",
 		":prHourlyLimitNone",
 		":rebaseStalePrs",
@@ -9,6 +10,9 @@
 	],
 	"automergeType": "branch",
 	"autoApprove": true,
+	"automergeSchedule": [
+		"* 2-8 * * *"
+	],
 	"rangeStrategy": "pin",
 	"semanticCommits": "disabled",
 	"commitMessagePrefix": "[CHORE]",
@@ -16,6 +20,7 @@
 	"labels": [
 		"Component: Tooling"
 	],
+	"minimumReleaseAge": "7 days",
 	"packageRules": [
 		{
 			"matchDepTypes": [
@@ -30,6 +35,10 @@
 				"@types/node"
 			],
 			"allowedVersions": "^24.x"
+		},
+		{
+			"matchPackageNames": ["pandora-common"],
+			"minimumReleaseAge": null
 		},
 		{
 			"groupName": "all patched dependencies",
