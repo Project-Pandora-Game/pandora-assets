@@ -3,10 +3,13 @@ allowBuilds:
   sharp: true
   unrs-resolver: true
 
-updateNotifier: false
-strictPeerDependencies: true
 allowUnusedPatches: false
-verifyDepsBeforeRun: error
-injectWorkspacePackages: false
 forceLegacyDeploy: true
+injectWorkspacePackages: false
+minimumReleaseAge: 2880
+minimumReleaseAgeExclude:
+- pandora-common
 nodeOptions: --no-warnings=ExperimentalWarning --experimental-vm-modules
+strictPeerDependencies: true
+updateNotifier: false
+verifyDepsBeforeRun: error
