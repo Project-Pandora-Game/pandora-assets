@@ -7,7 +7,7 @@
 			"width": 100,
 			"height": 100,
 			"type": "mesh",
-			"name": "Bead",
+			"name": "Position A",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -106,7 +106,7 @@
 			"width": 100,
 			"height": 100,
 			"type": "mesh",
-			"name": "Bead",
+			"name": "Position B",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -241,7 +241,7 @@
 			"width": 100,
 			"height": 100,
 			"type": "mesh",
-			"name": "Bead",
+			"name": "Position C",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -388,7 +388,7 @@
 			"width": 100,
 			"height": 100,
 			"type": "mesh",
-			"name": "Bead",
+			"name": "Position D",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -525,7 +525,7 @@
 			"width": 100,
 			"height": 100,
 			"type": "mesh",
-			"name": "Bead",
+			"name": "Position E",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -625,7 +625,7 @@
 			"width": 100,
 			"height": 100,
 			"type": "mesh",
-			"name": "Bead",
+			"name": "Position F",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -701,7 +701,7 @@
 			"width": 100,
 			"height": 100,
 			"type": "mesh",
-			"name": "Bead",
+			"name": "Position G",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -752,7 +752,551 @@
 			"width": 100,
 			"height": 100,
 			"type": "mesh",
-			"name": "Bead",
+			"name": "Position H (Base)",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "toy",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "base.png",
+						"condition": [
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i1"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+
+
+
+
+		{
+			"x": 450,
+			"y": 710,
+			"width": 100,
+			"height": 100,
+			"type": "mesh",
+			"name": "Position A Shine",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "shine",
+			"image": {
+				"image": "bead_shine.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c4"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i4"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i6"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i8"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 450,
+			"y": 750,
+			"width": 100,
+			"height": 100,
+			"type": "mesh",
+			"name": "Position B Shine",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "shine",
+			"image": {
+				"image": "bead_shine.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c4"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i3"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c4"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i4"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i5"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i6"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i7"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i8"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 450,
+			"y": 790,
+			"width": 100,
+			"height": 100,
+			"type": "mesh",
+			"name": "Position C Shine",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "shine",
+			"image": {
+				"image": "bead_shine.png",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c4"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "!=",
+									"value": "i1"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i4"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i5"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i6"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i6"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i7"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i8"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 450,
+			"y": 830,
+			"width": 100,
+			"height": 100,
+			"type": "mesh",
+			"name": "Position D Shine",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "shine",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "bead_shine.png",
+						"condition": [
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i1"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i2"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i1"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i2"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i3"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i4"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+
+
+		{
+			"x": 450,
+			"y": 870,
+			"width": 100,
+			"height": 100,
+			"type": "mesh",
+			"name": "Position E Shine",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "shine",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "bead_shine.png",
+						"condition": [
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i1"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i1"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i2"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i3"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+
+		{
+			"x": 450,
+			"y": 910,
+			"width": 100,
+			"height": 100,
+			"type": "mesh",
+			"name": "Position F Shine",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "shine",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "bead_shine.png",
+						"condition": [
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i1"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i2"
+								}
+							]
+
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 450,
+			"y": 950,
+			"width": 100,
+			"height": 100,
+			"type": "mesh",
+			"name": "Position G Shine",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "shine",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "bead_shine.png",
+						"condition": [
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i1"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 450,
+			"y": 990,
+			"width": 100,
+			"height": 100,
+			"type": "mesh",
+			"name": "Position H (Base)",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
