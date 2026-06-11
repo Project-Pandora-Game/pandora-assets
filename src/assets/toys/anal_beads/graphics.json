@@ -16,6 +16,47 @@
 				"image": "bead.png",
 				"overrides": [
 					{
+						"image": "base.png",
+						"condition": [
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c4"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i4"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i6"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i8"
+								}
+							]
+						]
+					},
+					{
 						"image": "",
 						"condition": [
 							[
@@ -73,6 +114,47 @@
 			"image": {
 				"image": "bead.png",
 				"overrides": [
+					{
+						"image": "base.png",
+						"condition": [
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c4"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i3"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i5"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i7"
+								}
+							]
+						]
+					},
 					{
 						"image": "",
 						"condition": [
@@ -167,6 +249,47 @@
 			"image": {
 				"image": "bead.png",
 				"overrides": [
+					{
+						"image": "base.png",
+						"condition": [
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c4"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i2"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i4"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i6"
+								}
+							]
+						]
+					},
 					{
 						"image": "",
 						"condition": [
@@ -274,6 +397,47 @@
 				"image": "",
 				"overrides": [
 					{
+						"image": "base.png",
+						"condition": [
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c4"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i1"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i3"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i5"
+								}
+							]
+						]
+					},
+					{
 						"image": "bead.png",
 						"condition": [
 							[
@@ -370,6 +534,35 @@
 				"image": "",
 				"overrides": [
 					{
+						"image": "base.png",
+						"condition": [
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i2"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i4"
+								}
+							]
+						]
+					},
+					{
 						"image": "bead.png",
 						"condition": [
 							[
@@ -441,6 +634,35 @@
 				"image": "",
 				"overrides": [
 					{
+						"image": "base.png",
+						"condition": [
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i1"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i3"
+								}
+							]
+						]
+					},
+					{
 						"image": "bead.png",
 						"condition": [
 							[
@@ -488,7 +710,58 @@
 				"image": "",
 				"overrides": [
 					{
+						"image": "base.png",
+						"condition": [
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i2"
+								}
+							]
+						]
+					},
+					{
 						"image": "bead.png",
+						"condition": [
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i1"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 450,
+			"y": 990,
+			"width": 100,
+			"height": 100,
+			"type": "mesh",
+			"name": "Bead",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "toy",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "base.png",
 						"condition": [
 							[
 								{
