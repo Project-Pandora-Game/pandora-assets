@@ -13,10 +13,10 @@
 			"mirror": 0,
 			"colorizationKey": "toy",
 			"image": {
-				"image": "",
+				"image": "bead.png",
 				"overrides": [
 					{
-						"image": "bead.png",
+						"image": "",
 						"condition": [
 							[
 								{
@@ -27,89 +27,7 @@
 								{
 									"module": "beads_inserted",
 									"operator": "=",
-									"value": "i1"
-								}
-							],
-							[
-								{
-									"module": "beads_count",
-									"operator": "=",
-									"value": "c4"
-								},
-								{
-									"module": "beads_inserted",
-									"operator": "=",
-									"value": "i2"
-								}
-							],
-							[
-								{
-									"module": "beads_count",
-									"operator": "=",
-									"value": "c4"
-								},
-								{
-									"module": "beads_inserted",
-									"operator": "=",
-									"value": "i3"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 450,
-			"y": 710,
-			"width": 100,
-			"height": 100,
-			"type": "mesh",
-			"name": "Bead",
-			"priority": "BELOW_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "shine",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "bead_shine.png",
-						"condition": [
-							[
-								{
-									"module": "beads_count",
-									"operator": "=",
-									"value": "c4"
-								},
-								{
-									"module": "beads_inserted",
-									"operator": "=",
-									"value": "i1"
-								}
-							],
-							[
-								{
-									"module": "beads_count",
-									"operator": "=",
-									"value": "c4"
-								},
-								{
-									"module": "beads_inserted",
-									"operator": "=",
-									"value": "i2"
-								}
-							],
-							[
-								{
-									"module": "beads_count",
-									"operator": "=",
-									"value": "c4"
-								},
-								{
-									"module": "beads_inserted",
-									"operator": "=",
-									"value": "i3"
+									"value": "i4"
 								}
 							]
 						]
@@ -129,10 +47,10 @@
 			"mirror": 0,
 			"colorizationKey": "toy",
 			"image": {
-				"image": "",
+				"image": "bead.png",
 				"overrides": [
 					{
-						"image": "bead.png",
+						"image": "",
 						"condition": [
 							[
 								{
@@ -143,7 +61,7 @@
 								{
 									"module": "beads_inserted",
 									"operator": "=",
-									"value": "i1"
+									"value": "i3"
 								}
 							],
 							[
@@ -155,53 +73,7 @@
 								{
 									"module": "beads_inserted",
 									"operator": "=",
-									"value": "i2"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 450,
-			"y": 750,
-			"width": 100,
-			"height": 100,
-			"type": "mesh",
-			"name": "Bead",
-			"priority": "BELOW_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "shine",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "bead_shine.png",
-						"condition": [
-							[
-								{
-									"module": "beads_count",
-									"operator": "=",
-									"value": "c4"
-								},
-								{
-									"module": "beads_inserted",
-									"operator": "=",
-									"value": "i1"
-								}
-							],
-							[
-								{
-									"module": "beads_count",
-									"operator": "=",
-									"value": "c4"
-								},
-								{
-									"module": "beads_inserted",
-									"operator": "=",
-									"value": "i2"
+									"value": "i4"
 								}
 							]
 						]
@@ -221,10 +93,10 @@
 			"mirror": 0,
 			"colorizationKey": "toy",
 			"image": {
-				"image": "",
+				"image": "bead.png",
 				"overrides": [
 					{
-						"image": "bead.png",
+						"image": "",
 						"condition": [
 							[
 								{
@@ -234,41 +106,7 @@
 								},
 								{
 									"module": "beads_inserted",
-									"operator": "=",
-									"value": "i1"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 450,
-			"y": 790,
-			"width": 100,
-			"height": 100,
-			"type": "mesh",
-			"name": "Bead",
-			"priority": "BELOW_BODY",
-			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "shine",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "bead_shine.png",
-						"condition": [
-							[
-								{
-									"module": "beads_count",
-									"operator": "=",
-									"value": "c4"
-								},
-								{
-									"module": "beads_inserted",
-									"operator": "=",
+									"operator": "!=",
 									"value": "i1"
 								}
 							]
