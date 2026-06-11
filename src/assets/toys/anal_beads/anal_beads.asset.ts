@@ -37,17 +37,26 @@ DefineAsset({
 				{
 					id: 'c6',
 					name: '6',
+					properties: {
+						stateFlags: {
+							provides: ['beads6'],
+						},
+					},
 				},
 				{
 					id: 'c8',
 					name: '8',
-					default: true,
+					properties: {
+						stateFlags: {
+							provides: ['beads6', 'beads8'],
+						},
+					},
 				},
 			],
 		},
 		beads_inserted: {
 			type: 'typed',
-			name: 'Beads nserted',
+			name: 'Beads Inserted',
 			variants: [
 				{
 					id: 'i1',
@@ -65,6 +74,50 @@ DefineAsset({
 				{
 					id: 'i4',
 					name: '4',
+				},
+				{
+					id: 'i5',
+					name: '5',
+					properties: {
+						stateFlags: {
+							requires: {
+								beads6: 'Not enough beads'
+							},
+						},
+					},
+				},
+				{
+					id: 'i6',
+					name: '6',
+					properties: {
+						stateFlags: {
+							requires: {
+								beads6: 'Not enough beads'
+							},
+						},
+					},
+				},
+				{
+					id: 'i7',
+					name: '7',
+					properties: {
+						stateFlags: {
+							requires: {
+								beads8: 'Not enough beads'
+							},
+						},
+					},
+				},
+				{
+					id: 'i8',
+					name: '8',
+					properties: {
+						stateFlags: {
+							requires: {
+								beads8: 'Not enough beads'
+							},
+						},
+					},
 				},
 			],
 		},
