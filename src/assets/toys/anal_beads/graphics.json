@@ -41,6 +41,18 @@
 									"operator": "=",
 									"value": "i6"
 								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i8"
+								}
 							]
 						]
 					}
@@ -110,6 +122,30 @@
 									"module": "beads_inserted",
 									"operator": "=",
 									"value": "i6"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i7"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i8"
 								}
 							]
 						]
@@ -181,6 +217,42 @@
 									"operator": "=",
 									"value": "i6"
 								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i6"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i7"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i8"
+								}
 							]
 						]
 					}
@@ -199,16 +271,21 @@
 			"mirror": 0,
 			"colorizationKey": "toy",
 			"image": {
-				"image": "bead.png",
+				"image": "",
 				"overrides": [
 					{
-						"image": "",
+						"image": "bead.png",
 						"condition": [
 							[
 								{
 									"module": "beads_count",
 									"operator": "=",
-									"value": "c4"
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i1"
 								}
 							],
 							[
@@ -217,7 +294,43 @@
 									"operator": "=",
 									"value": "c6"
 								},
-																{
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i2"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i1"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i2"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
 									"module": "beads_inserted",
 									"operator": "=",
 									"value": "i3"
@@ -227,36 +340,12 @@
 								{
 									"module": "beads_count",
 									"operator": "=",
-									"value": "c6"
+									"value": "c8"
 								},
 								{
 									"module": "beads_inserted",
 									"operator": "=",
 									"value": "i4"
-								}
-							],
-							[
-								{
-									"module": "beads_count",
-									"operator": "=",
-									"value": "c6"
-								},
-								{
-									"module": "beads_inserted",
-									"operator": "=",
-									"value": "i5"
-								}
-							],
-							[
-								{
-									"module": "beads_count",
-									"operator": "=",
-									"value": "c6"
-								},
-								{
-									"module": "beads_inserted",
-									"operator": "=",
-									"value": "i6"
 								}
 							]
 						]
@@ -264,6 +353,8 @@
 				]
 			}
 		},
+
+
 		{
 			"x": 450,
 			"y": 870,
@@ -276,25 +367,42 @@
 			"mirror": 0,
 			"colorizationKey": "toy",
 			"image": {
-				"image": "bead.png",
+				"image": "",
 				"overrides": [
 					{
-						"image": "",
+						"image": "bead.png",
 						"condition": [
-							[
-								{
-									"module": "beads_count",
-									"operator": "=",
-									"value": "c4"
-								}
-							],
 							[
 								{
 									"module": "beads_count",
 									"operator": "=",
 									"value": "c6"
 								},
-																{
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i1"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i1"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
 									"module": "beads_inserted",
 									"operator": "=",
 									"value": "i2"
@@ -304,48 +412,94 @@
 								{
 									"module": "beads_count",
 									"operator": "=",
-									"value": "c6"
+									"value": "c8"
 								},
-																{
+								{
 									"module": "beads_inserted",
 									"operator": "=",
 									"value": "i3"
 								}
-							],
+							]
+						]
+					}
+				]
+			}
+		},
+
+		{
+			"x": 450,
+			"y": 910,
+			"width": 100,
+			"height": 100,
+			"type": "mesh",
+			"name": "Bead",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "toy",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "bead.png",
+						"condition": [
 							[
 								{
 									"module": "beads_count",
 									"operator": "=",
-									"value": "c6"
+									"value": "c8"
 								},
 								{
 									"module": "beads_inserted",
 									"operator": "=",
-									"value": "i4"
+									"value": "i1"
 								}
 							],
 							[
 								{
 									"module": "beads_count",
 									"operator": "=",
-									"value": "c6"
+									"value": "c8"
 								},
 								{
 									"module": "beads_inserted",
 									"operator": "=",
-									"value": "i5"
+									"value": "i2"
 								}
-							],
+							]
+
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 450,
+			"y": 950,
+			"width": 100,
+			"height": 100,
+			"type": "mesh",
+			"name": "Bead",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "toy",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "bead.png",
+						"condition": [
 							[
 								{
 									"module": "beads_count",
 									"operator": "=",
-									"value": "c6"
+									"value": "c8"
 								},
 								{
 									"module": "beads_inserted",
 									"operator": "=",
-									"value": "i6"
+									"value": "i1"
 								}
 							]
 						]
@@ -353,6 +507,5 @@
 				]
 			}
 		}
-
 	]
 }
