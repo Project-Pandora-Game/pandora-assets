@@ -235,5 +235,89 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -100,
+			"y": -1300,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "Hand pump floor",
+			"graphicalLayers": [
+				{
+					"name": "Suction Cup",
+					"colorizationKey": "suctionCup"
+				},
+				{
+					"name": "Handle",
+					"colorizationKey": "handle"
+				},
+				{
+					"name": "Container Top",
+					"colorizationKey": "topLid"
+				},
+				{
+					"name": "Container Bottom",
+					"colorizationKey": "bottomLid"
+				},
+				{
+					"name": "Container",
+					"colorizationKey": "glass"
+				},
+				{
+					"name": "Junction",
+					"colorizationKey": "junction"
+				},
+				{
+					"name": "Fluids",
+					"colorizationKey": "fluid"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "fillLevel"
+				}
+			],
+			"imageMap": {
+				"empty": [
+					"hand_pump_suction_cup_side_floor.png",
+					"hand_pump_handle_side_floor.png",
+					"hand_pump_container_top_floor.png",
+					"hand_pump_container_bottom_flor.png",
+					"hand_pump_container_glass_floor.png",
+					"hand_pump_junction_side_floor.png",
+					""
+				],
+				"slightly": [
+					"hand_pump_suction_cup_side_floor.png",
+					"hand_pump_handle_side_floor.png",
+					"hand_pump_container_top_floor.png",
+					"hand_pump_container_bottom_flor.png",
+					"hand_pump_container_glass_floor.png",
+					"hand_pump_junction_side_floor.png",
+					"hand_pump_level_1_floor.png"
+				],
+				"almost": [
+					"hand_pump_suction_cup_side_floor.png",
+					"hand_pump_handle_side_floor.png",
+					"hand_pump_container_top_floor.png",
+					"hand_pump_container_bottom_flor.png",
+					"hand_pump_container_glass_floor.png",
+					"hand_pump_junction_side_floor.png",
+					"hand_pump_level_2_floor.png"
+				],
+				"full": [
+					"hand_pump_suction_cup_side_floor.png",
+					"hand_pump_handle_side_floor.png",
+					"hand_pump_container_top_floor.png",
+					"hand_pump_container_bottom_flor.png",
+					"hand_pump_container_glass_floor.png",
+					"hand_pump_junction_side_floor.png",
+					"hand_pump_level_3_floor.png"
+				]
+			}
+		}
 	]
 }
