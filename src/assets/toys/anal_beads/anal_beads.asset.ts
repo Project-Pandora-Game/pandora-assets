@@ -6,14 +6,14 @@ DefineAsset({
 	colorization: {
 		toy: {
 			name: 'Anal Beads',
-			default: '#000000',
+			default: '#272727',
 		}
 	},
 	/*roomDeployment: {
 		autoDeployRelativePosition: [-200, -60, 0],
 	},*/
 	// size:180, y:418, centered
-	preview: null,//'preview.png',
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Toy',
