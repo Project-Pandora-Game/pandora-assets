@@ -7,7 +7,7 @@ DefineAsset({
 		toy: {
 			name: 'Anal Beads',
 			default: '#272727',
-		}
+		},
 	},
 	/*roomDeployment: {
 		autoDeployRelativePosition: [-200, -60, 0],
@@ -20,7 +20,7 @@ DefineAsset({
 			'Anus_item',
 			'Anus_insert',
 			'Anus_insert_deep',
-			'Anus_protruding'
+			'Anus_protruding',
 		],
 		requires: ['!Anus_cover'],
 	},
@@ -81,7 +81,7 @@ DefineAsset({
 					properties: {
 						stateFlags: {
 							requires: {
-								beads6: 'Not enough beads'
+								beads6: 'Not enough beads',
 							},
 						},
 					},
@@ -92,7 +92,7 @@ DefineAsset({
 					properties: {
 						stateFlags: {
 							requires: {
-								beads6: 'Not enough beads'
+								beads6: 'Not enough beads',
 							},
 						},
 					},
@@ -103,7 +103,7 @@ DefineAsset({
 					properties: {
 						stateFlags: {
 							requires: {
-								beads8: 'Not enough beads'
+								beads8: 'Not enough beads',
 							},
 						},
 					},
@@ -114,7 +114,7 @@ DefineAsset({
 					properties: {
 						stateFlags: {
 							requires: {
-								beads8: 'Not enough beads'
+								beads8: 'Not enough beads',
 							},
 						},
 					},
