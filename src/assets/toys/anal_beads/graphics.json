@@ -2,10 +2,10 @@
 {
 	"layers": [
 		{
-			"x": 450,
-			"y": 710,
-			"width": 100,
-			"height": 100,
+			"x": 350,
+			"y": 615,
+			"width": 300,
+			"height": 300,
 			"type": "mesh",
 			"name": "Position A",
 			"priority": "BELOW_BODY",
@@ -101,10 +101,10 @@
 			}
 		},
 		{
-			"x": 450,
-			"y": 750,
-			"width": 100,
-			"height": 100,
+			"x": 350,
+			"y": 654,
+			"width": 300,
+			"height": 300,
 			"type": "mesh",
 			"name": "Position B",
 			"priority": "BELOW_BODY",
@@ -236,10 +236,10 @@
 			}
 		},
 		{
-			"x": 450,
-			"y": 790,
-			"width": 100,
-			"height": 100,
+			"x": 350,
+			"y": 693,
+			"width": 300,
+			"height": 300,
 			"type": "mesh",
 			"name": "Position C",
 			"priority": "BELOW_BODY",
@@ -383,10 +383,10 @@
 			}
 		},
 		{
-			"x": 450,
-			"y": 830,
-			"width": 100,
-			"height": 100,
+			"x": 350,
+			"y": 732,
+			"width": 300,
+			"height": 300,
 			"type": "mesh",
 			"name": "Position D",
 			"priority": "BELOW_BODY",
@@ -520,10 +520,10 @@
 
 
 		{
-			"x": 450,
-			"y": 870,
-			"width": 100,
-			"height": 100,
+			"x": 350,
+			"y": 771,
+			"width": 300,
+			"height": 300,
 			"type": "mesh",
 			"name": "Position E",
 			"priority": "BELOW_BODY",
@@ -620,10 +620,10 @@
 		},
 
 		{
-			"x": 450,
-			"y": 910,
-			"width": 100,
-			"height": 100,
+			"x": 350,
+			"y": 810,
+			"width": 300,
+			"height": 300,
 			"type": "mesh",
 			"name": "Position F",
 			"priority": "BELOW_BODY",
@@ -696,10 +696,10 @@
 			}
 		},
 		{
-			"x": 450,
-			"y": 950,
-			"width": 100,
-			"height": 100,
+			"x": 350,
+			"y": 849,
+			"width": 300,
+			"height": 300,
 			"type": "mesh",
 			"name": "Position G",
 			"priority": "BELOW_BODY",
@@ -747,10 +747,10 @@
 			}
 		},
 		{
-			"x": 450,
-			"y": 990,
-			"width": 100,
-			"height": 100,
+			"x": 350,
+			"y": 888,
+			"width": 300,
+			"height": 300,
 			"type": "mesh",
 			"name": "Position H (Base)",
 			"priority": "BELOW_BODY",
@@ -785,16 +785,15 @@
 
 
 		{
-			"x": 450,
-			"y": 710,
-			"width": 100,
-			"height": 100,
+			"x": 350,
+			"y": 615,
+			"width": 300,
+			"height": 300,
 			"type": "mesh",
 			"name": "Position A Shine",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationKey": "shine",
 			"image": {
 				"image": "bead_shine.png",
 				"overrides": [
@@ -843,16 +842,15 @@
 			}
 		},
 		{
-			"x": 450,
-			"y": 750,
-			"width": 100,
-			"height": 100,
+			"x": 350,
+			"y": 654,
+			"width": 300,
+			"height": 300,
 			"type": "mesh",
 			"name": "Position B Shine",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationKey": "shine",
 			"image": {
 				"image": "bead_shine.png",
 				"overrides": [
@@ -937,16 +935,15 @@
 			}
 		},
 		{
-			"x": 450,
-			"y": 790,
-			"width": 100,
-			"height": 100,
+			"x": 350,
+			"y": 693,
+			"width": 300,
+			"height": 300,
 			"type": "mesh",
 			"name": "Position C Shine",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationKey": "shine",
 			"image": {
 				"image": "bead_shine.png",
 				"overrides": [
@@ -1043,16 +1040,15 @@
 			}
 		},
 		{
-			"x": 450,
-			"y": 830,
-			"width": 100,
-			"height": 100,
+			"x": 350,
+			"y": 732,
+			"width": 300,
+			"height": 300,
 			"type": "mesh",
 			"name": "Position D Shine",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationKey": "shine",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -1139,16 +1135,15 @@
 
 
 		{
-			"x": 450,
-			"y": 870,
-			"width": 100,
-			"height": 100,
+			"x": 350,
+			"y": 771,
+			"width": 300,
+			"height": 300,
 			"type": "mesh",
 			"name": "Position E Shine",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationKey": "shine",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -1210,16 +1205,15 @@
 		},
 
 		{
-			"x": 450,
-			"y": 910,
-			"width": 100,
-			"height": 100,
+			"x": 350,
+			"y": 810,
+			"width": 300,
+			"height": 300,
 			"type": "mesh",
 			"name": "Position F Shine",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationKey": "shine",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -1257,16 +1251,15 @@
 			}
 		},
 		{
-			"x": 450,
-			"y": 950,
-			"width": 100,
-			"height": 100,
+			"x": 350,
+			"y": 849,
+			"width": 300,
+			"height": 300,
 			"type": "mesh",
 			"name": "Position G Shine",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationKey": "shine",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -1291,10 +1284,10 @@
 			}
 		},
 		{
-			"x": 450,
-			"y": 990,
-			"width": 100,
-			"height": 100,
+			"x": 350,
+			"y": 888,
+			"width": 300,
+			"height": 300,
 			"type": "mesh",
 			"name": "Position H (Base)",
 			"priority": "BELOW_BODY",

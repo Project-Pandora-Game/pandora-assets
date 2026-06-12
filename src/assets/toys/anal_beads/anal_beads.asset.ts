@@ -5,13 +5,9 @@ DefineAsset({
 	graphics: 'graphics.json',
 	colorization: {
 		toy: {
-			name: 'Toy',
+			name: 'Anal Beads',
 			default: '#000000',
-		},
-		shine: {
-			name: 'Shine',
-			default: '#ffffff',
-		},
+		}
 	},
 	/*roomDeployment: {
 		autoDeployRelativePosition: [-200, -60, 0],
@@ -22,7 +18,11 @@ DefineAsset({
 		provides: [
 			'Toy',
 			'Anus_item',
+			'Anus_insert',
+			'Anus_insert_deep',
+			'Anus_protruding'
 		],
+		requires: ['!Anus_cover'],
 	},
 	modules: {
 		beads_count: {
