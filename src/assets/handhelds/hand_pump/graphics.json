@@ -205,10 +205,422 @@
 						"module": "breats_l",
 						"operator": "=",
 						"value": "yes"
+					},
+					{
+						"bone": "breasts",
+						"operator": ">",
+						"value": -35
+					},
+					{
+						"bone": "breasts",
+						"operator": "<=",
+						"value": 50
 					}
 				]
 			],
 			"name": "Left breast",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Suction Cup",
+					"colorizationKey": "suctionCup"
+				},
+				{
+					"name": "Junction",
+					"colorizationKey": "junction"
+				},
+				{
+					"name": "Fluids",
+					"colorizationKey": "fluid"
+				},
+				{
+					"name": "Glass",
+					"colorizationKey": "glass"
+				},
+				{
+					"name": "Top",
+					"colorizationKey": "topLid"
+				},
+				{
+					"name": "Bottom",
+					"colorizationKey": "bottomLid"
+				},
+				{
+					"name": "Handle",
+					"colorizationKey": "handle"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "fillLevel"
+				}
+			],
+			"imageMap": {
+				"empty": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
+				],
+				"slightly": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"hand_pump_level_1_front.png",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
+				],
+				"almost": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"hand_pump_level_2_front.png",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
+				],
+				"full": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"hand_pump_level_3_front.png",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"module": "breats_l",
+						"operator": "=",
+						"value": "yes"
+					},
+					{
+						"bone": "breasts",
+						"operator": "<=",
+						"value": -35
+					},
+					{
+						"bone": "breasts",
+						"operator": ">=",
+						"value": -124
+					}
+				]
+			],
+			"name": "Left breast S",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Suction Cup",
+					"colorizationKey": "suctionCup"
+				},
+				{
+					"name": "Junction",
+					"colorizationKey": "junction"
+				},
+				{
+					"name": "Fluids",
+					"colorizationKey": "fluid"
+				},
+				{
+					"name": "Glass",
+					"colorizationKey": "glass"
+				},
+				{
+					"name": "Top",
+					"colorizationKey": "topLid"
+				},
+				{
+					"name": "Bottom",
+					"colorizationKey": "bottomLid"
+				},
+				{
+					"name": "Handle",
+					"colorizationKey": "handle"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "fillLevel"
+				}
+			],
+			"imageMap": {
+				"empty": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
+				],
+				"slightly": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"hand_pump_level_1_front.png",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
+				],
+				"almost": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"hand_pump_level_2_front.png",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
+				],
+				"full": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"hand_pump_level_3_front.png",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
+				]
+			}
+		},
+		{
+			"x": 4,
+			"y": -20,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"module": "breats_l",
+						"operator": "=",
+						"value": "yes"
+					},
+					{
+						"bone": "breasts",
+						"operator": "<",
+						"value": -125
+					}
+				]
+			],
+			"name": "Left breast flat",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Suction Cup",
+					"colorizationKey": "suctionCup"
+				},
+				{
+					"name": "Junction",
+					"colorizationKey": "junction"
+				},
+				{
+					"name": "Fluids",
+					"colorizationKey": "fluid"
+				},
+				{
+					"name": "Glass",
+					"colorizationKey": "glass"
+				},
+				{
+					"name": "Top",
+					"colorizationKey": "topLid"
+				},
+				{
+					"name": "Bottom",
+					"colorizationKey": "bottomLid"
+				},
+				{
+					"name": "Handle",
+					"colorizationKey": "handle"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "fillLevel"
+				}
+			],
+			"imageMap": {
+				"empty": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
+				],
+				"slightly": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"hand_pump_level_1_front.png",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
+				],
+				"almost": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"hand_pump_level_2_front.png",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
+				],
+				"full": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"hand_pump_level_3_front.png",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
+				]
+			}
+		},
+		{
+			"x": -5,
+			"y": 6,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"module": "breats_l",
+						"operator": "=",
+						"value": "yes"
+					},
+					{
+						"bone": "breasts",
+						"operator": ">",
+						"value": 50
+					},
+					{
+						"bone": "breasts",
+						"operator": "<=",
+						"value": 140
+					}
+				]
+			],
+			"name": "Left breast L",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Suction Cup",
+					"colorizationKey": "suctionCup"
+				},
+				{
+					"name": "Junction",
+					"colorizationKey": "junction"
+				},
+				{
+					"name": "Fluids",
+					"colorizationKey": "fluid"
+				},
+				{
+					"name": "Glass",
+					"colorizationKey": "glass"
+				},
+				{
+					"name": "Top",
+					"colorizationKey": "topLid"
+				},
+				{
+					"name": "Bottom",
+					"colorizationKey": "bottomLid"
+				},
+				{
+					"name": "Handle",
+					"colorizationKey": "handle"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "fillLevel"
+				}
+			],
+			"imageMap": {
+				"empty": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
+				],
+				"slightly": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"hand_pump_level_1_front.png",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
+				],
+				"almost": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"hand_pump_level_2_front.png",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
+				],
+				"full": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"hand_pump_level_3_front.png",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
+				]
+			}
+		},
+		{
+			"x": -9,
+			"y": 7,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"module": "breats_l",
+						"operator": "=",
+						"value": "yes"
+					},
+					{
+						"bone": "breasts",
+						"operator": ">",
+						"value": 140
+					}
+				]
+			],
+			"name": "Left breast XL",
 			"points": "static",
 			"automeshTemplate": "aboveBody",
 			"graphicalLayers": [
