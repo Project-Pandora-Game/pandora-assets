@@ -1,7 +1,7 @@
 DefineAsset({
 	name: 'Anal beads',
 	size: 'small',
-	requireFreeHandsToUseDefault: false,
+	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
 	colorization: {
 		toy: {
@@ -121,10 +121,6 @@ DefineAsset({
 				},
 			],
 		},
-	},
-	chat: {
-		actionAdd: 'SOURCE_CHARACTER inserted ITEM_ASSET_NAME into TARGET_CHARACTER_DYNAMIC_POSSESSIVE ass.',
-		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE ass.',
 	},
 	ownership: {
 		responsibleContributor: 'Shikifet <shikifet@gmail.com>',
