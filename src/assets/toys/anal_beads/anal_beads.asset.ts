@@ -59,9 +59,13 @@ DefineAsset({
 			name: 'Beads Inserted',
 			variants: [
 				{
+					id: 'i0',
+					name: 'None',
+					default: true,
+				},
+				{
 					id: 'i1',
 					name: '1',
-					default: true,
 				},
 				{
 					id: 'i2',

@@ -16,6 +16,18 @@
 				"image": "bead.png",
 				"overrides": [
 					{
+						"image": "bead_end.png",
+						"condition": [
+							[
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i0"
+								}
+							]
+						]
+					},
+					{
 						"image": "base.png",
 						"condition": [
 							[
@@ -301,8 +313,32 @@
 								},
 								{
 									"module": "beads_inserted",
-									"operator": "!=",
-									"value": "i1"
+									"operator": "=",
+									"value": "i2"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c4"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i3"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c4"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i4"
 								}
 							],
 							[
@@ -444,6 +480,30 @@
 								{
 									"module": "beads_count",
 									"operator": "=",
+									"value": "c4"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i0"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i0"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
 									"value": "c6"
 								},
 								{
@@ -462,6 +522,18 @@
 									"module": "beads_inserted",
 									"operator": "=",
 									"value": "i2"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i0"
 								}
 							],
 							[
@@ -540,6 +612,18 @@
 								{
 									"module": "beads_count",
 									"operator": "=",
+									"value": "c4"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i0"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
 									"value": "c6"
 								},
 								{
@@ -574,7 +658,31 @@
 								{
 									"module": "beads_inserted",
 									"operator": "=",
+									"value": "i0"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
 									"value": "i1"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i0"
 								}
 							],
 							[
@@ -669,6 +777,30 @@
 								{
 									"module": "beads_count",
 									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i0"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i0"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
 									"value": "c8"
 								},
 								{
@@ -716,6 +848,18 @@
 								{
 									"module": "beads_count",
 									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i0"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
 									"value": "c8"
 								},
 								{
@@ -729,6 +873,18 @@
 					{
 						"image": "bead.png",
 						"condition": [
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i0"
+								}
+							],
 							[
 								{
 									"module": "beads_count",
@@ -752,7 +908,7 @@
 			"width": 300,
 			"height": 300,
 			"type": "mesh",
-			"name": "Position H (Base)",
+			"name": "Position H",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
@@ -760,6 +916,23 @@
 			"image": {
 				"image": "",
 				"overrides": [
+					{
+						"image": "bead.png",
+						"condition": [
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i0"
+								}
+							]
+						]
+					},
 					{
 						"image": "base.png",
 						"condition": [
@@ -780,8 +953,40 @@
 				]
 			}
 		},
-
-
+		{
+			"x": 350,
+			"y": 927,
+			"width": 300,
+			"height": 300,
+			"type": "mesh",
+			"name": "Position I",
+			"priority": "BELOW_BODY",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "toy",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "base.png",
+						"condition": [
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i0"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
 
 
 		{
@@ -797,6 +1002,18 @@
 			"image": {
 				"image": "bead_shine.png",
 				"overrides": [
+					{
+						"image": "bead_end_shine.png",
+						"condition": [
+							[
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i0"
+								}
+							]
+						]
+					},
 					{
 						"image": "",
 						"condition": [
@@ -958,8 +1175,32 @@
 								},
 								{
 									"module": "beads_inserted",
-									"operator": "!=",
-									"value": "i1"
+									"operator": "=",
+									"value": "i2"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c4"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i3"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c4"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i4"
 								}
 							],
 							[
@@ -1059,6 +1300,30 @@
 								{
 									"module": "beads_count",
 									"operator": "=",
+									"value": "c4"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i0"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i0"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
 									"value": "c6"
 								},
 								{
@@ -1077,6 +1342,18 @@
 									"module": "beads_inserted",
 									"operator": "=",
 									"value": "i2"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i0"
 								}
 							],
 							[
@@ -1159,7 +1436,31 @@
 								{
 									"module": "beads_inserted",
 									"operator": "=",
+									"value": "i0"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
 									"value": "i1"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i0"
 								}
 							],
 							[
@@ -1224,6 +1525,30 @@
 								{
 									"module": "beads_count",
 									"operator": "=",
+									"value": "c6"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i0"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
+									"value": "i0"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
 									"value": "c8"
 								},
 								{
@@ -1275,6 +1600,18 @@
 								{
 									"module": "beads_inserted",
 									"operator": "=",
+									"value": "i0"
+								}
+							],
+							[
+								{
+									"module": "beads_count",
+									"operator": "=",
+									"value": "c8"
+								},
+								{
+									"module": "beads_inserted",
+									"operator": "=",
 									"value": "i1"
 								}
 							]
@@ -1289,16 +1626,15 @@
 			"width": 300,
 			"height": 300,
 			"type": "mesh",
-			"name": "Position H (Base)",
+			"name": "Position H Shine",
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
-			"colorizationKey": "toy",
 			"image": {
 				"image": "",
 				"overrides": [
 					{
-						"image": "base.png",
+						"image": "bead_shine.png",
 						"condition": [
 							[
 								{
@@ -1309,7 +1645,7 @@
 								{
 									"module": "beads_inserted",
 									"operator": "=",
-									"value": "i1"
+									"value": "i0"
 								}
 							]
 						]
