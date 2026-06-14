@@ -60,7 +60,7 @@
 			],
 			"imageMap": {
 				"empty": [
-					"hand_pump_suction_side.png",
+					"hand_pump_suction_cup_side.png",
 					"hand_pump_handle_side.png",
 					"hand_pump_container_top.png",
 					"hand_pump_container_bottom.png",
@@ -69,7 +69,7 @@
 					""
 				],
 				"slightly": [
-					"hand_pump_suction_side.png",
+					"hand_pump_suction_cup_side.png",
 					"hand_pump_handle_side.png",
 					"hand_pump_container_top.png",
 					"hand_pump_container_bottom.png",
@@ -78,7 +78,7 @@
 					"hand_pump_level_1_hand.png"
 				],
 				"almost": [
-					"hand_pump_suction_side.png",
+					"hand_pump_suction_cup_side.png",
 					"hand_pump_handle_side.png",
 					"hand_pump_container_top.png",
 					"hand_pump_container_bottom.png",
@@ -87,7 +87,7 @@
 					"hand_pump_level_2_hand.png"
 				],
 				"full": [
-					"hand_pump_suction_side.png",
+					"hand_pump_suction_cup_side.png",
 					"hand_pump_handle_side.png",
 					"hand_pump_container_top.png",
 					"hand_pump_container_bottom.png",
@@ -156,7 +156,7 @@
 			],
 			"imageMap": {
 				"empty": [
-					"hand_pump_suction_side.png",
+					"hand_pump_suction_cup_side.png",
 					"hand_pump_handle_side.png",
 					"hand_pump_junction_side.png",
 					"",
@@ -165,7 +165,7 @@
 					"hand_pump_container_bottom.png"
 				],
 				"slightly": [
-					"hand_pump_suction_side.png",
+					"hand_pump_suction_cup_side.png",
 					"hand_pump_handle_side.png",
 					"hand_pump_junction_side.png",
 					"hand_pump_level_1_hand.png",
@@ -174,7 +174,7 @@
 					"hand_pump_container_bottom.png"
 				],
 				"almost": [
-					"hand_pump_suction_side.png",
+					"hand_pump_suction_cup_side.png",
 					"hand_pump_handle_side.png",
 					"hand_pump_junction_side.png",
 					"hand_pump_level_2_hand.png",
@@ -183,7 +183,7 @@
 					"hand_pump_container_bottom.png"
 				],
 				"full": [
-					"hand_pump_suction_side.png",
+					"hand_pump_suction_cup_side.png",
 					"hand_pump_handle_side.png",
 					"hand_pump_junction_side.png",
 					"hand_pump_level_3_hand.png",
@@ -199,18 +199,90 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"module": "breats_l",
+						"operator": "=",
+						"value": "yes"
+					}
+				]
+			],
 			"name": "Left breast",
 			"points": "static",
 			"automeshTemplate": "aboveBody",
 			"graphicalLayers": [
 				{
-					"name": ""
+					"name": "Suction Cup",
+					"colorizationKey": "suctionCup"
+				},
+				{
+					"name": "Junction",
+					"colorizationKey": "junction"
+				},
+				{
+					"name": "Fluids",
+					"colorizationKey": "fluid"
+				},
+				{
+					"name": "Glass",
+					"colorizationKey": "glass"
+				},
+				{
+					"name": "Top",
+					"colorizationKey": "topLid"
+				},
+				{
+					"name": "Bottom",
+					"colorizationKey": "bottomLid"
+				},
+				{
+					"name": "Handle",
+					"colorizationKey": "handle"
 				}
 			],
-			"variables": [],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "fillLevel"
+				}
+			],
 			"imageMap": {
-				"": [
-					""
+				"empty": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
+				],
+				"slightly": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"hand_pump_level_1_front.png",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
+				],
+				"almost": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"hand_pump_level_2_front.png",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
+				],
+				"full": [
+					"hand_pump_suction_cup_front.png",
+					"hand_pump_junction_front.png",
+					"hand_pump_level_3_front.png",
+					"hand_pump_container_glass_front.png",
+					"hand_pump_container_top_front.png",
+					"hand_pump_container_bottom_front.png",
+					"hand_pump_handle_front.png"
 				]
 			}
 		},
@@ -220,6 +292,15 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"module": "breats_r",
+						"operator": "=",
+						"value": "yes"
+					}
+				]
+			],
 			"name": "Right breast",
 			"points": "static",
 			"automeshTemplate": "aboveBody",
@@ -285,7 +366,7 @@
 					"hand_pump_suction_cup_side_floor.png",
 					"hand_pump_handle_side_floor.png",
 					"hand_pump_container_top_floor.png",
-					"hand_pump_container_bottom_flor.png",
+					"hand_pump_container_bottom_floor.png",
 					"hand_pump_container_glass_floor.png",
 					"hand_pump_junction_side_floor.png",
 					""
@@ -294,7 +375,7 @@
 					"hand_pump_suction_cup_side_floor.png",
 					"hand_pump_handle_side_floor.png",
 					"hand_pump_container_top_floor.png",
-					"hand_pump_container_bottom_flor.png",
+					"hand_pump_container_bottom_floor.png",
 					"hand_pump_container_glass_floor.png",
 					"hand_pump_junction_side_floor.png",
 					"hand_pump_level_1_floor.png"
@@ -303,7 +384,7 @@
 					"hand_pump_suction_cup_side_floor.png",
 					"hand_pump_handle_side_floor.png",
 					"hand_pump_container_top_floor.png",
-					"hand_pump_container_bottom_flor.png",
+					"hand_pump_container_bottom_floor.png",
 					"hand_pump_container_glass_floor.png",
 					"hand_pump_junction_side_floor.png",
 					"hand_pump_level_2_floor.png"
@@ -312,7 +393,7 @@
 					"hand_pump_suction_cup_side_floor.png",
 					"hand_pump_handle_side_floor.png",
 					"hand_pump_container_top_floor.png",
-					"hand_pump_container_bottom_flor.png",
+					"hand_pump_container_bottom_floor.png",
 					"hand_pump_container_glass_floor.png",
 					"hand_pump_junction_side_floor.png",
 					"hand_pump_level_3_floor.png"
