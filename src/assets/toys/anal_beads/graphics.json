@@ -1643,5 +1643,45 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -180,
+			"y": -80,
+			"width": 300,
+			"height": 300,
+			"type": "autoSprite",
+			"name": "",
+			"graphicalLayers": [
+				{
+					"name": "beads",
+					"colorizationKey": "toy"
+				},
+				{
+					"name": "shine",
+					"colorizationKey": "shine"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "beads_count"
+				}
+			],
+			"imageMap": {
+				"c4": [
+					"item_4.png",
+					"item_shine_4.png"
+				],
+				"c6": [
+					"item_6.png",
+					"item_shine_6.png"
+				],
+				"c8": [
+					"item_8.png",
+					"item_shine_8.png"
+				]
+			}
+		}
 	]
 }
