@@ -37,8 +37,8 @@ DefineAsset({
 	roomDeployment: {
 		autoDeployRelativePosition: [350, -50, 0],
 	},
-	// size:200, y:475, X:500
-	preview: null, // 'preview.png',
+	// size:175, y:400, X:655
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Handheld',
