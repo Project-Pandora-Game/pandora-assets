@@ -62,7 +62,14 @@ DefineAsset({
 				},
 			],
 		},
+		tray: {
+			type: 'storage',
+			name: `Drawer`,
+			maxAcceptedSize: 'small',
+			maxCount: 4,
+		},
 	},
+	storageModule: 'tray',
 	chat: {
 		actionAdd: 'SOURCE_CHARACTER placed ITEM_ASSET_NAME over TARGET_CHARACTER_DYNAMIC_POSSESSIVE neck.',
 		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE body.',
