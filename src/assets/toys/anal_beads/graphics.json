@@ -993,6 +993,7 @@
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
+			"colorizationKey": "shine",
 			"image": {
 				"image": "bead_shine.png",
 				"overrides": [
@@ -1062,6 +1063,7 @@
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
+			"colorizationKey": "shine",
 			"image": {
 				"image": "bead_shine.png",
 				"overrides": [
@@ -1155,6 +1157,7 @@
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
+			"colorizationKey": "shine",
 			"image": {
 				"image": "bead_shine.png",
 				"overrides": [
@@ -1284,6 +1287,7 @@
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
+			"colorizationKey": "shine",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -1413,6 +1417,7 @@
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
+			"colorizationKey": "shine",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -1506,6 +1511,7 @@
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
+			"colorizationKey": "shine",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -1575,6 +1581,7 @@
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
+			"colorizationKey": "shine",
 			"image": {
 				"image": "",
 				"overrides": [
@@ -1620,6 +1627,7 @@
 			"priority": "BELOW_BODY",
 			"points": "static",
 			"mirror": 0,
+			"colorizationKey": "shine",
 			"image": {
 				"image": "",
 				"overrides": [

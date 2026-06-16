@@ -8,6 +8,10 @@ DefineAsset({
 			name: 'Anal Beads',
 			default: '#272727',
 		},
+		shine: {
+			name: 'Shine',
+			default: '#ffffff',
+		},
 	},
 	roomDeployment: {
 		autoDeployRelativePosition: [50, -60, 0],
