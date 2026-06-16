@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Anal beads',
+	name: 'Anal Beads',
 	size: 'small',
 	requireFreeHandsToUseDefault: true,
 	graphics: 'graphics.json',
