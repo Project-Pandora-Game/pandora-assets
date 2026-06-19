@@ -30,14 +30,51 @@ DefineRoomDeviceAsset({
 			asset: {
 				name: 'Vacbed',
 				size: 'huge',
-				poseLimits: {
-					legs: {
-						pose: 'standing',
+				poseLimits: [
+					{
+						options: [
+							{
+								legs: {
+									pose: 'standing',
+								},
+								bones: {
+									character_rotation: 0,
+									leg_l: [[-18, 22]],
+									leg_r: [[-18, 22]],
+
+									arm_l: [[21, 60]],
+									elbow_l: [[-160, -125]]
+								},
+							},
+							{
+								legs: {
+									pose: 'standing',
+								},
+								bones: {
+									character_rotation: 0,
+									leg_l: [[-18, 22]],
+									leg_r: [[-18, 22]],
+
+									arm_l: [[0, 20]],
+									elbow_l: [[-125, -100]]
+								},
+							},
+							{
+								legs: {
+									pose: 'standing',
+								},
+								bones: {
+									character_rotation: 0,
+									leg_l: [[-18, 22]],
+									leg_r: [[-18, 22]],
+
+									arm_l: [[-40, 0]],
+									elbow_l: [[-95, -85]]
+								},
+							},
+						],
 					},
-					bones: {
-						character_rotation: 0,
-					},
-				},
+				],
 			},
 		},
 	},
