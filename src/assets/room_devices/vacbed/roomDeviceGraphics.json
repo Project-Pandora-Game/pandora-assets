@@ -65,16 +65,29 @@
 							"colorizationKey": "latex"
 						},
 						{
+							"name": "latex",
+							"colorizationKey": "latexOpaque"
+						},
+						{
 							"name": "Pipe Lines",
 							"colorizationKey": "latex"
 						}
 					],
 					"variables": [
-
+						{
+							"type": "typedModule",
+							"module": "mode"
+						}
 					],
 					"imageMap": {
-						"": [
+						"opaque": [
+							"",
 							"latex_front.png",
+							"pipe_lines.png"
+						],
+						"transparent": [
+							"latex_front.png",
+							"",
 							"pipe_lines.png"
 						]
 					}
@@ -91,8 +104,20 @@
 					"mirror": 0,
 					"colorizationKey": "latex",
 					"image": {
-						"image": "body_lines_front.png",
+						"image": "",
 						"overrides": [
+							{
+								"image": "body_lines_front.png",
+								"condition": [
+									[
+										{
+											"module": "mode",
+											"operator": "=",
+											"value": "opaque"
+										}
+									]
+								]
+							}
 						]
 					}
 				},
@@ -106,7 +131,7 @@
 					"priority": "ABOVE_BODY",
 					"points": "body",
 					"mirror": 0,
-					"colorizationKey": "latex",
+					"colorizationKey": "latexOpaque",
 					"image": {
 						"image": "",
 						"overrides": [

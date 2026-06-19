@@ -4,7 +4,12 @@ DefineRoomDeviceAsset({
 	preview: null,//'preview.png',
 	colorization: {
 		latex: {
-			name: 'Latex',
+			name: 'Latex (Transparency)',
+			default: '#2F2F2F',
+			minAlpha: 0.2,
+		},
+		latexOpaque: {
+			name: 'Latex (Opaque)',
 			default: '#2F2F2F',
 			minAlpha: 0.2,
 		},
@@ -73,7 +78,7 @@ DefineRoomDeviceAsset({
 		},
 		mode: {
 			type: 'typed',
-			name: 'Character Position',
+			name: 'Latex Material',
 			staticConfig: { slotName: 'inside' },
 			variants: [
 				{
@@ -82,8 +87,8 @@ DefineRoomDeviceAsset({
 					default: true,
 				},
 				{
-					id: 'translucent',
-					name: 'Translucent',
+					id: 'transparent',
+					name: 'Transparent',
 				},
 			],
 		},
