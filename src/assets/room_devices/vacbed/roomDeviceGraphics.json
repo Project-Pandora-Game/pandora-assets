@@ -1,0 +1,165 @@
+{
+	"layers": [
+		{
+			"x": -500,
+			"y": -1400,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"name": "front_mesh",
+			"graphicalLayers": [
+				{
+					"name": "frame",
+					"colorizationKey": "frame"
+				},
+				{
+					"name": "latex",
+					"colorizationKey": "latex"
+				},
+				{
+					"name": "Pipe Lines",
+					"colorizationKey": "latex"
+				}
+			],
+			"variables": [
+
+			],
+			"imageMap": {
+				"": [
+					"pipes.png",
+					"latex_back.png",
+					"pipe_lines.png"
+				]
+			}
+		},
+		{
+			"type": "slot",
+			"slot": "inside",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": -110,
+				"relativeScale": 1,
+				"disablePoseOffset": true,
+				"pivotOffset": {
+					"x": 0,
+					"y": 0
+				}
+			}
+		}
+	],
+		"slots": {
+		"inside": {
+			"layers": [
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "front_mesh",
+					"points": "static",
+					"automeshTemplate": "aboveBody",
+					"graphicalLayers": [
+						{
+							"name": "latex",
+							"colorizationKey": "latex"
+						},
+						{
+							"name": "Pipe Lines",
+							"colorizationKey": "latex"
+						}
+					],
+					"variables": [
+
+					],
+					"imageMap": {
+						"": [
+							"latex_front.png",
+							"pipe_lines.png"
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Body Lines",
+					"priority": "ABOVE_BODY",
+					"points": "body",
+					"mirror": 0,
+					"colorizationKey": "latex",
+					"image": {
+						"image": "body_lines_front.png",
+						"overrides": [
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Body Lines",
+					"priority": "ABOVE_BODY",
+					"points": "body",
+					"mirror": 0,
+					"colorizationKey": "latex",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "body_helper_front.png",
+								"condition": [
+									[
+										{
+											"module": "mode",
+											"operator": "=",
+											"value": "opaque"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Body Lines",
+					"priority": "ABOVE_BODY",
+					"points": "breasts",
+					"mirror": 0,
+					"colorizationKey": "latex",
+					"image": {
+						"image": "bust_lines.png",
+						"overrides": [
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Body Shine",
+					"priority": "ABOVE_BODY",
+					"points": "body",
+					"mirror": 0,
+					"colorizationKey": "shine",
+					"image": {
+						"image": "body_shine_front.png",
+						"overrides": [
+						]
+					}
+				}
+			]
+		}
+	}
+}
