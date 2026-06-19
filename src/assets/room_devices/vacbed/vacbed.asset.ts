@@ -38,12 +38,13 @@ DefineRoomDeviceAsset({
 									pose: 'standing',
 								},
 								bones: {
-									character_rotation: 0,
+									character_rotation: [[0, 0], [180, 180]],
 									leg_l: [[-18, 22]],
 									leg_r: [[-18, 22]],
-
 									arm_l: [[21, 60]],
-									elbow_l: [[-160, -125]]
+									elbow_l: [[-155, -125]],
+									arm_r: [[21, 60]],
+									elbow_r: [[-155, -125]]
 								},
 							},
 							{
@@ -51,12 +52,13 @@ DefineRoomDeviceAsset({
 									pose: 'standing',
 								},
 								bones: {
-									character_rotation: 0,
+									character_rotation: [[0, 0], [180, 180]],
 									leg_l: [[-18, 22]],
 									leg_r: [[-18, 22]],
-
 									arm_l: [[0, 20]],
-									elbow_l: [[-125, -100]]
+									elbow_l: [[-125, -100]],
+									arm_r: [[0, 20]],
+									elbow_r: [[-125, -100]]
 								},
 							},
 							{
@@ -64,12 +66,83 @@ DefineRoomDeviceAsset({
 									pose: 'standing',
 								},
 								bones: {
-									character_rotation: 0,
+									character_rotation: [[0, 0], [180, 180]],
 									leg_l: [[-18, 22]],
 									leg_r: [[-18, 22]],
-
 									arm_l: [[-40, 0]],
-									elbow_l: [[-95, -85]]
+									elbow_l: [[-95, -85]],
+									arm_r: [[-40, 0]],
+									elbow_r: [[-95, -85]]
+								},
+							},
+							{
+								legs: {
+									pose: 'standing',
+								},
+								bones: {
+									character_rotation: [[0, 0], [180, 180]],
+									leg_l: [[-18, 22]],
+									leg_r: [[-18, 22]],
+									arm_l: [[21, 40]],
+									elbow_l: [[65, 160]],
+									arm_r: [[21, 40]],
+									elbow_r: [[65, 160]]
+								},
+							},
+							{
+								legs: {
+									pose: 'standing',
+								},
+								bones: {
+									character_rotation: [[0, 0], [180, 180]],
+									leg_l: [[-18, 22]],
+									leg_r: [[-18, 22]],
+									arm_l: [[41, 60]],
+									elbow_l: [[45, 160]],
+									arm_r: [[41, 60]],
+									elbow_r: [[45, 160]]
+								},
+							},
+							{
+								legs: {
+									pose: 'standing',
+								},
+								bones: {
+									character_rotation: [[0, 0], [180, 180]],
+									leg_l: [[-18, 22]],
+									leg_r: [[-18, 22]],
+									arm_l: [[61, 80]],
+									elbow_l: [[0, 160]],
+									arm_r: [[61, 80]],
+									elbow_r: [[0, 160]]
+								},
+							},
+							{
+								legs: {
+									pose: 'standing',
+								},
+								bones: {
+									character_rotation: [[0, 0], [180, 180]],
+									leg_l: [[-18, 22]],
+									leg_r: [[-18, 22]],
+									arm_l: [[81, 100]],
+									elbow_l: [[-155, -135]],
+									arm_r: [[81, 100]],
+									elbow_r: [[-155, -135]]
+								},
+							},
+							{
+								legs: {
+									pose: 'standing',
+								},
+								bones: {
+									character_rotation: [[0, 0], [180, 180]],
+									leg_l: [[-18, 22]],
+									leg_r: [[-18, 22]],
+									arm_l: [[101, 145]],
+									elbow_l: [[-155, 160]],
+									arm_r: [[101, 145]],
+									elbow_r: [[-155, 160]]
 								},
 							},
 						],

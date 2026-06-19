@@ -44,7 +44,26 @@
 					"x": 0,
 					"y": 0
 				}
-			}
+			},
+			"characterPositionOverrides": [
+				{
+					"position": {
+						"offsetX": 2,
+						"offsetY": -1190,
+						"relativeScale": 1,
+						"disablePoseOffset": true
+					},
+					"condition": [
+						[
+								{
+									"bone": "character_rotation",
+									"operator": "=",
+									"value": 180
+								}
+						]
+					]
+				}
+			]
 		}
 	],
 		"slots": {
@@ -129,6 +148,23 @@
 					"type": "mesh",
 					"name": "Body Lines",
 					"priority": "ABOVE_BODY",
+					"points": "breasts",
+					"mirror": 0,
+					"colorizationKey": "latex",
+					"image": {
+						"image": "bust_lines.png",
+						"overrides": [
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Body Lines",
+					"priority": "ABOVE_BODY",
 					"points": "body",
 					"mirror": 0,
 					"colorizationKey": "latexOpaque",
@@ -147,23 +183,6 @@
 									]
 								]
 							}
-						]
-					}
-				},
-				{
-					"x": 0,
-					"y": 0,
-					"width": 1000,
-					"height": 1500,
-					"type": "mesh",
-					"name": "Body Lines",
-					"priority": "ABOVE_BODY",
-					"points": "breasts",
-					"mirror": 0,
-					"colorizationKey": "latex",
-					"image": {
-						"image": "bust_lines.png",
-						"overrides": [
 						]
 					}
 				},
