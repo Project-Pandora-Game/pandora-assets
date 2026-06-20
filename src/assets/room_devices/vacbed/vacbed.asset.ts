@@ -34,6 +34,9 @@ DefineRoomDeviceAsset({
 					{
 						options: [
 							{
+								arms: {
+									position: 'back',
+								},
 								legs: {
 									pose: 'standing',
 								},
@@ -48,6 +51,9 @@ DefineRoomDeviceAsset({
 								},
 							},
 							{
+								arms: {
+									position: 'back',
+								},
 								legs: {
 									pose: 'standing',
 								},
@@ -62,6 +68,9 @@ DefineRoomDeviceAsset({
 								},
 							},
 							{
+								arms: {
+									position: 'back',
+								},
 								legs: {
 									pose: 'standing',
 								},
@@ -76,6 +85,9 @@ DefineRoomDeviceAsset({
 								},
 							},
 							{
+								arms: {
+									position: 'back',
+								},
 								legs: {
 									pose: 'standing',
 								},
@@ -90,6 +102,9 @@ DefineRoomDeviceAsset({
 								},
 							},
 							{
+								arms: {
+									position: 'back',
+								},
 								legs: {
 									pose: 'standing',
 								},
@@ -104,6 +119,9 @@ DefineRoomDeviceAsset({
 								},
 							},
 							{
+								arms: {
+									position: 'back',
+								},
 								legs: {
 									pose: 'standing',
 								},
@@ -118,6 +136,9 @@ DefineRoomDeviceAsset({
 								},
 							},
 							{
+								arms: {
+									position: 'back',
+								},
 								legs: {
 									pose: 'standing',
 								},
@@ -132,6 +153,9 @@ DefineRoomDeviceAsset({
 								},
 							},
 							{
+								arms: {
+									position: 'back',
+								},
 								legs: {
 									pose: 'standing',
 								},
