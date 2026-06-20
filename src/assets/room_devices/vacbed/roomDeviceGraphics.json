@@ -17,18 +17,38 @@
 					"colorizationKey": "latex"
 				},
 				{
+					"name": "latexOpaque",
+					"colorizationKey": "latexOpaque"
+				},
+				{
 					"name": "Pipe Lines",
 					"colorizationKey": "latex"
+				},
+				{
+					"name": "Pipe Lines Opaque",
+					"colorizationKey": "latexOpaque"
 				}
 			],
 			"variables": [
-
+				{
+					"type": "typedModule",
+					"module": "mode"
+				}
 			],
 			"imageMap": {
-				"": [
+				"opaque": [
+					"pipes.png",
+					"",
+					"latex_back.png",
+					"",
+					"pipe_lines.png"
+				],
+				"transparent": [
 					"pipes.png",
 					"latex_back.png",
-					"pipe_lines.png"
+					"",
+					"pipe_lines.png",
+					""
 				]
 			}
 		},
@@ -77,19 +97,23 @@
 					"type": "autoMesh",
 					"name": "front_mesh",
 					"points": "static",
-					"automeshTemplate": "aboveBody",
+					"automeshTemplate": "aboveArms",
 					"graphicalLayers": [
 						{
 							"name": "latex",
 							"colorizationKey": "latex"
 						},
 						{
-							"name": "latex",
+							"name": "latex Opaque",
 							"colorizationKey": "latexOpaque"
 						},
 						{
 							"name": "Pipe Lines",
 							"colorizationKey": "latex"
+						},
+						{
+							"name": "Pipe Lines Opaque",
+							"colorizationKey": "latexOpaque"
 						}
 					],
 					"variables": [
@@ -102,12 +126,14 @@
 						"opaque": [
 							"",
 							"latex_front.png",
+							"",
 							"pipe_lines.png"
 						],
 						"transparent": [
 							"latex_front.png",
 							"",
-							"pipe_lines.png"
+							"pipe_lines.png",
+							""
 						]
 					}
 				},
@@ -118,10 +144,10 @@
 					"height": 1500,
 					"type": "mesh",
 					"name": "Body Lines",
-					"priority": "ABOVE_BODY",
+					"priority": "ABOVE_ARM_LEFT",
 					"points": "body",
-					"mirror": 0,
-					"colorizationKey": "latex",
+					"mirror": 1,
+					"colorizationKey": "latexOpaque",
 					"image": {
 						"image": "",
 						"overrides": [
@@ -147,10 +173,10 @@
 					"height": 1500,
 					"type": "mesh",
 					"name": "Body Lines",
-					"priority": "ABOVE_BODY",
+					"priority": "ABOVE_ARM_LEFT",
 					"points": "breasts",
-					"mirror": 0,
-					"colorizationKey": "latex",
+					"mirror": 1,
+					"colorizationKey": "latexOpaque",
 					"image": {
 						"image": "bust_lines.png",
 						"overrides": [
@@ -164,9 +190,9 @@
 					"height": 1500,
 					"type": "mesh",
 					"name": "Body Lines",
-					"priority": "ABOVE_BODY",
+					"priority": "ABOVE_ARM_LEFT",
 					"points": "body",
-					"mirror": 0,
+					"mirror": 1,
 					"colorizationKey": "latexOpaque",
 					"image": {
 						"image": "",
