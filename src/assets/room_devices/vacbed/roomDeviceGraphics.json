@@ -178,8 +178,20 @@
 					"mirror": 1,
 					"colorizationKey": "latexOpaque",
 					"image": {
-						"image": "bust_lines.png",
+						"image": "",
 						"overrides": [
+							{
+								"image": "bust_lines.png",
+								"condition": [
+									[
+										{
+											"module": "mode",
+											"operator": "=",
+											"value": "opaque"
+										}
+									]
+								]
+							}
 						]
 					}
 				},
