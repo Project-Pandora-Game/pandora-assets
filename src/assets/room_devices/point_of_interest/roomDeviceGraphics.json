@@ -1,0 +1,18 @@
+{
+	"layers": [
+		{
+			"type": "slot",
+			"slot": "character_slot",
+			"characterPosition": {
+				"offsetX": 0,
+				"offsetY": 0,
+				"relativeScale": 1,
+				"pivotOffset": {
+					"x": 0,
+					"y": -10
+				}
+			}
+		}
+	],
+	"slots": {}
+}
