@@ -226,6 +226,22 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		head: {
+			type: 'typed',
+			name: 'Latex Material',
+			staticConfig: { slotName: 'inside' },
+			variants: [
+				{
+					id: 'free',
+					name: 'Free',
+					default: true,
+				},
+				{
+					id: 'encased',
+					name: 'Encased',
+				},
+			],
+		},
 	},
 	graphics: 'roomDeviceGraphics.json',
 	pivot: {
