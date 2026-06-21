@@ -229,6 +229,16 @@ DefineRoomDeviceAsset({
 				{
 					id: 'vaccum',
 					name: 'Vaccum',
+					properties: {
+						blockSlotsEnterLeave: ['inside'],
+						slotProperties: {
+							inside: {
+								effects: {
+									blockHands: true,
+								},
+							},
+						},
+					},
 				},
 			],
 		},
