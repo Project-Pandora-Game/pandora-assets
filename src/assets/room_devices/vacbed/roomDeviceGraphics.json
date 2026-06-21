@@ -372,11 +372,6 @@
 								"condition": [
 									[
 										{
-											"module": "mode",
-											"operator": "=",
-											"value": "opaque"
-										},
-										{
 											"module": "head",
 											"operator": "=",
 											"value": "free"
@@ -405,11 +400,6 @@
 								"image": "body_shine_front.png",
 								"condition": [
 									[
-										{
-											"module": "mode",
-											"operator": "=",
-											"value": "opaque"
-										},
 										{
 											"module": "head",
 											"operator": "=",
@@ -609,11 +599,6 @@
 								"image": "bust_shine_front.png",
 								"condition": [
 									[
-										{
-											"module": "mode",
-											"operator": "=",
-											"value": "opaque"
-										},
 										{
 											"module": "head",
 											"operator": "!=",
