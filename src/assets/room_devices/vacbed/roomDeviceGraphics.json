@@ -244,6 +244,11 @@
 											"module": "head",
 											"operator": "=",
 											"value": "free"
+										},
+										{
+											"module": "status",
+											"operator": "=",
+											"value": "vaccum"
 										}
 									]
 								]
@@ -278,6 +283,11 @@
 											"module": "head",
 											"operator": "=",
 											"value": "free"
+										},
+										{
+											"module": "status",
+											"operator": "=",
+											"value": "vaccum"
 										}
 									]
 								]
@@ -312,6 +322,11 @@
 											"module": "head",
 											"operator": "=",
 											"value": "free"
+										},
+										{
+											"module": "status",
+											"operator": "=",
+											"value": "vaccum"
 										}
 									]
 								]
@@ -375,6 +390,11 @@
 											"module": "head",
 											"operator": "=",
 											"value": "free"
+										},
+										{
+											"module": "status",
+											"operator": "=",
+											"value": "vaccum"
 										}
 									]
 								]
@@ -400,6 +420,45 @@
 								"image": "body_shine_front.png",
 								"condition": [
 									[
+										{
+											"module": "head",
+											"operator": "=",
+											"value": "free"
+										},
+										{
+											"module": "status",
+											"operator": "=",
+											"value": "vaccum"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Bed Shine",
+					"priority": "ABOVE_BODY",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "shine",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "bed_shine_head.png",
+								"condition": [
+									[
+										{
+											"module": "status",
+											"operator": "=",
+											"value": "normal"
+										},
 										{
 											"module": "head",
 											"operator": "=",
@@ -438,6 +497,11 @@
 											"module": "head",
 											"operator": "!=",
 											"value": "free"
+										},
+										{
+											"module": "status",
+											"operator": "=",
+											"value": "vaccum"
 										}
 									]
 								]
@@ -472,6 +536,11 @@
 											"module": "head",
 											"operator": "!=",
 											"value": "free"
+										},
+										{
+											"module": "status",
+											"operator": "=",
+											"value": "vaccum"
 										}
 									]
 								]
@@ -540,6 +609,11 @@
 											"module": "head",
 											"operator": "!=",
 											"value": "free"
+										},
+										{
+											"module": "status",
+											"operator": "=",
+											"value": "vaccum"
 										}
 									]
 								]
@@ -603,6 +677,11 @@
 											"module": "head",
 											"operator": "!=",
 											"value": "free"
+										},
+										{
+											"module": "status",
+											"operator": "=",
+											"value": "vaccum"
 										}
 									]
 								]
@@ -632,6 +711,11 @@
 											"module": "head",
 											"operator": "!=",
 											"value": "free"
+										},
+										{
+											"module": "status",
+											"operator": "=",
+											"value": "vaccum"
 										}
 									]
 								]
@@ -657,6 +741,40 @@
 								"image": "head_shine_front.png",
 								"condition": [
 									[
+										{
+											"module": "head",
+											"operator": "!=",
+											"value": "free"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Bed Shine",
+					"priority": "ABOVE_FRONT_HAIR",
+					"points": "static",
+					"mirror": 0,
+					"colorizationKey": "shine",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "bed_shine.png",
+								"condition": [
+									[
+										{
+											"module": "status",
+											"operator": "=",
+											"value": "normal"
+										},
 										{
 											"module": "head",
 											"operator": "!=",

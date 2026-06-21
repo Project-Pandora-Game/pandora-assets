@@ -36,6 +36,7 @@ DefineRoomDeviceAsset({
 				size: 'huge',
 				poseLimits: [
 					{
+						view: 'front',
 						options: [
 							{
 								arms: {
@@ -215,37 +216,19 @@ DefineRoomDeviceAsset({
 		},
 	},
 	modules: {
-		position: {
+		status: {
 			type: 'typed',
 			name: 'Character Position',
 			staticConfig: { slotName: 'inside' },
 			variants: [
 				{
-					id: 'front',
-					name: 'Front-facing',
+					id: 'normal',
+					name: 'Normal',
 					default: true,
-					properties: {
-						slotProperties: {
-							inside: {
-								poseLimits: {
-									view: 'front',
-								},
-							},
-						},
-					},
 				},
 				{
-					id: 'back',
-					name: 'Back-facing',
-					properties: {
-						slotProperties: {
-							inside: {
-								poseLimits: {
-									view: 'back',
-								},
-							},
-						},
-					},
+					id: 'vaccum',
+					name: 'Vaccum',
 				},
 			],
 		},
