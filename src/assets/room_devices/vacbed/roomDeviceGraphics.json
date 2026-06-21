@@ -667,6 +667,35 @@
 							}
 						]
 					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Mouth Breaher",
+					"priority": "ABOVE_FRONT_HAIR",
+					"points": "body",
+					"mirror": 0,
+					"colorizationKey": "mouth",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "mouth_breather.png",
+								"condition": [
+									[
+										{
+											"module": "head",
+											"operator": "!=",
+											"value": "free"
+										}
+									]
+								]
+							}
+						]
+					}
 				}
 			]
 		}

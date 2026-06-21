@@ -17,6 +17,10 @@ DefineRoomDeviceAsset({
 			name: 'Frame',
 			default: '#a2a2a2'
 		},
+		mouth: {
+			name: 'Mouth Breather',
+			default: '#424242'
+		},
 		shine: {
 			name: 'Shine',
 			default: '#FFFFFF87',
@@ -274,6 +278,33 @@ DefineRoomDeviceAsset({
 				{
 					id: 'encased',
 					name: 'Encased',
+					properties: {
+						slotProperties: {
+							inside: {
+								attributes: {
+									provides: [
+										'Restraint',
+										'Restraint_mouth',
+										'Mouth_item',
+										'Mouth_insert',
+									],
+									requires: [
+										'Mouth_open_wide',
+										'!Mouth_cover',
+									],
+								},
+								effects: {
+									lipsTouch: 9,
+									jawMove: 4,
+									tongueRoof: 0,
+									mouthBreath: 0,
+									throatBreath: 0,
+									coherency: 0,
+									stimulus: 2,
+								},
+							},
+						},
+					},
 				},
 			],
 		},
