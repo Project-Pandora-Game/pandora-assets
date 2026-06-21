@@ -1,17 +1,16 @@
 DefineRoomDeviceAsset({
 	name: 'Vacbed',
 	size: 'huge',
-	preview: null,//'preview.png',
+	preview: 'preview.png',
 	colorization: {
 		latex: {
 			name: 'Latex (Transparency)',
-			default: '#2F2F2F',
+			default: '#2F2F2F69',
 			minAlpha: 0.2,
 		},
 		latexOpaque: {
 			name: 'Latex (Opaque)',
-			default: '#2F2F2F',
-			minAlpha: 0.2,
+			default: '#373737',
 		},
 		frame: {
 			name: 'Frame',
@@ -41,7 +40,6 @@ DefineRoomDeviceAsset({
 							{
 								arms: {
 									position: 'back',
-									//rotation: 'up',
 								},
 								legs: {
 									pose: 'standing',
@@ -60,7 +58,6 @@ DefineRoomDeviceAsset({
 							{
 								arms: {
 									position: 'back',
-									//rotation: 'up',
 								},
 								legs: {
 									pose: 'standing',
@@ -79,7 +76,6 @@ DefineRoomDeviceAsset({
 							{
 								arms: {
 									position: 'back',
-									//rotation: 'up',
 								},
 								legs: {
 									pose: 'standing',
@@ -98,7 +94,6 @@ DefineRoomDeviceAsset({
 							{
 								arms: {
 									position: 'back',
-									//rotation: 'up',
 								},
 								legs: {
 									pose: 'standing',
@@ -117,7 +112,6 @@ DefineRoomDeviceAsset({
 							{
 								arms: {
 									position: 'back',
-									//rotation: 'up',
 								},
 								legs: {
 									pose: 'standing',
@@ -136,7 +130,6 @@ DefineRoomDeviceAsset({
 							{
 								arms: {
 									position: 'back',
-									//rotation: 'up',
 								},
 								legs: {
 									pose: 'standing',
@@ -155,7 +148,6 @@ DefineRoomDeviceAsset({
 							{
 								arms: {
 									position: 'back',
-									//rotation: 'down',
 								},
 								legs: {
 									pose: 'standing',
@@ -174,7 +166,6 @@ DefineRoomDeviceAsset({
 							{
 								arms: {
 									position: 'back',
-									//rotation: 'down',
 								},
 								legs: {
 									pose: 'standing',
@@ -193,7 +184,6 @@ DefineRoomDeviceAsset({
 							{
 								arms: {
 									position: 'back',
-									//rotation: 'down',
 								},
 								legs: {
 									pose: 'standing',
@@ -218,7 +208,7 @@ DefineRoomDeviceAsset({
 	modules: {
 		status: {
 			type: 'typed',
-			name: 'Character Position',
+			name: 'Vacbed Status',
 			staticConfig: { slotName: 'inside' },
 			variants: [
 				{
@@ -248,21 +238,21 @@ DefineRoomDeviceAsset({
 			staticConfig: { slotName: 'inside' },
 			variants: [
 				{
-					id: 'opaque',
-					name: 'Opaque',
+					id: 'transparent',
+					name: 'Transparent',
 					default: true,
 					properties: {
 						stateFlags: {
-							provides: ['opaque_material'],
+							provides: ['transparent_material'],
 						},
 					},
 				},
 				{
-					id: 'transparent',
-					name: 'Transparent',
+					id: 'opaque',
+					name: 'Opaque',
 					properties: {
 						stateFlags: {
-							provides: ['transparent_material'],
+							provides: ['opaque_material'],
 						},
 					},
 				},
@@ -270,17 +260,17 @@ DefineRoomDeviceAsset({
 		},
 		head: {
 			type: 'typed',
-			name: 'Latex Material',
+			name: 'Head',
 			staticConfig: { slotName: 'inside' },
 			variants: [
 				{
 					id: 'free',
-					name: 'Free',
+					name: 'Outside',
 					default: true,
 				},
 				{
 					id: 'encased',
-					name: 'Encased',
+					name: 'Inside',
 					properties: {
 						slotProperties: {
 							inside: {

@@ -575,6 +575,11 @@
 											"module": "head",
 											"operator": "!=",
 											"value": "free"
+										},
+										{
+											"module": "status",
+											"operator": "=",
+											"value": "vaccum"
 										}
 									]
 								]
@@ -745,6 +750,11 @@
 											"module": "head",
 											"operator": "!=",
 											"value": "free"
+										},
+										{
+											"module": "status",
+											"operator": "=",
+											"value": "vaccum"
 										}
 									]
 								]
