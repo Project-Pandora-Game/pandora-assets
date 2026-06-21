@@ -15,11 +15,11 @@ DefineRoomDeviceAsset({
 		},
 		frame: {
 			name: 'Frame',
-			default: '#a2a2a2'
+			default: '#a2a2a2',
 		},
 		mouth: {
 			name: 'Mouth Breather',
-			default: '#424242'
+			default: '#424242',
 		},
 		shine: {
 			name: 'Shine',
@@ -54,7 +54,7 @@ DefineRoomDeviceAsset({
 									arm_l: [[21, 60]],
 									elbow_l: [[-155, -125]],
 									arm_r: [[21, 60]],
-									elbow_r: [[-155, -125]]
+									elbow_r: [[-155, -125]],
 								},
 							},
 							{
@@ -73,7 +73,7 @@ DefineRoomDeviceAsset({
 									arm_l: [[0, 20]],
 									elbow_l: [[-125, -100]],
 									arm_r: [[0, 20]],
-									elbow_r: [[-125, -100]]
+									elbow_r: [[-125, -100]],
 								},
 							},
 							{
@@ -92,7 +92,7 @@ DefineRoomDeviceAsset({
 									arm_l: [[-40, 0]],
 									elbow_l: [[-95, -85]],
 									arm_r: [[-40, 0]],
-									elbow_r: [[-95, -85]]
+									elbow_r: [[-95, -85]],
 								},
 							},
 							{
@@ -111,7 +111,7 @@ DefineRoomDeviceAsset({
 									arm_l: [[21, 40]],
 									elbow_l: [[65, 160]],
 									arm_r: [[21, 40]],
-									elbow_r: [[65, 160]]
+									elbow_r: [[65, 160]],
 								},
 							},
 							{
@@ -130,7 +130,7 @@ DefineRoomDeviceAsset({
 									arm_l: [[41, 60]],
 									elbow_l: [[45, 160]],
 									arm_r: [[41, 60]],
-									elbow_r: [[45, 160]]
+									elbow_r: [[45, 160]],
 								},
 							},
 							{
@@ -149,7 +149,7 @@ DefineRoomDeviceAsset({
 									arm_l: [[61, 80]],
 									elbow_l: [[0, 160]],
 									arm_r: [[61, 80]],
-									elbow_r: [[0, 160]]
+									elbow_r: [[0, 160]],
 								},
 							},
 							{
@@ -168,7 +168,7 @@ DefineRoomDeviceAsset({
 									arm_l: [[61, 80]],
 									elbow_l: [[0, 160]],
 									arm_r: [[61, 80]],
-									elbow_r: [[0, 160]]
+									elbow_r: [[0, 160]],
 								},
 							},
 							{
@@ -264,7 +264,7 @@ DefineRoomDeviceAsset({
 						stateFlags: {
 							provides: ['transparent_material'],
 						},
-					}
+					},
 				},
 			],
 		},
