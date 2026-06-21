@@ -258,10 +258,20 @@ DefineRoomDeviceAsset({
 					id: 'opaque',
 					name: 'Opaque',
 					default: true,
+					properties: {
+						stateFlags: {
+							provides: ['opaque_material'],
+						},
+					},
 				},
 				{
 					id: 'transparent',
 					name: 'Transparent',
+					properties: {
+						stateFlags: {
+							provides: ['transparent_material'],
+						},
+					}
 				},
 			],
 		},
@@ -304,11 +314,40 @@ DefineRoomDeviceAsset({
 								},
 							},
 						},
+						stateFlags: {
+							provides: ['encased_head'],
+						},
 					},
 				},
 			],
 		},
 	},
+	stateFlagCombinations: [
+		{
+			requiredFlags: ['encased_head', 'transparent_material'],
+			properties: {
+				slotProperties: {
+					inside: {
+						effects: {
+							blurVision: 4,
+						},
+					},
+				},
+			},
+		},
+		{
+			requiredFlags: ['encased_head', 'opaque_material'],
+			properties: {
+				slotProperties: {
+					inside: {
+						effects: {
+							blind: 10,
+						},
+					},
+				},
+			},
+		},
+	],
 	graphics: 'roomDeviceGraphics.json',
 	pivot: {
 		x: 0,
