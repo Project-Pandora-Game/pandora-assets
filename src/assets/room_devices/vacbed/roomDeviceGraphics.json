@@ -359,6 +359,40 @@
 					"width": 1000,
 					"height": 1500,
 					"type": "mesh",
+					"name": "Breast Shine",
+					"priority": "ABOVE_BODY",
+					"points": "breasts",
+					"mirror": 1,
+					"colorizationKey": "shine",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "bust_shine_front.png",
+								"condition": [
+									[
+										{
+											"module": "mode",
+											"operator": "=",
+											"value": "opaque"
+										},
+										{
+											"module": "head",
+											"operator": "=",
+											"value": "free"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
 					"name": "Body Shine",
 					"priority": "ABOVE_BODY",
 					"points": "body",
@@ -563,6 +597,40 @@
 					"width": 1000,
 					"height": 1500,
 					"type": "mesh",
+					"name": "Bust Shine Opaque",
+					"priority": "ABOVE_FRONT_HAIR",
+					"points": "breasts",
+					"mirror": 1,
+					"colorizationKey": "shine",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "bust_shine_front.png",
+								"condition": [
+									[
+										{
+											"module": "mode",
+											"operator": "=",
+											"value": "opaque"
+										},
+										{
+											"module": "head",
+											"operator": "!=",
+											"value": "free"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
 					"name": "Body Shine",
 					"priority": "ABOVE_FRONT_HAIR",
 					"points": "body",
@@ -573,6 +641,35 @@
 						"overrides": [
 							{
 								"image": "body_shine_front.png",
+								"condition": [
+									[
+										{
+											"module": "head",
+											"operator": "!=",
+											"value": "free"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Body Shine",
+					"priority": "ABOVE_FRONT_HAIR",
+					"points": "body",
+					"mirror": 0,
+					"colorizationKey": "shine",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "head_shine_front.png",
 								"condition": [
 									[
 										{
