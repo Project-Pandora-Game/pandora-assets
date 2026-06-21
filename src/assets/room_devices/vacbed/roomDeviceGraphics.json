@@ -266,7 +266,7 @@
 						"image": "",
 						"overrides": [
 							{
-								"image": "body_helper_front.png",
+								"image": "arms_up.png",
 								"condition": [
 									[
 										{
@@ -301,6 +301,40 @@
 						"overrides": [
 							{
 								"image": "bust_lines.png",
+								"condition": [
+									[
+										{
+											"module": "mode",
+											"operator": "=",
+											"value": "opaque"
+										},
+										{
+											"module": "head",
+											"operator": "=",
+											"value": "free"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Body Lines",
+					"priority": "ABOVE_BODY",
+					"points": "body",
+					"mirror": 1,
+					"colorizationKey": "latexOpaque",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "body_helper_front_up.png",
 								"condition": [
 									[
 										{
@@ -393,6 +427,40 @@
 					"width": 1000,
 					"height": 1500,
 					"type": "mesh",
+					"name": "Arms Lines",
+					"priority": "ABOVE_FRONT_HAIR",
+					"points": "body",
+					"mirror": 1,
+					"colorizationKey": "latexOpaque",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "arms_up.png",
+								"condition": [
+									[
+										{
+											"module": "mode",
+											"operator": "=",
+											"value": "opaque"
+										},
+										{
+											"module": "head",
+											"operator": "!=",
+											"value": "free"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
 					"name": "Head Lines",
 					"priority": "ABOVE_FRONT_HAIR",
 					"points": "static",
@@ -429,14 +497,14 @@
 					"type": "mesh",
 					"name": "Body Lines",
 					"priority": "ABOVE_FRONT_HAIR",
-					"points": "body",
+					"points": "breasts",
 					"mirror": 1,
 					"colorizationKey": "latexOpaque",
 					"image": {
 						"image": "",
 						"overrides": [
 							{
-								"image": "body_helper_front.png",
+								"image": "bust_lines.png",
 								"condition": [
 									[
 										{
@@ -463,14 +531,14 @@
 					"type": "mesh",
 					"name": "Body Lines",
 					"priority": "ABOVE_FRONT_HAIR",
-					"points": "breasts",
+					"points": "body",
 					"mirror": 1,
 					"colorizationKey": "latexOpaque",
 					"image": {
 						"image": "",
 						"overrides": [
 							{
-								"image": "bust_lines.png",
+								"image": "body_helper_front_up.png",
 								"condition": [
 									[
 										{
