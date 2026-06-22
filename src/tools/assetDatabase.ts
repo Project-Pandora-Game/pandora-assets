@@ -2,7 +2,7 @@ import { GetLogger, AssetId, AssetDefinition, AssetType } from 'pandora-common';
 
 const logger = GetLogger('AssetDatabase');
 
-export const AssetDatabase = new class AssetDatabase {
+export const AssetDatabase = new class AssetDatabaseClass {
 	private _assets: Map<AssetId, AssetDefinition | AssetId> = new Map();
 
 	public get assets(): ReadonlyMap<AssetId, AssetDefinition | AssetId> {
