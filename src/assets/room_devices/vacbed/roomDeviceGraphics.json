@@ -442,40 +442,6 @@
 					"width": 1000,
 					"height": 1500,
 					"type": "mesh",
-					"name": "Shine Bed",
-					"priority": "ABOVE_BODY",
-					"points": "static",
-					"mirror": 0,
-					"colorizationKey": "shine",
-					"image": {
-						"image": "",
-						"overrides": [
-							{
-								"image": "bed_shine_head.png",
-								"condition": [
-									[
-										{
-											"module": "status",
-											"operator": "=",
-											"value": "normal"
-										},
-										{
-											"module": "head",
-											"operator": "=",
-											"value": "free"
-										}
-									]
-								]
-							}
-						]
-					}
-				},
-				{
-					"x": 0,
-					"y": 0,
-					"width": 1000,
-					"height": 1500,
-					"type": "mesh",
 					"name": "Lines Body",
 					"priority": "ABOVE_FRONT_HAIR",
 					"points": "body",
@@ -762,37 +728,52 @@
 						]
 					}
 				},
+
 				{
 					"x": 0,
 					"y": 0,
 					"width": 1000,
 					"height": 1500,
-					"type": "mesh",
-					"name": "Bed Shine",
-					"priority": "ABOVE_FRONT_HAIR",
+					"type": "autoMesh",
+					"name": "Shine&Breathe",
 					"points": "static",
-					"mirror": 0,
-					"colorizationKey": "shine",
-					"image": {
-						"image": "",
-						"overrides": [
-							{
-								"image": "bed_shine.png",
-								"condition": [
-									[
-										{
-											"module": "status",
-											"operator": "=",
-											"value": "normal"
-										},
-										{
-											"module": "head",
-											"operator": "!=",
-											"value": "free"
-										}
-									]
-								]
-							}
+					"automeshTemplate": "aboveBody",
+					"graphicalLayers": [
+						{
+							"name": "Bed Shine",
+							"colorizationKey": "shine"
+						},
+						{
+							"name": "Mouth Breather",
+							"colorizationKey": "mouth"
+						}
+					],
+					"variables": [
+						{
+							"type": "typedModule",
+							"module": "status"
+						},
+						{
+							"type": "typedModule",
+							"module": "head"
+						}
+					],
+					"imageMap": {
+						"normal:free": [
+							"bed_shine_head.png",
+							""
+						],
+						"normal:encased": [
+							"",
+							""
+						],
+						"vaccum:free": [
+							"",
+							""
+						],
+						"vaccum:encased": [
+							"",
+							""
 						]
 					}
 				},
@@ -801,27 +782,46 @@
 					"y": 0,
 					"width": 1000,
 					"height": 1500,
-					"type": "mesh",
-					"name": "Mouth Breaher",
-					"priority": "ABOVE_FRONT_HAIR",
-					"points": "body",
-					"mirror": 0,
-					"colorizationKey": "mouth",
-					"image": {
-						"image": "",
-						"overrides": [
-							{
-								"image": "mouth_breather.png",
-								"condition": [
-									[
-										{
-											"module": "head",
-											"operator": "!=",
-											"value": "free"
-										}
-									]
-								]
-							}
+					"type": "autoMesh",
+					"name": "Shine&Breathe",
+					"points": "static",
+					"automeshTemplate": "aboveFrontHair",
+					"graphicalLayers": [
+						{
+							"name": "Bed Shine",
+							"colorizationKey": "shine"
+						},
+						{
+							"name": "Mouth Breather",
+							"colorizationKey": "mouth"
+						}
+					],
+					"variables": [
+						{
+							"type": "typedModule",
+							"module": "status"
+						},
+						{
+							"type": "typedModule",
+							"module": "head"
+						}
+					],
+					"imageMap": {
+						"normal:free": [
+							"",
+							""
+						],
+						"normal:encased": [
+							"bed_shine.png",
+							"mouth_breather.png"
+						],
+						"vaccum:free": [
+							"",
+							""
+						],
+						"vaccum:encased": [
+							"",
+							"mouth_breather.png"
 						]
 					}
 				}
