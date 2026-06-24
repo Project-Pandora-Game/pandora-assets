@@ -6,7 +6,7 @@ import { AVIF_SUFFIX } from './resources.ts';
 
 const logger = GetLogger('GraphicsDatabase');
 
-export const GraphicsDatabase = new class GraphicsDatabase {
+export const GraphicsDatabase = new class GraphicsDatabaseClass {
 	private assets: Map<AssetId, {
 		graphics: Immutable<AssetGraphicsDefinition>;
 		graphicsSource: Immutable<AssetSourceGraphicsInfo> | null;
