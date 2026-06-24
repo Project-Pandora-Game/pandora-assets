@@ -1,5 +1,5 @@
 DefineAsset({
-	name: 'Hand Pump',
+	name: 'Breast Pump',
 	size: 'small',
 	graphics: 'graphics.json',
 	colorization: {
@@ -41,61 +41,11 @@ DefineAsset({
 	preview: 'preview.png',
 	attributes: {
 		provides: [
-			'Handheld',
-		],
-		requires: [
-			'!Hand_restricting_cover',
+			'Toy',
 		],
 	},
 	modules: {
-		handUsage_r: {
-			type: 'typed',
-			name: 'Held in right hand',
-			variants: [
-				{
-					id: 'yes',
-					name: 'Yes',
-					default: true,
-					properties: {
-						poseLimits: {
-							rightArm: {
-								fingers: 'fist',
-								rotation: 'down',
-							},
-						},
-					},
-				},
-				{
-					id: 'no',
-					name: 'No',
-				},
-			],
-		},
-		handUsage_l: {
-			type: 'typed',
-			name: 'Held in left hand',
-			variants: [
-				{
-					id: 'yes',
-					name: 'Yes',
-					properties: {
-						poseLimits: {
-							leftArm: {
-								fingers: 'fist',
-								rotation: 'down',
-							},
-						},
-					},
-				},
-				{
-					id: 'no',
-					name: 'No',
-					default: true,
-
-				},
-			],
-		},
-		breats_r: {
+		attached: {
 			type: 'typed',
 			name: 'Attached to right breast',
 			variants: [
@@ -105,29 +55,53 @@ DefineAsset({
 					default: true,
 				},
 				{
-					id: 'yes',
-					name: 'Yes',
-				},
-			],
-		},
-		breats_l: {
-			type: 'typed',
-			name: 'Attached to left breast',
-			variants: [
-				{
-					id: 'no',
-					name: 'No',
-					default: true,
+					id: 'breast_r',
+					name: 'Right',
+					properties: {
+						attributes: {
+							provides: ['Breast_cover'],
+							requires: ['!Breast_cover'],
+						},
+					},
 				},
 				{
-					id: 'yes',
-					name: 'Yes',
+					id: 'breast_l',
+					name: 'Left',
+					properties: {
+						attributes: {
+							provides: ['Breast_cover'],
+							requires: ['!Breast_cover'],
+						},
+					},
 				},
 			],
 		},
 		fillLevel: {
 			type: 'typed',
-			name: 'Current fill level',
+			name: 'Current right pump`s fill level',
+			variants: [
+				{
+					id: 'empty',
+					name: 'Empty',
+					default: true,
+				},
+				{
+					id: 'slightly',
+					name: 'Slightly',
+				},
+				{
+					id: 'almost',
+					name: 'Almost full',
+				},
+				{
+					id: 'full',
+					name: 'Filled',
+				},
+			],
+		},
+		fillLevel_l: {
+			type: 'typed',
+			name: 'Current left pump`s fill level',
 			variants: [
 				{
 					id: 'empty',
@@ -150,8 +124,8 @@ DefineAsset({
 		},
 	},
 	chat: {
-		actionAdd: 'SOURCE_CHARACTER used ITEM_ASSET_NAME on TARGET_CHARACTER.',
-		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER.',
+		actionAdd: 'SOURCE_CHARACTER attached ITEM_ASSET_NAME on TARGET_CHARACTER_POSESSIVE breast.',
+		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_POSESSIVE breast.',
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
@@ -160,7 +134,7 @@ DefineAsset({
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
-				part: 'lotion',
+				part: 'pump',
 				source: 'Self-Made',
 				copyrightHolder: 'Tom',
 				editedBy: 'Sandrine',

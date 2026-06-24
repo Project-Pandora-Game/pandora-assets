@@ -10,201 +10,9 @@
 			"enableCond": [
 				[
 					{
-						"module": "handUsage_l",
+						"module": "attached",
 						"operator": "=",
-						"value": "yes"
-					},
-					{
-						"view": "front"
-					}
-				]
-			],
-			"name": "Hand Pump front",
-			"points": "handheld",
-			"automeshTemplate": "belowBody",
-			"graphicalLayers": [
-				{
-					"name": "Suction Cup",
-					"colorizationKey": "suctionCup"
-				},
-				{
-					"name": "Handle",
-					"colorizationKey": "handle"
-				},
-				{
-					"name": "Top",
-					"colorizationKey": "topLid"
-				},
-				{
-					"name": "Bottom",
-					"colorizationKey": "bottomLid"
-				},
-				{
-					"name": "Glass",
-					"colorizationKey": "glass"
-				},
-				{
-					"name": "Junction",
-					"colorizationKey": "junction"
-				},
-				{
-					"name": "Fluids",
-					"colorizationKey": "fluid"
-				}
-			],
-			"variables": [
-				{
-					"type": "typedModule",
-					"module": "fillLevel"
-				}
-			],
-			"imageMap": {
-				"empty": [
-					"hand_pump_suction_cup_side.png",
-					"hand_pump_handle_side.png",
-					"hand_pump_container_top.png",
-					"hand_pump_container_bottom.png",
-					"hand_pump_container_glass.png",
-					"hand_pump_junction_side.png",
-					""
-				],
-				"slightly": [
-					"hand_pump_suction_cup_side.png",
-					"hand_pump_handle_side.png",
-					"hand_pump_container_top.png",
-					"hand_pump_container_bottom.png",
-					"hand_pump_container_glass.png",
-					"hand_pump_junction_side.png",
-					"hand_pump_level_1_hand.png"
-				],
-				"almost": [
-					"hand_pump_suction_cup_side.png",
-					"hand_pump_handle_side.png",
-					"hand_pump_container_top.png",
-					"hand_pump_container_bottom.png",
-					"hand_pump_container_glass.png",
-					"hand_pump_junction_side.png",
-					"hand_pump_level_2_hand.png"
-				],
-				"full": [
-					"hand_pump_suction_cup_side.png",
-					"hand_pump_handle_side.png",
-					"hand_pump_container_top.png",
-					"hand_pump_container_bottom.png",
-					"hand_pump_container_glass.png",
-					"hand_pump_junction_side.png",
-					"hand_pump_level_3_hand.png"
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "autoMesh",
-			"enableCond": [
-				[
-					{
-						"module": "handUsage_l",
-						"operator": "=",
-						"value": "yes"
-					},
-					{
-						"view": "back"
-					}
-				]
-			],
-			"name": "Hand Pump back",
-			"points": "handheld",
-			"automeshTemplate": "belowBody",
-			"graphicalLayers": [
-				{
-					"name": "Suction Cup",
-					"colorizationKey": "suctionCup"
-				},
-				{
-					"name": "Handle",
-					"colorizationKey": "handle"
-				},
-				{
-					"name": "Junction",
-					"colorizationKey": "junction"
-				},
-				{
-					"name": "Fluids",
-					"colorizationKey": "fluid"
-				},
-				{
-					"name": "Glass",
-					"colorizationKey": "glass"
-				},
-				{
-					"name": "Top",
-					"colorizationKey": "topLid"
-				},
-				{
-					"name": "Bottom",
-					"colorizationKey": "bottomLid"
-				}
-			],
-			"variables": [
-				{
-					"type": "typedModule",
-					"module": "fillLevel"
-				}
-			],
-			"imageMap": {
-				"empty": [
-					"hand_pump_suction_cup_side.png",
-					"hand_pump_handle_side.png",
-					"hand_pump_junction_side.png",
-					"",
-					"hand_pump_container_glass.png",
-					"hand_pump_container_top.png",
-					"hand_pump_container_bottom.png"
-				],
-				"slightly": [
-					"hand_pump_suction_cup_side.png",
-					"hand_pump_handle_side.png",
-					"hand_pump_junction_side.png",
-					"hand_pump_level_1_hand.png",
-					"hand_pump_container_glass.png",
-					"hand_pump_container_top.png",
-					"hand_pump_container_bottom.png"
-				],
-				"almost": [
-					"hand_pump_suction_cup_side.png",
-					"hand_pump_handle_side.png",
-					"hand_pump_junction_side.png",
-					"hand_pump_level_2_hand.png",
-					"hand_pump_container_glass.png",
-					"hand_pump_container_top.png",
-					"hand_pump_container_bottom.png"
-				],
-				"full": [
-					"hand_pump_suction_cup_side.png",
-					"hand_pump_handle_side.png",
-					"hand_pump_junction_side.png",
-					"hand_pump_level_3_hand.png",
-					"hand_pump_container_glass.png",
-					"hand_pump_container_top.png",
-					"hand_pump_container_bottom.png"
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "autoMesh",
-			"enableCond": [
-				[
-					{
-						"module": "breats_l",
-						"operator": "=",
-						"value": "yes"
+						"value": "breast_r"
 					},
 					{
 						"bone": "breasts",
@@ -305,9 +113,9 @@
 			"enableCond": [
 				[
 					{
-						"module": "breats_r",
+						"module": "attached",
 						"operator": "=",
-						"value": "yes"
+						"value": "breast_l"
 					},
 					{
 						"bone": "breasts",
@@ -408,9 +216,9 @@
 			"enableCond": [
 				[
 					{
-						"module": "breats_l",
+						"module": "attached",
 						"operator": "=",
-						"value": "yes"
+						"value": "breast_r"
 					},
 					{
 						"bone": "breasts",
@@ -511,9 +319,9 @@
 			"enableCond": [
 				[
 					{
-						"module": "breats_r",
+						"module": "attached",
 						"operator": "=",
-						"value": "yes"
+						"value": "breast_l"
 					},
 					{
 						"bone": "breasts",
@@ -614,9 +422,9 @@
 			"enableCond": [
 				[
 					{
-						"module": "breats_l",
+						"module": "attached",
 						"operator": "=",
-						"value": "yes"
+						"value": "breast_r"
 					},
 					{
 						"bone": "breasts",
@@ -712,9 +520,9 @@
 			"enableCond": [
 				[
 					{
-						"module": "breats_r",
+						"module": "attached",
 						"operator": "=",
-						"value": "yes"
+						"value": "breast_l"
 					},
 					{
 						"bone": "breasts",
@@ -810,9 +618,9 @@
 			"enableCond": [
 				[
 					{
-						"module": "breats_l",
+						"module": "attached",
 						"operator": "=",
-						"value": "yes"
+						"value": "breast_r"
 					},
 					{
 						"bone": "breasts",
@@ -913,9 +721,9 @@
 			"enableCond": [
 				[
 					{
-						"module": "breats_r",
+						"module": "attached",
 						"operator": "=",
-						"value": "yes"
+						"value": "breast_l"
 					},
 					{
 						"bone": "breasts",
@@ -1016,9 +824,9 @@
 			"enableCond": [
 				[
 					{
-						"module": "breats_l",
+						"module": "attached",
 						"operator": "=",
-						"value": "yes"
+						"value": "breast_r"
 					},
 					{
 						"bone": "breasts",
@@ -1114,9 +922,9 @@
 			"enableCond": [
 				[
 					{
-						"module": "breats_r",
+						"module": "attached",
 						"operator": "=",
-						"value": "yes"
+						"value": "breast_l"
 					},
 					{
 						"bone": "breasts",
