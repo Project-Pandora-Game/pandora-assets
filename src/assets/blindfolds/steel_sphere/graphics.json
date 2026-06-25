@@ -9,7 +9,7 @@
 			"type": "autoMesh",
 			"name": "front_mesh",
 			"points": "static",
-			"automeshTemplate": "aboveBody",
+			"automeshTemplate": "aboveFrontHair",
 			"graphicalLayers": [
 				{
 					"name": "collar",
