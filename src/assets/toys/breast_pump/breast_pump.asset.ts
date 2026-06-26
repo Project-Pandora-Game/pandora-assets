@@ -78,30 +78,7 @@ DefineAsset({
 		},
 		fillLevel: {
 			type: 'typed',
-			name: 'Current right pump`s fill level',
-			variants: [
-				{
-					id: 'empty',
-					name: 'Empty',
-					default: true,
-				},
-				{
-					id: 'slightly',
-					name: 'Slightly',
-				},
-				{
-					id: 'almost',
-					name: 'Almost full',
-				},
-				{
-					id: 'full',
-					name: 'Filled',
-				},
-			],
-		},
-		fillLevel_l: {
-			type: 'typed',
-			name: 'Current left pump`s fill level',
+			name: 'Current pump`s fill level',
 			variants: [
 				{
 					id: 'empty',
