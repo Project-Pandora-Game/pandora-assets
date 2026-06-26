@@ -36,6 +36,7 @@ DefineAsset({
 			'Wig',
 			'Ears',
 			'Fantasy_ears',
+			'Headgear',
 		],
 		covers: [
 			'Ear_item',
