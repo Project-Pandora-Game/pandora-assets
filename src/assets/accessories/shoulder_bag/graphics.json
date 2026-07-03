@@ -16,10 +16,18 @@
 					"colorizationKey": "straps"
 				}
 			],
-			"variables": [],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "worn"
+				}
+			],
 			"imageMap": {
-				"": [
+				"right": [
 					"handbag_straps.png"
+				],
+				"left": [
+					"handbag_straps_left.png"
 				]
 			}
 		},
@@ -42,11 +50,20 @@
 					"colorizationKey": "straps"
 				}
 			],
-			"variables": [],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "worn"
+				}
+			],
 			"imageMap": {
-				"": [
+				"right": [
 					"handbag.png",
 					"handbag_straps.png"
+				],
+				"left": [
+					"handbag_left.png",
+					"handbag_straps_left.png"
 				]
 			}
 		}
