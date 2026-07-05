@@ -556,12 +556,12 @@ const ATTRIBUTES_DEFINITION_BASE = DefineAttributes({
 		description: 'An item that is covering the right breast',
 	},
 	Breast_protruding_r: {
-		name: 'A big item covering the right breast',
-		description: 'A big item that is covering the right breast',
+		name: 'An item significantly protruding from the right breast',
+		description: 'An item that is significantly protruding from the right breast',
 	},
 	Breast_protruding_l: {
-		name: 'A big item covering the left breast',
-		description: 'A big item that is covering the left breast',
+		name: 'An item significantly protruding from the left breast',
+		description: 'An item that is significantly protruding from the left breast',
 	},
 	//#endregion
 

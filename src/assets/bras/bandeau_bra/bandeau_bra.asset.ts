@@ -20,10 +20,6 @@ DefineAsset({
 			'Underwear',
 			'Underwear_bra',
 		],
-		requires: [
-			'!Breast_protruding_l',
-			'!Breast_protruding_r',
-		],
 	},
 	modules: {
 		bustState: {
@@ -33,6 +29,14 @@ DefineAsset({
 				{
 					id: 'covered',
 					name: 'Covered',
+					properties: {
+						attributes: {
+							requires: [
+								'!Breast_protruding_l',
+								'!Breast_protruding_r',
+							],
+						},
+					},
 					default: true,
 				},
 				{
