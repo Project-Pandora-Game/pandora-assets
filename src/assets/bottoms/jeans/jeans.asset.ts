@@ -8,9 +8,17 @@ DefineAsset({
 			name: 'Pants',
 			default: '#9BCDFF',
 		},
+		inside: {
+			name: 'Fabric reverse side',
+			default: '#c2cfdaff',
+		},
 		button: {
 			name: 'Button',
 			default: '#E6E6E6',
+		},
+		belt: {
+			name: 'Belt',
+			default: '#834C01',
 		},
 	},
 	roomDeployment: {
@@ -26,6 +34,74 @@ DefineAsset({
 		requires: [
 			'!Crotch_protruding',
 		],
+	},
+	modules: {
+		type: {
+			type: 'typed',
+			name: 'Belted',
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'belted',
+					name: 'Belted',
+				},
+			],
+		},
+		style: {
+			type: 'typed',
+			name: 'Style',
+			variants: [
+				{
+					id: 'default',
+					name: 'Default',
+					default: true,
+				},
+				{
+					id: 'capri',
+					name: 'Capri',
+					properties: {
+						stateFlags: {
+							provides: ['rolled_style'],
+						},
+					},
+				},
+				{
+					id: 'bermuda',
+					name: 'Bermuda',
+					properties: {
+						stateFlags: {
+							provides: ['rolled_style'],
+						},
+					},
+				},
+			],
+		},
+		folded_ends: {
+			type: 'typed',
+			name: 'Folded ends',
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'folded',
+					name: 'Folded',
+					properties: {
+						stateFlags: {
+							requires: {
+								rolled_style: 'Folded ends are only available for Capri or Bermuda styles',
+							},
+						},
+					},
+				},
+			],
+		},
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
