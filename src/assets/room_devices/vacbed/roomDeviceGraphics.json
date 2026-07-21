@@ -244,6 +244,10 @@
 						{
 							"name": "Arms Lines",
 							"colorizationKey": "latexOpaque"
+						},
+						{
+							"name": "Body Helper",
+							"colorizationKey": "latexOpaque"
 						}
 					],
 					"variables": [
@@ -295,7 +299,8 @@
 							"",
 							"body_lines_front.png",
 							"bust_lines.png",
-							"arms_up.png"
+							"arms_up.png",
+							"body_helper_front_up.png"
 						],
 						"opaque:encased:normal": [
 							"",
@@ -307,48 +312,7 @@
 							"head_lines_front.png",
 							"body_lines_front.png",
 							"bust_lines.png",
-							"arms_up.png"
-						]
-					}
-				},
-
-
-				{
-					"x": 0,
-					"y": 0,
-					"width": 1000,
-					"height": 1500,
-					"type": "autoMesh",
-					"name": "Body Helper",
-					"points": "body",
-					"automeshTemplate": "overlay",
-					"graphicalLayers": [
-						{
-							"name": "Body Helper",
-							"colorizationKey": "latexOpaque"
-						}
-					],
-					"variables": [
-						{
-							"type": "typedModule",
-							"module": "mode"
-						},
-						{
-							"type": "typedModule",
-							"module": "head"
-						}
-					],
-					"imageMap": {
-						"transparent:free": [
-							""
-						],
-						"transparent:encased": [
-							""
-						],
-						"opaque:free": [
-							"body_helper_front_up.png"
-						],
-						"opaque:encased": [
+							"arms_up.png",
 							"body_helper_front_up.png"
 						]
 					}
