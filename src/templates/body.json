@@ -420,6 +420,146 @@
 					"mirror": 1
 				}
 			]
+		},
+		"overlay": {
+			"name": "[Special] Overlay",
+			"parts": [
+				{
+					"id": "body",
+					"priority": "OVERLAY",
+					"pointType": [
+						"body",
+						"body_l",
+						"body_r",
+						"bodyarm_l",
+						"bodyarm_r",
+						"bodyleg_l",
+						"bodyleg_r"
+					]
+				},
+				{
+					"id": "arms",
+					"priority": "OVERLAY",
+					"pointType": [
+						"bodyarm_l",
+						"arm_l"
+					],
+					"mirror": 1
+				},
+				{
+					"id": "legs",
+					"priority": "OVERLAY",
+					"pointType": [
+						"bodyleg_l",
+						"leg_l"
+					],
+					"mirror": 1
+				}
+			]
+		},
+		"overlayMirror": {
+			"name": "[Special] Overlay (mirrored)",
+			"parts": [
+				{
+					"id": "body",
+					"priority": "OVERLAY",
+					"pointType": [
+						"body",
+						"body_l",
+						"bodyarm_l",
+						"bodyleg_l"
+					],
+					"mirror": 1
+				},
+				{
+					"id": "arms",
+					"priority": "OVERLAY",
+					"pointType": [
+						"bodyarm_l",
+						"arm_l"
+					],
+					"mirror": 1
+				},
+				{
+					"id": "legs",
+					"priority": "OVERLAY",
+					"pointType": [
+						"bodyleg_l",
+						"leg_l"
+					],
+					"mirror": 1
+				}
+			]
+		},
+		"background": {
+			"name": "[Special] Background",
+			"parts": [
+				{
+					"id": "body",
+					"priority": "BACKGROUND",
+					"pointType": [
+						"body",
+						"body_l",
+						"body_r",
+						"bodyarm_l",
+						"bodyarm_r",
+						"bodyleg_l",
+						"bodyleg_r"
+					]
+				},
+				{
+					"id": "arms",
+					"priority": "BACKGROUND",
+					"pointType": [
+						"bodyarm_l",
+						"arm_l"
+					],
+					"mirror": 1
+				},
+				{
+					"id": "legs",
+					"priority": "BACKGROUND",
+					"pointType": [
+						"bodyleg_l",
+						"leg_l"
+					],
+					"mirror": 1
+				}
+			]
+		},
+		"backgroundMirror": {
+			"name": "[Special] Background (mirrored)",
+			"parts": [
+				{
+					"id": "body",
+					"priority": "BACKGROUND",
+					"pointType": [
+						"body",
+						"body_l",
+						"bodyarm_l",
+						"bodyleg_l"
+					],
+					"mirror": 1
+				},
+				{
+					"id": "arms",
+					"priority": "BACKGROUND",
+					"pointType": [
+						"bodyarm_l",
+						"arm_l"
+					],
+					"mirror": 1
+				},
+				{
+					"id": "legs",
+					"priority": "BACKGROUND",
+					"pointType": [
+						"bodyleg_l",
+						"leg_l"
+					],
+					"mirror": 1
+				}
+			]
 		}
 	},
 	"points": [
