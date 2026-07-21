@@ -238,10 +238,6 @@
 							"colorizationKey": "latexOpaque"
 						},
 						{
-							"name": "Bust Lines",
-							"colorizationKey": "latexOpaque"
-						},
-						{
 							"name": "Arms Lines",
 							"colorizationKey": "latexOpaque"
 						},
@@ -251,10 +247,6 @@
 						},
 						{
 							"name": "Body Shine",
-							"colorizationKey": "shine"
-						},
-						{
-							"name": "Breasts Shine",
 							"colorizationKey": "shine"
 						}
 					],
@@ -278,8 +270,6 @@
 							"",
 							"",
 							"",
-							"",
-							"",
 							""
 						],
 						"transparent:free:vaccum": [
@@ -287,13 +277,9 @@
 							"",
 							"",
 							"",
-							"",
-							"body_shine_front.png",
-							"bust_shine_front.png"
+							"body_shine_front.png"
 						],
 						"transparent:encased:normal": [
-							"",
-							"",
 							"",
 							"",
 							"",
@@ -305,13 +291,9 @@
 							"",
 							"",
 							"",
-							"",
-							"body_shine_front.png",
-							"bust_shine_front.png"
+							"body_shine_front.png"
 						],
 						"opaque:free:normal": [
-							"",
-							"",
 							"",
 							"",
 							"",
@@ -321,15 +303,11 @@
 						"opaque:free:vaccum": [
 							"",
 							"body_lines_front.png",
-							"bust_lines.png",
 							"arms_up.png",
 							"body_helper_front_up.png",
-							"body_shine_front.png",
-							"bust_shine_front.png"
+							"body_shine_front.png"
 						],
 						"opaque:encased:normal": [
-							"",
-							"",
 							"",
 							"",
 							"",
@@ -339,11 +317,84 @@
 						"opaque:encased:vaccum": [
 							"head_lines_front.png",
 							"body_lines_front.png",
-							"bust_lines.png",
 							"arms_up.png",
 							"body_helper_front_up.png",
-							"body_shine_front.png",
-							"bust_shine_front.png"
+							"body_shine_front.png"
+						]
+					}
+				},
+
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Body Lines Bust",
+					"priority": "ABOVE_BODY",
+					"points": "breasts",
+					"mirror": 1,
+					"colorizationKey": "latexOpaque",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "bust_lines.png",
+								"condition": [
+									[
+										{
+											"module": "mode",
+											"operator": "=",
+											"value": "opaque"
+										},
+										{
+											"module": "head",
+											"operator": "=",
+											"value": "free"
+										},
+										{
+											"module": "status",
+											"operator": "=",
+											"value": "vaccum"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "mesh",
+					"name": "Body Lines Bust",
+					"priority": "OVERLAY",
+					"points": "breasts",
+					"mirror": 1,
+					"colorizationKey": "shine",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "bust_shine_front.png",
+								"condition": [
+									[
+										{
+											"module": "head",
+											"operator": "=",
+											"value": "free"
+										},
+										{
+											"module": "status",
+											"operator": "=",
+											"value": "vaccum"
+										}
+									]
+								]
+							}
 						]
 					}
 				},
