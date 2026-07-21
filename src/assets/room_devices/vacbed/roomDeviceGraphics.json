@@ -224,6 +224,40 @@
 					"y": 0,
 					"width": 1000,
 					"height": 1500,
+					"type": "mesh",
+					"name": "Body Lines Bust",
+					"priority": "OVERLAY",
+					"points": "breasts",
+					"mirror": 1,
+					"colorizationKey": "latexOpaque",
+					"image": {
+						"image": "",
+						"overrides": [
+							{
+								"image": "bust_lines.png",
+								"condition": [
+									[
+										{
+											"module": "mode",
+											"operator": "=",
+											"value": "opaque"
+										},
+										{
+											"module": "status",
+											"operator": "=",
+											"value": "vaccum"
+										}
+									]
+								]
+							}
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
 					"type": "autoMesh",
 					"name": "Body Lines",
 					"points": "body",
@@ -324,45 +358,6 @@
 					}
 				},
 
-				{
-					"x": 0,
-					"y": 0,
-					"width": 1000,
-					"height": 1500,
-					"type": "mesh",
-					"name": "Body Lines Bust",
-					"priority": "ABOVE_BODY",
-					"points": "breasts",
-					"mirror": 1,
-					"colorizationKey": "latexOpaque",
-					"image": {
-						"image": "",
-						"overrides": [
-							{
-								"image": "bust_lines.png",
-								"condition": [
-									[
-										{
-											"module": "mode",
-											"operator": "=",
-											"value": "opaque"
-										},
-										{
-											"module": "head",
-											"operator": "=",
-											"value": "free"
-										},
-										{
-											"module": "status",
-											"operator": "=",
-											"value": "vaccum"
-										}
-									]
-								]
-							}
-						]
-					}
-				},
 
 				{
 					"x": 0,
@@ -382,11 +377,7 @@
 								"image": "bust_shine_front.png",
 								"condition": [
 									[
-										{
-											"module": "head",
-											"operator": "=",
-											"value": "free"
-										},
+
 										{
 											"module": "status",
 											"operator": "=",
