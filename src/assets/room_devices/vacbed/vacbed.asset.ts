@@ -6,7 +6,7 @@ DefineRoomDeviceAsset({
 		latex: {
 			name: 'Latex (Transparency)',
 			default: '#2F2F2F69',
-			minAlpha: 0.2,
+			minAlpha: 0.0,
 		},
 		latexOpaque: {
 			name: 'Latex (Opaque)',
@@ -38,9 +38,6 @@ DefineRoomDeviceAsset({
 						view: 'front',
 						options: [
 							{
-								arms: {
-									position: 'back',
-								},
 								legs: {
 									pose: 'standing',
 								},
@@ -56,9 +53,6 @@ DefineRoomDeviceAsset({
 								},
 							},
 							{
-								arms: {
-									position: 'back',
-								},
 								legs: {
 									pose: 'standing',
 								},
@@ -74,9 +68,6 @@ DefineRoomDeviceAsset({
 								},
 							},
 							{
-								arms: {
-									position: 'back',
-								},
 								legs: {
 									pose: 'standing',
 								},
@@ -92,9 +83,6 @@ DefineRoomDeviceAsset({
 								},
 							},
 							{
-								arms: {
-									position: 'back',
-								},
 								legs: {
 									pose: 'standing',
 								},
@@ -110,9 +98,6 @@ DefineRoomDeviceAsset({
 								},
 							},
 							{
-								arms: {
-									position: 'back',
-								},
 								legs: {
 									pose: 'standing',
 								},
@@ -128,9 +113,6 @@ DefineRoomDeviceAsset({
 								},
 							},
 							{
-								arms: {
-									position: 'back',
-								},
 								legs: {
 									pose: 'standing',
 								},
@@ -146,9 +128,6 @@ DefineRoomDeviceAsset({
 								},
 							},
 							{
-								arms: {
-									position: 'back',
-								},
 								legs: {
 									pose: 'standing',
 								},
@@ -164,9 +143,6 @@ DefineRoomDeviceAsset({
 								},
 							},
 							{
-								arms: {
-									position: 'back',
-								},
 								legs: {
 									pose: 'standing',
 								},
@@ -182,9 +158,6 @@ DefineRoomDeviceAsset({
 								},
 							},
 							{
-								arms: {
-									position: 'back',
-								},
 								legs: {
 									pose: 'standing',
 								},

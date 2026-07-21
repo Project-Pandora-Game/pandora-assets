@@ -225,7 +225,7 @@
 					"width": 1000,
 					"height": 1500,
 					"type": "autoMesh",
-					"name": "Body Helper",
+					"name": "Body Lines",
 					"points": "body",
 					"automeshTemplate": "overlay",
 					"graphicalLayers": [
@@ -248,6 +248,14 @@
 						{
 							"name": "Body Helper",
 							"colorizationKey": "latexOpaque"
+						},
+						{
+							"name": "Body Shine",
+							"colorizationKey": "shine"
+						},
+						{
+							"name": "Breasts Shine",
+							"colorizationKey": "shine"
 						}
 					],
 					"variables": [
@@ -269,15 +277,24 @@
 							"",
 							"",
 							"",
+							"",
+							"",
+							"",
 							""
 						],
 						"transparent:free:vaccum": [
 							"",
 							"",
 							"",
-							""
+							"",
+							"",
+							"body_shine_front.png",
+							"bust_shine_front.png"
 						],
 						"transparent:encased:normal": [
+							"",
+							"",
+							"",
 							"",
 							"",
 							"",
@@ -287,9 +304,15 @@
 							"",
 							"",
 							"",
-							""
+							"",
+							"",
+							"body_shine_front.png",
+							"bust_shine_front.png"
 						],
 						"opaque:free:normal": [
+							"",
+							"",
+							"",
 							"",
 							"",
 							"",
@@ -300,9 +323,14 @@
 							"body_lines_front.png",
 							"bust_lines.png",
 							"arms_up.png",
-							"body_helper_front_up.png"
+							"body_helper_front_up.png",
+							"body_shine_front.png",
+							"bust_shine_front.png"
 						],
 						"opaque:encased:normal": [
+							"",
+							"",
+							"",
 							"",
 							"",
 							"",
@@ -313,7 +341,9 @@
 							"body_lines_front.png",
 							"bust_lines.png",
 							"arms_up.png",
-							"body_helper_front_up.png"
+							"body_helper_front_up.png",
+							"body_shine_front.png",
+							"bust_shine_front.png"
 						]
 					}
 				},
@@ -359,54 +389,6 @@
 					}
 				},
 
-				{
-					"x": 0,
-					"y": 0,
-					"width": 1000,
-					"height": 1500,
-					"type": "autoMesh",
-					"name": "Body Shine",
-					"points": "body",
-					"automeshTemplate": "overlay",
-					"graphicalLayers": [
-						{
-							"name": "Body Shine",
-							"colorizationKey": "shine"
-						},
-						{
-							"name": "Breasts Shine",
-							"colorizationKey": "shine"
-						}
-					],
-					"variables": [
-						{
-							"type": "typedModule",
-							"module": "head"
-						},
-						{
-							"type": "typedModule",
-							"module": "status"
-						}
-					],
-					"imageMap": {
-						"free:normal": [
-							"",
-							""
-						],
-						"free:vaccum": [
-							"body_shine_front.png",
-							"bust_shine_front.png"
-						],
-						"encased:normal": [
-							"",
-							""
-						],
-						"encased:vaccum": [
-							"body_shine_front.png",
-							"bust_shine_front.png"
-						]
-					}
-				},
 
 				{
 					"x": 0,
