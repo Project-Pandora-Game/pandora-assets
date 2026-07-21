@@ -2,7 +2,7 @@ import { GetLogger, RoomBackgroundInfo, type AssetsTileTextureInfo } from 'pando
 
 const logger = GetLogger('RoomDatabase');
 
-export const RoomDatabase = new class RoomDatabase {
+export const RoomDatabase = new class RoomDatabaseClass {
 	private backgrounds: Map<string, RoomBackgroundInfo> = new Map();
 	private tileTextures: Map<string, AssetsTileTextureInfo> = new Map();
 
