@@ -161,7 +161,7 @@
 					"type": "autoMesh",
 					"name": "Front Aux",
 					"points": "static",
-					"automeshTemplate": "aboveFrontHair",
+					"automeshTemplate": "overlay",
 					"graphicalLayers": [
 						{
 							"name": "latex",
@@ -217,514 +217,229 @@
 						]
 					}
 				},
+
+
 				{
 					"x": 0,
 					"y": 0,
 					"width": 1000,
 					"height": 1500,
-					"type": "mesh",
-					"name": "Body Lines Body",
-					"priority": "ABOVE_BODY",
+					"type": "autoMesh",
+					"name": "Body Helper",
 					"points": "body",
-					"mirror": 1,
-					"colorizationKey": "latexOpaque",
-					"image": {
-						"image": "",
-						"overrides": [
-							{
-								"image": "body_lines_front.png",
-								"condition": [
-									[
-										{
-											"module": "mode",
-											"operator": "=",
-											"value": "opaque"
-										},
-										{
-											"module": "head",
-											"operator": "=",
-											"value": "free"
-										},
-										{
-											"module": "status",
-											"operator": "=",
-											"value": "vaccum"
-										}
-									]
-								]
-							}
+					"automeshTemplate": "overlay",
+					"graphicalLayers": [
+						{
+							"name": "Head Lines",
+							"colorizationKey": "latexOpaque"
+						},
+						{
+							"name": "Body Lines",
+							"colorizationKey": "latexOpaque"
+						},
+						{
+							"name": "Bust Lines",
+							"colorizationKey": "latexOpaque"
+						},
+						{
+							"name": "Arms Lines",
+							"colorizationKey": "latexOpaque"
+						}
+					],
+					"variables": [
+						{
+							"type": "typedModule",
+							"module": "mode"
+						},
+						{
+							"type": "typedModule",
+							"module": "head"
+						},
+						{
+							"type": "typedModule",
+							"module": "status"
+						}
+					],
+					"imageMap": {
+						"transparent:free:normal": [
+							"",
+							"",
+							"",
+							""
+						],
+						"transparent:free:vaccum": [
+							"",
+							"",
+							"",
+							""
+						],
+						"transparent:encased:normal": [
+							"",
+							"",
+							"",
+							""
+						],
+						"transparent:encased:vaccum": [
+							"",
+							"",
+							"",
+							""
+						],
+						"opaque:free:normal": [
+							"",
+							"",
+							"",
+							""
+						],
+						"opaque:free:vaccum": [
+							"",
+							"body_lines_front.png",
+							"bust_lines.png",
+							"arms_up.png"
+						],
+						"opaque:encased:normal": [
+							"",
+							"",
+							"",
+							""
+						],
+						"opaque:encased:vaccum": [
+							"head_lines_front.png",
+							"body_lines_front.png",
+							"bust_lines.png",
+							"arms_up.png"
 						]
 					}
 				},
+
+
 				{
 					"x": 0,
 					"y": 0,
 					"width": 1000,
 					"height": 1500,
-					"type": "mesh",
-					"name": "Body Lines Arms",
-					"priority": "ABOVE_BODY",
+					"type": "autoMesh",
+					"name": "Body Helper",
 					"points": "body",
-					"mirror": 1,
-					"colorizationKey": "latexOpaque",
-					"image": {
-						"image": "",
-						"overrides": [
-							{
-								"image": "arms_up.png",
-								"condition": [
-									[
-										{
-											"module": "mode",
-											"operator": "=",
-											"value": "opaque"
-										},
-										{
-											"module": "head",
-											"operator": "=",
-											"value": "free"
-										},
-										{
-											"module": "status",
-											"operator": "=",
-											"value": "vaccum"
-										}
-									]
-								]
-							}
+					"automeshTemplate": "overlay",
+					"graphicalLayers": [
+						{
+							"name": "Body Helper",
+							"colorizationKey": "latexOpaque"
+						}
+					],
+					"variables": [
+						{
+							"type": "typedModule",
+							"module": "mode"
+						},
+						{
+							"type": "typedModule",
+							"module": "head"
+						}
+					],
+					"imageMap": {
+						"transparent:free": [
+							""
+						],
+						"transparent:encased": [
+							""
+						],
+						"opaque:free": [
+							"body_helper_front_up.png"
+						],
+						"opaque:encased": [
+							"body_helper_front_up.png"
 						]
 					}
 				},
+
 				{
 					"x": 0,
 					"y": 0,
 					"width": 1000,
 					"height": 1500,
-					"type": "mesh",
-					"name": "Body Lines Bust",
-					"priority": "ABOVE_BODY",
-					"points": "breasts",
-					"mirror": 1,
-					"colorizationKey": "latexOpaque",
-					"image": {
-						"image": "",
-						"overrides": [
-							{
-								"image": "bust_lines.png",
-								"condition": [
-									[
-										{
-											"module": "mode",
-											"operator": "=",
-											"value": "opaque"
-										},
-										{
-											"module": "head",
-											"operator": "=",
-											"value": "free"
-										},
-										{
-											"module": "status",
-											"operator": "=",
-											"value": "vaccum"
-										}
-									]
-								]
-							}
-						]
-					}
-				},
-				{
-					"x": 0,
-					"y": 0,
-					"width": 1000,
-					"height": 1500,
-					"type": "mesh",
-					"name": "Body Lines Helper",
-					"priority": "ABOVE_BODY",
-					"points": "body",
-					"mirror": 1,
-					"colorizationKey": "latexOpaque",
-					"image": {
-						"image": "",
-						"overrides": [
-							{
-								"image": "body_helper_front_up.png",
-								"condition": [
-									[
-										{
-											"module": "mode",
-											"operator": "=",
-											"value": "opaque"
-										},
-										{
-											"module": "head",
-											"operator": "=",
-											"value": "free"
-										}
-									]
-								]
-							}
-						]
-					}
-				},
-				{
-					"x": 0,
-					"y": 0,
-					"width": 1000,
-					"height": 1500,
-					"type": "mesh",
-					"name": "Shine Bust",
-					"priority": "ABOVE_BODY",
-					"points": "breasts",
-					"mirror": 1,
-					"colorizationKey": "shine",
-					"image": {
-						"image": "",
-						"overrides": [
-							{
-								"image": "bust_shine_front.png",
-								"condition": [
-									[
-										{
-											"module": "head",
-											"operator": "=",
-											"value": "free"
-										},
-										{
-											"module": "status",
-											"operator": "=",
-											"value": "vaccum"
-										}
-									]
-								]
-							}
-						]
-					}
-				},
-				{
-					"x": 0,
-					"y": 0,
-					"width": 1000,
-					"height": 1500,
-					"type": "mesh",
-					"name": "Shine Body",
-					"priority": "ABOVE_BODY",
-					"points": "body",
-					"mirror": 0,
-					"colorizationKey": "shine",
-					"image": {
-						"image": "",
-						"overrides": [
-							{
-								"image": "body_shine_front.png",
-								"condition": [
-									[
-										{
-											"module": "head",
-											"operator": "=",
-											"value": "free"
-										},
-										{
-											"module": "status",
-											"operator": "=",
-											"value": "vaccum"
-										}
-									]
-								]
-							}
-						]
-					}
-				},
-				{
-					"x": 0,
-					"y": 0,
-					"width": 1000,
-					"height": 1500,
-					"type": "mesh",
-					"name": "Lines Body",
-					"priority": "ABOVE_FRONT_HAIR",
-					"points": "body",
-					"mirror": 1,
-					"colorizationKey": "latexOpaque",
-					"image": {
-						"image": "",
-						"overrides": [
-							{
-								"image": "body_lines_front.png",
-								"condition": [
-									[
-										{
-											"module": "mode",
-											"operator": "=",
-											"value": "opaque"
-										},
-										{
-											"module": "head",
-											"operator": "!=",
-											"value": "free"
-										},
-										{
-											"module": "status",
-											"operator": "=",
-											"value": "vaccum"
-										}
-									]
-								]
-							}
-						]
-					}
-				},
-				{
-					"x": 0,
-					"y": 0,
-					"width": 1000,
-					"height": 1500,
-					"type": "mesh",
-					"name": "Lines Arms",
-					"priority": "ABOVE_FRONT_HAIR",
-					"points": "body",
-					"mirror": 1,
-					"colorizationKey": "latexOpaque",
-					"image": {
-						"image": "",
-						"overrides": [
-							{
-								"image": "arms_up.png",
-								"condition": [
-									[
-										{
-											"module": "mode",
-											"operator": "=",
-											"value": "opaque"
-										},
-										{
-											"module": "head",
-											"operator": "!=",
-											"value": "free"
-										},
-										{
-											"module": "status",
-											"operator": "=",
-											"value": "vaccum"
-										}
-									]
-								]
-							}
-						]
-					}
-				},
-				{
-					"x": 0,
-					"y": 0,
-					"width": 1000,
-					"height": 1500,
-					"type": "mesh",
-					"name": "Lines Head",
-					"priority": "ABOVE_FRONT_HAIR",
+					"type": "autoMesh",
+					"name": "Head Static Shine",
 					"points": "static",
-					"mirror": 1,
-					"colorizationKey": "latexOpaque",
-					"image": {
-						"image": "",
-						"overrides": [
-							{
-								"image": "head_lines_front.png",
-								"condition": [
-									[
-										{
-											"module": "mode",
-											"operator": "=",
-											"value": "opaque"
-										},
-										{
-											"module": "head",
-											"operator": "!=",
-											"value": "free"
-										},
-										{
-											"module": "status",
-											"operator": "=",
-											"value": "vaccum"
-										}
-									]
-								]
-							}
+					"automeshTemplate": "overlay",
+					"graphicalLayers": [
+						{
+							"name": "Head Shine",
+							"colorizationKey": "shine"
+						}
+					],
+					"variables": [
+						{
+							"type": "typedModule",
+							"module": "head"
+						},
+						{
+							"type": "typedModule",
+							"module": "status"
+						}
+					],
+					"imageMap": {
+						"free:normal": [
+							""
+						],
+						"free:vaccum": [
+							""
+						],
+						"encased:normal": [
+							""
+						],
+						"encased:vaccum": [
+							"head_shine_front.png"
 						]
 					}
 				},
+
 				{
 					"x": 0,
 					"y": 0,
 					"width": 1000,
 					"height": 1500,
-					"type": "mesh",
-					"name": "Lines Bust",
-					"priority": "ABOVE_FRONT_HAIR",
-					"points": "breasts",
-					"mirror": 1,
-					"colorizationKey": "latexOpaque",
-					"image": {
-						"image": "",
-						"overrides": [
-							{
-								"image": "bust_lines.png",
-								"condition": [
-									[
-										{
-											"module": "mode",
-											"operator": "=",
-											"value": "opaque"
-										},
-										{
-											"module": "head",
-											"operator": "!=",
-											"value": "free"
-										},
-										{
-											"module": "status",
-											"operator": "=",
-											"value": "vaccum"
-										}
-									]
-								]
-							}
-						]
-					}
-				},
-				{
-					"x": 0,
-					"y": 0,
-					"width": 1000,
-					"height": 1500,
-					"type": "mesh",
-					"name": "Lines Helper",
-					"priority": "ABOVE_FRONT_HAIR",
-					"points": "body",
-					"mirror": 1,
-					"colorizationKey": "latexOpaque",
-					"image": {
-						"image": "",
-						"overrides": [
-							{
-								"image": "body_helper_front_up.png",
-								"condition": [
-									[
-										{
-											"module": "mode",
-											"operator": "=",
-											"value": "opaque"
-										},
-										{
-											"module": "head",
-											"operator": "!=",
-											"value": "free"
-										}
-									]
-								]
-							}
-						]
-					}
-				},
-				{
-					"x": 0,
-					"y": 0,
-					"width": 1000,
-					"height": 1500,
-					"type": "mesh",
-					"name": "Bust Shine Opaque",
-					"priority": "ABOVE_FRONT_HAIR",
-					"points": "breasts",
-					"mirror": 1,
-					"colorizationKey": "shine",
-					"image": {
-						"image": "",
-						"overrides": [
-							{
-								"image": "bust_shine_front.png",
-								"condition": [
-									[
-										{
-											"module": "head",
-											"operator": "!=",
-											"value": "free"
-										},
-										{
-											"module": "status",
-											"operator": "=",
-											"value": "vaccum"
-										}
-									]
-								]
-							}
-						]
-					}
-				},
-				{
-					"x": 0,
-					"y": 0,
-					"width": 1000,
-					"height": 1500,
-					"type": "mesh",
+					"type": "autoMesh",
 					"name": "Body Shine",
-					"priority": "ABOVE_FRONT_HAIR",
 					"points": "body",
-					"mirror": 0,
-					"colorizationKey": "shine",
-					"image": {
-						"image": "",
-						"overrides": [
-							{
-								"image": "body_shine_front.png",
-								"condition": [
-									[
-										{
-											"module": "head",
-											"operator": "!=",
-											"value": "free"
-										},
-										{
-											"module": "status",
-											"operator": "=",
-											"value": "vaccum"
-										}
-									]
-								]
-							}
-						]
-					}
-				},
-				{
-					"x": 0,
-					"y": 0,
-					"width": 1000,
-					"height": 1500,
-					"type": "mesh",
-					"name": "Head Shine",
-					"priority": "ABOVE_FRONT_HAIR",
-					"points": "body",
-					"mirror": 0,
-					"colorizationKey": "shine",
-					"image": {
-						"image": "",
-						"overrides": [
-							{
-								"image": "head_shine_front.png",
-								"condition": [
-									[
-										{
-											"module": "head",
-											"operator": "!=",
-											"value": "free"
-										},
-										{
-											"module": "status",
-											"operator": "=",
-											"value": "vaccum"
-										}
-									]
-								]
-							}
+					"automeshTemplate": "overlay",
+					"graphicalLayers": [
+						{
+							"name": "Body Shine",
+							"colorizationKey": "shine"
+						},
+						{
+							"name": "Breasts Shine",
+							"colorizationKey": "shine"
+						}
+					],
+					"variables": [
+						{
+							"type": "typedModule",
+							"module": "head"
+						},
+						{
+							"type": "typedModule",
+							"module": "status"
+						}
+					],
+					"imageMap": {
+						"free:normal": [
+							"",
+							""
+						],
+						"free:vaccum": [
+							"body_shine_front.png",
+							"bust_shine_front.png"
+						],
+						"encased:normal": [
+							"",
+							""
+						],
+						"encased:vaccum": [
+							"body_shine_front.png",
+							"bust_shine_front.png"
 						]
 					}
 				},
@@ -785,7 +500,7 @@
 					"type": "autoMesh",
 					"name": "Shine&Breathe",
 					"points": "static",
-					"automeshTemplate": "aboveFrontHair",
+					"automeshTemplate": "overlay",
 					"graphicalLayers": [
 						{
 							"name": "Bed Shine",
