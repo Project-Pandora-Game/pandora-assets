@@ -2176,7 +2176,7 @@ packages:
     resolution: {integrity: sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==}
 
   pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/fa94c40b7f1617bc3a61a50555ce6abe5fe9bb50#path:pandora-common:
-    resolution: {gitHosted: true, integrity: sha512-oniEdDoaB3y03lwb/8VeeAiy/a5meu8lbiWB73v4O33Cu2kctrsbFOF357kAEw1ZrSeA80KAYf8cpNLiGG4Gdg==, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/fa94c40b7f1617bc3a61a50555ce6abe5fe9bb50}
+    resolution: {gitHosted: true, path: pandora-common, integrity: sha512-oniEdDoaB3y03lwb/8VeeAiy/a5meu8lbiWB73v4O33Cu2kctrsbFOF357kAEw1ZrSeA80KAYf8cpNLiGG4Gdg==, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/fa94c40b7f1617bc3a61a50555ce6abe5fe9bb50}
     version: 0.1.0
     engines: {node: '>=24.x'}
     peerDependencies:
