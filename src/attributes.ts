@@ -547,9 +547,21 @@ const ATTRIBUTES_DEFINITION_BASE = DefineAttributes({
 		description: 'An item that is used on or over the nipples',
 		parentAttributes: ['Breast_item'],
 	},
-	Breast_cover: {
-		name: 'An item covering the breasts',
-		description: 'An item that is covering the breasts',
+	Breast_cover_l: {
+		name: 'An item covering the left breast',
+		description: 'An item that is covering the left breast',
+	},
+	Breast_cover_r: {
+		name: 'An item covering the right breast',
+		description: 'An item that is covering the right breast',
+	},
+	Breast_protruding_r: {
+		name: 'A big item covering the right breast',
+		description: 'A big item that is covering the right breast',
+	},
+	Breast_protruding_l: {
+		name: 'A big item covering the left breast',
+		description: 'A big item that is covering the left breast',
 	},
 	//#endregion
 

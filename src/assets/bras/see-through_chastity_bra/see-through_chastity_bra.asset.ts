@@ -57,7 +57,12 @@ DefineAsset({
 					properties: {
 						attributes: {
 							provides: [
-								'Breast_cover',
+								'Breast_cover_l',
+								'Breast_cover_r',
+							],
+							requires: [
+								'!Breast_protruding_l',
+								'!Breast_protruding_r',
 							],
 							covers: [
 								'Breast_item',

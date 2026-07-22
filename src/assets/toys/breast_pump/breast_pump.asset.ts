@@ -59,8 +59,14 @@ DefineAsset({
 					name: 'Right',
 					properties: {
 						attributes: {
-							provides: ['Breast_cover'],
-							requires: ['!Breast_cover'],
+							provides: [
+								'Breast_cover_r',
+								'Breast_protruding_r',
+							],
+							requires: [
+								'!Breast_cover_r',
+								'!Breast_protruding_r',
+							],
 						},
 					},
 				},
@@ -69,8 +75,14 @@ DefineAsset({
 					name: 'Left',
 					properties: {
 						attributes: {
-							provides: ['Breast_cover'],
-							requires: ['!Breast_cover'],
+							provides: [
+								'Breast_cover_l',
+								'Breast_protruding_l',
+							],
+							requires: [
+								'!Breast_cover_l',
+								'!Breast_protruding_l',
+							],
 						},
 					},
 				},

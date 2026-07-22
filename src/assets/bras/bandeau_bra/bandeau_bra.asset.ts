@@ -20,6 +20,10 @@ DefineAsset({
 			'Underwear',
 			'Underwear_bra',
 		],
+		requires: [
+			'!Breast_protruding_l',
+			'!Breast_protruding_r',
+		],
 	},
 	modules: {
 		bustState: {

@@ -35,7 +35,8 @@ DefineAsset({
 			'Hand_cover',
 			'Anus_cover',
 			'Vulva_cover',
-			'Breast_cover',
+			'Breast_cover_l',
+			'Breast_cover_r',
 		],
 		covers: [
 			'Clothing_upper',

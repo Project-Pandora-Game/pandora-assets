@@ -23,6 +23,10 @@ DefineAsset({
 			'Underwear',
 			'Underwear_corset',
 		],
+		requires: [
+			'!Breast_protruding_l',
+			'!Breast_protruding_r',
+		],
 	},
 	modules: {
 		lock: {
