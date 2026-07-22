@@ -49,7 +49,7 @@ DefineAsset({
 		},
 	},
 	ownership: {
-		responsibleContributor: 'Nikky128 <122885812+Nikky90506@users.noreply.github.com>',
+		responsibleContributor: 'Nikky90506 <122885812+Nikky90506@users.noreply.github.com>',
 		credits: ['Nikky'],
 		modificationPolicy: 'Fixes and New uses, otherwise ask',
 		reusePolicy: 'Ask first',
