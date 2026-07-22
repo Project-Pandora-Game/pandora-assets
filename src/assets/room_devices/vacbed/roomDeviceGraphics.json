@@ -509,18 +509,10 @@
 					"width": 1000,
 					"height": 1500,
 					"type": "autoMesh",
-					"name": "HeadLines&Shine",
+					"name": "Body Shine",
 					"points": "body",
 					"automeshTemplate": "overlay",
-					"disabledTemplateParts": [
-						"arms",
-						"legs"
-					],
 					"graphicalLayers": [
-						{
-							"name": "Head Lines",
-							"colorizationKey": "latexOpaque"
-						},
 						{
 							"name": "Body Shine",
 							"colorizationKey": "shine"
@@ -542,35 +534,27 @@
 					],
 					"imageMap": {
 						"transparent:free:normal": [
-							"",
 							""
 						],
 						"transparent:free:vaccum": [
-							"",
 							"body_shine_front.png"
 						],
 						"transparent:encased:normal": [
-							"",
 							""
 						],
 						"transparent:encased:vaccum": [
-							"",
 							"body_shine_front.png"
 						],
 						"opaque:free:normal": [
-							"",
 							""
 						],
 						"opaque:free:vaccum": [
-							"",
 							"body_shine_front.png"
 						],
 						"opaque:encased:normal": [
-							"",
 							""
 						],
 						"opaque:encased:vaccum": [
-							"head_lines_front.png",
 							"body_shine_front.png"
 						]
 					}
@@ -610,16 +594,24 @@
 					"width": 1000,
 					"height": 1500,
 					"type": "autoMesh",
-					"name": "Head Static Shine",
+					"name": "Head Static Lines&Shine",
 					"points": "static",
 					"automeshTemplate": "overlay",
 					"graphicalLayers": [
+						{
+							"name": "Head Lines",
+							"colorizationKey": "latexOpaque"
+						},
 						{
 							"name": "Head Shine",
 							"colorizationKey": "shine"
 						}
 					],
 					"variables": [
+						{
+							"type": "typedModule",
+							"module": "mode"
+						},
 						{
 							"type": "typedModule",
 							"module": "head"
@@ -630,16 +622,36 @@
 						}
 					],
 					"imageMap": {
-						"free:normal": [
+						"transparent:free:normal": [
+							"",
 							""
 						],
-						"free:vaccum": [
+						"transparent:free:vaccum": [
+							"",
 							""
 						],
-						"encased:normal": [
+						"transparent:encased:normal": [
+							"",
 							""
 						],
-						"encased:vaccum": [
+						"transparent:encased:vaccum": [
+							"",
+							"head_shine_front.png"
+						],
+						"opaque:free:normal": [
+							"",
+							""
+						],
+						"opaque:free:vaccum": [
+							"",
+							""
+						],
+						"opaque:encased:normal": [
+							"",
+							""
+						],
+						"opaque:encased:vaccum": [
+							"head_lines_front.png",
 							"head_shine_front.png"
 						]
 					}
