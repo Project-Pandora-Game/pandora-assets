@@ -88,9 +88,9 @@ DefineRoomDeviceAsset({
 									leg_r: [[-18, 22]],
 
 									arm_l: [[21, 40]],
-									elbow_l: [[65, 160]],
+									elbow_l: [[65, 145]],
 									arm_r: [[21, 40]],
-									elbow_r: [[65, 160]],
+									elbow_r: [[65, 145]],
 								},
 							},
 							{
@@ -100,9 +100,9 @@ DefineRoomDeviceAsset({
 									leg_r: [[-18, 22]],
 
 									arm_l: [[41, 60]],
-									elbow_l: [[45, 160]],
+									elbow_l: [[45, 145]],
 									arm_r: [[41, 60]],
-									elbow_r: [[45, 160]],
+									elbow_r: [[45, 145]],
 								},
 							},
 							{
@@ -124,9 +124,9 @@ DefineRoomDeviceAsset({
 									leg_r: [[-18, 22]],
 
 									arm_l: [[61, 80]],
-									elbow_l: [[0, 160]],
+									elbow_l: [[0, 145]],
 									arm_r: [[61, 80]],
-									elbow_r: [[0, 160]],
+									elbow_r: [[0, 145]],
 								},
 							},
 							{
@@ -136,9 +136,9 @@ DefineRoomDeviceAsset({
 									leg_r: [[-18, 22]],
 
 									arm_l: [[81, 100]],
-									elbow_l: [[0, 160]],
+									elbow_l: [[0, 145]],
 									arm_r: [[81, 100]],
-									elbow_r: [[0, 160]],
+									elbow_r: [[0, 145]],
 								},
 							},
 							{
@@ -148,9 +148,9 @@ DefineRoomDeviceAsset({
 									leg_r: [[-18, 22]],
 
 									arm_l: [[101, 120]],
-									elbow_l: [[-15, 160]],
+									elbow_l: [[-15, 145]],
 									arm_r: [[101, 120]],
-									elbow_r: [[-15, 160]],
+									elbow_r: [[-15, 145]],
 								},
 							},
 						],
