@@ -253,99 +253,6 @@
 						]
 					}
 				},
-				{
-					"x": 0,
-					"y": 0,
-					"width": 1000,
-					"height": 1500,
-					"type": "autoMesh",
-					"name": "Body Lines",
-					"points": "body",
-					"automeshTemplate": "overlay",
-					"graphicalLayers": [
-						{
-							"name": "Head Lines",
-							"colorizationKey": "latexOpaque"
-						},
-						{
-							"name": "Body Lines",
-							"colorizationKey": "latexOpaque"
-						},
-						{
-							"name": "Body Helper",
-							"colorizationKey": "latexOpaque"
-						},
-						{
-							"name": "Body Shine",
-							"colorizationKey": "shine"
-						}
-					],
-					"variables": [
-						{
-							"type": "typedModule",
-							"module": "mode"
-						},
-						{
-							"type": "typedModule",
-							"module": "head"
-						},
-						{
-							"type": "typedModule",
-							"module": "status"
-						}
-					],
-					"imageMap": {
-						"transparent:free:normal": [
-							"",
-							"",
-							"",
-							""
-						],
-						"transparent:free:vaccum": [
-							"",
-							"",
-							"",
-							"body_shine_front.png"
-						],
-						"transparent:encased:normal": [
-							"",
-							"",
-							"",
-							""
-						],
-						"transparent:encased:vaccum": [
-							"",
-							"",
-							"",
-							"body_shine_front.png"
-						],
-						"opaque:free:normal": [
-							"",
-							"",
-							"",
-							""
-						],
-						"opaque:free:vaccum": [
-							"",
-							"body_lines_front.png",
-							"body_helper_front_up.png",
-							"body_shine_front.png"
-						],
-						"opaque:encased:normal": [
-							"",
-							"",
-							"",
-							""
-						],
-						"opaque:encased:vaccum": [
-							"head_lines_front.png",
-							"body_lines_front.png",
-							"body_helper_front_up.png",
-							"body_shine_front.png"
-						]
-					}
-				},
-
 
 				{
 					"x": 0,
@@ -420,14 +327,261 @@
 							"arms_down.png"
 						],
 						"opaque:vaccum:backward": [
-							""
+							"arms_up.png"
 						],
 						"opaque:vaccum:forward": [
-							""
+							"arms_down.png"
 						]
 
 					}
 				},
+
+
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "Body Lines",
+					"points": "body",
+					"automeshTemplate": "overlay",
+					"graphicalLayers": [
+						{
+							"name": "Body Lines",
+							"colorizationKey": "latexOpaque"
+						},
+						{
+							"name": "Body Helper",
+							"colorizationKey": "latexOpaque"
+						}
+					],
+					"variables": [
+						{
+							"type": "armRotation",
+							"side": "left"
+						},
+						{
+							"type": "typedModule",
+							"module": "mode"
+						},
+						{
+							"type": "typedModule",
+							"module": "head"
+						},
+						{
+							"type": "typedModule",
+							"module": "status"
+						}
+					],
+					"imageMap": {
+						"up:transparent:free:normal": [
+							"",
+							""
+						],
+						"up:transparent:free:vaccum": [
+							"",
+							""
+						],
+						"up:transparent:encased:normal": [
+							"",
+							""
+						],
+						"up:transparent:encased:vaccum": [
+							"",
+							""
+						],
+						"up:opaque:free:normal": [
+							"",
+							""
+						],
+						"up:opaque:free:vaccum": [
+							"body_lines_front.png",
+							"body_helper_front_up.png"
+						],
+						"up:opaque:encased:normal": [
+							"",
+							""
+						],
+						"up:opaque:encased:vaccum": [
+							"body_lines_front.png",
+							"body_helper_front_up.png"
+						],
+
+						"down:transparent:free:normal": [
+							"",
+							""
+						],
+						"down:transparent:free:vaccum": [
+							"",
+							""
+						],
+						"down:transparent:encased:normal": [
+							"",
+							""
+						],
+						"down:transparent:encased:vaccum": [
+							"",
+							""
+						],
+						"down:opaque:free:normal": [
+							"",
+							""
+						],
+						"down:opaque:free:vaccum": [
+							"body_lines_front.png",
+							"body_helper_front_down.png"
+						],
+						"down:opaque:encased:normal": [
+							"",
+							""
+						],
+						"down:opaque:encased:vaccum": [
+							"body_lines_front.png",
+							"body_helper_front_down.png"
+						],
+
+
+
+						"backward:transparent:free:normal": [
+							"",
+							""
+						],
+						"backward:transparent:free:vaccum": [
+							"",
+							""
+						],
+						"backward:transparent:encased:normal": [
+							"",
+							""
+						],
+						"backward:transparent:encased:vaccum": [
+							"",
+							""
+						],
+						"backward:opaque:free:normal": [
+							"",
+							""
+						],
+						"backward:opaque:free:vaccum": [
+							"body_lines_front.png",
+							"body_helper_front_up.png"
+						],
+						"backward:opaque:encased:normal": [
+							"",
+							""
+						],
+						"backward:opaque:encased:vaccum": [
+							"body_lines_front.png",
+							"body_helper_front_up.png"
+						],
+
+						"forward:transparent:free:normal": [
+							"",
+							""
+						],
+						"forward:transparent:free:vaccum": [
+							"",
+							""
+						],
+						"forward:transparent:encased:normal": [
+							"",
+							""
+						],
+						"forward:transparent:encased:vaccum": [
+							"",
+							""
+						],
+						"forward:opaque:free:normal": [
+							"",
+							""
+						],
+						"forward:opaque:free:vaccum": [
+							"body_lines_front.png",
+							"body_helper_front_down.png"
+						],
+						"forward:opaque:encased:normal": [
+							"",
+							""
+						],
+						"forward:opaque:encased:vaccum": [
+							"body_lines_front.png",
+							"body_helper_front_down.png"
+						]
+					}
+				},
+
+
+
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "Body Lines",
+					"points": "body",
+					"automeshTemplate": "overlay",
+					"graphicalLayers": [
+						{
+							"name": "Head Lines",
+							"colorizationKey": "latexOpaque"
+						},
+						{
+							"name": "Body Shine",
+							"colorizationKey": "shine"
+						}
+					],
+					"variables": [
+						{
+							"type": "typedModule",
+							"module": "mode"
+						},
+						{
+							"type": "typedModule",
+							"module": "head"
+						},
+						{
+							"type": "typedModule",
+							"module": "status"
+						}
+					],
+					"imageMap": {
+						"transparent:free:normal": [
+							"",
+							""
+						],
+						"transparent:free:vaccum": [
+							"",
+							"body_shine_front.png"
+						],
+						"transparent:encased:normal": [
+							"",
+							""
+						],
+						"transparent:encased:vaccum": [
+							"",
+							"body_shine_front.png"
+						],
+						"opaque:free:normal": [
+							"",
+							""
+						],
+						"opaque:free:vaccum": [
+							"",
+							"body_shine_front.png"
+						],
+						"opaque:encased:normal": [
+							"",
+							""
+						],
+						"opaque:encased:vaccum": [
+							"head_lines_front.png",
+							"body_shine_front.png"
+						]
+					}
+				},
+
 
 				{
 					"x": 0,
