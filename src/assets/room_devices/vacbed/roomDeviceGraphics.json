@@ -59,11 +59,11 @@
 				"offsetX": 0,
 				"offsetY": -110,
 				"relativeScale": 1,
-				"disablePoseOffset": true,
 				"pivotOffset": {
 					"x": 0,
 					"y": 0
-				}
+				},
+				"disablePoseOffset": true
 			},
 			"characterPositionOverrides": [
 				{
@@ -75,11 +75,11 @@
 					},
 					"condition": [
 						[
-								{
-									"bone": "character_rotation",
-									"operator": "=",
-									"value": 180
-								}
+							{
+								"bone": "character_rotation",
+								"operator": "=",
+								"value": 180
+							}
 						]
 					]
 				}
@@ -217,8 +217,6 @@
 						]
 					}
 				},
-
-
 				{
 					"x": 0,
 					"y": 0,
@@ -253,7 +251,6 @@
 						]
 					}
 				},
-
 				{
 					"x": 0,
 					"y": 0,
@@ -263,6 +260,9 @@
 					"name": "Arm Lines",
 					"points": "body",
 					"automeshTemplate": "overlay",
+					"disabledTemplateParts": [
+						"legs"
+					],
 					"graphicalLayers": [
 						{
 							"name": "Arms Lines",
@@ -332,11 +332,8 @@
 						"opaque:vaccum:forward": [
 							"arms_down.png"
 						]
-
 					}
 				},
-
-
 				{
 					"x": 0,
 					"y": 0,
@@ -407,7 +404,6 @@
 							"body_lines_front.png",
 							"body_helper_front_up.png"
 						],
-
 						"down:transparent:free:normal": [
 							"",
 							""
@@ -440,9 +436,6 @@
 							"body_lines_front.png",
 							"body_helper_front_down.png"
 						],
-
-
-
 						"backward:transparent:free:normal": [
 							"",
 							""
@@ -475,7 +468,6 @@
 							"body_lines_front.png",
 							"body_helper_front_up.png"
 						],
-
 						"forward:transparent:free:normal": [
 							"",
 							""
@@ -510,18 +502,19 @@
 						]
 					}
 				},
-
-
-
 				{
 					"x": 0,
 					"y": 0,
 					"width": 1000,
 					"height": 1500,
 					"type": "autoMesh",
-					"name": "Body Lines",
+					"name": "HeadLines&Shine",
 					"points": "body",
 					"automeshTemplate": "overlay",
+					"disabledTemplateParts": [
+						"arms",
+						"legs"
+					],
 					"graphicalLayers": [
 						{
 							"name": "Head Lines",
@@ -581,8 +574,6 @@
 						]
 					}
 				},
-
-
 				{
 					"x": 0,
 					"y": 0,
@@ -601,7 +592,6 @@
 								"image": "bust_shine_front.png",
 								"condition": [
 									[
-
 										{
 											"module": "status",
 											"operator": "=",
@@ -613,7 +603,6 @@
 						]
 					}
 				},
-
 				{
 					"x": 0,
 					"y": 0,
@@ -654,8 +643,6 @@
 						]
 					}
 				},
-
-
 				{
 					"x": 0,
 					"y": 0,

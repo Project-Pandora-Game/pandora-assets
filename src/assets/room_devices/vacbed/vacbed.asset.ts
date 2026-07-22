@@ -38,8 +38,6 @@ DefineRoomDeviceAsset({
 						view: 'front',
 						arms: {
 							position: 'back',
-							//fingers: 'spread',
-							//rotation: ['up', 'down'],
 						},
 						legs: {
 							pose: 'standing',
