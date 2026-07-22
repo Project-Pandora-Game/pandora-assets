@@ -54,8 +54,8 @@
 		},
 		{
 			"type": "slot",
-			"slot": "inside",
 			"name": "Slot",
+			"slot": "inside",
 			"characterPosition": {
 				"offsetX": 0,
 				"offsetY": -110,
