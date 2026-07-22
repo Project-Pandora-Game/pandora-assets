@@ -55,6 +55,7 @@
 		{
 			"type": "slot",
 			"slot": "inside",
+			"name": "Slot",
 			"characterPosition": {
 				"offsetX": 0,
 				"offsetY": -110,
@@ -649,17 +650,13 @@
 					"width": 1000,
 					"height": 1500,
 					"type": "autoMesh",
-					"name": "Shine&Breathe",
+					"name": "Shine&Breathe AboveBody",
 					"points": "static",
 					"automeshTemplate": "aboveBody",
 					"graphicalLayers": [
 						{
 							"name": "Bed Shine",
 							"colorizationKey": "shine"
-						},
-						{
-							"name": "Mouth Breather",
-							"colorizationKey": "mouth"
 						}
 					],
 					"variables": [
@@ -674,19 +671,15 @@
 					],
 					"imageMap": {
 						"normal:free": [
-							"bed_shine_head.png",
-							""
+							"bed_shine_head.png"
 						],
 						"normal:encased": [
-							"",
 							""
 						],
 						"vaccum:free": [
-							"",
 							""
 						],
 						"vaccum:encased": [
-							"",
 							""
 						]
 					}
@@ -697,7 +690,7 @@
 					"width": 1000,
 					"height": 1500,
 					"type": "autoMesh",
-					"name": "Shine&Breathe",
+					"name": "Shine&Breathe Overlay",
 					"points": "static",
 					"automeshTemplate": "overlay",
 					"graphicalLayers": [
