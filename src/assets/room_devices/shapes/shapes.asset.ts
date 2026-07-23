@@ -72,9 +72,9 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
-		right_triangle_bl: {
+		right_triangle_top: {
 			type: 'typed',
-			name: 'Right Triangle (bottom-left)',
+			name: 'Triangle (Top)',
 			staticConfig: { slotName: null },
 			variants: [
 				{
@@ -100,9 +100,9 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
-		right_triangle_br: {
+		right_triangle_right: {
 			type: 'typed',
-			name: 'Right Triangle (bottom-right)',
+			name: 'Triangle (Right)',
 			staticConfig: { slotName: null },
 			variants: [
 				{
@@ -128,9 +128,9 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
-		right_triangle_tl: {
+		right_triangle_bottom: {
 			type: 'typed',
-			name: 'Right Triangle (top-left)',
+			name: 'Triangle (Bottom)',
 			staticConfig: { slotName: null },
 			variants: [
 				{
@@ -156,9 +156,9 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
-		right_triangle_tr: {
+		right_triangle_left: {
 			type: 'typed',
-			name: 'Right Triangle (top-right)',
+			name: 'Triangle (Left)',
 			staticConfig: { slotName: null },
 			variants: [
 				{
