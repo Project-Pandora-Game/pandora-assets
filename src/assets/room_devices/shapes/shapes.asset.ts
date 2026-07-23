@@ -236,6 +236,34 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		pentagon: {
+			type: 'typed',
+			name: 'Pentagon',
+			staticConfig: { slotName: null },
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'small',
+					name: 'Small',
+				},
+				{
+					id: 'medium',
+					name: 'Medium',
+				},
+				{
+					id: 'big',
+					name: 'Big',
+				},
+				{
+					id: 'huge',
+					name: 'Huge',
+				},
+			],
+		},
 		hexagon: {
 			type: 'typed',
 			name: 'Hexagon',
