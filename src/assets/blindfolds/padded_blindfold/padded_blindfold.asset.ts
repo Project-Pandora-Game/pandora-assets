@@ -36,6 +36,9 @@ DefineAsset({
 		placement: {
 			type: 'typed',
 			name: 'Blindfold Placement',
+			variantMigration: {
+				'forehead': 'forehead_under',
+			},
 			interactionType: ItemInteractionType.ADD_REMOVE,
 			variants: [
 				{
@@ -51,8 +54,12 @@ DefineAsset({
 					},
 				},
 				{
-					id: 'forehead',
-					name: 'On the forehead',
+					id: 'forehead_under',
+					name: 'On the forehead (under the hair)',
+				},
+				{
+					id: 'forehead_over',
+					name: 'On the forehead (over the hair)',
 				},
 			],
 		},

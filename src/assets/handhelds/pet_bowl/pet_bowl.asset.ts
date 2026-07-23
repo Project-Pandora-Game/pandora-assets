@@ -1,6 +1,9 @@
-DefineRoomDeviceAsset({
+DefineAssetAlias('room_devices/pet_bowl');
+
+DefineAsset({
 	name: 'Pet Bowl',
 	size: 'medium',
+	graphics: 'graphics.json',
 	colorization: {
 		bowl: {
 			name: 'Pet Bowl',
@@ -10,33 +13,38 @@ DefineRoomDeviceAsset({
 			name: 'Pet Bowl Interior',
 			default: '#FEF9F3',
 		},
-	},
-	staticAttributes: ['Floor'],
-	preview: 'pet_bowl_preview.png',
-	slots: {},
-	modules: {
-		size: {
-			type: 'typed',
-			name: 'Bowl size',
-			staticConfig: { slotName: null },
-			variants: [
-				{
-					id: 'large',
-					name: 'Large',
-					default: true,
-				},
-				{
-					id: 'small',
-					name: 'Small',
-				},
-			],
+		text: {
+			name: 'Bowl Text',
+			default: '#333333',
 		},
 	},
-	pivot: {
-		x: 125,
-		y: 50,
+	roomDeployment: {
+		autoDeployRelativePosition: [0, -100, 0],
 	},
-	graphics: 'roomDeviceGraphics.json',
+	preview: 'preview.png',
+	attributes: {
+		provides: [
+			'Handheld',
+		],
+	},
+	poseLimits: {
+		arms: {
+			position: 'front',
+			rotation: 'forward',
+		},
+		bones: {
+			arm_l: 50,
+			arm_r: 50,
+			elbow_l: 60,
+			elbow_r: 60,
+		},
+	},
+	modules: {
+		text: {
+			type: 'text',
+			name: 'Bowl Text',
+		},
+	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
 		credits: ['Sandrine'],

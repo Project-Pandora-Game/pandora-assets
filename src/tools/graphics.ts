@@ -14,6 +14,7 @@ import {
 	ModuleNameSchema,
 	SCHEME_OVERRIDE,
 	type AssetDefinition,
+	type AssetGraphicsWornDefinition,
 	type AssetId,
 	type AssetSourceGraphicsDefinition,
 	type AssetSourceGraphicsInfo,
@@ -112,7 +113,7 @@ export async function LoadAssetGraphics(
 	builtAssetData: Immutable<GraphicsBuildContextAssetData>,
 	buildAssetManager: AssetManager,
 	logger: Logger,
-): Promise<{ graphics: Immutable<AssetGraphicsDefinition>; originalImagesMap: Record<string, string>; }> {
+): Promise<{ graphics: Immutable<AssetGraphicsWornDefinition>; originalImagesMap: Record<string, string>; }> {
 	const originalImagesMap: Record<string, string> = {};
 
 	const assetLoadContext = MakeGraphicsBuildContext<Immutable<GraphicsBuildContextAssetData>>(
@@ -124,7 +125,7 @@ export async function LoadAssetGraphics(
 
 	const layers = (await Promise.all(source.layers.map((l) => LoadAssetLayer(l, assetLoadContext, logger)))).flat();
 
-	const graphics: Writable<Immutable<AssetGraphicsDefinition>> = {
+	const graphics: Writable<Immutable<AssetGraphicsWornDefinition>> = {
 		type: 'worn',
 		layers,
 	};

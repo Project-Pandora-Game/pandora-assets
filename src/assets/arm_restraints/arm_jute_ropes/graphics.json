@@ -2535,6 +2535,11 @@
 									"module": "cinch",
 									"operator": "=",
 									"value": "no"
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": 0
 								}
 							]
 						]
@@ -2555,6 +2560,345 @@
 									"module": "cinch",
 									"operator": "=",
 									"value": "yes"
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": 0
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "cuff_front_high",
+			"priority": "ABOVE_ARM_RIGHT",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "rope",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "wrist_front_ring.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"module": "cinch",
+									"operator": "=",
+									"value": "no"
+								},
+								{
+									"bone": "arm_r",
+									"operator": "=",
+									"value": -90
+								},
+								{
+									"bone": "elbow_r",
+									"operator": "=",
+									"value": -25
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_front_pillar.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"module": "cinch",
+									"operator": "=",
+									"value": "no"
+								},
+								{
+									"bone": "arm_r",
+									"operator": "=",
+									"value": -95
+								},
+								{
+									"bone": "elbow_r",
+									"operator": "=",
+									"value": -17
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_front_ring_cinched.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"module": "cinch",
+									"operator": "=",
+									"value": "yes"
+								},
+								{
+									"bone": "arm_r",
+									"operator": "=",
+									"value": -90
+								},
+								{
+									"bone": "elbow_r",
+									"operator": "=",
+									"value": -25
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_front_pillar_cinched.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"module": "cinch",
+									"operator": "=",
+									"value": "yes"
+								},
+								{
+									"bone": "arm_r",
+									"operator": "=",
+									"value": -95
+								},
+								{
+									"bone": "elbow_r",
+									"operator": "=",
+									"value": -17
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_front_high.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"module": "cinch",
+									"operator": "=",
+									"value": "no"
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": -90
+								},
+								{
+									"bone": "arm_r",
+									"operator": "<",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_front_high_cinched.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"module": "cinch",
+									"operator": "=",
+									"value": "yes"
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": -90
+								},
+								{
+									"bone": "arm_r",
+									"operator": "<",
+									"value": 0
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "cuff_front_high_back",
+			"priority": "BELOW_ARM_LEFT",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "rope",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "wrist_front_ring_back.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"module": "cinch",
+									"operator": "=",
+									"value": "no"
+								},
+								{
+									"bone": "arm_r",
+									"operator": "=",
+									"value": -90
+								},
+								{
+									"bone": "elbow_r",
+									"operator": "=",
+									"value": -25
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_front_ring_cinched_back.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"module": "cinch",
+									"operator": "=",
+									"value": "yes"
+								},
+								{
+									"bone": "arm_r",
+									"operator": "=",
+									"value": -90
+								},
+								{
+									"bone": "elbow_r",
+									"operator": "=",
+									"value": -25
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_front_high.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"module": "cinch",
+									"operator": "=",
+									"value": "no"
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": -90
+								},
+								{
+									"bone": "arm_r",
+									"operator": "<",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "wrist_front_high_cinched.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"module": "cinch",
+									"operator": "=",
+									"value": "yes"
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": -90
+								},
+								{
+									"bone": "arm_r",
+									"operator": "<",
+									"value": 0
 								}
 							]
 						]
@@ -2594,6 +2938,11 @@
 									"bone": "character_rotation",
 									"operator": ">",
 									"value": 154
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": 0
 								}
 							],
 							[
@@ -2611,6 +2960,11 @@
 									"bone": "character_rotation",
 									"operator": "<",
 									"value": -154
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": 0
 								}
 							]
 						]
@@ -2628,6 +2982,11 @@
 									"module": "end",
 									"operator": "=",
 									"value": "normal"
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": 0
 								}
 							]
 						]
@@ -2653,6 +3012,11 @@
 									"bone": "character_rotation",
 									"operator": ">",
 									"value": 26
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": 0
 								}
 							]
 						]
@@ -2678,6 +3042,11 @@
 									"bone": "character_rotation",
 									"operator": "<",
 									"value": -26
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": 0
 								}
 							]
 						]
@@ -2703,6 +3072,11 @@
 									"bone": "character_rotation",
 									"operator": ">",
 									"value": 26
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": 0
 								}
 							]
 						]
@@ -2728,6 +3102,11 @@
 									"bone": "character_rotation",
 									"operator": "<",
 									"value": -26
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": 0
 								}
 							]
 						]
@@ -2745,6 +3124,281 @@
 									"module": "end",
 									"operator": "=",
 									"value": "long"
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": 0
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": -320,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "cuff_front_high_end",
+			"priority": "BELOW_BACK_HAIR",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "rope",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "rope_end_180.png",
+						"condition": [
+							[
+								{
+									"module": "end",
+									"operator": "!=",
+									"value": "short"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": ">",
+									"value": 154
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": -90
+								},
+								{
+									"bone": "arm_r",
+									"operator": "<",
+									"value": 0
+								}
+							],
+							[
+								{
+									"module": "end",
+									"operator": "!=",
+									"value": "short"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "<",
+									"value": -154
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": -90
+								},
+								{
+									"bone": "arm_r",
+									"operator": "<",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_normal.png",
+						"condition": [
+							[
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": -90
+								},
+								{
+									"bone": "arm_r",
+									"operator": "<",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_right.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": ">",
+									"value": 26
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": -90
+								},
+								{
+									"bone": "arm_r",
+									"operator": "<",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_left.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "<",
+									"value": -26
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": -90
+								},
+								{
+									"bone": "arm_r",
+									"operator": "<",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_left.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": ">",
+									"value": 26
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": -90
+								},
+								{
+									"bone": "arm_r",
+									"operator": "<",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long_37_right.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"bone": "character_rotation",
+									"operator": "<",
+									"value": -26
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": -90
+								},
+								{
+									"bone": "arm_r",
+									"operator": "<",
+									"value": 0
+								}
+							]
+						]
+					},
+					{
+						"image": "rope_end_long.png",
+						"condition": [
+							[
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "hands_front"
+								},
+								{
+									"module": "end",
+									"operator": "=",
+									"value": "long"
+								},
+								{
+									"bone": "arm_r",
+									"operator": ">",
+									"value": -90
+								},
+								{
+									"bone": "arm_r",
+									"operator": "<",
+									"value": 0
 								}
 							]
 						]

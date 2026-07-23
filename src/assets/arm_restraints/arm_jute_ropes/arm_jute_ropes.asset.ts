@@ -17,6 +17,34 @@ DefineAsset({
 			'Restraint_arms',
 		],
 	},
+	posePresets: [
+		{
+			name: 'Wrists Front Down',
+			arms: {
+				rotation: 'forward',
+			},
+			bones: {
+				arm_r: 90,
+				arm_l: 90,
+				elbow_r: 20,
+				elbow_l: 20,
+			},
+			optional: { arms: { position: 'front' } },
+		},
+		{
+			name: 'Wrists Front Overhead',
+			arms: {
+				rotation: 'backward',
+			},
+			bones: {
+				arm_l: -80,
+				elbow_l: -40,
+				arm_r: -80,
+				elbow_r: -40,
+			},
+			optional: { arms: { position: 'front' } },
+		},
+	],
 	modules: {
 		...baseModules,
 		arms: {
@@ -28,19 +56,61 @@ DefineAsset({
 					name: 'Wrists Front',
 					properties: {
 						poseLimits: {
-							arms: {
-								position: 'front',
-								rotation: 'forward',
-							},
-							armsOrder: {
-								upper: 'left',
-							},
-							bones: {
-								arm_r: 90,
-								arm_l: 90,
-								elbow_r: 20,
-								elbow_l: 20,
-							},
+							options: [
+								{
+									arms: {
+										position: 'front',
+										rotation: ['forward', 'down'],
+									},
+									armsOrder: {
+										upper: 'left',
+									},
+									bones: {
+										arm_r: 90,
+										arm_l: 90,
+										elbow_r: 20,
+										elbow_l: 20,
+									},
+								},
+								{
+									arms: {
+										rotation: ['up', 'backward'],
+									},
+									bones: {
+										arm_l: -80,
+										elbow_l: -40,
+										arm_r: -80,
+										elbow_r: -40,
+									},
+									armsOrder: {
+										upper: 'right',
+									},
+									options: [
+										{ arms: { position: 'front_above_hair' } },
+										{ arms: { position: 'front' } },
+										{ arms: { position: 'back' } },
+										{ arms: { position: 'back_below_hair' } },
+									],
+								},
+								{
+									arms: {
+										rotation: ['up', 'backward'],
+									},
+									bones: {
+										arm_l: [[-95, -90]],
+										elbow_l: [[-25, -17]],
+										arm_r: [[-95, -90]],
+										elbow_r: [[-25, -17]],
+									},
+									armsOrder: {
+										upper: ['left', 'right'],
+									},
+									options: [
+										{ arms: { position: 'back' } },
+										{ arms: { position: 'back_below_hair' } },
+									],
+								},
+							],
 						},
 					},
 				},

@@ -22,9 +22,9 @@ DefineRoomDeviceAsset({
 				size: 'huge',
 				poseLimits: {
 					bones: {
-						leg_r: [[-30, 10]],
-						leg_l: [[-30, 10]],
-						character_rotation: [[-10, 10]],
+						leg_r: [[-30, 20]],
+						leg_l: [[-30, 20]],
+						character_rotation: [[-10, 90]],
 					},
 					legs: {
 						pose: 'kneeling',
@@ -39,8 +39,8 @@ DefineRoomDeviceAsset({
 				size: 'huge',
 				poseLimits: {
 					bones: {
-						leg_r: [[-30, 10]],
-						leg_l: [[-30, 10]],
+						leg_r: [[-30, 20]],
+						leg_l: [[-30, 20]],
 						character_rotation: [[-10, 10]],
 					},
 					legs: {
@@ -56,9 +56,9 @@ DefineRoomDeviceAsset({
 				size: 'huge',
 				poseLimits: {
 					bones: {
-						leg_r: [[-30, 10]],
-						leg_l: [[-30, 10]],
-						character_rotation: [[-10, 10]],
+						leg_r: [[-30, 20]],
+						leg_l: [[-30, 20]],
+						character_rotation: [[-90, 10]],
 					},
 					legs: {
 						pose: 'kneeling',

@@ -95,12 +95,24 @@ DefineAsset({
 							arms: {
 								position: 'back',
 							},
-							bones: {
-								arm_l: 70,
-								elbow_l: 20,
-								arm_r: 70,
-								elbow_r: 20,
-							},
+							options: [
+								{
+									bones: {
+										arm_l: 70,
+										elbow_l: 20,
+										arm_r: 70,
+										elbow_r: 20,
+									},
+								},
+								{
+									bones: {
+										arm_l: 100,
+										elbow_l: -44,
+										arm_r: 100,
+										elbow_r: -44,
+									},
+								},
+							],
 						},
 						attributes: {
 							provides: [

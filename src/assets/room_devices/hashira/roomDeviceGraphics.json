@@ -33,6 +33,7 @@
 			"width": 284,
 			"height": 284,
 			"type": "sprite",
+			"clipToRoom": true,
 			"colorizationKey": "hashira",
 			"image": "",
 			"imageOverrides": [

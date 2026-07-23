@@ -38,13 +38,13 @@
 			"type": "slot",
 			"slot": "character_slot_left",
 			"characterPosition": {
-				"offsetX": -180,
-				"offsetY": -80
+				"offsetX": -240,
+				"offsetY": -100
 			},
 			"characterPositionOverrides": [
 				{
 					"position": {
-						"offsetX": -180,
+						"offsetX": -200,
 						"offsetY": -190,
 						"relativeScale": 0.87
 					},
@@ -62,13 +62,13 @@
 			"type": "slot",
 			"slot": "character_slot_right",
 			"characterPosition": {
-				"offsetX": 180,
-				"offsetY": -80
+				"offsetX": 240,
+				"offsetY": -100
 			},
 			"characterPositionOverrides": [
 				{
 					"position": {
-						"offsetX": 180,
+						"offsetX": 200,
 						"offsetY": -190,
 						"relativeScale": 0.87
 					},
