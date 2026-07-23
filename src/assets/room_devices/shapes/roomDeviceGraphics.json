@@ -81,6 +81,78 @@
 			"enableCond": [
 				[
 					{
+						"module": "triangle",
+						"operator": "=",
+						"value": "small"
+					}
+				]
+			],
+			"colorizationKey": "color",
+			"image": "shapes_triangle.png"
+		},
+		{
+			"x": 600,
+			"y": 600,
+			"width": 400,
+			"height": 400,
+			"type": "sprite",
+			"enableCond": [
+				[
+					{
+						"module": "triangle",
+						"operator": "=",
+						"value": "medium"
+					}
+				]
+			],
+			"colorizationKey": "color",
+			"image": "shapes_triangle.png"
+		},
+		{
+			"x": 400,
+			"y": 400,
+			"width": 800,
+			"height": 800,
+			"type": "sprite",
+			"enableCond": [
+				[
+					{
+						"module": "triangle",
+						"operator": "=",
+						"value": "big"
+					}
+				]
+			],
+			"colorizationKey": "color",
+			"image": "shapes_triangle.png"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1600,
+			"height": 1600,
+			"type": "sprite",
+			"enableCond": [
+				[
+					{
+						"module": "triangle",
+						"operator": "=",
+						"value": "huge"
+					}
+				]
+			],
+			"colorizationKey": "color",
+			"image": "shapes_triangle.png"
+		},
+		{
+			"x": 700,
+			"y": 700,
+			"width": 200,
+			"height": 200,
+			"type": "sprite",
+			"enableCond": [
+				[
+					{
 						"module": "circle",
 						"operator": "=",
 						"value": "small"
