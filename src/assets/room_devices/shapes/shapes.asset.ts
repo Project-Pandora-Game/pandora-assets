@@ -292,6 +292,34 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		star: {
+			type: 'typed',
+			name: 'Star',
+			staticConfig: { slotName: null },
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'small',
+					name: 'Small',
+				},
+				{
+					id: 'medium',
+					name: 'Medium',
+				},
+				{
+					id: 'big',
+					name: 'Big',
+				},
+				{
+					id: 'huge',
+					name: 'Huge',
+				},
+			],
+		},
 		ring: {
 			type: 'typed',
 			name: 'Ring',
