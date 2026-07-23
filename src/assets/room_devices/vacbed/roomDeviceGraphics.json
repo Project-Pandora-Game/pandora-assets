@@ -258,6 +258,118 @@
 					"width": 1000,
 					"height": 1500,
 					"type": "autoMesh",
+					"name": "LatexCreases",
+					"points": "static",
+					"automeshTemplate": "overlay",
+					"graphicalLayers": [
+						{
+							"name": "Latex Creases",
+							"colorizationKey": "shine"
+						}
+					],
+					"variables": [
+						{
+							"type": "typedModule",
+							"module": "creases"
+						},
+						{
+							"type": "typedModule",
+							"module": "status"
+						},
+						{
+							"type": "typedModule",
+							"module": "mode"
+						}
+					],
+					"imageMap": {
+						"no:normal:transparent": [
+							""
+						],
+						"no:normal:opaque": [
+							""
+						],
+						"no:vaccum:transparent": [
+							""
+						],
+						"no:vaccum:opaque": [
+							""
+						],
+						"yes:normal:transparent": [
+							""
+						],
+						"yes:normal:opaque": [
+							""
+						],
+						"yes:vaccum:transparent": [
+							""
+						],
+						"yes:vaccum:opaque": [
+							"latex_creases.png"
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
+					"name": "LatexCreases",
+					"points": "static",
+					"automeshTemplate": "belowBody",
+					"graphicalLayers": [
+						{
+							"name": "Latex Creases",
+							"colorizationKey": "shine"
+						}
+					],
+					"variables": [
+						{
+							"type": "typedModule",
+							"module": "creases"
+						},
+						{
+							"type": "typedModule",
+							"module": "status"
+						},
+						{
+							"type": "typedModule",
+							"module": "mode"
+						}
+					],
+					"imageMap": {
+						"no:normal:transparent": [
+							""
+						],
+						"no:normal:opaque": [
+							""
+						],
+						"no:vaccum:transparent": [
+							""
+						],
+						"no:vaccum:opaque": [
+							""
+						],
+						"yes:normal:transparent": [
+							""
+						],
+						"yes:normal:opaque": [
+							""
+						],
+						"yes:vaccum:transparent": [
+							"latex_creases.png"
+						],
+						"yes:vaccum:opaque": [
+							""
+						]
+					}
+				},
+				{
+					"x": 0,
+					"y": 0,
+					"width": 1000,
+					"height": 1500,
+					"type": "autoMesh",
 					"name": "Arm Lines",
 					"points": "body",
 					"automeshTemplate": "overlay",

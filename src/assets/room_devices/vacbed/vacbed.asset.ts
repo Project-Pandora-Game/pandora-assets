@@ -227,6 +227,22 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		creases: {
+			type: 'typed',
+			name: 'Vaccum Creases',
+			staticConfig: { slotName: 'inside' },
+			variants: [
+				{
+					id: 'yes',
+					name: 'Yes',
+					default: true,
+				},
+				{
+					id: 'no',
+					name: 'No',
+				},
+			],
+		},
 		status: {
 			type: 'typed',
 			name: 'Vacbed Status',
