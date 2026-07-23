@@ -40,6 +40,34 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		circle: {
+			type: 'typed',
+			name: 'Circle',
+			staticConfig: { slotName: null },
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'small',
+					name: 'Small',
+				},
+				{
+					id: 'medium',
+					name: 'Medium',
+				},
+				{
+					id: 'big',
+					name: 'Big',
+				},
+				{
+					id: 'huge',
+					name: 'Huge',
+				},
+			],
+		},
 	},
 	pivot: {
 		x: 800,
