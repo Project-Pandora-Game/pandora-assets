@@ -144,32 +144,6 @@ DefineRoomDeviceAsset({
 		},
 	},
 	modules: {
-		status: {
-			type: 'typed',
-			name: 'Vacbed Status',
-			staticConfig: { slotName: 'inside' },
-			variants: [
-				{
-					id: 'normal',
-					name: 'Normal',
-					default: true,
-				},
-				{
-					id: 'vaccum',
-					name: 'Vaccum',
-					properties: {
-						blockSlotsEnterLeave: ['inside'],
-						slotProperties: {
-							inside: {
-								effects: {
-									blockHands: true,
-								},
-							},
-						},
-					},
-				},
-			],
-		},
 		mode: {
 			type: 'typed',
 			name: 'Latex Material',
@@ -252,6 +226,40 @@ DefineRoomDeviceAsset({
 					},
 				},
 			],
+		},
+		status: {
+			type: 'typed',
+			name: 'Vacbed Status',
+			staticConfig: { slotName: 'inside' },
+			variants: [
+				{
+					id: 'normal',
+					name: 'Normal',
+					default: true,
+				},
+				{
+					id: 'vaccum',
+					name: 'Vaccum',
+					properties: {
+						blockSlotsEnterLeave: ['inside'],
+						slotProperties: {
+							inside: {
+								effects: {
+									blockHands: true,
+								},
+							},
+						},
+					},
+				},
+			],
+		},
+		lock_status: {
+			type: 'lockSlot',
+			name: 'Vacbed Status Lock',
+			staticConfig: { slotName: 'inside' },
+			lockedProperties: {
+				blockModules: ['status'],
+			},
 		},
 	},
 	stateFlagCombinations: [
