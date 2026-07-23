@@ -96,6 +96,94 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		rect_h: {
+			type: 'typed',
+			name: 'Horizontal Bar',
+			staticConfig: { slotName: null },
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'small',
+					name: 'Small',
+				},
+				{
+					id: 'medium',
+					name: 'Medium',
+				},
+				{
+					id: 'big',
+					name: 'Big',
+				},
+				{
+					id: 'huge',
+					name: 'Huge',
+				},
+				{
+					id: 'small_wide',
+					name: 'Small (Wide)',
+				},
+				{
+					id: 'medium_wide',
+					name: 'Medium (Wide)',
+				},
+				{
+					id: 'big_wide',
+					name: 'Big (Wide)',
+				},
+				{
+					id: 'huge_wide',
+					name: 'Huge (Wide)',
+				},
+			],
+		},
+		rect_v: {
+			type: 'typed',
+			name: 'Vertical Bar',
+			staticConfig: { slotName: null },
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'small',
+					name: 'Small',
+				},
+				{
+					id: 'medium',
+					name: 'Medium',
+				},
+				{
+					id: 'big',
+					name: 'Big',
+				},
+				{
+					id: 'huge',
+					name: 'Huge',
+				},
+				{
+					id: 'small_wide',
+					name: 'Small (Wide)',
+				},
+				{
+					id: 'medium_wide',
+					name: 'Medium (Wide)',
+				},
+				{
+					id: 'big_wide',
+					name: 'Big (Wide)',
+				},
+				{
+					id: 'huge_wide',
+					name: 'Huge (Wide)',
+				},
+			],
+		},
 	},
 	pivot: {
 		x: 800,
