@@ -316,7 +316,7 @@
 					"type": "autoMesh",
 					"name": "LatexCreases",
 					"points": "static",
-					"automeshTemplate": "belowBody",
+					"automeshTemplate": "belowBackHair",
 					"graphicalLayers": [
 						{
 							"name": "Latex Creases",
