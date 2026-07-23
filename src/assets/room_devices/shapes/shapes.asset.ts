@@ -7,6 +7,10 @@ DefineRoomDeviceAsset({
 			default: '#FFFFFFFF',
 			minAlpha: 0,
 		},
+		text: {
+			name: 'Text color',
+			default: '#222222FF',
+		},
 	},
 	staticAttributes: ['Wall'],
 	preview: 'preview.png',
@@ -491,6 +495,11 @@ DefineRoomDeviceAsset({
 					name: 'Huge (Wide)',
 				},
 			],
+		},
+		text: {
+			type: 'text',
+			name: 'Text',
+			staticConfig: { slotName: null },
 		},
 	},
 	pivot: {

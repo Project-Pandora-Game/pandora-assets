@@ -1295,6 +1295,20 @@
 			],
 			"colorizationKey": "color",
 			"image": "shapes_square_frame.png"
+		},
+		{
+			"type": "text",
+			"dataModule": "text",
+			"offset": {
+				"x": 200,
+				"y": 700
+			},
+			"size": {
+				"width": 1200,
+				"height": 200
+			},
+			"fontSize": 128,
+			"colorizationKey": "text"
 		}
 	],
 	"slots": {}
