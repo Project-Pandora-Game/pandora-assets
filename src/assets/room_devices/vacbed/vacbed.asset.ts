@@ -42,12 +42,14 @@ DefineRoomDeviceAsset({
 						legs: {
 							pose: 'standing',
 						},
+						bones: {
+							leg_l: [[-18, 22]],
+							leg_r: [[-18, 22]],
+						},
 						options: [
 							{
 								bones: {
 									character_rotation: [[0, 0], [180, 180]],
-									leg_l: [[-18, 22]],
-									leg_r: [[-18, 22]],
 
 									arm_l: [[21, 60]],
 									elbow_l: [[-155, -125]],
@@ -58,8 +60,6 @@ DefineRoomDeviceAsset({
 							{
 								bones: {
 									character_rotation: [[0, 0], [180, 180]],
-									leg_l: [[-18, 22]],
-									leg_r: [[-18, 22]],
 
 									arm_l: [[0, 20]],
 									elbow_l: [[-125, -100]],
@@ -70,8 +70,6 @@ DefineRoomDeviceAsset({
 							{
 								bones: {
 									character_rotation: [[0, 0], [180, 180]],
-									leg_l: [[-18, 22]],
-									leg_r: [[-18, 22]],
 
 									arm_l: [[-40, 0]],
 									elbow_l: [[-95, -85]],
@@ -82,8 +80,6 @@ DefineRoomDeviceAsset({
 							{
 								bones: {
 									character_rotation: [[0, 0], [180, 180]],
-									leg_l: [[-18, 22]],
-									leg_r: [[-18, 22]],
 
 									arm_l: [[21, 40]],
 									elbow_l: [[65, 145]],
@@ -94,8 +90,6 @@ DefineRoomDeviceAsset({
 							{
 								bones: {
 									character_rotation: [[0, 0], [180, 180]],
-									leg_l: [[-18, 22]],
-									leg_r: [[-18, 22]],
 
 									arm_l: [[41, 60]],
 									elbow_l: [[45, 145]],
@@ -106,8 +100,6 @@ DefineRoomDeviceAsset({
 							{
 								bones: {
 									character_rotation: [[0, 0], [180, 180]],
-									leg_l: [[-18, 22]],
-									leg_r: [[-18, 22]],
 
 									arm_l: [[61, 80]],
 									elbow_l: [[0, 160]],
@@ -118,8 +110,6 @@ DefineRoomDeviceAsset({
 							{
 								bones: {
 									character_rotation: [[0, 0], [180, 180]],
-									leg_l: [[-18, 22]],
-									leg_r: [[-18, 22]],
 
 									arm_l: [[61, 80]],
 									elbow_l: [[0, 145]],
@@ -130,8 +120,6 @@ DefineRoomDeviceAsset({
 							{
 								bones: {
 									character_rotation: [[0, 0], [180, 180]],
-									leg_l: [[-18, 22]],
-									leg_r: [[-18, 22]],
 
 									arm_l: [[81, 100]],
 									elbow_l: [[0, 145]],
@@ -142,8 +130,6 @@ DefineRoomDeviceAsset({
 							{
 								bones: {
 									character_rotation: [[0, 0], [180, 180]],
-									leg_l: [[-18, 22]],
-									leg_r: [[-18, 22]],
 
 									arm_l: [[101, 120]],
 									elbow_l: [[-15, 145]],
@@ -227,7 +213,11 @@ DefineRoomDeviceAsset({
 						slotProperties: {
 							inside: {
 								attributes: {
+									covers: [
+										'Mouth_item',
+									],
 									provides: [
+										'Mouth_cover',
 										'Restraint',
 										'Restraint_mouth',
 										'Mouth_item',
@@ -236,6 +226,8 @@ DefineRoomDeviceAsset({
 									requires: [
 										'Mouth_open_wide',
 										'!Mouth_cover',
+										'!Mouth_tongue_out',
+										'!Mouth_protruding',
 									],
 								},
 								effects: {
