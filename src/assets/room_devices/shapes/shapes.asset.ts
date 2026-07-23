@@ -292,6 +292,34 @@ DefineRoomDeviceAsset({
 				},
 			],
 		},
+		ring: {
+			type: 'typed',
+			name: 'Ring',
+			staticConfig: { slotName: null },
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'small',
+					name: 'Small',
+				},
+				{
+					id: 'medium',
+					name: 'Medium',
+				},
+				{
+					id: 'big',
+					name: 'Big',
+				},
+				{
+					id: 'huge',
+					name: 'Huge',
+				},
+			],
+		},
 		rect_h: {
 			type: 'typed',
 			name: 'Horizontal Bar',
