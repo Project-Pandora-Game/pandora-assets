@@ -25,7 +25,7 @@ importers:
         version: 4.18.1
       pandora-common:
         specifier: github:Project-Pandora-Game/pandora#master&path:pandora-common
-        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/fa94c40b7f1617bc3a61a50555ce6abe5fe9bb50#path:pandora-common(zod@4.4.3)
+        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/541ba9ea1b67cad736fe4485d64f945aba9966c3#path:pandora-common(zod@4.4.3)
       rimraf:
         specifier: 6.1.3
         version: 6.1.3
@@ -2175,8 +2175,8 @@ packages:
   package-json-from-dist@1.0.1:
     resolution: {integrity: sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/fa94c40b7f1617bc3a61a50555ce6abe5fe9bb50#path:pandora-common:
-    resolution: {gitHosted: true, path: pandora-common, integrity: sha512-oniEdDoaB3y03lwb/8VeeAiy/a5meu8lbiWB73v4O33Cu2kctrsbFOF357kAEw1ZrSeA80KAYf8cpNLiGG4Gdg==, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/fa94c40b7f1617bc3a61a50555ce6abe5fe9bb50}
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/541ba9ea1b67cad736fe4485d64f945aba9966c3#path:pandora-common:
+    resolution: {gitHosted: true, path: pandora-common, integrity: sha512-DfkhFVozGUn/DzUtABvGzena5J9tSJSkIsWzSMoBVUfCMUlh7ZSpyh0Y2fXsMO9K8xWEO/ggHc+PS41/bqjisg==, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/541ba9ea1b67cad736fe4485d64f945aba9966c3}
     version: 0.1.0
     engines: {node: '>=24.x'}
     peerDependencies:
@@ -2285,8 +2285,8 @@ packages:
   react-is@18.3.1:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
 
-  react-is@19.2.7:
-    resolution: {integrity: sha512-kZFnouyVv7eP/Phmrlo9FK+zcAdriZJvzxXHF1Sl1P377WSGe2G/JxVolhTrB/jeV47lKImhNUsijjHAAbcl/A==}
+  react-is@19.2.8:
+    resolution: {integrity: sha512-s5un28nYxKJw5gvUHyW5PCC28CvBqLu9r3cWgzHT4Vo/5fqqkFcdRYsGcKf50WMPpjjFZS5d76fn3YCo2njKwQ==}
 
   reflect.getprototypeof@1.0.10:
     resolution: {integrity: sha512-00o4I+DVrefhv+nX0ulyi3biSHCPDe+yLv5o/p6d/UVlirijB8E16FtfwSAi4g3tcqrQ4lRAqQSoFEZJehYEcw==}
@@ -5215,7 +5215,7 @@ snapshots:
 
   package-json-from-dist@1.0.1: {}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/fa94c40b7f1617bc3a61a50555ce6abe5fe9bb50#path:pandora-common(zod@4.4.3):
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/541ba9ea1b67cad736fe4485d64f945aba9966c3#path:pandora-common(zod@4.4.3):
     dependencies:
       '@types/async-lock': 1.4.2
       '@types/lodash-es': 4.17.12
@@ -5285,7 +5285,7 @@ snapshots:
       '@jest/schemas': 30.4.1
       ansi-styles: 5.2.0
       react-is-18: react-is@18.3.1
-      react-is-19: react-is@19.2.7
+      react-is-19: react-is@19.2.8
 
   proxy-addr@2.0.7:
     dependencies:
@@ -5315,7 +5315,7 @@ snapshots:
 
   react-is@18.3.1: {}
 
-  react-is@19.2.7: {}
+  react-is@19.2.8: {}
 
   reflect.getprototypeof@1.0.10:
     dependencies:
