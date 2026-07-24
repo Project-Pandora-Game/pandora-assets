@@ -8,7 +8,9 @@ forceLegacyDeploy: true
 injectWorkspacePackages: false
 minimumReleaseAge: 2880
 minimumReleaseAgeExclude:
-- pandora-common
+  - pandora-common
+  # Renovate security update: sharp@0.35.0
+  - sharp@0.35.0
 nodeOptions: --no-warnings=ExperimentalWarning --experimental-vm-modules
 strictPeerDependencies: true
 updateNotifier: false
