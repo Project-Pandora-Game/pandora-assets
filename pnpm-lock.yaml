@@ -15,8 +15,8 @@ importers:
         specifier: 7.0.6
         version: 7.0.6
       immer:
-        specifier: 11.1.11
-        version: 11.1.11
+        specifier: 11.1.15
+        version: 11.1.15
       json-diff:
         specifier: 1.0.6
         version: 1.0.6
@@ -1621,6 +1621,9 @@ packages:
   immer@11.1.11:
     resolution: {integrity: sha512-qzXuyXAkPySAGYkfsAwodDPWT8Zm7/Uo5BNt4BjhMhG5WlWyZZ4wQqnWwdS8kjlQ1Cwu6gjw3A6+0gTQwlyYtw==}
 
+  immer@11.1.15:
+    resolution: {integrity: sha512-VrNANlmnWQnh5COXIIOQXM9oOJw7naGKlBT74ZOOR6lpVXc3gFEu9FJLDFcpCJ2j+NWr8TIwtWD//T6ZX6TKiQ==}
+
   import-fresh@3.3.1:
     resolution: {integrity: sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==}
     engines: {node: '>=6'}
@@ -2176,7 +2179,7 @@ packages:
     resolution: {integrity: sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==}
 
   pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/541ba9ea1b67cad736fe4485d64f945aba9966c3#path:pandora-common:
-    resolution: {gitHosted: true, path: pandora-common, integrity: sha512-DfkhFVozGUn/DzUtABvGzena5J9tSJSkIsWzSMoBVUfCMUlh7ZSpyh0Y2fXsMO9K8xWEO/ggHc+PS41/bqjisg==, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/541ba9ea1b67cad736fe4485d64f945aba9966c3}
+    resolution: {gitHosted: true, integrity: sha512-DfkhFVozGUn/DzUtABvGzena5J9tSJSkIsWzSMoBVUfCMUlh7ZSpyh0Y2fXsMO9K8xWEO/ggHc+PS41/bqjisg==, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/541ba9ea1b67cad736fe4485d64f945aba9966c3}
     version: 0.1.0
     engines: {node: '>=24.x'}
     peerDependencies:
@@ -4489,6 +4492,8 @@ snapshots:
   ignore@7.0.6: {}
 
   immer@11.1.11: {}
+
+  immer@11.1.15: {}
 
   import-fresh@3.3.1:
     dependencies:
