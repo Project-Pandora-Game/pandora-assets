@@ -12,6 +12,10 @@ DefineRoomDeviceAsset({
 			name: 'Latex (Opaque)',
 			default: '#373737',
 		},
+		chains: {
+			name: 'Chains',
+			default: '#DDDDDD',
+		},
 		frame: {
 			name: 'Frame',
 			default: '#a2a2a2',
@@ -144,6 +148,22 @@ DefineRoomDeviceAsset({
 		},
 	},
 	modules: {
+		setup: {
+			type: 'typed',
+			name: 'Mounting setup',
+			staticConfig: { slotName: null },
+			variants: [
+				{
+					id: 'wall',
+					name: 'Wall-mounted',
+					default: true,
+				},
+				{
+					id: 'hanging',
+					name: 'Hanging chains',
+				},
+			],
+		},
 		mode: {
 			type: 'typed',
 			name: 'Latex Material',

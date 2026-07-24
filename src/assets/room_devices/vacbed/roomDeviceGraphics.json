@@ -1,6 +1,55 @@
 {
 	"layers": [
 		{
+			"x": -290,
+			"y": -2650,
+			"width": 27,
+			"height": 1387,
+			"type": "sprite",
+			"clipToRoom": true,
+			"colorizationKey": "chains",
+			"image": "hanging_chain_1.png",
+			"imageOverrides": [
+				{
+					"image": "",
+					"condition": [
+						[
+							{
+								"module": "setup",
+								"operator": "!=",
+								"value": "hanging"
+							}
+						]
+					]
+				}
+			]
+		},
+		{
+			"x": 270,
+			"y": -2650,
+			"width": 27,
+			"height": 1387,
+			"type": "sprite",
+			"clipToRoom": true,
+			"colorizationKey": "chains",
+			"image": "hanging_chain_2.png",
+			"imageOverrides": [
+				{
+					"image": "",
+					"condition": [
+						[
+							{
+								"module": "setup",
+								"operator": "!=",
+								"value": "hanging"
+							}
+						]
+					]
+				}
+			]
+		},
+
+		{
 			"x": -500,
 			"y": -1400,
 			"width": 1000,
