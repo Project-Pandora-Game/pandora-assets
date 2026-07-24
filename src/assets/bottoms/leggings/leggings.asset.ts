@@ -21,6 +21,7 @@ DefineAsset({
 		requires: [
 			'!Crotch_protruding',
 		],
+		hides: ['Penis_flaccid'],
 	},
 	modules: {
 		design: {

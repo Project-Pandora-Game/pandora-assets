@@ -30,6 +30,7 @@ DefineAsset({
 		requires: [
 			'!Crotch_protruding',
 		],
+		hides: ['Penis_flaccid'],
 	},
 	ownership: {
 		responsibleContributor: 'Sandrine <118102950+SandrinePDR@users.noreply.github.com>',
