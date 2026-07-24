@@ -25,7 +25,7 @@ importers:
         version: 4.18.1
       pandora-common:
         specifier: github:Project-Pandora-Game/pandora#master&path:pandora-common
-        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/541ba9ea1b67cad736fe4485d64f945aba9966c3#path:pandora-common(zod@4.4.3)
+        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/9d07e2a692e77d0b6149afb43e6515763de61d59#path:pandora-common(zod@4.4.3)
       rimraf:
         specifier: 6.1.3
         version: 6.1.3
@@ -1623,9 +1623,6 @@ packages:
     resolution: {integrity: sha512-BAg6QkE8W+TuQLrrw0Ugr7HegXduRuuj8/ti2kSOc+jz1dmx8/WNcjr6XGnq5YpDWxFwwaavqD0+jIUOKelTsw==}
     engines: {node: '>= 4'}
 
-  immer@11.1.11:
-    resolution: {integrity: sha512-qzXuyXAkPySAGYkfsAwodDPWT8Zm7/Uo5BNt4BjhMhG5WlWyZZ4wQqnWwdS8kjlQ1Cwu6gjw3A6+0gTQwlyYtw==}
-
   immer@11.1.15:
     resolution: {integrity: sha512-VrNANlmnWQnh5COXIIOQXM9oOJw7naGKlBT74ZOOR6lpVXc3gFEu9FJLDFcpCJ2j+NWr8TIwtWD//T6ZX6TKiQ==}
 
@@ -2071,9 +2068,9 @@ packages:
   ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
 
-  nanoid@5.1.16:
-    resolution: {integrity: sha512-kVrnsrJqMR8+oLJnGEmSWw9BivK5mt7H3FZatVRjrc5wGqFYuBxX1yG7+A7Gi5AefkX6t/oCkizcQgpu0cY1dQ==}
-    engines: {node: ^18 || >=20}
+  nanoid@6.0.0:
+    resolution: {integrity: sha512-mkUH+rPkwU2qPadJ0oJZOjeZ5Mxn8Q1UhevwkTRWNuUZzyia3h4rhzK39hxaHTk0o2OxB8W2SQ6A8k23ZDi1pQ==}
+    engines: {node: ^22 || ^24 || >=26}
     hasBin: true
 
   napi-postinstall@0.3.4:
@@ -2183,8 +2180,8 @@ packages:
   package-json-from-dist@1.0.1:
     resolution: {integrity: sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/541ba9ea1b67cad736fe4485d64f945aba9966c3#path:pandora-common:
-    resolution: {gitHosted: true, integrity: sha512-DfkhFVozGUn/DzUtABvGzena5J9tSJSkIsWzSMoBVUfCMUlh7ZSpyh0Y2fXsMO9K8xWEO/ggHc+PS41/bqjisg==, path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/541ba9ea1b67cad736fe4485d64f945aba9966c3}
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/9d07e2a692e77d0b6149afb43e6515763de61d59#path:pandora-common:
+    resolution: {gitHosted: true, integrity: sha512-qCe15Rki9WzrdXQRG/7Z68xZG4o6KUJ9hdxhr6pBcp1eUMbuYvqXR+ulEgkS56TeMF1M/MkTgfbWFGy3mVgCHg==, path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/9d07e2a692e77d0b6149afb43e6515763de61d59}
     version: 0.1.0
     engines: {node: '>=24.x'}
     peerDependencies:
@@ -4516,8 +4513,6 @@ snapshots:
 
   ignore@7.0.6: {}
 
-  immer@11.1.11: {}
-
   immer@11.1.15: {}
 
   import-fresh@3.3.1:
@@ -5129,7 +5124,7 @@ snapshots:
 
   ms@2.1.3: {}
 
-  nanoid@5.1.16: {}
+  nanoid@6.0.0: {}
 
   napi-postinstall@0.3.4: {}
 
@@ -5245,16 +5240,16 @@ snapshots:
 
   package-json-from-dist@1.0.1: {}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/541ba9ea1b67cad736fe4485d64f945aba9966c3#path:pandora-common(zod@4.4.3):
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/9d07e2a692e77d0b6149afb43e6515763de61d59#path:pandora-common(zod@4.4.3):
     dependencies:
       '@types/async-lock': 1.4.2
       '@types/lodash-es': 4.17.12
       '@types/node': 24.13.3
       async-lock: 1.4.1
       delaunator: 5.1.0
-      immer: 11.1.11
+      immer: 11.1.15
       lodash-es: 4.18.1
-      nanoid: 5.1.16
+      nanoid: 6.0.0
       zod: 4.4.3
 
   parent-module@1.0.1:
