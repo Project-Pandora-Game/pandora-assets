@@ -23,6 +23,21 @@ DefineAsset({
 		],
 	},
 	modules: {
+		worn: {
+			type: 'typed',
+			name: 'Worn over shoulder',
+			variants: [
+				{
+					id: 'left',
+					name: 'Left',
+				},
+				{
+					id: 'right',
+					name: 'Right',
+					default: true,
+				},
+			],
+		},
 		content: {
 			type: 'storage',
 			name: 'Bag contents',
