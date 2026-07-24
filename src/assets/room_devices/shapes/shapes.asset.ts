@@ -90,19 +90,11 @@ DefineRoomDeviceAsset({
 					id: 'rect_v',
 					name: 'Vertical Bar',
 				},
-				{
-					id: 'rect_h_wide',
-					name: 'Horizontal Bar (Wide)',
-				},
-				{
-					id: 'rect_v_wide',
-					name: 'Vertical Bar (Wide)',
-				},
 			],
 		},
-		size: {
+		width: {
 			type: 'typed',
-			name: 'Size',
+			name: 'Width',
 			staticConfig: { slotName: null },
 			variants: [
 				{
@@ -118,9 +110,25 @@ DefineRoomDeviceAsset({
 					id: 'big',
 					name: 'Big',
 				},
+			],
+		},
+		height: {
+			type: 'typed',
+			name: 'Height',
+			staticConfig: { slotName: null },
+			variants: [
 				{
-					id: 'huge',
-					name: 'Huge',
+					id: 'small',
+					name: 'Small',
+					default: true,
+				},
+				{
+					id: 'medium',
+					name: 'Medium',
+				},
+				{
+					id: 'big',
+					name: 'Big',
 				},
 			],
 		},
@@ -131,8 +139,8 @@ DefineRoomDeviceAsset({
 		},
 	},
 	pivot: {
-		x: 800,
-		y: 1600,
+		x: 500,
+		y: 1000,
 	},
 	graphics: 'roomDeviceGraphics.json',
 	ownership: {
