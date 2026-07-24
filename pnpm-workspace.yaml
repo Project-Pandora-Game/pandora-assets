@@ -2,13 +2,14 @@ allowBuilds:
   pandora-common: true
   sharp: true
   unrs-resolver: true
+dangerouslyAllowAllBuilds: true
 
 allowUnusedPatches: false
 forceLegacyDeploy: true
 injectWorkspacePackages: false
 minimumReleaseAge: 2880
 minimumReleaseAgeExclude:
-- pandora-common
+  - pandora-common
 nodeOptions: --no-warnings=ExperimentalWarning --experimental-vm-modules
 strictPeerDependencies: true
 updateNotifier: false
