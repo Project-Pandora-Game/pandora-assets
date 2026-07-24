@@ -24,11 +24,11 @@ DefineRoomDeviceAsset({
 				{
 					id: 'none',
 					name: 'None',
-					default: true,
 				},
 				{
 					id: 'square',
 					name: 'Square',
+					default: true,
 				},
 				{
 					id: 'triangle',
