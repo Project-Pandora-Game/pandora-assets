@@ -291,10 +291,10 @@ DefineRoomDeviceAsset({
 		},
 		lock_status: {
 			type: 'lockSlot',
-			name: 'Vacbed Status Lock',
+			name: 'Vacbed Lock',
 			staticConfig: { slotName: 'inside' },
 			lockedProperties: {
-				blockModules: ['status'],
+				blockModules: ['status', 'mode', 'head', 'creases'],
 			},
 		},
 	},
