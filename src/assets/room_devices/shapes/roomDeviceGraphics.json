@@ -788,11 +788,11 @@
 			"dataModule": "text",
 			"offset": {
 				"x": 125,
-				"y": 438
+				"y": 250
 			},
 			"size": {
 				"width": 750,
-				"height": 125
+				"height": 500
 			},
 			"fontSize": 80,
 			"colorizationKey": "text"
