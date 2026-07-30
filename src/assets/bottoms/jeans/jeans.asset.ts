@@ -63,42 +63,10 @@ DefineAsset({
 				{
 					id: 'capri',
 					name: 'Capri',
-					properties: {
-						stateFlags: {
-							provides: ['rolled_style'],
-						},
-					},
 				},
 				{
 					id: 'bermuda',
 					name: 'Bermuda',
-					properties: {
-						stateFlags: {
-							provides: ['rolled_style'],
-						},
-					},
-				},
-			],
-		},
-		folded_ends: {
-			type: 'typed',
-			name: 'Folded ends',
-			variants: [
-				{
-					id: 'none',
-					name: 'None',
-					default: true,
-				},
-				{
-					id: 'folded',
-					name: 'Folded',
-					properties: {
-						stateFlags: {
-							requires: {
-								rolled_style: 'Folded ends are only available for Capri or Bermuda styles',
-							},
-						},
-					},
 				},
 			],
 		},
