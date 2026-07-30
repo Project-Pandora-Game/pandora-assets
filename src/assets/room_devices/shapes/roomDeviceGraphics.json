@@ -1,0 +1,802 @@
+{
+	"layers": [
+		{
+			"x": 375,
+			"y": 375,
+			"width": 250,
+			"height": 250,
+			"type": "autoSprite",
+			"enableCond": [
+				[
+					{
+						"module": "width",
+						"operator": "=",
+						"value": "small"
+					},
+					{
+						"module": "height",
+						"operator": "=",
+						"value": "small"
+					}
+				]
+			],
+			"name": "Shapes (w:small h:small)",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "color"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "shape"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"square": [
+					"shapes_square.png"
+				],
+				"triangle": [
+					"shapes_triangle.png"
+				],
+				"right_triangle_top": [
+					"shapes_right_triangle_top.png"
+				],
+				"right_triangle_right": [
+					"shapes_right_triangle_right.png"
+				],
+				"right_triangle_bottom": [
+					"shapes_right_triangle_bottom.png"
+				],
+				"right_triangle_left": [
+					"shapes_right_triangle_left.png"
+				],
+				"circle": [
+					"shapes_circle.png"
+				],
+				"diamond": [
+					"shapes_diamond.png"
+				],
+				"pentagon": [
+					"shapes_pentagon.png"
+				],
+				"hexagon": [
+					"shapes_hexagon.png"
+				],
+				"star": [
+					"shapes_star.png"
+				],
+				"square_ring": [
+					"shapes_square_ring.png"
+				],
+				"square_frame": [
+					"shapes_square_frame.png"
+				],
+				"ring": [
+					"shapes_ring.png"
+				],
+				"rect_h": [
+					"shapes_rect_h.png"
+				],
+				"rect_v": [
+					"shapes_rect_v.png"
+				]
+			}
+		},
+		{
+			"x": 375,
+			"y": 250,
+			"width": 250,
+			"height": 500,
+			"type": "autoSprite",
+			"enableCond": [
+				[
+					{
+						"module": "width",
+						"operator": "=",
+						"value": "small"
+					},
+					{
+						"module": "height",
+						"operator": "=",
+						"value": "medium"
+					}
+				]
+			],
+			"name": "Shapes (w:small h:medium)",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "color"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "shape"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"square": [
+					"shapes_square.png"
+				],
+				"triangle": [
+					"shapes_triangle.png"
+				],
+				"right_triangle_top": [
+					"shapes_right_triangle_top.png"
+				],
+				"right_triangle_right": [
+					"shapes_right_triangle_right.png"
+				],
+				"right_triangle_bottom": [
+					"shapes_right_triangle_bottom.png"
+				],
+				"right_triangle_left": [
+					"shapes_right_triangle_left.png"
+				],
+				"circle": [
+					"shapes_circle.png"
+				],
+				"diamond": [
+					"shapes_diamond.png"
+				],
+				"pentagon": [
+					"shapes_pentagon.png"
+				],
+				"hexagon": [
+					"shapes_hexagon.png"
+				],
+				"star": [
+					"shapes_star.png"
+				],
+				"square_ring": [
+					"shapes_square_ring.png"
+				],
+				"square_frame": [
+					"shapes_square_frame.png"
+				],
+				"ring": [
+					"shapes_ring.png"
+				],
+				"rect_h": [
+					"shapes_rect_h.png"
+				],
+				"rect_v": [
+					"shapes_rect_v.png"
+				]
+			}
+		},
+		{
+			"x": 375,
+			"y": 0,
+			"width": 250,
+			"height": 1000,
+			"type": "autoSprite",
+			"enableCond": [
+				[
+					{
+						"module": "width",
+						"operator": "=",
+						"value": "small"
+					},
+					{
+						"module": "height",
+						"operator": "=",
+						"value": "big"
+					}
+				]
+			],
+			"name": "Shapes (w:small h:big)",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "color"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "shape"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"square": [
+					"shapes_square.png"
+				],
+				"triangle": [
+					"shapes_triangle.png"
+				],
+				"right_triangle_top": [
+					"shapes_right_triangle_top.png"
+				],
+				"right_triangle_right": [
+					"shapes_right_triangle_right.png"
+				],
+				"right_triangle_bottom": [
+					"shapes_right_triangle_bottom.png"
+				],
+				"right_triangle_left": [
+					"shapes_right_triangle_left.png"
+				],
+				"circle": [
+					"shapes_circle.png"
+				],
+				"diamond": [
+					"shapes_diamond.png"
+				],
+				"pentagon": [
+					"shapes_pentagon.png"
+				],
+				"hexagon": [
+					"shapes_hexagon.png"
+				],
+				"star": [
+					"shapes_star.png"
+				],
+				"square_ring": [
+					"shapes_square_ring.png"
+				],
+				"square_frame": [
+					"shapes_square_frame.png"
+				],
+				"ring": [
+					"shapes_ring.png"
+				],
+				"rect_h": [
+					"shapes_rect_h.png"
+				],
+				"rect_v": [
+					"shapes_rect_v.png"
+				]
+			}
+		},
+		{
+			"x": 250,
+			"y": 375,
+			"width": 500,
+			"height": 250,
+			"type": "autoSprite",
+			"enableCond": [
+				[
+					{
+						"module": "width",
+						"operator": "=",
+						"value": "medium"
+					},
+					{
+						"module": "height",
+						"operator": "=",
+						"value": "small"
+					}
+				]
+			],
+			"name": "Shapes (w:medium h:small)",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "color"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "shape"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"square": [
+					"shapes_square.png"
+				],
+				"triangle": [
+					"shapes_triangle.png"
+				],
+				"right_triangle_top": [
+					"shapes_right_triangle_top.png"
+				],
+				"right_triangle_right": [
+					"shapes_right_triangle_right.png"
+				],
+				"right_triangle_bottom": [
+					"shapes_right_triangle_bottom.png"
+				],
+				"right_triangle_left": [
+					"shapes_right_triangle_left.png"
+				],
+				"circle": [
+					"shapes_circle.png"
+				],
+				"diamond": [
+					"shapes_diamond.png"
+				],
+				"pentagon": [
+					"shapes_pentagon.png"
+				],
+				"hexagon": [
+					"shapes_hexagon.png"
+				],
+				"star": [
+					"shapes_star.png"
+				],
+				"square_ring": [
+					"shapes_square_ring.png"
+				],
+				"square_frame": [
+					"shapes_square_frame.png"
+				],
+				"ring": [
+					"shapes_ring.png"
+				],
+				"rect_h": [
+					"shapes_rect_h.png"
+				],
+				"rect_v": [
+					"shapes_rect_v.png"
+				]
+			}
+		},
+		{
+			"x": 250,
+			"y": 250,
+			"width": 500,
+			"height": 500,
+			"type": "autoSprite",
+			"enableCond": [
+				[
+					{
+						"module": "width",
+						"operator": "=",
+						"value": "medium"
+					},
+					{
+						"module": "height",
+						"operator": "=",
+						"value": "medium"
+					}
+				]
+			],
+			"name": "Shapes (w:medium h:medium)",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "color"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "shape"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"square": [
+					"shapes_square.png"
+				],
+				"triangle": [
+					"shapes_triangle.png"
+				],
+				"right_triangle_top": [
+					"shapes_right_triangle_top.png"
+				],
+				"right_triangle_right": [
+					"shapes_right_triangle_right.png"
+				],
+				"right_triangle_bottom": [
+					"shapes_right_triangle_bottom.png"
+				],
+				"right_triangle_left": [
+					"shapes_right_triangle_left.png"
+				],
+				"circle": [
+					"shapes_circle.png"
+				],
+				"diamond": [
+					"shapes_diamond.png"
+				],
+				"pentagon": [
+					"shapes_pentagon.png"
+				],
+				"hexagon": [
+					"shapes_hexagon.png"
+				],
+				"star": [
+					"shapes_star.png"
+				],
+				"square_ring": [
+					"shapes_square_ring.png"
+				],
+				"square_frame": [
+					"shapes_square_frame.png"
+				],
+				"ring": [
+					"shapes_ring.png"
+				],
+				"rect_h": [
+					"shapes_rect_h.png"
+				],
+				"rect_v": [
+					"shapes_rect_v.png"
+				]
+			}
+		},
+		{
+			"x": 250,
+			"y": 0,
+			"width": 500,
+			"height": 1000,
+			"type": "autoSprite",
+			"enableCond": [
+				[
+					{
+						"module": "width",
+						"operator": "=",
+						"value": "medium"
+					},
+					{
+						"module": "height",
+						"operator": "=",
+						"value": "big"
+					}
+				]
+			],
+			"name": "Shapes (w:medium h:big)",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "color"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "shape"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"square": [
+					"shapes_square.png"
+				],
+				"triangle": [
+					"shapes_triangle.png"
+				],
+				"right_triangle_top": [
+					"shapes_right_triangle_top.png"
+				],
+				"right_triangle_right": [
+					"shapes_right_triangle_right.png"
+				],
+				"right_triangle_bottom": [
+					"shapes_right_triangle_bottom.png"
+				],
+				"right_triangle_left": [
+					"shapes_right_triangle_left.png"
+				],
+				"circle": [
+					"shapes_circle.png"
+				],
+				"diamond": [
+					"shapes_diamond.png"
+				],
+				"pentagon": [
+					"shapes_pentagon.png"
+				],
+				"hexagon": [
+					"shapes_hexagon.png"
+				],
+				"star": [
+					"shapes_star.png"
+				],
+				"square_ring": [
+					"shapes_square_ring.png"
+				],
+				"square_frame": [
+					"shapes_square_frame.png"
+				],
+				"ring": [
+					"shapes_ring.png"
+				],
+				"rect_h": [
+					"shapes_rect_h.png"
+				],
+				"rect_v": [
+					"shapes_rect_v.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 375,
+			"width": 1000,
+			"height": 250,
+			"type": "autoSprite",
+			"enableCond": [
+				[
+					{
+						"module": "width",
+						"operator": "=",
+						"value": "big"
+					},
+					{
+						"module": "height",
+						"operator": "=",
+						"value": "small"
+					}
+				]
+			],
+			"name": "Shapes (w:big h:small)",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "color"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "shape"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"square": [
+					"shapes_square.png"
+				],
+				"triangle": [
+					"shapes_triangle.png"
+				],
+				"right_triangle_top": [
+					"shapes_right_triangle_top.png"
+				],
+				"right_triangle_right": [
+					"shapes_right_triangle_right.png"
+				],
+				"right_triangle_bottom": [
+					"shapes_right_triangle_bottom.png"
+				],
+				"right_triangle_left": [
+					"shapes_right_triangle_left.png"
+				],
+				"circle": [
+					"shapes_circle.png"
+				],
+				"diamond": [
+					"shapes_diamond.png"
+				],
+				"pentagon": [
+					"shapes_pentagon.png"
+				],
+				"hexagon": [
+					"shapes_hexagon.png"
+				],
+				"star": [
+					"shapes_star.png"
+				],
+				"square_ring": [
+					"shapes_square_ring.png"
+				],
+				"square_frame": [
+					"shapes_square_frame.png"
+				],
+				"ring": [
+					"shapes_ring.png"
+				],
+				"rect_h": [
+					"shapes_rect_h.png"
+				],
+				"rect_v": [
+					"shapes_rect_v.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 250,
+			"width": 1000,
+			"height": 500,
+			"type": "autoSprite",
+			"enableCond": [
+				[
+					{
+						"module": "width",
+						"operator": "=",
+						"value": "big"
+					},
+					{
+						"module": "height",
+						"operator": "=",
+						"value": "medium"
+					}
+				]
+			],
+			"name": "Shapes (w:big h:medium)",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "color"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "shape"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"square": [
+					"shapes_square.png"
+				],
+				"triangle": [
+					"shapes_triangle.png"
+				],
+				"right_triangle_top": [
+					"shapes_right_triangle_top.png"
+				],
+				"right_triangle_right": [
+					"shapes_right_triangle_right.png"
+				],
+				"right_triangle_bottom": [
+					"shapes_right_triangle_bottom.png"
+				],
+				"right_triangle_left": [
+					"shapes_right_triangle_left.png"
+				],
+				"circle": [
+					"shapes_circle.png"
+				],
+				"diamond": [
+					"shapes_diamond.png"
+				],
+				"pentagon": [
+					"shapes_pentagon.png"
+				],
+				"hexagon": [
+					"shapes_hexagon.png"
+				],
+				"star": [
+					"shapes_star.png"
+				],
+				"square_ring": [
+					"shapes_square_ring.png"
+				],
+				"square_frame": [
+					"shapes_square_frame.png"
+				],
+				"ring": [
+					"shapes_ring.png"
+				],
+				"rect_h": [
+					"shapes_rect_h.png"
+				],
+				"rect_v": [
+					"shapes_rect_v.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1000,
+			"type": "autoSprite",
+			"enableCond": [
+				[
+					{
+						"module": "width",
+						"operator": "=",
+						"value": "big"
+					},
+					{
+						"module": "height",
+						"operator": "=",
+						"value": "big"
+					}
+				]
+			],
+			"name": "Shapes (w:big h:big)",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "color"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "shape"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"square": [
+					"shapes_square.png"
+				],
+				"triangle": [
+					"shapes_triangle.png"
+				],
+				"right_triangle_top": [
+					"shapes_right_triangle_top.png"
+				],
+				"right_triangle_right": [
+					"shapes_right_triangle_right.png"
+				],
+				"right_triangle_bottom": [
+					"shapes_right_triangle_bottom.png"
+				],
+				"right_triangle_left": [
+					"shapes_right_triangle_left.png"
+				],
+				"circle": [
+					"shapes_circle.png"
+				],
+				"diamond": [
+					"shapes_diamond.png"
+				],
+				"pentagon": [
+					"shapes_pentagon.png"
+				],
+				"hexagon": [
+					"shapes_hexagon.png"
+				],
+				"star": [
+					"shapes_star.png"
+				],
+				"square_ring": [
+					"shapes_square_ring.png"
+				],
+				"square_frame": [
+					"shapes_square_frame.png"
+				],
+				"ring": [
+					"shapes_ring.png"
+				],
+				"rect_h": [
+					"shapes_rect_h.png"
+				],
+				"rect_v": [
+					"shapes_rect_v.png"
+				]
+			}
+		},
+		{
+			"type": "text",
+			"dataModule": "text",
+			"offset": {
+				"x": 125,
+				"y": 438
+			},
+			"size": {
+				"width": 750,
+				"height": 125
+			},
+			"fontSize": 80,
+			"colorizationKey": "text"
+		}
+	],
+	"slots": {}
+}
