@@ -125,7 +125,7 @@ DefineRoomDeviceAsset({
 			name: `Wardrobe contents`,
 			staticConfig: { slotName: null },
 			maxAcceptedSize: 'large',
-			maxCount: 20,
+			maxCount: 50,
 		},
 	},
 	storageModule: 'storage',

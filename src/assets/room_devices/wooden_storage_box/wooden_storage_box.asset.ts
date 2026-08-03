@@ -19,7 +19,7 @@ DefineRoomDeviceAsset({
 			type: 'storage',
 			name: 'Chest contents',
 			staticConfig: { slotName: null },
-			maxCount: 15,
+			maxCount: 50,
 			maxAcceptedSize: 'large',
 		},
 		lock: {

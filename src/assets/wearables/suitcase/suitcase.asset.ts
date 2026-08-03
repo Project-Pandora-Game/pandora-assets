@@ -177,7 +177,7 @@ DefineAsset({
 		content: {
 			type: 'storage',
 			name: 'Suitcase contents',
-			maxCount: 10,
+			maxCount: 20,
 			maxAcceptedSize: 'medium',
 		},
 	},

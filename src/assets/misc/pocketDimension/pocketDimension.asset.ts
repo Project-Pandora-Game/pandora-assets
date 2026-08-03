@@ -6,7 +6,7 @@ DefineAsset({
 		content: {
 			type: 'storage',
 			name: 'Contents',
-			maxCount: 10,
+			maxCount: 50,
 			maxAcceptedSize: 'medium',
 		},
 	},
