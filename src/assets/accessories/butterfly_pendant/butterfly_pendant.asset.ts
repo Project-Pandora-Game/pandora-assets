@@ -76,7 +76,7 @@ DefineAsset({
 		licensing:
 			[
 				{
-					part: 'Shark-Plush',
+					part: 'Butterfly-Pendant',
 					source: 'Self-Made',
 					copyrightHolder: 'smallelise',
 					editedBy: 'smallelise',
