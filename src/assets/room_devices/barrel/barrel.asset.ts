@@ -72,7 +72,7 @@ DefineRoomDeviceAsset({
 			name: `Barrel contents`,
 			staticConfig: { slotName: null },
 			maxAcceptedSize: 'large',
-			maxCount: 10,
+			maxCount: 50,
 		},
 	},
 	storageModule: 'storage',

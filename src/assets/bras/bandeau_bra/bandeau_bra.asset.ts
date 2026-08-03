@@ -29,6 +29,14 @@ DefineAsset({
 				{
 					id: 'covered',
 					name: 'Covered',
+					properties: {
+						attributes: {
+							requires: [
+								'!Breast_protruding_l',
+								'!Breast_protruding_r',
+							],
+						},
+					},
 					default: true,
 				},
 				{

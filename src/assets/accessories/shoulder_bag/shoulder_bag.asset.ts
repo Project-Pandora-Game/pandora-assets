@@ -41,7 +41,7 @@ DefineAsset({
 		content: {
 			type: 'storage',
 			name: 'Bag contents',
-			maxCount: 10,
+			maxCount: 15,
 			maxAcceptedSize: 'medium',
 		},
 		lock: {
