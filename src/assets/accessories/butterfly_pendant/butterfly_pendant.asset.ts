@@ -20,6 +20,7 @@ DefineAsset({
 		wing_fabric: {
 			name: 'Wing Infill',
 			default: '#DBA62B',
+			minAlpha: 0.5,
 		},
 		chain: {
 			name: 'Chain Link',
