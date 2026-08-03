@@ -1,6 +1,8 @@
 DefineAsset({
 	name: 'Butterfly Pendant',
 	size: 'small',
+	requireFreeHandsToUseDefault: false,
+	preview: 'preview.png',
 	graphics: 'graphics.json',
 	colorization: {
 		body: {
@@ -24,7 +26,6 @@ DefineAsset({
 			default: '#A1A1A1',
 		},
 	},
-	preview: undefined,
 
 	//ToDo: roomDeployment: {autoDeployRelativePosition: [0, -10, 0]},
 

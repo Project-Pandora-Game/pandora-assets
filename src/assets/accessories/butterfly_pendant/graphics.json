@@ -7,7 +7,7 @@
 			"width": 250,
 			"height": 250,
 			"type": "autoMesh",
-			"name": "Base",
+			"name": "butterfly",
 			"points": "static",
 			"automeshTemplate": "aboveBody",
 			"graphicalLayers": [
