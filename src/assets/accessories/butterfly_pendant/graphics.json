@@ -43,5 +43,59 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -125,
+			"y": -125,
+			"width": 250,
+			"height": 250,
+			"type": "autoSprite",
+			"name": "room_butterfly",
+			"graphicalLayers": [
+				{
+					"name": "chain_link",
+					"colorizationKey": "chain"
+				},
+				{
+					"name": "wing_infill",
+					"colorizationKey": "wing_fabric"
+				},
+				{
+					"name": "wings",
+					"colorizationKey": "wings"
+				},
+				{
+					"name": "details",
+					"colorizationKey": "details"
+				},
+				{
+					"name": "body",
+					"colorizationKey": "body"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "room_placement"
+				}
+			],
+			"imageMap": {
+				"wall": [
+					"chain.png",
+					"wing_infill.png",
+					"wings.png",
+					"details.png",
+					"body.png"
+				],
+				"ground": [
+					//"room_ground_chain.png",
+					//"room_ground_wing_infill.png",
+					//"room_ground_wings.png",
+					//"room_ground_details.png",
+					//"room_ground_body.png"
+				]
+			}
+		}
 	]
 }

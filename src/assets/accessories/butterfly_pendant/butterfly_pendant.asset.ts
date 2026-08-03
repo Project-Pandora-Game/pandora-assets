@@ -26,8 +26,9 @@ DefineAsset({
 			default: '#A1A1A1',
 		},
 	},
-
-	//ToDo: roomDeployment: {autoDeployRelativePosition: [0, -10, 0]},
+	roomDeployment: {
+		autoDeployRelativePosition: [0, -10, 0],
+	},
 
 	attributes: {
 		provides: [
@@ -44,6 +45,21 @@ DefineAsset({
 			lockedProperties: {
 				blockAddRemove: true,
 			},
+		},
+		room_placement: {
+			type: 'typed',
+			name: 'Room Placement',
+			variants: [
+				{
+					id: 'wall',
+					name: 'Hanging on Wall',
+				},
+				{
+					id: 'ground',
+					name: 'On Ground',
+					default: true,
+				},
+			],
 		},
 	},
 
