@@ -274,7 +274,7 @@ DefineRoomDeviceAsset({
 			name: `Cage's floor`,
 			staticConfig: { slotName: null },
 			maxAcceptedSize: 'large',
-			maxCount: 3,
+			maxCount: 5,
 		},
 	},
 	storageModule: 'storage',

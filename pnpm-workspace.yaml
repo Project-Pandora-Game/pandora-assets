@@ -1,5 +1,6 @@
 allowBuilds:
   pandora-common: true
+  pandora-common@git+https://github.com/Project-Pandora-Game/pandora.git: true
   sharp: true
   unrs-resolver: true
 
@@ -8,8 +9,8 @@ forceLegacyDeploy: true
 injectWorkspacePackages: false
 minimumReleaseAge: 2880
 minimumReleaseAgeExclude:
-- pandora-common
+  - pandora-common
 nodeOptions: --no-warnings=ExperimentalWarning --experimental-vm-modules
 strictPeerDependencies: true
 updateNotifier: false
-verifyDepsBeforeRun: error
+verifyDepsBeforeRun: install

@@ -89,7 +89,7 @@ DefineAsset({
 							provides: [
 								'Underwear_panties',
 							],
-							hides: ['Penis'],
+							hides: ['Penis_flaccid'],
 						},
 					},
 				},
