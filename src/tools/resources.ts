@@ -497,7 +497,7 @@ export function DefineImageResource(name: string, category: ImageCategory, expec
 						.gamma()
 						.greyscale()
 						.toColourspace('b-w')
-						.toFormat('jpg', { quality: 40 });
+						.toFormat('jpeg', { quality: 40 });
 				}
 				AssertNever(expectedFormat);
 			},
