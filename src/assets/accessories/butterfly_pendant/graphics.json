@@ -4,8 +4,8 @@
 		{
 			"x": 375,
 			"y": 285,
-			"width": 250,
-			"height": 250,
+			"width": 1000,
+			"height": 1500,
 			"type": "autoMesh",
 			"name": "butterfly",
 			"points": "static",
@@ -48,8 +48,8 @@
 		{
 			"x": -125,
 			"y": -125,
-			"width": 250,
-			"height": 250,
+			"width": 1000,
+			"height": 1500,
 			"type": "autoSprite",
 			"name": "room_butterfly",
 			"graphicalLayers": [

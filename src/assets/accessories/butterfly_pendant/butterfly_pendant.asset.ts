@@ -12,6 +12,7 @@ DefineAsset({
 		details: {
 			name: 'Details',
 			default: '#FFE100',
+			minAlpha: 0.2,
 		},
 		wings: {
 			name: 'Wings',
@@ -20,7 +21,7 @@ DefineAsset({
 		wing_fabric: {
 			name: 'Wing Infill',
 			default: '#DBA62B',
-			minAlpha: 0.5,
+			minAlpha: 0.2,
 		},
 		chain: {
 			name: 'Chain Link',
