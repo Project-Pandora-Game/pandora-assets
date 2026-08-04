@@ -59,22 +59,6 @@ DefineRoomDeviceAsset({
 					name: 'Diamond',
 				},
 				{
-					id: 'parallelogram_left',
-					name: 'Parallelogram (L)',
-				},
-				{
-					id: 'parallelogram_right',
-					name: 'Parallelogram (R)',
-				},
-				{
-					id: 'parallelogram_top',
-					name: 'Parallelogram (T)',
-				},
-				{
-					id: 'parallelogram_bottom',
-					name: 'Parallelogram (B)',
-				},
-				{
 					id: 'pentagon',
 					name: 'Pentagon',
 				},
@@ -105,10 +89,6 @@ DefineRoomDeviceAsset({
 				{
 					id: 'rect_v',
 					name: 'Vertical Bar',
-				},
-				{
-					id: 'huge',
-					name: 'Square (Huge)',
 				},
 			],
 		},
