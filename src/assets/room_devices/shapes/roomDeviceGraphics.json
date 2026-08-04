@@ -785,6 +785,15 @@
 		},
 		{
 			"type": "text",
+			"enableCond": [
+				[
+					{
+						"module": "textSize",
+						"operator": "=",
+						"value": "default"
+					}
+				]
+			],
 			"name": "Text",
 			"dataModule": "text",
 			"offset": {
@@ -800,8 +809,17 @@
 		},
 		{
 			"type": "text",
+			"enableCond": [
+				[
+					{
+						"module": "textSize",
+						"operator": "=",
+						"value": "box"
+					}
+				]
+			],
 			"name": "Box Text",
-			"dataModule": "box",
+			"dataModule": "text",
 			"offset": {
 				"x": 125,
 				"y": 125
@@ -815,8 +833,17 @@
 		},
 		{
 			"type": "text",
+			"enableCond": [
+				[
+					{
+						"module": "textSize",
+						"operator": "=",
+						"value": "box_large"
+					}
+				]
+			],
 			"name": "Box Text Big",
-			"dataModule": "big",
+			"dataModule": "text",
 			"offset": {
 				"x": 125,
 				"y": 125

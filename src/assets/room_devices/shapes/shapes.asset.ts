@@ -137,15 +137,25 @@ DefineRoomDeviceAsset({
 			name: 'Text',
 			staticConfig: { slotName: null },
 		},
-		box: {
-			type: 'text',
-			name: 'Box Text',
+		textSize: {
+			type: 'typed',
+			name: 'Text size',
 			staticConfig: { slotName: null },
-		},
-		big: {
-			type: 'text',
-			name: 'Box Text Big',
-			staticConfig: { slotName: null },
+			variants: [
+				{
+					id: 'default',
+					name: 'Default',
+					default: true,
+				},
+				{
+					id: 'box',
+					name: 'Box',
+				},
+				{
+					id: 'box_large',
+					name: 'Box (large font)',
+				},
+			],
 		},
 	},
 	pivot: {
