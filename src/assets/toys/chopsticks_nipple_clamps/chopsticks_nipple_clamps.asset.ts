@@ -52,14 +52,36 @@ DefineAsset({
 					id: 'both',
 					name: 'Both Nipples',
 					default: true,
+					properties: {
+						attributes: {
+							provides: [
+								'Breast_protruding_l',
+								'Breast_protruding_r',
+							],
+						},
+					},
 				},
 				{
 					id: 'left',
 					name: 'Left Nipple',
+					properties: {
+						attributes: {
+							provides: [
+								'Breast_protruding_l',
+							],
+						},
+					},
 				},
 				{
 					id: 'right',
 					name: 'Right Nipple',
+					properties: {
+						attributes: {
+							provides: [
+								'Breast_protruding_r',
+							],
+						},
+					},
 				},
 			],
 		},
