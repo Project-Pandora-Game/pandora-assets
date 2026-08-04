@@ -2,8 +2,8 @@
 {
 	"layers": [
 		{
-			"x": 375,
-			"y": 285,
+			"x": 0,
+			"y": 0,
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
@@ -46,8 +46,8 @@
 	],
 	"roomLayers": [
 		{
-			"x": -125,
-			"y": -125,
+			"x": 0,
+			"y": 0,
 			"width": 1000,
 			"height": 1500,
 			"type": "autoSprite",
