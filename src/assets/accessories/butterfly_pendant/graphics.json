@@ -3,7 +3,7 @@
 	"layers": [
 		{
 			"x": 0,
-			"y": 0,
+			"y": 15,
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
@@ -46,8 +46,8 @@
 	],
 	"roomLayers": [
 		{
-			"x": 0,
-			"y": 0,
+			"x": -500,
+			"y": -375,
 			"width": 1000,
 			"height": 1500,
 			"type": "autoSprite",
