@@ -157,9 +157,9 @@ DefineRoomDeviceAsset({
 			name: 'Text',
 			staticConfig: { slotName: null },
 		},
-		simple: {
+		box: {
 			type: 'text',
-			name: 'Box Text Normal',
+			name: 'Box Text',
 			staticConfig: { slotName: null },
 		},
 		big: {

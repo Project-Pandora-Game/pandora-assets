@@ -935,8 +935,8 @@
 		},
 		{
 			"type": "text",
-			"name": "Box Text Normal",
-			"dataModule": "simple",
+			"name": "Box Text",
+			"dataModule": "box",
 			"offset": {
 				"x": -250,
 				"y": -250
