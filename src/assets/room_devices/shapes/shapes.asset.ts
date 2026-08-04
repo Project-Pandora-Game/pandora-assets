@@ -154,12 +154,17 @@ DefineRoomDeviceAsset({
 		},
 		text: {
 			type: 'text',
-			name: 'Simple Text',
+			name: 'Text',
+			staticConfig: { slotName: null },
+		},
+		simple: {
+			type: 'text',
+			name: 'Box Text Normal',
 			staticConfig: { slotName: null },
 		},
 		big: {
 			type: 'text',
-			name: 'Big Text',
+			name: 'Box Text Big',
 			staticConfig: { slotName: null },
 		},
 	},

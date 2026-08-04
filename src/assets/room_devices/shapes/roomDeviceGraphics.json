@@ -923,6 +923,21 @@
 			"name": "Text",
 			"dataModule": "text",
 			"offset": {
+				"x": 125,
+				"y": 250
+			},
+			"size": {
+				"width": 750,
+				"height": 125
+			},
+			"fontSize": 80,
+			"colorizationKey": "text"
+		},
+		{
+			"type": "text",
+			"name": "Box Text Normal",
+			"dataModule": "simple",
+			"offset": {
 				"x": -250,
 				"y": -250
 			},
@@ -935,7 +950,7 @@
 		},
 		{
 			"type": "text",
-			"name": "Big Text",
+			"name": "Box Text Big",
 			"dataModule": "big",
 			"offset": {
 				"x": -250,
