@@ -36,19 +36,19 @@ DefineRoomDeviceAsset({
 				},
 				{
 					id: 'right_triangle_top',
-					name: 'Triangle (Top)',
+					name: 'Triangle (T)',
 				},
 				{
 					id: 'right_triangle_right',
-					name: 'Triangle (Right)',
+					name: 'Triangle (R)',
 				},
 				{
 					id: 'right_triangle_bottom',
-					name: 'Triangle (Bottom)',
+					name: 'Triangle (B)',
 				},
 				{
 					id: 'right_triangle_left',
-					name: 'Triangle (Left)',
+					name: 'Triangle (L)',
 				},
 				{
 					id: 'circle',
@@ -136,6 +136,26 @@ DefineRoomDeviceAsset({
 			type: 'text',
 			name: 'Text',
 			staticConfig: { slotName: null },
+		},
+		textSize: {
+			type: 'typed',
+			name: 'Text size',
+			staticConfig: { slotName: null },
+			variants: [
+				{
+					id: 'default',
+					name: 'Default',
+					default: true,
+				},
+				{
+					id: 'box',
+					name: 'Box',
+				},
+				{
+					id: 'box_large',
+					name: 'Box (large font)',
+				},
+			],
 		},
 	},
 	pivot: {

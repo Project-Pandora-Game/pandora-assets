@@ -15,7 +15,7 @@ DefineRoomDeviceAsset({
 			type: 'storage',
 			name: 'Crate contents',
 			staticConfig: { slotName: null },
-			maxCount: 15,
+			maxCount: 50,
 			maxAcceptedSize: 'large',
 		},
 	},

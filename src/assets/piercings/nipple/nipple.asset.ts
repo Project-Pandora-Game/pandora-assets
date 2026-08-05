@@ -18,7 +18,8 @@ DefineAsset({
 			'Piercing',
 		],
 		requires: [
-			'!Breast_cover',
+			'!Breast_cover_l',
+			'!Breast_cover_r',
 		],
 	},
 	modules: {
