@@ -10,7 +10,7 @@ DefineAsset({
 		},
 		inside: {
 			name: 'Fabric reverse side',
-			default: '#c2cfdaff',
+			default: '#c2cfda',
 		},
 		button: {
 			name: 'Button',
