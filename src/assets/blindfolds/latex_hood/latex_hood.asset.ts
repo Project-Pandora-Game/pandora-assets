@@ -9,6 +9,10 @@ DefineAsset({
 			name: 'Hood',
 			default: '#020202',
 		},
+		lenses: {
+			name: 'Lenses',
+			default: '#bbbbbb',
+		},
 		reflection: {
 			name: 'Reflection',
 			default: '#FFFFFF',
@@ -25,35 +29,17 @@ DefineAsset({
 			'Restraint_eyes',
 			'Ear_item',
 			'Ear_cover',
-			'Restraint_mouth',
-			'Mouth_item',
-			'Mouth_cover',
 		],
 		hides: [
 			'Hair',
 			'Wig',
 			'Ears',
 			'Fantasy_ears',
-			'Restraint_mouth', // only for full hoods
 		],
 		covers: [
 			'Ear_item',
-			'Mouth_item',
 			'Restraint_eyes', // only for full hoods
 		],
-		requires: [
-			'!Mouth_tongue_out',
-			'!Mouth_protruding',
-		],
-	},
-	effects: {
-		lipsTouch: 1,
-		jawMove: 2,
-		tongueRoof: 0,
-		mouthBreath: 1,
-		throatBreath: 0,
-		coherency: 0,
-		stimulus: 1,
 	},
 	modules: {
 		lock: {
@@ -63,11 +49,67 @@ DefineAsset({
 				blockAddRemove: true,
 			},
 		},
-		blinding: {
+		mouth: {
 			type: 'typed',
-			name: 'Material\'s Light Translucence',
+			name: 'Mouth cover',
 			interactionType: ItemInteractionType.ADD_REMOVE,
 			variants: [
+				{
+					id: 'open',
+					name: 'Uncovered',
+					default: true,
+				},
+				{
+					id: 'closed',
+					name: 'Covered',
+					properties: {
+						attributes: {
+							provides: [
+								'Restraint_mouth',
+								'Mouth_item',
+								'Mouth_cover',
+							],
+							requires: [
+								'!Mouth_protruding',
+								'!Mouth_tongue_out',
+							],
+							covers: [
+								'Mouth_item',
+								'Restraint_mouth',
+							],
+						},
+						effects: {
+							lipsTouch: 1,
+							jawMove: 2,
+							tongueRoof: 0,
+							mouthBreath: 1,
+							throatBreath: 0,
+							coherency: 0,
+							stimulus: 1,
+						},
+					},
+				},
+			],
+		},
+		eyes: {
+			type: 'typed',
+			name: 'Eyes cover',
+			interactionType: ItemInteractionType.ADD_REMOVE,
+			variants: [
+				{
+					id: 'open',
+					name: 'Uncovered',
+					default: true,
+				},
+				{
+					id: 'lenses',
+					name: 'Distortion Lenses',
+					properties: {
+						effects: {
+							blurVision: 4,
+						},
+					},
+				},
 				{
 					id: 'light',
 					name: 'Slight transparency',
@@ -80,7 +122,6 @@ DefineAsset({
 				{
 					id: 'full',
 					name: 'Fully blinding',
-					default: true,
 					properties: {
 						effects: {
 							blind: 10,
