@@ -26,7 +26,6 @@ DefineAsset({
 			'Restraint',
 			'Headgear',
 			'Headgear_hood',
-			'Restraint_eyes',
 			'Ear_item',
 			'Ear_cover',
 		],
@@ -105,6 +104,14 @@ DefineAsset({
 					id: 'lenses',
 					name: 'Distortion Lenses',
 					properties: {
+						attributes: {
+							provides: [
+								'Restraint_eyes',
+							],
+							covers: [
+								'Restraint_eyes',
+							],
+						},
 						effects: {
 							blurVision: 4,
 						},
@@ -114,6 +121,14 @@ DefineAsset({
 					id: 'light',
 					name: 'Slight transparency',
 					properties: {
+						attributes: {
+							provides: [
+								'Restraint_eyes',
+							],
+							covers: [
+								'Restraint_eyes',
+							],
+						},
 						effects: {
 							blind: 9.5,
 						},
@@ -123,6 +138,14 @@ DefineAsset({
 					id: 'full',
 					name: 'Fully blinding',
 					properties: {
+						attributes: {
+							provides: [
+								'Restraint_eyes',
+							],
+							covers: [
+								'Restraint_eyes',
+							],
+						},
 						effects: {
 							blind: 10,
 						},
@@ -137,7 +160,7 @@ DefineAsset({
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-		credits: ['ClaudiaMia'],
+		credits: ['ClaudiaMia', 'Sandrine'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
@@ -146,6 +169,13 @@ DefineAsset({
 				copyrightHolder: 'ClaudiaMia',
 				editedBy: 'ClaudiaMia',
 				license: 'Pandora-Use-Only-v1-or-later',
+			},
+			{
+				source: 'Self-Made',
+				part: 'Lenses',
+				copyrightHolder: 'Sandrine',
+				editedBy: 'Sandrine',
+				license: 'Pandora-Use-Only-NoModify-v1-or-later',
 			},
 		],
 	},
