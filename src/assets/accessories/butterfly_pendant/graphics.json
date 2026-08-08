@@ -2,10 +2,10 @@
 {
 	"layers": [
 		{
-			"x": 0,
-			"y": 15,
-			"width": 1000,
-			"height": 1500,
+			"x": 300,
+			"y": 210,
+			"width": 400,
+			"height": 400,
 			"type": "autoMesh",
 			"name": "butterfly",
 			"points": "static",
@@ -46,10 +46,10 @@
 	],
 	"roomLayers": [
 		{
-			"x": -500,
-			"y": -375,
-			"width": 1000,
-			"height": 1500,
+			"x": -200,
+			"y": -200,
+			"width": 400,
+			"height": 400,
 			"type": "autoSprite",
 			"name": "room_butterfly",
 			"graphicalLayers": [
@@ -87,13 +87,6 @@
 					"wings.png",
 					"details.png",
 					"body.png"
-				],
-				"ground": [
-					//"room_ground_chain.png",
-					//"room_ground_wing_infill.png",
-					//"room_ground_wings.png",
-					//"room_ground_details.png",
-					//"room_ground_body.png"
 				]
 			}
 		}

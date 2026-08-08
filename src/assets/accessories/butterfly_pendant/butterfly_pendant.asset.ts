@@ -48,21 +48,6 @@ DefineAsset({
 				blockAddRemove: true,
 			},
 		},
-		room_placement: {
-			type: 'typed',
-			name: 'Room Placement',
-			variants: [
-				{
-					id: 'wall',
-					name: 'Hanging on Wall',
-				},
-				{
-					id: 'ground',
-					name: 'On Ground',
-					default: true,
-				},
-			],
-		},
 	},
 
 	ownership:
