@@ -46,15 +46,15 @@
 	],
 	"roomLayers": [
 		{
-			"x": -200,
-			"y": -200,
-			"width": 400,
-			"height": 400,
+			"x": 0,
+			"y": 0,
+			"width": 1,
+			"height": 1,
 			"type": "autoSprite",
-			"name": "room_butterfly",
+			"name": "room_graphics",
 			"graphicalLayers": [
 				{
-					"name": "chain_link",
+					"name": "chain",
 					"colorizationKey": "chain"
 				},
 				{
@@ -74,14 +74,9 @@
 					"colorizationKey": "body"
 				}
 			],
-			"variables": [
-				{
-					"type": "typedModule",
-					"module": "room_placement"
-				}
-			],
+			"variables": [],
 			"imageMap": {
-				"wall": [
+				"": [
 					"chain.png",
 					"wing_infill.png",
 					"wings.png",
