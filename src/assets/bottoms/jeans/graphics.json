@@ -19,10 +19,21 @@
 					"colorizationKey": "pants"
 				}
 			],
-			"variables": [],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "style"
+				}
+			],
 			"imageMap": {
-				"": [
+				"default": [
 					"jeans_back.png"
+				],
+				"capri": [
+					"jeans_capri_back.png"
+				],
+				"bermuda": [
+					"jeans_bermuda_back.png"
 				]
 			}
 		},
@@ -44,10 +55,155 @@
 					"colorizationKey": "pants"
 				}
 			],
-			"variables": [],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "style"
+				}
+			],
 			"imageMap": {
-				"": [
+				"default": [
 					"jeans.png"
+				],
+				"capri": [
+					"jeans_capri.png"
+				],
+				"bermuda": [
+					"jeans_bermuda.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Belt",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "belt"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "type"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"belted": [
+					"jeans_belt_front.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Belt Back",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "belt"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "type"
+				}
+			],
+			"imageMap": {
+				"none": [
+					""
+				],
+				"belted": [
+					"jeans_belt_back.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Folded Ends",
+			"points": "body",
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms",
+				"body"
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "inside"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "style"
+				}
+			],
+			"imageMap": {
+				"default": [
+					""
+				],
+				"capri": [
+					"jeans_capri_folds.png"
+				],
+				"bermuda": [
+					"jeans_bermuda_folds.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"name": "Folded Ends Back",
+			"points": "body",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms",
+				"body"
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "inside"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "style"
+				}
+			],
+			"imageMap": {
+				"default": [
+					""
+				],
+				"capri": [
+					"jeans_capri_folds.png"
+				],
+				"bermuda": [
+					"jeans_bermuda_folds.png"
 				]
 			}
 		},
