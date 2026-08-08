@@ -46,10 +46,10 @@
 	],
 	"roomLayers": [
 		{
-			"x": 0,
-			"y": 0,
-			"width": 1,
-			"height": 1,
+			"x": -200,
+			"y": -200,
+			"width": 400,
+			"height": 400,
 			"type": "autoSprite",
 			"name": "room_graphics",
 			"graphicalLayers": [
