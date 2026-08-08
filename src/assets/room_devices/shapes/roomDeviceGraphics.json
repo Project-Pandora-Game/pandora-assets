@@ -785,16 +785,74 @@
 		},
 		{
 			"type": "text",
+			"enableCond": [
+				[
+					{
+						"module": "textSize",
+						"operator": "=",
+						"value": "default"
+					}
+				]
+			],
+			"name": "Text",
 			"dataModule": "text",
 			"offset": {
 				"x": 125,
-				"y": 438
+				"y": 437
 			},
 			"size": {
 				"width": 750,
 				"height": 125
 			},
 			"fontSize": 80,
+			"colorizationKey": "text"
+		},
+		{
+			"type": "text",
+			"enableCond": [
+				[
+					{
+						"module": "textSize",
+						"operator": "=",
+						"value": "box"
+					}
+				]
+			],
+			"name": "Box Text",
+			"dataModule": "text",
+			"offset": {
+				"x": 125,
+				"y": 125
+			},
+			"size": {
+				"width": 750,
+				"height": 750
+			},
+			"fontSize": 80,
+			"colorizationKey": "text"
+		},
+		{
+			"type": "text",
+			"enableCond": [
+				[
+					{
+						"module": "textSize",
+						"operator": "=",
+						"value": "box_large"
+					}
+				]
+			],
+			"name": "Box Text Big",
+			"dataModule": "text",
+			"offset": {
+				"x": 125,
+				"y": 125
+			},
+			"size": {
+				"width": 750,
+				"height": 750
+			},
+			"fontSize": 400,
 			"colorizationKey": "text"
 		}
 	],

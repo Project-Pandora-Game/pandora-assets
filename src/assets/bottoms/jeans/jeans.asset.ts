@@ -8,9 +8,17 @@ DefineAsset({
 			name: 'Pants',
 			default: '#9BCDFF',
 		},
+		inside: {
+			name: 'Fabric reverse side',
+			default: '#c2cfda',
+		},
 		button: {
 			name: 'Button',
 			default: '#E6E6E6',
+		},
+		belt: {
+			name: 'Belt',
+			default: '#834C01',
 		},
 	},
 	roomDeployment: {
@@ -28,9 +36,45 @@ DefineAsset({
 		],
 		hides: ['Penis_flaccid'],
 	},
+	modules: {
+		type: {
+			type: 'typed',
+			name: 'Belted',
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'belted',
+					name: 'Belted',
+				},
+			],
+		},
+		style: {
+			type: 'typed',
+			name: 'Style',
+			variants: [
+				{
+					id: 'default',
+					name: 'Default',
+					default: true,
+				},
+				{
+					id: 'capri',
+					name: 'Capri',
+				},
+				{
+					id: 'bermuda',
+					name: 'Bermuda',
+				},
+			],
+		},
+	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-		credits: ['ClaudiaMia'],
+		credits: ['ClaudiaMia', 'Freyja'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
