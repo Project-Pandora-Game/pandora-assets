@@ -37,7 +37,6 @@ DefineAsset({
 		],
 		covers: [
 			'Ear_item',
-			'Restraint_eyes', // only for full hoods
 		],
 	},
 	modules: {
