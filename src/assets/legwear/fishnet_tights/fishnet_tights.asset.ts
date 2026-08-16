@@ -10,6 +10,11 @@ DefineAsset({
 	},
 	// size:760, y:600, centered
 	preview: 'preview.png',
+	attributes: {
+		provides: [
+			'Legwear',
+		],
+	},
 	modules: {
 		cutout: {
 			type: 'typed',

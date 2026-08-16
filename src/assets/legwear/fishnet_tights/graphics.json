@@ -22,13 +22,23 @@
 			"variables": [
 				{
 					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "cutout"
 				}
 			],
 			"imageMap": {
-				"front": [
+				"front:no": [
 					"Front.png"
 				],
-				"back": [
+				"front:yes": [
+					"Front_with_cutout.png"
+				],
+				"back:no": [
+					""
+				],
+				"back:yes": [
 					""
 				]
 			}
@@ -54,14 +64,24 @@
 			"variables": [
 				{
 					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "cutout"
 				}
 			],
 			"imageMap": {
-				"front": [
+				"front:no": [
 					""
 				],
-				"back": [
+				"front:yes": [
+					""
+				],
+				"back:no": [
 					"Back.png"
+				],
+				"back:yes": [
+					"Back_with_cutout.png"
 				]
 			}
 		}
