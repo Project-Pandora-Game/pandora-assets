@@ -93,6 +93,13 @@ DefineRoomDeviceAsset({
 				editedBy: 'Nythaleath',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
+			{
+				part: 'Public Dungeon Advert',
+				source: 'Self-Made',
+				copyrightHolder: 'Sandrine',
+				editedBy: 'Sandrine',
+				license: 'Pandora-Use-Only-v1-or-later',
+			},
 		],
 	},
 });
