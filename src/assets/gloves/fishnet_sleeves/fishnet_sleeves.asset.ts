@@ -10,6 +10,11 @@ DefineAsset({
 	},
 	// size:300, y:380, centered, arm_l: 71, arm_r: 17, elbow_l: 97
 	preview: 'preview.png',
+	attributes: {
+		provides: [
+			'Gloves',
+		],
+	},
 	modules: {
 		coverage: {
 			type: 'typed',
