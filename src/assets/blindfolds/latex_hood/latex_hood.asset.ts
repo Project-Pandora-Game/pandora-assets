@@ -9,6 +9,10 @@ DefineAsset({
 			name: 'Hood',
 			default: '#020202',
 		},
+		lenses: {
+			name: 'Lenses',
+			default: '#bbbbbb',
+		},
 		reflection: {
 			name: 'Reflection',
 			default: '#FFFFFF',
@@ -22,38 +26,18 @@ DefineAsset({
 			'Restraint',
 			'Headgear',
 			'Headgear_hood',
-			'Restraint_eyes',
 			'Ear_item',
 			'Ear_cover',
-			'Restraint_mouth',
-			'Mouth_item',
-			'Mouth_cover',
 		],
 		hides: [
 			'Hair',
 			'Wig',
 			'Ears',
 			'Fantasy_ears',
-			'Restraint_mouth', // only for full hoods
 		],
 		covers: [
 			'Ear_item',
-			'Mouth_item',
-			'Restraint_eyes', // only for full hoods
 		],
-		requires: [
-			'!Mouth_tongue_out',
-			'!Mouth_protruding',
-		],
-	},
-	effects: {
-		lipsTouch: 1,
-		jawMove: 2,
-		tongueRoof: 0,
-		mouthBreath: 1,
-		throatBreath: 0,
-		coherency: 0,
-		stimulus: 1,
 	},
 	modules: {
 		lock: {
@@ -63,15 +47,87 @@ DefineAsset({
 				blockAddRemove: true,
 			},
 		},
-		blinding: {
+		mouth: {
 			type: 'typed',
-			name: 'Material\'s Light Translucence',
+			name: 'Mouth cover',
 			interactionType: ItemInteractionType.ADD_REMOVE,
 			variants: [
+				{
+					id: 'open',
+					name: 'Uncovered',
+					default: true,
+				},
+				{
+					id: 'closed',
+					name: 'Covered',
+					properties: {
+						attributes: {
+							provides: [
+								'Restraint_mouth',
+								'Mouth_item',
+								'Mouth_cover',
+							],
+							requires: [
+								'!Mouth_protruding',
+								'!Mouth_tongue_out',
+							],
+							covers: [
+								'Mouth_item',
+								'Restraint_mouth',
+							],
+						},
+						effects: {
+							lipsTouch: 1,
+							jawMove: 2,
+							tongueRoof: 0,
+							mouthBreath: 1,
+							throatBreath: 0,
+							coherency: 0,
+							stimulus: 1,
+						},
+					},
+				},
+			],
+		},
+		eyes: {
+			type: 'typed',
+			name: 'Eyes cover',
+			interactionType: ItemInteractionType.ADD_REMOVE,
+			variants: [
+				{
+					id: 'open',
+					name: 'Uncovered',
+					default: true,
+				},
+				{
+					id: 'lenses',
+					name: 'Distortion Lenses',
+					properties: {
+						attributes: {
+							provides: [
+								'Restraint_eyes',
+							],
+							covers: [
+								'Restraint_eyes',
+							],
+						},
+						effects: {
+							blurVision: 4,
+						},
+					},
+				},
 				{
 					id: 'light',
 					name: 'Slight transparency',
 					properties: {
+						attributes: {
+							provides: [
+								'Restraint_eyes',
+							],
+							covers: [
+								'Restraint_eyes',
+							],
+						},
 						effects: {
 							blind: 9.5,
 						},
@@ -80,8 +136,15 @@ DefineAsset({
 				{
 					id: 'full',
 					name: 'Fully blinding',
-					default: true,
 					properties: {
+						attributes: {
+							provides: [
+								'Restraint_eyes',
+							],
+							covers: [
+								'Restraint_eyes',
+							],
+						},
 						effects: {
 							blind: 10,
 						},
@@ -96,7 +159,7 @@ DefineAsset({
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-		credits: ['ClaudiaMia'],
+		credits: ['ClaudiaMia', 'Sandrine'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
@@ -105,6 +168,13 @@ DefineAsset({
 				copyrightHolder: 'ClaudiaMia',
 				editedBy: 'ClaudiaMia',
 				license: 'Pandora-Use-Only-v1-or-later',
+			},
+			{
+				source: 'Self-Made',
+				part: 'Lenses',
+				copyrightHolder: 'Sandrine',
+				editedBy: 'Sandrine',
+				license: 'Pandora-Use-Only-NoModify-v1-or-later',
 			},
 		],
 	},
