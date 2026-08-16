@@ -7,6 +7,15 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
+			"enableCond": [
+				[
+					{
+						"module": "length",
+						"operator": "=",
+						"value": "short"
+					}
+				]
+			],
 			"name": "handsFront",
 			"priority": "ABOVE_ARM_LEFT",
 			"points": "body",
@@ -37,6 +46,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -59,6 +73,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "forward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -81,6 +100,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "backward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -103,6 +127,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "up"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -125,6 +154,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -147,6 +181,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "forward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -169,6 +208,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "backward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -191,6 +235,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "up"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -204,6 +253,15 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
+			"enableCond": [
+				[
+					{
+						"module": "length",
+						"operator": "=",
+						"value": "short"
+					}
+				]
+			],
 			"name": "handsBack",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "body",
@@ -234,6 +292,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -256,6 +319,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "forward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -278,6 +346,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "backward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -300,6 +373,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "up"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -322,6 +400,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -344,6 +427,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "forward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -366,6 +454,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "backward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -388,6 +481,995 @@
 									"side": "left",
 									"operator": "=",
 									"value": "up"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"enableCond": [
+				[
+					{
+						"module": "length",
+						"operator": "=",
+						"value": "medium"
+					}
+				]
+			],
+			"name": "RegularFront",
+			"priority": "ABOVE_ARM_LEFT",
+			"points": "body",
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "gloves",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "gloves_front_fist_down_medium.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_front_fist_forward_medium.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "forward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_front_fist_backward_medium.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_front_fist_up_medium.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_front_spread_down_medium.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_front_spread_forward_medium.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "forward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_front_spread_backward_medium.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_front_spread_up_medium.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"enableCond": [
+				[
+					{
+						"module": "length",
+						"operator": "=",
+						"value": "medium"
+					}
+				]
+			],
+			"name": "RegularBack",
+			"priority": "BELOW_ARM_LEFT",
+			"points": "body",
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "gloves",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "gloves_back_fist_down_medium.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_back_fist_forward_medium.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "forward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_back_fist_backward_medium.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_back_fist_up_medium.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_back_spread_down_medium.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_back_spread_forward_medium.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "forward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_back_spread_backward_medium.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_back_spread_up_medium.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"enableCond": [
+				[
+					{
+						"module": "length",
+						"operator": "=",
+						"value": "long"
+					}
+				]
+			],
+			"name": "OperaFront",
+			"priority": "ABOVE_ARM_LEFT",
+			"points": "body",
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "gloves",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "gloves_front_fist_down_long.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_front_fist_forward_long.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "forward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_front_fist_backward_long.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_front_fist_up_long.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_front_spread_down_long.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_front_spread_forward_long.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "forward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_front_spread_backward_long.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_front_spread_up_long.png",
+						"condition": [
+							[
+								{
+									"view": "front"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"enableCond": [
+				[
+					{
+						"module": "length",
+						"operator": "=",
+						"value": "long"
+					}
+				]
+			],
+			"name": "OperaBack",
+			"priority": "BELOW_ARM_LEFT",
+			"points": "body",
+			"pointType": [
+				"bodyarm_l",
+				"arm_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "gloves",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "gloves_back_fist_down_long.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_back_fist_forward_long.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "forward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_back_fist_backward_long.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_back_fist_up_long.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "fist"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_back_spread_down_long.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "down"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_back_spread_forward_long.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "forward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_back_spread_backward_long.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "backward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					},
+					{
+						"image": "gloves_back_spread_up_long.png",
+						"condition": [
+							[
+								{
+									"view": "back"
+								},
+								{
+									"armType": "fingers",
+									"side": "left",
+									"operator": "=",
+									"value": "spread"
+								},
+								{
+									"armType": "rotation",
+									"side": "left",
+									"operator": "=",
+									"value": "up"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -431,6 +1513,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -453,6 +1540,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "forward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -475,6 +1567,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "backward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -497,6 +1594,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "up"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -519,6 +1621,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -541,6 +1648,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "forward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -563,6 +1675,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "backward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -585,6 +1702,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "up"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -628,6 +1750,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -650,6 +1777,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "forward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -672,6 +1804,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "backward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -694,6 +1831,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "up"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -716,6 +1858,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "down"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -738,6 +1885,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "forward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -760,6 +1912,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "backward"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -782,108 +1939,11 @@
 									"side": "left",
 									"operator": "=",
 									"value": "up"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "cuffsFront",
-			"priority": "ABOVE_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "gloves",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "gloves_front_cuffs_long.png",
-						"condition": [
-							[
-								{
-									"view": "front"
 								},
 								{
-									"module": "length",
+									"module": "worn_l",
 									"operator": "=",
-									"value": "long"
-								}
-							]
-						]
-					},
-					{
-						"image": "gloves_front_cuffs_medium.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "medium"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "cuffsBack",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "gloves",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "gloves_back_cuffs_long.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "long"
-								}
-							]
-						]
-					},
-					{
-						"image": "gloves_back_cuffs_medium.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"module": "length",
-									"operator": "=",
-									"value": "medium"
+									"value": "yes"
 								}
 							]
 						]
@@ -925,6 +1985,11 @@
 									"module": "pattern",
 									"operator": "=",
 									"value": "cow"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -945,6 +2010,11 @@
 									"module": "pattern",
 									"operator": "=",
 									"value": "cow"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -986,6 +2056,11 @@
 									"module": "pattern",
 									"operator": "=",
 									"value": "cow"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -1006,6 +2081,11 @@
 									"module": "pattern",
 									"operator": "=",
 									"value": "cow"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -1042,6 +2122,11 @@
 									"module": "length",
 									"operator": "=",
 									"value": "long"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -1057,6 +2142,11 @@
 									"module": "length",
 									"operator": "=",
 									"value": "medium"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -1093,6 +2183,11 @@
 									"module": "length",
 									"operator": "=",
 									"value": "long"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
@@ -1108,6 +2203,11 @@
 									"module": "length",
 									"operator": "=",
 									"value": "medium"
+								},
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
 								}
 							]
 						]
