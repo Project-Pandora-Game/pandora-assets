@@ -18,13 +18,62 @@
 				{
 					"name": "latex_hood_reflections",
 					"colorizationKey": "reflection"
+				},
+				{
+					"name": "latex_hood_lenses",
+					"colorizationKey": "lenses"
 				}
 			],
-			"variables": [],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "mouth"
+				},
+				{
+					"type": "typedModule",
+					"module": "eyes"
+				}
+			],
 			"imageMap": {
-				"": [
+				"open:open": [
+					"latex_hood_front_open.png",
+					"latex_hood_reflections_front.png",
+					""
+				],
+				"open:lenses": [
+					"latex_hood_front_open.png",
+					"latex_hood_reflections_front.png",
+					"latex_hood_front_eyes_lenses.png"
+				],
+				"open:light": [
+					"latex_hood_front_mouth_open.png",
+					"latex_hood_reflections_front.png",
+					""
+				],
+				"open:full": [
+					"latex_hood_front_mouth_open.png",
+					"latex_hood_reflections_front.png",
+					""
+				],
+				"closed:open": [
+					"latex_hood_front_eyes_open.png",
+					"latex_hood_reflections_front.png",
+					""
+				],
+				"closed:lenses": [
+					"latex_hood_front_eyes_open.png",
+					"latex_hood_reflections_front.png",
+					"latex_hood_front_eyes_lenses.png"
+				],
+				"closed:light": [
 					"latex_hood_front.png",
-					"latex_hood_reflections_front.png"
+					"latex_hood_reflections_front.png",
+					""
+				],
+				"closed:full": [
+					"latex_hood_front.png",
+					"latex_hood_reflections_front.png",
+					""
 				]
 			}
 		},
