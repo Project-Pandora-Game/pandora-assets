@@ -6,223 +6,189 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"enableCond": [
 				[
-					{
-						"module": "length",
-						"operator": "=",
-						"value": "opera"
-					},
 					{
 						"view": "front"
 					}
 				]
 			],
-			"name": "Opera-Front",
-			"priority": "ABOVE_ARM_LEFT",
+			"name": "Front",
 			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"body",
+				"legs"
 			],
-			"mirror": 1,
-			"colorizationKey": "colorGroup",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "Opera_body.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Opera_body_armsback.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Opera_body_armsdown_fists.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Opera_body_armsdown.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Opera_body_armsup_fists.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Opera_body_armsup.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Opera_body_fists_turned.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Opera_body_fists.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "colorGroup"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "worn_l"
+				},
+				{
+					"type": "typedModule",
+					"module": "length"
+				},
+				{
+					"type": "armRotation",
+					"side": "left"
+				},
+				{
+					"type": "armFingers",
+					"side": "left"
+				}
+			],
+			"imageMap": {
+				"yes:opera:backward:spread": [
+					"Opera_body_armsback.png"
+				],
+				"yes:opera:backward:fist": [
+					"Opera_body_fists_turned.png"
+				],
+				"yes:opera:up:spread": [
+					"Opera_body_armsup.png"
+				],
+				"yes:opera:up:fist": [
+					"Opera_body_armsup_fists.png"
+				],
+				"yes:opera:forward:spread": [
+					"Opera_body.png"
+				],
+				"yes:opera:forward:fist": [
+					"Opera_body_fists.png"
+				],
+				"yes:opera:down:spread": [
+					"Opera_body_armsdown.png"
+				],
+				"yes:opera:down:fist": [
+					"Opera_body_armsdown_fists.png"
+				],
+				"yes:regular:backward:spread": [
+					"Regular_body_armsback.png"
+				],
+				"yes:regular:backward:fist": [
+					"Regular_body_fists_turned.png"
+				],
+				"yes:regular:up:spread": [
+					"Regular_body_armsup.png"
+				],
+				"yes:regular:up:fist": [
+					"Regular_body_armsup_fists.png"
+				],
+				"yes:regular:forward:spread": [
+					"Regular_body.png"
+				],
+				"yes:regular:forward:fist": [
+					"Regular_body_fists.png"
+				],
+				"yes:regular:down:spread": [
+					"Regular_body_armsdown.png"
+				],
+				"yes:regular:down:fist": [
+					"Regular_body_armsdown_fists.png"
+				],
+				"yes:short:backward:spread": [
+					"Short_body_armsback.png"
+				],
+				"yes:short:backward:fist": [
+					"Short_body_fists_turned.png"
+				],
+				"yes:short:up:spread": [
+					"Short_body_armsup.png"
+				],
+				"yes:short:up:fist": [
+					"Short_body_armsup_fists.png"
+				],
+				"yes:short:forward:spread": [
+					"Short_body.png"
+				],
+				"yes:short:forward:fist": [
+					"Short_body_fists.png"
+				],
+				"yes:short:down:spread": [
+					"Short_body_armsdown.png"
+				],
+				"yes:short:down:fist": [
+					"Short_body_armsdown_fists.png"
+				],
+				"no:opera:backward:spread": [
+					""
+				],
+				"no:opera:backward:fist": [
+					""
+				],
+				"no:opera:up:spread": [
+					""
+				],
+				"no:opera:up:fist": [
+					""
+				],
+				"no:opera:forward:spread": [
+					""
+				],
+				"no:opera:forward:fist": [
+					""
+				],
+				"no:opera:down:spread": [
+					""
+				],
+				"no:opera:down:fist": [
+					""
+				],
+				"no:regular:backward:spread": [
+					""
+				],
+				"no:regular:backward:fist": [
+					""
+				],
+				"no:regular:up:spread": [
+					""
+				],
+				"no:regular:up:fist": [
+					""
+				],
+				"no:regular:forward:spread": [
+					""
+				],
+				"no:regular:forward:fist": [
+					""
+				],
+				"no:regular:down:spread": [
+					""
+				],
+				"no:regular:down:fist": [
+					""
+				],
+				"no:short:backward:spread": [
+					""
+				],
+				"no:short:backward:fist": [
+					""
+				],
+				"no:short:up:spread": [
+					""
+				],
+				"no:short:up:fist": [
+					""
+				],
+				"no:short:forward:spread": [
+					""
+				],
+				"no:short:forward:fist": [
+					""
+				],
+				"no:short:down:spread": [
+					""
+				],
+				"no:short:down:fist": [
+					""
 				]
 			}
 		},
@@ -231,1171 +197,189 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"enableCond": [
 				[
-					{
-						"module": "length",
-						"operator": "=",
-						"value": "opera"
-					},
 					{
 						"view": "back"
 					}
 				]
 			],
-			"name": "Opera-Back",
-			"priority": "BELOW_ARM_LEFT",
+			"name": "Back",
 			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"legs",
+				"body"
 			],
-			"mirror": 1,
-			"colorizationKey": "colorGroup",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "Opera_body_back.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Opera_body_back_armsback.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Opera_body_back_armsdown_fists.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Opera_body_back_armsdown.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Opera_body_back_armsup_fists.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Opera_body_back_armsup.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Opera_body_back_fists_turned.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Opera_body_back_fists.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"enableCond": [
-				[
-					{
-						"module": "length",
-						"operator": "=",
-						"value": "regular"
-					},
-					{
-						"view": "front"
-					}
-				]
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "colorGroup"
+				}
 			],
-			"name": "Regular-Front",
-			"priority": "ABOVE_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "worn_l"
+				},
+				{
+					"type": "typedModule",
+					"module": "length"
+				},
+				{
+					"type": "armRotation",
+					"side": "left"
+				},
+				{
+					"type": "armFingers",
+					"side": "left"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "colorGroup",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "Regular_body.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Regular_body_armsback.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Regular_body_armsdown_fists.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Regular_body_armsdown.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Regular_body_armsup_fists.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Regular_body_armsup.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Regular_body_fists_turned.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Regular_body_fists.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"enableCond": [
-				[
-					{
-						"module": "length",
-						"operator": "=",
-						"value": "regular"
-					},
-					{
-						"view": "back"
-					}
-				]
-			],
-			"name": "Regular-Back",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "colorGroup",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "Regular_body_back.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Regular_body_back_armsback.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Regular_body_back_armsdown_fists.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Regular_body_back_armsdown.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Regular_body_back_armsup_fists.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Regular_body_back_armsup.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Regular_body_back_fists_turned.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Regular_body_back_fists.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"enableCond": [
-				[
-					{
-						"module": "length",
-						"operator": "=",
-						"value": "short"
-					},
-					{
-						"view": "front"
-					}
-				]
-			],
-			"name": "Short-Front",
-			"priority": "ABOVE_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "colorGroup",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "Short_body.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Short_body_armsback.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Short_body_armsdown_fists.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Short_body_armsdown.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Short_body_armsup_fists.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Short_body_armsup.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Short_body_fists_turned.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Short_body_fists.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"enableCond": [
-				[
-					{
-						"module": "length",
-						"operator": "=",
-						"value": "short"
-					},
-					{
-						"view": "back"
-					}
-				]
-			],
-			"name": "Short-Back",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "colorGroup",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "Short_body_back.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Short_body_back_armsback.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Short_body_back_armsdown_fists.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Short_body_back_armsdown.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Short_body_back_armsup_fists.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Short_body_back_armsup.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "spread"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Short_body_back_fists_turned.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "Short_body_back_fists.png",
-						"condition": [
-							[
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"armType": "fingers",
-									"side": "left",
-									"operator": "=",
-									"value": "fist"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					}
+			"imageMap": {
+				"yes:opera:backward:spread": [
+					"Opera_body_back_armsback.png"
+				],
+				"yes:opera:backward:fist": [
+					"Opera_body_back_fists_turned.png"
+				],
+				"yes:opera:up:spread": [
+					"Opera_body_back_armsup.png"
+				],
+				"yes:opera:up:fist": [
+					"Opera_body_back_armsup_fists.png"
+				],
+				"yes:opera:forward:spread": [
+					"Opera_body_back.png"
+				],
+				"yes:opera:forward:fist": [
+					"Opera_body_back_fists.png"
+				],
+				"yes:opera:down:spread": [
+					"Opera_body_back_armsdown.png"
+				],
+				"yes:opera:down:fist": [
+					"Opera_body_back_armsdown_fists.png"
+				],
+				"yes:regular:backward:spread": [
+					"Regular_body_back_armsback.png"
+				],
+				"yes:regular:backward:fist": [
+					"Regular_body_back_fists_turned.png"
+				],
+				"yes:regular:up:spread": [
+					"Regular_body_back_armsup.png"
+				],
+				"yes:regular:up:fist": [
+					"Regular_body_armsup_fists.png"
+				],
+				"yes:regular:forward:spread": [
+					"Regular_body_back.png"
+				],
+				"yes:regular:forward:fist": [
+					"Regular_body_back_fists.png"
+				],
+				"yes:regular:down:spread": [
+					"Regular_body_back_armsdown.png"
+				],
+				"yes:regular:down:fist": [
+					"Regular_body_back_armsdown_fists.png"
+				],
+				"yes:short:backward:spread": [
+					"Short_body_back_armsback.png"
+				],
+				"yes:short:backward:fist": [
+					"Short_body_back_fists_turned.png"
+				],
+				"yes:short:up:spread": [
+					"Short_body_back_armsup.png"
+				],
+				"yes:short:up:fist": [
+					"Short_body_back_armsup_fists.png"
+				],
+				"yes:short:forward:spread": [
+					"Short_body_back.png"
+				],
+				"yes:short:forward:fist": [
+					"Short_body_back_fists.png"
+				],
+				"yes:short:down:spread": [
+					"Short_body_back_armsdown.png"
+				],
+				"yes:short:down:fist": [
+					"Short_body_back_armsdown_fists.png"
+				],
+				"no:opera:backward:spread": [
+					""
+				],
+				"no:opera:backward:fist": [
+					""
+				],
+				"no:opera:up:spread": [
+					""
+				],
+				"no:opera:up:fist": [
+					""
+				],
+				"no:opera:forward:spread": [
+					""
+				],
+				"no:opera:forward:fist": [
+					""
+				],
+				"no:opera:down:spread": [
+					""
+				],
+				"no:opera:down:fist": [
+					""
+				],
+				"no:regular:backward:spread": [
+					""
+				],
+				"no:regular:backward:fist": [
+					""
+				],
+				"no:regular:up:spread": [
+					""
+				],
+				"no:regular:up:fist": [
+					""
+				],
+				"no:regular:forward:spread": [
+					""
+				],
+				"no:regular:forward:fist": [
+					""
+				],
+				"no:regular:down:spread": [
+					""
+				],
+				"no:regular:down:fist": [
+					""
+				],
+				"no:short:backward:spread": [
+					""
+				],
+				"no:short:backward:fist": [
+					""
+				],
+				"no:short:up:spread": [
+					""
+				],
+				"no:short:up:fist": [
+					""
+				],
+				"no:short:forward:spread": [
+					""
+				],
+				"no:short:forward:fist": [
+					""
+				],
+				"no:short:down:spread": [
+					""
+				],
+				"no:short:down:fist": [
+					""
 				]
 			}
 		}
