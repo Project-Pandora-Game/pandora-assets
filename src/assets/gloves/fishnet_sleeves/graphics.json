@@ -6,112 +6,113 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"enableCond": [
 				[
 					{
-						"module": "coverage",
-						"operator": "=",
-						"value": "full"
+						"view": "front"
 					}
 				]
 			],
-			"name": "Full-Front",
-			"priority": "ABOVE_ARM_LEFT",
+			"name": "Front",
 			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"body",
+				"legs"
 			],
-			"mirror": 1,
-			"colorizationKey": "sleeves",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "sleeves-full-body.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "sleeves-full-body_armsback.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "sleeves-full-body_armsdown.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "sleeves-full-body_armsup.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					}
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "sleeves"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "worn_l"
+				},
+				{
+					"type": "typedModule",
+					"module": "coverage"
+				},
+				{
+					"type": "armRotation",
+					"side": "left"
+				}
+			],
+			"imageMap": {
+				"yes:full:backward": [
+					"sleeves-full-body_armsback.png"
+				],
+				"yes:full:up": [
+					"sleeves-full-body_armsup.png"
+				],
+				"yes:full:forward": [
+					"sleeves-full-body.png"
+				],
+				"yes:full:down": [
+					"sleeves-full-body_armsdown.png"
+				],
+				"yes:forearm:backward": [
+					"sleeves-forearm-body_armsback.png"
+				],
+				"yes:forearm:up": [
+					"sleeves-forearm-body_armsup.png"
+				],
+				"yes:forearm:forward": [
+					"sleeves-forearm-body.png"
+				],
+				"yes:forearm:down": [
+					"sleeves-forearm-body_armsdown.png"
+				],
+				"yes:upperarm:backward": [
+					"sleeves-upperarm-body_armsback.png"
+				],
+				"yes:upperarm:up": [
+					"sleeves-upperarm-body_armsup.png"
+				],
+				"yes:upperarm:forward": [
+					"sleeves-upperarm-body.png"
+				],
+				"yes:upperarm:down": [
+					"sleeves-upperarm-body_armsdown.png"
+				],
+				"no:full:backward": [
+					""
+				],
+				"no:full:up": [
+					""
+				],
+				"no:full:forward": [
+					""
+				],
+				"no:full:down": [
+					""
+				],
+				"no:forearm:backward": [
+					""
+				],
+				"no:forearm:up": [
+					""
+				],
+				"no:forearm:forward": [
+					""
+				],
+				"no:forearm:down": [
+					""
+				],
+				"no:upperarm:backward": [
+					""
+				],
+				"no:upperarm:up": [
+					""
+				],
+				"no:upperarm:forward": [
+					""
+				],
+				"no:upperarm:down": [
+					""
 				]
 			}
 		},
@@ -120,568 +121,113 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"enableCond": [
 				[
 					{
-						"module": "coverage",
-						"operator": "=",
-						"value": "full"
+						"view": "back"
 					}
 				]
 			],
-			"name": "Full-Back",
-			"priority": "BELOW_ARM_LEFT",
+			"name": "Back",
 			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"legs",
+				"body"
 			],
-			"mirror": 1,
-			"colorizationKey": "sleeves",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "sleeves-full-body_back.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "sleeves-full-body_back_armsback.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "sleeves-full-body_armsdown.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "sleeves-full-body_back_armsup.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"enableCond": [
-				[
-					{
-						"module": "coverage",
-						"operator": "=",
-						"value": "forearm"
-					}
-				]
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "sleeves"
+				}
 			],
-			"name": "Forearm-Front",
-			"priority": "ABOVE_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "worn_l"
+				},
+				{
+					"type": "typedModule",
+					"module": "coverage"
+				},
+				{
+					"type": "armRotation",
+					"side": "left"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "sleeves",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "sleeves-forearm-body.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "sleeves-forearm-body_armsback.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "sleeves-forearm-body_armsdown.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "sleeves-forearm-body_armsup.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"enableCond": [
-				[
-					{
-						"module": "coverage",
-						"operator": "=",
-						"value": "forearm"
-					}
-				]
-			],
-			"name": "Forearm-Back",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "sleeves",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "sleeves-forearm-body_back.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "sleeves-forearm-body_back_armsback.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "sleeves-forearm-body_back_armsdown.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "sleeves-forearm-body_back_armsup.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"enableCond": [
-				[
-					{
-						"module": "coverage",
-						"operator": "=",
-						"value": "upperarm"
-					}
-				]
-			],
-			"name": "Upperarm-Front",
-			"priority": "ABOVE_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "sleeves",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "sleeves-upperarm-body.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "sleeves-upperarm-body_armsback.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "sleeves-upperarm-body_armsdown.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "sleeves-upperarm-body_armsup.png",
-						"condition": [
-							[
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"enableCond": [
-				[
-					{
-						"module": "coverage",
-						"operator": "=",
-						"value": "upper"
-					}
-				]
-			],
-			"name": "Upperarm-Back",
-			"priority": "BELOW_ARM_LEFT",
-			"points": "body",
-			"pointType": [
-				"bodyarm_l",
-				"arm_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "sleeves",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "sleeves-upperarm-body_back.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "forward"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "sleeves-upperarm-body_back_armsback.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "backward"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "sleeves-upperarm-body_armsdown.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					},
-					{
-						"image": "sleeves-upperarm-body_back_armsup.png",
-						"condition": [
-							[
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "left",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "worn_l",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
-					}
+			"imageMap": {
+				"yes:full:backward": [
+					"sleeves-full-body_back_armsback.png"
+				],
+				"yes:full:up": [
+					"sleeves-full-body_back_armsup.png"
+				],
+				"yes:full:forward": [
+					"sleeves-full-body_back.png"
+				],
+				"yes:full:down": [
+					"sleeves-full-body_back_armsdown.png"
+				],
+				"yes:forearm:backward": [
+					"sleeves-forearm-body_back_armsback.png"
+				],
+				"yes:forearm:up": [
+					"sleeves-forearm-body_back_armsup.png"
+				],
+				"yes:forearm:forward": [
+					"sleeves-forearm-body_back.png"
+				],
+				"yes:forearm:down": [
+					"sleeves-forearm-body_back_armsdown.png"
+				],
+				"yes:upperarm:backward": [
+					"sleeves-upperarm-body_back_armsback.png"
+				],
+				"yes:upperarm:up": [
+					"sleeves-upperarm-body_back_armsup.png"
+				],
+				"yes:upperarm:forward": [
+					"sleeves-upperarm-body_back.png"
+				],
+				"yes:upperarm:down": [
+					"sleeves-upperarm-body_back_armsdown.png"
+				],
+				"no:full:backward": [
+					""
+				],
+				"no:full:up": [
+					""
+				],
+				"no:full:forward": [
+					""
+				],
+				"no:full:down": [
+					""
+				],
+				"no:forearm:backward": [
+					""
+				],
+				"no:forearm:up": [
+					""
+				],
+				"no:forearm:forward": [
+					""
+				],
+				"no:forearm:down": [
+					""
+				],
+				"no:upperarm:backward": [
+					""
+				],
+				"no:upperarm:up": [
+					""
+				],
+				"no:upperarm:forward": [
+					""
+				],
+				"no:upperarm:down": [
+					""
 				]
 			}
 		}
