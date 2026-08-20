@@ -22,6 +22,10 @@
 				{
 					"name": "",
 					"colorizationKey": "color_2"
+				},
+				{
+					"name": "",
+					"colorizationKey": "color_3"
 				}
 			],
 			"variables": [
@@ -39,9 +43,11 @@
 					"t-and-t_background.png",
 					"t-and-t_towel.png",
 					"t-and-t_slogan.png",
-					"t-and-t_worship.png"
+					"t-and-t_worship.png",
+					""
 				],
 				"medium:TowelAndTowelAdvert": [
+					"",
 					"",
 					"",
 					"",
@@ -51,21 +57,46 @@
 					"",
 					"",
 					"",
+					"",
 					""
 				],
 				"large:NythacorpAdvert": [
 					"t-and-t_background.png",
 					"nythacorp_logo.png",
 					"nythacorp_name.png",
-					"nythacorp_tagline.png"
+					"nythacorp_tagline.png",
+					""
 				],
 				"medium:NythacorpAdvert": [
+					"",
 					"",
 					"",
 					"",
 					""
 				],
 				"small:NythacorpAdvert": [
+					"",
+					"",
+					"",
+					"",
+					""
+				],
+				"large:PublicDungeonAdvert": [
+					"pd_background.png",
+					"pd_highlights.png",
+					"pd_main_color.png",
+					"pd_contrast_color.png",
+					"pd_shadow_color.png"
+				],
+				"medium:PublicDungeonAdvert": [
+					"",
+					"",
+					"",
+					"",
+					""
+				],
+				"small:PublicDungeonAdvert": [
+					"",
 					"",
 					"",
 					"",
@@ -95,6 +126,10 @@
 				{
 					"name": "",
 					"colorizationKey": "color_2"
+				},
+				{
+					"name": "",
+					"colorizationKey": "color_3"
 				}
 			],
 			"variables": [
@@ -112,15 +147,18 @@
 					"",
 					"",
 					"",
+					"",
 					""
 				],
 				"medium:TowelAndTowelAdvert": [
 					"t-and-t_background.png",
 					"t-and-t_towel.png",
 					"t-and-t_slogan.png",
-					"t-and-t_worship.png"
+					"t-and-t_worship.png",
+					""
 				],
 				"small:TowelAndTowelAdvert": [
+					"",
 					"",
 					"",
 					"",
@@ -130,15 +168,39 @@
 					"",
 					"",
 					"",
+					"",
 					""
 				],
 				"medium:NythacorpAdvert": [
 					"t-and-t_background.png",
 					"nythacorp_logo.png",
 					"nythacorp_name.png",
-					"nythacorp_tagline.png"
+					"nythacorp_tagline.png",
+					""
 				],
 				"small:NythacorpAdvert": [
+					"",
+					"",
+					"",
+					"",
+					""
+				],
+				"large:PublicDungeonAdvert": [
+					"",
+					"",
+					"",
+					"",
+					""
+				],
+				"medium:PublicDungeonAdvert": [
+					"pd_background.png",
+					"pd_highlights.png",
+					"pd_main_color.png",
+					"pd_contrast_color.png",
+					"pd_shadow_color.png"
+				],
+				"small:PublicDungeonAdvert": [
+					"",
 					"",
 					"",
 					"",
@@ -168,6 +230,10 @@
 				{
 					"name": "",
 					"colorizationKey": "color_2"
+				},
+				{
+					"name": "",
+					"colorizationKey": "color_3"
 				}
 			],
 			"variables": [
@@ -185,9 +251,11 @@
 					"",
 					"",
 					"",
+					"",
 					""
 				],
 				"medium:TowelAndTowelAdvert": [
+					"",
 					"",
 					"",
 					"",
@@ -197,9 +265,11 @@
 					"t-and-t_background.png",
 					"t-and-t_towel.png",
 					"t-and-t_slogan.png",
-					"t-and-t_worship.png"
+					"t-and-t_worship.png",
+					""
 				],
 				"large:NythacorpAdvert": [
+					"",
 					"",
 					"",
 					"",
@@ -209,13 +279,36 @@
 					"",
 					"",
 					"",
+					"",
 					""
 				],
 				"small:NythacorpAdvert": [
 					"t-and-t_background.png",
 					"nythacorp_logo.png",
 					"nythacorp_name.png",
-					"nythacorp_tagline.png"
+					"nythacorp_tagline.png",
+					""
+				],
+				"large:PublicDungeonAdvert": [
+					"",
+					"",
+					"",
+					"",
+					""
+				],
+				"medium:PublicDungeonAdvert": [
+					"",
+					"",
+					"",
+					"",
+					""
+				],
+				"small:PublicDungeonAdvert": [
+					"pd_background.png",
+					"pd_highlights.png",
+					"pd_main_color.png",
+					"pd_contrast_color.png",
+					"pd_shadow_color.png"
 				]
 			}
 		},
