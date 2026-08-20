@@ -132,7 +132,7 @@ DefineAsset({
 	},
 	ownership:
         {
-        	responsibleContributor: 'smallelise <elise21dev@proton.me>',
+        	responsibleContributor: 'smallelise <smallelise@proton.me>',
         	credits:
                 ['smallelise'],
         	modificationPolicy:
