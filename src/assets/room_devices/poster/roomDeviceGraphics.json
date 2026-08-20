@@ -297,18 +297,18 @@
 					""
 				],
 				"medium:PublicDungeonAdvert": [
-					"pd_background.png",
-					"pd_highlights.png",
-					"pd_main_color.png",
-					"pd_contrast_color.png",
-					"pd_shadow_color.png"
-				],
-				"small:PublicDungeonAdvert": [
 					"",
 					"",
 					"",
 					"",
 					""
+				],
+				"small:PublicDungeonAdvert": [
+					"pd_background.png",
+					"pd_highlights.png",
+					"pd_main_color.png",
+					"pd_contrast_color.png",
+					"pd_shadow_color.png"
 				]
 			}
 		},
