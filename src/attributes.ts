@@ -804,6 +804,31 @@ const ATTRIBUTES_DEFINITION_BASE = DefineAttributes({
 		description: 'A rope tying the arms to which a strappado can be held',
 		useAsAssetPreference: false,
 	},
+	Chastity_cage_estim_node: {
+		name: 'Chastity Cage E-stim node',
+		description: 'A node where a E-stim box can be attached to',
+		useAsAssetPreference: false,
+	},
+	Nipple_clamps_estim_node: {
+		name: 'Nipple Clamps E-stim node',
+		description: 'A node where a E-stim box can be attached to',
+		useAsAssetPreference: false,
+	},
+	Left_breast_pad_estim_node: {
+		name: 'Left Breast Pad E-stim node',
+		description: 'A node where a E-stim box can be attached to',
+		useAsAssetPreference: false,
+	},
+	Right_breast_pad_estim_node: {
+		name: 'Right Breast Pad E-stim node',
+		description: 'A node where a E-stim box can be attached to',
+		useAsAssetPreference: false,
+	},
+	Crotch_pad_estim_node: {
+		name: 'Crotch Pad E-stim node',
+		description: 'A node where a E-stim box can be attached to',
+		useAsAssetPreference: false,
+	},
 });
 
 //#endregion

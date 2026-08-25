@@ -18,6 +18,10 @@ DefineRoomDeviceAsset({
 			name: 'Color 2',
 			default: '#283593',
 		},
+		color_3: {
+			name: 'Color 3',
+			default: '#222222',
+		},
 	},
 	staticAttributes: ['Wall'],
 	preview: 'advert_preview.png',
@@ -57,6 +61,10 @@ DefineRoomDeviceAsset({
 					id: 'NythacorpAdvert',
 					name: 'Nythacorp advert',
 				},
+				{
+					id: 'PublicDungeonAdvert',
+					name: 'Public Dungeon advert',
+				},
 			],
 		},
 	},
@@ -72,7 +80,7 @@ DefineRoomDeviceAsset({
 		reusePolicy: 'Ask first',
 		licensing: [
 			{
-				part: 'Advert',
+				part: 'Towel & towel Advert',
 				source: 'Self-Made',
 				copyrightHolder: 'Taja',
 				editedBy: 'Sandrine',
@@ -83,6 +91,13 @@ DefineRoomDeviceAsset({
 				source: 'Self-Made',
 				copyrightHolder: 'Nythaleath',
 				editedBy: 'Nythaleath',
+				license: 'Pandora-Use-Only-v1-or-later',
+			},
+			{
+				part: 'Public Dungeon Advert',
+				source: 'Self-Made',
+				copyrightHolder: 'Sandrine',
+				editedBy: 'Sandrine',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
