@@ -9,7 +9,7 @@
 			"type": "autoMesh",
 			"name": "Tails special",
 			"points": "static",
-			"automeshTemplate": "background",
+			"automeshTemplate": "belowBackHair",
 			"graphicalLayers": [
 				{
 					"name": "Tail_1",
