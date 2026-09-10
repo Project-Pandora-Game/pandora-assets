@@ -6,83 +6,38 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "tail",
-			"priority": "BELOW_BACK_HAIR",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "tail",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "mouse_tail_down_left.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "left"
-								}
-							]
-						]
-					},
-					{
-						"image": "mouse_tail_down_right.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "right"
-								}
-							]
-						]
-					},
-					{
-						"image": "mouse_tail_up_left.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "left"
-								}
-							]
-						]
-					},
-					{
-						"image": "mouse_tail_up_right.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "right"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "tail"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "vertical"
+				},
+				{
+					"type": "typedModule",
+					"module": "horizontal"
+				}
+			],
+			"imageMap": {
+				"up:left": [
+					"mouse_tail_up_left.png"
+				],
+				"up:right": [
+					"mouse_tail_up_right.png"
+				],
+				"down:left": [
+					"mouse_tail_down_left.png"
+				],
+				"down:right": [
+					"mouse_tail_down_right.png"
 				]
 			}
 		}

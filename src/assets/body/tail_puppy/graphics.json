@@ -6,279 +6,66 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "tail",
-			"priority": "BELOW_BACK_HAIR",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "tail",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "thin_tail_down_left.png",
-						"condition": [
-							[
-								{
-									"module": "thickness",
-									"operator": "=",
-									"value": "thin"
-								},
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "left"
-								}
-							]
-						]
-					},
-					{
-						"image": "thin_tail_down_right.png",
-						"condition": [
-							[
-								{
-									"module": "thickness",
-									"operator": "=",
-									"value": "thin"
-								},
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "right"
-								}
-							]
-						]
-					},
-					{
-						"image": "thin_tail_up_left.png",
-						"condition": [
-							[
-								{
-									"module": "thickness",
-									"operator": "=",
-									"value": "thin"
-								},
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "left"
-								}
-							]
-						]
-					},
-					{
-						"image": "thin_tail_up_right.png",
-						"condition": [
-							[
-								{
-									"module": "thickness",
-									"operator": "=",
-									"value": "thin"
-								},
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "right"
-								}
-							]
-						]
-					},
-					{
-						"image": "normal_tail_down_left.png",
-						"condition": [
-							[
-								{
-									"module": "thickness",
-									"operator": "=",
-									"value": "normal"
-								},
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "left"
-								}
-							]
-						]
-					},
-					{
-						"image": "normal_tail_down_right.png",
-						"condition": [
-							[
-								{
-									"module": "thickness",
-									"operator": "=",
-									"value": "normal"
-								},
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "right"
-								}
-							]
-						]
-					},
-					{
-						"image": "normal_tail_up_left.png",
-						"condition": [
-							[
-								{
-									"module": "thickness",
-									"operator": "=",
-									"value": "normal"
-								},
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "left"
-								}
-							]
-						]
-					},
-					{
-						"image": "normal_tail_up_right.png",
-						"condition": [
-							[
-								{
-									"module": "thickness",
-									"operator": "=",
-									"value": "normal"
-								},
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "right"
-								}
-							]
-						]
-					},
-					{
-						"image": "thick_tail_down_left.png",
-						"condition": [
-							[
-								{
-									"module": "thickness",
-									"operator": "=",
-									"value": "thick"
-								},
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "left"
-								}
-							]
-						]
-					},
-					{
-						"image": "thick_tail_down_right.png",
-						"condition": [
-							[
-								{
-									"module": "thickness",
-									"operator": "=",
-									"value": "thick"
-								},
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "right"
-								}
-							]
-						]
-					},
-					{
-						"image": "thick_tail_up_left.png",
-						"condition": [
-							[
-								{
-									"module": "thickness",
-									"operator": "=",
-									"value": "thick"
-								},
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "left"
-								}
-							]
-						]
-					},
-					{
-						"image": "thick_tail_up_right.png",
-						"condition": [
-							[
-								{
-									"module": "thickness",
-									"operator": "=",
-									"value": "thick"
-								},
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "right"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBackHair",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "tail"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "thickness"
+				},
+				{
+					"type": "typedModule",
+					"module": "vertical"
+				},
+				{
+					"type": "typedModule",
+					"module": "horizontal"
+				}
+			],
+			"imageMap": {
+				"thin:up:left": [
+					"thin_tail_up_left.png"
+				],
+				"thin:up:right": [
+					"thin_tail_up_right.png"
+				],
+				"thin:down:left": [
+					"thin_tail_down_left.png"
+				],
+				"thin:down:right": [
+					"thin_tail_down_right.png"
+				],
+				"normal:up:left": [
+					"normal_tail_up_left.png"
+				],
+				"normal:up:right": [
+					"normal_tail_up_right.png"
+				],
+				"normal:down:left": [
+					"normal_tail_down_left.png"
+				],
+				"normal:down:right": [
+					"normal_tail_down_right.png"
+				],
+				"thick:up:left": [
+					"thick_tail_up_left.png"
+				],
+				"thick:up:right": [
+					"thick_tail_up_right.png"
+				],
+				"thick:down:left": [
+					"thick_tail_down_left.png"
+				],
+				"thick:down:right": [
+					"thick_tail_down_right.png"
 				]
 			}
 		}
