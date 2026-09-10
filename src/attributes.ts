@@ -742,6 +742,14 @@ const ATTRIBUTES_DEFINITION_BASE = DefineAttributes({
 		name: 'Chainable ankle cuffs',
 		description: 'A cuff that is chainable to another item',
 	},
+	Armbinder_normal_lacing: {
+		name: 'An armbinder',
+		description: 'A normal lacing armbinder',
+	},
+	Armbinder_tight_lacing: {
+		name: 'An armbinder',
+		description: 'A tight lacing armbinder',
+	},
 	Armbinder_chainable: {
 		name: 'A chainable armbinder',
 		description: 'An armbinder that is chainable to another item',
@@ -827,6 +835,11 @@ const ATTRIBUTES_DEFINITION_BASE = DefineAttributes({
 	Crotch_pad_estim_node: {
 		name: 'Crotch Pad E-stim node',
 		description: 'A node where a E-stim box can be attached to',
+		useAsAssetPreference: false,
+	},
+	Elbow_belt: {
+		name: 'Elbow belt',
+		description: 'A belt placing elbows almost touching',
 		useAsAssetPreference: false,
 	},
 });

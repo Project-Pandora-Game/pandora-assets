@@ -123,6 +123,11 @@ DefineAsset({
 								},
 							],
 						},
+						attributes: {
+							provides: [
+								'Armbinder_normal_lacing',
+							],
+						},
 					},
 				},
 				{
@@ -136,6 +141,11 @@ DefineAsset({
 								elbow_r: -15,
 								elbow_l: -15,
 							},
+						},
+						attributes: {
+							provides: [
+								'Armbinder_tight_lacing',
+							],
 						},
 					},
 				},
