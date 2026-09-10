@@ -24,6 +24,7 @@ DefineAsset({
 			'Mouth_open_wide',
 			'!Mouth_protruding',
 			'!Mouth_cover',
+			'!Mouth_tongue_out',
 		],
 	},
 	effects: {
