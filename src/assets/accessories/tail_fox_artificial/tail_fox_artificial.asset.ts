@@ -23,7 +23,6 @@ DefineAsset({
 		horizontal: {
 			type: 'typed',
 			name: 'Horizontal Alignment',
-			// expression: 'Horizontal Tail Direction',
 			variants: [
 				{
 					id: 'left',
