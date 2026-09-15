@@ -248,19 +248,85 @@
 				{
 					"type": "typedModule",
 					"module": "soleColor_l"
+				},
+				{
+					"type": "view"
+				},
+				{
+					"type": "legsState"
 				}
 			],
 			"imageMap": {
-				"none": [
+				"none:front:standing": [
 					""
 				],
-				"one": [
+				"none:front:sitting": [
+					""
+				],
+				"none:front:kneeling": [
+					""
+				],
+				"none:back:standing": [
+					""
+				],
+				"none:back:sitting": [
+					""
+				],
+				"none:back:kneeling": [
+					""
+				],
+				"one:front:standing": [
+					""
+				],
+				"one:front:sitting": [
+					""
+				],
+				"one:front:kneeling": [
+					""
+				],
+				"one:back:standing": [
+					""
+				],
+				"one:back:sitting": [
+					""
+				],
+				"one:back:kneeling": [
 					"soles_one.png"
 				],
-				"multi": [
+				"multi:front:standing": [
+					""
+				],
+				"multi:front:sitting": [
+					""
+				],
+				"multi:front:kneeling": [
+					""
+				],
+				"multi:back:standing": [
+					""
+				],
+				"multi:back:sitting": [
+					""
+				],
+				"multi:back:kneeling": [
 					"soles_few.png"
 				],
-				"many": [
+				"many:front:standing": [
+					""
+				],
+				"many:front:sitting": [
+					""
+				],
+				"many:front:kneeling": [
+					""
+				],
+				"many:back:standing": [
+					""
+				],
+				"many:back:sitting": [
+					""
+				],
+				"many:back:kneeling": [
 					"soles_many.png"
 				]
 			}
