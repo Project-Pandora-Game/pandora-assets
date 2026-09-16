@@ -2,7 +2,7 @@
 	"name": "pandora-assets",
 	"version": "0.1.0",
 	"private": true,
-	"packageManager": "pnpm@11.25.0+sha512.5cde925b4f075f725eb71fbae18a42ffe784524789f19b61c731cb8721ec28aaee160e01a8d5af4fedb2a42cdbf300efe23db356b0d4a17b4d63e11f8ab7c956",
+	"packageManager": "pnpm@11.26.0+sha512.fc0e2bf890b9f983611f1ab68c0637bce914390653699f83c1a78b005ed25f2c81e77920c8fd8eee2ecf0b58b28cdcb00a84d97f69bcf7c56b2f344710238664",
 	"engines": {
 		"node": ">=24.x"
 	},
@@ -33,7 +33,7 @@
 	},
 	"dependencies": {
 		"express": "5.2.1",
-		"ignore": "7.0.8",
+		"ignore": "7.0.9",
 		"immer": "11.1.18",
 		"json-diff": "1.0.6",
 		"lodash-es": "4.18.1",
@@ -58,6 +58,6 @@
 		"tsc-watch": "7.2.1",
 		"tslib": "2.8.1",
 		"typescript": "6.0.3",
-		"typescript-eslint": "8.69.0"
+		"typescript-eslint": "8.70.0"
 	}
 }
