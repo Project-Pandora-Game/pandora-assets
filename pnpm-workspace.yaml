@@ -1,4 +1,5 @@
 allowBuilds:
+  '@parcel/watcher': true
   pandora-common: true
   pandora-common@git+https://github.com/Project-Pandora-Game/pandora.git: true
   sharp: true
