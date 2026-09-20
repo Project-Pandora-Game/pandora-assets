@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /* Scripts are run in Node, so don't make use of the logger or ES imports */
 /* eslint-disable no-console, @typescript-eslint/no-require-imports */
 const { constants } = require('fs');
@@ -17,6 +18,9 @@ async function postinstall() {
 	}
 }
 
+/**
+ * @param {string} basePath
+ */
 async function copyDotenv(basePath) {
 	try {
 		await copyFile(
