@@ -698,6 +698,16 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
+			"enableCond": [
+				[
+					{
+						"attribute": "!Armbinder_normal_lacing"
+					},
+					{
+						"attribute": "!Armbinder_tight_lacing"
+					}
+				]
+			],
 			"name": "armbinder",
 			"priority": "BELOW_ARM_LEFT",
 			"points": "static",
@@ -708,6 +718,95 @@
 				"overrides": [
 					{
 						"image": "armbinder.png",
+						"condition": [
+							[
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "armbinder"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"enableCond": [
+				[
+					{
+						"attribute": "Armbinder_tight_lacing"
+					}
+				]
+			],
+			"name": "armbinder",
+			"priority": "BELOW_ARM_LEFT",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "rope",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "armbinder_tight.png",
+						"condition": [
+							[
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "armbinder"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"enableCond": [
+				[
+					{
+						"attribute": "Armbinder_normal_lacing"
+					}
+				]
+			],
+			"name": "armbinder",
+			"priority": "BELOW_ARM_LEFT",
+			"points": "static",
+			"mirror": 0,
+			"colorizationKey": "rope",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "armbinder_big.png",
+						"condition": [
+							[
+								{
+									"bone": "arm_width",
+									"operator": ">",
+									"value": 0
+								},
+								{
+									"module": "arms",
+									"operator": "=",
+									"value": "armbinder"
+								}
+							]
+						]
+					},
+					{
+						"image": "armbinder_normal.png",
 						"condition": [
 							[
 								{
