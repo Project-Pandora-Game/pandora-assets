@@ -24,6 +24,10 @@ DefineAsset({
 		covers: [
 			'Mouth_item',
 		],
+		requires: [
+			'!Mouth_tongue_out',
+			'!Mouth_protruding',
+		],
 	},
 	modules: {
 		lock: {
