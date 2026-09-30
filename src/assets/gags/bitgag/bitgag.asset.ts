@@ -25,6 +25,7 @@ DefineAsset({
 		requires: [
 			'Mouth_open_wide',
 			'!Mouth_protruding',
+			'!Mouth_tongue_out',
 			'!Mouth_cover',
 		],
 		covers: [
