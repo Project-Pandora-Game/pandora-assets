@@ -127,6 +127,9 @@ DefineAsset({
 						stateFlags: {
 							provides: ['chain'],
 						},
+						attributes: {
+							provides: ['Elbows_restraint'],
+						},
 					},
 				},
 			],

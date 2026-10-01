@@ -32,36 +32,8 @@ DefineAsset({
 					id: 'single',
 					name: 'Single',
 					properties: {
-						poseLimits: {
-							options: [
-								{
-									legs: {
-										pose: 'standing',
-									},
-									bones: {
-										leg_r: 2,
-										leg_l: 2,
-									},
-								},
-								{
-									legs: {
-										pose: 'sitting',
-									},
-									bones: {
-										leg_r: 2,
-										leg_l: 2,
-									},
-								},
-								{
-									legs: {
-										pose: 'kneeling',
-									},
-									bones: {
-										leg_r: 5,
-										leg_l: 5,
-									},
-								},
-							],
+						stateFlags: {
+							provides: ['tied_legs'],
 						},
 						attributes: {
 							provides: [
@@ -74,36 +46,8 @@ DefineAsset({
 					id: 'double',
 					name: 'Double',
 					properties: {
-						poseLimits: {
-							options: [
-								{
-									legs: {
-										pose: 'standing',
-									},
-									bones: {
-										leg_r: 2,
-										leg_l: 2,
-									},
-								},
-								{
-									legs: {
-										pose: 'sitting',
-									},
-									bones: {
-										leg_r: 2,
-										leg_l: 2,
-									},
-								},
-								{
-									legs: {
-										pose: 'kneeling',
-									},
-									bones: {
-										leg_r: 5,
-										leg_l: 5,
-									},
-								},
-							],
+						stateFlags: {
+							provides: ['tied_legs'],
 						},
 						attributes: {
 							provides: [
@@ -117,36 +61,8 @@ DefineAsset({
 					id: 'full',
 					name: 'Full',
 					properties: {
-						poseLimits: {
-							options: [
-								{
-									legs: {
-										pose: 'standing',
-									},
-									bones: {
-										leg_r: 2,
-										leg_l: 2,
-									},
-								},
-								{
-									legs: {
-										pose: 'sitting',
-									},
-									bones: {
-										leg_r: 2,
-										leg_l: 2,
-									},
-								},
-								{
-									legs: {
-										pose: 'kneeling',
-									},
-									bones: {
-										leg_r: 5,
-										leg_l: 5,
-									},
-								},
-							],
+						stateFlags: {
+							provides: ['tied_legs'],
 						},
 						attributes: {
 							provides: [
@@ -170,36 +86,8 @@ DefineAsset({
 					id: 'single',
 					name: 'Single',
 					properties: {
-						poseLimits: {
-							options: [
-								{
-									legs: {
-										pose: 'standing',
-									},
-									bones: {
-										leg_r: 2,
-										leg_l: 2,
-									},
-								},
-								{
-									legs: {
-										pose: 'sitting',
-									},
-									bones: {
-										leg_r: 2,
-										leg_l: 2,
-									},
-								},
-								{
-									legs: {
-										pose: 'kneeling',
-									},
-									bones: {
-										leg_r: 5,
-										leg_l: 5,
-									},
-								},
-							],
+						stateFlags: {
+							provides: ['tied_legs'],
 						},
 						attributes: {
 							provides: [
@@ -213,36 +101,8 @@ DefineAsset({
 					id: 'double',
 					name: 'Double',
 					properties: {
-						poseLimits: {
-							options: [
-								{
-									legs: {
-										pose: 'standing',
-									},
-									bones: {
-										leg_r: 2,
-										leg_l: 2,
-									},
-								},
-								{
-									legs: {
-										pose: 'sitting',
-									},
-									bones: {
-										leg_r: 2,
-										leg_l: 2,
-									},
-								},
-								{
-									legs: {
-										pose: 'kneeling',
-									},
-									bones: {
-										leg_r: 5,
-										leg_l: 5,
-									},
-								},
-							],
+						stateFlags: {
+							provides: ['tied_legs'],
 						},
 						attributes: {
 							provides: [
@@ -255,36 +115,8 @@ DefineAsset({
 					id: 'complex',
 					name: 'Complex',
 					properties: {
-						poseLimits: {
-							options: [
-								{
-									legs: {
-										pose: 'standing',
-									},
-									bones: {
-										leg_r: 2,
-										leg_l: 2,
-									},
-								},
-								{
-									legs: {
-										pose: 'sitting',
-									},
-									bones: {
-										leg_r: 2,
-										leg_l: 2,
-									},
-								},
-								{
-									legs: {
-										pose: 'kneeling',
-									},
-									bones: {
-										leg_r: 5,
-										leg_l: 5,
-									},
-								},
-							],
+						stateFlags: {
+							provides: ['tied_legs'],
 						},
 						attributes: {
 							provides: [
@@ -297,36 +129,8 @@ DefineAsset({
 					id: 'full',
 					name: 'Full',
 					properties: {
-						poseLimits: {
-							options: [
-								{
-									legs: {
-										pose: 'standing',
-									},
-									bones: {
-										leg_r: 2,
-										leg_l: 2,
-									},
-								},
-								{
-									legs: {
-										pose: 'sitting',
-									},
-									bones: {
-										leg_r: 2,
-										leg_l: 2,
-									},
-								},
-								{
-									legs: {
-										pose: 'kneeling',
-									},
-									bones: {
-										leg_r: 5,
-										leg_l: 5,
-									},
-								},
-							],
+						stateFlags: {
+							provides: ['tied_legs'],
 						},
 						attributes: {
 							provides: [
@@ -395,6 +199,44 @@ DefineAsset({
 			],
 		},
 	},
+	stateFlagCombinations: [
+		{
+			requiredFlags: ['tied_legs'],
+			properties: {
+				poseLimits: {
+					options: [
+						{
+							legs: {
+								pose: 'standing',
+							},
+							bones: {
+								leg_r: 2,
+								leg_l: 2,
+							},
+						},
+						{
+							legs: {
+								pose: 'sitting',
+							},
+							bones: {
+								leg_r: [[2, 4]],
+								leg_l: [[2, 4]],
+							},
+						},
+						{
+							legs: {
+								pose: 'kneeling',
+							},
+							bones: {
+								leg_r: 5,
+								leg_l: 5,
+							},
+						},
+					],
+				},
+			},
+		},
+	],
 	chat: {
 		actionAdd: 'SOURCE_CHARACTER tied ITEM_ASSET_NAME around TARGET_CHARACTER_DYNAMIC_POSSESSIVE body.',
 		actionRemove: 'SOURCE_CHARACTER removed ITEM_ASSET_NAME from TARGET_CHARACTER_DYNAMIC_POSSESSIVE body.',
