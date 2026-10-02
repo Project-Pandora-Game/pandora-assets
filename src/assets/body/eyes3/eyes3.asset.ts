@@ -181,7 +181,7 @@ DefineBodypart({
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-		credits: ['ClaudiaMia'],
+		credits: ['ClaudiaMia', 'Nikky'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
@@ -189,6 +189,13 @@ DefineBodypart({
 				source: 'Self-Made',
 				copyrightHolder: 'ClaudiaMia',
 				editedBy: 'ClaudiaMia',
+				license: 'Pandora-Use-Only-v1-or-later',
+			},
+			{
+				part: 'vertical slit pupils',
+				source: 'Self-Made',
+				copyrightHolder: 'Nikky',
+				editedBy: 'Nikky',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
