@@ -36,33 +36,6 @@ DefineBodypart({
 		],
 	},
 	modules: {
-		pupilType: {
-			type: 'typed',
-			name: 'Pupil Types',
-			variants: [
-				{
-					id: 'largePupils',
-					name: 'Large Pupils',
-					default: true,
-				},
-				{
-					id: 'smallPupils',
-					name: 'Small Pupils',
-				},
-				{
-					id: 'starPupils',
-					name: 'Star-shaped Pupils',
-				},
-				{
-					id: 'crossPupils',
-					name: 'Cross-shaped Pupils',
-				},
-				{
-					id: 'noPupils',
-					name: 'No Pupils',
-				},
-			],
-		},
 		eyeState_l: {
 			type: 'typed',
 			name: 'Left Eye Open/Close',
@@ -169,6 +142,38 @@ DefineBodypart({
 				{
 					id: 'wideSmall',
 					name: 'Wide (Small)',
+				},
+			],
+		},
+		pupilType: {
+			type: 'typed',
+			name: 'Pupil Types',
+			expression: 'Pupil Types',
+			variants: [
+				{
+					id: 'largePupils',
+					name: 'Large Pupils',
+					default: true,
+				},
+				{
+					id: 'smallPupils',
+					name: 'Small Pupils',
+				},
+				{
+					id: 'starPupils',
+					name: 'Star-shaped Pupils',
+				},
+				{
+					id: 'crossPupils',
+					name: 'Cross-shaped Pupils',
+				},
+				{
+					id: 'verticalSlitPupils',
+					name: 'Vertical Slit Pupils',
+				},
+				{
+					id: 'noPupils',
+					name: 'No Pupils',
 				},
 			],
 		},

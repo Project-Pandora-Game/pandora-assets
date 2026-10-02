@@ -329,6 +329,15 @@
 			"width": 128,
 			"height": 64,
 			"type": "mesh",
+			"enableCond": [
+				[
+					{
+						"module": "pupilType",
+						"operator": "=",
+						"value": "normalPupils"
+					}
+				]
+			],
 			"name": "Pupil",
 			"priority": "BODY",
 			"points": "body_eyes",
@@ -573,6 +582,283 @@
 					},
 					{
 						"image": "eyes_squint/pupil_squint_rolled.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "squint"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "rolled"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 436,
+			"y": 257,
+			"width": 128,
+			"height": 64,
+			"type": "mesh",
+			"enableCond": [
+				[
+					{
+						"module": "pupilType",
+						"operator": "=",
+						"value": "verticalSlitPupils"
+					}
+				]
+			],
+			"name": "Pupil Vertical Slit",
+			"priority": "BODY",
+			"points": "body_eyes",
+			"pointType": [
+				"eye_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "pupil",
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "",
+						"condition": [
+							[
+								{
+									"blinking": true
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_normal/verticalslit_pupil_normal_straight.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "straight"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_normal/verticalslit_pupil_normal_cross.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_normal/verticalslit_pupil_normal_left.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "left"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_normal/verticalslit_pupil_normal_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "right"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_normal/verticalslit_pupil_normal_down.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_normal/verticalslit_pupil_normal_up.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "up"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_normal/verticalslit_pupil_normal_rolled.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "normal"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "rolled"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_squint/verticalslit_pupil_squint_straight.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "squint"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "straight"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_squint/verticalslit_pupil_squint_cross.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "squint"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_squint/verticalslit_pupil_squint_left.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "squint"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "left"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_squint/verticalslit_pupil_squint_right.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "squint"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "right"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_squint/verticalslit_pupil_squint_down.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "squint"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_squint/verticalslit_pupil_squint_up.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "squint"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "up"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyes_squint/verticalslit_pupil_squint_rolled.png",
 						"condition": [
 							[
 								{

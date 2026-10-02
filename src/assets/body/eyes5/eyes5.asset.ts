@@ -159,6 +159,22 @@ DefineBodypart({
 				},
 			],
 		},
+		pupilType: {
+			type: 'typed',
+			name: 'Pupil Types',
+			expression: 'Pupil Types',
+			variants: [
+				{
+					id: 'normalPupils',
+					name: 'Normal Pupils',
+					default: true,
+				},
+				{
+					id: 'verticalSlitPupils',
+					name: 'Vertical Slit Pupils',
+				},
+			],
+		},
 	},
 	ownership: {
 		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',
