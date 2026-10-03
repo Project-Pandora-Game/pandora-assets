@@ -227,74 +227,6 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "Eyelashes",
-			"priority": "BODY",
-			"points": "body_eyes",
-			"pointType": [
-				"eye_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "lashes",
-			"image": {
-				"image": "eyelashes.png",
-				"overrides": [
-					{
-						"image": "eyes_closed.png",
-						"condition": [
-							[
-								{
-									"module": "eyeState_l",
-									"operator": "=",
-									"value": "closed"
-								}
-							],
-							[
-								{
-									"module": "eyeState_l",
-									"operator": "=",
-									"value": "blind"
-								}
-							],
-							[
-								{
-									"blinking": true
-								}
-							]
-						]
-					},
-					{
-						"image": "eyelashes_wide.png",
-						"condition": [
-							[
-								{
-									"module": "eyeDirection",
-									"operator": "=",
-									"value": "wideBig"
-								}
-							]
-						]
-					},
-					{
-						"image": "eyelashes_wide.png",
-						"condition": [
-							[
-								{
-									"module": "eyeDirection",
-									"operator": "=",
-									"value": "wideSmall"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
 			"name": "Shine",
 			"priority": "BODY",
 			"points": "body_eyes",
@@ -1040,6 +972,74 @@
 									"module": "pupilType",
 									"operator": "=",
 									"value": "noPupils"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Eyelashes",
+			"priority": "BODY",
+			"points": "body_eyes",
+			"pointType": [
+				"eye_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "lashes",
+			"image": {
+				"image": "eyelashes.png",
+				"overrides": [
+					{
+						"image": "eyes_closed.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "closed"
+								}
+							],
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "blind"
+								}
+							],
+							[
+								{
+									"blinking": true
+								}
+							]
+						]
+					},
+					{
+						"image": "eyelashes_wide.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "wideBig"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyelashes_wide.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "wideSmall"
 								}
 							]
 						]
