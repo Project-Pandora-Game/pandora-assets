@@ -14,6 +14,7 @@
 				"eye_l"
 			],
 			"mirror": 1,
+			"previewHideFace": true,
 			"colorizationKey": "sclera",
 			"image": {
 				"image": "",
@@ -68,6 +69,7 @@
 				"eye_l"
 			],
 			"mirror": 1,
+			"previewHideFace": true,
 			"colorizationKey": "iris_l",
 			"image": {
 				"image": "",
@@ -345,6 +347,7 @@
 				"eye_l"
 			],
 			"mirror": 1,
+			"previewHideFace": true,
 			"colorizationKey": "pupil",
 			"image": {
 				"image": "",
@@ -622,6 +625,7 @@
 				"eye_l"
 			],
 			"mirror": 1,
+			"previewHideFace": true,
 			"colorizationKey": "pupil",
 			"image": {
 				"image": "",
@@ -890,6 +894,7 @@
 				"eye_l"
 			],
 			"mirror": 1,
+			"previewHideFace": true,
 			"colorizationKey": "reflections",
 			"image": {
 				"image": "eyes_normal/eye_reflections.png",
@@ -934,6 +939,7 @@
 				"eye_l"
 			],
 			"mirror": 1,
+			"previewHideFace": true,
 			"colorizationKey": "shadow",
 			"image": {
 				"image": "eyes_normal/eye_shadow.png",
@@ -978,6 +984,7 @@
 				"eye_l"
 			],
 			"mirror": 1,
+			"previewHideFace": true,
 			"colorizationKey": "lashes",
 			"image": {
 				"image": "",

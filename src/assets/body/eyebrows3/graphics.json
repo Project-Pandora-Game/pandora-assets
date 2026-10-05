@@ -10,6 +10,7 @@
 			"name": "",
 			"priority": "BODY",
 			"points": "body_eyebrows",
+			"previewHideFace": true,
 			"mirror": 0,
 			"colorizationKey": "eyebrows",
 			"image": {
