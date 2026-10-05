@@ -8,12 +8,12 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "",
-			"priority": "BACK_HAIR",
+			"priority": "FRONT_HAIR",
 			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "hair",
 			"image": {
-				"image": "backhair15.png",
+				"image": "front_hair19.png",
 				"overrides": []
 			}
 		},
@@ -24,15 +24,15 @@
 			"height": 1500,
 			"type": "mesh",
 			"name": "",
-			"priority": "BACK_HAIR",
+			"priority": "FRONT_HAIR",
 			"points": "static",
 			"mirror": 0,
 			"colorizationKey": "hairShine",
 			"image": {
-				"image": "backhair15_Shine.png",
+				"image": "front_hair19_shine.png",
 				"overrides": [
 					{
-						"image": "",
+						"image": "front_hair19.png",
 						"condition": [
 							[
 								{
