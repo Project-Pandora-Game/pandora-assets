@@ -17,7 +17,7 @@ const bodypart = DefineBodypart({
 	},
 	modules,
 	ownership: {
-		responsibleContributor: 'Miagnificent <338069332+Miagnificent@users.noreply.github.com>',
+		responsibleContributor: 'Miagnificent <Miagnificent960@gmail.com>',
 		credits: ['Mia'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
