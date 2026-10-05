@@ -235,6 +235,16 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"legs": "kneeling"
+					},
+					{
+						"view": "back"
+					}
+				]
+			],
 			"name": "soles kneeling",
 			"points": "body_soles_back",
 			"automeshTemplate": "body",
@@ -248,85 +258,19 @@
 				{
 					"type": "typedModule",
 					"module": "soleColor_l"
-				},
-				{
-					"type": "view"
-				},
-				{
-					"type": "legsState"
 				}
 			],
 			"imageMap": {
-				"none:front:standing": [
+				"none": [
 					""
 				],
-				"none:front:sitting": [
-					""
-				],
-				"none:front:kneeling": [
-					""
-				],
-				"none:back:standing": [
-					""
-				],
-				"none:back:sitting": [
-					""
-				],
-				"none:back:kneeling": [
-					""
-				],
-				"one:front:standing": [
-					""
-				],
-				"one:front:sitting": [
-					""
-				],
-				"one:front:kneeling": [
-					""
-				],
-				"one:back:standing": [
-					""
-				],
-				"one:back:sitting": [
-					""
-				],
-				"one:back:kneeling": [
+				"one": [
 					"soles_one.png"
 				],
-				"multi:front:standing": [
-					""
-				],
-				"multi:front:sitting": [
-					""
-				],
-				"multi:front:kneeling": [
-					""
-				],
-				"multi:back:standing": [
-					""
-				],
-				"multi:back:sitting": [
-					""
-				],
-				"multi:back:kneeling": [
+				"multi": [
 					"soles_few.png"
 				],
-				"many:front:standing": [
-					""
-				],
-				"many:front:sitting": [
-					""
-				],
-				"many:front:kneeling": [
-					""
-				],
-				"many:back:standing": [
-					""
-				],
-				"many:back:sitting": [
-					""
-				],
-				"many:back:kneeling": [
+				"many": [
 					"soles_many.png"
 				]
 			}
