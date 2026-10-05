@@ -53,7 +53,6 @@ const bodypart = DefineBodypart({
 	},
 });
 
-
 DefineAsset({
 	...bodypart, // Reuse most of bodypart definition
 	id: 'body/tail_fox/artificial',
