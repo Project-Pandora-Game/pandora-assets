@@ -1,4 +1,4 @@
-DefineBodypart({
+const bodypart = DefineBodypart({
 	name: 'Cat Tail',
 	bodypart: 'tail',
 	graphics: 'graphics.json',
@@ -93,5 +93,68 @@ DefineBodypart({
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
+	},
+});
+
+DefineAsset({
+	...bodypart, // Reuse most of bodypart definition
+	id: 'body/tail_cat/artificial',
+	name: 'Artificial Cat Tail',
+	allowRandomizerUsage: undefined,
+	size: 'small',
+	modules: {
+		decoration: {
+			type: 'typed',
+			name: 'Tail Decorations',
+			variants: [
+				{
+					id: 'none',
+					name: 'None',
+					default: true,
+				},
+				{
+					id: 'tip',
+					name: 'With Tip',
+				},
+				{
+					id: 'stripes',
+					name: 'With Stripes',
+				},
+				{
+					id: 'both',
+					name: 'With Stripes & Tip',
+				},
+			],
+		},
+		horizontal: {
+			type: 'typed',
+			name: 'Horizontal Alignment',
+			variants: [
+				{
+					id: 'left',
+					name: 'Left',
+					default: true,
+				},
+				{
+					id: 'right',
+					name: 'Right',
+				},
+			],
+		},
+		vertical: {
+			type: 'typed',
+			name: 'Vertical Alignment',
+			variants: [
+				{
+					id: 'up',
+					name: 'Up',
+					default: true,
+				},
+				{
+					id: 'down',
+					name: 'Down',
+				},
+			],
+		},
 	},
 });

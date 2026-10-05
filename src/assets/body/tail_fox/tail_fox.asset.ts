@@ -1,4 +1,4 @@
-DefineBodypart({
+const bodypart = DefineBodypart({
 	name: 'Fox Tail',
 	bodypart: 'tail',
 	graphics: 'graphics.json',
@@ -50,5 +50,31 @@ DefineBodypart({
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
+	},
+});
+
+
+DefineAsset({
+	...bodypart, // Reuse most of bodypart definition
+	id: 'body/tail_fox/artificial',
+	name: 'Artificial Fox Tail',
+	allowRandomizerUsage: undefined,
+	size: 'small',
+	modules: {
+		horizontal: {
+			type: 'typed',
+			name: 'Horizontal Alignment',
+			variants: [
+				{
+					id: 'left',
+					name: 'Left',
+					default: true,
+				},
+				{
+					id: 'right',
+					name: 'Right',
+				},
+			],
+		},
 	},
 });

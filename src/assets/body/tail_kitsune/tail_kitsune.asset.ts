@@ -1,4 +1,4 @@
-DefineBodypart({
+const bodypart = DefineBodypart({
 	name: 'Kitsune Tails',
 	bodypart: 'tail',
 	graphics: 'graphics.json',
@@ -102,4 +102,12 @@ DefineBodypart({
 			},
 		],
 	},
+});
+
+DefineAsset({
+	...bodypart, // Reuse most of bodypart definition
+	id: 'body/tail_kitsune/artificial',
+	name: 'Artificial Kitsune Tail',
+	allowRandomizerUsage: undefined,
+	size: 'small',
 });

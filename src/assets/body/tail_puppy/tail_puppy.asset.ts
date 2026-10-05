@@ -1,4 +1,4 @@
-DefineBodypart({
+const bodypart = DefineBodypart({
 	name: 'Puppy Tail',
 	bodypart: 'tail',
 	graphics: 'graphics.json',
@@ -81,5 +81,64 @@ DefineBodypart({
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
+	},
+});
+
+DefineAsset({
+	...bodypart, // Reuse most of bodypart definition
+	id: 'body/tail_puppy/artificial',
+	name: 'Artificial Puppy Tail',
+	allowRandomizerUsage: undefined,
+	size: 'small',
+	modules: {
+		thickness: {
+			type: 'typed',
+			name: 'Tail Thickness',
+			variants: [
+				{
+					id: 'thin',
+					name: 'Thin',
+				},
+				{
+					id: 'normal',
+					name: 'Normal',
+					default: true,
+				},
+				{
+					id: 'thick',
+					name: 'Fluffy',
+				},
+			],
+		},
+		horizontal: {
+			type: 'typed',
+			name: 'Horizontal Alignment',
+			variants: [
+				{
+					id: 'left',
+					name: 'Left',
+					default: true,
+				},
+				{
+					id: 'right',
+					name: 'Right',
+				},
+			],
+		},
+		vertical: {
+			type: 'typed',
+			name: 'Vertical Alignment',
+			variants: [
+				{
+					id: 'up',
+					name: 'Up',
+					default: true,
+				},
+				{
+					id: 'down',
+					name: 'Down',
+				},
+			],
+		},
 	},
 });
