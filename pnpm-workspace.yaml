@@ -10,6 +10,8 @@ injectWorkspacePackages: false
 minimumReleaseAge: 2880
 minimumReleaseAgeExclude:
   - pandora-common
+  # Renovate security update: simple-git@4.0.1
+  - simple-git@4.0.1
 nodeOptions: --no-warnings=ExperimentalWarning --experimental-vm-modules
 autoInstallPeers: false
 strictPeerDependencies: true
