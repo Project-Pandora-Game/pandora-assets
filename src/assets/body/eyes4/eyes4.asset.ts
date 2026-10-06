@@ -36,33 +36,6 @@ DefineBodypart({
 		],
 	},
 	modules: {
-		pupilType: {
-			type: 'typed',
-			name: 'Pupil Types',
-			variants: [
-				{
-					id: 'largePupils',
-					name: 'Large Pupils',
-					default: true,
-				},
-				{
-					id: 'smallPupils',
-					name: 'Small Pupils',
-				},
-				{
-					id: 'starPupils',
-					name: 'Star-shaped Pupils',
-				},
-				{
-					id: 'crossPupils',
-					name: 'Cross-shaped Pupils',
-				},
-				{
-					id: 'noPupils',
-					name: 'No Pupils',
-				},
-			],
-		},
 		eyeState_l: {
 			type: 'typed',
 			name: 'Left Eye Open/Close',
@@ -172,10 +145,42 @@ DefineBodypart({
 				},
 			],
 		},
+		pupilType: {
+			type: 'typed',
+			name: 'Pupil Types',
+			expression: 'Pupil Types',
+			variants: [
+				{
+					id: 'largePupils',
+					name: 'Large Pupils',
+					default: true,
+				},
+				{
+					id: 'smallPupils',
+					name: 'Small Pupils',
+				},
+				{
+					id: 'starPupils',
+					name: 'Star-shaped Pupils',
+				},
+				{
+					id: 'crossPupils',
+					name: 'Cross-shaped Pupils',
+				},
+				{
+					id: 'verticalSlitPupils',
+					name: 'Vertical Slit Pupils',
+				},
+				{
+					id: 'noPupils',
+					name: 'No Pupils',
+				},
+			],
+		},
 	},
 	ownership: {
 		responsibleContributor: 'ClaudiaMia <99583892+ClaudiaMia@users.noreply.github.com>',
-		credits: ['ClaudiaMia', 'Titania'],
+		credits: ['ClaudiaMia', 'Titania', 'Nikky'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
@@ -191,6 +196,13 @@ DefineBodypart({
 				source: 'Self-Made',
 				copyrightHolder: 'ClaudiaMia',
 				editedBy: 'ClaudiaMia',
+				license: 'Pandora-Use-Only-v1-or-later',
+			},
+			{
+				part: 'vertical slit pupils',
+				source: 'Self-Made',
+				copyrightHolder: 'Nikky',
+				editedBy: 'Nikky',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],

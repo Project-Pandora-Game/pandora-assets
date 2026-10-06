@@ -22,6 +22,9 @@ DefineAsset({
 			'Restraint_mouth',
 			'Mouth_item',
 		],
+		requires: [
+			'!Mouth_tongue_out',
+		],
 	},
 	modules: {
 		gagType: {
@@ -95,7 +98,6 @@ DefineAsset({
 								'Mouth_open_wide',
 								'!Mouth_protruding',
 								'!Mouth_cover',
-								'!Mouth_tongue_out',
 							],
 						},
 					},

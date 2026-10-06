@@ -7,7 +7,7 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "",
+			"name": "Eyebase",
 			"priority": "BODY",
 			"points": "body_eyes",
 			"pointType": [
@@ -75,7 +75,7 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "",
+			"name": "Cornea",
 			"priority": "BODY",
 			"points": "body_eyes",
 			"pointType": [
@@ -227,75 +227,7 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "",
-			"priority": "BODY",
-			"points": "body_eyes",
-			"pointType": [
-				"eye_l"
-			],
-			"mirror": 1,
-			"colorizationKey": "lashes",
-			"image": {
-				"image": "eyelashes.png",
-				"overrides": [
-					{
-						"image": "eyes_closed.png",
-						"condition": [
-							[
-								{
-									"module": "eyeState_l",
-									"operator": "=",
-									"value": "closed"
-								}
-							],
-							[
-								{
-									"module": "eyeState_l",
-									"operator": "=",
-									"value": "blind"
-								}
-							],
-							[
-								{
-									"blinking": true
-								}
-							]
-						]
-					},
-					{
-						"image": "eyelashes_wide.png",
-						"condition": [
-							[
-								{
-									"module": "eyeDirection",
-									"operator": "=",
-									"value": "wideBig"
-								}
-							]
-						]
-					},
-					{
-						"image": "eyelashes_wide.png",
-						"condition": [
-							[
-								{
-									"module": "eyeDirection",
-									"operator": "=",
-									"value": "wideSmall"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "",
+			"name": "Shine",
 			"priority": "BODY",
 			"points": "body_eyes",
 			"pointType": [
@@ -411,7 +343,7 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "mesh",
-			"name": "",
+			"name": "Pupils",
 			"priority": "BODY",
 			"points": "body_eyes",
 			"pointType": [
@@ -514,6 +446,23 @@
 						]
 					},
 					{
+						"image": "pupilsVerticalSlit_left.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "verticalSlitPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "left"
+								}
+							]
+						]
+					},
+					{
 						"image": "pupils_right.png",
 						"condition": [
 							[
@@ -572,6 +521,23 @@
 									"module": "pupilType",
 									"operator": "=",
 									"value": "crossPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "right"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupilsVerticalSlit_right.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "verticalSlitPupils"
 								},
 								{
 									"module": "eyeDirection",
@@ -650,6 +616,23 @@
 						]
 					},
 					{
+						"image": "pupilsVerticalSlit_down.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "verticalSlitPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					},
+					{
 						"image": "pupils_up.png",
 						"condition": [
 							[
@@ -708,6 +691,23 @@
 									"module": "pupilType",
 									"operator": "=",
 									"value": "crossPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "up"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupilsVerticalSlit_up.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "verticalSlitPupils"
 								},
 								{
 									"module": "eyeDirection",
@@ -786,6 +786,23 @@
 						]
 					},
 					{
+						"image": "pupilsVerticalSlit_rolled.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "verticalSlitPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "rolled"
+								}
+							]
+						]
+					},
+					{
 						"image": "pupils_cross.png",
 						"condition": [
 							[
@@ -854,6 +871,40 @@
 						]
 					},
 					{
+						"image": "pupilsVerticalSlit_cross.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "verticalSlitPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupilsVerticalSlit_wide_small.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "verticalSlitPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "wideSmall"
+								}
+							]
+						]
+					},
+					{
 						"image": "pupils.png",
 						"condition": [
 							[
@@ -902,6 +953,18 @@
 						]
 					},
 					{
+						"image": "pupilsVerticalSlit.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "verticalSlitPupils"
+								}
+							]
+						]
+					},
+					{
 						"image": "",
 						"condition": [
 							[
@@ -909,6 +972,74 @@
 									"module": "pupilType",
 									"operator": "=",
 									"value": "noPupils"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"name": "Eyelashes",
+			"priority": "BODY",
+			"points": "body_eyes",
+			"pointType": [
+				"eye_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "lashes",
+			"image": {
+				"image": "eyelashes.png",
+				"overrides": [
+					{
+						"image": "eyes_closed.png",
+						"condition": [
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "closed"
+								}
+							],
+							[
+								{
+									"module": "eyeState_l",
+									"operator": "=",
+									"value": "blind"
+								}
+							],
+							[
+								{
+									"blinking": true
+								}
+							]
+						]
+					},
+					{
+						"image": "eyelashes_wide.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "wideBig"
+								}
+							]
+						]
+					},
+					{
+						"image": "eyelashes_wide.png",
+						"condition": [
+							[
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "wideSmall"
 								}
 							]
 						]

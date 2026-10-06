@@ -30,7 +30,7 @@ const boneDefinitionImpl = {
 		baseRotation: -90,
 		type: 'pose',
 	},
-} as const satisfies Immutable<Record<string, BoneDefinitionCompressed>>;
+} as const satisfies Record<string, BoneDefinitionCompressed>;
 
 /** Handles for inverse kinematic posing of the character. */
 export const InversePosingHandles: Immutable<(Omit<InversePosingHandle, 'parentBone'> & { parentBone: AllBones; })[]> = [

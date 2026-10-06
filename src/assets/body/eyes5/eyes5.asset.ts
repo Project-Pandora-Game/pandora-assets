@@ -159,10 +159,26 @@ DefineBodypart({
 				},
 			],
 		},
+		pupilType: {
+			type: 'typed',
+			name: 'Pupil Types',
+			expression: 'Pupil Types',
+			variants: [
+				{
+					id: 'normalPupils',
+					name: 'Normal Pupils',
+					default: true,
+				},
+				{
+					id: 'verticalSlitPupils',
+					name: 'Vertical Slit Pupils',
+				},
+			],
+		},
 	},
 	ownership: {
 		responsibleContributor: 'Jomshir98 <jomshir98@protonmail.com>',
-		credits: ['paparebbe', 'Jomshir'],
+		credits: ['paparebbe', 'Jomshir', 'Nikky'],
 		modificationPolicy: `Fixes and New uses, otherwise ask`,
 		reusePolicy: 'Ask first',
 		licensing: [
@@ -170,6 +186,13 @@ DefineBodypart({
 				source: 'Private',
 				copyrightHolder: 'paparebbe',
 				editedBy: 'Jomshir98',
+				license: 'Pandora-Use-Only-v1-or-later',
+			},
+			{
+				part: 'vertical slit pupils',
+				source: 'Self-Made',
+				copyrightHolder: 'Nikky',
+				editedBy: 'Nikky',
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 		],
