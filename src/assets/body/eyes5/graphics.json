@@ -13,8 +13,8 @@
 			"pointType": [
 				"eye_l"
 			],
-			"mirror": 1,
 			"previewHideFace": true,
+			"mirror": 1,
 			"colorizationKey": "sclera",
 			"image": {
 				"image": "",
@@ -68,8 +68,8 @@
 			"pointType": [
 				"eye_l"
 			],
-			"mirror": 1,
 			"previewHideFace": true,
+			"mirror": 1,
 			"colorizationKey": "iris_l",
 			"image": {
 				"image": "",
@@ -346,8 +346,8 @@
 			"pointType": [
 				"eye_l"
 			],
-			"mirror": 1,
 			"previewHideFace": true,
+			"mirror": 1,
 			"colorizationKey": "pupil",
 			"image": {
 				"image": "",
@@ -624,8 +624,8 @@
 			"pointType": [
 				"eye_l"
 			],
-			"mirror": 1,
 			"previewHideFace": true,
+			"mirror": 1,
 			"colorizationKey": "pupil",
 			"image": {
 				"image": "",
@@ -893,8 +893,8 @@
 			"pointType": [
 				"eye_l"
 			],
-			"mirror": 1,
 			"previewHideFace": true,
+			"mirror": 1,
 			"colorizationKey": "reflections",
 			"image": {
 				"image": "eyes_normal/eye_reflections.png",
@@ -938,8 +938,8 @@
 			"pointType": [
 				"eye_l"
 			],
-			"mirror": 1,
 			"previewHideFace": true,
+			"mirror": 1,
 			"colorizationKey": "shadow",
 			"image": {
 				"image": "eyes_normal/eye_shadow.png",
@@ -983,8 +983,8 @@
 			"pointType": [
 				"eye_l"
 			],
-			"mirror": 1,
 			"previewHideFace": true,
+			"mirror": 1,
 			"colorizationKey": "lashes",
 			"image": {
 				"image": "",
