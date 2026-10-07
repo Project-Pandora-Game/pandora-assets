@@ -31,7 +31,8 @@ For the "calibration" value, use this template as a start:
 
 5. Press the "Space configuration" button and chose your new background image under the "Room management" tab
 
-6. Go back to the "Room"-tab and near the bottom, expand the "[DEV] debug options"
+6. Go back to the "Room"-tab and near the bottom, expand the "[DEV] debug options" section (to show it, you may need to go to
+Pandora's "Settings" > "Advanced settings" > "Development settings" and toggle on 'Show DEV-debug menus in Pandora')
 
 7. Toggle on "Show calibration helper line" to see colorful planes overlaid.
 

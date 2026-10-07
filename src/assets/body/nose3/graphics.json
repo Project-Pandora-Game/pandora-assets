@@ -10,9 +10,7 @@
 			"name": "",
 			"priority": "BODY",
 			"points": "static",
-			"previewOverrides": {
-				"alpha": 0
-			},
+			"previewHideFace": true,
 			"mirror": 0,
 			"colorizationKey": "skin",
 			"image": {

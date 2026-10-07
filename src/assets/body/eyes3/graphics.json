@@ -13,6 +13,7 @@
 			"pointType": [
 				"eye_l"
 			],
+			"previewHideFace": true,
 			"mirror": 1,
 			"colorizationKey": "eyeBackground",
 			"image": {
@@ -81,6 +82,7 @@
 			"pointType": [
 				"eye_l"
 			],
+			"previewHideFace": true,
 			"mirror": 1,
 			"colorizationKey": "eyeColor_l",
 			"image": {
@@ -233,6 +235,7 @@
 			"pointType": [
 				"eye_l"
 			],
+			"previewHideFace": true,
 			"mirror": 1,
 			"colorizationKey": "shine",
 			"image": {
@@ -349,6 +352,7 @@
 			"pointType": [
 				"eye_l"
 			],
+			"previewHideFace": true,
 			"mirror": 1,
 			"image": {
 				"image": "",
@@ -991,6 +995,7 @@
 			"pointType": [
 				"eye_l"
 			],
+			"previewHideFace": true,
 			"mirror": 1,
 			"colorizationKey": "lashes",
 			"image": {
