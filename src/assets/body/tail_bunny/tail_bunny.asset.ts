@@ -36,6 +36,5 @@ DefineAsset({
 	...bodypart, // Reuse most of bodypart definition
 	id: 'body/tail_bunny/artificial',
 	name: 'Artificial Bunny Tail',
-	allowRandomizerUsage: undefined,
 	size: 'small',
 });

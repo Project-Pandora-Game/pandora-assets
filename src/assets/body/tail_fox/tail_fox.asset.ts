@@ -57,7 +57,6 @@ DefineAsset({
 	...bodypart, // Reuse most of bodypart definition
 	id: 'body/tail_fox/artificial',
 	name: 'Artificial Fox Tail',
-	allowRandomizerUsage: undefined,
 	size: 'small',
 	modules: {
 		horizontal: {

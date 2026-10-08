@@ -88,7 +88,6 @@ DefineAsset({
 	...bodypart, // Reuse most of bodypart definition
 	id: 'body/tail_puppy/artificial',
 	name: 'Artificial Puppy Tail',
-	allowRandomizerUsage: undefined,
 	size: 'small',
 	modules: {
 		thickness: {

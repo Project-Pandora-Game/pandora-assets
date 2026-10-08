@@ -69,7 +69,6 @@ DefineAsset({
 	...bodypart, // Reuse most of bodypart definition
 	id: 'body/tail_mouse/artificial',
 	name: 'Artificial Mouse Tail',
-	allowRandomizerUsage: undefined,
 	size: 'small',
 	modules: {
 		horizontal: {

@@ -100,7 +100,6 @@ DefineAsset({
 	...bodypart, // Reuse most of bodypart definition
 	id: 'body/tail_cat/artificial',
 	name: 'Artificial Cat Tail',
-	allowRandomizerUsage: undefined,
 	size: 'small',
 	modules: {
 		decoration: {
