@@ -93,6 +93,13 @@ export function ValidateTypedModule<TProperties, TStaticData, TPropertiesValidat
 			}
 		}
 	}
+
+	// Only bodyparts can make use of expressions
+	if (moduleDefinition.expression !== undefined) {
+		if (metadata.baseAssetDefinition.type !== 'bodypart') {
+			logger.warning(`Only bodypart assets can define 'expression' on modules.`);
+		}
+	}
 }
 
 export function ValidateLockSlotModule<TProperties, TStaticData, TPropertiesValidationMetadata>(
