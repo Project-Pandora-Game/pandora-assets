@@ -6,83 +6,38 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "tail",
-			"priority": "BELOW_BACK_HAIR",
+			"type": "autoMesh",
+			"name": "cat_tail",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "tail",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "cat_tail_down_left.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "left"
-								}
-							]
-						]
-					},
-					{
-						"image": "cat_tail_down_right.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "right"
-								}
-							]
-						]
-					},
-					{
-						"image": "cat_tail_up_left.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "left"
-								}
-							]
-						]
-					},
-					{
-						"image": "cat_tail_up_right.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "right"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBackHair",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "tail"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "vertical"
+				},
+				{
+					"type": "typedModule",
+					"module": "horizontal"
+				}
+			],
+			"imageMap": {
+				"up:left": [
+					"cat_tail_up_left.png"
+				],
+				"up:right": [
+					"cat_tail_up_right.png"
+				],
+				"down:left": [
+					"cat_tail_down_left.png"
+				],
+				"down:right": [
+					"cat_tail_down_right.png"
 				]
 			}
 		},
@@ -91,123 +46,78 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "stripes",
-			"priority": "BELOW_BACK_HAIR",
+			"type": "autoMesh",
+			"name": "back_stripes",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "stripes",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "cat_tail_down_left_stripes.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "left"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "none"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "tip"
-								}
-							]
-						]
-					},
-					{
-						"image": "cat_tail_down_right_stripes.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "right"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "none"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "tip"
-								}
-							]
-						]
-					},
-					{
-						"image": "cat_tail_up_left_stripes.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "left"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "none"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "tip"
-								}
-							]
-						]
-					},
-					{
-						"image": "cat_tail_up_right_stripes.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "right"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "none"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "tip"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBackHair",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "stripes"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "vertical"
+				},
+				{
+					"type": "typedModule",
+					"module": "horizontal"
+				},
+				{
+					"type": "typedModule",
+					"module": "decoration"
+				}
+			],
+			"imageMap": {
+				"up:left:none": [
+					""
+				],
+				"up:left:tip": [
+					""
+				],
+				"up:left:stripes": [
+					"cat_tail_up_left_stripes.png"
+				],
+				"up:left:both": [
+					"cat_tail_up_left_stripes.png"
+				],
+				"up:right:none": [
+					""
+				],
+				"up:right:tip": [
+					""
+				],
+				"up:right:stripes": [
+					"cat_tail_up_right_stripes.png"
+				],
+				"up:right:both": [
+					"cat_tail_up_right_stripes.png"
+				],
+				"down:left:none": [
+					""
+				],
+				"down:left:tip": [
+					""
+				],
+				"down:left:stripes": [
+					"cat_tail_down_left_stripes.png"
+				],
+				"down:left:both": [
+					"cat_tail_down_left_stripes.png"
+				],
+				"down:right:none": [
+					""
+				],
+				"down:right:tip": [
+					""
+				],
+				"down:right:stripes": [
+					"cat_tail_down_right_stripes.png"
+				],
+				"down:right:both": [
+					"cat_tail_down_right_stripes.png"
 				]
 			}
 		},
@@ -216,123 +126,78 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "tip",
-			"priority": "BELOW_BACK_HAIR",
+			"type": "autoMesh",
+			"name": "back_tip",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "tip",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "cat_tail_down_left_tip.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "left"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "none"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "stripes"
-								}
-							]
-						]
-					},
-					{
-						"image": "cat_tail_down_right_tip.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "right"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "none"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "stripes"
-								}
-							]
-						]
-					},
-					{
-						"image": "cat_tail_up_left_tip.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "left"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "none"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "stripes"
-								}
-							]
-						]
-					},
-					{
-						"image": "cat_tail_up_right_tip.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "right"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "none"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "stripes"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBackHair",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "tip"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "vertical"
+				},
+				{
+					"type": "typedModule",
+					"module": "horizontal"
+				},
+				{
+					"type": "typedModule",
+					"module": "decoration"
+				}
+			],
+			"imageMap": {
+				"up:left:none": [
+					""
+				],
+				"up:left:tip": [
+					"cat_tail_up_left_tip.png"
+				],
+				"up:left:stripes": [
+					""
+				],
+				"up:left:both": [
+					"cat_tail_up_left_tip.png"
+				],
+				"up:right:none": [
+					""
+				],
+				"up:right:tip": [
+					"cat_tail_up_right_tip.png"
+				],
+				"up:right:stripes": [
+					""
+				],
+				"up:right:both": [
+					"cat_tail_up_right_tip.png"
+				],
+				"down:left:none": [
+					""
+				],
+				"down:left:tip": [
+					"cat_tail_down_left_tip.png"
+				],
+				"down:left:stripes": [
+					""
+				],
+				"down:left:both": [
+					"cat_tail_down_left_tip.png"
+				],
+				"down:right:none": [
+					""
+				],
+				"down:right:tip": [
+					"cat_tail_down_right_tip.png"
+				],
+				"down:right:stripes": [
+					""
+				],
+				"down:right:both": [
+					"cat_tail_down_right_tip.png"
 				]
 			}
 		},
@@ -341,123 +206,78 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "stripes",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "front_stripes",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "stripes",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "cat_tail_down_left_stripes.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "left"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "none"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "tip"
-								}
-							]
-						]
-					},
-					{
-						"image": "cat_tail_down_right_stripes.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "right"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "none"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "tip"
-								}
-							]
-						]
-					},
-					{
-						"image": "cat_tail_up_left_stripes.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "left"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "none"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "tip"
-								}
-							]
-						]
-					},
-					{
-						"image": "cat_tail_up_right_stripes.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "right"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "none"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "tip"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "stripes"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "vertical"
+				},
+				{
+					"type": "typedModule",
+					"module": "horizontal"
+				},
+				{
+					"type": "typedModule",
+					"module": "decoration"
+				}
+			],
+			"imageMap": {
+				"up:left:none": [
+					""
+				],
+				"up:left:tip": [
+					""
+				],
+				"up:left:stripes": [
+					"cat_tail_up_left_stripes.png"
+				],
+				"up:left:both": [
+					"cat_tail_up_left_stripes.png"
+				],
+				"up:right:none": [
+					""
+				],
+				"up:right:tip": [
+					""
+				],
+				"up:right:stripes": [
+					"cat_tail_up_right_stripes.png"
+				],
+				"up:right:both": [
+					"cat_tail_up_right_stripes.png"
+				],
+				"down:left:none": [
+					""
+				],
+				"down:left:tip": [
+					""
+				],
+				"down:left:stripes": [
+					"cat_tail_down_left_stripes.png"
+				],
+				"down:left:both": [
+					"cat_tail_down_left_stripes.png"
+				],
+				"down:right:none": [
+					""
+				],
+				"down:right:tip": [
+					""
+				],
+				"down:right:stripes": [
+					"cat_tail_down_right_stripes.png"
+				],
+				"down:right:both": [
+					"cat_tail_down_right_stripes.png"
 				]
 			}
 		},
@@ -466,123 +286,78 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "tip",
-			"priority": "BELOW_BODY",
+			"type": "autoMesh",
+			"name": "front_tip",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "tip",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "cat_tail_down_left_tip.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "left"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "none"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "stripes"
-								}
-							]
-						]
-					},
-					{
-						"image": "cat_tail_down_right_tip.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "right"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "none"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "stripes"
-								}
-							]
-						]
-					},
-					{
-						"image": "cat_tail_up_left_tip.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "left"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "none"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "stripes"
-								}
-							]
-						]
-					},
-					{
-						"image": "cat_tail_up_right_tip.png",
-						"condition": [
-							[
-								{
-									"module": "vertical",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "horizontal",
-									"operator": "=",
-									"value": "right"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "none"
-								},
-								{
-									"module": "decoration",
-									"operator": "!=",
-									"value": "stripes"
-								}
-							]
-						]
-					}
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "tip"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "vertical"
+				},
+				{
+					"type": "typedModule",
+					"module": "horizontal"
+				},
+				{
+					"type": "typedModule",
+					"module": "decoration"
+				}
+			],
+			"imageMap": {
+				"up:left:none": [
+					""
+				],
+				"up:left:tip": [
+					"cat_tail_up_left_tip.png"
+				],
+				"up:left:stripes": [
+					""
+				],
+				"up:left:both": [
+					"cat_tail_up_left_tip.png"
+				],
+				"up:right:none": [
+					""
+				],
+				"up:right:tip": [
+					"cat_tail_up_right_tip.png"
+				],
+				"up:right:stripes": [
+					""
+				],
+				"up:right:both": [
+					"cat_tail_up_right_tip.png"
+				],
+				"down:left:none": [
+					""
+				],
+				"down:left:tip": [
+					"cat_tail_down_left_tip.png"
+				],
+				"down:left:stripes": [
+					""
+				],
+				"down:left:both": [
+					"cat_tail_down_left_tip.png"
+				],
+				"down:right:none": [
+					""
+				],
+				"down:right:tip": [
+					"cat_tail_down_right_tip.png"
+				],
+				"down:right:stripes": [
+					""
+				],
+				"down:right:both": [
+					"cat_tail_down_right_tip.png"
 				]
 			}
 		}

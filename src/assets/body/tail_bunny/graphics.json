@@ -6,15 +6,21 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
+			"type": "autoMesh",
 			"name": "tail",
-			"priority": "BELOW_BACK_HAIR",
 			"points": "static",
-			"mirror": 0,
-			"colorizationKey": "tail",
-			"image": {
-				"image": "bunny_tail.png",
-				"overrides": []
+			"automeshTemplate": "belowBackHair",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "tail"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"bunny_tail.png"
+				]
 			}
 		}
 	]

@@ -1,5 +1,4 @@
-// @ts-check
-/* eslint-env node */
+//@ts-check
 /**
  * For a detailed explanation regarding each configuration property and type check, visit:
  * https://jestjs.io/docs/configuration
@@ -12,6 +11,7 @@ export default {
 		'src/**/*.ts',
 		'src/**/*.tsx',
 	],
+	coverageProvider: 'v8',
 	coverageDirectory: 'coverage',
 	coverageReporters: [
 		'html',

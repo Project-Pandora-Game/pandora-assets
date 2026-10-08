@@ -10,6 +10,7 @@
 			"name": "",
 			"priority": "BODY",
 			"points": "static",
+			"previewHideFace": true,
 			"mirror": 0,
 			"image": {
 				"image": "",
@@ -98,6 +99,7 @@
 			"name": "",
 			"priority": "BODY",
 			"points": "static",
+			"previewHideFace": true,
 			"mirror": 0,
 			"colorizationKey": "lips",
 			"image": {
@@ -235,6 +237,7 @@
 			"name": "",
 			"priority": "ABOVE_FRONT_HAIR",
 			"points": "static",
+			"previewHideFace": true,
 			"mirror": 0,
 			"image": {
 				"image": "",

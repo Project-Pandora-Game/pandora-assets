@@ -1,4 +1,6 @@
-DefineBodypart({
+import { produce } from 'immer';
+
+const bodypart = DefineBodypart({
 	name: 'Cat Tail',
 	bodypart: 'tail',
 	graphics: 'graphics.json',
@@ -94,4 +96,17 @@ DefineBodypart({
 			},
 		],
 	},
+});
+
+DefineAsset({
+	...bodypart, // Reuse most of bodypart definition
+	id: 'body/tail_cat/artificial',
+	name: 'Artificial Cat Tail',
+	size: 'small',
+	modules: produce(bodypart.modules!, (d) => {
+		// Do not define expressions on modules on non-bodypart
+		for (const module of Object.values(d)) {
+			delete module.expression;
+		}
+	}),
 });

@@ -1,4 +1,4 @@
-DefineBodypart({
+const bodypart = DefineBodypart({
 	name: 'Bunny Tail',
 	bodypart: 'tail',
 	graphics: 'graphics.json',
@@ -30,4 +30,11 @@ DefineBodypart({
 			},
 		],
 	},
+});
+
+DefineAsset({
+	...bodypart, // Reuse most of bodypart definition
+	id: 'body/tail_bunny/artificial',
+	name: 'Artificial Bunny Tail',
+	size: 'small',
 });
