@@ -1,3 +1,5 @@
+import { produce } from 'immer';
+
 const bodypart = DefineBodypart({
 	name: 'Cat Tail',
 	bodypart: 'tail',
@@ -101,59 +103,10 @@ DefineAsset({
 	id: 'body/tail_cat/artificial',
 	name: 'Artificial Cat Tail',
 	size: 'small',
-	modules: {
-		decoration: {
-			type: 'typed',
-			name: 'Tail Decorations',
-			variants: [
-				{
-					id: 'none',
-					name: 'None',
-					default: true,
-				},
-				{
-					id: 'tip',
-					name: 'With Tip',
-				},
-				{
-					id: 'stripes',
-					name: 'With Stripes',
-				},
-				{
-					id: 'both',
-					name: 'With Stripes & Tip',
-				},
-			],
-		},
-		horizontal: {
-			type: 'typed',
-			name: 'Horizontal Alignment',
-			variants: [
-				{
-					id: 'left',
-					name: 'Left',
-					default: true,
-				},
-				{
-					id: 'right',
-					name: 'Right',
-				},
-			],
-		},
-		vertical: {
-			type: 'typed',
-			name: 'Vertical Alignment',
-			variants: [
-				{
-					id: 'up',
-					name: 'Up',
-					default: true,
-				},
-				{
-					id: 'down',
-					name: 'Down',
-				},
-			],
-		},
-	},
+	modules: produce(bodypart.modules!, (d) => {
+		// Do not define expressions on modules on non-bodypart
+		for (const module of Object.values(d)) {
+			delete module.expression;
+		}
+	}),
 });

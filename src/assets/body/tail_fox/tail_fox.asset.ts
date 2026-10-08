@@ -1,3 +1,5 @@
+import { produce } from 'immer';
+
 const bodypart = DefineBodypart({
 	name: 'Fox Tail',
 	bodypart: 'tail',
@@ -58,21 +60,10 @@ DefineAsset({
 	id: 'body/tail_fox/artificial',
 	name: 'Artificial Fox Tail',
 	size: 'small',
-	modules: {
-		horizontal: {
-			type: 'typed',
-			name: 'Horizontal Alignment',
-			variants: [
-				{
-					id: 'left',
-					name: 'Left',
-					default: true,
-				},
-				{
-					id: 'right',
-					name: 'Right',
-				},
-			],
-		},
-	},
+	modules: produce(bodypart.modules!, (d) => {
+		// Do not define expressions on modules on non-bodypart
+		for (const module of Object.values(d)) {
+			delete module.expression;
+		}
+	}),
 });
