@@ -29,7 +29,7 @@ const bodypart = DefineBodypart({
 					id: 'small',
 					name: 'Small',
 				},
-			]
+			],
 		},
 		layering: {
 			type: 'typed',

@@ -29,7 +29,7 @@ const bodypart = DefineBodypart({
 					id: 'sideUpper',
 					name: 'Side Upper',
 				},
-			]
+			],
 		},
 		layering: {
 			type: 'typed',
