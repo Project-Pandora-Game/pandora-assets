@@ -137,7 +137,6 @@ DefineAsset({
 	...bodypart, // Reuse most of bodypart definition
 	id: 'body/front_horns_oni/faux',
 	name: 'Faux Front Horns Oni',
-	graphics: 'faux_graphics.json',
 	size: 'small',
 	modules: produce(bodypart.modules!, (d) => {
 		// Do not define expressions on modules on non-bodypart
