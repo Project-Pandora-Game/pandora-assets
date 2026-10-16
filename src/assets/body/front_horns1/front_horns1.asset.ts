@@ -19,6 +19,7 @@ const bodypart = DefineBodypart({
 		layering: {
 			type: 'typed',
 			name: 'Layering of the horns',
+			expression: 'Layering of the horns',
 			variants: [
 				{
 					id: 'overHair',
@@ -26,8 +27,12 @@ const bodypart = DefineBodypart({
 					default: true,
 				},
 				{
-					id: 'unerHair',
+					id: 'underHair',
 					name: 'Under front hair',
+				},
+				{
+					id: 'overlay',
+					name: 'Over everything',
 				},
 			],
 		},

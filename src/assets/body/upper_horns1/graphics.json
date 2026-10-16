@@ -69,7 +69,7 @@
 					{
 						"module": "layering",
 						"operator": "=",
-						"value": "unerHair"
+						"value": "underHair"
 					},
 					{
 						"module": "visibility",
@@ -85,6 +85,63 @@
 			],
 			"name": "Horns medium under hair",
 			"priority": "ABOVE_BODY",
+			"points": "static",
+			"pointType": [
+				"static",
+				"static_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "hornsColor",
+			"normalMap": {
+				"specularStrength": 0.1,
+				"roughness": 0.75
+			},
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "upper_horns.png",
+						"normalMapImage": "normal_map/upper_horns.png",
+						"condition": [
+							[
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"enableCond": [
+				[
+					{
+						"module": "layering",
+						"operator": "=",
+						"value": "overlay"
+					},
+					{
+						"module": "visibility",
+						"operator": "=",
+						"value": "visible"
+					},
+					{
+						"module": "style",
+						"operator": "=",
+						"value": "medium"
+					}
+				]
+			],
+			"name": "Horns medium overlay",
+			"priority": "OVERLAY",
 			"points": "static",
 			"pointType": [
 				"static",
@@ -183,7 +240,7 @@
 					{
 						"module": "layering",
 						"operator": "=",
-						"value": "unerHair"
+						"value": "underHair"
 					},
 					{
 						"module": "visibility",
@@ -199,6 +256,63 @@
 			],
 			"name": "Horns small under hair",
 			"priority": "ABOVE_BODY",
+			"points": "static",
+			"pointType": [
+				"static",
+				"static_l"
+			],
+			"mirror": 1,
+			"colorizationKey": "hornsColor",
+			"normalMap": {
+				"specularStrength": 0.1,
+				"roughness": 0.75
+			},
+			"image": {
+				"image": "",
+				"overrides": [
+					{
+						"image": "upper_horns_small.png",
+						"normalMapImage": "normal_map/upper_horns_small.png",
+						"condition": [
+							[
+								{
+									"module": "worn_l",
+									"operator": "=",
+									"value": "yes"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "mesh",
+			"enableCond": [
+				[
+					{
+						"module": "layering",
+						"operator": "=",
+						"value": "overlay"
+					},
+					{
+						"module": "visibility",
+						"operator": "=",
+						"value": "visible"
+					},
+					{
+						"module": "style",
+						"operator": "=",
+						"value": "small"
+					}
+				]
+			],
+			"name": "Horns small overlay",
+			"priority": "OVERLAY",
 			"points": "static",
 			"pointType": [
 				"static",
