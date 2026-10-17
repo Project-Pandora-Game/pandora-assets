@@ -32,7 +32,7 @@
 		"normalize": "node --enable-source-maps ./dist/tools/normalize"
 	},
 	"dependencies": {
-		"express": "5.2.1",
+		"express": "5.3.0",
 		"ignore": "7.0.12",
 		"immer": "11.1.21",
 		"json-diff": "1.0.6",
