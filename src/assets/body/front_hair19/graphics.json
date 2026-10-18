@@ -32,7 +32,7 @@
 				"image": "front_hair19_shine.png",
 				"overrides": [
 					{
-						"image": "front_hair19.png",
+						"image": "",
 						"condition": [
 							[
 								{
