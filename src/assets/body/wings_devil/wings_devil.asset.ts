@@ -136,7 +136,7 @@ DefineAsset({
 	id: 'body/wings_devil/faux',
 	name: 'Faux Devil Wings',
 	graphics: 'graphics.json',
-	size: 'small',
+	size: 'large',
 	modules: produce(bodypart.modules!, (d) => {
 		// Do not define expressions on modules on non-bodypart
 		for (const module of Object.values(d)) {
