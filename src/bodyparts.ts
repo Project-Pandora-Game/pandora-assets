@@ -56,7 +56,9 @@ const BODYPART_DEFINITIONS: Record<BodypartName, Partial<Omit<AssetBodyPart, 'na
 	tail: {
 		allowMultiple: true,
 	},
-	wings: {},
+	wings: {
+		allowMultiple: true,
+	},
 	backhair: {
 		allowMultiple: true,
 		adjustable: true,
