@@ -6,27 +6,33 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "bra breasts",
-			"priority": "BELOW_BREASTS",
-			"points": "body",
-			"mirror": 0,
-			"colorizationKey": "bra",
-			"image": {
-				"image": "bra_front.png",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": -180
-								}
-							]
-						]
+						"bone": "breasts",
+						"operator": ">",
+						"value": -180
 					}
+				]
+			],
+			"name": "bra breasts",
+			"points": "body",
+			"automeshTemplate": "belowBreasts",
+			"disabledTemplateParts": [
+				"legs",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "bra"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"bra_front.png"
 				]
 			}
 		},
@@ -88,36 +94,33 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "bra back view",
-			"priority": "BELOW_BODY",
-			"points": "body",
-			"pointType": [
-				"body",
-				"body_l",
-				"body_r",
-				"bodyarm_l",
-				"bodyarm_r",
-				"bodyleg_l",
-				"bodyleg_r"
-			],
-			"mirror": 0,
-			"colorizationKey": "bra",
-			"image": {
-				"image": "bra_back.png",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": -180
-								}
-							]
-						]
+						"bone": "breasts",
+						"operator": ">",
+						"value": -180
 					}
+				]
+			],
+			"name": "bra back view",
+			"points": "body",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"legs",
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "bra"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"bra_back.png"
 				]
 			}
 		},
@@ -129,59 +132,6 @@
 			"type": "mesh",
 			"name": "breasts",
 			"priority": "ABOVE_BODY",
-			"points": "breasts",
-			"mirror": 0,
-			"colorizationKey": "bra",
-			"image": {
-				"image": "bra_breasts.png",
-				"overrides": [
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"module": "bustState",
-									"operator": "=",
-									"value": "exposed"
-								}
-							]
-						]
-					},
-					{
-						"image": "",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": -180
-								}
-							]
-						]
-					},
-					{
-						"image": "bra_breasts_small.png",
-						"condition": [
-							[
-								{
-									"bone": "breasts",
-									"operator": "<=",
-									"value": -70
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "breasts back",
-			"priority": "BELOW_BREASTS",
 			"points": "breasts",
 			"mirror": 0,
 			"colorizationKey": "bra",
