@@ -173,8 +173,8 @@ importers:
         specifier: 7.0.13
         version: 7.0.13
       immer:
-        specifier: 11.1.21
-        version: 11.1.21
+        specifier: 11.2.9
+        version: 11.2.9
       json-diff:
         specifier: 1.0.6
         version: 1.0.6
@@ -1856,11 +1856,11 @@ packages:
     resolution: {integrity: sha512-2E8Q6rh+1RRSq/YdaGsNfXsEZy9FVqv6BSSrkmZJP7BnaoPnRfKL+YaofPvP+5rzdk144qSm6i4+hvPgUcbV4Q==}
     engines: {node: '>= 4'}
 
-  immer@11.1.21:
-    resolution: {integrity: sha512-bZSadeCPGdaY5/qRLgr6mDSH1ra21rD3rqpiWk7+QTr4ayYPTE9qZYdLh/NdPhMe0wSrTvHD/Lk8q5EwhUs0aw==}
-
   immer@11.2.3:
     resolution: {integrity: sha512-FbR9W6jf7+tvOCuDmOLJy3yStLCvoRDODRARzfeaWmn75+1fW4hFbMv5X5cWgEkxgWcC/eC5Nva00ZV1iv+0EA==}
+
+  immer@11.2.9:
+    resolution: {integrity: sha512-IQ4UEtXjZjyefyWjtLEDXUSrF6T2hwjKPi6BIJl3bY/2XXW24d6cNGdXJSBOA/+KNnuiXkZY6DR0C3efolhitA==}
 
   import-fresh@3.3.1:
     resolution: {integrity: sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==}
@@ -4780,9 +4780,9 @@ snapshots:
 
   ignore@7.0.13: {}
 
-  immer@11.1.21: {}
-
   immer@11.2.3: {}
+
+  immer@11.2.9: {}
 
   import-fresh@3.3.1:
     dependencies:
