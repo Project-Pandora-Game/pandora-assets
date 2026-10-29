@@ -159,6 +159,20 @@
 				}
 			]
 		},
+		"backgroundMirror": {
+			"name": "[Special] Background (mirrored)",
+			"parts": [
+				{
+					"id": "base",
+					"priority": "BACKGROUND",
+					"pointType": [
+						"static_l",
+						"static"
+					],
+					"mirror": 1
+				}
+			]
+		},
 		"frontHair": {
 			"name": "[Bodypart] Front hair",
 			"parts": [
