@@ -9,7 +9,7 @@ DefineAsset({
 			minAlpha: 0,
 		},
 	},
-	preview: null,
+	preview: 'preview.png',
 	attributes: {
 		provides: [
 			'Accessory',
