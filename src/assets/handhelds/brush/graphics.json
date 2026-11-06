@@ -6,374 +6,134 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "brush front",
-			"priority": "ABOVE_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "brush",
-			"image": {
-				"image": "",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "brush_front_front_up.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "front"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "brush_front_back_up.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "back"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "brush_front_side_in_up.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "inwards"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "brush_front_side_out_up.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "outwards"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "brush_front_back_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "front"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
-					},
-					{
-						"image": "brush_front_back_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "back"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
-					},
-					{
-						"image": "brush_front_side_in_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "inwards"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
-					},
-					{
-						"image": "brush_front_side_out_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "outwards"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
 					}
 				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "brush back",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
 			],
-			"mirror": 1,
-			"colorizationKey": "brush",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "brush_back_back_up.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "front"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "brush_back_front_up.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "back"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "brush_back_side_in_up.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "inwards"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "brush_back_side_out_up.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "outwards"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "brush_back_front_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "front"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
-					},
-					{
-						"image": "brush_back_back_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "back"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
-					},
-					{
-						"image": "brush_back_side_in_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "inwards"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
-					},
-					{
-						"image": "brush_back_side_out_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "outwards"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
-					}
+			"name": "Brush",
+			"points": "handheld",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Brush #1",
+					"colorizationKey": "brush"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "variant"
+				},
+				{
+					"type": "view"
+				},
+				{
+					"type": "armRotation",
+					"side": "left"
+				}
+			],
+			"imageMap": {
+				"front:front:backward": [
+					""
+				],
+				"front:front:up": [
+					"brush_front_front_up.png"
+				],
+				"front:front:forward": [
+					""
+				],
+				"front:front:down": [
+					"brush_front_back_down.png"
+				],
+				"front:back:backward": [
+					""
+				],
+				"front:back:up": [
+					"brush_back_back_up.png"
+				],
+				"front:back:forward": [
+					""
+				],
+				"front:back:down": [
+					"brush_back_front_down.png"
+				],
+				"back:front:backward": [
+					""
+				],
+				"back:front:up": [
+					"brush_front_back_up.png"
+				],
+				"back:front:forward": [
+					""
+				],
+				"back:front:down": [
+					"brush_front_back_down.png"
+				],
+				"back:back:backward": [
+					""
+				],
+				"back:back:up": [
+					"brush_back_front_up.png"
+				],
+				"back:back:forward": [
+					""
+				],
+				"back:back:down": [
+					"brush_back_back_down.png"
+				],
+				"inwards:front:backward": [
+					""
+				],
+				"inwards:front:up": [
+					"brush_front_side_in_up.png"
+				],
+				"inwards:front:forward": [
+					""
+				],
+				"inwards:front:down": [
+					"brush_front_side_in_down.png"
+				],
+				"inwards:back:backward": [
+					""
+				],
+				"inwards:back:up": [
+					"brush_back_side_in_up.png"
+				],
+				"inwards:back:forward": [
+					""
+				],
+				"inwards:back:down": [
+					"brush_back_side_in_down.png"
+				],
+				"outwards:front:backward": [
+					""
+				],
+				"outwards:front:up": [
+					"brush_front_side_out_up.png"
+				],
+				"outwards:front:forward": [
+					""
+				],
+				"outwards:front:down": [
+					"brush_front_side_out_down.png"
+				],
+				"outwards:back:backward": [
+					""
+				],
+				"outwards:back:up": [
+					"brush_back_side_out_up.png"
+				],
+				"outwards:back:forward": [
+					""
+				],
+				"outwards:back:down": [
+					"brush_back_side_out_down.png"
 				]
 			}
 		}

@@ -19,57 +19,21 @@ DefineAsset({
 		],
 	},
 	modules: {
-		handUsage_r: {
+		handUsage: {
 			type: 'typed',
-			name: 'Right hand brush',
+			name: 'Held in hand',
 			variants: [
 				{
-					id: 'no',
-					name: 'No Brush',
-				},
-				{
-					id: 'front',
-					name: 'Front',
+					id: 'held_r',
+					name: 'Right',
 					default: true,
-					properties: {
-						poseLimits: {
-							rightArm: {
-								fingers: 'fist',
-								rotation: ['up', 'down'],
-							},
-						},
-					},
 				},
 				{
-					id: 'back',
-					name: 'Back',
+					id: 'held_l',
+					name: 'Left',
 					properties: {
 						poseLimits: {
-							rightArm: {
-								fingers: 'fist',
-								rotation: ['up', 'down'],
-							},
-						},
-					},
-				},
-				{
-					id: 'inwards',
-					name: 'Inwards',
-					properties: {
-						poseLimits: {
-							rightArm: {
-								fingers: 'fist',
-								rotation: ['up', 'down'],
-							},
-						},
-					},
-				},
-				{
-					id: 'outwards',
-					name: 'Outwards',
-					properties: {
-						poseLimits: {
-							rightArm: {
+							leftArm: {
 								fingers: 'fist',
 								rotation: ['up', 'down'],
 							},
@@ -78,62 +42,26 @@ DefineAsset({
 				},
 			],
 		},
-		handUsage_l: {
+		variant: {
 			type: 'typed',
-			name: 'Left hand brush',
+			name: 'Brush variant',
 			variants: [
-				{
-					id: 'no',
-					name: 'No Brush',
-					default: true,
-				},
 				{
 					id: 'front',
 					name: 'Front',
-					properties: {
-						poseLimits: {
-							leftArm: {
-								fingers: 'fist',
-								rotation: ['up', 'down'],
-							},
-						},
-					},
+					default: true,
 				},
 				{
 					id: 'back',
 					name: 'Back',
-					properties: {
-						poseLimits: {
-							leftArm: {
-								fingers: 'fist',
-								rotation: ['up', 'down'],
-							},
-						},
-					},
 				},
 				{
 					id: 'inwards',
 					name: 'Inwards',
-					properties: {
-						poseLimits: {
-							leftArm: {
-								fingers: 'fist',
-								rotation: ['up', 'down'],
-							},
-						},
-					},
 				},
 				{
 					id: 'outwards',
 					name: 'Outwards',
-					properties: {
-						poseLimits: {
-							leftArm: {
-								fingers: 'fist',
-								rotation: ['up', 'down'],
-							},
-						},
-					},
 				},
 			],
 		},
