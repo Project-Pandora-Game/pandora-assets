@@ -27,6 +27,14 @@ DefineAsset({
 					id: 'held_r',
 					name: 'Right',
 					default: true,
+					properties: {
+						poseLimits: {
+							rightArm: {
+								fingers: 'fist',
+								rotation: ['up', 'down'],
+							},
+						},
+					},
 				},
 				{
 					id: 'held_l',
