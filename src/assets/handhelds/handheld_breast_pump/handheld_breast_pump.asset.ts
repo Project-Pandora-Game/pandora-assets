@@ -48,13 +48,13 @@ DefineAsset({
 		],
 	},
 	modules: {
-		handUsage_r: {
+		handUsage: {
 			type: 'typed',
-			name: 'Held in right hand',
+			name: 'Held in hand',
 			variants: [
 				{
-					id: 'yes',
-					name: 'Yes',
+					id: 'hand_r',
+					name: 'Right',
 					default: true,
 					properties: {
 						poseLimits: {
@@ -66,18 +66,8 @@ DefineAsset({
 					},
 				},
 				{
-					id: 'no',
-					name: 'No',
-				},
-			],
-		},
-		handUsage_l: {
-			type: 'typed',
-			name: 'Held in left hand',
-			variants: [
-				{
-					id: 'yes',
-					name: 'Yes',
+					id: 'hand_l',
+					name: 'Left',
 					properties: {
 						poseLimits: {
 							leftArm: {
@@ -86,12 +76,6 @@ DefineAsset({
 							},
 						},
 					},
-				},
-				{
-					id: 'no',
-					name: 'No',
-					default: true,
-
 				},
 			],
 		},
