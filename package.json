@@ -37,7 +37,7 @@
 		"immer": "11.2.9",
 		"json-diff": "1.0.6",
 		"lodash-es": "4.18.1",
-		"pandora-common": "github:Project-Pandora-Game/pandora#master&path:pandora-common",
+		"pandora-common": "github:Project-Pandora-Game/pandora#0db6a8a8cd6c375d97eac5219de229e52eca657c&path:pandora-common",
 		"rimraf": "6.1.3",
 		"sharp": "0.35.5",
 		"simple-git": "4.0.2",
