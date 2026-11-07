@@ -1,0 +1,80 @@
+name: Publish prepared test assets
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-test-assets
+  cancel-in-progress: false
+
+env:
+  NODE_VERSION: 24
+
+jobs:
+  publish:
+    name: Package and publish test assets
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          package-manager-cache: false
+      - name: Update npm keys
+        run: |
+          echo COREPACK_INTEGRITY_KEYS="$(curl -s https://registry.npmjs.org/-/npm/v1/keys | jq -c '{npm: .keys}')" | tee -a "$GITHUB_ENV"
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run build-for-test:package
+      - name: Identify prepared bundle
+        id: bundle
+        shell: bash
+        run: |
+          version="$(node --input-type=module -e 'import { createHash } from "node:crypto"; import { readFileSync } from "node:fs"; process.stdout.write(createHash("sha256").update(readFileSync("out-for-test.tar")).digest("base64url"));')"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "name=test-assets-$version.tar.zst" >> "$GITHUB_OUTPUT"
+          test -f "../test-assets-$version.tar.zst"
+      - name: Publish immutable prepared bundle
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          BUNDLE_VERSION: ${{ steps.bundle.outputs.version }}
+          BUNDLE_NAME: ${{ steps.bundle.outputs.name }}
+        run: |
+          tag="test-assets-$BUNDLE_VERSION"
+          bundle="../$BUNDLE_NAME"
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" --json assets > "$RUNNER_TEMP/test-assets-release.json"; then
+            if jq --exit-status --arg name "$BUNDLE_NAME" '.assets | any(.name == $name)' "$RUNNER_TEMP/test-assets-release.json" > /dev/null; then
+              existing="$RUNNER_TEMP/existing-test-assets"
+              mkdir -p "$existing"
+              gh release download "$tag" --repo "$GITHUB_REPOSITORY" --pattern "$BUNDLE_NAME" --dir "$existing"
+              node --input-type=module - "$existing/$BUNDLE_NAME" "$BUNDLE_VERSION" <<'NODE'
+          import { createHash } from 'node:crypto';
+          import { readFileSync } from 'node:fs';
+          import zlib, { zstdDecompressSync } from 'node:zlib';
+          const archive = zstdDecompressSync(readFileSync(process.argv[2]), {
+            maxOutputLength: 64 * 1024 * 1024,
+            params: { [zlib.constants.ZSTD_d_windowLogMax]: 31 },
+          });
+          const actual = createHash('sha256').update(archive).digest('base64url');
+          if (actual !== process.argv[3]) throw new Error(`Existing release asset has wrong checksum: ${actual}`);
+          NODE
+              echo "Verified existing prepared bundle; leaving release unchanged."
+            else
+              gh release upload "$tag" "$bundle" --repo "$GITHUB_REPOSITORY"
+            fi
+          else
+            gh release create "$tag" "$bundle" --repo "$GITHUB_REPOSITORY" \
+              --target "$GITHUB_SHA" --prerelease --latest=false --title "Prepared test assets $BUNDLE_VERSION" \
+              --notes "Prepared from asset repository commit $GITHUB_SHA. Uncompressed archive SHA256 (base64url): $BUNDLE_VERSION."
+          fi
