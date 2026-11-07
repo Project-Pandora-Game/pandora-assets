@@ -8,6 +8,7 @@ import sharp, { type AvifOptions, type Sharp } from 'sharp';
 import { BUILD_FOR_TEST, GENERATE_AVIF } from '../config.ts';
 import { AssetSourcePath } from './context.ts';
 import { WatchFile } from './watch.ts';
+import { CreateMaskImage, MASK_AVIF_OPTIONS } from './maskImage.ts';
 
 export type ImageCategory = 'asset' | 'roomDevice' | 'background' | 'textureTile' | 'preview';
 
@@ -44,6 +45,7 @@ const AVIF_OPTIONS: AvifOptions = {
 	quality: 80,
 };
 export const AVIF_SUFFIX = GetResourceBufferHash(Buffer.from(JSON.stringify(AVIF_OPTIONS))).substring(0, 8);
+export const MASK_AVIF_SUFFIX = GetResourceBufferHash(Buffer.from(JSON.stringify(MASK_AVIF_OPTIONS))).substring(0, 8);
 
 export function SetResourceDestinationDirectory(path: string): void {
 	destinationDirectory = path;
@@ -79,13 +81,14 @@ export interface ImageProvider {
 	readonly extension: string;
 	readonly hash: string;
 
-	loadImageSharp(): Sharp | Promise<Sharp>;
+	loadImageSharp(mask?: boolean): Sharp | Promise<Sharp>;
 }
 
 export interface IImageResource extends Resource, GraphicsBuildImageResource, ImageProvider {
 	addCutImageRelative(left: number, top: number, right: number, bottom: number): IImageResource;
 	addResizedImage(maxWidth: number, maxHeight: number, suffix: string): IImageResource;
 	addDownscaledImage(resolution: number): IImageResource;
+	addMaskImage(): IImageResource;
 }
 
 class FileResource extends Resource {
@@ -293,6 +296,10 @@ class ImageResource extends FileResource implements IImageResource {
 		return ImageManipulators.addDownscaledImage(this, resolution);
 	}
 
+	public addMaskImage(): IImageResource {
+		return new MaskImageResource(this);
+	}
+
 	public getSize(): Promise<Size> {
 		return ImageManipulators.getSize(this);
 	}
@@ -375,6 +382,10 @@ class GeneratedImageResource extends Resource implements IImageResource {
 		return ImageManipulators.addDownscaledImage(this, resolution);
 	}
 
+	public addMaskImage(): IImageResource {
+		return new MaskImageResource(this);
+	}
+
 	public getSize(): Promise<Size> {
 		return ImageManipulators.getSize(this);
 	}
@@ -393,7 +404,7 @@ class GeneratedImageResource extends Resource implements IImageResource {
 	}
 
 	private _addAVIFConversion(): void {
-		if (!GENERATE_AVIF)
+		if (!GENERATE_AVIF || this.extension === 'avif')
 			return;
 
 		const name = `${this.baseName}_${AVIF_SUFFIX}.avif`;
@@ -412,8 +423,40 @@ class GeneratedImageResource extends Resource implements IImageResource {
 		});
 	}
 
-	public async loadImageSharp(): Promise<Sharp> {
-		return await this._generator(await this._baseImage.loadImageSharp());
+	public async loadImageSharp(mask = false): Promise<Sharp> {
+		return await this._generator(await this._baseImage.loadImageSharp(mask));
+	}
+}
+
+/** Export only lossless AVIF after crop/resample operations, including downscaled variants. */
+class MaskImageResource extends GeneratedImageResource {
+	private readonly _original: IImageResource;
+
+	constructor(original: IImageResource, resultBaseName = `${original.baseName}_${MASK_AVIF_SUFFIX}`) {
+		Assert(original.extension === 'png');
+		super({
+			baseName: resultBaseName,
+			extension: 'avif',
+			hash: original.hash,
+			loadImageSharp: () => original.loadImageSharp(true),
+		}, '', CreateMaskImage);
+		this._original = original;
+	}
+
+	public override addCutImageRelative(left: number, top: number, right: number, bottom: number): IImageResource {
+		return this._original.addCutImageRelative(left, top, right, bottom).addMaskImage();
+	}
+
+	public override addResizedImage(maxWidth: number, maxHeight: number, suffix: string): IImageResource {
+		return this._original.addResizedImage(maxWidth, maxHeight, suffix).addMaskImage();
+	}
+
+	public override addDownscaledImage(resolution: number): IImageResource {
+		return new MaskImageResource(this._original.addDownscaledImage(resolution), `${this.baseName}_r${resolution}`);
+	}
+
+	public override addMaskImage(): IImageResource {
+		return this;
 	}
 }
 
@@ -485,7 +528,10 @@ export function DefineImageResource(name: string, category: ImageCategory, expec
 			baseName: resultName.replace(/\.[^.]*$/, ''),
 			extension: resultName.replace(/^.*\.([^.]+)$/, '$1'),
 			hash,
-			loadImageSharp() {
+			loadImageSharp(mask = false) {
+				// Test sprites may be simplified; masks must retain their original red and alpha.
+				if (mask)
+					return sharp(sourcePath);
 				if (expectedFormat === 'png') {
 					return sharp(sourcePath)
 						.gamma()
