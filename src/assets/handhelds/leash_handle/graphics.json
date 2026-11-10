@@ -7,150 +7,132 @@
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
-			"name": "handle front",
+			"enableCond": [
+				[
+					{
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
+					},
+					{
+						"view": "front"
+					}
+				]
+			],
+			"name": "Handle front",
 			"points": "static",
 			"automeshTemplate": "aboveArms",
 			"graphicalLayers": [
 				{
-					"name": "handle front",
+					"name": "Handle",
 					"colorizationKey": "handle"
-				}
-			],
-			"variables": [
-				{
-					"type": "view"
 				},
 				{
-					"type": "typedModule",
-					"module": "handUsage_l"
-				}
-			],
-			"imageMap": {
-				"front:no": [
-					""
-				],
-				"front:down": [
-					"leash_handle_front.png"
-				],
-				"front:left": [
-					"leash_handle_front.png"
-				],
-				"front:right": [
-					"leash_handle_front.png"
-				],
-				"back:no": [
-					""
-				],
-				"back:down": [
-					""
-				],
-				"back:left": [
-					""
-				],
-				"back:right": [
-					""
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "autoMesh",
-			"name": "handle back",
-			"points": "static",
-			"automeshTemplate": "belowArms",
-			"graphicalLayers": [
-				{
-					"name": "handle back",
-					"colorizationKey": "handle"
-				}
-			],
-			"variables": [
-				{
-					"type": "view"
-				},
-				{
-					"type": "typedModule",
-					"module": "handUsage_l"
-				}
-			],
-			"imageMap": {
-				"front:no": [
-					""
-				],
-				"front:down": [
-					""
-				],
-				"front:left": [
-					""
-				],
-				"front:right": [
-					""
-				],
-				"back:no": [
-					""
-				],
-				"back:down": [
-					"leash_handle_back.png"
-				],
-				"back:left": [
-					"leash_handle_back.png"
-				],
-				"back:right": [
-					"leash_handle_back.png"
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "autoMesh",
-			"name": "leash",
-			"points": "static",
-			"automeshTemplate": "belowArms",
-			"graphicalLayers": [
-				{
-					"name": "leash",
+					"name": "Leash",
 					"colorizationKey": "leash"
 				}
 			],
 			"variables": [
 				{
 					"type": "typedModule",
-					"module": "type"
+					"module": "leash"
 				},
 				{
 					"type": "typedModule",
-					"module": "handUsage_l"
+					"module": "type"
 				}
 			],
 			"imageMap": {
-				"pet:no": [
-					""
-				],
-				"pet:down": [
+				"down:pet": [
+					"leash_handle_front.png",
 					"leash_pet_hanging.png"
 				],
-				"pet:left": [
-					"leash_pet_left.png"
-				],
-				"pet:right": [
-					"leash_pet_right.png"
-				],
-				"chain:no": [
-					""
-				],
-				"chain:down": [
+				"down:chain": [
+					"leash_handle_front.png",
 					"leash_chain_hanging.png"
 				],
-				"chain:left": [
+				"right:pet": [
+					"leash_handle_front.png",
+					"leash_pet_left.png"
+				],
+				"right:chain": [
+					"leash_handle_front.png",
 					"leash_chain_left.png"
 				],
-				"chain:right": [
+				"left:pet": [
+					"leash_handle_front.png",
+					"leash_pet_right.png"
+				],
+				"left:chain": [
+					"leash_handle_front.png",
+					"leash_chain_right.png"
+				]
+			}
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
+					},
+					{
+						"view": "back"
+					}
+				]
+			],
+			"name": "Handle back",
+			"points": "static",
+			"automeshTemplate": "belowArms",
+			"graphicalLayers": [
+				{
+					"name": "Handle",
+					"colorizationKey": "handle"
+				},
+				{
+					"name": "Leash",
+					"colorizationKey": "leash"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "leash"
+				},
+				{
+					"type": "typedModule",
+					"module": "type"
+				}
+			],
+			"imageMap": {
+				"down:pet": [
+					"leash_handle_front.png",
+					"leash_pet_hanging.png"
+				],
+				"down:chain": [
+					"leash_handle_front.png",
+					"leash_chain_hanging.png"
+				],
+				"right:pet": [
+					"leash_handle_front.png",
+					"leash_pet_left.png"
+				],
+				"right:chain": [
+					"leash_handle_front.png",
+					"leash_chain_left.png"
+				],
+				"left:pet": [
+					"leash_handle_front.png",
+					"leash_pet_right.png"
+				],
+				"left:chain": [
+					"leash_handle_front.png",
 					"leash_chain_right.png"
 				]
 			}

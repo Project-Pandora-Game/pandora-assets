@@ -22,17 +22,13 @@ DefineAsset({
 		],
 	},
 	modules: {
-		handUsage_r: {
+		handUsage: {
 			type: 'typed',
-			name: 'Right hand handle',
+			name: 'Held in hand',
 			variants: [
 				{
-					id: 'no',
-					name: 'No handle',
-				},
-				{
-					id: 'down',
-					name: 'Leash hanging',
+					id: 'held_r',
+					name: 'Right',
 					default: true,
 					properties: {
 						poseLimits: {
@@ -49,32 +45,15 @@ DefineAsset({
 					},
 				},
 				{
-					id: 'right',
-					name: 'Leash left',
+					id: 'held_l',
+					name: 'Left',
 					properties: {
 						poseLimits: {
 							bones: {
-								arm_r: 74,
-								elbow_r: 15,
+								arm_l: 74,
+								elbow_l: 15,
 							},
-							rightArm: {
-								position: 'front',
-								rotation: 'forward',
-								fingers: 'spread',
-							},
-						},
-					},
-				},
-				{
-					id: 'left',
-					name: 'Leash right',
-					properties: {
-						poseLimits: {
-							bones: {
-								arm_r: 74,
-								elbow_r: 15,
-							},
-							rightArm: {
+							leftArm: {
 								position: 'front',
 								rotation: 'forward',
 								fingers: 'spread',
@@ -84,65 +63,22 @@ DefineAsset({
 				},
 			],
 		},
-		handUsage_l: {
+		leash: {
 			type: 'typed',
-			name: 'Left hand handle',
+			name: 'Leash Variant',
 			variants: [
-				{
-					id: 'no',
-					name: 'No handle',
-					default: true,
-				},
 				{
 					id: 'down',
 					name: 'Leash hanging',
-					properties: {
-						poseLimits: {
-							bones: {
-								arm_l: 74,
-								elbow_l: 15,
-							},
-							leftArm: {
-								position: 'front',
-								rotation: 'forward',
-								fingers: 'spread',
-							},
-						},
-					},
-				},
-				{
-					id: 'left',
-					name: 'Leash left',
-					properties: {
-						poseLimits: {
-							bones: {
-								arm_l: 74,
-								elbow_l: 15,
-							},
-							leftArm: {
-								position: 'front',
-								rotation: 'forward',
-								fingers: 'spread',
-							},
-						},
-					},
+					default: true,
 				},
 				{
 					id: 'right',
+					name: 'Leash left',
+				},
+				{
+					id: 'left',
 					name: 'Leash right',
-					properties: {
-						poseLimits: {
-							bones: {
-								arm_l: 74,
-								elbow_l: 15,
-							},
-							leftArm: {
-								position: 'front',
-								rotation: 'forward',
-								fingers: 'spread',
-							},
-						},
-					},
 				},
 			],
 		},
