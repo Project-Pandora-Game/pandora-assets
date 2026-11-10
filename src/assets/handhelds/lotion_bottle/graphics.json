@@ -6,30 +6,42 @@
 			"y": 0,
 			"width": 1400,
 			"height": 1500,
-			"type": "mesh",
-			"name": "nozzle",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "nozzle",
-			"image": {
-				"image": "",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "lotion_bottle_nozzle_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								}
-							]
-						]
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
+					},
+					{
+						"view": "front"
 					}
+				]
+			],
+			"name": "Front",
+			"points": "handheld",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "Nozzle",
+					"colorizationKey": "nozzle"
+				},
+				{
+					"name": "Bottle",
+					"colorizationKey": "bottle"
+				},
+				{
+					"name": "Lotion",
+					"colorizationKey": "lotion"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"lotion_bottle_nozzle_down.png",
+					"lotion_bottle_bottle_down.png",
+					"lotion_bottle_lotion_down.png"
 				]
 			}
 		},
@@ -38,138 +50,42 @@
 			"y": 0,
 			"width": 1400,
 			"height": 1500,
-			"type": "mesh",
-			"name": "bottle",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "bottle",
-			"image": {
-				"image": "",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "lotion_bottle_bottle_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
+					},
+					{
+						"view": "back"
 					}
 				]
-			}
-		},
-		{
-			"x": -200,
-			"y": 0,
-			"width": 1400,
-			"height": 1500,
-			"type": "mesh",
-			"name": "lotion",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
 			],
-			"mirror": 1,
-			"colorizationKey": "lotion",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "lotion_bottle_lotion_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": -200,
-			"y": 0,
-			"width": 1400,
-			"height": 1500,
-			"type": "mesh",
-			"name": "lotion",
-			"priority": "BELOW_ARM_RIGHT",
+			"name": "Back",
 			"points": "handheld",
-			"pointType": [
-				"handheld_r"
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "Lotion",
+					"colorizationKey": "lotion"
+				},
+				{
+					"name": "Bottle",
+					"colorizationKey": "bottle"
+				},
+				{
+					"name": "Nozzle",
+					"colorizationKey": "nozzle"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "lotion",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "lotion_bottle_lotion_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": -200,
-			"y": 0,
-			"width": 1400,
-			"height": 1500,
-			"type": "mesh",
-			"name": "bottle",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "bottle",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "lotion_bottle_bottle_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"variables": [],
+			"imageMap": {
+				"": [
+					"lotion_bottle_lotion_down.png",
+					"lotion_bottle_bottle_down.png",
+					"lotion_bottle_nozzle_down.png"
 				]
 			}
 		}
