@@ -70,11 +70,11 @@ DefineRoomDeviceAsset({
 							character_slot_left: {
 								poseLimits: {
 									bones: {
-										character_rotation: [[-4, 4]],
 										leg_r: [[-30, 0]],
 										leg_l: [[-30, 0]],
 									},
 								},
+								rotationLimits: [[-4, 4]],
 								attributes: {
 									requires: ['Collar_front_ring'],
 									hides: ['Leash'],
@@ -95,7 +95,6 @@ DefineRoomDeviceAsset({
 							character_slot_left: {
 								poseLimits: {
 									bones: {
-										character_rotation: [[-4, 4]],
 										leg_r: [[-30, 0]],
 										leg_l: [[-30, 0]],
 									},
@@ -103,6 +102,7 @@ DefineRoomDeviceAsset({
 										pose: 'kneeling',
 									},
 								},
+								rotationLimits: [[-4, 4]],
 								attributes: {
 									requires: ['Collar_front_ring'],
 									hides: ['Leash'],
@@ -148,11 +148,11 @@ DefineRoomDeviceAsset({
 							character_slot_right: {
 								poseLimits: {
 									bones: {
-										character_rotation: [[-4, 4]],
 										leg_r: [[-30, 0]],
 										leg_l: [[-30, 0]],
 									},
 								},
+								rotationLimits: [[-4, 4]],
 								attributes: {
 									requires: ['Collar_front_ring'],
 									hides: ['Leash'],
@@ -173,7 +173,6 @@ DefineRoomDeviceAsset({
 							character_slot_right: {
 								poseLimits: {
 									bones: {
-										character_rotation: [[-4, 4]],
 										leg_r: [[-30, 0]],
 										leg_l: [[-30, 0]],
 									},
@@ -181,6 +180,7 @@ DefineRoomDeviceAsset({
 										pose: 'kneeling',
 									},
 								},
+								rotationLimits: [[-4, 4]],
 								attributes: {
 									requires: ['Collar_front_ring'],
 									hides: ['Leash'],
@@ -227,7 +227,6 @@ DefineRoomDeviceAsset({
 							character_slot_middle: {
 								poseLimits: {
 									bones: {
-										character_rotation: 0,
 										leg_r: -18,
 										leg_l: -18,
 									},
@@ -235,6 +234,7 @@ DefineRoomDeviceAsset({
 										pose: 'standing',
 									},
 								},
+								rotationLimits: 0,
 								attributes: {
 									requires: ['Ankle_cuffs_chainable'],
 								},

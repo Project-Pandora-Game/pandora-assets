@@ -51,11 +51,7 @@ DefineRoomDeviceAsset({
 					properties: {
 						slotProperties: {
 							front: {
-								poseLimits: {
-									bones: {
-										character_rotation: 0,
-									},
-								},
+								rotationLimits: 0,
 							},
 						},
 					},
@@ -67,11 +63,7 @@ DefineRoomDeviceAsset({
 						blockSlotsEnterLeave: ['front'],
 						slotProperties: {
 							front: {
-								poseLimits: {
-									bones: {
-										character_rotation: 0,
-									},
-								},
+								rotationLimits: 0,
 								attributes: {
 									requires: [
 										'Back_knot_anchor_point',
@@ -98,10 +90,10 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_l: 2,
 										leg_r: 2,
-										character_rotation: 180,
 									},
 									view: 'front',
 								},
+								rotationLimits: 180,
 							},
 						},
 						stateFlags: {
@@ -119,9 +111,9 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_l: [[-100, -12]],
 										leg_r: [[-100, -12]],
-										character_rotation: 0,
 									},
 								},
+								rotationLimits: 0,
 							},
 						},
 						stateFlags: {

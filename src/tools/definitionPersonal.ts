@@ -19,6 +19,7 @@ import { PropertiesValidationMetadata, ValidateAssetProperties, ValidateAssetPro
 const PERSONAL_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Properties
 	'poseLimits',
+	'rotationLimits',
 	'effects',
 	'attributes',
 	'stateFlags',

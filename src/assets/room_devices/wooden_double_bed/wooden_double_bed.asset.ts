@@ -122,13 +122,13 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_r: -18,
 										leg_l: -18,
-										character_rotation: 0,
 									},
 									legs: {
 										pose: 'standing',
 									},
 									view: 'front',
 								},
+								rotationLimits: 0,
 							},
 						},
 					},
@@ -146,10 +146,10 @@ DefineRoomDeviceAsset({
 										arm_r: -27,
 										elbow_l: -60,
 										elbow_r: -58,
-										character_rotation: 0,
 									},
 									view: 'front',
 								},
+								rotationLimits: 0,
 								effects: {
 									blockHands: true,
 								},
@@ -172,13 +172,13 @@ DefineRoomDeviceAsset({
 										elbow_r: -58,
 										leg_r: -18,
 										leg_l: -18,
-										character_rotation: 0,
 									},
 									legs: {
 										pose: 'standing',
 									},
 									view: 'front',
 								},
+								rotationLimits: 0,
 								effects: {
 									blockHands: true,
 								},
@@ -197,13 +197,13 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_r: -18,
 										leg_l: -18,
-										character_rotation: 0,
 									},
 									legs: {
 										pose: 'standing',
 									},
 									view: 'back',
 								},
+								rotationLimits: 0,
 							},
 						},
 					},
@@ -221,10 +221,10 @@ DefineRoomDeviceAsset({
 										arm_r: -27,
 										elbow_l: -60,
 										elbow_r: -58,
-										character_rotation: 0,
 									},
 									view: 'back',
 								},
+								rotationLimits: 0,
 								effects: {
 									blockHands: true,
 								},
@@ -247,13 +247,13 @@ DefineRoomDeviceAsset({
 										elbow_r: -58,
 										leg_r: -18,
 										leg_l: -18,
-										character_rotation: 0,
 									},
 									legs: {
 										pose: 'standing',
 									},
 									view: 'back',
 								},
+								rotationLimits: 0,
 								effects: {
 									blockHands: true,
 								},
@@ -284,13 +284,13 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_r: -80,
 										leg_l: -80,
-										character_rotation: 0,
 									},
 									legs: {
 										pose: 'standing',
 									},
 									view: 'front',
 								},
+								rotationLimits: 0,
 							},
 						},
 					},
@@ -310,7 +310,6 @@ DefineRoomDeviceAsset({
 										elbow_r: -1,
 										leg_r: -80,
 										leg_l: -80,
-										character_rotation: 0,
 									},
 									legs: {
 										pose: 'standing',
@@ -320,6 +319,7 @@ DefineRoomDeviceAsset({
 									},
 									view: 'front',
 								},
+								rotationLimits: 0,
 								effects: {
 									blockHands: true,
 								},
@@ -350,13 +350,13 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_r: -18,
 										leg_l: -18,
-										character_rotation: 0,
 									},
 									legs: {
 										pose: 'standing',
 									},
 									view: 'front',
 								},
+								rotationLimits: 0,
 							},
 						},
 					},
@@ -374,10 +374,10 @@ DefineRoomDeviceAsset({
 										arm_r: -25,
 										elbow_l: -60,
 										elbow_r: -60,
-										character_rotation: 0,
 									},
 									view: 'front',
 								},
+								rotationLimits: 0,
 								effects: {
 									blockHands: true,
 								},
@@ -400,13 +400,13 @@ DefineRoomDeviceAsset({
 										elbow_r: -60,
 										leg_r: -18,
 										leg_l: -18,
-										character_rotation: 0,
 									},
 									legs: {
 										pose: 'standing',
 									},
 									view: 'front',
 								},
+								rotationLimits: 0,
 								effects: {
 									blockHands: true,
 								},
@@ -425,13 +425,13 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_r: -18,
 										leg_l: -18,
-										character_rotation: 0,
 									},
 									legs: {
 										pose: 'standing',
 									},
 									view: 'back',
 								},
+								rotationLimits: 0,
 							},
 						},
 					},
@@ -449,10 +449,10 @@ DefineRoomDeviceAsset({
 										arm_r: -25,
 										elbow_l: -60,
 										elbow_r: -60,
-										character_rotation: 0,
 									},
 									view: 'back',
 								},
+								rotationLimits: 0,
 								effects: {
 									blockHands: true,
 								},
@@ -475,13 +475,13 @@ DefineRoomDeviceAsset({
 										elbow_r: -60,
 										leg_r: -18,
 										leg_l: -18,
-										character_rotation: 0,
 									},
 									legs: {
 										pose: 'standing',
 									},
 									view: 'back',
 								},
+								rotationLimits: 0,
 								effects: {
 									blockHands: true,
 								},

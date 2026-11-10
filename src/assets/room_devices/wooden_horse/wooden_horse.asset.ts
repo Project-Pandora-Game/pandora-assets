@@ -56,12 +56,12 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_r: [[-36, 10]],
 										leg_l: [[-36, 10]],
-										character_rotation: 0,
 									},
 									legs: {
 										pose: ['standing', 'kneeling'],
 									},
 								},
+								rotationLimits: 0,
 							},
 						},
 					},
@@ -76,13 +76,13 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_r: -30,
 										leg_l: -29,
-										character_rotation: 0,
 									},
 									legs: {
 										pose: ['standing', 'kneeling'],
 									},
 									view: 'front',
 								},
+								rotationLimits: 0,
 								attributes: {
 									provides: ['Vulva_cover', 'Anus_cover'],
 									requires: [
@@ -106,13 +106,13 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_r: -29,
 										leg_l: -30,
-										character_rotation: 0,
 									},
 									legs: {
 										pose: ['standing', 'kneeling'],
 									},
 									view: 'back',
 								},
+								rotationLimits: 0,
 								attributes: {
 									provides: ['Vulva_cover', 'Anus_cover'],
 									requires: [

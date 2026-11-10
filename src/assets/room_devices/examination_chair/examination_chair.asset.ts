@@ -49,9 +49,6 @@ DefineRoomDeviceAsset({
 				name: 'Examination Chair',
 				size: 'huge',
 				poseLimits: {
-					bones: {
-						character_rotation: [[-3, 3]],
-					},
 					legs: {
 						pose: 'sitting',
 					},
@@ -60,6 +57,7 @@ DefineRoomDeviceAsset({
 					},
 					view: 'front',
 				},
+				rotationLimits: [[-3, 3]],
 				posePresets: [
 					{
 						name: 'Armrests, spread fingers',
@@ -150,9 +148,9 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_l: -28,
 										leg_r: -28,
-										character_rotation: 0,
 									},
 								},
+								rotationLimits: 0,
 							},
 						},
 					},
@@ -184,9 +182,9 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_l: -28,
 										leg_r: -28,
-										character_rotation: 0,
 									},
 								},
+								rotationLimits: 0,
 							},
 						},
 						stateFlags: {
@@ -227,9 +225,9 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_l: -28,
 										leg_r: -28,
-										character_rotation: 0,
 									},
 								},
+								rotationLimits: 0,
 								attributes: {
 									requires: [
 										'Ankle_cuffs_chainable',
@@ -271,11 +269,7 @@ DefineRoomDeviceAsset({
 						blockSlotsEnterLeave: ['character_slot'],
 						slotProperties: {
 							character_slot: {
-								poseLimits: {
-									bones: {
-										character_rotation: 0,
-									},
-								},
+								rotationLimits: 0,
 							},
 						},
 					},
@@ -309,13 +303,13 @@ DefineRoomDeviceAsset({
 							character_slot: {
 								poseLimits: {
 									bones: {
-										character_rotation: 0,
 										arm_l: 75,
 										arm_r: 75,
 										elbow_l: -4,
 										elbow_r: -4,
 									},
 								},
+								rotationLimits: 0,
 								attributes: {
 									requires: [
 										'Wrist_cuffs_chainable',
@@ -352,11 +346,7 @@ DefineRoomDeviceAsset({
 						blockSlotsEnterLeave: ['character_slot'],
 						slotProperties: {
 							character_slot: {
-								poseLimits: {
-									bones: {
-										character_rotation: 0,
-									},
-								},
+								rotationLimits: 0,
 							},
 						},
 					},
