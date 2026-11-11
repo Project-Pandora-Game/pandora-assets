@@ -1,6 +1,7 @@
 DefineAsset({
 	name: 'Pencil Skirt',
 	size: 'medium',
+	allowRandomizerUsage: true,
 	graphics: 'graphics.json',
 	colorization: {
 		skirt: {
@@ -15,9 +16,6 @@ DefineAsset({
 		provides: [
 			'Clothing',
 			'Clothing_lower',
-		],
-		hides: [
-			'Thigh_cuffs',
 		],
 	},
 	modules: {
@@ -218,13 +216,26 @@ DefineAsset({
 			requiredFlags: ['pulledDown', 'high'],
 			properties: {
 				poseLimits: {
-					legs: {
-						pose: 'standing',
-					},
-					bones: {
-						leg_l: [[3, 3]],
-						leg_r: [[3, 3]],
-					},
+					options: [
+						{
+							legs: {
+								pose: 'standing',
+							},
+							bones: {
+								leg_l: [[3, 3]],
+								leg_r: [[3, 3]],
+							},
+						},
+						{
+							legs: {
+								pose: 'sitting',
+							},
+							bones: {
+								leg_l: [[7, 7]],
+								leg_r: [[7, 7]],
+							},
+						},
+					]
 				},
 			},
 		},
@@ -232,13 +243,26 @@ DefineAsset({
 			requiredFlags: ['pulledDown', 'mid'],
 			properties: {
 				poseLimits: {
-					legs: {
-						pose: 'standing',
-					},
-					bones: {
-						leg_l: [[0, 0]],
-						leg_r: [[0, 0]],
-					},
+					options: [
+						{
+							legs: {
+								pose: 'standing',
+							},
+							bones: {
+								leg_l: [[-3, -3]],
+								leg_r: [[-3, -3]],
+							},
+						},
+						{
+							legs: {
+								pose: 'sitting',
+							},
+							bones: {
+								leg_l: [[-3, -3]],
+								leg_r: [[-3, -3]],
+							},
+						},
+					],
 				},
 			},
 		},
@@ -246,13 +270,26 @@ DefineAsset({
 			requiredFlags: ['pulledDown', 'low'],
 			properties: {
 				poseLimits: {
-					legs: {
-						pose: 'standing',
-					},
-					bones: {
-						leg_l: [[0, 0]],
-						leg_r: [[0, 0]],
-					},
+					options: [
+						{
+							legs: {
+								pose: 'standing',
+							},
+							bones: {
+								leg_l: [[0, 0]],
+								leg_r: [[0, 0]],
+							},
+						},
+						{
+							legs: {
+								pose: 'sitting',
+							},
+							bones: {
+								leg_l: [[-4, -4]],
+								leg_r: [[-4, -4]],
+							},
+						},
+					],
 				},
 			},
 		},

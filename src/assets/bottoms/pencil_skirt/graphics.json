@@ -304,10 +304,97 @@
 						"module": "position",
 						"operator": "=",
 						"value": "pulledDown"
+					},
+					{
+						"legs": "standing"
 					}
 				]
 			],
-			"name": "Front Glossy High Pulled Down",
+			"name": "Front Glossy High Pulled Down Standing",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Front",
+					"colorizationKey": "skirt"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "waist"
+				},
+				{
+					"type": "typedModule",
+					"module": "length"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 0.85,
+				"roughness": 0.27
+			},
+			"imageMap": {
+				"high:aboveKnee": [
+					"front_high_aboveKnee.png"
+				],
+				"high:mini": [
+					"front_high_mini.png"
+				],
+				"high:micro": [
+					"front_high_micro.png"
+				],
+				"mid:aboveKnee": [
+					""
+				],
+				"mid:mini": [
+					""
+				],
+				"mid:micro": [
+					""
+				],
+				"low:aboveKnee": [
+					""
+				],
+				"low:mini": [
+					""
+				],
+				"low:micro": [
+					""
+				]
+			}
+		},
+		{
+			"x": 1,
+			"y": 296,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"module": "waist",
+						"operator": "=",
+						"value": "high"
+					},
+					{
+						"module": "material",
+						"operator": "=",
+						"value": "glossy"
+					},
+					{
+						"module": "position",
+						"operator": "=",
+						"value": "pulledDown"
+					},
+					{
+						"legs": "sitting"
+					}
+				]
+			],
+			"name": "Front Glossy High Pulled Down Sitting",
 			"points": "static",
 			"automeshTemplate": "aboveBody",
 			"disabledTemplateParts": [
@@ -365,7 +452,7 @@
 		},
 		{
 			"x": 1,
-			"y": 235,
+			"y": 296,
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
@@ -385,10 +472,97 @@
 						"module": "position",
 						"operator": "=",
 						"value": "pulledDown"
+					},
+					{
+						"legs": "standing"
 					}
 				]
 			],
-			"name": "Front Glossy Mid Pulled Down",
+			"name": "Front Glossy Mid Pulled Down Standing",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Front",
+					"colorizationKey": "skirt"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "waist"
+				},
+				{
+					"type": "typedModule",
+					"module": "length"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 0.85,
+				"roughness": 0.25
+			},
+			"imageMap": {
+				"high:aboveKnee": [
+					""
+				],
+				"high:mini": [
+					""
+				],
+				"high:micro": [
+					""
+				],
+				"mid:aboveKnee": [
+					"front_mid_aboveKnee.png"
+				],
+				"mid:mini": [
+					"front_mid_mini.png"
+				],
+				"mid:micro": [
+					"front_mid_micro.png"
+				],
+				"low:aboveKnee": [
+					""
+				],
+				"low:mini": [
+					""
+				],
+				"low:micro": [
+					""
+				]
+			}
+		},
+		{
+			"x": 1,
+			"y": 174,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"module": "waist",
+						"operator": "=",
+						"value": "mid"
+					},
+					{
+						"module": "material",
+						"operator": "=",
+						"value": "glossy"
+					},
+					{
+						"module": "position",
+						"operator": "=",
+						"value": "pulledDown"
+					},
+					{
+						"legs": "sitting"
+					}
+				]
+			],
+			"name": "Front Glossy Mid Pulled Down Sitting",
 			"points": "static",
 			"automeshTemplate": "aboveBody",
 			"disabledTemplateParts": [
@@ -1039,10 +1213,131 @@
 						"module": "position",
 						"operator": "=",
 						"value": "pulledDown"
+					},
+					{
+						"legs": "standing"
 					}
 				]
 			],
-			"name": "Back Glossy High Pulled Down",
+			"name": "Back Glossy High Pulled Down Standing",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "back",
+					"colorizationKey": "skirt"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "waist"
+				},
+				{
+					"type": "typedModule",
+					"module": "length"
+				},
+				{
+					"type": "typedModule",
+					"module": "cutout"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 0.85,
+				"roughness": 0.27
+			},
+			"imageMap": {
+				"high:aboveKnee:no": [
+					"back_high_aboveKnee_no.png"
+				],
+				"high:aboveKnee:yes": [
+					"back_high_aboveKnee_yes.png"
+				],
+				"high:mini:no": [
+					"back_high_mini_no.png"
+				],
+				"high:mini:yes": [
+					"back_high_mini_yes.png"
+				],
+				"high:micro:no": [
+					"back_high_micro_no.png"
+				],
+				"high:micro:yes": [
+					"back_high_micro_yes.png"
+				],
+				"mid:aboveKnee:no": [
+					""
+				],
+				"mid:aboveKnee:yes": [
+					""
+				],
+				"mid:mini:no": [
+					""
+				],
+				"mid:mini:yes": [
+					""
+				],
+				"mid:micro:no": [
+					""
+				],
+				"mid:micro:yes": [
+					""
+				],
+				"low:aboveKnee:no": [
+					""
+				],
+				"low:aboveKnee:yes": [
+					""
+				],
+				"low:mini:no": [
+					""
+				],
+				"low:mini:yes": [
+					""
+				],
+				"low:micro:no": [
+					""
+				],
+				"low:micro:yes": [
+					""
+				]
+			}
+		},
+		{
+			"x": 1,
+			"y": 296,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"view": "back"
+					},
+					{
+						"module": "waist",
+						"operator": "=",
+						"value": "high"
+					},
+					{
+						"module": "material",
+						"operator": "=",
+						"value": "glossy"
+					},
+					{
+						"module": "position",
+						"operator": "=",
+						"value": "pulledDown"
+					},
+					{
+						"legs": "sitting"
+					}
+				]
+			],
+			"name": "Back Glossy High Pulled Down Sitting",
 			"points": "static",
 			"automeshTemplate": "belowBody",
 			"disabledTemplateParts": [
@@ -1131,7 +1426,7 @@
 		},
 		{
 			"x": 1,
-			"y": 235,
+			"y": 286,
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
@@ -1154,10 +1449,131 @@
 						"module": "position",
 						"operator": "=",
 						"value": "pulledDown"
+					},
+					{
+						"legs": "standing"
 					}
 				]
 			],
-			"name": "Back Glossy Mid Pulled Down",
+			"name": "Back Glossy Mid Pulled Down Standing",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "back",
+					"colorizationKey": "skirt"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "waist"
+				},
+				{
+					"type": "typedModule",
+					"module": "length"
+				},
+				{
+					"type": "typedModule",
+					"module": "cutout"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 0.85,
+				"roughness": 0.27
+			},
+			"imageMap": {
+				"high:aboveKnee:no": [
+					""
+				],
+				"high:aboveKnee:yes": [
+					""
+				],
+				"high:mini:no": [
+					""
+				],
+				"high:mini:yes": [
+					""
+				],
+				"high:micro:no": [
+					""
+				],
+				"high:micro:yes": [
+					""
+				],
+				"mid:aboveKnee:no": [
+					"back_mid_aboveKnee_no.png"
+				],
+				"mid:aboveKnee:yes": [
+					"back_mid_aboveKnee_yes.png"
+				],
+				"mid:mini:no": [
+					"back_mid_mini_no.png"
+				],
+				"mid:mini:yes": [
+					"back_mid_mini_yes.png"
+				],
+				"mid:micro:no": [
+					"back_mid_micro_no.png"
+				],
+				"mid:micro:yes": [
+					"back_mid_micro_yes.png"
+				],
+				"low:aboveKnee:no": [
+					""
+				],
+				"low:aboveKnee:yes": [
+					""
+				],
+				"low:mini:no": [
+					""
+				],
+				"low:mini:yes": [
+					""
+				],
+				"low:micro:no": [
+					""
+				],
+				"low:micro:yes": [
+					""
+				]
+			}
+		},
+		{
+			"x": 1,
+			"y": 174,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"view": "back"
+					},
+					{
+						"module": "waist",
+						"operator": "=",
+						"value": "mid"
+					},
+					{
+						"module": "material",
+						"operator": "=",
+						"value": "glossy"
+					},
+					{
+						"module": "position",
+						"operator": "=",
+						"value": "pulledDown"
+					},
+					{
+						"legs": "sitting"
+					}
+				]
+			],
+			"name": "Back Glossy Mid Pulled Down Sitting",
 			"points": "static",
 			"automeshTemplate": "belowBody",
 			"disabledTemplateParts": [
@@ -1662,10 +2078,13 @@
 						"module": "position",
 						"operator": "=",
 						"value": "pulledDown"
+					},
+					{
+						"legs": "standing"
 					}
 				]
 			],
-			"name": "Front Matte High Pulled Down",
+			"name": "Front Matte High Pulled Down Standing",
 			"points": "static",
 			"automeshTemplate": "aboveBody",
 			"disabledTemplateParts": [
@@ -1723,7 +2142,91 @@
 		},
 		{
 			"x": 1,
-			"y": 235,
+			"y": 296,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"module": "waist",
+						"operator": "=",
+						"value": "high"
+					},
+					{
+						"module": "material",
+						"operator": "=",
+						"value": "matte"
+					},
+					{
+						"module": "position",
+						"operator": "=",
+						"value": "pulledDown"
+					},
+					{
+						"legs": "sitting"
+					}
+				]
+			],
+			"name": "Front Matte High Pulled Down Sitting",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Front",
+					"colorizationKey": "skirt"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "waist"
+				},
+				{
+					"type": "typedModule",
+					"module": "length"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 0,
+				"roughness": 0
+			},
+			"imageMap": {
+				"high:aboveKnee": [
+					"front_high_aboveKnee.png"
+				],
+				"high:mini": [
+					"front_high_mini.png"
+				],
+				"high:micro": [
+					"front_high_micro.png"
+				],
+				"mid:aboveKnee": [
+					""
+				],
+				"mid:mini": [
+					""
+				],
+				"mid:micro": [
+					""
+				],
+				"low:aboveKnee": [
+					""
+				],
+				"low:mini": [
+					""
+				],
+				"low:micro": [
+					""
+				]
+			}
+		},
+		{
+			"x": 1,
+			"y": 296,
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
@@ -1743,10 +2246,97 @@
 						"module": "position",
 						"operator": "=",
 						"value": "pulledDown"
+					},
+					{
+						"legs": "standing"
 					}
 				]
 			],
-			"name": "Front Matte Mid Pulled Down",
+			"name": "Front Matte Mid Pulled Down Standing",
+			"points": "static",
+			"automeshTemplate": "aboveBody",
+			"disabledTemplateParts": [
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "Front",
+					"colorizationKey": "skirt"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "waist"
+				},
+				{
+					"type": "typedModule",
+					"module": "length"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 0,
+				"roughness": 0
+			},
+			"imageMap": {
+				"high:aboveKnee": [
+					""
+				],
+				"high:mini": [
+					""
+				],
+				"high:micro": [
+					""
+				],
+				"mid:aboveKnee": [
+					"front_mid_aboveKnee.png"
+				],
+				"mid:mini": [
+					"front_mid_mini.png"
+				],
+				"mid:micro": [
+					"front_mid_micro.png"
+				],
+				"low:aboveKnee": [
+					""
+				],
+				"low:mini": [
+					""
+				],
+				"low:micro": [
+					""
+				]
+			}
+		},
+		{
+			"x": 1,
+			"y": 174,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"module": "waist",
+						"operator": "=",
+						"value": "mid"
+					},
+					{
+						"module": "material",
+						"operator": "=",
+						"value": "matte"
+					},
+					{
+						"module": "position",
+						"operator": "=",
+						"value": "pulledDown"
+					},
+					{
+						"legs": "sitting"
+					}
+				]
+			],
+			"name": "Front Matte Mid Pulled Down Sitting",
 			"points": "static",
 			"automeshTemplate": "aboveBody",
 			"disabledTemplateParts": [
@@ -2397,10 +2987,13 @@
 						"module": "position",
 						"operator": "=",
 						"value": "pulledDown"
+					},
+					{
+						"legs": "standing"
 					}
 				]
 			],
-			"name": "Back Matte High Pulled Down",
+			"name": "Back Matte High Pulled Down Standing",
 			"points": "static",
 			"automeshTemplate": "belowBody",
 			"disabledTemplateParts": [
@@ -2489,7 +3082,125 @@
 		},
 		{
 			"x": 1,
-			"y": 235,
+			"y": 296,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"view": "back"
+					},
+					{
+						"module": "waist",
+						"operator": "=",
+						"value": "high"
+					},
+					{
+						"module": "material",
+						"operator": "=",
+						"value": "matte"
+					},
+					{
+						"module": "position",
+						"operator": "=",
+						"value": "pulledDown"
+					},
+					{
+						"legs": "sitting"
+					}
+				]
+			],
+			"name": "Back Matte High Pulled Down Sitting",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "back",
+					"colorizationKey": "skirt"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "waist"
+				},
+				{
+					"type": "typedModule",
+					"module": "length"
+				},
+				{
+					"type": "typedModule",
+					"module": "cutout"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 0,
+				"roughness": 0
+			},
+			"imageMap": {
+				"high:aboveKnee:no": [
+					"back_high_aboveKnee_no.png"
+				],
+				"high:aboveKnee:yes": [
+					"back_high_aboveKnee_yes.png"
+				],
+				"high:mini:no": [
+					"back_high_mini_no.png"
+				],
+				"high:mini:yes": [
+					"back_high_mini_yes.png"
+				],
+				"high:micro:no": [
+					"back_high_micro_no.png"
+				],
+				"high:micro:yes": [
+					"back_high_micro_yes.png"
+				],
+				"mid:aboveKnee:no": [
+					""
+				],
+				"mid:aboveKnee:yes": [
+					""
+				],
+				"mid:mini:no": [
+					""
+				],
+				"mid:mini:yes": [
+					""
+				],
+				"mid:micro:no": [
+					""
+				],
+				"mid:micro:yes": [
+					""
+				],
+				"low:aboveKnee:no": [
+					""
+				],
+				"low:aboveKnee:yes": [
+					""
+				],
+				"low:mini:no": [
+					""
+				],
+				"low:mini:yes": [
+					""
+				],
+				"low:micro:no": [
+					""
+				],
+				"low:micro:yes": [
+					""
+				]
+			}
+		},
+		{
+			"x": 1,
+			"y": 286,
 			"width": 1000,
 			"height": 1500,
 			"type": "autoMesh",
@@ -2512,10 +3223,131 @@
 						"module": "position",
 						"operator": "=",
 						"value": "pulledDown"
+					},
+					{
+						"legs": "standing"
 					}
 				]
 			],
-			"name": "Back Matte Mid Pulled Down",
+			"name": "Back Matte Mid Pulled Down Standing",
+			"points": "static",
+			"automeshTemplate": "belowBody",
+			"disabledTemplateParts": [
+				"arms"
+			],
+			"graphicalLayers": [
+				{
+					"name": "back",
+					"colorizationKey": "skirt"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "waist"
+				},
+				{
+					"type": "typedModule",
+					"module": "length"
+				},
+				{
+					"type": "typedModule",
+					"module": "cutout"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 0,
+				"roughness": 0
+			},
+			"imageMap": {
+				"high:aboveKnee:no": [
+					""
+				],
+				"high:aboveKnee:yes": [
+					""
+				],
+				"high:mini:no": [
+					""
+				],
+				"high:mini:yes": [
+					""
+				],
+				"high:micro:no": [
+					""
+				],
+				"high:micro:yes": [
+					""
+				],
+				"mid:aboveKnee:no": [
+					"back_mid_aboveKnee_no.png"
+				],
+				"mid:aboveKnee:yes": [
+					"back_mid_aboveKnee_yes.png"
+				],
+				"mid:mini:no": [
+					"back_mid_mini_no.png"
+				],
+				"mid:mini:yes": [
+					"back_mid_mini_yes.png"
+				],
+				"mid:micro:no": [
+					"back_mid_micro_no.png"
+				],
+				"mid:micro:yes": [
+					"back_mid_micro_yes.png"
+				],
+				"low:aboveKnee:no": [
+					""
+				],
+				"low:aboveKnee:yes": [
+					""
+				],
+				"low:mini:no": [
+					""
+				],
+				"low:mini:yes": [
+					""
+				],
+				"low:micro:no": [
+					""
+				],
+				"low:micro:yes": [
+					""
+				]
+			}
+		},
+		{
+			"x": 1,
+			"y": 174,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"view": "back"
+					},
+					{
+						"module": "waist",
+						"operator": "=",
+						"value": "mid"
+					},
+					{
+						"module": "material",
+						"operator": "=",
+						"value": "matte"
+					},
+					{
+						"module": "position",
+						"operator": "=",
+						"value": "pulledDown"
+					},
+					{
+						"legs": "sitting"
+					}
+				]
+			],
+			"name": "Back Matte Mid Pulled Down Sitting",
 			"points": "static",
 			"automeshTemplate": "belowBody",
 			"disabledTemplateParts": [
