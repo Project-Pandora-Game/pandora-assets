@@ -182,8 +182,8 @@ importers:
         specifier: 4.18.1
         version: 4.18.1
       pandora-common:
-        specifier: github:Project-Pandora-Game/pandora#master&path:pandora-common
-        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/562f07b48e748de50931c86b5f1f3e76ed69833f#path:pandora-common(zod@4.6.6)
+        specifier: github:Project-Pandora-Game/pandora#ff85c5a6f7df6ff049d2a35eda533fb67376c9a2&path:pandora-common
+        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/ff85c5a6f7df6ff049d2a35eda533fb67376c9a2#path:pandora-common(zod@4.6.6)
       rimraf:
         specifier: 6.1.3
         version: 6.1.3
@@ -2407,8 +2407,8 @@ packages:
   package-json-from-dist@1.0.1:
     resolution: {integrity: sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/562f07b48e748de50931c86b5f1f3e76ed69833f#path:pandora-common:
-    resolution: {gitHosted: true, integrity: sha512-G3yGhtieS3yToDEPO8gdpC3Q4qv20xpZ/HGXglBZPZKjCLiWgD/FISu0QQKfvshE3XJu/6D+4euwIWILPZbL7g==, path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/562f07b48e748de50931c86b5f1f3e76ed69833f}
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/ff85c5a6f7df6ff049d2a35eda533fb67376c9a2#path:pandora-common:
+    resolution: {gitHosted: true, integrity: sha512-ex0NbcU2rVL0rR7lY4KBb9IKsbuUl47bTVd7BtewhRWuh3V1ooEU+7teyM1aSMaSZx69BjqI577CuFC7HUrAww==, path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/ff85c5a6f7df6ff049d2a35eda533fb67376c9a2}
     version: 0.1.0
     engines: {node: '>=24.x'}
     peerDependencies:
@@ -5506,7 +5506,7 @@ snapshots:
 
   package-json-from-dist@1.0.1: {}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/562f07b48e748de50931c86b5f1f3e76ed69833f#path:pandora-common(zod@4.6.6):
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/ff85c5a6f7df6ff049d2a35eda533fb67376c9a2#path:pandora-common(zod@4.6.6):
     dependencies:
       '@types/async-lock': 1.4.2
       '@types/lodash-es': 4.17.12
