@@ -411,7 +411,7 @@ DefineAsset({
 						},
 						stateFlags: {
 							requires: {
-								hogtie_anchor_point: 'Legs cannot be hogtied without a knot on back or wrist tied back',
+								hogtie_anchor_point: 'Legs cannot be hogtied without a knot on the back or wrists tied back',
 							},
 						},
 						effects: {
