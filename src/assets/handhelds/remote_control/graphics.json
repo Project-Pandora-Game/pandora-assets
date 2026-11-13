@@ -6,60 +6,58 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "remote front",
-			"priority": "ABOVE_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "remote",
-			"image": {
-				"image": "",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "remote_front_up.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "remote_front_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
 					}
+				]
+			],
+			"name": "Remote front",
+			"points": "handheld",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Remote",
+					"colorizationKey": "remote"
+				}
+			],
+			"variables": [
+				{
+					"type": "armRotation",
+					"side": "left"
+				},
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"backward:front": [
+					""
+				],
+				"backward:back": [
+					""
+				],
+				"up:front": [
+					"remote_front_up.png"
+				],
+				"up:back": [
+					""
+				],
+				"forward:front": [
+					""
+				],
+				"forward:back": [
+					""
+				],
+				"down:front": [
+					"remote_front_down.png"
+				],
+				"down:back": [
+					""
 				]
 			}
 		},
@@ -68,60 +66,58 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "remote back",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "remote",
-			"image": {
-				"image": "",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "remote_back_up.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "remote_back_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
 					}
+				]
+			],
+			"name": "Remote back",
+			"points": "handheld",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "Remote",
+					"colorizationKey": "remote"
+				}
+			],
+			"variables": [
+				{
+					"type": "armRotation",
+					"side": "left"
+				},
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"backward:front": [
+					""
+				],
+				"backward:back": [
+					""
+				],
+				"up:front": [
+					""
+				],
+				"up:back": [
+					"remote_back_up.png"
+				],
+				"forward:front": [
+					""
+				],
+				"forward:back": [
+					""
+				],
+				"down:front": [
+					""
+				],
+				"down:back": [
+					"remote_back_down.png"
 				]
 			}
 		}
