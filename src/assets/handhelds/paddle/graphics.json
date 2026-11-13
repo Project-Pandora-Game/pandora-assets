@@ -6,39 +6,58 @@
 			"y": 0,
 			"width": 1400,
 			"height": 1500,
-			"type": "mesh",
-			"name": "handle hand overlay",
-			"priority": "ABOVE_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "paddle_handle_overlay.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
 					}
+				]
+			],
+			"name": "Handle hand overlay front",
+			"points": "handheld",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Handle",
+					"colorizationKey": "handle"
+				}
+			],
+			"variables": [
+				{
+					"type": "armRotation",
+					"side": "left"
+				},
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"backward:front": [
+					""
+				],
+				"backward:back": [
+					""
+				],
+				"up:front": [
+					"paddle_handle_overlay.png"
+				],
+				"up:back": [
+					""
+				],
+				"forward:front": [
+					""
+				],
+				"forward:back": [
+					""
+				],
+				"down:front": [
+					"paddle_handle_overlay_down.png"
+				],
+				"down:back": [
+					""
 				]
 			}
 		},
@@ -47,39 +66,58 @@
 			"y": 0,
 			"width": 1400,
 			"height": 1500,
-			"type": "mesh",
-			"name": "handle hand overlay back",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "paddle_handle_overlay_back.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
 					}
+				]
+			],
+			"name": "Handle hand overlay back",
+			"points": "handheld",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "Handle",
+					"colorizationKey": "handle"
+				}
+			],
+			"variables": [
+				{
+					"type": "armRotation",
+					"side": "left"
+				},
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"backward:front": [
+					""
+				],
+				"backward:back": [
+					""
+				],
+				"up:front": [
+					""
+				],
+				"up:back": [
+					"paddle_handle_overlay_back.png"
+				],
+				"forward:front": [
+					""
+				],
+				"forward:back": [
+					""
+				],
+				"down:front": [
+					""
+				],
+				"down:back": [
+					"paddle_handle_overlay_back_down.png"
 				]
 			}
 		},
@@ -88,142 +126,58 @@
 			"y": 0,
 			"width": 1500,
 			"height": 1500,
-			"type": "mesh",
-			"name": "handle",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "paddle_handle.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "paddle_handle_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
 					}
 				]
-			}
-		},
-		{
-			"x": -200,
-			"y": 0,
-			"width": 1400,
-			"height": 1500,
-			"type": "mesh",
-			"name": "handle hand overlay down",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
 			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "paddle_handle_overlay_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": -200,
-			"y": 0,
-			"width": 1400,
-			"height": 1500,
-			"type": "mesh",
-			"name": "handle hand overlay back down",
-			"priority": "ABOVE_ARM_RIGHT",
+			"name": "Handle back",
 			"points": "handheld",
-			"pointType": [
-				"handheld_r"
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Handle",
+					"colorizationKey": "handle"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "paddle_handle_overlay_back_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "armRotation",
+					"side": "left"
+				},
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"backward:front": [
+					""
+				],
+				"backward:back": [
+					""
+				],
+				"up:front": [
+					""
+				],
+				"up:back": [
+					"paddle_handle.png"
+				],
+				"forward:front": [
+					""
+				],
+				"forward:back": [
+					""
+				],
+				"down:front": [
+					""
+				],
+				"down:back": [
+					"paddle_handle_down.png"
 				]
 			}
 		},
@@ -232,60 +186,58 @@
 			"y": 0,
 			"width": 1500,
 			"height": 1500,
-			"type": "mesh",
-			"name": "handle back",
-			"priority": "ABOVE_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "paddle_handle.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "paddle_handle_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
 					}
+				]
+			],
+			"name": "Handle",
+			"points": "handheld",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "Handle",
+					"colorizationKey": "handle"
+				}
+			],
+			"variables": [
+				{
+					"type": "armRotation",
+					"side": "left"
+				},
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"backward:front": [
+					""
+				],
+				"backward:back": [
+					""
+				],
+				"up:front": [
+					"paddle_handle.png"
+				],
+				"up:back": [
+					""
+				],
+				"forward:front": [
+					""
+				],
+				"forward:back": [
+					""
+				],
+				"down:front": [
+					"paddle_handle_down.png"
+				],
+				"down:back": [
+					""
 				]
 			}
 		}
