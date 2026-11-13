@@ -13,45 +13,29 @@ DefineAsset({
 		],
 	},
 	modules: {
-		handUsage_r: {
+		handUsage: {
 			type: 'typed',
-			name: 'Right hand ruler',
+			name: 'Held in hand',
 			variants: [
 				{
-					id: 'no',
-					name: 'No Ruler',
-				},
-				{
-					id: 'metal',
-					name: 'Metal',
-					properties: {
-						poseLimits: {
-							rightArm: {
-								fingers: 'fist',
-								rotation: ['up', 'down'],
-							},
-						},
-					},
-				},
-				{
-					id: 'acryl',
-					name: 'Acryl',
-					properties: {
-						poseLimits: {
-							rightArm: {
-								fingers: 'fist',
-								rotation: ['up', 'down'],
-							},
-						},
-					},
-				},
-				{
-					id: 'wood',
-					name: 'Wood',
+					id: 'held_r',
+					name: 'Right',
 					default: true,
 					properties: {
 						poseLimits: {
 							rightArm: {
+								fingers: 'fist',
+								rotation: ['up', 'down'],
+							},
+						},
+					},
+				},
+				{
+					id: 'held_l',
+					name: 'Left',
+					properties: {
+						poseLimits: {
+							leftArm: {
 								fingers: 'fist',
 								rotation: ['up', 'down'],
 							},
@@ -60,50 +44,22 @@ DefineAsset({
 				},
 			],
 		},
-		handUsage_l: {
+		rulerType: {
 			type: 'typed',
-			name: 'Left hand Ruler',
+			name: 'Ruler Type',
 			variants: [
-				{
-					id: 'no',
-					name: 'No Ruler',
-					default: true,
-				},
 				{
 					id: 'metal',
 					name: 'Metal',
-					properties: {
-						poseLimits: {
-							leftArm: {
-								fingers: 'fist',
-								rotation: ['up', 'down'],
-							},
-						},
-					},
 				},
 				{
 					id: 'acryl',
 					name: 'Acryl',
-					properties: {
-						poseLimits: {
-							leftArm: {
-								fingers: 'fist',
-								rotation: ['up', 'down'],
-							},
-						},
-					},
 				},
 				{
 					id: 'wood',
 					name: 'Wood',
-					properties: {
-						poseLimits: {
-							leftArm: {
-								fingers: 'fist',
-								rotation: ['up', 'down'],
-							},
-						},
-					},
+					default: true,
 				},
 			],
 		},
