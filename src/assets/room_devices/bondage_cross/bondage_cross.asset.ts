@@ -280,11 +280,7 @@ DefineRoomDeviceAsset({
 					properties: {
 						slotProperties: {
 							character_slot: {
-								poseLimits: {
-									bones: {
-										character_rotation: 0,
-									},
-								},
+								rotationLimits: 0,
 							},
 						},
 					},
@@ -295,11 +291,7 @@ DefineRoomDeviceAsset({
 					properties: {
 						slotProperties: {
 							character_slot: {
-								poseLimits: {
-									bones: {
-										character_rotation: 180,
-									},
-								},
+								rotationLimits: 180,
 							},
 						},
 						stateFlags: {

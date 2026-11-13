@@ -288,10 +288,10 @@ DefineRoomDeviceAsset({
 								},
 								poseLimits: {
 									bones: {
-										character_rotation: -37,
 										leg_l: -83,
 									},
 								},
+								rotationLimits: -37,
 							},
 						},
 						stateFlags: {
@@ -317,10 +317,10 @@ DefineRoomDeviceAsset({
 								},
 								poseLimits: {
 									bones: {
-										character_rotation: 37,
 										leg_r: -83,
 									},
 								},
+								rotationLimits: 37,
 							},
 						},
 						stateFlags: {
@@ -346,10 +346,10 @@ DefineRoomDeviceAsset({
 								},
 								poseLimits: {
 									bones: {
-										character_rotation: 37,
 										leg_l: -83,
 									},
 								},
+								rotationLimits: 37,
 							},
 						},
 						stateFlags: {
@@ -375,10 +375,10 @@ DefineRoomDeviceAsset({
 								},
 								poseLimits: {
 									bones: {
-										character_rotation: -37,
 										leg_r: -83,
 									},
 								},
+								rotationLimits: -37,
 							},
 						},
 						stateFlags: {
@@ -417,7 +417,6 @@ DefineRoomDeviceAsset({
 							under_ring: {
 								poseLimits: {
 									bones: {
-										character_rotation: 0,
 										leg_l: -40,
 										leg_r: -40,
 									},
@@ -425,6 +424,7 @@ DefineRoomDeviceAsset({
 										pose: 'kneeling',
 									},
 								},
+								rotationLimits: 0,
 							},
 						},
 						stateFlags: {
@@ -444,7 +444,6 @@ DefineRoomDeviceAsset({
 							under_ring: {
 								poseLimits: {
 									bones: {
-										character_rotation: 180,
 										leg_l: 2,
 										leg_r: 2,
 									},
@@ -452,6 +451,7 @@ DefineRoomDeviceAsset({
 										pose: 'standing',
 									},
 								},
+								rotationLimits: 180,
 							},
 						},
 						stateFlags: {
@@ -530,7 +530,6 @@ DefineRoomDeviceAsset({
 							under_ring: {
 								poseLimits: {
 									bones: {
-										character_rotation: 0,
 										leg_l: 2,
 										leg_r: 2,
 									},
@@ -538,6 +537,7 @@ DefineRoomDeviceAsset({
 										pose: 'standing',
 									},
 								},
+								rotationLimits: 0,
 							},
 						},
 						stateFlags: {
@@ -617,11 +617,7 @@ DefineRoomDeviceAsset({
 			properties: {
 				slotProperties: {
 					under_ring: {
-						poseLimits: {
-							bones: {
-								character_rotation: 0,
-							},
-						},
+						rotationLimits: 0,
 					},
 				},
 			},
@@ -631,11 +627,7 @@ DefineRoomDeviceAsset({
 			properties: {
 				slotProperties: {
 					under_ring: {
-						poseLimits: {
-							bones: {
-								character_rotation: 0,
-							},
-						},
+						rotationLimits: 0,
 					},
 				},
 			},

@@ -77,9 +77,9 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_r: [[-18, 10]],
 										leg_l: [[-18, 10]],
-										character_rotation: 0,
 									},
 								},
+								rotationLimits: 0,
 							},
 						},
 					},
@@ -98,9 +98,9 @@ DefineRoomDeviceAsset({
 										arm_r: -70,
 										elbow_l: -20,
 										elbow_r: -20,
-										character_rotation: 0,
 									},
 								},
+								rotationLimits: 0,
 								effects: {
 									blockHands: true,
 								},
@@ -125,10 +125,10 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_r: -33,
 										leg_l: -33,
-										character_rotation: 0,
 									},
 									legs: { pose: 'standing' },
 								},
+								rotationLimits: 0,
 								effects: {
 								},
 								attributes: {
@@ -156,10 +156,10 @@ DefineRoomDeviceAsset({
 										elbow_r: -20,
 										leg_r: -33,
 										leg_l: -33,
-										character_rotation: 0,
 									},
 									legs: { pose: 'standing' },
 								},
+								rotationLimits: 0,
 								effects: {
 									blockHands: true,
 								},
@@ -187,9 +187,9 @@ DefineRoomDeviceAsset({
 										arm_r: -70,
 										elbow_l: -20,
 										elbow_r: -20,
-										character_rotation: 0,
 									},
 								},
+								rotationLimits: 0,
 								effects: {
 									blockHands: true,
 								},
@@ -218,10 +218,10 @@ DefineRoomDeviceAsset({
 										elbow_r: -20,
 										leg_r: -30,
 										leg_l: -30,
-										character_rotation: 0,
 									},
 									legs: { pose: 'standing' },
 								},
+								rotationLimits: 0,
 								effects: {
 									blockHands: true,
 								},
@@ -305,10 +305,10 @@ DefineRoomDeviceAsset({
 										arm_r: 78,
 										elbow_l: 55,
 										elbow_r: 55,
-										character_rotation: 0,
 									},
 									view: 'front',
 								},
+								rotationLimits: 0,
 								effects: {
 									blockHands: true,
 								},
@@ -332,9 +332,9 @@ DefineRoomDeviceAsset({
 										arm_r: -74,
 										elbow_l: -43,
 										elbow_r: -43,
-										character_rotation: 0,
 									},
 								},
+								rotationLimits: 0,
 								effects: {
 									blockHands: true,
 								},
@@ -358,9 +358,9 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_l: [[-3, 2]],
 										leg_r: [[-3, 2]],
-										character_rotation: 0,
 									},
 								},
+								rotationLimits: 0,
 								attributes: {
 									requires: [
 										'Ankle_cuffs_chainable',
@@ -385,9 +385,9 @@ DefineRoomDeviceAsset({
 										elbow_r: -43,
 										leg_l: [[-3, 2]],
 										leg_r: [[-3, 2]],
-										character_rotation: 0,
 									},
 								},
+								rotationLimits: 0,
 								effects: {
 									blockHands: true,
 								},
@@ -437,10 +437,10 @@ DefineRoomDeviceAsset({
 										arm_r: 78,
 										elbow_l: 55,
 										elbow_r: 55,
-										character_rotation: 0,
 									},
 									view: 'front',
 								},
+								rotationLimits: 0,
 								effects: {
 									blockHands: true,
 								},
@@ -464,9 +464,9 @@ DefineRoomDeviceAsset({
 										arm_r: -74,
 										elbow_l: -43,
 										elbow_r: -43,
-										character_rotation: 0,
 									},
 								},
+								rotationLimits: 0,
 								effects: {
 									blockHands: true,
 								},
@@ -490,9 +490,9 @@ DefineRoomDeviceAsset({
 									bones: {
 										leg_l: [[-3, 2]],
 										leg_r: [[-3, 2]],
-										character_rotation: 0,
 									},
 								},
+								rotationLimits: 0,
 								attributes: {
 									requires: [
 										'Ankle_cuffs_chainable',
@@ -517,9 +517,9 @@ DefineRoomDeviceAsset({
 										elbow_r: -43,
 										leg_l: [[-3, 2]],
 										leg_r: [[-3, 2]],
-										character_rotation: 0,
 									},
 								},
+								rotationLimits: 0,
 								effects: {
 									blockHands: true,
 								},

@@ -125,11 +125,11 @@ DefineRoomDeviceAsset({
 										pose: 'kneeling',
 									},
 									bones: {
-										character_rotation: 0,
 										leg_l: [[-25, 6]],
 										leg_r: [[-25, 6]],
 									},
 								},
+								rotationLimits: 0,
 							},
 						},
 					},
@@ -189,10 +189,10 @@ DefineRoomDeviceAsset({
 								},
 								poseLimits: {
 									bones: {
-										character_rotation: -27,
 										leg_l: -87,
 									},
 								},
+								rotationLimits: -27,
 							},
 						},
 						stateFlags: {
@@ -217,10 +217,10 @@ DefineRoomDeviceAsset({
 								},
 								poseLimits: {
 									bones: {
-										character_rotation: 27,
 										leg_r: -87,
 									},
 								},
+								rotationLimits: 27,
 							},
 						},
 						stateFlags: {
@@ -245,10 +245,10 @@ DefineRoomDeviceAsset({
 								},
 								poseLimits: {
 									bones: {
-										character_rotation: 27,
 										leg_l: -87,
 									},
 								},
+								rotationLimits: 27,
 							},
 						},
 						stateFlags: {
@@ -273,10 +273,10 @@ DefineRoomDeviceAsset({
 								},
 								poseLimits: {
 									bones: {
-										character_rotation: -27,
 										leg_r: -87,
 									},
 								},
+								rotationLimits: -27,
 							},
 						},
 						stateFlags: {
@@ -299,11 +299,11 @@ DefineRoomDeviceAsset({
 										pose: ['standing', 'kneeling'],
 									},
 									bones: {
-										character_rotation: 0,
 										leg_l: -65,
 										leg_r: -65,
 									},
 								},
+								rotationLimits: 0,
 							},
 						},
 						stateFlags: {
@@ -347,10 +347,10 @@ DefineRoomDeviceAsset({
 										pose: 'standing',
 									},
 									bones: {
-										character_rotation: -27,
 										leg_l: -87,
 									},
 								},
+								rotationLimits: -27,
 							},
 						},
 						stateFlags: {
@@ -378,10 +378,10 @@ DefineRoomDeviceAsset({
 										pose: 'standing',
 									},
 									bones: {
-										character_rotation: 27,
 										leg_r: -87,
 									},
 								},
+								rotationLimits: 27,
 							},
 						},
 						stateFlags: {
@@ -409,10 +409,10 @@ DefineRoomDeviceAsset({
 										pose: 'standing',
 									},
 									bones: {
-										character_rotation: 27,
 										leg_l: -87,
 									},
 								},
+								rotationLimits: 27,
 							},
 						},
 						stateFlags: {
@@ -440,10 +440,10 @@ DefineRoomDeviceAsset({
 										pose: 'standing',
 									},
 									bones: {
-										character_rotation: -27,
 										leg_r: -87,
 									},
 								},
+								rotationLimits: -27,
 							},
 						},
 						stateFlags: {
@@ -466,11 +466,11 @@ DefineRoomDeviceAsset({
 										pose: 'standing',
 									},
 									bones: {
-										character_rotation: 0,
 										leg_l: -65,
 										leg_r: -65,
 									},
 								},
+								rotationLimits: 0,
 							},
 						},
 						stateFlags: {
@@ -496,10 +496,8 @@ DefineRoomDeviceAsset({
 									legs: {
 										pose: 'standing',
 									},
-									bones: {
-										character_rotation: -90,
-									},
 								},
+								rotationLimits: -90,
 							},
 						},
 						stateFlags: {
@@ -523,11 +521,7 @@ DefineRoomDeviceAsset({
 			properties: {
 				slotProperties: {
 					under_bamboo: {
-						poseLimits: {
-							bones: {
-								character_rotation: 0,
-							},
-						},
+						rotationLimits: 0,
 					},
 				},
 			},

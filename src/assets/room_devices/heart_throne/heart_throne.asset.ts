@@ -23,13 +23,13 @@ DefineRoomDeviceAsset({
 					bones: {
 						leg_r: [[-60, 60]],
 						leg_l: [[-60, 60]],
-						character_rotation: [[-30, 30]],
 					},
 					legs: {
 						pose: 'sitting',
 					},
 					view: 'front',
 				},
+				rotationLimits: [[-30, 30]],
 				posePresets: [
 					{
 						name: 'Armrests, spread fingers',
@@ -75,12 +75,12 @@ DefineRoomDeviceAsset({
 					bones: {
 						leg_r: [[-30, 10]],
 						leg_l: [[-30, 10]],
-						character_rotation: 0,
 					},
 					legs: {
 						pose: 'kneeling',
 					},
 				},
+				rotationLimits: 0,
 			},
 		},
 	},

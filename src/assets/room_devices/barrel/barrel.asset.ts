@@ -20,12 +20,12 @@ DefineRoomDeviceAsset({
 					bones: {
 						leg_r: [[-10, 10]],
 						leg_l: [[-10, 10]],
-						character_rotation: 0,
 					},
 					legs: {
 						pose: ['standing', 'kneeling'],
 					},
 				},
+				rotationLimits: 0,
 			},
 		},
 	},

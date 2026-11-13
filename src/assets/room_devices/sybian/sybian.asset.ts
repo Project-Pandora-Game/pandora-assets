@@ -36,11 +36,11 @@ DefineRoomDeviceAsset({
 						pose: 'kneeling',
 					},
 					bones: {
-						character_rotation: 0,
 						leg_l: [[-45, -30]],
 						leg_r: [[-45, -30]],
 					},
 				},
+				rotationLimits: 0,
 			},
 		},
 	},

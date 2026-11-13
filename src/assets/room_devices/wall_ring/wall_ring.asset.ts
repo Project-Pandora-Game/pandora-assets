@@ -59,11 +59,11 @@ DefineRoomDeviceAsset({
 							character_slot: {
 								poseLimits: {
 									bones: {
-										character_rotation: 0,
 										leg_r: [[-30, 10]],
 										leg_l: [[-30, 10]],
 									},
 								},
+								rotationLimits: 0,
 								attributes: {
 									requires: ['Collar_front_ring'],
 									hides: ['Leash'],
@@ -84,7 +84,6 @@ DefineRoomDeviceAsset({
 							character_slot: {
 								poseLimits: {
 									bones: {
-										character_rotation: 0,
 										leg_r: [[-30, 10]],
 										leg_l: [[-30, 10]],
 									},
@@ -92,6 +91,7 @@ DefineRoomDeviceAsset({
 										pose: 'standing',
 									},
 								},
+								rotationLimits: 0,
 								attributes: {
 									requires: ['Collar_front_ring'],
 									hides: ['Leash'],
@@ -111,9 +111,6 @@ DefineRoomDeviceAsset({
 						slotProperties: {
 							character_slot: {
 								poseLimits: {
-									bones: {
-										character_rotation: 0,
-									},
 									legs: {
 										pose: 'standing',
 									},
@@ -136,6 +133,7 @@ DefineRoomDeviceAsset({
 										},
 									],
 								},
+								rotationLimits: 0,
 								attributes: {
 									requires: [
 										'Wrist_cuffs_chainable',
@@ -160,7 +158,6 @@ DefineRoomDeviceAsset({
 							character_slot: {
 								poseLimits: {
 									bones: {
-										character_rotation: 0,
 										leg_l: [[-18, 10]],
 										leg_r: [[-18, 10]],
 									},
@@ -169,6 +166,7 @@ DefineRoomDeviceAsset({
 									},
 									view: 'front',
 								},
+								rotationLimits: 0,
 								attributes: {
 									requires: [
 										'Armbinder_chainable',
