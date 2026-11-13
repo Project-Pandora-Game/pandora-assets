@@ -3549,5 +3549,139 @@
 				]
 			}
 		}
+	],
+	"roomLayers": [
+		{
+			"x": -620,
+			"y": -1355,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"enableCond": [
+				[
+					{
+						"module": "material",
+						"operator": "=",
+						"value": "matte"
+					}
+				]
+			],
+			"name": "Floor Matte",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "skirt"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "waist"
+				},
+				{
+					"type": "typedModule",
+					"module": "length"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 0,
+				"roughness": 0
+			},
+			"imageMap": {
+				"high:aboveKnee": [
+					"crumpled_long_matte.png"
+				],
+				"high:mini": [
+					"crumpled_long_matte.png"
+				],
+				"high:micro": [
+					"crumpled_medium_matter.png"
+				],
+				"mid:aboveKnee": [
+					"crumpled_long_matte.png"
+				],
+				"mid:mini": [
+					"crumpled_medium_matter.png"
+				],
+				"mid:micro": [
+					"crumpled_short_matte.png"
+				],
+				"low:aboveKnee": [
+					"crumpled_medium_matter.png"
+				],
+				"low:mini": [
+					"crumpled_short_matte.png"
+				],
+				"low:micro": [
+					"crumpled_short_matte.png"
+				]
+			}
+		},
+		{
+			"x": -620,
+			"y": -1355,
+			"width": 1000,
+			"height": 1500,
+			"type": "autoSprite",
+			"enableCond": [
+				[
+					{
+						"module": "material",
+						"operator": "=",
+						"value": "glossy"
+					}
+				]
+			],
+			"name": "Floor Glossy",
+			"graphicalLayers": [
+				{
+					"name": "",
+					"colorizationKey": "skirt"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "waist"
+				},
+				{
+					"type": "typedModule",
+					"module": "length"
+				}
+			],
+			"normalMap": {
+				"specularStrength": 0.85,
+				"roughness": 0.25
+			},
+			"imageMap": {
+				"high:aboveKnee": [
+					"crumpled_long_glossy.png"
+				],
+				"high:mini": [
+					"crumpled_long_glossy.png"
+				],
+				"high:micro": [
+					"crumpled_medium_glossy.png"
+				],
+				"mid:aboveKnee": [
+					"crumpled_long_glossy.png"
+				],
+				"mid:mini": [
+					"crumpled_medium_glossy.png"
+				],
+				"mid:micro": [
+					"crumpled_short_glossy.png"
+				],
+				"low:aboveKnee": [
+					"crumpled_medium_glossy.png"
+				],
+				"low:mini": [
+					"crumpled_short_glossy.png"
+				],
+				"low:micro": [
+					"crumpled_short_glossy.png"
+				]
+			}
+		}
 	]
 }
