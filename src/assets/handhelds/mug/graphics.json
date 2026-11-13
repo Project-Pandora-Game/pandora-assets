@@ -6,30 +6,29 @@
 			"y": 0,
 			"width": 1400,
 			"height": 1500,
-			"type": "mesh",
-			"name": "mug",
-			"priority": "ABOVE_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "china",
-			"image": {
-				"image": "",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "mug.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "mug"
-								}
-							]
-						]
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
 					}
+				]
+			],
+			"name": "Mug",
+			"points": "handheld",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "China",
+					"colorizationKey": "china"
+				}
+			],
+			"variables": [],
+			"imageMap": {
+				"": [
+					"mug.png"
 				]
 			}
 		}
