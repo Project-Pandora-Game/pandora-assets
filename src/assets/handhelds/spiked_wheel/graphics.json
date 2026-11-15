@@ -7,6 +7,15 @@
 			"width": 1500,
 			"height": 1500,
 			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
+					}
+				]
+			],
 			"name": "Front",
 			"points": "handheld",
 			"automeshTemplate": "aboveBody",
@@ -18,10 +27,6 @@
 			],
 			"variables": [
 				{
-					"type": "typedModule",
-					"module": "handUsage_l"
-				},
-				{
 					"type": "armRotation",
 					"side": "left"
 				},
@@ -30,53 +35,29 @@
 				}
 			],
 			"imageMap": {
-				"yes:backward:front": [
+				"backward:front": [
 					""
 				],
-				"yes:backward:back": [
+				"backward:back": [
 					""
 				],
-				"yes:up:front": [
+				"up:front": [
 					"wand_handle_overlay.png"
 				],
-				"yes:up:back": [
+				"up:back": [
 					"wand_handle.png"
 				],
-				"yes:forward:front": [
+				"forward:front": [
 					""
 				],
-				"yes:forward:back": [
+				"forward:back": [
 					""
 				],
-				"yes:down:front": [
+				"down:front": [
 					"wand_handle_overlay_back_down.png"
 				],
-				"yes:down:back": [
+				"down:back": [
 					"wand_handle_down.png"
-				],
-				"no:backward:front": [
-					""
-				],
-				"no:backward:back": [
-					""
-				],
-				"no:up:front": [
-					""
-				],
-				"no:up:back": [
-					""
-				],
-				"no:forward:front": [
-					""
-				],
-				"no:forward:back": [
-					""
-				],
-				"no:down:front": [
-					""
-				],
-				"no:down:back": [
-					""
 				]
 			}
 		},
@@ -86,6 +67,15 @@
 			"width": 1500,
 			"height": 1500,
 			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
+					}
+				]
+			],
 			"name": "Back",
 			"points": "handheld",
 			"automeshTemplate": "belowBody",
@@ -101,10 +91,6 @@
 			],
 			"variables": [
 				{
-					"type": "typedModule",
-					"module": "handUsage_l"
-				},
-				{
 					"type": "armRotation",
 					"side": "left"
 				},
@@ -113,69 +99,37 @@
 				}
 			],
 			"imageMap": {
-				"yes:backward:front": [
+				"backward:front": [
 					"",
 					""
 				],
-				"yes:backward:back": [
+				"backward:back": [
 					"",
 					""
 				],
-				"yes:up:front": [
+				"up:front": [
 					"wand_base.png",
 					"wand_handle.png"
 				],
-				"yes:up:back": [
+				"up:back": [
 					"wand_base.png",
 					"wand_handle_overlay_back.png"
 				],
-				"yes:forward:front": [
+				"forward:front": [
 					"",
 					""
 				],
-				"yes:forward:back": [
+				"forward:back": [
 					"",
 					""
 				],
-				"yes:down:front": [
+				"down:front": [
 					"wand_base_down.png",
 					"wand_handle_down.png"
 				],
-				"yes:down:back": [
+				"down:back": [
 					"wand_base_down.png",
 					"wand_handle_overlay_down.png"
-				],
-				"no:backward:front": [
-					"",
-					""
-				],
-				"no:backward:back": [
-					"",
-					""
-				],
-				"no:up:front": [
-					"",
-					""
-				],
-				"no:up:back": [
-					"",
-					""
-				],
-				"no:forward:front": [
-					"",
-					""
-				],
-				"no:forward:back": [
-					"",
-					""
-				],
-				"no:down:front": [
-					"",
-					""
-				],
-				"no:down:back": [
-					"",
-					""
 				]
 			}
 		}
