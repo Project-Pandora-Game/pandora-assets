@@ -64,7 +64,7 @@ DefineAsset({
 		},
 		tray: {
 			type: 'storage',
-			name: `Drawer`,
+			name: `Tray`,
 			maxAcceptedSize: 'small',
 			maxCount: 4,
 		},
