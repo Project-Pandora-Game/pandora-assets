@@ -6,39 +6,58 @@
 			"y": 0,
 			"width": 1400,
 			"height": 1500,
-			"type": "mesh",
-			"name": "handle hand overlay",
-			"priority": "ABOVE_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "cane_handle_overlay.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
 					}
+				]
+			],
+			"name": "Handle hand front",
+			"points": "handheld",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Handle",
+					"colorizationKey": "handle"
+				}
+			],
+			"variables": [
+				{
+					"type": "armRotation",
+					"side": "left"
+				},
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"backward:front": [
+					""
+				],
+				"backward:back": [
+					""
+				],
+				"up:front": [
+					"cane_handle_overlay.png"
+				],
+				"up:back": [
+					"cane_handle.png"
+				],
+				"forward:front": [
+					""
+				],
+				"forward:back": [
+					""
+				],
+				"down:front": [
+					"cane_handle_overlay_back_down.png"
+				],
+				"down:back": [
+					"cane_handle_down.png"
 				]
 			}
 		},
@@ -47,245 +66,58 @@
 			"y": 0,
 			"width": 1400,
 			"height": 1500,
-			"type": "mesh",
-			"name": "handle hand overlay back",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "cane_handle_overlay_back.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
 					}
 				]
-			}
-		},
-		{
-			"x": -200,
-			"y": 0,
-			"width": 1400,
-			"height": 1500,
-			"type": "mesh",
-			"name": "handle",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
 			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "cane_handle.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "cane_handle_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": -200,
-			"y": 0,
-			"width": 1400,
-			"height": 1500,
-			"type": "mesh",
-			"name": "handle hand overlay back",
-			"priority": "BELOW_ARM_RIGHT",
+			"name": "Handle hand back",
 			"points": "handheld",
-			"pointType": [
-				"handheld_r"
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "Handle",
+					"colorizationKey": "handle"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "cane_handle_overlay_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": -200,
-			"y": 0,
-			"width": 1400,
-			"height": 1500,
-			"type": "mesh",
-			"name": "handle hand overlay back down",
-			"priority": "ABOVE_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
+			"variables": [
+				{
+					"type": "armRotation",
+					"side": "left"
+				},
+				{
+					"type": "view"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "cane_handle_overlay_back_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": -200,
-			"y": 0,
-			"width": 1400,
-			"height": 1500,
-			"type": "mesh",
-			"name": "handle back",
-			"priority": "ABOVE_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "handle",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "cane_handle.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "cane_handle_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"imageMap": {
+				"backward:front": [
+					""
+				],
+				"backward:back": [
+					""
+				],
+				"up:front": [
+					"cane_handle.png"
+				],
+				"up:back": [
+					"cane_handle_overlay_back.png"
+				],
+				"forward:front": [
+					""
+				],
+				"forward:back": [
+					""
+				],
+				"down:front": [
+					"cane_handle_down.png"
+				],
+				"down:back": [
+					"cane_handle_overlay_down.png"
 				]
 			}
 		},
@@ -294,212 +126,87 @@
 			"y": 0,
 			"width": 1500,
 			"height": 1500,
-			"type": "mesh",
-			"name": "cane",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "cane",
-			"image": {
-				"image": "",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "cane_base.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "cane_base_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
 					}
 				]
-			}
-		},
-		{
-			"x": -250,
-			"y": 0,
-			"width": 1500,
-			"height": 1500,
-			"type": "mesh",
-			"name": "tip",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
 			],
-			"mirror": 1,
-			"colorizationKey": "cane",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "tip1.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "long"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip1_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "long"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip2.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "wide"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip2_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "wide"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip3.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "heart"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip3_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "heart"
-								}
-							]
-						]
-					}
+			"name": "Cane",
+			"points": "handheld",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "Cane",
+					"colorizationKey": "cane"
+				},
+				{
+					"name": "Tip",
+					"colorizationKey": "cane"
+				}
+			],
+			"variables": [
+				{
+					"type": "armRotation",
+					"side": "left"
+				},
+				{
+					"type": "typedModule",
+					"module": "type"
+				}
+			],
+			"imageMap": {
+				"backward:wide": [
+					"",
+					""
+				],
+				"backward:long": [
+					"",
+					""
+				],
+				"backward:heart": [
+					"",
+					""
+				],
+				"up:wide": [
+					"cane_base.png",
+					"tip2.png"
+				],
+				"up:long": [
+					"cane_base.png",
+					"tip1.png"
+				],
+				"up:heart": [
+					"cane_base.png",
+					"tip3.png"
+				],
+				"forward:wide": [
+					"",
+					""
+				],
+				"forward:long": [
+					"",
+					""
+				],
+				"forward:heart": [
+					"",
+					""
+				],
+				"down:wide": [
+					"cane_base_down.png",
+					"tip2_down.png"
+				],
+				"down:long": [
+					"cane_base_down.png",
+					"tip1_down.png"
+				],
+				"down:heart": [
+					"cane_base_down.png",
+					"tip3_down.png"
 				]
 			}
 		}

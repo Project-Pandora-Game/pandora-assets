@@ -6,59 +6,69 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "syringe front",
-			"priority": "ABOVE_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"image": {
-				"image": "",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "syringe_front_backward.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "backward"
-								}
-							]
-						]
-					},
-					{
-						"image": "syringe_front_forward.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "forward"
-								}
-							]
-						]
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
 					}
+				]
+			],
+			"name": "Above layer",
+			"points": "handheld",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Syringe"
+				},
+				{
+					"name": "Fluids",
+					"colorizationKey": "fluids"
+				}
+			],
+			"variables": [
+				{
+					"type": "armRotation",
+					"side": "left"
+				},
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"backward:front": [
+					"syringe_front_backward.png",
+					"syringe_liquid_front_backward.png"
+				],
+				"backward:back": [
+					"",
+					""
+				],
+				"up:front": [
+					"",
+					""
+				],
+				"up:back": [
+					"",
+					""
+				],
+				"forward:front": [
+					"syringe_front_forward.png",
+					"syringe_liquid_front_forward.png"
+				],
+				"forward:back": [
+					"",
+					""
+				],
+				"down:front": [
+					"",
+					""
+				],
+				"down:back": [
+					"",
+					""
 				]
 			}
 		},
@@ -67,183 +77,69 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "liquid front",
-			"priority": "ABOVE_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "fluids",
-			"image": {
-				"image": "",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "syringe_liquid_front_backward.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "backward"
-								}
-							]
-						]
-					},
-					{
-						"image": "syringe_liquid_front_forward.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "forward"
-								}
-							]
-						]
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
 					}
 				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "syringe back",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
 			],
-			"mirror": 1,
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "syringe_back_backward.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "backward"
-								}
-							]
-						]
-					},
-					{
-						"image": "syringe_back_forward.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "forward"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": 0,
-			"y": 0,
-			"width": 1000,
-			"height": 1500,
-			"type": "mesh",
-			"name": "liquid back",
-			"priority": "BELOW_ARM_RIGHT",
+			"name": "Below layer",
 			"points": "handheld",
-			"pointType": [
-				"handheld_r"
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "Syringe"
+				},
+				{
+					"name": "Fluids",
+					"colorizationKey": "fluids"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "fluids",
-			"image": {
-				"image": "",
-				"overrides": [
-					{
-						"image": "syringe_liquid_back_backward.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "backward"
-								}
-							]
-						]
-					},
-					{
-						"image": "syringe_liquid_back_forward.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "forward"
-								}
-							]
-						]
-					}
+			"variables": [
+				{
+					"type": "armRotation",
+					"side": "left"
+				},
+				{
+					"type": "view"
+				}
+			],
+			"imageMap": {
+				"backward:front": [
+					"",
+					""
+				],
+				"backward:back": [
+					"syringe_back_backward.png",
+					"syringe_liquid_back_backward.png"
+				],
+				"up:front": [
+					"",
+					""
+				],
+				"up:back": [
+					"",
+					""
+				],
+				"forward:front": [
+					"",
+					""
+				],
+				"forward:back": [
+					"syringe_back_forward.png",
+					"syringe_liquid_back_forward.png"
+				],
+				"down:front": [
+					"",
+					""
+				],
+				"down:back": [
+					"",
+					""
 				]
 			}
 		}

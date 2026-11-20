@@ -26,6 +26,37 @@ DefineAsset({
 		],
 	},
 	modules: {
+		handUsage: {
+			type: 'typed',
+			name: 'Held in hand',
+			variants: [
+				{
+					id: 'hand_r',
+					name: 'Right',
+					default: true,
+					properties: {
+						poseLimits: {
+							rightArm: {
+								fingers: 'fist',
+								rotation: ['up', 'down'],
+							},
+						},
+					},
+				},
+				{
+					id: 'hand_l',
+					name: 'Left',
+					properties: {
+						poseLimits: {
+							leftArm: {
+								fingers: 'fist',
+								rotation: ['up', 'down'],
+							},
+						},
+					},
+				},
+			],
+		},
 		type: {
 			type: 'typed',
 			name: 'Tip type',
@@ -61,53 +92,6 @@ DefineAsset({
 				{
 					id: 'metal',
 					name: 'Metal',
-				},
-			],
-		},
-		handUsage_r: {
-			type: 'typed',
-			name: 'Held in right hand',
-			variants: [
-				{
-					id: 'yes',
-					name: 'Yes',
-					default: true,
-					properties: {
-						poseLimits: {
-							rightArm: {
-								fingers: 'fist',
-								rotation: ['up', 'down'],
-							},
-						},
-					},
-				},
-				{
-					id: 'no',
-					name: 'No',
-				},
-			],
-		},
-		handUsage_l: {
-			type: 'typed',
-			name: 'Held in left hand',
-			variants: [
-				{
-					id: 'yes',
-					name: 'Yes',
-					properties: {
-						poseLimits: {
-							leftArm: {
-								fingers: 'fist',
-								rotation: ['up', 'down'],
-							},
-						},
-					},
-				},
-				{
-					id: 'no',
-					name: 'No',
-					default: true,
-
 				},
 			],
 		},
