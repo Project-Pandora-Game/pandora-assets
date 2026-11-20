@@ -149,9 +149,6 @@ DefineRoomDeviceAsset({
 						slotProperties: {
 							under_winch: {
 								poseLimits: {
-									bones: {
-										character_rotation: 0,
-									},
 									options: [
 										{
 											bones: {
@@ -171,6 +168,7 @@ DefineRoomDeviceAsset({
 										},
 									],
 								},
+								rotationLimits: 0,
 								attributes: {
 									requires: [
 										'Wrist_cuffs_chainable',
@@ -196,7 +194,6 @@ DefineRoomDeviceAsset({
 							under_winch: {
 								poseLimits: {
 									bones: {
-										character_rotation: 180,
 										leg_l: -2,
 										leg_r: -2,
 									},
@@ -204,6 +201,7 @@ DefineRoomDeviceAsset({
 										pose: 'standing',
 									},
 								},
+								rotationLimits: 180,
 								attributes: {
 									requires: [
 										'Ankle_cuffs_chainable',
@@ -227,7 +225,6 @@ DefineRoomDeviceAsset({
 							under_winch: {
 								poseLimits: {
 									bones: {
-										character_rotation: 0,
 										leg_l: [[-18, 10]],
 										leg_r: [[-18, 10]],
 									},
@@ -235,6 +232,7 @@ DefineRoomDeviceAsset({
 										pose: 'standing',
 									},
 								},
+								rotationLimits: 0,
 								attributes: {
 									requires: [
 										'Armbinder_chainable',
@@ -271,13 +269,13 @@ DefineRoomDeviceAsset({
 							under_winch: {
 								poseLimits: {
 									bones: {
-										character_rotation: 0,
 										arm_l: -70,
 										elbow_l: -20,
 										arm_r: -70,
 										elbow_r: -20,
 									},
 								},
+								rotationLimits: 0,
 								attributes: {
 									requires: [
 										'Wrist_cuffs_chainable',
@@ -303,7 +301,6 @@ DefineRoomDeviceAsset({
 							under_winch: {
 								poseLimits: {
 									bones: {
-										character_rotation: 180,
 										leg_l: -16,
 										leg_r: -16,
 									},
@@ -311,6 +308,7 @@ DefineRoomDeviceAsset({
 										pose: 'standing',
 									},
 								},
+								rotationLimits: 180,
 								attributes: {
 									requires: [
 										'Ankle_cuffs_chainable',

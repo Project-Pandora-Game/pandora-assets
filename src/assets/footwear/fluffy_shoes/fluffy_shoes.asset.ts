@@ -1,5 +1,3 @@
-import { ItemInteractionType } from 'pandora-common';
-
 DefineAsset({
 	name: 'Fluffy Shoes',
 	size: 'medium',
@@ -35,58 +33,6 @@ DefineAsset({
 				blockAddRemove: true,
 			},
 
-		},
-		inlays: {
-			type: 'typed',
-			name: 'Uncomfortable inlay soles put inside the shoe',
-			interactionType: ItemInteractionType.ADD_REMOVE,
-			variants: [
-				{
-					id: 'none',
-					name: 'No inlays',
-					default: true,
-				},
-				{
-					id: 'light',
-					name: 'Insoles preventing standing',
-					properties: {
-						poseLimits: {
-							options: [
-								{
-									legs: {
-										pose: ['sitting', 'kneeling'],
-									},
-								},
-								{
-									bones: {
-										character_rotation: [[-180, -55], [55, 180]],
-									},
-								},
-							],
-						},
-					},
-				},
-				{
-					id: 'strict',
-					name: 'Stricter insoles preventing standing and sitting',
-					properties: {
-						poseLimits: {
-							options: [
-								{
-									legs: {
-										pose: 'kneeling',
-									},
-								},
-								{
-									bones: {
-										character_rotation: [[-180, -55], [55, 180]],
-									},
-								},
-							],
-						},
-					},
-				},
-			],
 		},
 	},
 	ownership: {

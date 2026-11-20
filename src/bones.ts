@@ -26,10 +26,6 @@ const boneDefinitionImpl = {
 	waist: { type: 'body' },
 	hips: { type: 'body' },
 	tiptoeing: { type: 'pose' },
-	character_rotation: {
-		baseRotation: -90,
-		type: 'pose',
-	},
 } as const satisfies Record<string, BoneDefinitionCompressed>;
 
 /** Handles for inverse kinematic posing of the character. */

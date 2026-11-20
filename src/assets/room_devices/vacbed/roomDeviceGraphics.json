@@ -125,9 +125,8 @@
 					"condition": [
 						[
 							{
-								"bone": "character_rotation",
-								"operator": "=",
-								"value": 180
+								"characterRotation": 180,
+								"operator": "="
 							}
 						]
 					]

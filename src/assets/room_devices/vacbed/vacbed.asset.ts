@@ -53,8 +53,6 @@ DefineRoomDeviceAsset({
 						options: [
 							{
 								bones: {
-									character_rotation: [[0, 0], [180, 180]],
-
 									arm_l: [[21, 60]],
 									elbow_l: [[-155, -125]],
 									arm_r: [[21, 60]],
@@ -63,8 +61,6 @@ DefineRoomDeviceAsset({
 							},
 							{
 								bones: {
-									character_rotation: [[0, 0], [180, 180]],
-
 									arm_l: [[0, 20]],
 									elbow_l: [[-125, -100]],
 									arm_r: [[0, 20]],
@@ -73,8 +69,6 @@ DefineRoomDeviceAsset({
 							},
 							{
 								bones: {
-									character_rotation: [[0, 0], [180, 180]],
-
 									arm_l: [[-40, 0]],
 									elbow_l: [[-95, -85]],
 									arm_r: [[-40, 0]],
@@ -83,8 +77,6 @@ DefineRoomDeviceAsset({
 							},
 							{
 								bones: {
-									character_rotation: [[0, 0], [180, 180]],
-
 									arm_l: [[21, 40]],
 									elbow_l: [[65, 145]],
 									arm_r: [[21, 40]],
@@ -93,8 +85,6 @@ DefineRoomDeviceAsset({
 							},
 							{
 								bones: {
-									character_rotation: [[0, 0], [180, 180]],
-
 									arm_l: [[41, 60]],
 									elbow_l: [[45, 145]],
 									arm_r: [[41, 60]],
@@ -103,8 +93,6 @@ DefineRoomDeviceAsset({
 							},
 							{
 								bones: {
-									character_rotation: [[0, 0], [180, 180]],
-
 									arm_l: [[61, 80]],
 									elbow_l: [[0, 160]],
 									arm_r: [[61, 80]],
@@ -113,8 +101,6 @@ DefineRoomDeviceAsset({
 							},
 							{
 								bones: {
-									character_rotation: [[0, 0], [180, 180]],
-
 									arm_l: [[61, 80]],
 									elbow_l: [[0, 145]],
 									arm_r: [[61, 80]],
@@ -123,8 +109,6 @@ DefineRoomDeviceAsset({
 							},
 							{
 								bones: {
-									character_rotation: [[0, 0], [180, 180]],
-
 									arm_l: [[81, 100]],
 									elbow_l: [[0, 145]],
 									arm_r: [[81, 100]],
@@ -133,8 +117,6 @@ DefineRoomDeviceAsset({
 							},
 							{
 								bones: {
-									character_rotation: [[0, 0], [180, 180]],
-
 									arm_l: [[101, 120]],
 									elbow_l: [[-15, 145]],
 									arm_r: [[101, 120]],
@@ -144,6 +126,7 @@ DefineRoomDeviceAsset({
 						],
 					},
 				],
+				rotationLimits: [[0, 0], [180, 180]],
 			},
 		},
 	},

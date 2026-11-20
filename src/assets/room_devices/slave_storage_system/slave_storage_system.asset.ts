@@ -41,7 +41,6 @@ DefineRoomDeviceAsset({
 						pose: 'kneeling',
 					},
 					bones: {
-						character_rotation: 0,
 						arm_l: 45,
 						arm_r: 45,
 						elbow_l: -130,
@@ -54,6 +53,7 @@ DefineRoomDeviceAsset({
 						position: 'back',
 					},
 				},
+				rotationLimits: 0,
 			},
 		},
 	},
