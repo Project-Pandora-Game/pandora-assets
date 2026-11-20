@@ -406,6 +406,16 @@ const ATTRIBUTES_DEFINITION_BASE = DefineAttributes({
 		description: 'A pair of wrist cuffs',
 		parentAttributes: ['Restraint_arms'],
 	},
+	Wrist_cuffs_front: {
+		name: 'Wrist cuffs front',
+		description: 'Hands cuffed in front of the body',
+		parentAttributes: ['Wrist_cuffs'],
+	},
+	Wrist_cuffs_back: {
+		name: 'Wrist cuffs back',
+		description: 'Hands cuffed behind the body',
+		parentAttributes: ['Wrist_cuffs'],
+	},
 	Elbow_cuffs: {
 		name: 'Elbow cuffs',
 		description: 'A pair of elbow cuffs',
