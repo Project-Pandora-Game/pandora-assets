@@ -192,7 +192,7 @@ importers:
         version: 4.18.1
       pandora-common:
         specifier: github:Project-Pandora-Game/pandora#master&path:pandora-common
-        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/9131837605b07ef3083eeded3b8cc376d1c2875c#path:pandora-common(zod@4.6.7)
+        version: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/aa8c89e327034a56083a9db5e09960aafbb22a57#path:pandora-common(zod@4.6.7)
       rimraf:
         specifier: 6.1.4
         version: 6.1.4
@@ -200,8 +200,8 @@ importers:
         specifier: 0.35.5
         version: 0.35.5(@types/node@24.19.2)
       simple-git:
-        specifier: 4.0.2
-        version: 4.0.2(supports-color@8.1.1)
+        specifier: 4.1.0
+        version: 4.1.0(supports-color@8.1.1)
       zod:
         specifier: 4.6.7
         version: 4.6.7
@@ -876,8 +876,8 @@ packages:
   '@simple-git/args-pathspec@1.0.4':
     resolution: {integrity: sha512-EtMX6XjRWSastG2SdkmSQByPtJ9dx/NIjnHbpQPCYt62j4RmSx5rgLTGpw0YCjF5h191gZOmBfheOT23cRSFdw==}
 
-  '@simple-git/argv-parser@2.0.1':
-    resolution: {integrity: sha512-M++IaVWrN+vYalilOHfwvT2IL3wYZtVEBQpmX6DLSOJLtxbZ+SUeIDE3IiPogzhPACLajwtxfa5rp+ZX1FczzQ==}
+  '@simple-git/argv-parser@3.0.0':
+    resolution: {integrity: sha512-MhLm6/9J7PiVZghJnaJG4tOc+rTotsSINJkjbUqZA7lYmYklOXdk+d0UZ8Pm8WFcMuxafx3oSUIYYYnPY92GTQ==}
 
   '@sinclair/typebox@0.34.52':
     resolution: {integrity: sha512-XiMQh7qqVlxZzcVD+kkGMNGMzcTrDMLWI7S4x7z1MkCkbDPrekpZXEUK0eZqZFMuHQg2a2DZOcDIh9o5v3Gonw==}
@@ -2424,8 +2424,8 @@ packages:
   package-json-from-dist@1.0.1:
     resolution: {integrity: sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/9131837605b07ef3083eeded3b8cc376d1c2875c#path:pandora-common:
-    resolution: {gitHosted: true, integrity: sha512-rYntmZ0bR/omQIkmf+zPYRxDVCDiHAaJ6KA5XHpzaMo4WxFG3I297TPjNFyjaSCdFHXu6Xrd8ZwCZ/hF5PjWBQ==, path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/9131837605b07ef3083eeded3b8cc376d1c2875c}
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/aa8c89e327034a56083a9db5e09960aafbb22a57#path:pandora-common:
+    resolution: {gitHosted: true, integrity: sha512-8QxkTAV8oSoMH8bf+gpYtdvhJG8wF23+HNiv6UMl0jCy2rtX24WMvrpMYIuXU+C96Awr9SMZzxUZrpPAbI3OOw==, path: pandora-common, tarball: https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/aa8c89e327034a56083a9db5e09960aafbb22a57}
     version: 0.1.0
     engines: {node: '>=24.x'}
     peerDependencies:
@@ -2665,8 +2665,8 @@ packages:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
 
-  simple-git@4.0.2:
-    resolution: {integrity: sha512-l0sIsv9VrPwovKELFDBOj/lhmIcbMvxBk2B+hRhsMM4/VL3gKtuZvYnBNixVo+N/0HnqQx2cBdLvxnAbygHpqA==}
+  simple-git@4.1.0:
+    resolution: {integrity: sha512-FZJESy4Vxahk4eOadmRsWF5TjhCrfpDP563j8jAMbMEi/phIHPDgzN/tDkRIZ2GyQdLKEeXMPXqA8hhWjAdQZA==}
 
   slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
@@ -3658,7 +3658,7 @@ snapshots:
 
   '@simple-git/args-pathspec@1.0.4': {}
 
-  '@simple-git/argv-parser@2.0.1':
+  '@simple-git/argv-parser@3.0.0':
     dependencies:
       '@simple-git/args-pathspec': 1.0.4
 
@@ -5538,7 +5538,7 @@ snapshots:
 
   package-json-from-dist@1.0.1: {}
 
-  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/9131837605b07ef3083eeded3b8cc376d1c2875c#path:pandora-common(zod@4.6.7):
+  pandora-common@https://codeload.github.com/Project-Pandora-Game/pandora/tar.gz/aa8c89e327034a56083a9db5e09960aafbb22a57#path:pandora-common(zod@4.6.7):
     dependencies:
       '@types/async-lock': 1.4.2
       '@types/lodash-es': 4.17.12
@@ -5844,12 +5844,12 @@ snapshots:
 
   signal-exit@4.1.0: {}
 
-  simple-git@4.0.2(supports-color@8.1.1):
+  simple-git@4.1.0(supports-color@8.1.1):
     dependencies:
       '@kwsites/file-exists': 1.1.1(supports-color@8.1.1)
       '@kwsites/promise-deferred': 1.1.1
       '@simple-git/args-pathspec': 1.0.4
-      '@simple-git/argv-parser': 2.0.1
+      '@simple-git/argv-parser': 3.0.0
       debug: 4.4.3(supports-color@8.1.1)
     transitivePeerDependencies:
       - supports-color
