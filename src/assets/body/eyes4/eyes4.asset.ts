@@ -203,7 +203,7 @@ DefineBodypart({
 				license: 'Pandora-Use-Only-v1-or-later',
 			},
 			{
-				part: 'vertical slit pupils',
+				part: 'vertical slit and heart pupils',
 				source: 'Self-Made',
 				copyrightHolder: 'Nikky',
 				editedBy: 'Nikky',
