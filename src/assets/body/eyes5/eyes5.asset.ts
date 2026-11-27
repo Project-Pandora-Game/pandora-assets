@@ -170,8 +170,24 @@ DefineBodypart({
 					default: true,
 				},
 				{
+					id: 'starPupils',
+					name: 'Star-shaped Pupils',
+				},
+				{
+					id: 'crossPupils',
+					name: 'Cross-shaped Pupils',
+				},
+				{
 					id: 'verticalSlitPupils',
 					name: 'Vertical Slit Pupils',
+				},
+				{
+					id: 'heartPupils',
+					name: 'Heart Pupils',
+				},
+				{
+					id: 'noPupils',
+					name: 'No Pupils',
 				},
 			],
 		},

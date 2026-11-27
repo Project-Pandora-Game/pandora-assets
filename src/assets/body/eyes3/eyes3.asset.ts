@@ -173,6 +173,10 @@ DefineBodypart({
 					name: 'Vertical Slit Pupils',
 				},
 				{
+					id: 'heartPupils',
+					name: 'Heart Pupils',
+				},
+				{
 					id: 'noPupils',
 					name: 'No Pupils',
 				},
