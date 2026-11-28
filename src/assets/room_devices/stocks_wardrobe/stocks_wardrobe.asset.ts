@@ -24,7 +24,6 @@ DefineRoomDeviceAsset({
 						elbow_r: 18,
 						leg_r: -5,
 						leg_l: -5,
-						character_rotation: 0,
 						tiptoeing: 0,
 					},
 					legs: {
@@ -34,6 +33,7 @@ DefineRoomDeviceAsset({
 						position: 'back',
 					},
 				},
+				rotationLimits: 0,
 			},
 		},
 	},

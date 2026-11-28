@@ -844,9 +844,8 @@
 									"value": "wrists_high"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 154
+									"characterRotation": 154,
+									"operator": ">"
 								}
 							],
 							[
@@ -856,9 +855,8 @@
 									"value": "wrists_high"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -154
+									"characterRotation": -154,
+									"operator": "<"
 								}
 							]
 						]
@@ -915,9 +913,8 @@
 									"value": "wrists_high"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 26
+									"characterRotation": 26,
+									"operator": ">"
 								}
 							]
 						]
@@ -940,9 +937,8 @@
 									"value": "wrists_high"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -26
+									"characterRotation": -26,
+									"operator": "<"
 								}
 							]
 						]
@@ -965,9 +961,8 @@
 									"value": "wrists_high"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 26
+									"characterRotation": 26,
+									"operator": ">"
 								}
 							]
 						]
@@ -990,9 +985,8 @@
 									"value": "wrists_high"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -26
+									"characterRotation": -26,
+									"operator": "<"
 								}
 							]
 						]
@@ -1051,9 +1045,8 @@
 									"value": "hogtie_arms"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 154
+									"characterRotation": 154,
+									"operator": ">"
 								}
 							],
 							[
@@ -1073,9 +1066,8 @@
 									"value": "hogtie_arms"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -154
+									"characterRotation": -154,
+									"operator": "<"
 								}
 							]
 						]
@@ -1162,9 +1154,8 @@
 									"value": "hogtie_arms"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 26
+									"characterRotation": 26,
+									"operator": ">"
 								}
 							]
 						]
@@ -1197,9 +1188,8 @@
 									"value": "hogtie_arms"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -26
+									"characterRotation": -26,
+									"operator": "<"
 								}
 							]
 						]
@@ -1232,9 +1222,8 @@
 									"value": "hogtie_arms"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 26
+									"characterRotation": 26,
+									"operator": ">"
 								}
 							]
 						]
@@ -1267,9 +1256,8 @@
 									"value": "hogtie_arms"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -26
+									"characterRotation": -26,
+									"operator": "<"
 								}
 							]
 						]
@@ -1338,9 +1326,8 @@
 									"value": "hogtie_arms"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 154
+									"characterRotation": 154,
+									"operator": ">"
 								}
 							],
 							[
@@ -1360,9 +1347,8 @@
 									"value": "hogtie_arms"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -154
+									"characterRotation": -154,
+									"operator": "<"
 								}
 							]
 						]
@@ -1449,9 +1435,8 @@
 									"value": "hogtie_arms"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 26
+									"characterRotation": 26,
+									"operator": ">"
 								}
 							]
 						]
@@ -1484,9 +1469,8 @@
 									"value": "hogtie_arms"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -26
+									"characterRotation": -26,
+									"operator": "<"
 								}
 							]
 						]
@@ -1519,9 +1503,8 @@
 									"value": "hogtie_arms"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 26
+									"characterRotation": 26,
+									"operator": ">"
 								}
 							]
 						]
@@ -1554,9 +1537,8 @@
 									"value": "hogtie_arms"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -26
+									"characterRotation": -26,
+									"operator": "<"
 								}
 							]
 						]
@@ -1620,9 +1602,8 @@
 									"value": "arms_high"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 154
+									"characterRotation": 154,
+									"operator": ">"
 								}
 							],
 							[
@@ -1637,9 +1618,8 @@
 									"value": "arms_high"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -154
+									"characterRotation": -154,
+									"operator": "<"
 								}
 							]
 						]
@@ -1711,9 +1691,8 @@
 									"value": "arms_high"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 26
+									"characterRotation": 26,
+									"operator": ">"
 								}
 							]
 						]
@@ -1741,9 +1720,8 @@
 									"value": "arms_high"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -26
+									"characterRotation": -26,
+									"operator": "<"
 								}
 							]
 						]
@@ -1771,9 +1749,8 @@
 									"value": "arms_high"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 26
+									"characterRotation": 26,
+									"operator": ">"
 								}
 							]
 						]
@@ -1801,9 +1778,8 @@
 									"value": "arms_high"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -26
+									"characterRotation": -26,
+									"operator": "<"
 								}
 							]
 						]
@@ -1892,16 +1868,14 @@
 						"condition": [
 							[
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 154
+									"characterRotation": 154,
+									"operator": ">"
 								}
 							],
 							[
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -154
+									"characterRotation": -154,
+									"operator": "<"
 								}
 							]
 						]
@@ -1943,9 +1917,8 @@
 									"value": "long"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 26
+									"characterRotation": 26,
+									"operator": ">"
 								}
 							]
 						]
@@ -1963,9 +1936,8 @@
 									"value": "long"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -26
+									"characterRotation": -26,
+									"operator": "<"
 								}
 							]
 						]
@@ -1983,9 +1955,8 @@
 									"value": "long"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 26
+									"characterRotation": 26,
+									"operator": ">"
 								}
 							]
 						]
@@ -2003,9 +1974,8 @@
 									"value": "long"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -26
+									"characterRotation": -26,
+									"operator": "<"
 								}
 							]
 						]
@@ -2236,9 +2206,8 @@
 									"value": "armbinder"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 154
+									"characterRotation": 154,
+									"operator": ">"
 								}
 							],
 							[
@@ -2248,9 +2217,8 @@
 									"value": "armbinder"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -154
+									"characterRotation": -154,
+									"operator": "<"
 								}
 							]
 						]
@@ -2307,9 +2275,8 @@
 									"value": "armbinder"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 26
+									"characterRotation": 26,
+									"operator": ">"
 								}
 							]
 						]
@@ -2332,9 +2299,8 @@
 									"value": "armbinder"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -26
+									"characterRotation": -26,
+									"operator": "<"
 								}
 							]
 						]
@@ -2357,9 +2323,8 @@
 									"value": "armbinder"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 26
+									"characterRotation": 26,
+									"operator": ">"
 								}
 							]
 						]
@@ -2382,9 +2347,8 @@
 									"value": "armbinder"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -26
+									"characterRotation": -26,
+									"operator": "<"
 								}
 							]
 						]
@@ -3034,9 +2998,8 @@
 									"value": "hands_front"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 154
+									"characterRotation": 154,
+									"operator": ">"
 								},
 								{
 									"bone": "arm_r",
@@ -3056,9 +3019,8 @@
 									"value": "hands_front"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -154
+									"characterRotation": -154,
+									"operator": "<"
 								},
 								{
 									"bone": "arm_r",
@@ -3108,9 +3070,8 @@
 									"value": "hands_front"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 26
+									"characterRotation": 26,
+									"operator": ">"
 								},
 								{
 									"bone": "arm_r",
@@ -3138,9 +3099,8 @@
 									"value": "hands_front"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -26
+									"characterRotation": -26,
+									"operator": "<"
 								},
 								{
 									"bone": "arm_r",
@@ -3168,9 +3128,8 @@
 									"value": "hands_front"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 26
+									"characterRotation": 26,
+									"operator": ">"
 								},
 								{
 									"bone": "arm_r",
@@ -3198,9 +3157,8 @@
 									"value": "hands_front"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -26
+									"characterRotation": -26,
+									"operator": "<"
 								},
 								{
 									"bone": "arm_r",
@@ -3264,9 +3222,8 @@
 									"value": "hands_front"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 154
+									"characterRotation": 154,
+									"operator": ">"
 								},
 								{
 									"bone": "arm_r",
@@ -3291,9 +3248,8 @@
 									"value": "hands_front"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -154
+									"characterRotation": -154,
+									"operator": "<"
 								},
 								{
 									"bone": "arm_r",
@@ -3353,9 +3309,8 @@
 									"value": "hands_front"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 26
+									"characterRotation": 26,
+									"operator": ">"
 								},
 								{
 									"bone": "arm_r",
@@ -3388,9 +3343,8 @@
 									"value": "hands_front"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -26
+									"characterRotation": -26,
+									"operator": "<"
 								},
 								{
 									"bone": "arm_r",
@@ -3423,9 +3377,8 @@
 									"value": "hands_front"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 26
+									"characterRotation": 26,
+									"operator": ">"
 								},
 								{
 									"bone": "arm_r",
@@ -3458,9 +3411,8 @@
 									"value": "hands_front"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -26
+									"characterRotation": -26,
+									"operator": "<"
 								},
 								{
 									"bone": "arm_r",
@@ -3614,9 +3566,8 @@
 									"value": "hands_back"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 154
+									"characterRotation": 154,
+									"operator": ">"
 								}
 							],
 							[
@@ -3631,9 +3582,8 @@
 									"value": "hands_back"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -154
+									"characterRotation": -154,
+									"operator": "<"
 								}
 							]
 						]
@@ -3673,9 +3623,8 @@
 									"value": "hands_back"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 26
+									"characterRotation": 26,
+									"operator": ">"
 								}
 							]
 						]
@@ -3698,9 +3647,8 @@
 									"value": "hands_back"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -26
+									"characterRotation": -26,
+									"operator": "<"
 								}
 							]
 						]
@@ -3723,9 +3671,8 @@
 									"value": "hands_back"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": ">",
-									"value": 26
+									"characterRotation": 26,
+									"operator": ">"
 								}
 							]
 						]
@@ -3748,9 +3695,8 @@
 									"value": "hands_back"
 								},
 								{
-									"bone": "character_rotation",
-									"operator": "<",
-									"value": -26
+									"characterRotation": -26,
+									"operator": "<"
 								}
 							]
 						]

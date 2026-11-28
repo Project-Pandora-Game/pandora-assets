@@ -20,6 +20,7 @@ import { RoomDevicePropertiesValidationMetadata, ValidateRoomDeviceProperties } 
 const ROOM_DEVICE_WEARABLE_PART_DEFINITION_FALLTHROUGH_PROPERTIES = [
 	// Properties
 	'poseLimits',
+	'rotationLimits',
 	'effects',
 	'attributes',
 	'overrideColorKey',

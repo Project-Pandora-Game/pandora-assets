@@ -28,10 +28,8 @@ DefineRoomDeviceAsset({
 					legs: {
 						pose: 'standing',
 					},
-					bones: {
-						character_rotation: 0,
-					},
 				},
+				rotationLimits: 0,
 			},
 		},
 	},
