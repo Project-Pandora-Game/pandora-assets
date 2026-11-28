@@ -467,6 +467,23 @@
 						]
 					},
 					{
+						"image": "pupilsHeart_left.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "heartPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "left"
+								}
+							]
+						]
+					},
+					{
 						"image": "pupils_right.png",
 						"condition": [
 							[
@@ -542,6 +559,23 @@
 									"module": "pupilType",
 									"operator": "=",
 									"value": "verticalSlitPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "right"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupilsHeart_right.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "heartPupils"
 								},
 								{
 									"module": "eyeDirection",
@@ -637,6 +671,23 @@
 						]
 					},
 					{
+						"image": "pupilsHeart_down.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "heartPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "down"
+								}
+							]
+						]
+					},
+					{
 						"image": "pupils_up.png",
 						"condition": [
 							[
@@ -712,6 +763,23 @@
 									"module": "pupilType",
 									"operator": "=",
 									"value": "verticalSlitPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "up"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupilsHeart_up.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "heartPupils"
 								},
 								{
 									"module": "eyeDirection",
@@ -807,6 +875,23 @@
 						]
 					},
 					{
+						"image": "pupilsHeart_rolled.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "heartPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "rolled"
+								}
+							]
+						]
+					},
+					{
 						"image": "pupils_cross.png",
 						"condition": [
 							[
@@ -892,6 +977,23 @@
 						]
 					},
 					{
+						"image": "pupilsHeart_cross.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "heartPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "cross"
+								}
+							]
+						]
+					},
+					{
 						"image": "pupilsVerticalSlit_wide_small.png",
 						"condition": [
 							[
@@ -904,6 +1006,40 @@
 									"module": "eyeDirection",
 									"operator": "=",
 									"value": "wideSmall"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupilsHeart_wide_small.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "heartPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "wideSmall"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupilsHeart_wide_small.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "heartPupils"
+								},
+								{
+									"module": "eyeDirection",
+									"operator": "=",
+									"value": "wideBig"
 								}
 							]
 						]
@@ -964,6 +1100,18 @@
 									"module": "pupilType",
 									"operator": "=",
 									"value": "verticalSlitPupils"
+								}
+							]
+						]
+					},
+					{
+						"image": "pupilsHeart.png",
+						"condition": [
+							[
+								{
+									"module": "pupilType",
+									"operator": "=",
+									"value": "heartPupils"
 								}
 							]
 						]
