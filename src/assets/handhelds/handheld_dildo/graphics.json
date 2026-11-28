@@ -6,45 +6,62 @@
 			"y": 0,
 			"width": 1500,
 			"height": 1500,
-			"type": "mesh",
-			"name": "handle hand overlay",
-			"priority": "ABOVE_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
+			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"module": "handUsage",
+						"operator": "=",
+						"value": "hand_l"
+					}
+				]
 			],
-			"mirror": 1,
-			"colorizationKey": "grip",
+			"name": "Handle hand front",
+			"points": "handheld",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Grip",
+					"colorizationKey": "grip"
+				}
+			],
+			"variables": [
+				{
+					"type": "armRotation",
+					"side": "left"
+				},
+				{
+					"type": "view"
+				}
+			],
 			"normalMap": {
 				"specularStrength": 0.4,
 				"roughness": 0.6
 			},
-			"image": {
-				"image": "",
-				"normalMapImage": "",
-				"overrides": [
-					{
-						"image": "dildo_handle_overlay.png",
-						"normalMapImage": "normal_map/dildo_handle_overlay.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
+			"imageMap": {
+				"backward:front": [
+					""
+				],
+				"backward:back": [
+					""
+				],
+				"up:front": [
+					"dildo_handle_overlay.png"
+				],
+				"up:back": [
+					"dildo_handle.png"
+				],
+				"forward:front": [
+					""
+				],
+				"forward:back": [
+					""
+				],
+				"down:front": [
+					"dildo_handle_overlay_back_down.png"
+				],
+				"down:back": [
+					"dildo_handle_down.png"
 				]
 			}
 		},
@@ -53,45 +70,306 @@
 			"y": 0,
 			"width": 1500,
 			"height": 1500,
-			"type": "mesh",
-			"name": "handle hand overlay back",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
+			"type": "autoMesh",
+			"enableCond": [
+				[
+					{
+						"module": "handUsage",
+						"operator": "=",
+						"value": "hand_l"
+					}
+				]
 			],
-			"mirror": 1,
-			"colorizationKey": "grip",
+			"name": "Handle hand back",
+			"points": "handheld",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "Grip",
+					"colorizationKey": "grip"
+				},
+				{
+					"name": "Tip",
+					"colorizationKey": "tip"
+				}
+			],
+			"variables": [
+				{
+					"type": "armRotation",
+					"side": "left"
+				},
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "tip_material"
+				},
+				{
+					"type": "typedModule",
+					"module": "type"
+				}
+			],
 			"normalMap": {
 				"specularStrength": 0.4,
 				"roughness": 0.6
 			},
-			"image": {
-				"image": "",
-				"normalMapImage": "",
-				"overrides": [
-					{
-						"image": "dildo_handle_overlay_back.png",
-						"normalMapImage": "normal_map/dildo_handle_overlay_back.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
+			"imageMap": {
+				"backward:front:rubber:smooth": [
+					"",
+					""
+				],
+				"backward:front:rubber:tipped": [
+					"",
+					""
+				],
+				"backward:front:rubber:rabbit": [
+					"",
+					""
+				],
+				"backward:front:rubber:beaded": [
+					"",
+					""
+				],
+				"backward:front:metal:smooth": [
+					"",
+					""
+				],
+				"backward:front:metal:tipped": [
+					"",
+					""
+				],
+				"backward:front:metal:rabbit": [
+					"",
+					""
+				],
+				"backward:front:metal:beaded": [
+					"",
+					""
+				],
+				"backward:back:rubber:smooth": [
+					"",
+					""
+				],
+				"backward:back:rubber:tipped": [
+					"",
+					""
+				],
+				"backward:back:rubber:rabbit": [
+					"",
+					""
+				],
+				"backward:back:rubber:beaded": [
+					"",
+					""
+				],
+				"backward:back:metal:smooth": [
+					"",
+					""
+				],
+				"backward:back:metal:tipped": [
+					"",
+					""
+				],
+				"backward:back:metal:rabbit": [
+					"",
+					""
+				],
+				"backward:back:metal:beaded": [
+					"",
+					""
+				],
+				"up:front:rubber:smooth": [
+					"dildo_handle.png",
+					"tip_smooth.png"
+				],
+				"up:front:rubber:tipped": [
+					"dildo_handle.png",
+					"tip_tipped.png"
+				],
+				"up:front:rubber:rabbit": [
+					"dildo_handle.png",
+					"tip_rabbit.png"
+				],
+				"up:front:rubber:beaded": [
+					"dildo_handle.png",
+					"tip_beaded.png"
+				],
+				"up:front:metal:smooth": [
+					"dildo_handle.png",
+					""
+				],
+				"up:front:metal:tipped": [
+					"dildo_handle.png",
+					""
+				],
+				"up:front:metal:rabbit": [
+					"dildo_handle.png",
+					""
+				],
+				"up:front:metal:beaded": [
+					"dildo_handle.png",
+					""
+				],
+				"up:back:rubber:smooth": [
+					"dildo_handle_overlay_back.png",
+					"tip_smooth.png"
+				],
+				"up:back:rubber:tipped": [
+					"dildo_handle_overlay_back.png",
+					"tip_tipped.png"
+				],
+				"up:back:rubber:rabbit": [
+					"dildo_handle_overlay_back.png",
+					"tip_rabbit.png"
+				],
+				"up:back:rubber:beaded": [
+					"dildo_handle_overlay_back.png",
+					"tip_beaded.png"
+				],
+				"up:back:metal:smooth": [
+					"dildo_handle_overlay_back.png",
+					""
+				],
+				"up:back:metal:tipped": [
+					"dildo_handle_overlay_back.png",
+					""
+				],
+				"up:back:metal:rabbit": [
+					"dildo_handle_overlay_back.png",
+					""
+				],
+				"up:back:metal:beaded": [
+					"dildo_handle_overlay_back.png",
+					""
+				],
+				"forward:front:rubber:smooth": [
+					"",
+					""
+				],
+				"forward:front:rubber:tipped": [
+					"",
+					""
+				],
+				"forward:front:rubber:rabbit": [
+					"",
+					""
+				],
+				"forward:front:rubber:beaded": [
+					"",
+					""
+				],
+				"forward:front:metal:smooth": [
+					"",
+					""
+				],
+				"forward:front:metal:tipped": [
+					"",
+					""
+				],
+				"forward:front:metal:rabbit": [
+					"",
+					""
+				],
+				"forward:front:metal:beaded": [
+					"",
+					""
+				],
+				"forward:back:rubber:smooth": [
+					"",
+					""
+				],
+				"forward:back:rubber:tipped": [
+					"",
+					""
+				],
+				"forward:back:rubber:rabbit": [
+					"",
+					""
+				],
+				"forward:back:rubber:beaded": [
+					"",
+					""
+				],
+				"forward:back:metal:smooth": [
+					"",
+					""
+				],
+				"forward:back:metal:tipped": [
+					"",
+					""
+				],
+				"forward:back:metal:rabbit": [
+					"",
+					""
+				],
+				"forward:back:metal:beaded": [
+					"",
+					""
+				],
+				"down:front:rubber:smooth": [
+					"dildo_handle_down.png",
+					"tip_smooth_down.png"
+				],
+				"down:front:rubber:tipped": [
+					"dildo_handle_down.png",
+					"tip_tipped_down.png"
+				],
+				"down:front:rubber:rabbit": [
+					"dildo_handle_down.png",
+					"tip_rabbit_down.png"
+				],
+				"down:front:rubber:beaded": [
+					"dildo_handle_down.png",
+					"tip_beaded_down.png"
+				],
+				"down:front:metal:smooth": [
+					"dildo_handle_down.png",
+					""
+				],
+				"down:front:metal:tipped": [
+					"dildo_handle_down.png",
+					""
+				],
+				"down:front:metal:rabbit": [
+					"dildo_handle_down.png",
+					""
+				],
+				"down:front:metal:beaded": [
+					"dildo_handle_down.png",
+					""
+				],
+				"down:back:rubber:smooth": [
+					"dildo_handle_overlay_down.png",
+					"tip_smooth_down.png"
+				],
+				"down:back:rubber:tipped": [
+					"dildo_handle_overlay_down.png",
+					"tip_tipped_down.png"
+				],
+				"down:back:rubber:rabbit": [
+					"dildo_handle_overlay_down.png",
+					"tip_rabbit_down.png"
+				],
+				"down:back:rubber:beaded": [
+					"dildo_handle_overlay_down.png",
+					"tip_beaded_down.png"
+				],
+				"down:back:metal:smooth": [
+					"dildo_handle_overlay_down.png",
+					""
+				],
+				"down:back:metal:tipped": [
+					"dildo_handle_overlay_down.png",
+					""
+				],
+				"down:back:metal:rabbit": [
+					"dildo_handle_overlay_down.png",
+					""
+				],
+				"down:back:metal:beaded": [
+					"dildo_handle_overlay_down.png",
+					""
 				]
 			}
 		},
@@ -100,1024 +378,238 @@
 			"y": 0,
 			"width": 1500,
 			"height": 1500,
-			"type": "mesh",
-			"name": "handle",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "grip",
-			"normalMap": {
-				"specularStrength": 0.4,
-				"roughness": 0.6
-			},
-			"image": {
-				"image": "",
-				"normalMapImage": "",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "dildo_handle.png",
-						"normalMapImage": "normal_map/dildo_handle.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "dildo_handle_down.png",
-						"normalMapImage": "normal_map/dildo_handle_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
+						"module": "handUsage",
+						"operator": "=",
+						"value": "hand_l"
 					}
 				]
-			}
-		},
-		{
-			"x": -250,
-			"y": 0,
-			"width": 1500,
-			"height": 1500,
-			"type": "mesh",
-			"name": "handle hand overlay back",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
 			],
-			"mirror": 1,
-			"colorizationKey": "grip",
-			"normalMap": {
-				"specularStrength": 0.4,
-				"roughness": 0.6
-			},
-			"image": {
-				"image": "",
-				"normalMapImage": "",
-				"overrides": [
-					{
-						"image": "dildo_handle_overlay_down.png",
-						"normalMapImage": "normal_map/dildo_handle_overlay_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": -250,
-			"y": 0,
-			"width": 1500,
-			"height": 1500,
-			"type": "mesh",
-			"name": "handle hand overlay back down",
-			"priority": "ABOVE_ARM_RIGHT",
+			"name": "Metal tip",
 			"points": "handheld",
-			"pointType": [
-				"handheld_r"
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "Tip",
+					"colorizationKey": "tip"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "grip",
-			"normalMap": {
-				"specularStrength": 0.4,
-				"roughness": 0.6
-			},
-			"image": {
-				"image": "",
-				"normalMapImage": "",
-				"overrides": [
-					{
-						"image": "dildo_handle_overlay_back_down.png",
-						"normalMapImage": "normal_map/dildo_handle_overlay_back_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": -250,
-			"y": 0,
-			"width": 1500,
-			"height": 1500,
-			"type": "mesh",
-			"name": "handle back",
-			"priority": "ABOVE_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
+			"variables": [
+				{
+					"type": "armRotation",
+					"side": "left"
+				},
+				{
+					"type": "view"
+				},
+				{
+					"type": "typedModule",
+					"module": "tip_material"
+				},
+				{
+					"type": "typedModule",
+					"module": "type"
+				}
 			],
-			"mirror": 1,
-			"colorizationKey": "grip",
-			"normalMap": {
-				"specularStrength": 0.4,
-				"roughness": 0.6
-			},
-			"image": {
-				"image": "",
-				"normalMapImage": "",
-				"overrides": [
-					{
-						"image": "dildo_handle.png",
-						"normalMapImage": "normal_map/dildo_handle.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "dildo_handle_down.png",
-						"normalMapImage": "normal_map/dildo_handle_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": -250,
-			"y": 0,
-			"width": 1500,
-			"height": 1500,
-			"type": "mesh",
-			"name": "tip rubber",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "tip",
-			"normalMap": {
-				"specularStrength": 0.4,
-				"roughness": 0.6
-			},
-			"image": {
-				"image": "",
-				"normalMapImage": "",
-				"overrides": [
-					{
-						"image": "tip_rabbit.png",
-						"normalMapImage": "normal_map/tip_rabbit.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "rubber"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "rabbit"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_rabbit_down.png",
-						"normalMapImage": "normal_map/tip_rabbit_down.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "rubber"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "rabbit"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_rabbit.png",
-						"normalMapImage": "normal_map/tip_rabbit_back.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "rubber"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "rabbit"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_rabbit_down.png",
-						"normalMapImage": "normal_map/tip_rabbit_down_back.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "rubber"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "rabbit"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_tipped.png",
-						"normalMapImage": "normal_map/tip_tipped.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "rubber"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "tipped"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_tipped_down.png",
-						"normalMapImage": "normal_map/tip_tipped_down.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "rubber"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "tipped"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_tipped.png",
-						"normalMapImage": "normal_map/tip_tipped_back.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "rubber"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "tipped"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_tipped_down.png",
-						"normalMapImage": "normal_map/tip_tipped_down_back.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "rubber"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "tipped"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_beaded.png",
-						"normalMapImage": "normal_map/tip_beaded.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "rubber"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "beaded"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_beaded_down.png",
-						"normalMapImage": "normal_map/tip_beaded_down.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "rubber"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "beaded"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_smooth.png",
-						"normalMapImage": "normal_map/tip_smooth.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "rubber"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "smooth"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_smooth_down.png",
-						"normalMapImage": "normal_map/tip_smooth_down.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "rubber"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "smooth"
-								}
-							]
-						]
-					}
-				]
-			}
-		},
-		{
-			"x": -250,
-			"y": 0,
-			"width": 1500,
-			"height": 1500,
-			"type": "mesh",
-			"name": "tip metal",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"colorizationKey": "tip",
 			"normalMap": {
 				"specularStrength": 1,
 				"roughness": 0.2
 			},
-			"image": {
-				"image": "",
-				"normalMapImage": "",
-				"overrides": [
-					{
-						"image": "tip_rabbit.png",
-						"normalMapImage": "normal_map/tip_rabbit.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "metal"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "rabbit"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_rabbit_down.png",
-						"normalMapImage": "normal_map/tip_rabbit_down.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "metal"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "rabbit"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_rabbit.png",
-						"normalMapImage": "normal_map/tip_rabbit_back.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "metal"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "rabbit"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_rabbit_down.png",
-						"normalMapImage": "normal_map/tip_rabbit_down_back.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "metal"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "rabbit"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_tipped.png",
-						"normalMapImage": "normal_map/tip_tipped.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "metal"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "tipped"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_tipped_down.png",
-						"normalMapImage": "normal_map/tip_tipped_down.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "metal"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "tipped"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_tipped.png",
-						"normalMapImage": "normal_map/tip_tipped_back.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "metal"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "tipped"
-								},
-								{
-									"view": "back"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_tipped_down.png",
-						"normalMapImage": "normal_map/tip_tipped_down_back.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "metal"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "tipped"
-								},
-								{
-									"view": "front"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_beaded.png",
-						"normalMapImage": "normal_map/tip_beaded.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "metal"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "beaded"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_beaded_down.png",
-						"normalMapImage": "normal_map/tip_beaded_down.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "metal"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "beaded"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_smooth.png",
-						"normalMapImage": "normal_map/tip_smooth.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "metal"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "smooth"
-								}
-							]
-						]
-					},
-					{
-						"image": "tip_smooth_down.png",
-						"normalMapImage": "normal_map/tip_smooth_down.png",
-						"condition": [
-							[
-								{
-									"module": "tip_material",
-									"operator": "=",
-									"value": "metal"
-								},
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "yes"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								},
-								{
-									"module": "type",
-									"operator": "=",
-									"value": "smooth"
-								}
-							]
-						]
-					}
+			"imageMap": {
+				"backward:front:rubber:smooth": [
+					""
+				],
+				"backward:front:rubber:tipped": [
+					""
+				],
+				"backward:front:rubber:rabbit": [
+					""
+				],
+				"backward:front:rubber:beaded": [
+					""
+				],
+				"backward:front:metal:smooth": [
+					""
+				],
+				"backward:front:metal:tipped": [
+					""
+				],
+				"backward:front:metal:rabbit": [
+					""
+				],
+				"backward:front:metal:beaded": [
+					""
+				],
+				"backward:back:rubber:smooth": [
+					""
+				],
+				"backward:back:rubber:tipped": [
+					""
+				],
+				"backward:back:rubber:rabbit": [
+					""
+				],
+				"backward:back:rubber:beaded": [
+					""
+				],
+				"backward:back:metal:smooth": [
+					""
+				],
+				"backward:back:metal:tipped": [
+					""
+				],
+				"backward:back:metal:rabbit": [
+					""
+				],
+				"backward:back:metal:beaded": [
+					""
+				],
+				"up:front:rubber:smooth": [
+					""
+				],
+				"up:front:rubber:tipped": [
+					""
+				],
+				"up:front:rubber:rabbit": [
+					""
+				],
+				"up:front:rubber:beaded": [
+					""
+				],
+				"up:front:metal:smooth": [
+					"tip_smooth.png"
+				],
+				"up:front:metal:tipped": [
+					"tip_tipped.png"
+				],
+				"up:front:metal:rabbit": [
+					"tip_rabbit.png"
+				],
+				"up:front:metal:beaded": [
+					"tip_beaded.png"
+				],
+				"up:back:rubber:smooth": [
+					""
+				],
+				"up:back:rubber:tipped": [
+					""
+				],
+				"up:back:rubber:rabbit": [
+					""
+				],
+				"up:back:rubber:beaded": [
+					""
+				],
+				"up:back:metal:smooth": [
+					"tip_smooth.png"
+				],
+				"up:back:metal:tipped": [
+					"tip_tipped.png"
+				],
+				"up:back:metal:rabbit": [
+					"tip_rabbit.png"
+				],
+				"up:back:metal:beaded": [
+					"tip_beaded.png"
+				],
+				"forward:front:rubber:smooth": [
+					""
+				],
+				"forward:front:rubber:tipped": [
+					""
+				],
+				"forward:front:rubber:rabbit": [
+					""
+				],
+				"forward:front:rubber:beaded": [
+					""
+				],
+				"forward:front:metal:smooth": [
+					""
+				],
+				"forward:front:metal:tipped": [
+					""
+				],
+				"forward:front:metal:rabbit": [
+					""
+				],
+				"forward:front:metal:beaded": [
+					""
+				],
+				"forward:back:rubber:smooth": [
+					""
+				],
+				"forward:back:rubber:tipped": [
+					""
+				],
+				"forward:back:rubber:rabbit": [
+					""
+				],
+				"forward:back:rubber:beaded": [
+					""
+				],
+				"forward:back:metal:smooth": [
+					""
+				],
+				"forward:back:metal:tipped": [
+					""
+				],
+				"forward:back:metal:rabbit": [
+					""
+				],
+				"forward:back:metal:beaded": [
+					""
+				],
+				"down:front:rubber:smooth": [
+					""
+				],
+				"down:front:rubber:tipped": [
+					""
+				],
+				"down:front:rubber:rabbit": [
+					""
+				],
+				"down:front:rubber:beaded": [
+					""
+				],
+				"down:front:metal:smooth": [
+					"tip_smooth_down.png"
+				],
+				"down:front:metal:tipped": [
+					"tip_tipped_down.png"
+				],
+				"down:front:metal:rabbit": [
+					"tip_rabbit_down.png"
+				],
+				"down:front:metal:beaded": [
+					"tip_beaded_down.png"
+				],
+				"down:back:rubber:smooth": [
+					""
+				],
+				"down:back:rubber:tipped": [
+					""
+				],
+				"down:back:rubber:rabbit": [
+					""
+				],
+				"down:back:rubber:beaded": [
+					""
+				],
+				"down:back:metal:smooth": [
+					""
+				],
+				"down:back:metal:tipped": [
+					""
+				],
+				"down:back:metal:rabbit": [
+					""
+				],
+				"down:back:metal:beaded": [
+					""
 				]
 			}
 		}

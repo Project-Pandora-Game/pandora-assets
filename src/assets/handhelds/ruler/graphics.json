@@ -6,143 +6,109 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "ruler front",
-			"priority": "ABOVE_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"image": {
-				"image": "",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "ruler_acrylic_front_up.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "acryl"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "ruler_metal_front_up.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "metal"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "ruler_wooden_front_up.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "wood"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "ruler_acrylic_front_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "acryl"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
-					},
-					{
-						"image": "ruler_metal_front_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "metal"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
-					},
-					{
-						"image": "ruler_wooden_front_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "wood"
-								},
-								{
-									"view": "front"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
 					}
+				]
+			],
+			"name": "Ruler front",
+			"points": "handheld",
+			"automeshTemplate": "aboveBody",
+			"graphicalLayers": [
+				{
+					"name": "Ruler"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "rulerType"
+				},
+				{
+					"type": "view"
+				},
+				{
+					"type": "armRotation",
+					"side": "left"
+				}
+			],
+			"imageMap": {
+				"metal:front:backward": [
+					""
+				],
+				"metal:front:up": [
+					"ruler_metal_front_up.png"
+				],
+				"metal:front:forward": [
+					""
+				],
+				"metal:front:down": [
+					"ruler_metal_front_down.png"
+				],
+				"metal:back:backward": [
+					""
+				],
+				"metal:back:up": [
+					""
+				],
+				"metal:back:forward": [
+					""
+				],
+				"metal:back:down": [
+					""
+				],
+				"acryl:front:backward": [
+					""
+				],
+				"acryl:front:up": [
+					"ruler_acrylic_front_up.png"
+				],
+				"acryl:front:forward": [
+					""
+				],
+				"acryl:front:down": [
+					"ruler_acrylic_front_down.png"
+				],
+				"acryl:back:backward": [
+					""
+				],
+				"acryl:back:up": [
+					""
+				],
+				"acryl:back:forward": [
+					""
+				],
+				"acryl:back:down": [
+					""
+				],
+				"wood:front:backward": [
+					""
+				],
+				"wood:front:up": [
+					"ruler_wooden_front_up.png"
+				],
+				"wood:front:forward": [
+					""
+				],
+				"wood:front:down": [
+					"ruler_wooden_front_down.png"
+				],
+				"wood:back:backward": [
+					""
+				],
+				"wood:back:up": [
+					""
+				],
+				"wood:back:forward": [
+					""
+				],
+				"wood:back:down": [
+					""
 				]
 			}
 		},
@@ -151,143 +117,109 @@
 			"y": 0,
 			"width": 1000,
 			"height": 1500,
-			"type": "mesh",
-			"name": "ruler back",
-			"priority": "BELOW_ARM_RIGHT",
-			"points": "handheld",
-			"pointType": [
-				"handheld_r"
-			],
-			"mirror": 1,
-			"image": {
-				"image": "",
-				"overrides": [
+			"type": "autoMesh",
+			"enableCond": [
+				[
 					{
-						"image": "ruler_acrylic_back_up.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "acryl"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "ruler_metal_back_up.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "metal"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "ruler_wooden_back_up.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "wood"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "up"
-								}
-							]
-						]
-					},
-					{
-						"image": "ruler_acrylic_back_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "acryl"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
-					},
-					{
-						"image": "ruler_metal_back_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "metal"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
-					},
-					{
-						"image": "ruler_wooden_back_down.png",
-						"condition": [
-							[
-								{
-									"module": "handUsage_r",
-									"operator": "=",
-									"value": "wood"
-								},
-								{
-									"view": "back"
-								},
-								{
-									"armType": "rotation",
-									"side": "right",
-									"operator": "=",
-									"value": "down"
-								}
-							]
-						]
+						"module": "handUsage",
+						"operator": "=",
+						"value": "held_l"
 					}
+				]
+			],
+			"name": "Ruler back",
+			"points": "handheld",
+			"automeshTemplate": "belowBody",
+			"graphicalLayers": [
+				{
+					"name": "Ruler"
+				}
+			],
+			"variables": [
+				{
+					"type": "typedModule",
+					"module": "rulerType"
+				},
+				{
+					"type": "view"
+				},
+				{
+					"type": "armRotation",
+					"side": "left"
+				}
+			],
+			"imageMap": {
+				"metal:front:backward": [
+					""
+				],
+				"metal:front:up": [
+					""
+				],
+				"metal:front:forward": [
+					""
+				],
+				"metal:front:down": [
+					""
+				],
+				"metal:back:backward": [
+					""
+				],
+				"metal:back:up": [
+					"ruler_metal_back_up.png"
+				],
+				"metal:back:forward": [
+					""
+				],
+				"metal:back:down": [
+					"ruler_metal_back_down.png"
+				],
+				"acryl:front:backward": [
+					""
+				],
+				"acryl:front:up": [
+					""
+				],
+				"acryl:front:forward": [
+					""
+				],
+				"acryl:front:down": [
+					""
+				],
+				"acryl:back:backward": [
+					""
+				],
+				"acryl:back:up": [
+					"ruler_acrylic_back_up.png"
+				],
+				"acryl:back:forward": [
+					""
+				],
+				"acryl:back:down": [
+					"ruler_acrylic_back_down.png"
+				],
+				"wood:front:backward": [
+					""
+				],
+				"wood:front:up": [
+					""
+				],
+				"wood:front:forward": [
+					""
+				],
+				"wood:front:down": [
+					""
+				],
+				"wood:back:backward": [
+					""
+				],
+				"wood:back:up": [
+					"ruler_wooden_back_up.png"
+				],
+				"wood:back:forward": [
+					""
+				],
+				"wood:back:down": [
+					"ruler_wooden_back_down.png"
 				]
 			}
 		}

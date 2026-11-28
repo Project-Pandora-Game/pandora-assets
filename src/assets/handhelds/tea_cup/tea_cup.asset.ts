@@ -76,22 +76,18 @@ DefineAsset({
 		},
 	],
 	modules: {
-		handUsage_r: {
+		handUsage: {
 			type: 'typed',
-			name: 'Right hand',
+			name: 'Held in hand',
 			variantMigration: {
-				'hold': 'cup',
-				'sip': 'cup',
+				'hold': 'held_r',
+				'sip': 'held_r',
+				'cup': 'held_r',
 			},
 			variants: [
 				{
-					id: 'no',
-					name: 'No cup',
-					default: true,
-				},
-				{
-					id: 'cup',
-					name: 'Cup',
+					id: 'held_r',
+					name: 'Right',
 					properties: {
 						poseLimits: {
 							options: [
@@ -121,24 +117,9 @@ DefineAsset({
 						},
 					},
 				},
-			],
-		},
-		handUsage_l: {
-			type: 'typed',
-			name: 'Left hand',
-			variantMigration: {
-				'hold': 'cup',
-				'sip': 'cup',
-			},
-			variants: [
 				{
-					id: 'no',
-					name: 'No cup',
-					default: true,
-				},
-				{
-					id: 'cup',
-					name: 'Cup',
+					id: 'held_l',
+					name: 'Left',
 					properties: {
 						poseLimits: {
 							options: [

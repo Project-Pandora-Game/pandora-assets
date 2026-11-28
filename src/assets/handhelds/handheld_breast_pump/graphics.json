@@ -10,9 +10,9 @@
 			"enableCond": [
 				[
 					{
-						"module": "handUsage_l",
+						"module": "handUsage",
 						"operator": "=",
-						"value": "yes"
+						"value": "hand_l"
 					},
 					{
 						"view": "front"
@@ -106,9 +106,9 @@
 			"enableCond": [
 				[
 					{
-						"module": "handUsage_l",
+						"module": "handUsage",
 						"operator": "=",
-						"value": "yes"
+						"value": "hand_l"
 					},
 					{
 						"view": "back"
